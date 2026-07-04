@@ -1,0 +1,25 @@
+# Ignorar todo por defecto
+*
+
+# Permitir carpetas necesarias
+!wp-content/
+!wp-content/themes/
+!wp-content/themes/orange-latam/
+!wp-content/themes/orange-latam/**
+
+!docs/
+!docs/**
+
+!.agents/
+!.agents/**
+
+!.claude/
+!.claude/**
+
+# Permitir archivos markdown y configuraciones en la raíz
+!*.md
+!.gitignore
+
+# Ignorar archivos temporales ocultos del sistema
+.DS_Store
+Thumbs.db
