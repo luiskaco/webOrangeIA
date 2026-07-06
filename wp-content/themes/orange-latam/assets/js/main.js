@@ -182,6 +182,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
 		const detailTitle = document.querySelector( '.services-corp__detail-title' );
 		const detailDesc = document.querySelector( '.services-corp__detail-desc' );
 		const detailLink = document.querySelector( '.services-corp__detail-link' );
+		const detailImg = document.querySelector( '.services-corp__detail-img' );
 
 		corpRows.forEach( ( row ) => {
 			row.addEventListener( 'click', () => {
@@ -193,12 +194,23 @@ document.addEventListener( 'DOMContentLoaded', () => {
 				const name = row.getAttribute( 'data-name' );
 				const desc = row.getAttribute( 'data-desc' );
 				const link = row.getAttribute( 'data-link' );
+				const img = row.getAttribute( 'data-img' );
 
 				if ( watermark ) watermark.textContent = num;
 				if ( detailLabel ) detailLabel.textContent = `${num} - SERVICIO`;
 				if ( detailTitle ) detailTitle.textContent = name.toUpperCase();
 				if ( detailDesc ) detailDesc.textContent = desc;
 				if ( detailLink ) detailLink.href = link ? link : detailLink.getAttribute( 'data-default-href' );
+
+				if ( detailImg && img ) {
+					detailImg.style.transition = 'opacity 0.25s ease-in-out';
+					detailImg.style.opacity = '0';
+					setTimeout( () => {
+						detailImg.src = img;
+						detailImg.alt = name;
+						detailImg.style.opacity = '1';
+					}, 250 );
+				}
 			} );
 		});
 
@@ -453,6 +465,350 @@ document.addEventListener( 'DOMContentLoaded', () => {
 		statsElements.forEach( ( el ) => observer.observe( el ) );
 	};
 
+	// ==========================================
+	// 7b. FAQ ACCORDION
+	// ==========================================
+	const initFaqAccordion = () => {
+		const triggers = document.querySelectorAll( '.faq__trigger' );
+		if ( triggers.length === 0 ) return;
+
+		// Items start closed by default as requested
+
+		triggers.forEach( ( trigger ) => {
+			trigger.addEventListener( 'click', () => {
+				const item = trigger.closest( '.faq__item' );
+				const content = item.querySelector( '.faq__content' );
+				const icon = item.querySelector( '.faq__icon' );
+				const isExpanded = trigger.getAttribute( 'aria-expanded' ) === 'true';
+
+				// Close other items
+				triggers.forEach( ( otherTrigger ) => {
+					if ( otherTrigger !== trigger ) {
+						const otherItem = otherTrigger.closest( '.faq__item' );
+						const otherContent = otherItem.querySelector( '.faq__content' );
+						const otherIcon = otherItem.querySelector( '.faq__icon' );
+						otherTrigger.setAttribute( 'aria-expanded', 'false' );
+						if ( otherIcon ) otherIcon.textContent = '+';
+						if ( otherContent ) otherContent.style.maxHeight = null;
+					}
+				} );
+
+				// Toggle current item
+				if ( isExpanded ) {
+					trigger.setAttribute( 'aria-expanded', 'false' );
+					if ( icon ) icon.textContent = '+';
+					if ( content ) content.style.maxHeight = null;
+				} else {
+					trigger.setAttribute( 'aria-expanded', 'true' );
+					if ( icon ) icon.textContent = '−';
+					if ( content ) content.style.maxHeight = content.scrollHeight + 'px';
+				}
+			} );
+		} );
+	};
+
+	// ==========================================
+	// 7c. INFLUENCER ADVANTAGES CAROUSEL
+	// ==========================================
+	const initInfluencerAdvantagesCarousel = () => {
+		const wrapper = document.querySelector( '.infl-advantages__slider-wrapper' );
+		if ( ! wrapper ) return;
+
+		const prevBtn = wrapper.querySelector( '.infl-advantages__arrow--prev' );
+		const nextBtn = wrapper.querySelector( '.infl-advantages__arrow--next' );
+		const track = wrapper.querySelector( '.infl-advantages__track' );
+		const cards = wrapper.querySelectorAll( '.infl-advantages__card' );
+
+		if ( ! track || cards.length === 0 ) return;
+
+		let currentIndex = 0;
+
+		const getVisibleCardsCount = () => {
+			const width = window.innerWidth;
+			if ( width <= 768 ) return 1;
+			if ( width <= 992 ) return 2;
+			return 3;
+		};
+
+		const updateSlider = () => {
+			const visibleCards = getVisibleCardsCount();
+			const maxIndex = Math.max( 0, cards.length - visibleCards );
+			
+			// Bound current index
+			if ( currentIndex > maxIndex ) currentIndex = maxIndex;
+			if ( currentIndex < 0 ) currentIndex = 0;
+
+			// Calculate translation
+			const card = cards[0];
+			const cardWidth = card.getBoundingClientRect().width;
+			const gap = 20; // from CSS gap: 20px
+			const translation = currentIndex * ( cardWidth + gap );
+
+			track.style.transform = `translateX(-${translation}px)`;
+
+			// Update arrow highlights to match mockup
+			if ( currentIndex === 0 ) {
+				prevBtn.classList.remove( 'infl-advantages__arrow--active' );
+			} else {
+				prevBtn.classList.add( 'infl-advantages__arrow--active' );
+			}
+
+			if ( currentIndex === maxIndex ) {
+				nextBtn.classList.remove( 'infl-advantages__arrow--active' );
+			} else {
+				nextBtn.classList.add( 'infl-advantages__arrow--active' );
+			}
+		};
+
+		prevBtn.addEventListener( 'click', () => {
+			if ( currentIndex > 0 ) {
+				currentIndex--;
+				updateSlider();
+			}
+		} );
+
+		nextBtn.addEventListener( 'click', () => {
+			const visibleCards = getVisibleCardsCount();
+			const maxIndex = cards.length - visibleCards;
+			if ( currentIndex < maxIndex ) {
+				currentIndex++;
+				updateSlider();
+			}
+		} );
+
+		// Recalculate on resize
+		window.addEventListener( 'resize', updateSlider );
+		
+		// Initial layout setup
+		setTimeout( updateSlider, 100 );
+	};
+
+	// ==========================================
+	// 7d. INFLUENCER SELECTION SLIDER
+	// ==========================================
+	const initInfluencerSelectionSlider = () => {
+		const wrapper = document.querySelector( '.infl-selection__slider-wrapper' );
+		if ( ! wrapper ) return;
+
+		const prevBtn = wrapper.querySelector( '.infl-selection__arrow--prev' );
+		const nextBtn = wrapper.querySelector( '.infl-selection__arrow--next' );
+		const track = wrapper.querySelector( '.infl-selection__track' );
+		const slides = wrapper.querySelectorAll( '.infl-selection__slide' );
+
+		if ( ! track || slides.length === 0 ) return;
+
+		let currentIndex = 0;
+
+		const updateSlider = () => {
+			const maxIndex = slides.length - 1;
+			if ( currentIndex > maxIndex ) currentIndex = maxIndex;
+			if ( currentIndex < 0 ) currentIndex = 0;
+
+			// Slide width is 100%, so translate by index * 100 %
+			track.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+			// Active arrow status
+			if ( currentIndex === 0 ) {
+				prevBtn.classList.remove( 'infl-selection__arrow--active' );
+			} else {
+				prevBtn.classList.add( 'infl-selection__arrow--active' );
+			}
+
+			if ( currentIndex === maxIndex ) {
+				nextBtn.classList.remove( 'infl-selection__arrow--active' );
+			} else {
+				nextBtn.classList.add( 'infl-selection__arrow--active' );
+			}
+		};
+
+		prevBtn.addEventListener( 'click', () => {
+			if ( currentIndex > 0 ) {
+				currentIndex--;
+				updateSlider();
+			}
+		} );
+
+		nextBtn.addEventListener( 'click', () => {
+			if ( currentIndex < slides.length - 1 ) {
+				currentIndex++;
+				updateSlider();
+			}
+		} );
+
+		updateSlider();
+	};
+
+	// ==========================================
+	// 12. INFLUENCER INCLUDES SLIDER
+	// ==========================================
+	const initInfluencerIncludesSlider = () => {
+		const slider = document.querySelector( '.infl-includes__slider' );
+		if ( ! slider ) return;
+
+		const slides = slider.querySelectorAll( '.infl-includes__slide' );
+		const prevBtn = document.querySelector( '.infl-includes__arrow--prev' );
+		const nextBtn = document.querySelector( '.infl-includes__arrow--next' );
+		if ( slides.length === 0 ) return;
+
+		let currentIndex = 0;
+
+		const updateSlider = ( newIndex ) => {
+			slides[ currentIndex ].classList.remove( 'active' );
+			currentIndex = newIndex;
+			slides[ currentIndex ].classList.add( 'active' );
+		};
+
+		if ( prevBtn ) {
+			prevBtn.addEventListener( 'click', () => {
+				const newIndex = ( currentIndex - 1 + slides.length ) % slides.length;
+				updateSlider( newIndex );
+			} );
+		}
+
+		if ( nextBtn ) {
+			nextBtn.addEventListener( 'click', () => {
+				const newIndex = ( currentIndex + 1 ) % slides.length;
+				updateSlider( newIndex );
+			} );
+		}
+	};
+
+	// ==========================================
+	// 13. INFLUENCER TYPES SLIDER
+	// ==========================================
+	const initInfluencerTypesSlider = () => {
+		const slider = document.querySelector( '.infl-types__slider' );
+		if ( ! slider ) return;
+
+		const slides = slider.querySelectorAll( '.infl-types__slide' );
+		const prevBtn = document.querySelector( '.infl-types__arrow--prev' );
+		const nextBtn = document.querySelector( '.infl-types__arrow--next' );
+		if ( slides.length === 0 ) return;
+
+		let currentIndex = 0;
+
+		const updateSlider = ( newIndex ) => {
+			slides[ currentIndex ].classList.remove( 'active' );
+			currentIndex = newIndex;
+			slides[ currentIndex ].classList.add( 'active' );
+		};
+
+		if ( prevBtn ) {
+			prevBtn.addEventListener( 'click', () => {
+				const newIndex = ( currentIndex - 1 + slides.length ) % slides.length;
+				updateSlider( newIndex );
+			} );
+		}
+
+		if ( nextBtn ) {
+			nextBtn.addEventListener( 'click', () => {
+				const newIndex = ( currentIndex + 1 ) % slides.length;
+				updateSlider( newIndex );
+			} );
+		}
+	};
+
+	// ==========================================
+	// 14. INFLUENCER HORIZONTAL FAQ ACCORDION
+	// ==========================================
+	const initInfluencerFaqHAccordion = () => {
+		const panels = document.querySelectorAll( '.infl-faq-h__panel' );
+		if ( panels.length === 0 ) return;
+
+		panels.forEach( ( panel ) => {
+			panel.addEventListener( 'click', () => {
+				const isActive = panel.classList.contains( 'active' );
+				panels.forEach( ( p ) => p.classList.remove( 'active' ) );
+				if ( ! isActive ) {
+					panel.classList.add( 'active' );
+				}
+			} );
+		} );
+	};
+
+	// ==========================================
+	// 15. VIDEO MODAL (CASOS DE ÉXITO)
+	// ==========================================
+	const initVideoModal = () => {
+		const modal = document.querySelector( '.js-video-modal' );
+		const triggers = document.querySelectorAll( '.js-video-modal-trigger' );
+		const closeBtns = document.querySelectorAll( '.js-video-modal-close' );
+		const iframe = document.querySelector( '.js-video-modal-iframe' );
+
+		if ( !modal || !iframe ) return;
+
+		const getEmbedUrl = ( url ) => {
+			let embedUrl = url;
+			if ( url.includes( 'youtube.com/shorts/' ) ) {
+				const id = url.split( 'shorts/' )[1].split( '?' )[0];
+				embedUrl = `https://www.youtube.com/embed/${id}?autoplay=1`;
+			} else if ( url.includes( 'youtu.be/' ) ) {
+				const id = url.split( 'youtu.be/' )[1].split( '?' )[0];
+				embedUrl = `https://www.youtube.com/embed/${id}?autoplay=1`;
+			} else if ( url.includes( 'watch?v=' ) ) {
+				const id = url.split( 'watch?v=' )[1].split( '&' )[0];
+				embedUrl = `https://www.youtube.com/embed/${id}?autoplay=1`;
+			}
+			return embedUrl;
+		};
+
+		triggers.forEach( ( trigger ) => {
+			trigger.addEventListener( 'click', ( e ) => {
+				e.preventDefault();
+				const videoUrl = trigger.getAttribute( 'data-video-url' );
+				if ( videoUrl ) {
+					iframe.src = getEmbedUrl( videoUrl );
+					modal.classList.add( 'is-active' );
+				}
+			} );
+		} );
+
+		closeBtns.forEach( ( btn ) => {
+			btn.addEventListener( 'click', () => {
+				modal.classList.remove( 'is-active' );
+				iframe.src = '';
+			} );
+		} );
+
+		// Cierra el modal con la tecla ESC
+		document.addEventListener( 'keydown', ( e ) => {
+			if ( e.key === 'Escape' && modal.classList.contains( 'is-active' ) ) {
+				modal.classList.remove( 'is-active' );
+				iframe.src = '';
+			}
+		} );
+	};
+
+	// ==========================================
+	// 15. DIFERENCIALES ACCORDION
+	// ==========================================
+	const initInflDiffAccordion = () => {
+		const headers = document.querySelectorAll( '.js-infl-diff-header' );
+
+		headers.forEach( header => {
+			header.addEventListener( 'click', () => {
+				const item = header.closest( '.js-infl-diff-item' );
+				const icon = header.querySelector( '.infl-diff-item__icon' );
+				
+				if ( item.classList.contains( 'is-active' ) ) {
+					item.classList.remove( 'is-active' );
+					if (icon) icon.textContent = '+';
+				} else {
+					// Close others
+					document.querySelectorAll( '.js-infl-diff-item.is-active' ).forEach( activeItem => {
+						activeItem.classList.remove( 'is-active' );
+						const activeIcon = activeItem.querySelector( '.infl-diff-item__icon' );
+						if (activeIcon) activeIcon.textContent = '+';
+					} );
+					
+					// Open this
+					item.classList.add( 'is-active' );
+					if (icon) icon.textContent = '-';
+				}
+			} );
+		} );
+	};
+
 	// Initialize all components
 	initScrollReveals();
 	initHeroSlider();
@@ -462,4 +818,13 @@ document.addEventListener( 'DOMContentLoaded', () => {
 	initResponsiveNav();
 	initHeaderScroll();
 	initStatsCounter();
+	initFaqAccordion();
+	initInflDiffAccordion();
+	initInfluencerAdvantagesCarousel();
+	initInfluencerSelectionSlider();
+	initInfluencerIncludesSlider();
+	initInfluencerTypesSlider();
+	initInfluencerFaqHAccordion();
+	initVideoModal();
 } );
+

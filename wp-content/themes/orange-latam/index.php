@@ -179,23 +179,23 @@ get_header();
 				<div class="services-corp__list" data-reveal="left">
 					<?php
 					$corp_services = array(
-						array( 'id' => 1, 'num' => '01', 'name' => 'PR y Gestión de la reputación', 'desc' => 'Planificar y ejecutar estrategias de Relaciones Públicas (PR) y gestión de la reputación permite a marcas y empresas influir de manera poderosa en la percepción de distintos públicos. En Orange Latam nos especializamos en la creación de planes que permiten construir una reputación sólida a empresas, productos y/o servicios, a partir de una interacción asertiva con públicos diversos, a todo nivel.' ),
-						array( 'id' => 2, 'num' => '02', 'name' => 'Marketing de Influencers', 'desc' => 'Conectamos marcas con líderes de opinión altamente relevantes para campañas de máximo alcance, impacto y retorno de inversión medible en cada plataforma digital.', 'link' => home_url( '/marketing-de-influencers/' ) ),
-						array( 'id' => 3, 'num' => '03', 'name' => 'Digital y Social Media', 'desc' => 'Gestión estratégica de presencia digital, comunidades online y creación de contenido en todos los canales relevantes para tu audiencia.' ),
-						array( 'id' => 4, 'num' => '04', 'name' => 'Producción Audiovisual Orange Studio', 'desc' => 'Producción de video, fotografía y animación de primer nivel para todas las plataformas y formatos del ecosistema digital y tradicional.' ),
-						array( 'id' => 5, 'num' => '05', 'name' => 'Creatividad y Dirección de Arte', 'desc' => 'El diferencial creativo que hace que tu comunicación se destaque y genere el impacto deseado en el público objetivo.' ),
-						array( 'id' => 6, 'num' => '06', 'name' => 'Branding', 'desc' => 'De naming a consolidación: creamos y posicionamos marcas memorables y deseadas en mercados nacionales e internacionales.' ),
-						array( 'id' => 7, 'num' => '07', 'name' => 'Estratégias ATL', 'desc' => 'Campañas de alto alcance con planificación de medios, segmentación de audiencias y ejecución integrada con el mejor ROI del mercado.' ),
-						array( 'id' => 8, 'num' => '08', 'name' => 'Eventos y Activaciones Presenciales', 'desc' => 'Experiencias presenciales, remotas e híbridas de primer nivel que conectan con el público de manera poderosa y memorable.' ),
-						array( 'id' => 9, 'num' => '09', 'name' => 'Entrenamiento de Voceros', 'desc' => 'Preparamos líderes para comunicar con autoridad y credibilidad ante medios, inversores y audiencias clave en cualquier escenario.' ),
-						array( 'id' => 10, 'num' => '10', 'name' => 'SEO / SEM', 'desc' => 'Optimizamos la presencia digital con estrategias de búsqueda integradas a los objetivos comerciales e institucionales de la marca.' ),
-						array( 'id' => 11, 'num' => '11', 'name' => 'Web site / Landing UX Criteria', 'desc' => 'Diseñamos experiencias digitales que convierten, con navegación intuitiva, visual atractivo y arquitectura de información óptima.' ),
-						array( 'id' => 12, 'num' => '12', 'name' => 'E-Commerce', 'desc' => 'Plataformas y estrategias digitales completas para potenciar ventas, captación de leads y fidelización de clientes.' ),
+						array( 'id' => 1, 'num' => '01', 'name' => 'PR y Gestión de la reputación', 'desc' => 'Planificar y ejecutar estrategias de Relaciones Públicas (PR) y gestión de la reputación permite a marcas y empresas influir de manera poderosa en la percepción de distintos públicos. En Orange Latam nos especializamos en la creación de planes que permiten construir una reputación sólida a empresas, productos y/o servicios, a partir de una interacción asertiva con públicos diversos, a todo nivel.', 'img' => get_stylesheet_directory_uri() . '/assets/images/services/pr-reputacion.png' ),
+						array( 'id' => 2, 'num' => '02', 'name' => 'Marketing de Influencers', 'desc' => 'Conectamos marcas con líderes de opinión altamente relevantes para campañas de máximo alcance, impacto y retorno de inversión medible en cada plataforma digital.', 'link' => home_url( '/marketing-de-influencers/' ), 'img' => get_stylesheet_directory_uri() . '/assets/images/services/marketing-influencers.png' ),
+						array( 'id' => 3, 'num' => '03', 'name' => 'Digital y Social Media', 'desc' => 'Gestión estratégica de presencia digital, comunidades online y creación de contenido en todos los canales relevantes para tu audiencia.', 'img' => get_stylesheet_directory_uri() . '/assets/images/services/digital-social-media.png' ),
+						array( 'id' => 4, 'num' => '04', 'name' => 'Producción Audiovisual Orange Studio', 'desc' => 'Producción de video, fotografía y animación de primer nivel para todas las plataformas y formatos del ecosistema digital y tradicional.', 'img' => get_stylesheet_directory_uri() . '/assets/images/services/produccion-audiovisual.png' ),
+						array( 'id' => 5, 'num' => '05', 'name' => 'Creatividad y Dirección de Arte', 'desc' => 'El diferencial creativo que hace que tu comunicación se destaque y genere el impacto deseado en el público objetivo.', 'img' => get_stylesheet_directory_uri() . '/assets/images/services/creatividad-arte.png' ),
+						array( 'id' => 6, 'num' => '06', 'name' => 'Branding', 'desc' => 'De naming a consolidación: creamos y posicionamos marcas memorables y deseadas en mercados nacionales e internacionales.', 'img' => get_stylesheet_directory_uri() . '/assets/images/services/branding.png' ),
+						array( 'id' => 7, 'num' => '07', 'name' => 'Estratégias ATL', 'desc' => 'Campañas de alto alcance con planificación de medios, segmentación de audiencias y ejecución integrada con el mejor ROI del mercado.', 'img' => get_stylesheet_directory_uri() . '/assets/images/services/estrategias-atl.png' ),
+						array( 'id' => 8, 'num' => '08', 'name' => 'Eventos y Activaciones Presenciales', 'desc' => 'Experiencias presenciales, remotas e híbridas de primer nivel que conectan con el público de manera poderosa y memorable.', 'img' => get_stylesheet_directory_uri() . '/assets/images/services/eventos-presenciales.png' ),
+						array( 'id' => 9, 'num' => '09', 'name' => 'Entrenamiento de Voceros', 'desc' => 'Preparamos líderes para comunicar con autoridad y credibilidad ante medios, inversores y audiencias clave en cualquier escenario.', 'img' => get_stylesheet_directory_uri() . '/assets/images/services/entrenamiento-voceros.png' ),
+						array( 'id' => 10, 'num' => '10', 'name' => 'SEO / SEM', 'desc' => 'Optimizamos la presencia digital con estrategias de búsqueda integradas a los objetivos comerciales e institucionales de la marca.', 'img' => get_stylesheet_directory_uri() . '/assets/images/services/seo-sem.png' ),
+						array( 'id' => 11, 'num' => '11', 'name' => 'Web site / Landing UX Criteria', 'desc' => 'Diseñamos experiencias digitales que convierten, con navegación intuitiva, visual atractivo y arquitectura de información óptima.', 'img' => get_stylesheet_directory_uri() . '/assets/images/services/website-ux.png' ),
+						array( 'id' => 12, 'num' => '12', 'name' => 'E-Commerce', 'desc' => 'Plataformas y estrategias digitales completas para potenciar ventas, captación de leads y fidelización de clientes.', 'img' => get_stylesheet_directory_uri() . '/assets/images/services/ecommerce.png' ),
 					);
 
 					foreach ( $corp_services as $svc ) {
 						$active_class = $svc['id'] === 1 ? 'services-corp__row--active' : '';
-						echo '<div class="services-corp__row ' . esc_attr( $active_class ) . '" data-id="' . esc_attr( $svc['id'] ) . '" data-num="' . esc_attr( $svc['num'] ) . '" data-name="' . esc_attr( $svc['name'] ) . '" data-desc="' . esc_attr( $svc['desc'] ) . '" data-link="' . esc_attr( isset( $svc['link'] ) ? $svc['link'] : '' ) . '">';
+						echo '<div class="services-corp__row ' . esc_attr( $active_class ) . '" data-id="' . esc_attr( $svc['id'] ) . '" data-num="' . esc_attr( $svc['num'] ) . '" data-name="' . esc_attr( $svc['name'] ) . '" data-desc="' . esc_attr( $svc['desc'] ) . '" data-link="' . esc_attr( isset( $svc['link'] ) ? $svc['link'] : '' ) . '" data-img="' . esc_url( $svc['img'] ) . '">';
 						echo '<span class="services-corp__row-num">' . esc_html( $svc['num'] ) . '</span>';
 						echo '<span class="services-corp__row-name">' . esc_html( $svc['name'] ) . '</span>';
 						echo '<span class="services-corp__row-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7,7 17,7 17,17"></polyline></svg></span>';
@@ -214,7 +214,7 @@ get_header();
 						</p>
 						<a href="#contacto" class="services-corp__detail-link" data-default-href="#contacto">Más información <span>→</span></a>
 						<div class="services-corp__detail-img-box">
-							<div class="services-corp__detail-img-placeholder">FOTO DEL SERVICIO</div>
+							<img class="services-corp__detail-img" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/services/pr-reputacion.png' ); ?>" alt="PR y Gestión de la reputación" style="width: 100%; height: 324px; object-fit: cover; display: block;">
 						</div>
 					</div>
 				</div>
@@ -251,51 +251,48 @@ get_header();
 	<!-- ==========================================
 	     5. PREMIOS Y FESTIVALES SECTION
 	     ========================================== -->
-	<section id="premios" class="award-teaser">
-		<div class="award-teaser__container" data-reveal="scale">
-			<div>
-				<div class="award-teaser__title">CANNES LIONS 2020</div>
-				<div class="award-teaser__line"></div>
+	<section id="premios" class="home-awards">
+		<div class="home-awards__container">
+			<h2 class="home-awards__title" data-reveal="up">
+				MEJOR AGENCIA DE RELACIONES PÚBLICAS<br>
+				<span class="home-awards__title-accent">Y GESTIÓN DE LA REPUTACIÓN</span>
+			</h2>
+
+			<div class="home-awards__carousel" data-reveal="up">
+				<div class="home-awards__track">
+					<?php
+					$home_awards = array(
+						array( 'name' => 'Purpose Awards', 'image' => 'Purpose-Awards.webp', 'line1' => 'Purpose Awards', 'line2' => 'Best Use of', 'line3' => 'Celebrity Campaign' ),
+						array( 'name' => 'PR Week Global Awards', 'image' => 'PR-Week-Global-Awards.webp', 'line1' => 'PR Week Global Awards', 'line2' => 'Best Influencers', 'line3' => 'Marketing Campaign' ),
+						array( 'name' => 'IPRA Golden World Awards', 'image' => 'IPRA-Golden-World-Awards.png', 'line1' => 'IPRA Golden World Awards', 'line2' => 'Best Influencers', 'line3' => 'Management Campaign' ),
+						array( 'name' => 'Sabre Latin America Awards', 'image' => 'Sabre-Global-World-Awards.png', 'line1' => 'Sabre Latin America Awards', 'line2' => 'Diamond', 'line3' => 'Awards Category' ),
+						array( 'name' => 'Sabre Latin America Awards', 'image' => 'Sabre-Global-World-Awards.png', 'line1' => 'Sabre Latin America Awards', 'line2' => 'Best Influencer', 'line3' => 'Marketing Campaign' ),
+						array( 'name' => 'Effie Awards', 'image' => 'Effie-Awards.png', 'line1' => 'Effie Awards', 'line2' => 'Mejor Campaña de', 'line3' => 'Marketing de Influencers' ),
+						array( 'name' => 'Cannes Lions', 'image' => 'Cannes-Lions-.webp', 'line1' => 'Cannes Lions', 'line2' => 'Best Social &', 'line3' => 'Influencer Campaign' ),
+						array( 'name' => 'Sabre Global World Awards', 'image' => 'Sabre-Global-World-Awards.png', 'line1' => 'Sabre Global World Awards', 'line2' => 'Best Influencer', 'line3' => 'Marketing Campaign' ),
+					);
+					// Render twice for continuous loop
+					for ( $i = 0; $i < 2; $i++ ) :
+						foreach ( $home_awards as $award ) :
+							?>
+							<div class="home-awards__card" <?php echo 0 === $i ? '' : 'aria-hidden="true"'; ?>>
+								<div class="home-awards__logo-box">
+									<img class="home-awards__logo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/awards/<?php echo esc_attr( $award['image'] ); ?>" alt="<?php echo esc_attr( $award['name'] ); ?>" loading="lazy">
+								</div>
+								<div class="home-awards__name"><?php echo esc_html( strtoupper( $award['line1'] ) ); ?></div>
+								<div class="home-awards__desc">
+									<?php echo esc_html( strtoupper( $award['line2'] ) ); ?><br>
+									<?php echo esc_html( strtoupper( $award['line3'] ) ); ?>
+								</div>
+							</div>
+						<?php endforeach;
+					endfor; ?>
+				</div>
 			</div>
-			<div class="award-teaser__bubble">
-				<div class="award-teaser__bubble-tail"></div>
-				<p class="award-teaser__category">BEST SOCIAL & INFLUENCER CAMPAIGN</p>
-			</div>
-			<div class="award-teaser__img-placeholder">TROFEO</div>
 		</div>
 	</section>
 
-	<section class="awards-list">
-		<div class="awards-list__container" data-reveal>
-			<div class="awards-list__flex">
-				<?php
-				$awards = array(
-					array( 'id' => 2, 'name' => 'Cannes Lions', 'title' => 'CANNES LIONS 2020', 'category' => 'BEST SOCIAL & INFLUENCER CAMPAIGN', 'size' => 'clamp(40px, 5.5vw, 76px)' ),
-					array( 'id' => 1, 'name' => 'SABRE Awards', 'title' => 'SABRE GLOBAL WORLD AWARDS 2025', 'category' => 'BEST INFLUENCER MARKETING CAMPAIGN', 'size' => 'clamp(26px, 3.2vw, 46px)' ),
-					array( 'id' => 3, 'name' => 'Effie Awards', 'title' => 'EFFIE AWARDS 2024', 'category' => 'MEJOR CAMPAÑA DE MARKETING DE INFLUENCERS', 'size' => 'clamp(30px, 3.8vw, 56px)' ),
-					array( 'id' => 7, 'name' => 'PRWeek Global', 'title' => 'PR WEEK GLOBAL AWARDS 2023', 'category' => 'BEST INFLUENCERS MARKETING CAMPAIGN', 'size' => 'clamp(22px, 2.6vw, 36px)' ),
-					array( 'id' => 4, 'name' => 'IPRA Golden World', 'title' => 'IPRA GOLDEN WORLD AWARDS 2023', 'category' => 'BEST INFLUENCERS MANAGEMENT CAMPAIGN', 'size' => 'clamp(18px, 2.2vw, 30px)' ),
-					array( 'id' => 5, 'name' => 'Purpose Awards', 'title' => 'PURPOSE AWARDS 2024', 'category' => 'BEST USE OF CELEBRITY CAMPAIGN', 'size' => 'clamp(18px, 2.2vw, 30px)' ),
-					array( 'id' => 9, 'name' => 'El Ojo de Iberoamérica', 'title' => 'EL OJO DE IBEROAMÉRICA', 'category' => 'RECONOCIMIENTO REGIONAL', 'size' => 'clamp(24px, 3vw, 44px)' ),
-					array( 'id' => 10, 'name' => 'The One Show', 'title' => 'THE ONE SHOW', 'category' => 'RECONOCIMIENTO INTERNACIONAL', 'size' => 'clamp(18px, 2.2vw, 28px)' ),
-					array( 'id' => 11, 'name' => 'Clio Awards', 'title' => 'CLIO AWARDS', 'category' => 'RECONOCIMIENTO INTERNACIONAL', 'size' => 'clamp(14px, 1.6vw, 22px)' ),
-					array( 'id' => 12, 'name' => 'Luum Awards', 'title' => 'LUUM AWARDS', 'category' => 'RECONOCIMIENTO REGIONAL', 'size' => 'clamp(22px, 2.8vw, 38px)' ),
-					array( 'id' => 13, 'name' => 'ANDA Awards', 'title' => 'ANDA AWARDS', 'category' => 'RECONOCIMIENTO REGIONAL', 'size' => 'clamp(14px, 1.6vw, 22px)' ),
-					array( 'id' => 14, 'name' => 'ADC Awards', 'title' => 'ADC AWARDS', 'category' => 'RECONOCIMIENTO INTERNACIONAL', 'size' => 'clamp(13px, 1.4vw, 18px)' ),
-					array( 'id' => 15, 'name' => 'WINA Festival', 'title' => 'WINA FESTIVAL', 'category' => 'RECONOCIMIENTO REGIONAL', 'size' => 'clamp(13px, 1.4vw, 18px)' ),
-					array( 'id' => 16, 'name' => 'IAB Mixx', 'title' => 'IAB MIXX', 'category' => 'RECONOCIMIENTO DIGITAL', 'size' => 'clamp(13px, 1.4vw, 18px)' ),
-					array( 'id' => 17, 'name' => 'Effie Perú', 'title' => 'EFFIE PERÚ', 'category' => 'RECONOCIMIENTO NACIONAL', 'size' => 'clamp(14px, 1.6vw, 22px)' ),
-					array( 'id' => 18, 'name' => 'Effie Latin America', 'title' => 'EFFIE LATIN AMERICA', 'category' => 'RECONOCIMIENTO REGIONAL', 'size' => 'clamp(14px, 1.6vw, 22px)' ),
-				);
 
-				foreach ( $awards as $aw ) {
-					$active_class = $aw['id'] === 2 ? 'awards-list__item--active' : '';
-					echo '<span class="awards-list__item ' . esc_attr( $active_class ) . '" style="font-size: ' . esc_attr( $aw['size'] ) . ';" data-title="' . esc_attr( $aw['title'] ) . '" data-category="' . esc_attr( $aw['category'] ) . '">' . esc_html( $aw['name'] ) . '</span>';
-				}
-				?>
-			</div>
-		</div>
-	</section>
 
 	<!-- ==========================================
 	     6. SECTORES SECTION
@@ -366,6 +363,51 @@ get_header();
 				<button class="experts__arrow experts__arrow--prev" aria-label="Notas anteriores">‹</button>
 				<div class="experts__dots"></div>
 				<button class="experts__arrow experts__arrow--next" aria-label="Notas siguientes">›</button>
+			</div>
+		</div>
+	</section>
+
+	<!-- ==========================================
+	     7b. PREGUNTAS FRECUENTES (FAQ) SECTION
+	     ========================================== -->
+	<section class="faq" id="preguntas-frecuentes">
+		<div class="faq__container">
+			<h2 class="faq__title" data-reveal="up">PREGUNTAS FRECUENTES</h2>
+			<div class="faq__accordion" data-reveal="up">
+				<div class="faq__item">
+					<button class="faq__trigger" aria-expanded="false">
+						<span class="faq__icon">+</span>
+						<span class="faq__question">¿Qué es una agencia de relaciones públicas?</span>
+					</button>
+					<div class="faq__content">
+						<div class="faq__inner">
+							<p>Una agencia de relaciones públicas es una empresa especializada en la gestión de la comunicación y la imagen de una organización o marca ante sus diferentes públicos, como clientes, medios de comunicación, empleados, inversores y la sociedad en general. Su objetivo principal es construir, mantener y fortalecer la reputación de la entidad que representa, así como gestionar eficazmente la percepción pública de sus productos, servicios y acciones.</p>
+						</div>
+					</div>
+				</div>
+				<div class="faq__item">
+					<button class="faq__trigger" aria-expanded="false">
+						<span class="faq__icon">+</span>
+						<span class="faq__question">¿Qué hace una agencia de relaciones públicas?</span>
+					</button>
+					<div class="faq__content">
+						<div class="faq__inner">
+							<p>Las agencias de relaciones públicas ofrecen una amplia gama de servicios que pueden incluir estrategias de comunicación, relaciones con los medios, gestión de crisis, organización de eventos, creación de contenido, monitoreo de medios, análisis de la percepción de la marca y relaciones con los stakeholders clave. Utilizan diversas herramientas y técnicas para difundir mensajes positivos, gestionar situaciones adversas y promover la interacción positiva entre la organización y su entorno.</p>
+						</div>
+					</div>
+				</div>
+				<div class="faq__item">
+					<button class="faq__trigger" aria-expanded="false">
+						<span class="faq__icon">+</span>
+						<span class="faq__question">¿Qué es una agencia de comunicación?</span>
+					</button>
+					<div class="faq__content">
+						<div class="faq__inner">
+							<p>Una agencia de comunicación es una empresa especializada en proporcionar servicios integrales de comunicación para sus clientes, con el fin de ayudarles a establecer, mantener y fortalecer su presencia y reputación en el mercado. Estas agencias se dedican a planificar, desarrollar y ejecutar estrategias de comunicación efectivas que abarcan diversos canales y medios para alcanzar los objetivos de sus clientes.</p>
+							<p>Las agencias de comunicación ofrecen una amplia gama de servicios que pueden incluir relaciones públicas, marketing digital, gestión de redes sociales, publicidad, creación de contenido, branding, organización de eventos, diseño gráfico y desarrollo web, entre otros. Su objetivo es garantizar una comunicación coherente y efectiva que resuene con la audiencia de sus clientes y contribuya al éxito de sus negocios.</p>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
