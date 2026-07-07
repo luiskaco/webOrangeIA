@@ -809,6 +809,46 @@ document.addEventListener( 'DOMContentLoaded', () => {
 		} );
 	};
 
+	// ==========================================
+	// 16. DIGITAL ADS SLIDER
+	// ==========================================
+	const initDigAdsSlider = () => {
+		const container = document.querySelector( '.dig-ads__slider-outer' );
+		if ( !container ) return;
+
+		const slides = container.querySelectorAll( '.dig-ads__slide' );
+		const prevBtn = container.querySelector( '.dig-ads__arrow--prev' );
+		const nextBtn = container.querySelector( '.dig-ads__arrow--next' );
+		
+		if ( !slides.length ) return;
+		
+		let currentIndex = 0;
+		
+		const showSlide = ( index ) => {
+			slides.forEach( ( slide, i ) => {
+				if ( i === index ) {
+					slide.classList.add( 'active' );
+				} else {
+					slide.classList.remove( 'active' );
+				}
+			} );
+		};
+
+		if (prevBtn) {
+			prevBtn.addEventListener( 'click', () => {
+				currentIndex = ( currentIndex - 1 + slides.length ) % slides.length;
+				showSlide( currentIndex );
+			} );
+		}
+
+		if (nextBtn) {
+			nextBtn.addEventListener( 'click', () => {
+				currentIndex = ( currentIndex + 1 ) % slides.length;
+				showSlide( currentIndex );
+			} );
+		}
+	};
+
 	// Initialize all components
 	initScrollReveals();
 	initHeroSlider();
@@ -826,5 +866,6 @@ document.addEventListener( 'DOMContentLoaded', () => {
 	initInfluencerTypesSlider();
 	initInfluencerFaqHAccordion();
 	initVideoModal();
+	initDigAdsSlider();
 } );
 

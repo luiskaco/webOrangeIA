@@ -15,10 +15,11 @@
 // Influencers) get the lightweight "Inicio / Blog" menu so visitors can
 // navigate back to the article list or the landing page instead of anchors
 // that only exist on the front page.
-$is_blog_context        = is_home() || is_singular( 'post' );
-$is_influencers_context = is_page( 'marketing-de-influencers' );
-$nav_location           = $is_influencers_context ? 'influencers' : ( $is_blog_context ? 'blog' : 'primary' );
-$logo_url               = ( $is_blog_context || $is_influencers_context ) ? home_url( '/' ) : '#inicio';
+$is_blog_context              = is_home() || is_singular( 'post' );
+$is_influencers_context       = is_page( 'marketing-de-influencers' );
+$is_marketing_digital_context = is_page( 'marketing-digital' );
+$nav_location                 = $is_marketing_digital_context ? 'marketing_digital' : ( $is_influencers_context ? 'influencers' : ( $is_blog_context ? 'blog' : 'primary' ) );
+$logo_url                     = ( $is_blog_context || $is_influencers_context || $is_marketing_digital_context ) ? home_url( '/' ) : '#inicio';
 ?>
 <header class="header">
 	<div class="header__container">
@@ -42,6 +43,16 @@ $logo_url               = ( $is_blog_context || $is_influencers_context ) ? home
 				foreach ( $menu_items as $item ) {
 					echo '<a href="' . esc_url( $item->url ) . '" class="header__link">' . esc_html( $item->title ) . '</a>';
 				}
+			} elseif ( $is_marketing_digital_context ) {
+				// Fallback if the marketing digital menu hasn't been generated yet.
+				?>
+				<a href="#inicio" class="header__link">Inicio</a>
+				<a href="#redes-sociales" class="header__link">Redes sociales</a>
+				<a href="#publicidad-digital" class="header__link">Publicidad digital</a>
+				<a href="#contenido-estrategico" class="header__link">Contenido estratégico</a>
+				<a href="#consultoria" class="header__link">Consultoría</a>
+				<a href="#contacto" class="header__link">Contacto</a>
+				<?php
 			} elseif ( $is_influencers_context ) {
 				// Fallback if the influencers menu hasn't been generated yet.
 				// Section anchors are placeholders — to be linked once the

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
 /* ==========================================================================
    0. FONTS (@font-face)
    ========================================================================== */
@@ -4399,10 +4401,33 @@ input, textarea, button {
 	font-weight: 300;
 }
 
+/* Ticker Influencer */
 .infl-clients__carousel {
 	width: 100%;
 	overflow: hidden;
-	margin-bottom: 40px;
+	margin-bottom: 8px;
+	position: relative;
+}
+
+.infl-clients__carousel::before,
+.infl-clients__carousel::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 100px;
+	z-index: 2;
+	pointer-events: none;
+}
+
+.infl-clients__carousel::before {
+	left: 0;
+	background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+.infl-clients__carousel::after {
+	right: 0;
+	background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
 }
 
 .infl-clients__carousel:last-child {
@@ -4414,6 +4439,8 @@ input, textarea, button {
 	width: max-content;
 	animation: infl-clients-scroll 35s linear infinite;
 	align-items: center;
+	gap: 60px;
+	padding: 5px 0;
 }
 
 .infl-clients__track--reverse {
@@ -4421,19 +4448,25 @@ input, textarea, button {
 }
 
 .infl-clients__logo-box {
-	width: 240px;
-	height: 120px;
+	height: clamp(35px, 5vw, 45px);
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	padding: 0 30px;
 	flex: 0 0 auto;
 }
 
 .infl-clients__logo-box img {
-	max-width: 100%;
-	max-height: 90px;
+	height: 100%;
+	width: auto;
 	object-fit: contain;
+	filter: grayscale(100%);
+	opacity: 0.7;
+	transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+.infl-clients__logo-box img:hover {
+	filter: grayscale(0%);
+	opacity: 1;
 }
 
 .infl-clients__footer {
@@ -4691,4 +4724,1208 @@ input, textarea, button {
 		animation: none;
 	}
 }
+
+/* ==========================================
+   MARKETING DIGITAL PAGE SCOPE
+   ========================================== */
+.marketing-digital {
+	--font-sans: 'Poppins', sans-serif;
+	font-family: var(--font-sans);
+}
+
+/* ==========================================
+   MARKETING DIGITAL - SECTION 1 (DIG SOCIAL)
+   ========================================== */
+.dig-social {
+	background: #ffffff;
+	padding: 100px 48px;
+	position: relative;
+	overflow: hidden;
+}
+
+.dig-social__container {
+	max-width: 1100px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 1.1fr 0.9fr;
+	gap: 80px;
+	align-items: center;
+}
+
+.dig-social__content {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.dig-social__badge {
+	font-family: var(--font-sans);
+	font-weight: 700;
+	font-size: clamp(12px, 1.2vw, 15px);
+	letter-spacing: 0.05em;
+	color: #000000;
+	background-color: #2ea3f2;
+	padding: 8px 20px;
+	border-radius: 4px;
+	margin-bottom: 20px;
+	display: inline-block;
+}
+
+.dig-social__title {
+	font-family: var(--font-sans);
+	font-weight: 800;
+	font-size: clamp(28px, 3.8vw, 44px);
+	color: var(--color-text-dark);
+	line-height: 1.2;
+	margin-bottom: 24px;
+	letter-spacing: -0.01em;
+}
+
+.dig-social__desc {
+	font-family: var(--font-sans);
+	font-size: 16px;
+	line-height: 1.75;
+	color: rgba(20, 18, 15, 0.8);
+	text-align: justify;
+}
+
+.dig-social__media {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.dig-social__img {
+	max-width: 100%;
+	height: auto;
+	object-fit: contain;
+	animation: digFloating 4s ease-in-out infinite;
+	filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.05));
+}
+
+@keyframes digFloating {
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-12px);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.dig-social__img {
+		animation: none;
+	}
+}
+
+@media (max-width: 992px) {
+	.dig-social {
+		padding: 70px 24px;
+	}
+	
+	.dig-social__container {
+		grid-template-columns: 1fr;
+		gap: 48px;
+	}
+	
+	.dig-social__content {
+		align-items: center;
+		text-align: center;
+	}
+	
+	.dig-social__desc {
+		text-align: center;
+	}
+}
+
+/* ==========================================
+   MARKETING DIGITAL - SECTION 2 (DIG SERVICES)
+   ========================================== */
+.dig-services {
+	background: var(--color-bg-light);
+	padding: 80px 24px;
+	position: relative;
+	overflow: hidden;
+}
+
+.dig-services__container {
+	max-width: 1100px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.dig-services__top-bar {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 40px;
+}
+
+.dig-services__propuesta-btn {
+	background-color: #000000;
+	color: #ffffff;
+	font-family: var(--font-sans);
+	font-weight: 700;
+	font-size: 13px;
+	letter-spacing: 0.05em;
+	padding: 10px 24px;
+	border-radius: 4px;
+	margin-bottom: 24px;
+	transition: background-color 0.3s ease, transform 0.2s ease;
+	display: inline-block;
+}
+
+.dig-services__propuesta-btn:hover {
+	background-color: #333333;
+	transform: translateY(-2px);
+}
+
+.dig-services__main-title {
+	font-family: var(--font-sans);
+	font-weight: 500;
+	font-size: clamp(28px, 4vw, 42px);
+	text-transform: uppercase;
+	color: var(--color-text-dark);
+	position: relative;
+	padding-bottom: 12px;
+	letter-spacing: 0.02em;
+}
+
+.dig-services__main-title::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 100%;
+	height: 1.5px;
+	background-color: #000000;
+}
+
+.dig-services__header-card {
+	background-color: #000000;
+	color: #ffffff;
+	padding: 16px 40px;
+	border-radius: 8px;
+	margin-bottom: 30px;
+	display: inline-block;
+}
+
+.dig-services__subtitle {
+	font-family: var(--font-sans);
+	font-weight: 700;
+	font-size: clamp(18px, 2.5vw, 26px);
+	letter-spacing: 0.02em;
+}
+
+.dig-services__intro-desc {
+	font-family: var(--font-sans);
+	font-size: 16px;
+	line-height: 1.6;
+	color: rgba(20, 18, 15, 0.85);
+	max-width: 680px;
+	margin-bottom: 40px;
+}
+
+.dig-services__objective-card {
+	background-color: #f0f0f0;
+	border-radius: 16px;
+	padding: 32px 48px;
+	display: flex;
+	align-items: center;
+	gap: 32px;
+	width: 100%;
+	max-width: 1100px;
+	margin-bottom: 60px;
+	text-align: left;
+}
+
+.dig-services__objective-icon-wrapper {
+	flex-shrink: 0;
+	width: 90px;
+	height: 90px;
+}
+
+.dig-services__objective-icon {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.dig-services__objective-text {
+	font-family: var(--font-sans);
+	font-weight: 700;
+	font-size: clamp(13px, 1.6vw, 15px);
+	line-height: 1.6;
+	color: var(--color-text-dark);
+	letter-spacing: 0.03em;
+}
+
+/* Grid of Activities */
+.dig-services__grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 24px;
+	width: 100%;
+	max-width: 1100px;
+	margin-bottom: 50px;
+}
+
+.dig-services__grid-item {
+	border-radius: 20px;
+	padding: 44px 32px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+	min-height: 250px;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dig-services__grid-item:hover {
+	transform: translateY(-8px);
+	box-shadow: 0 16px 32px rgba(0, 0, 0, 0.08);
+}
+
+.dig-services__grid-item--light {
+	background-color: #f0f0f0;
+	color: var(--color-text-dark);
+}
+
+.dig-services__grid-item--blue {
+	background-color: #2eb0e4;
+	color: #ffffff;
+}
+
+.dig-services__grid-icon-wrapper {
+	width: 42px;
+	height: 42px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.dig-services__grid-icon {
+	max-width: 100%;
+	max-height: 100%;
+	object-fit: contain;
+}
+
+.dig-services__grid-text {
+	font-family: var(--font-sans);
+	font-weight: 700;
+	font-size: 15px;
+	line-height: 1.5;
+	letter-spacing: 0.02em;
+	text-transform: uppercase;
+	max-width: 250px;
+}
+
+/* Footer elements */
+.dig-services__footer {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	max-width: 600px;
+	margin-top: 20px;
+	text-align: left;
+}
+
+.dig-services__footer-icon-wrapper {
+	flex-shrink: 0;
+	width: 50px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.dig-services__footer-icon {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.dig-services__footer-text {
+	font-family: var(--font-sans);
+	font-weight: 700;
+	font-size: 15px;
+	line-height: 1.5;
+	color: var(--color-text-dark);
+}
+
+/* Media Queries */
+@media (min-width: 576px) {
+	.dig-services__grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (min-width: 768px) {
+	.dig-services__grid {
+		grid-template-columns: repeat(3, 1fr);
+		column-gap: 20px;
+		row-gap: 40px; /* increase row gap to account for stagger */
+		padding-bottom: 40px; /* add space at the bottom for shifted cards */
+	}
+	
+	/* Shift middle column cards down slightly */
+	.dig-services__grid-item:nth-child(3n - 1) {
+		margin-top: 30px;
+		margin-bottom: -30px;
+	}
+	
+	.dig-services {
+		padding: 100px 48px;
+	}
+}
+
+@media (max-width: 575px) {
+	.dig-services__objective-card {
+		flex-direction: column;
+		text-align: center;
+		padding: 24px 20px;
+	}
+	
+	.dig-services__footer {
+		flex-direction: column;
+		text-align: center;
+	}
+}
+
+/* ==========================================
+   MARKETING DIGITAL - SECTION 3 (DIG ADS)
+   ========================================== */
+.dig-ads {
+	background: #ffffff;
+	padding: 80px 24px;
+	position: relative;
+	overflow: hidden;
+}
+
+.dig-ads__container {
+	max-width: 1100px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.dig-ads__header-card {
+	background-color: #000000;
+	color: #ffffff;
+	padding: 16px 40px;
+	border-radius: 8px;
+	margin-bottom: 30px;
+	display: inline-block;
+}
+
+.dig-ads__title {
+	font-family: var(--font-sans);
+	font-weight: 700;
+	font-size: clamp(18px, 2.5vw, 26px);
+	letter-spacing: 0.02em;
+}
+
+.dig-ads__intro-desc {
+	font-family: var(--font-sans);
+	font-size: 16px;
+	line-height: 1.6;
+	color: rgba(20, 18, 15, 0.85);
+	max-width: 680px;
+	margin-bottom: 40px;
+}
+
+.dig-ads__objective-card {
+	background-color: #f0f0f0;
+	border-radius: 16px;
+	padding: 32px 48px;
+	display: flex;
+	align-items: center;
+	gap: 32px;
+	width: 100%;
+	max-width: 1100px;
+	margin-bottom: 60px;
+	text-align: left;
+}
+
+.dig-ads__objective-icon-wrapper {
+	flex-shrink: 0;
+	width: 90px;
+	height: 90px;
+}
+
+.dig-ads__objective-icon {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.dig-ads__objective-text {
+	font-family: var(--font-sans);
+	font-weight: 700;
+	font-size: clamp(13px, 1.6vw, 15px);
+	line-height: 1.6;
+	color: var(--color-text-dark);
+	letter-spacing: 0.03em;
+}
+
+/* Slider */
+.dig-ads__slider-outer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	max-width: 1100px;
+	gap: 30px;
+	margin-bottom: 60px;
+}
+
+.dig-ads__slider-container {
+	flex-grow: 1;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+}
+
+.dig-ads__track {
+	display: flex;
+	width: 100%;
+}
+
+.dig-ads__slide {
+	display: none;
+	align-items: center;
+	gap: 40px;
+	width: 100%;
+}
+
+.dig-ads__slide.active {
+	display: flex;
+	animation: digSlideFadeIn 0.5s ease forwards;
+}
+
+@keyframes digSlideFadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.dig-ads__slide-media {
+	flex: 1;
+	border-radius: 20px;
+	overflow: hidden;
+	box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+	height: 320px;
+}
+
+.dig-ads__slide-img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.dig-ads__slide-card {
+	flex: 1;
+	border: 2px solid #2eb0e4;
+	border-radius: 20px;
+	background-color: #ffffff;
+	padding: 40px 32px;
+	min-height: 240px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 10px 24px rgba(46, 176, 228, 0.05);
+}
+
+.dig-ads__slide-text {
+	font-family: var(--font-sans);
+	font-weight: 700;
+	font-size: clamp(16px, 2.2vw, 20px);
+	line-height: 1.5;
+	color: var(--color-text-dark);
+	text-transform: uppercase;
+	letter-spacing: 0.02em;
+}
+
+.dig-ads__arrow {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	border: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	flex-shrink: 0;
+}
+
+.dig-ads__arrow--prev {
+	background-color: #f0f0f0;
+	color: #14120f;
+}
+
+.dig-ads__arrow--prev:hover {
+	background-color: #e0e0e0;
+	transform: scale(1.05);
+}
+
+.dig-ads__arrow--next {
+	background-color: #2eb0e4;
+	color: #ffffff;
+}
+
+.dig-ads__arrow--next:hover {
+	background-color: #239ccb;
+	transform: scale(1.05);
+}
+
+/* Footer elements */
+.dig-ads__footer {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	max-width: 680px;
+	margin-top: 20px;
+	text-align: left;
+}
+
+.dig-ads__footer-icon-wrapper {
+	flex-shrink: 0;
+	width: 50px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.dig-ads__footer-icon {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.dig-ads__footer-text {
+	font-family: var(--font-sans);
+	font-weight: 700;
+	font-size: 15px;
+	line-height: 1.5;
+	color: var(--color-text-dark);
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+	.dig-ads__slider-outer {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		justify-content: center;
+		gap: 20px;
+		width: 100%;
+		max-width: 100%;
+		padding: 0 10px;
+	}
+	
+	.dig-ads__slider-container {
+		grid-column: span 2;
+		order: -1;
+		width: 100%;
+	}
+	
+	.dig-ads__slide.active {
+		flex-direction: column;
+		gap: 16px;
+	}
+	
+	.dig-ads__slide-media {
+		width: 100%;
+		height: 200px;
+		flex: none;
+	}
+	
+	.dig-ads__slide-card {
+		width: 100%;
+		min-height: 120px;
+		padding: 24px 20px;
+		flex: none;
+	}
+	
+	.dig-ads__objective-card {
+		flex-direction: column;
+		text-align: center;
+		padding: 24px 20px;
+	}
+	
+	.dig-ads__footer {
+		flex-direction: column;
+		text-align: center;
+	}
+}
+
+@media (min-width: 768px) {
+	.dig-ads {
+		padding: 100px 48px;
+	}
+}
+
+/* ==========================================
+   MARKETING DIGITAL - SECTION 4 (DIG CONTENT)
+   ========================================== */
+.dig-content {
+	background: #FCF5E9;
+	padding: 80px 24px;
+	position: relative;
+	overflow: hidden;
+}
+
+.dig-content__container {
+	max-width: 1100px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.dig-content__header-card {
+	background-color: #000000;
+	color: #ffffff;
+	padding: 16px 40px;
+	border-radius: 8px;
+	margin-bottom: 30px;
+	display: inline-block;
+}
+
+.dig-content__title {
+	font-family: var(--font-sans);
+	font-weight: 700;
+	font-size: clamp(18px, 2.5vw, 26px);
+	letter-spacing: 0.02em;
+}
+
+.dig-content__intro-desc {
+	font-family: var(--font-sans);
+	font-size: 16px;
+	line-height: 1.6;
+	color: rgba(20, 18, 15, 0.85);
+	max-width: 680px;
+	margin-bottom: 40px;
+}
+
+.dig-content__objective-card {
+	background-color: #f0f0f0;
+	border-radius: 16px;
+	padding: 32px 48px;
+	display: flex;
+	align-items: center;
+	gap: 32px;
+	width: 100%;
+	max-width: 1100px;
+	margin-bottom: 60px;
+	text-align: left;
+}
+
+.dig-content__objective-icon-wrapper {
+	flex-shrink: 0;
+	width: 90px;
+	height: 90px;
+}
+
+.dig-content__objective-icon {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.dig-content__objective-text {
+	font-family: var(--font-sans);
+	font-weight: 700;
+	font-size: clamp(13px, 1.6vw, 15px);
+	line-height: 1.6;
+	color: var(--color-text-dark);
+	letter-spacing: 0.03em;
+}
+
+/* Grid of Activities */
+.dig-content__grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 20px;
+	width: 100%;
+	max-width: 1100px;
+	margin-bottom: 50px;
+}
+
+.dig-content__grid-item {
+	border-radius: 20px;
+	padding: 40px 24px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+	min-height: 250px;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dig-content__grid-item:hover {
+	transform: translateY(-8px);
+	box-shadow: 0 16px 32px rgba(0, 0, 0, 0.08);
+}
+
+.dig-content__grid-item--light {
+	background-color: #f0f0f0;
+	color: var(--color-text-dark);
+}
+
+.dig-content__grid-item--blue {
+	background-color: #2eb0e4;
+	color: #ffffff;
+}
+
+.dig-content__grid-icon-wrapper {
+	width: 44px;
+	height: 44px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.dig-content__grid-icon {
+	max-width: 100%;
+	max-height: 100%;
+	object-fit: contain;
+}
+
+.dig-content__grid-text {
+	font-family: var(--font-sans);
+	font-weight: 500;
+	font-size: 15px;
+	line-height: 1.5;
+	letter-spacing: 0.02em;
+	max-width: 220px;
+}
+
+/* Footer elements */
+.dig-content__footer {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	max-width: 680px;
+	margin-top: 20px;
+	text-align: left;
+}
+
+.dig-content__footer-icon-wrapper {
+	flex-shrink: 0;
+	width: 50px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.dig-content__footer-icon {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.dig-content__footer-text {
+	font-family: var(--font-sans);
+	font-weight: 700;
+	font-size: 15px;
+	line-height: 1.5;
+	color: var(--color-text-dark);
+}
+
+/* Responsive */
+@media (min-width: 576px) {
+	.dig-content__grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (min-width: 992px) {
+	.dig-content__grid {
+		grid-template-columns: repeat(4, 1fr);
+	}
+	
+	.dig-content {
+		padding: 100px 48px;
+	}
+}
+
+@media (max-width: 575px) {
+	.dig-content__objective-card {
+		flex-direction: column;
+		text-align: center;
+		padding: 24px 20px;
+	}
+	
+	.dig-content__footer {
+		flex-direction: column;
+		text-align: center;
+	}
+}
+
+/* ==========================================
+   MARKETING DIGITAL - SECTION 5 (DIG CONSULT)
+   ========================================== */
+.dig-consult {
+	background: #ffffff;
+	padding: 80px 24px;
+	position: relative;
+	overflow: hidden;
+}
+
+.dig-consult__container {
+	max-width: 1100px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.dig-consult__header-card {
+	background-color: #000000;
+	color: #ffffff;
+	padding: 16px 40px;
+	border-radius: 8px;
+	margin-bottom: 30px;
+	display: inline-block;
+}
+
+.dig-consult__title {
+	font-family: var(--font-sans);
+	font-weight: 700;
+	font-size: clamp(18px, 2.5vw, 26px);
+	letter-spacing: 0.02em;
+}
+
+.dig-consult__intro-desc {
+	font-family: var(--font-sans);
+	font-size: 16px;
+	line-height: 1.6;
+	color: rgba(20, 18, 15, 0.85);
+	max-width: 680px;
+	margin-bottom: 40px;
+}
+
+.dig-consult__objective-card {
+	background-color: #f0f0f0;
+	border-radius: 16px;
+	padding: 32px 48px;
+	display: flex;
+	align-items: center;
+	gap: 32px;
+	width: 100%;
+	max-width: 1100px;
+	margin-bottom: 60px;
+	text-align: left;
+}
+
+.dig-consult__objective-icon-wrapper {
+	flex-shrink: 0;
+	width: 90px;
+	height: 90px;
+}
+
+.dig-consult__objective-icon {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.dig-consult__objective-text {
+	font-family: var(--font-sans);
+	font-weight: 700;
+	font-size: clamp(13px, 1.6vw, 15px);
+	line-height: 1.6;
+	color: var(--color-text-dark);
+	letter-spacing: 0.03em;
+}
+
+/* Grid */
+.dig-consult__grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 30px;
+	width: 100%;
+	max-width: 1100px;
+	margin-bottom: 50px;
+}
+
+.dig-consult__grid-item {
+	border-radius: 24px;
+	padding: 50px 32px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	gap: 20px;
+	min-height: 280px;
+	position: relative;
+	overflow: hidden;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+.dig-consult__grid-item:hover {
+	transform: translateY(-8px);
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* Alternate colors: light - blue - light */
+.dig-consult__grid-item:nth-child(1),
+.dig-consult__grid-item:nth-child(3) {
+	background-color: #f0f0f0;
+	color: var(--color-text-dark);
+}
+
+.dig-consult__grid-item:nth-child(2) {
+	background-color: #2eb0e4;
+	color: #ffffff;
+}
+
+/* Numbers as big background graphics */
+.dig-consult__grid-number {
+	position: absolute;
+	top: 20px;
+	right: 30px;
+	font-family: var(--font-sans);
+	font-weight: 900;
+	font-size: 72px;
+	line-height: 1;
+	user-select: none;
+	pointer-events: none;
+	transition: transform 0.3s ease;
+}
+
+.dig-consult__grid-item:nth-child(1) .dig-consult__grid-number,
+.dig-consult__grid-item:nth-child(3) .dig-consult__grid-number {
+	color: rgba(20, 18, 15, 0.05);
+}
+
+.dig-consult__grid-item:nth-child(2) .dig-consult__grid-number {
+	color: rgba(255, 255, 255, 0.15);
+}
+
+.dig-consult__grid-item:hover .dig-consult__grid-number {
+	transform: scale(1.1) rotate(5deg);
+}
+
+/* Icons */
+.dig-consult__grid-icon-wrapper {
+	width: 56px;
+	height: 56px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 10px;
+}
+
+.dig-consult__grid-icon {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+/* Titles */
+.dig-consult__grid-title {
+	font-family: var(--font-sans);
+	font-weight: 700;
+	font-size: clamp(16px, 2.2vw, 19px);
+	line-height: 1.5;
+	letter-spacing: 0.02em;
+	max-width: 280px;
+}
+
+/* Footer elements */
+.dig-consult__footer {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	max-width: 680px;
+	margin-top: 20px;
+	text-align: left;
+}
+
+.dig-consult__footer-icon-wrapper {
+	flex-shrink: 0;
+	width: 50px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.dig-consult__footer-icon {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.dig-consult__footer-text {
+	font-family: var(--font-sans);
+	font-weight: 700;
+	font-size: 15px;
+	line-height: 1.5;
+	color: var(--color-text-dark);
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+	.dig-consult__grid {
+		grid-template-columns: repeat(3, 1fr);
+	}
+	
+	.dig-consult {
+		padding: 100px 48px;
+	}
+}
+
+@media (max-width: 767px) {
+	.dig-consult__grid-item {
+		padding: 40px 24px;
+		min-height: 220px;
+	}
+	
+	.dig-consult__objective-card {
+		flex-direction: column;
+		text-align: center;
+		padding: 24px 20px;
+	}
+	
+	.dig-consult__footer {
+		flex-direction: column;
+		text-align: center;
+	}
+}
+
+/* ==========================================
+   MARKETING DIGITAL - BRANDS TICKER
+   ========================================== */
+.dig-brands {
+	width: 100%;
+	margin-top: 100px;
+	text-align: center;
+	overflow: hidden;
+}
+
+.dig-brands__title {
+	font-family: var(--font-sans);
+	font-weight: 700;
+	font-size: clamp(20px, 3vw, 26px);
+	line-height: 1.3;
+	letter-spacing: 0.02em;
+	text-transform: uppercase;
+	color: var(--color-text-dark);
+	margin-bottom: 50px;
+}
+
+.dig-brands__title--blue {
+	color: #2eb0e4;
+}
+
+.dig-brands__carousel {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	width: 100%;
+}
+
+.dig-brands__row {
+	display: flex;
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+/* Mask gradient for smooth fade at edges */
+.dig-brands__row::before,
+.dig-brands__row::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 100px;
+	z-index: 2;
+	pointer-events: none;
+}
+
+.dig-brands__row::before {
+	left: 0;
+	background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+.dig-brands__row::after {
+	right: 0;
+	background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+.dig-brands__track {
+	display: flex;
+	align-items: center;
+	gap: 60px;
+	width: max-content;
+	animation: digMarqueeLeft 35s linear infinite;
+	padding: 5px 0;
+}
+
+.dig-brands__track--reverse {
+	animation: digMarqueeRight 40s linear infinite;
+}
+
+.dig-brands__logo {
+	height: clamp(35px, 5vw, 45px);
+	width: auto;
+	object-fit: contain;
+	filter: grayscale(100%);
+	opacity: 0.7;
+	transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+.dig-brands__logo:hover {
+	filter: grayscale(0%);
+	opacity: 1;
+}
+
+@keyframes digMarqueeLeft {
+	0% {
+		transform: translate3d(0, 0, 0);
+	}
+	100% {
+		transform: translate3d(-50%, 0, 0);
+	}
+}
+
+@keyframes digMarqueeRight {
+	0% {
+		transform: translate3d(-50%, 0, 0);
+	}
+	100% {
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+
+
+
+
 
