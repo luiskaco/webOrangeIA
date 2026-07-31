@@ -795,8 +795,8 @@ input, textarea, button {
 }
 
 .services-corp__detail-img-box {
-	background: var(--color-bg-light);
-	padding: 8px;
+	background: none;
+	padding: 0;
 }
 
 .services-corp__detail-img-placeholder {
@@ -838,12 +838,12 @@ input, textarea, button {
 .services-sens__watermark-text {
 	font-family: var(--font-display);
 	font-weight: 900;
-	font-size: clamp(45px, 8.5vw, 110px);
-	line-height: 0.95;
-	color: rgba(255, 255, 255, 0.16);
+	font-size: clamp(100px, 15vw, 240px);
+	line-height: 0.85;
+	color: rgba(255, 255, 255, 0.08);
 	letter-spacing: -0.03em;
 	text-align: center;
-	max-width: 90%;
+	max-width: 100%;
 	display: block;
 }
 
@@ -1114,7 +1114,8 @@ input, textarea, button {
 	cursor: pointer;
 }
 
-.sectors__badge:hover {
+.sectors__badge:hover,
+.sectors__badge.sectors__badge--active {
 	background-color: var(--color-text-dark);
 	color: var(--color-bg-light);
 	transform: translateY(-2px);

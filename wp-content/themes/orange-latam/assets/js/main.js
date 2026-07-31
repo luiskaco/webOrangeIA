@@ -849,6 +849,65 @@ document.addEventListener( 'DOMContentLoaded', () => {
 		}
 	};
 
+	// ==========================================
+	// 17. SECTORS AUTOPLAY / AUTO-HOVER
+	// ==========================================
+	const initSectorsAutoplay = () => {
+		const badges = document.querySelectorAll( '.sectors__badge' );
+		if ( badges.length === 0 ) return;
+
+		let currentIndex = 0;
+		let intervalId = null;
+		let resumeTimeoutId = null;
+
+		const startAutoplay = () => {
+			stopAutoplay();
+			intervalId = setInterval( () => {
+				// Quitar clase del actual
+				badges[currentIndex].classList.remove( 'sectors__badge--active' );
+				
+				// Siguiente de forma circular
+				currentIndex = ( currentIndex + 1 ) % badges.length;
+				
+				// Agregar clase al nuevo
+				badges[currentIndex].classList.add( 'sectors__badge--active' );
+			}, 1500 );
+		};
+
+		const stopAutoplay = () => {
+			if ( intervalId ) {
+				clearInterval( intervalId );
+				intervalId = null;
+			}
+		};
+
+		// Iniciar el primer badge
+		badges[currentIndex].classList.add( 'sectors__badge--active' );
+
+		// Eventos para interactividad manual
+		badges.forEach( ( badge, idx ) => {
+			badge.addEventListener( 'mouseenter', () => {
+				stopAutoplay();
+				if ( resumeTimeoutId ) {
+					clearTimeout( resumeTimeoutId );
+					resumeTimeoutId = null;
+				}
+				badges.forEach( b => b.classList.remove( 'sectors__badge--active' ) );
+			} );
+
+			badge.addEventListener( 'mouseleave', () => {
+				if ( resumeTimeoutId ) clearTimeout( resumeTimeoutId );
+				resumeTimeoutId = setTimeout( () => {
+					currentIndex = idx;
+					badges[currentIndex].classList.add( 'sectors__badge--active' );
+					startAutoplay();
+				}, 2500 );
+			} );
+		} );
+
+		startAutoplay();
+	};
+
 	// Initialize all components
 	initScrollReveals();
 	initHeroSlider();
@@ -867,5 +926,5 @@ document.addEventListener( 'DOMContentLoaded', () => {
 	initInfluencerFaqHAccordion();
 	initVideoModal();
 	initDigAdsSlider();
+	initSectorsAutoplay();
 } );
-

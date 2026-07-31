@@ -3,14 +3,14 @@
 ## Sprint 1: Cimiento del Tema & Auto-configuración
 - [x] Documentar especificaciones del tema (PRD, SDD, SYSTEM_SPEC, ARCHITECTURE)
 - [/] Diseñar e implementar plan de la primera vista (Home/Landing)
-- [ ] Crear estructura base del tema `orange-latam` en `wp-content/themes/`
-- [ ] Implementar metadatos en `style.css` de WordPress
-- [ ] Implementar la clase de auto-inicialización en la activación del tema (`after_switch_theme`)
+- [x] Crear estructura base del tema `orange-latam` en `wp-content/themes/`
+- [x] Implementar metadatos en `style.css` de WordPress
+- [x] Implementar la clase de auto-inicialización en la activación del tema (`after_switch_theme`)
 - [x] Añadir favicon (`favico.webp`) al core del tema
 
 
 ## Sprint 2: Maquetado y UI de la Home (Primera Vista)
-- [ ] Crear cabecera (`header.php`) y pie de página (`footer.php`)
+- [x] Crear cabecera (`header.php`) y pie de página (`footer.php`)
 - [x] Implementar el Hero Slider con transiciones CSS y autoplay
 - [ ] Implementar la barra de estadísticas (Stats Bar)
 - [ ] Crear sección Nosotros (Misión/Visión)
@@ -36,10 +36,10 @@
 - [x] Página `marketing-de-influencers`: creación automática de página + template dedicado (`page-marketing-de-influencers.php`), copia fiel del contenido de referencia (`design/asset/marketing-influencer.png`)
 - [x] Cargar recursos visuales reales (imágenes/fotos) de la página `marketing-de-influencers` (cargados favicon, chica_foto, beneficios, estrategia, y los 4 pilares de selección)
 - [ ] Confirmar con el cliente si el menú "Inicio / Blog" debe incluir un tercer enlace a `marketing-de-influencers` u otras páginas de servicio futuras
-- [ ] Página `marketing-digital` (pendiente, referencia: `design/asset/marketing-digital.png`) — página distinta, no mezclar contenido con `marketing-de-influencers`
+- [x] Página `marketing-digital` (completada, referencia: `design/asset/marketing-digital.png`) — página distinta, no mezclar contenido con `marketing-de-influencers`
 - [x] Enlace de la fila "02 Marketing de Influencers" en `services-corp` (home) hacia `/marketing-de-influencers/`, wireado vía `data-link` + JS
 - [x] Menú propio de `marketing-de-influencers` (theme location `influencers`), auto-creado/auto-asignado en `class-theme-setup.php` para activarse solo al desplegar el tema
-- [x] Hero de `marketing-de-influencers` reconstruido como video full-bleed (`assets/videos/marketing-de-influencers-hero.mp4`) con título superpuesto, scrim de header y ajustes de legibilidad
+- [x] Hero de `marketing-de-influencers` reconstruido como video full-bleed (`assets/videos/marketing-de-influencers-hero.mp4`) with título superpuesto, scrim de header y ajustes de legibilidad
 - [x] Sección `infl-awards`: título + pill + ticker de premios en movimiento continuo (CSS puro, sin JS), con los 8 logos/textos reales descargados de `orange-la.com`
 - [x] Sección `infl-stat-block`: píldoras de estadística "+28 Influencers" + imagen con burbuja de cita superpuesta
 - [ ] Confirmar con el cliente los destinos reales de los ítems del menú `influencers` (hoy son anclas placeholder: `#servicios`, `#preguntas-frecuentes`, `#casos-de-exito`, `#por-que-nosotros`, `#contacto`)

@@ -178,20 +178,28 @@ get_header();
 			<div class="services-corp__grid">
 				<div class="services-corp__list" data-reveal="left">
 					<?php
-					$corp_services = array(
-						array( 'id' => 1, 'num' => '01', 'name' => 'PR y Gestión de la reputación', 'desc' => 'Planificar y ejecutar estrategias de Relaciones Públicas (PR) y gestión de la reputación permite a marcas y empresas influir de manera poderosa en la percepción de distintos públicos. En Orange Latam nos especializamos en la creación de planes que permiten construir una reputación sólida a empresas, productos y/o servicios, a partir de una interacción asertiva con públicos diversos, a todo nivel.', 'img' => get_stylesheet_directory_uri() . '/assets/images/services/pr-reputacion.png' ),
-						array( 'id' => 2, 'num' => '02', 'name' => 'Marketing de Influencers', 'desc' => 'Conectamos marcas con líderes de opinión altamente relevantes para campañas de máximo alcance, impacto y retorno de inversión medible en cada plataforma digital.', 'link' => home_url( '/marketing-de-influencers/' ), 'img' => get_stylesheet_directory_uri() . '/assets/images/services/marketing-influencers.png' ),
-						array( 'id' => 3, 'num' => '03', 'name' => 'Digital y Social Media', 'desc' => 'Gestión estratégica de presencia digital, comunidades online y creación de contenido en todos los canales relevantes para tu audiencia.', 'link' => home_url( '/marketing-digital/' ), 'img' => get_stylesheet_directory_uri() . '/assets/images/services/digital-social-media.png' ),
-						array( 'id' => 4, 'num' => '04', 'name' => 'Producción Audiovisual Orange Studio', 'desc' => 'Producción de video, fotografía y animación de primer nivel para todas las plataformas y formatos del ecosistema digital y tradicional.', 'img' => get_stylesheet_directory_uri() . '/assets/images/services/produccion-audiovisual.png' ),
-						array( 'id' => 5, 'num' => '05', 'name' => 'Creatividad y Dirección de Arte', 'desc' => 'El diferencial creativo que hace que tu comunicación se destaque y genere el impacto deseado en el público objetivo.', 'img' => get_stylesheet_directory_uri() . '/assets/images/services/creatividad-arte.png' ),
-						array( 'id' => 6, 'num' => '06', 'name' => 'Branding', 'desc' => 'De naming a consolidación: creamos y posicionamos marcas memorables y deseadas en mercados nacionales e internacionales.', 'img' => get_stylesheet_directory_uri() . '/assets/images/services/branding.png' ),
-						array( 'id' => 7, 'num' => '07', 'name' => 'Estratégias ATL', 'desc' => 'Campañas de alto alcance con planificación de medios, segmentación de audiencias y ejecución integrada con el mejor ROI del mercado.', 'img' => get_stylesheet_directory_uri() . '/assets/images/services/estrategias-atl.png' ),
-						array( 'id' => 8, 'num' => '08', 'name' => 'Eventos y Activaciones Presenciales', 'desc' => 'Experiencias presenciales, remotas e híbridas de primer nivel que conectan con el público de manera poderosa y memorable.', 'img' => get_stylesheet_directory_uri() . '/assets/images/services/eventos-presenciales.png' ),
-						array( 'id' => 9, 'num' => '09', 'name' => 'Entrenamiento de Voceros', 'desc' => 'Preparamos líderes para comunicar con autoridad y credibilidad ante medios, inversores y audiencias clave en cualquier escenario.', 'img' => get_stylesheet_directory_uri() . '/assets/images/services/entrenamiento-voceros.png' ),
-						array( 'id' => 10, 'num' => '10', 'name' => 'SEO / SEM', 'desc' => 'Optimizamos la presencia digital con estrategias de búsqueda integradas a los objetivos comerciales e institucionales de la marca.', 'img' => get_stylesheet_directory_uri() . '/assets/images/services/seo-sem.png' ),
-						array( 'id' => 11, 'num' => '11', 'name' => 'Web site / Landing UX Criteria', 'desc' => 'Diseñamos experiencias digitales que convierten, con navegación intuitiva, visual atractivo y arquitectura de información óptima.', 'img' => get_stylesheet_directory_uri() . '/assets/images/services/website-ux.png' ),
-						array( 'id' => 12, 'num' => '12', 'name' => 'E-Commerce', 'desc' => 'Plataformas y estrategias digitales completas para potenciar ventas, captación de leads y fidelización de clientes.', 'img' => get_stylesheet_directory_uri() . '/assets/images/services/ecommerce.png' ),
+					$services_data = array(
+						array( 'id' => 1, 'num' => '01', 'name' => 'PR y Gestión de la reputación', 'desc' => 'Planificar y ejecutar estrategias de Relaciones Públicas (PR) y gestión de la reputación permite a marcas y empresas influir de manera poderosa en la percepción de distintos públicos. En Orange Latam nos especializamos en la creación de planes que permiten construir una reputación sólida a empresas, productos y/o servicios, a partir de una interacción asertiva con públicos diversos, a todo nivel.', 'file' => 'pr-reputacion.png' ),
+						array( 'id' => 2, 'num' => '02', 'name' => 'Marketing de Influencers', 'desc' => 'Conectamos marcas con líderes de opinión altamente relevantes para campañas de máximo alcance, impacto y retorno de inversión medible en cada plataforma digital.', 'link' => home_url( '/marketing-de-influencers/' ), 'file' => 'marketing-influencers.png' ),
+						array( 'id' => 3, 'num' => '03', 'name' => 'Digital y Social Media', 'desc' => 'Gestión estratégica de presencia digital, comunidades online y creación de contenido en todos los canales relevantes para tu audiencia.', 'link' => home_url( '/marketing-digital/' ), 'file' => 'digital-social-media.png' ),
+						array( 'id' => 4, 'num' => '04', 'name' => 'Producción Audiovisual Orange Studio', 'desc' => 'Producción de video, fotografía y animación de primer nivel para todas las plataformas y formatos del ecosistema digital y tradicional.', 'file' => 'produccion-audiovisual.png' ),
+						array( 'id' => 5, 'num' => '05', 'name' => 'Creatividad y Dirección de Arte', 'desc' => 'El diferencial creativo que hace que tu comunicación se destaque y genere el impacto deseado en el público objetivo.', 'file' => 'creatividad-arte.png' ),
+						array( 'id' => 6, 'num' => '06', 'name' => 'Branding', 'desc' => 'De naming a consolidación: creamos y posicionamos marcas memorables y deseadas en mercados nacionales e internacionales.', 'file' => 'branding.png' ),
+						array( 'id' => 7, 'num' => '07', 'name' => 'Estratégias ATL', 'desc' => 'Campañas de alto alcance con planificación de medios, segmentación de audiencias y ejecución integrada con el mejor ROI del mercado.', 'file' => 'estrategias-atl.png' ),
+						array( 'id' => 8, 'num' => '08', 'name' => 'Eventos y Activaciones Presenciales', 'desc' => 'Experiencias presenciales, remotas e híbridas de primer nivel que conectan con el público de manera poderosa y memorable.', 'file' => 'eventos-presenciales.png' ),
+						array( 'id' => 9, 'num' => '09', 'name' => 'Entrenamiento de Voceros', 'desc' => 'Preparamos líderes para comunicar con autoridad y credibilidad ante medios, inversores y audiencias clave en cualquier escenario.', 'file' => 'entrenamiento-voceros.png' ),
+						array( 'id' => 10, 'num' => '10', 'name' => 'SEO / SEM', 'desc' => 'Optimizamos la presencia digital con estrategias de búsqueda integradas a los objetivos comerciales e institucionales de la marca.', 'file' => 'seo-sem.png' ),
+						array( 'id' => 11, 'num' => '11', 'name' => 'Web site / Landing UX Criteria', 'desc' => 'Diseñamos experiencias digitales que convierten, con navegación intuitiva, visual atractivo y arquitectura de información óptima.', 'file' => 'website-ux.png' ),
+						array( 'id' => 12, 'num' => '12', 'name' => 'E-Commerce', 'desc' => 'Plataformas y estrategias digitales completas para potenciar ventas, captación de leads y fidelización de clientes.', 'file' => 'ecommerce.png' ),
 					);
+
+					$corp_services = array();
+					foreach ( $services_data as $svc ) {
+						$file_path = get_template_directory() . '/assets/images/services/' . $svc['file'];
+						$ver = file_exists( $file_path ) ? filemtime( $file_path ) : '1.0.0';
+						$svc['img'] = get_stylesheet_directory_uri() . '/assets/images/services/' . $svc['file'] . '?v=' . $ver;
+						$corp_services[] = $svc;
+					}
 
 					foreach ( $corp_services as $svc ) {
 						$active_class = $svc['id'] === 1 ? 'services-corp__row--active' : '';
@@ -213,8 +221,13 @@ get_header();
 							Planificar y ejecutar estrategias de Relaciones Públicas (PR) y gestión de la reputación permite a marcas y empresas influir de manera poderosa en la percepción de distintos públicos. En Orange Latam nos especializamos en la creación de planes que permiten construir una reputación sólida a empresas, productos y/o servicios, a partir de una interacción asertiva con públicos diversos, a todo nivel.
 						</p>
 						<a href="#contacto" class="services-corp__detail-link" data-default-href="#contacto">Más información <span>→</span></a>
+						<?php
+						$default_img_path = get_template_directory() . '/assets/images/services/pr-reputacion.png';
+						$default_img_ver = file_exists( $default_img_path ) ? filemtime( $default_img_path ) : '1.0.0';
+						$default_img_url = get_stylesheet_directory_uri() . '/assets/images/services/pr-reputacion.png?v=' . $default_img_ver;
+						?>
 						<div class="services-corp__detail-img-box">
-							<img class="services-corp__detail-img" src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/images/services/pr-reputacion.png' ); ?>" alt="PR y Gestión de la reputación" style="width: 100%; height: 324px; object-fit: cover; display: block;">
+							<img class="services-corp__detail-img" src="<?php echo esc_url( $default_img_url ); ?>" alt="PR y Gestión de la reputación" style="width: 100%; height: 324px; object-fit: cover; display: block;">
 						</div>
 					</div>
 				</div>
