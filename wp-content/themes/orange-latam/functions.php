@@ -53,8 +53,8 @@ add_action( 'after_setup_theme', 'orange_latam_theme_setup' );
 // 3. ENQUEUE ASSETS (CSS & JS)
 // ==========================================
 function orange_latam_enqueue_assets() {
-	// Enqueue Google Fonts
-	wp_enqueue_style( 'orange-latam-fonts', 'https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800;900&family=Playball&family=Poppins:wght@400;500;600;700;800;900&display=swap', array(), null );
+	// Enqueue Google Fonts (Web fallbacks for PP Editorial New and PP Neue Montreal)
+	wp_enqueue_style( 'orange-latam-fonts', 'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,400;1,700&family=Inter:wght@400;500;600;700;800;900&family=Playball&family=Poppins:wght@400;500;600;700;800;900&display=swap', array(), null );
 
 	// Enqueue main stylesheet (style.css metadata)
 	wp_enqueue_style( 'orange-latam-style-meta', get_stylesheet_uri(), array(), ORANGE_THEME_VERSION );
