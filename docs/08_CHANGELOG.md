@@ -2,6 +2,9 @@
 
 ## [Unreleased]
 ### Añadido
+- Aplicación estricta de las tipografías `PP Editorial New` (serif editorial) y `PP Neue Montreal` (sans-serif) a todas las secciones de la Home y subpáginas según el PDF de especificaciones.
+- Fallbacks tipográficos web en Google Fonts (`Cormorant Garamond`, `Plus Jakarta Sans`) para garantizar renderizado inmediato en navegadores sin los archivos locales `.woff2`.
+- Creación de la estructura de directorio `assets/fonts/` en el tema `orange-latam`.
 - Enlace del servicio "Marketing de Influencers" (fila 02 del bloque `services-corp` en `index.php`) hacia `/marketing-de-influencers/`, wireado dinámicamente vía `data-link` en `main.js` (botón "Más información" cambia de destino según la fila activa).
 - Nueva theme location de menú `influencers` (`functions.php`), con menú "Menú Influencers Orange" auto-creado y auto-asignado en `class-theme-setup.php` (mismo patrón que los menús Principal y Blog), para que se active solo al desplegar el tema en el hosting sin pasos manuales. Ítems actuales (Inicio, Servicios, Preguntas Frecuentas, Casos de Exito, ¿Por qué nosotros?, Contacto) son anclas placeholder pendientes de enlazar a sus secciones/páginas reales.
 - `header.php` distingue el contexto de la página `marketing-de-influencers` del contexto de blog, usando la nueva location `influencers` en vez de `blog`. El comportamiento del menú (hamburguesa, panel deslizable, `header--scrolled`) es compartido vía las mismas clases `.header`/`.header__nav`/`.header__burger`, por lo que ya coincide con el de la home sin cambios adicionales.
