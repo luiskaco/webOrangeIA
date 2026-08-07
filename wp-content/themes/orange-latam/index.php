@@ -25,7 +25,7 @@ get_header();
 					<source src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/videos/orange-latam-lideres-reputacion-comunicacion-pr.mp4" type="video/mp4">
 				</video>
 				<div class="hero__content">
-					<h1 style="font-family: var(--font-display); font-size: clamp(32px, 5vw, 64px); font-weight: 900; margin-bottom: 12px; color: var(--color-bg-light);">
+					<h1 style="font-family: var(--font-sans); font-size: clamp(32px, 5vw, 64px); font-weight: 900; margin-bottom: 12px; color: var(--color-bg-light);">
 						Líderes en Reputación
 					</h1>
 					<p style="font-size: clamp(14px, 2vw, 18px); color: rgba(252, 245, 233, 0.7); max-width: 600px; margin: 0 auto;">
@@ -40,7 +40,7 @@ get_header();
 					<img class="hero__img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/Orange-LAtam-dentro-de-las-40-mejores-campanas-del-mundo-en-Global-Sabre-Awards-2025-desktop.webp" alt="Global Sabre Awards 2025">
 				</picture>
 				<div class="hero__content">
-					<h1 style="font-family: var(--font-display); font-size: clamp(32px, 5vw, 64px); font-weight: 900; margin-bottom: 12px; color: var(--color-bg-light);">
+					<h1 style="font-family: var(--font-sans); font-size: clamp(32px, 5vw, 64px); font-weight: 900; margin-bottom: 12px; color: var(--color-bg-light);">
 						Impulsamos tu Marca
 					</h1>
 					<p style="font-size: clamp(14px, 2vw, 18px); color: rgba(252, 245, 233, 0.7); max-width: 600px; margin: 0 auto;">
@@ -55,7 +55,7 @@ get_header();
 					<img class="hero__img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/Orange-Latam-denro-de-las-15-mejores-agencias-de-Latinoamerica-por-PRovoke-Media-desktop.webp" alt="PRovoke Media Top 15 Latam">
 				</picture>
 				<div class="hero__content">
-					<h1 style="font-family: var(--font-display); font-size: clamp(32px, 5vw, 64px); font-weight: 900; margin-bottom: 12px; color: var(--color-bg-light);">
+					<h1 style="font-family: var(--font-sans); font-size: clamp(32px, 5vw, 64px); font-weight: 900; margin-bottom: 12px; color: var(--color-bg-light);">
 						Excelencia y Creatividad
 					</h1>
 					<p style="font-size: clamp(14px, 2vw, 18px); color: rgba(252, 245, 233, 0.7); max-width: 600px; margin: 0 auto;">

@@ -5,7 +5,8 @@
    ========================================================================== */
 @font-face {
 	font-family: 'PP Neue Montreal';
-	src: url('../fonts/PPNeueMontreal-Regular.woff2') format('woff2'),
+	src: local('PP Neue Montreal'), local('Neue Montreal'),
+	     url('../fonts/PPNeueMontreal-Regular.woff2') format('woff2'),
 	     url('../fonts/PPNeueMontreal-Regular.woff') format('woff');
 	font-weight: 400;
 	font-style: normal;
@@ -14,7 +15,8 @@
 
 @font-face {
 	font-family: 'PP Neue Montreal';
-	src: url('../fonts/PPNeueMontreal-Medium.woff2') format('woff2'),
+	src: local('PP Neue Montreal'), local('Neue Montreal'),
+	     url('../fonts/PPNeueMontreal-Medium.woff2') format('woff2'),
 	     url('../fonts/PPNeueMontreal-Medium.woff') format('woff');
 	font-weight: 500;
 	font-style: normal;
@@ -23,7 +25,8 @@
 
 @font-face {
 	font-family: 'PP Neue Montreal';
-	src: url('../fonts/PPNeueMontreal-Bold.woff2') format('woff2'),
+	src: local('PP Neue Montreal'), local('Neue Montreal'),
+	     url('../fonts/PPNeueMontreal-Bold.woff2') format('woff2'),
 	     url('../fonts/PPNeueMontreal-Bold.woff') format('woff');
 	font-weight: 700;
 	font-style: normal;
@@ -31,8 +34,19 @@
 }
 
 @font-face {
+	font-family: 'Neue Montreal';
+	src: local('PP Neue Montreal'), local('Neue Montreal'),
+	     url('../fonts/PPNeueMontreal-Regular.woff2') format('woff2'),
+	     url('../fonts/PPNeueMontreal-Regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
 	font-family: 'Editorial New';
-	src: url('../fonts/PPEditorialNew-Regular.woff2') format('woff2'),
+	src: local('PP Editorial New'), local('Editorial New'),
+	     url('../fonts/PPEditorialNew-Regular.woff2') format('woff2'),
 	     url('../fonts/PPEditorialNew-Regular.woff') format('woff');
 	font-weight: 400;
 	font-style: normal;
@@ -41,9 +55,20 @@
 
 @font-face {
 	font-family: 'Editorial New';
-	src: url('../fonts/PPEditorialNew-Ultrabold.woff2') format('woff2'),
+	src: local('PP Editorial New'), local('Editorial New'),
+	     url('../fonts/PPEditorialNew-Ultrabold.woff2') format('woff2'),
 	     url('../fonts/PPEditorialNew-Ultrabold.woff') format('woff');
 	font-weight: 800;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'PP Editorial New';
+	src: local('PP Editorial New'), local('Editorial New'),
+	     url('../fonts/PPEditorialNew-Regular.woff2') format('woff2'),
+	     url('../fonts/PPEditorialNew-Regular.woff') format('woff');
+	font-weight: 400;
 	font-style: normal;
 	font-display: swap;
 }
@@ -67,8 +92,8 @@
 	--color-orange: #EE894F;
 	--color-yellow: #F7D769;
 	
-	--font-display: 'Editorial New', 'Playfair Display', serif;
-	--font-sans: 'PP Neue Montreal', 'Inter', sans-serif;
+	--font-display: 'PP Editorial New', 'Editorial New', 'Playfair Display', serif;
+	--font-sans: 'PP Neue Montreal', 'Neue Montreal', 'Inter', sans-serif;
 	--font-cursive: 'Maca', 'Playball', cursive;
 }
 
@@ -542,6 +567,7 @@ input, textarea, button {
 }
 
 .about__section-title {
+	font-family: var(--font-display);
 	font-size: 13px;
 	font-weight: 700;
 	letter-spacing: 0.08em;
@@ -963,7 +989,7 @@ input, textarea, button {
 }
 
 .award-teaser__title {
-	font-family: var(--font-display);
+	font-family: var(--font-sans);
 	font-weight: 900;
 	font-size: clamp(32px, 3.6vw, 44px);
 	line-height: 1.05;
@@ -1942,10 +1968,7 @@ input, textarea, button {
 	color: var(--color-bg-light);
 }
 
-/* Force Poppins font across all influencer page sections */
-.infl, .infl * {
-	font-family: 'Poppins', sans-serif !important;
-}
+/* Influencer page section styles */
 
 .infl-section {
 	background: var(--color-bg-dark);
@@ -4730,7 +4753,7 @@ input, textarea, button {
    MARKETING DIGITAL PAGE SCOPE
    ========================================== */
 .marketing-digital {
-	--font-sans: 'Poppins', sans-serif;
+	--font-sans: 'PP Neue Montreal', 'Neue Montreal', 'Inter', sans-serif;
 	font-family: var(--font-sans);
 }
 

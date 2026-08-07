@@ -10,6 +10,7 @@
 
 
 ## Sprint 2: Maquetado y UI de la Home (Primera Vista)
+- [x] Aplicar tipografías del PDF (PP Editorial New y PP Neue Montreal) a todas las secciones del sitio
 - [x] Crear cabecera (`header.php`) y pie de página (`footer.php`)
 - [x] Implementar el Hero Slider con transiciones CSS y autoplay
 - [ ] Implementar la barra de estadísticas (Stats Bar)
