@@ -1633,6 +1633,231 @@ input, textarea, button {
 }
 
 /* ==========================================================================
+   12a. HOME RESPONSIVE MEDIA QUERIES
+   ========================================================================== */
+@media (max-width: 992px) {
+	.header {
+		padding: 16px 24px;
+	}
+
+	.header--scrolled {
+		padding: 12px 24px;
+	}
+
+	.services-banner {
+		padding: 32px 24px;
+	}
+
+	.services-banner__flex {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 16px;
+	}
+
+	.services-banner__title {
+		font-size: clamp(28px, 6vw, 40px);
+	}
+
+	.services-corp__grid {
+		grid-template-columns: 1fr;
+	}
+
+	.services-corp__list {
+		border-right: none;
+		border-bottom: 1px solid rgba(252, 245, 233, 0.12);
+	}
+
+	.services-corp__detail {
+		position: static;
+		padding: 32px 24px 40px;
+	}
+
+	.services-corp__detail-watermark {
+		font-size: 100px;
+		right: 10px;
+		top: 10px;
+	}
+
+	.services-sens {
+		padding: 48px 24px 64px;
+	}
+
+	.services-sens__watermark-text {
+		font-size: clamp(60px, 12vw, 120px);
+	}
+
+	.services-sens__card-body {
+		padding: 24px 20px 28px;
+	}
+
+	.experts__grid {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 16px;
+	}
+}
+
+@media (max-width: 768px) {
+	.header {
+		padding: 14px 18px;
+	}
+
+	.header--scrolled {
+		padding: 10px 18px;
+	}
+
+	/* Stats Bar: Grid 2x2 on Mobile */
+	.stats {
+		padding: 20px 16px;
+	}
+
+	.stats__container {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 12px 10px;
+	}
+
+	.stats__item {
+		border-left: none;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		padding: 10px 8px;
+		background: rgba(20, 18, 15, 0.04);
+		border-radius: 8px;
+		gap: 8px;
+	}
+
+	.stats__value {
+		font-size: clamp(18px, 5.2vw, 26px);
+	}
+
+	.stats__label {
+		font-size: 10.5px;
+		line-height: 1.25;
+	}
+
+	.about {
+		padding: 40px 20px 56px;
+	}
+
+	.about__desc {
+		text-align: left;
+		padding: 18px 20px;
+		margin-bottom: 32px;
+	}
+
+	.about__grid {
+		grid-template-columns: 1fr;
+		gap: 36px;
+	}
+
+	.about__hero-text {
+		position: static;
+	}
+
+	.about__heading {
+		font-size: clamp(30px, 8vw, 42px);
+	}
+
+	.about__heading-line {
+		width: 140px;
+		margin-top: 10px;
+	}
+
+	.services-corp__row {
+		padding: 14px 18px;
+	}
+
+	.award-teaser {
+		padding: 44px 20px;
+	}
+
+	.award-teaser__container {
+		gap: 24px;
+	}
+
+	.award-teaser__title {
+		font-size: clamp(24px, 6vw, 34px);
+	}
+
+	.award-teaser__bubble {
+		max-width: 100%;
+		padding: 18px 22px;
+	}
+
+	.awards-list {
+		padding: 44px 20px;
+	}
+
+	.sectors {
+		padding: 44px 20px;
+	}
+
+	.sectors__title {
+		font-size: clamp(26px, 6vw, 36px);
+	}
+
+	.sectors__subtitle {
+		font-size: 13px;
+		margin-bottom: 20px;
+	}
+
+	.sectors__badge {
+		white-space: normal;
+		padding: 8px 12px;
+		font-size: 10.5px;
+	}
+
+	.experts {
+		padding: 44px 20px 56px;
+	}
+
+	.experts__title {
+		font-size: clamp(26px, 6vw, 36px);
+	}
+
+	.experts__grid {
+		grid-template-columns: 1fr;
+		gap: 16px;
+	}
+
+	.experts__card-img-placeholder,
+	.experts__card-img {
+		height: 200px;
+	}
+
+	.faq {
+		padding: 44px 20px 56px;
+	}
+
+	.faq__title {
+		font-size: clamp(26px, 6vw, 36px);
+		margin-bottom: 28px;
+	}
+
+	.contact {
+		padding: 44px 20px 48px;
+	}
+
+	.contact__grid {
+		grid-template-columns: 1fr;
+		gap: 36px;
+	}
+
+	.contact__title {
+		font-size: clamp(28px, 7vw, 40px);
+	}
+
+	.contact__form-body {
+		padding: 22px 16px;
+	}
+
+	.contact__form-row {
+		grid-template-columns: 1fr;
+		gap: 16px;
+	}
+}
+
+/* ==========================================================================
    12b. POST DETAIL - SHARE ARTICLE
    ========================================================================== */
 .share {

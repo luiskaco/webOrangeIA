@@ -25,7 +25,8 @@
 
 ## Sprint 3: Optimización y Pruebas
 - [x] Refinar animaciones de Scroll (Reveal) mediante `IntersectionObserver`
-- [/] Auditar accesibilidad (A11y), responsive y tiempos de carga
+- [x] Optimizar diseño responsive en móviles (Header, Stats 2x2 grid, Servicios 1-col layout, Sectores pills, Voz de Expertos grid, Formulario)
+- [x] Auditar accesibilidad (A11y), responsive y tiempos de carga
 - [ ] Documentar despliegue y cierre de sesión
 
 ## Sprint 4: Blog & Páginas de Servicio

@@ -2,6 +2,7 @@
 
 ## [Unreleased]
 ### Añadido
+- Rediseño responsive móvil completo de la Home: cuadrícula 2x2 fluida para la barra de estadísticas (`.stats`), layout de 1 sola columna para la sección interactiva de Servicios (`.services-corp`), paddings laterales optimizados (`20px`), texto de descripción alineado a la izquierda sin espacios gigantes y grids de Voz de Expertos y Formulario adaptativos.
 - Aplicación estricta de las tipografías `PP Editorial New` (serif editorial) y `PP Neue Montreal` (sans-serif) a todas las secciones de la Home y subpáginas según el PDF de especificaciones.
 - Fallbacks tipográficos web en Google Fonts (`Cormorant Garamond`, `Plus Jakarta Sans`) para garantizar renderizado inmediato en navegadores sin los archivos locales `.woff2`.
 - Creación de la estructura de directorio `assets/fonts/` en el tema `orange-latam`.
