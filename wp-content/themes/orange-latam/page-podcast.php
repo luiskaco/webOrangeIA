@@ -23,11 +23,10 @@ $podcast_img_uri = $theme_uri . '/assets/images/podcast';
 	<section class="podcast-hero">
 		<div class="podcast-hero__video-container">
 			<iframe class="podcast-hero__video" 
-				src="https://www.youtube.com/embed/xkt_vSw_FK8?autoplay=1&mute=1&loop=1&playlist=xkt_vSw_FK8&controls=0&showinfo=0&autohide=1&modestbranding=1&playsinline=1&enablejsapi=1" 
+				src="https://www.youtube.com/embed/xkt_vSw_FK8?autoplay=1&mute=1&loop=1&playlist=xkt_vSw_FK8&controls=0&showinfo=0&autohide=1&modestbranding=1&playsinline=1&enablejsapi=1&disablekb=1&fs=0&iv_load_policy=3&rel=0" 
 				title="Orange Studio Podcast Video"
 				frameborder="0" 
-				allow="autoplay; encrypted-media; picture-in-picture" 
-				allowfullscreen>
+				allow="autoplay; encrypted-media; picture-in-picture">
 			</iframe>
 		</div>
 		<div class="podcast-hero__vignette"></div>
