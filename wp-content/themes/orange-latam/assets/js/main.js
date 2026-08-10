@@ -955,6 +955,34 @@ document.addEventListener( 'DOMContentLoaded', () => {
 		} );
 	};
 
+	// ==========================================
+	// 19. PODCAST PAGE INTERACTIVE TABS
+	// ==========================================
+	const initPodcastTabs = () => {
+		const tabs = document.querySelectorAll( '.podcast-tabs__btn' );
+		if ( ! tabs.length ) return;
+
+		tabs.forEach( ( btn ) => {
+			btn.addEventListener( 'click', () => {
+				const targetTab = btn.getAttribute( 'data-tab' );
+				if ( ! targetTab ) return;
+
+				tabs.forEach( ( b ) => b.classList.remove( 'podcast-tabs__btn--active' ) );
+				btn.classList.add( 'podcast-tabs__btn--active' );
+
+				const panes = document.querySelectorAll( '.podcast-included__pane' );
+				panes.forEach( ( pane ) => {
+					pane.classList.remove( 'podcast-included__pane--active' );
+					if ( pane.id === `tab-${targetTab}` ) {
+						// Trigger reflow to restart slide-up keyframe animation
+						void pane.offsetWidth;
+						pane.classList.add( 'podcast-included__pane--active' );
+					}
+				} );
+			} );
+		} );
+	};
+
 	// Initialize all components
 	initScrollReveals();
 	initHeroSlider();
@@ -975,4 +1003,5 @@ document.addEventListener( 'DOMContentLoaded', () => {
 	initDigAdsSlider();
 	initSectorsAutoplay();
 	initPodcastCarousel();
+	initPodcastTabs();
 } );

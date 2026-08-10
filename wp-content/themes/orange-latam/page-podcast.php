@@ -143,29 +143,59 @@ $podcast_img_uri = $theme_uri . '/assets/images/podcast';
 	</section>
 
 	<!-- ==========================================
-	     5. INCLUDED DELIVERABLES (SPLIT BLOCK)
+	     5. INCLUDED DELIVERABLES (TAB PANES WITH VERTICAL SLIDE ANIMATION)
 	     ========================================== -->
 	<section class="podcast-included">
 		<div class="podcast-included__container">
-			<div class="podcast-included__grid">
-				<div class="podcast-included__img-col" data-reveal="left">
-					<img class="podcast-included__img" src="<?php echo esc_url( $podcast_img_uri . '/Calidad-de-estudio-en-Orange-Latam-Podcast-1536x1536.webp' ); ?>" alt="Calidad de estudio con entregables">
-				</div>
+			<!-- Pane 1: Grabación de Podcast (Default Active) -->
+			<div class="podcast-included__pane podcast-included__pane--active" id="tab-grabacion">
+				<div class="podcast-included__grid">
+					<div class="podcast-included__img-col">
+						<img class="podcast-included__img" src="<?php echo esc_url( $podcast_img_uri . '/Calidad-de-estudio-en-Orange-Latam-Podcast-1536x1536.webp' ); ?>" alt="Calidad de estudio con entregables">
+					</div>
 
-				<div class="podcast-included__info-col" data-reveal="right">
-					<div class="podcast-card">
-						<div class="podcast-card__header">CALIDAD DE ESTUDIO CON ENTREGABLES</div>
-						<div class="podcast-card__body">
-							<p class="podcast-card__text">
-								Armamos el plan a la medida de tu proyecto, tanto si requieres solo el espacio o la producción completa. Nos adaptamos a diferentes formatos de grabación como entrevistas, conversatorios, mesas de debate, programas de negocios, estilo de vida y tecnología.
-							</p>
-							<h4 class="podcast-card__subtitle">INCLUYE:</h4>
-							<ul class="podcast-card__list">
-								<li>Asesoría técnica</li>
-								<li>Grabación multitrack de audio y video</li>
-								<li>Grabación 4K (ideal para redes sociales)</li>
-								<li>Iluminación profesional y acústica</li>
-							</ul>
+					<div class="podcast-included__info-col">
+						<div class="podcast-card">
+							<div class="podcast-card__header">CALIDAD DE ESTUDIO CON ENTREGABLES</div>
+							<div class="podcast-card__body">
+								<p class="podcast-card__text">
+									Armamos el plan a la medida de tu proyecto, tanto si requieres solo el espacio o la producción completa. Nos adaptamos a diferentes formatos de grabación como entrevistas, conversatorios, mesas de debate, programas de negocios, estilo de vida y tecnología.
+								</p>
+								<h4 class="podcast-card__subtitle">INCLUYE:</h4>
+								<ul class="podcast-card__list">
+									<li>Asesoría técnica</li>
+									<li>Grabación multitrack de audio y video</li>
+									<li>Grabación 4K (ideal para redes sociales)</li>
+									<li>Iluminación profesional y acústica</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Pane 2: Edición de Podcast -->
+			<div class="podcast-included__pane" id="tab-edicion">
+				<div class="podcast-included__grid">
+					<div class="podcast-included__img-col">
+						<img class="podcast-included__img" src="<?php echo esc_url( $podcast_img_uri . '/DSC00811-1-1536x1307.webp' ); ?>" alt="Tu audio, listo para brillar">
+					</div>
+
+					<div class="podcast-included__info-col">
+						<div class="podcast-card">
+							<div class="podcast-card__header">TU AUDIO, LISTO PARA BRILLAR</div>
+							<div class="podcast-card__body">
+								<p class="podcast-card__text">
+									Nuestro servicio de edición profesional de podcast incluye limpieza de ruido, ecualización, mezcla y masterización final. Nos aseguramos de que cada voz se escuche clara y balanceada, entregándote un archivo listo para publicar
+								</p>
+								<h4 class="podcast-card__subtitle">INCLUYE:</h4>
+								<ul class="podcast-card__list">
+									<li>Limpieza y reducción de ruido</li>
+									<li>Nivelación de volúmenes</li>
+									<li>Mezcla y master final</li>
+									<li>Exportación en formato WAV o MP3</li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div>

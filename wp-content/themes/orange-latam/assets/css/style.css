@@ -6465,7 +6465,7 @@ input, textarea, button {
 	font-weight: 300;
 }
 
-/* Included Deliverables Split Layout */
+/* Included Deliverables Split Layout & Vertical Slide Tabs */
 .podcast-included {
 	padding: 40px 24px 80px;
 	background: #ffffff;
@@ -6474,6 +6474,28 @@ input, textarea, button {
 .podcast-included__container {
 	max-width: 1100px;
 	margin: 0 auto;
+}
+
+.podcast-included__pane {
+	display: none;
+	opacity: 0;
+	transform: translateY(45px);
+}
+
+.podcast-included__pane--active {
+	display: block;
+	animation: podcastPaneSlideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes podcastPaneSlideUp {
+	0% {
+		opacity: 0;
+		transform: translateY(55px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 
 .podcast-included__grid {
