@@ -33,13 +33,15 @@ $podcast_img_uri = $theme_uri . '/assets/images/podcast';
 	</section>
 
 	<!-- ==========================================
-	     1b. SUB-BANNER SECTION (Graphic Image)
+	     1b. SUB-BANNER SECTION (Gray Box Text)
 	     ========================================== -->
 	<section class="podcast-subbanner">
 		<div class="podcast-subbanner__container" data-reveal="up">
-			<img class="podcast-subbanner__img" 
-				src="<?php echo esc_url( $podcast_img_uri . '/Graba-y-Edita-tu-Podcast-en-Orange-Latam-Studio-Podcast-1536x571.webp' ); ?>" 
-				alt="Graba y edita tu Podcast en Orange Studio, el espacio ideal en Lima para lograr calidad de estudio con equipos de alto nivel">
+			<h2 class="podcast-subbanner__text">
+				Graba y edita tu Podcast en <strong>Orange Studio</strong>,<br>
+				el espacio ideal en Lima para lograr calidad<br>
+				de estudio con equipos de alto nivel
+			</h2>
 		</div>
 	</section>
 
@@ -52,13 +54,13 @@ $podcast_img_uri = $theme_uri . '/assets/images/podcast';
 				<div class="podcast-intro__logo-wrapper">
 					<div class="podcast-intro__logo-main">
 						<span class="podcast-intro__logo-p">p</span>
-						<svg class="podcast-intro__mic-svg" viewBox="0 0 100 130" width="70" height="90" fill="none">
+						<svg class="podcast-intro__mic-svg" viewBox="0 0 100 130" width="60" height="78" fill="none">
 							<rect x="22" y="10" width="56" height="74" rx="28" fill="#000000" />
-							<line x1="22" y1="32" x2="78" y2="32" stroke="#ffffff" stroke-width="4" />
-							<line x1="22" y1="52" x2="78" y2="52" stroke="#ffffff" stroke-width="4" />
+							<line x1="22" y1="30" x2="78" y2="30" stroke="#ffffff" stroke-width="4" />
+							<line x1="22" y1="50" x2="78" y2="50" stroke="#ffffff" stroke-width="4" />
 							<line x1="50" y1="10" x2="50" y2="84" stroke="#ffffff" stroke-width="4" />
-							<path d="M12 52 C 12 100, 88 100, 88 52" stroke="#000000" stroke-width="9" fill="none" stroke-linecap="round" />
-							<line x1="50" y1="100" x2="50" y2="124" stroke="#000000" stroke-width="9" />
+							<path d="M12 50 C 12 98, 88 98, 88 50" stroke="#000000" stroke-width="9" fill="none" stroke-linecap="round" />
+							<line x1="50" y1="98" x2="50" y2="124" stroke="#000000" stroke-width="9" />
 							<line x1="26" y1="124" x2="74" y2="124" stroke="#000000" stroke-width="9" stroke-linecap="round" />
 						</svg>
 						<span class="podcast-intro__logo-dcast">dcast</span>
