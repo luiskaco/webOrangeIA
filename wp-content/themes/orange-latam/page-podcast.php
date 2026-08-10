@@ -217,7 +217,7 @@ $podcast_img_uri = $theme_uri . '/assets/images/podcast';
 			</div>
 
 			<p class="podcast-scenarios__desc">
-				En <strong>ORANGE STUDIO</strong> no solo grabas un podcast, creas una experiencia audiovisual. Contamos con diferentes ambientes de grabación diseñados para empresas del sector y personalidades de cada categoría, como contenido corporativo, formato entrevista y producción temática.
+				En <strong>ORANGE STUDIO</strong> no solo grabas un podcast, creas una experiencia audiovisual. Contamos con distintos escenarios de grabación diseñados para adaptarse al estilo y personalidad de cada creador. Cada set tiene su propio carácter visual, iluminación profesional y acústica controlada, ideal para podcast con video o grabaciones fotográficas
 			</p>
 
 			<div class="podcast-pill podcast-pill--cyan">NUESTROS ESCENARIOS</div>
