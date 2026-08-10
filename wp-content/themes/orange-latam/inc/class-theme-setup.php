@@ -48,6 +48,10 @@ class Orange_Theme_Setup {
 				'title'   => 'Asuntos Públicos y Relaciones Institucionales',
 				'content' => '',
 			),
+			'branding-creatividad' => array(
+				'title'   => 'Branding y Creatividad',
+				'content' => '',
+			),
 		);
 
 		$page_ids = array();
@@ -266,6 +270,37 @@ class Orange_Theme_Setup {
 
 				$locations = get_theme_mod( 'nav_menu_locations' );
 				$locations['asuntos_publicos'] = $asuntos_menu_id;
+				set_theme_mod( 'nav_menu_locations', $locations );
+			}
+		}
+
+		// 9. Create and Assign Branding & Creatividad Navigation Menu
+		$branding_menu_name = 'Menú Branding Orange';
+		$branding_menu_exists = wp_get_nav_menu_object( $branding_menu_name );
+
+		if ( ! $branding_menu_exists ) {
+			$branding_menu_id = wp_create_nav_menu( $branding_menu_name );
+
+			if ( ! is_wp_error( $branding_menu_id ) ) {
+				$branding_menu_items = array(
+					'Inicio'      => '#inicio',
+					'Branding'    => '#servicios-branding',
+					'Creatividad' => '#creatividad-direccion-arte',
+					'Casos'       => '#casos',
+					'Contacto'    => '#contacto',
+				);
+
+				foreach ( $branding_menu_items as $title => $url ) {
+					wp_update_nav_menu_item( $branding_menu_id, 0, array(
+						'menu-item-title'   => $title,
+						'menu-item-url'     => $url,
+						'menu-item-status'  => 'publish',
+						'menu-item-type'    => 'custom',
+					) );
+				}
+
+				$locations = get_theme_mod( 'nav_menu_locations' );
+				$locations['branding'] = $branding_menu_id;
 				set_theme_mod( 'nav_menu_locations', $locations );
 			}
 		}

@@ -45,6 +45,8 @@
 - [x] Crear plantilla dedicada `page-podcast.php` para Orange Studio Podcast con hero video de YouTube (`xkt_vSw_FK8`), grilla de 4 características, bloque de entregables, slider interactivo de escenarios (The Podcast Loft, Urban Corner, Estudio Noir) y formulario de reservación.
 - [x] Crear página `pr-gestion-reputacion` y plantilla `page-pr-gestion-reputacion.php` con grilla de premios oficiales, diagrama orbital SVG y acordión interactivo FAQ.
 - [x] Crear página `asuntos-publicos` y plantilla `page-asuntos-publicos.php` con 5 secciones exactas, metadatos SEO/Schema, paleta oficial (acento Naranja #ee894f) y elemento de firma visual SVG (Red de Relaciones e Influencia).
+- [x] Crear página `branding-creatividad` y plantilla `page-branding-creatividad.php` con paleta Azul Océano (`#091F34`) inspirada en `#70B5E3`, grilla asimétrica de 6 módulos (25% ancho proporcional), carrusel slider interactivo con visor modal UX para casos de éxito y FAQ adaptado a la era de la IA.
+- [x] Crear y vincular el Menú Branding Orange (`branding` nav location) y unificar el Pre-footer oficial de contacto en `footer.php`.
 - [x] Sección `infl-awards`: título + pill + ticker de premios en movimiento continuo (CSS puro, sin JS), con los 8 logos/textos reales descargados de `orange-la.com`
 - [x] Sección `infl-stat-block`: píldoras de estadística "+28 Influencers" + imagen con burbuja de cita superpuesta
 - [ ] Confirmar con el cliente los destinos reales de los ítems del menú `influencers` (hoy son anclas placeholder: `#servicios`, `#preguntas-frecuentes`, `#casos-de-exito`, `#por-que-nosotros`, `#contacto`)

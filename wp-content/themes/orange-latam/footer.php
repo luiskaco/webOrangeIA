@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <?php
 // Mostrar el prefooter de contacto solo en las vistas del Blog y las páginas de Servicio específicas.
-if ( is_home() || is_singular( 'post' ) || is_page( 'marketing-de-influencers' ) || is_page( 'marketing-digital' ) || is_page( 'podcast' ) || is_page_template( 'page-podcast.php' ) || is_page( 'pr-gestion-reputacion' ) || is_page_template( 'page-pr-gestion-reputacion.php' ) || is_page( 'asuntos-publicos' ) || is_page_template( 'page-asuntos-publicos.php' ) ) :
+if ( is_home() || is_singular( 'post' ) || is_page( 'marketing-de-influencers' ) || is_page( 'marketing-digital' ) || is_page( 'podcast' ) || is_page_template( 'page-podcast.php' ) || is_page( 'pr-gestion-reputacion' ) || is_page_template( 'page-pr-gestion-reputacion.php' ) || is_page( 'asuntos-publicos' ) || is_page_template( 'page-asuntos-publicos.php' ) || is_page( 'branding-creatividad' ) || is_page_template( 'page-branding-creatividad.php' ) ) :
 ?>
 	<!-- ==========================================
 	     CONTACTO (PRE-FOOTER)

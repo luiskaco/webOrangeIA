@@ -21,10 +21,11 @@ $is_marketing_digital_context = is_page( 'marketing-digital' );
 $is_podcast_context           = is_page( 'podcast' ) || is_page_template( 'page-podcast.php' );
 $is_pr_context                = is_page( 'pr-gestion-reputacion' ) || is_page_template( 'page-pr-gestion-reputacion.php' );
 $is_asuntos_publicos_context  = is_page( 'asuntos-publicos' ) || is_page_template( 'page-asuntos-publicos.php' );
-$nav_location                 = $is_asuntos_publicos_context ? 'asuntos_publicos' : ( $is_pr_context ? 'pr' : ( $is_podcast_context ? 'podcast' : ( $is_marketing_digital_context ? 'marketing_digital' : ( $is_influencers_context ? 'influencers' : ( $is_blog_context ? 'blog' : 'primary' ) ) ) ) );
-$logo_url                     = ( $is_blog_context || $is_influencers_context || $is_marketing_digital_context || $is_podcast_context || $is_pr_context || $is_asuntos_publicos_context ) ? home_url( '/' ) : '#inicio';
+$is_branding_context          = is_page( 'branding-creatividad' ) || is_page_template( 'page-branding-creatividad.php' );
+$nav_location                 = $is_branding_context ? 'branding' : ( $is_asuntos_publicos_context ? 'asuntos_publicos' : ( $is_pr_context ? 'pr' : ( $is_podcast_context ? 'podcast' : ( $is_marketing_digital_context ? 'marketing_digital' : ( $is_influencers_context ? 'influencers' : ( $is_blog_context ? 'blog' : 'primary' ) ) ) ) ) );
+$logo_url                     = ( $is_blog_context || $is_influencers_context || $is_marketing_digital_context || $is_podcast_context || $is_pr_context || $is_asuntos_publicos_context || $is_branding_context ) ? home_url( '/' ) : '#inicio';
 ?>
-<header class="header<?php echo ( $is_pr_context || $is_asuntos_publicos_context ) ? ' header--pr' : ''; ?>">
+<header class="header<?php echo ( $is_pr_context || $is_asuntos_publicos_context || $is_branding_context ) ? ' header--pr' : ''; ?>">
 	<div class="header__container">
 		<a href="<?php echo esc_url( $logo_url ); ?>" class="header__logo">
 			<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/logo.webp" alt="Orange Latam Logo" class="header__logo-img" style="height: 30px; width: auto; display: block;">
@@ -46,6 +47,15 @@ $logo_url                     = ( $is_blog_context || $is_influencers_context ||
 				foreach ( $menu_items as $item ) {
 					echo '<a href="' . esc_url( $item->url ) . '" class="header__link">' . esc_html( $item->title ) . '</a>';
 				}
+			} elseif ( $is_branding_context ) {
+				// Fallback if the Branding menu hasn't been generated yet.
+				?>
+				<a href="#inicio" class="header__link">Inicio</a>
+				<a href="#servicios-branding" class="header__link">Branding</a>
+				<a href="#creatividad-direccion-arte" class="header__link">Creatividad</a>
+				<a href="#casos" class="header__link">Casos</a>
+				<a href="#contacto" class="header__link">Contacto</a>
+				<?php
 			} elseif ( $is_asuntos_publicos_context ) {
 				// Fallback if the Asuntos Públicos menu hasn't been generated yet.
 				?>

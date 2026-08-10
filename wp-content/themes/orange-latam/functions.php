@@ -37,6 +37,7 @@ function orange_latam_theme_setup() {
 		'podcast'      => esc_html__( 'Podcast Menu', 'orange-latam' ),
 		'pr'               => esc_html__( 'PR & Reputación Menu', 'orange-latam' ),
 		'asuntos_publicos' => esc_html__( 'Asuntos Públicos Menu', 'orange-latam' ),
+		'branding'         => esc_html__( 'Branding & Creatividad Menu', 'orange-latam' ),
 	) );
 
 	// Switch default core markup for search form, comment form, and comments to output valid HTML5.
@@ -88,6 +89,8 @@ function orange_latam_enqueue_assets() {
 		orange_latam_enqueue_versioned_style( 'orange-latam-pr-style', '/assets/css/pages/pr-gestion-reputacion.css', array( 'orange-latam-base-style' ) );
 	} elseif ( 'page-asuntos-publicos.php' === $page_template ) {
 		orange_latam_enqueue_versioned_style( 'orange-latam-asuntos-publicos-style', '/assets/css/pages/asuntos-publicos.css', array( 'orange-latam-base-style' ) );
+	} elseif ( 'page-branding-creatividad.php' === $page_template ) {
+		orange_latam_enqueue_versioned_style( 'orange-latam-branding-creatividad-style', '/assets/css/pages/branding-creatividad.css', array( 'orange-latam-base-style' ) );
 	} else {
 		orange_latam_enqueue_versioned_style( 'orange-latam-custom-style', '/assets/css/style.css', array( 'orange-latam-base-style' ) );
 	}
