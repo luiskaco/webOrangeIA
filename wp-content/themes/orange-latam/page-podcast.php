@@ -178,7 +178,7 @@ $podcast_img_uri = $theme_uri . '/assets/images/podcast';
 			<div class="podcast-included__pane" id="tab-edicion">
 				<div class="podcast-included__grid">
 					<div class="podcast-included__img-col">
-						<img class="podcast-included__img" src="<?php echo esc_url( $podcast_img_uri . '/DSC00811-1-1536x1307.webp' ); ?>" alt="Tu audio, listo para brillar">
+						<img class="podcast-included__img" src="<?php echo esc_url( $podcast_img_uri . '/DSC00826-1-1024x1024.webp' ); ?>" alt="Tu audio, listo para brillar">
 					</div>
 
 					<div class="podcast-included__info-col">
