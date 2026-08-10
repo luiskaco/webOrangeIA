@@ -52,13 +52,21 @@ $podcast_img_uri = $theme_uri . '/assets/images/podcast';
 			<div class="podcast-intro__logo-badge">
 				<div class="podcast-intro__logo-wrapper">
 					<div class="podcast-intro__logo-main">
-						p<svg class="podcast-intro__mic-icon" viewBox="0 0 24 24" width="34" height="34" fill="currentColor">
-							<path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"/>
-							<path d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/>
-						</svg>dcast
+						<span class="podcast-intro__logo-p">p</span>
+						<svg class="podcast-intro__mic-svg" viewBox="0 0 100 130" width="70" height="90" fill="none">
+							<rect x="22" y="10" width="56" height="74" rx="28" fill="#000000" />
+							<line x1="22" y1="32" x2="78" y2="32" stroke="#ffffff" stroke-width="4" />
+							<line x1="22" y1="52" x2="78" y2="52" stroke="#ffffff" stroke-width="4" />
+							<line x1="50" y1="10" x2="50" y2="84" stroke="#ffffff" stroke-width="4" />
+							<path d="M12 52 C 12 100, 88 100, 88 52" stroke="#000000" stroke-width="9" fill="none" stroke-linecap="round" />
+							<line x1="50" y1="100" x2="50" y2="124" stroke="#000000" stroke-width="9" />
+							<line x1="26" y1="124" x2="74" y2="124" stroke="#000000" stroke-width="9" stroke-linecap="round" />
+						</svg>
+						<span class="podcast-intro__logo-dcast">dcast</span>
 					</div>
 					<div class="podcast-intro__logo-sub">
-						<span>ORANGE</span> <mark>STUDIO</mark>
+						<span class="podcast-intro__logo-brand">ORANGE</span> 
+						<mark class="podcast-intro__logo-box">STUDIO</mark>
 					</div>
 				</div>
 			</div>
