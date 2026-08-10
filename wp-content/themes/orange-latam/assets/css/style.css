@@ -6590,7 +6590,7 @@ input, textarea, button {
 .podcast-carousel {
 	position: relative;
 	width: 100%;
-	max-width: 1080px;
+	max-width: 1100px;
 	margin: 40px auto 48px;
 	display: flex;
 	align-items: center;
@@ -6601,43 +6601,46 @@ input, textarea, button {
 .podcast-carousel__track {
 	position: relative;
 	width: 100%;
-	height: clamp(320px, 42vw, 460px);
+	height: clamp(340px, 42vw, 460px);
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	perspective: 1200px;
+	perspective: 1000px;
+	transform-style: preserve-3d;
 }
 
 .podcast-carousel__slide {
 	position: absolute;
-	width: clamp(300px, 52vw, 600px);
+	width: clamp(280px, 50vw, 580px);
 	height: 100%;
-	transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.5s cubic-bezier(0.25, 1, 0.5, 1), filter 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+	transition: transform 0.55s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.55s ease, filter 0.55s ease;
 	cursor: pointer;
-	border-radius: 24px;
+	border-radius: 20px;
 	overflow: hidden;
+	will-change: transform, opacity, filter;
+	backface-visibility: hidden;
 }
 
 .podcast-carousel__slide--left {
-	transform: translateX(-36%) scale(0.78);
-	z-index: 2;
-	opacity: 0.9;
-	filter: brightness(0.35);
+	transform: translate3d(-34%, 0, -80px) scale(0.82);
+	z-index: 3;
+	opacity: 0.8;
+	filter: brightness(0.4);
 }
 
 .podcast-carousel__slide--center {
-	transform: translateX(0) scale(1);
+	transform: translate3d(0, 0, 0) scale(1);
 	z-index: 10;
 	opacity: 1;
 	filter: brightness(1);
-	box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+	box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
 }
 
 .podcast-carousel__slide--right {
-	transform: translateX(36%) scale(0.78);
-	z-index: 2;
-	opacity: 0.9;
-	filter: brightness(0.35);
+	transform: translate3d(34%, 0, -80px) scale(0.82);
+	z-index: 3;
+	opacity: 0.8;
+	filter: brightness(0.4);
 }
 
 .podcast-carousel__card {
