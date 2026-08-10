@@ -31,11 +31,18 @@ $podcast_img_uri = $theme_uri . '/assets/images/podcast';
 			</iframe>
 		</div>
 		<div class="podcast-hero__vignette"></div>
-		
-		<div class="podcast-hero__content" data-reveal="up">
-			<img class="podcast-hero__banner-img" 
-				src="<?php echo esc_url( $podcast_img_uri . '/Graba-y-Edita-tu-Podcast-en-Orange-Latam-Studio-Podcast-1536x571.webp' ); ?>" 
-				alt="Graba y edita tu Podcast en Orange Studio. El espacio ideal en Lima para lograr calidad de estudio con equipos de alto nivel">
+	</section>
+
+	<!-- ==========================================
+	     1b. SUB-BANNER SECTION (Gray Box Text)
+	     ========================================== -->
+	<section class="podcast-subbanner">
+		<div class="podcast-subbanner__container" data-reveal="up">
+			<h2 class="podcast-subbanner__text">
+				Graba y edita tu Podcast en <strong>Orange Studio</strong>,<br>
+				el espacio ideal en Lima para lograr calidad<br>
+				de estudio con equipos de alto nivel
+			</h2>
 		</div>
 	</section>
 
@@ -46,19 +53,20 @@ $podcast_img_uri = $theme_uri . '/assets/images/podcast';
 		<div class="podcast-intro__container" data-reveal="up">
 			<div class="podcast-intro__logo-badge">
 				<div class="podcast-intro__logo-wrapper">
-					<svg class="podcast-intro__mic-icon" viewBox="0 0 24 24" width="36" height="36" fill="currentColor">
-						<path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"/>
-						<path d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/>
-					</svg>
-					<div class="podcast-intro__logo-text">
-						<span class="podcast-intro__logo-title">podcast</span>
-						<span class="podcast-intro__logo-sub">ORANGE <mark>STUDIO</mark></span>
+					<div class="podcast-intro__logo-main">
+						p<svg class="podcast-intro__mic-icon" viewBox="0 0 24 24" width="34" height="34" fill="currentColor">
+							<path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"/>
+							<path d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/>
+						</svg>dcast
+					</div>
+					<div class="podcast-intro__logo-sub">
+						<span>ORANGE</span> <mark>STUDIO</mark>
 					</div>
 				</div>
 			</div>
 
 			<p class="podcast-intro__desc">
-				En <strong>ORANGE STUDIO</strong> ponemos a tu disposición un estudio equipado para producciones audiovisuales modernas, podcasts y contenido para redes sociales. Contamos con iluminación profesional, micrófonos de alta gama, cámaras 4K y ambientación flexible para adaptar el espacio a la identidad de tu producción.
+				En <strong>ORANGE STUDIO</strong> ponemos a tu disposición un estudio para podcast en Miraflores, moderno, cómodo y totalmente equipado, ideal para grabaciones individuales, entrevistas, programas conversacionales y contenido para redes. Contamos con sonido profesional, microfonía de alta gama, iluminación y producción técnica, además de asistencia experta durante toda la sesión.
 			</p>
 
 			<div class="podcast-intro__curved-badge">
