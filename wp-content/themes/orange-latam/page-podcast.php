@@ -222,13 +222,15 @@ $podcast_img_uri = $theme_uri . '/assets/images/podcast';
 
 			<div class="podcast-pill podcast-pill--cyan">NUESTROS ESCENARIOS</div>
 
-			<!-- Interactive Scenarios Carousel -->
+			<!-- Interactive Scenarios Carousel (3D Stack Coverflow) -->
 			<div class="podcast-carousel" data-reveal="up">
-				<button class="podcast-carousel__arrow podcast-carousel__arrow--prev" aria-label="Escenario anterior">‹</button>
+				<button class="podcast-carousel__arrow podcast-carousel__arrow--prev" aria-label="Escenario anterior">
+					<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12,19 5,12 12,5"></polyline></svg>
+				</button>
 				
 				<div class="podcast-carousel__track">
 					<!-- Scenario 1 -->
-					<div class="podcast-carousel__slide podcast-carousel__slide--active">
+					<div class="podcast-carousel__slide podcast-carousel__slide--center">
 						<div class="podcast-carousel__card">
 							<img class="podcast-carousel__img" src="<?php echo esc_url( $podcast_img_uri . '/The-Podcast-Loft-Orange-Latam-Podcast.webp' ); ?>" alt="The Podcast Loft">
 							<div class="podcast-carousel__overlay">
@@ -239,7 +241,7 @@ $podcast_img_uri = $theme_uri . '/assets/images/podcast';
 					</div>
 
 					<!-- Scenario 2 -->
-					<div class="podcast-carousel__slide">
+					<div class="podcast-carousel__slide podcast-carousel__slide--right">
 						<div class="podcast-carousel__card">
 							<img class="podcast-carousel__img" src="<?php echo esc_url( $podcast_img_uri . '/Urban-Corner-Orange-Latam-Podcast.webp' ); ?>" alt="Urban Corner">
 							<div class="podcast-carousel__overlay">
@@ -250,7 +252,7 @@ $podcast_img_uri = $theme_uri . '/assets/images/podcast';
 					</div>
 
 					<!-- Scenario 3 -->
-					<div class="podcast-carousel__slide">
+					<div class="podcast-carousel__slide podcast-carousel__slide--left">
 						<div class="podcast-carousel__card">
 							<img class="podcast-carousel__img" src="<?php echo esc_url( $podcast_img_uri . '/ESTUDIO-NOIR-Orange-Latam-Podcast-1.webp' ); ?>" alt="Estudio Noir">
 							<div class="podcast-carousel__overlay">
@@ -261,7 +263,9 @@ $podcast_img_uri = $theme_uri . '/assets/images/podcast';
 					</div>
 				</div>
 
-				<button class="podcast-carousel__arrow podcast-carousel__arrow--next" aria-label="Escenario siguiente">›</button>
+				<button class="podcast-carousel__arrow podcast-carousel__arrow--next" aria-label="Escenario siguiente">
+					<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12,5 19,12 12,19"></polyline></svg>
+				</button>
 			</div>
 
 			<p class="podcast-scenarios__footer-note">

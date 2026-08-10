@@ -915,44 +915,55 @@ document.addEventListener( 'DOMContentLoaded', () => {
 		const container = document.querySelector( '.podcast-carousel' );
 		if ( ! container ) return;
 
-		const slides = container.querySelectorAll( '.podcast-carousel__slide' );
+		const slides = Array.from( container.querySelectorAll( '.podcast-carousel__slide' ) );
 		const prevBtn = container.querySelector( '.podcast-carousel__arrow--prev' );
 		const nextBtn = container.querySelector( '.podcast-carousel__arrow--next' );
 
-		if ( ! slides.length ) return;
+		if ( slides.length < 3 ) return;
 
-		let currentIndex = 0;
+		let centerIndex = 0; // 0: The Podcast Loft, 1: Urban Corner, 2: Estudio Noir
 
-		const updateCarousel = ( index ) => {
+		const updatePositions = () => {
 			slides.forEach( ( slide, idx ) => {
-				if ( idx === index ) {
-					slide.classList.add( 'podcast-carousel__slide--active' );
+				slide.classList.remove( 'podcast-carousel__slide--left', 'podcast-carousel__slide--center', 'podcast-carousel__slide--right' );
+				
+				const n = slides.length;
+				const diff = ( idx - centerIndex + n ) % n;
+
+				if ( diff === 0 ) {
+					slide.classList.add( 'podcast-carousel__slide--center' );
+				} else if ( diff === 1 ) {
+					slide.classList.add( 'podcast-carousel__slide--right' );
 				} else {
-					slide.classList.remove( 'podcast-carousel__slide--active' );
+					slide.classList.add( 'podcast-carousel__slide--left' );
 				}
 			} );
 		};
 
 		if ( prevBtn ) {
-			prevBtn.addEventListener( 'click', () => {
-				currentIndex = ( currentIndex - 1 + slides.length ) % slides.length;
-				updateCarousel( currentIndex );
+			prevBtn.addEventListener( 'click', ( e ) => {
+				e.preventDefault();
+				centerIndex = ( centerIndex - 1 + slides.length ) % slides.length;
+				updatePositions();
 			} );
 		}
 
 		if ( nextBtn ) {
-			nextBtn.addEventListener( 'click', () => {
-				currentIndex = ( currentIndex + 1 ) % slides.length;
-				updateCarousel( currentIndex );
+			nextBtn.addEventListener( 'click', ( e ) => {
+				e.preventDefault();
+				centerIndex = ( centerIndex + 1 ) % slides.length;
+				updatePositions();
 			} );
 		}
 
 		slides.forEach( ( slide, idx ) => {
 			slide.addEventListener( 'click', () => {
-				currentIndex = idx;
-				updateCarousel( currentIndex );
+				centerIndex = idx;
+				updatePositions();
 			} );
 		} );
+
+		updatePositions();
 	};
 
 	// ==========================================
