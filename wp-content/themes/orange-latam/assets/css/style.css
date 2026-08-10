@@ -6274,6 +6274,19 @@ input, textarea, button {
 	align-items: center;
 }
 
+.podcast-intro__logo-badge {
+	margin-bottom: 32px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.podcast-intro__logo-img {
+	max-width: clamp(320px, 60vw, 680px);
+	height: auto;
+	display: block;
+}
+
 .podcast-intro__logo-wrapper {
 	display: flex;
 	flex-direction: column;
