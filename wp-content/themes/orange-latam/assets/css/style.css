@@ -6,8 +6,7 @@
 @font-face {
 	font-family: 'PP Neue Montreal';
 	src: local('PP Neue Montreal'), local('Neue Montreal'),
-	     url('../fonts/PPNeueMontreal-Regular.woff2') format('woff2'),
-	     url('../fonts/PPNeueMontreal-Regular.woff') format('woff');
+	     url('../fonts/NeueMontreal-Regular.otf') format('opentype');
 	font-weight: 400;
 	font-style: normal;
 	font-display: swap;
@@ -16,8 +15,7 @@
 @font-face {
 	font-family: 'PP Neue Montreal';
 	src: local('PP Neue Montreal'), local('Neue Montreal'),
-	     url('../fonts/PPNeueMontreal-Medium.woff2') format('woff2'),
-	     url('../fonts/PPNeueMontreal-Medium.woff') format('woff');
+	     url('../fonts/NeueMontreal-Medium.otf') format('opentype');
 	font-weight: 500;
 	font-style: normal;
 	font-display: swap;
@@ -26,8 +24,7 @@
 @font-face {
 	font-family: 'PP Neue Montreal';
 	src: local('PP Neue Montreal'), local('Neue Montreal'),
-	     url('../fonts/PPNeueMontreal-Bold.woff2') format('woff2'),
-	     url('../fonts/PPNeueMontreal-Bold.woff') format('woff');
+	     url('../fonts/NeueMontreal-Bold.otf') format('opentype');
 	font-weight: 700;
 	font-style: normal;
 	font-display: swap;
@@ -36,29 +33,17 @@
 @font-face {
 	font-family: 'Neue Montreal';
 	src: local('PP Neue Montreal'), local('Neue Montreal'),
-	     url('../fonts/PPNeueMontreal-Regular.woff2') format('woff2'),
-	     url('../fonts/PPNeueMontreal-Regular.woff') format('woff');
+	     url('../fonts/NeueMontreal-Regular.otf') format('opentype');
 	font-weight: 400;
 	font-style: normal;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: 'Editorial New';
-	src: local('PP Editorial New'), local('Editorial New'),
-	     url('../fonts/PPEditorialNew-Regular.woff2') format('woff2'),
-	     url('../fonts/PPEditorialNew-Regular.woff') format('woff');
-	font-weight: 400;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: 'Editorial New';
-	src: local('PP Editorial New'), local('Editorial New'),
-	     url('../fonts/PPEditorialNew-Ultrabold.woff2') format('woff2'),
-	     url('../fonts/PPEditorialNew-Ultrabold.woff') format('woff');
-	font-weight: 800;
+	font-family: 'Neue Montreal';
+	src: local('PP Neue Montreal'), local('Neue Montreal'),
+	     url('../fonts/NeueMontreal-Bold.otf') format('opentype');
+	font-weight: 700;
 	font-style: normal;
 	font-display: swap;
 }
@@ -66,8 +51,16 @@
 @font-face {
 	font-family: 'PP Editorial New';
 	src: local('PP Editorial New'), local('Editorial New'),
-	     url('../fonts/PPEditorialNew-Regular.woff2') format('woff2'),
-	     url('../fonts/PPEditorialNew-Regular.woff') format('woff');
+	     url('../fonts/PPEditorialNew-Regular-BF644b214ff145f.otf') format('opentype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Editorial New';
+	src: local('PP Editorial New'), local('Editorial New'),
+	     url('../fonts/PPEditorialNew-Regular-BF644b214ff145f.otf') format('opentype');
 	font-weight: 400;
 	font-style: normal;
 	font-display: swap;
