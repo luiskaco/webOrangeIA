@@ -43,6 +43,8 @@
 - [x] Menú propio de `marketing-de-influencers` (theme location `influencers`), auto-creado/auto-asignado en `class-theme-setup.php` para activarse solo al desplegar el tema
 - [x] Hero de `marketing-de-influencers` reconstruido como video full-bleed (`assets/videos/marketing-de-influencers-hero.mp4`) with título superpuesto, scrim de header y ajustes de legibilidad
 - [x] Crear plantilla dedicada `page-podcast.php` para Orange Studio Podcast con hero video de YouTube (`xkt_vSw_FK8`), grilla de 4 características, bloque de entregables, slider interactivo de escenarios (The Podcast Loft, Urban Corner, Estudio Noir) y formulario de reservación.
+- [x] Crear página `pr-gestion-reputacion` y plantilla `page-pr-gestion-reputacion.php` con grilla de premios oficiales, diagrama orbital SVG y acordión interactivo FAQ.
+- [x] Crear página `asuntos-publicos` y plantilla `page-asuntos-publicos.php` con 5 secciones exactas, metadatos SEO/Schema, paleta oficial (acento Naranja #ee894f) y elemento de firma visual SVG (Red de Relaciones e Influencia).
 - [x] Sección `infl-awards`: título + pill + ticker de premios en movimiento continuo (CSS puro, sin JS), con los 8 logos/textos reales descargados de `orange-la.com`
 - [x] Sección `infl-stat-block`: píldoras de estadística "+28 Influencers" + imagen con burbuja de cita superpuesta
 - [ ] Confirmar con el cliente los destinos reales de los ítems del menú `influencers` (hoy son anclas placeholder: `#servicios`, `#preguntas-frecuentes`, `#casos-de-exito`, `#por-que-nosotros`, `#contacto`)
@@ -58,3 +60,16 @@
 - [x] Implementar la sección "Análisis y Reportes de Campaña" con grid asimétrico de 6 tarjetas y micro-animaciones hover
 - [x] Diseñar e implementar la sección interactiva "Marketing de Influencers: Preguntas Frecuentes" con Acordeón Horizontal Premium adaptativo
 - [x] Eliminar las secciones de Casos de Éxito, Marcas, Diferenciales y CTA Final a solicitud del cliente para simplificar la página de Marketing de Influencers
+- [x] fix: modales de escenarios en podcast, UX de flechas de slider, colores de botón Ver Más y proporción del Hero 1920x1080
+- [x] Crear menú de navegación dedicado para podcast (`Inicio`, `Servicio`, `Escenarios`, `Planes`, `Contacto`) y reemplazar badge de reserva por imagen gráfica `Listo-para-grabar-tu-podcast-con-calidad-profesional-en-Orange-Latam.png`
+- [x] Sincronizar footer y pre-footer (`infl-prefooter`) estándar de las páginas internas en la vista de podcast (`footer.php`)
+- [x] Corregir estiramiento y recorte excesivo del video Hero de podcast (`scale(1.05)`, `min-height: 85vh` y header transparente edge-to-edge)
+- [x] Añadir animaciones Scroll Reveal direccionales y escaladas (`data-reveal="up"`, `left`, `right`, `scale`) en todas las secciones de `page-podcast.php`
+- [x] Crear e integrar la nueva página "PR y Gestión de la Reputación" (slug: `pr-gestion-reputacion`, template: `page-pr-gestion-reputacion.php`) con menú ancla dedicado, diagrama radial SVG interactivante de nodos, acordeón FAQ con Schema JSON-LD y stylesheet modular `assets/css/pages/pr-gestion-reputacion.css` heredando de `base.css`
+- [x] Reemplazar el recuadro gris de marcas/premios por una grilla interactiva responsive con los 6 galardones de la agencia (Purpose Awards, PR Week Global, IPRA Golden World, Sabre Awards, Effie Awards y Cannes Lions) en `page-pr-gestion-reputacion.php` y `pr-gestion-reputacion.css`
+- [x] Separar CSS en padre/hijo: `assets/css/base.css` (fonts, variables, reveal animations, header/nav, footer global — se carga en todas las páginas) + `assets/css/pages/podcast.css` (estilos exclusivos de Orange Studio Podcast). `style.css` conserva Home/Influencers/Marketing Digital sin cambios. Enqueue condicional en `functions.php` vía `get_page_template()` — la página `podcast` ya no descarga las ~5900 líneas de `style.css` que no le corresponden.
+- [x] Extender el split de CSS al resto de páginas: `assets/css/pages/home.css` (front page, `is_front_page()`), `marketing-influencers.css` y `marketing-digital.css` (por `page-*.php` template). `assets/css/style.css` queda reducido a solo el bloque "Post Detail - Share Article" (fallback para `single.php`/`home.php` blog). Helper `orange_latam_enqueue_versioned_style()` en `functions.php` centraliza el enqueue cache-busted por `filemtime()`.
+  - Bug encontrado y corregido durante el split: el CSS del menú hamburguesa móvil (`.header__nav` panel fijo, `--open`, `__overlay--visible`, `body.header-nav-open`) vivía únicamente en el bloque de responsive mezclado de `style.css` — faltaba en `base.css`, rompiendo el nav móvil en Podcast desde el split anterior. Movido a `base.css`.
+  - Bug encontrado y corregido: `page-marketing-digital.php` reutiliza el componente de hero en video `.infl-hero`/`.infl-hero__video-bg`/`.infl-hero__vignette` definido originalmente solo en el bloque de Influencers — duplicado en `marketing-digital.css` para evitar dependencia cruzada entre páginas.
+  - Verificado por cobertura real de clases (`grep` cruzado HTML↔CSS por template) y por HTTP (`curl`) que cada ruta carga exactamente `base.css` + su hijo correspondiente.
+

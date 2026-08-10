@@ -16,3 +16,6 @@ Además del landing de página única, el sitio soporta páginas de servicio con
 - Se renderizan con un template dedicado `page-{slug}.php` (jerarquía de plantillas nativa de WordPress), no con el editor de bloques.
 - Usan el menú secundario "Inicio / Blog" (`header.php` → `$is_blog_context`) en vez de los anclajes del landing, ya que anclas como `#servicios` solo existen en la home.
 - Ver ADR 2 en `07_DECISIONS.md` para el detalle de la decisión y sus consecuencias.
+
+## 5. CSS Padre/Hijo por Página
+El CSS del tema sigue un patrón de un archivo padre global (`assets/css/base.css`) más un hijo por página en `assets/css/pages/` (`home.css`, `podcast.css`, `marketing-influencers.css`, `marketing-digital.css`), encolados condicionalmente en `functions.php` según la página activa. Esto evita que cada página descargue el CSS de las demás. `assets/css/style.css` quedó como fallback genérico para plantillas sin hijo dedicado (blog). Ver ADR 3 en `07_DECISIONS.md` para el detalle, incluyendo cómo distinguir CSS verdaderamente global (va en `base.css`) de CSS compartido entre solo algunas páginas (se duplica en los hijos correspondientes).

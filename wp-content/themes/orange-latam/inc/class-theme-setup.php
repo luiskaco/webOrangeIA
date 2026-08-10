@@ -40,6 +40,14 @@ class Orange_Theme_Setup {
 				'title'   => 'Orange Studio Podcast',
 				'content' => '',
 			),
+			'pr-gestion-reputacion' => array(
+				'title'   => 'PR y Gestión de la Reputación',
+				'content' => '',
+			),
+			'asuntos-publicos' => array(
+				'title'   => 'Asuntos Públicos y Relaciones Institucionales',
+				'content' => '',
+			),
 		);
 
 		$page_ids = array();
@@ -164,6 +172,100 @@ class Orange_Theme_Setup {
 
 				$locations = get_theme_mod( 'nav_menu_locations' );
 				$locations['influencers'] = $infl_menu_id;
+				set_theme_mod( 'nav_menu_locations', $locations );
+			}
+		}
+
+		// 6. Create and Assign Podcast Navigation Menu (used on the Orange Studio Podcast page)
+		$podcast_menu_name = 'Menú Podcast Orange';
+		$podcast_menu_exists = wp_get_nav_menu_object( $podcast_menu_name );
+
+		if ( ! $podcast_menu_exists ) {
+			$podcast_menu_id = wp_create_nav_menu( $podcast_menu_name );
+
+			if ( ! is_wp_error( $podcast_menu_id ) ) {
+				$podcast_menu_items = array(
+					'Inicio'     => '#inicio',
+					'Servicio'   => '#servicios',
+					'Escenarios' => '#escenarios',
+					'Planes'     => '#planes',
+					'Contacto'   => '#contacto-podcast',
+				);
+
+				foreach ( $podcast_menu_items as $title => $url ) {
+					wp_update_nav_menu_item( $podcast_menu_id, 0, array(
+						'menu-item-title'   => $title,
+						'menu-item-url'     => $url,
+						'menu-item-status'  => 'publish',
+						'menu-item-type'    => 'custom',
+					) );
+				}
+
+				$locations = get_theme_mod( 'nav_menu_locations' );
+				$locations['podcast'] = $podcast_menu_id;
+				set_theme_mod( 'nav_menu_locations', $locations );
+			}
+		}
+
+		// 7. Create and Assign PR Navigation Menu
+		$pr_menu_name = 'Menú PR Orange';
+		$pr_menu_exists = wp_get_nav_menu_object( $pr_menu_name );
+
+		if ( ! $pr_menu_exists ) {
+			$pr_menu_id = wp_create_nav_menu( $pr_menu_name );
+
+			if ( ! is_wp_error( $pr_menu_id ) ) {
+				$pr_menu_items = array(
+					'Qué es'             => '#que-es',
+					'Servicio de PR'     => '#servicio-pr',
+					'Gestión de Crisis'  => '#gestion-de-crisis',
+					'Voceros'            => '#entrenamiento-voceros',
+					'Por qué elegirnos' => '#por-que-elegirnos',
+					'Contacto'           => '#contacto',
+				);
+
+				foreach ( $pr_menu_items as $title => $url ) {
+					wp_update_nav_menu_item( $pr_menu_id, 0, array(
+						'menu-item-title'   => $title,
+						'menu-item-url'     => $url,
+						'menu-item-status'  => 'publish',
+						'menu-item-type'    => 'custom',
+					) );
+				}
+
+				$locations = get_theme_mod( 'nav_menu_locations' );
+				$locations['pr'] = $pr_menu_id;
+				set_theme_mod( 'nav_menu_locations', $locations );
+			}
+		}
+
+		// 8. Create and Assign Asuntos Públicos Navigation Menu
+		$asuntos_menu_name = 'Menú Asuntos Públicos Orange';
+		$asuntos_menu_exists = wp_get_nav_menu_object( $asuntos_menu_name );
+
+		if ( ! $asuntos_menu_exists ) {
+			$asuntos_menu_id = wp_create_nav_menu( $asuntos_menu_name );
+
+			if ( ! is_wp_error( $asuntos_menu_id ) ) {
+				$asuntos_menu_items = array(
+					'Inicio'                     => '#inicio',
+					'Reguladores'                => '#relacion-reguladores',
+					'Comunicación Política'     => '#comunicacion-politica',
+					'Stakeholders & Comunidades' => '#stakeholders',
+					'Contacto'                   => '#contacto',
+				);
+
+				foreach ( $asuntos_menu_items as $title => $url ) {
+					wp_update_nav_menu_item( $asuntos_menu_id, 0, array(
+						'menu-item-title'   => $title,
+						'menu-item-url'     => $url,
+						'menu-item-status'  => 'publish',
+						'menu-item-type'    => 'custom',
+					) );
+				}
+
+				$locations = get_theme_mod( 'nav_menu_locations' );
+				$locations['asuntos_publicos'] = $asuntos_menu_id;
 				set_theme_mod( 'nav_menu_locations', $locations );
 			}
 		}

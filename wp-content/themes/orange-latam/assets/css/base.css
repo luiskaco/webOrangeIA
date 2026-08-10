@@ -1,0 +1,836 @@
+/* ==========================================================================
+   ORANGE LATAM — GLOBAL BASE STYLESHEET
+   Loaded on every page: fonts, design tokens, reveal animations,
+   header/nav, site-wide footer.
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ==========================================================================
+   0. FONTS (@font-face)
+   ========================================================================== */
+@font-face {
+	font-family: 'PP Neue Montreal';
+	src: local('PP Neue Montreal'), local('Neue Montreal'),
+	     url('../fonts/NeueMontreal-Regular.otf') format('opentype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'PP Neue Montreal';
+	src: local('PP Neue Montreal'), local('Neue Montreal'),
+	     url('../fonts/NeueMontreal-Medium.otf') format('opentype');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'PP Neue Montreal';
+	src: local('PP Neue Montreal'), local('Neue Montreal'),
+	     url('../fonts/NeueMontreal-Bold.otf') format('opentype');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Neue Montreal';
+	src: local('PP Neue Montreal'), local('Neue Montreal'),
+	     url('../fonts/NeueMontreal-Regular.otf') format('opentype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Neue Montreal';
+	src: local('PP Neue Montreal'), local('Neue Montreal'),
+	     url('../fonts/NeueMontreal-Bold.otf') format('opentype');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'PP Editorial New';
+	src: local('PP Editorial New'), local('Editorial New'),
+	     url('../fonts/PPEditorialNew-Regular-BF644b214ff145f.otf') format('opentype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Editorial New';
+	src: local('PP Editorial New'), local('Editorial New'),
+	     url('../fonts/PPEditorialNew-Regular-BF644b214ff145f.otf') format('opentype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Maca';
+	src: url('../fonts/Maca-Bold.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* ==========================================================================
+   1. DESIGN SYSTEM VARIABLES & BASE RESET
+   ========================================================================== */
+:root {
+	--color-bg-light: #FCF5E9;
+	--color-text-dark: #14120F;
+	--color-blue: #70B5E3;
+	--color-bg-dark: #0B0B0B;
+	--color-orange: #EE894F;
+	--color-yellow: #F7D769;
+	
+	--font-display: 'PP Editorial New', 'Editorial New', 'Cormorant Garamond', 'Playfair Display', serif;
+	--font-sans: 'PP Neue Montreal', 'Neue Montreal', 'Plus Jakarta Sans', 'Inter', sans-serif;
+	--font-cursive: 'Maca', 'Playball', cursive;
+}
+
+*, *::before, *::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background: var(--color-bg-light);
+	color: var(--color-text-dark);
+	font-family: var(--font-sans);
+	line-height: 1.5;
+	overflow-x: hidden;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+input, textarea, button {
+	font-family: var(--font-sans);
+	font-size: 14px;
+	color: var(--color-text-dark);
+}
+
+::placeholder {
+	color: rgba(20, 18, 15, 0.35);
+}
+
+/* ==========================================================================
+   2. REVEAL ANIMATIONS (Intersection Observer)
+   ========================================================================== */
+[data-reveal] {
+	opacity: 0;
+	transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-reveal="up"] {
+	transform: translateY(28px);
+}
+
+[data-reveal="left"] {
+	transform: translateX(-44px);
+}
+
+[data-reveal="right"] {
+	transform: translateX(44px);
+}
+
+[data-reveal="scale"] {
+	transform: scale(0.9) translateY(16px);
+}
+
+[data-reveal].revealed {
+	opacity: 1;
+	transform: none;
+}
+
+/* Staggered children */
+[data-stagger] > * {
+	opacity: 0;
+	transform: translateY(20px);
+	transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+[data-stagger].revealed > * {
+	opacity: 1;
+	transform: none;
+}
+
+/* ==========================================================================
+   3. HEADER & NAVIGATION
+   ========================================================================== */
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 100;
+	background: transparent;
+	border-bottom: none;
+	padding: 20px 48px;
+	transition: background 0.3s ease, padding 0.3s ease, border-color 0.3s ease;
+}
+
+.header--scrolled {
+	background: var(--color-bg-dark);
+	border-bottom: 1px solid rgba(252, 245, 233, 0.08);
+	padding: 12px 48px;
+}
+
+.page-template-page-marketing-de-influencers-php .header:not(.header--scrolled),
+.page-template-page-podcast-php .header:not(.header--scrolled) {
+	background: linear-gradient(to bottom, rgba(11, 11, 11, 0.85) 0%, rgba(11, 11, 11, 0.55) 60%, transparent 100%);
+}
+
+.header__container {
+	max-width: 1320px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.header__logo {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.header__logo-text-bold {
+	font-weight: 800;
+	font-size: 19px;
+	letter-spacing: -0.01em;
+	color: var(--color-bg-light);
+}
+
+.header__logo-badge {
+	background: var(--color-blue);
+	color: var(--color-bg-light);
+	font-weight: 700;
+	font-size: 15px;
+	padding: 4px 10px;
+	letter-spacing: 0.01em;
+}
+
+.header__nav {
+	display: flex;
+	align-items: center;
+	gap: 36px;
+}
+
+.header__link {
+	font-size: 14px;
+	font-weight: 600;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: var(--color-bg-light);
+	transition: color 0.2s;
+}
+
+.header__link:hover {
+	color: var(--color-blue);
+}
+
+.header__overlay {
+	display: none;
+}
+
+.header__burger {
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 5px;
+	width: 40px;
+	height: 40px;
+	background: transparent;
+	border: none;
+	cursor: pointer;
+	z-index: 110;
+}
+
+.header__burger-line {
+	display: block;
+	width: 24px;
+	height: 2px;
+	background: var(--color-bg-light);
+	transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.header__burger[aria-expanded="true"] .header__burger-line:nth-child(1) {
+	transform: translateY(7px) rotate(45deg);
+}
+
+.header__burger[aria-expanded="true"] .header__burger-line:nth-child(2) {
+	opacity: 0;
+}
+
+.header__burger[aria-expanded="true"] .header__burger-line:nth-child(3) {
+	transform: translateY(-7px) rotate(-45deg);
+}
+
+@media (max-width: 991px) {
+	.header {
+		padding: 15px 24px;
+	}
+
+	.header__nav {
+		gap: 16px;
+	}
+}
+
+@media (max-width: 768px) {
+	.header__burger {
+		display: flex;
+	}
+
+	.header__nav {
+		position: fixed;
+		top: 0;
+		right: 0;
+		height: 100vh;
+		width: min(300px, 80vw);
+		background: var(--color-bg-dark);
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+		gap: 28px;
+		padding: 96px 32px 32px;
+		transform: translateX(100%);
+		transition: transform 0.3s ease;
+		box-shadow: -8px 0 24px rgba(0, 0, 0, 0.3);
+		z-index: 105;
+	}
+
+	.header__nav--open {
+		transform: translateX(0);
+	}
+
+	.header__link {
+		font-size: 16px;
+	}
+
+	.header__overlay {
+		display: none;
+		position: fixed;
+		inset: 0;
+		background: rgba(0, 0, 0, 0.5);
+		z-index: 99;
+	}
+
+	.header__overlay--visible {
+		display: block;
+	}
+
+	body.header-nav-open {
+		overflow: hidden;
+	}
+}
+
+/* ==========================================================================
+   12. FOOTER
+   ========================================================================== */
+.footer {
+	background: var(--color-bg-light);
+	padding: 22px 48px;
+	text-align: center;
+	border-top: 1px solid rgba(20, 18, 15, 0.08);
+}
+
+.footer__text {
+	font-size: 12px;
+	font-weight: 700;
+	color: var(--color-text-dark);
+}
+
+
+/* ==========================================================================
+   PRE-FOOTER (site-wide footer.php content block)
+   ========================================================================== */
+.infl-prefooter {
+	background: #000000;
+	color: #ffffff;
+	padding: 40px 20px;
+}
+
+.infl-prefooter__container {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	gap: 30px;
+}
+
+.infl-prefooter__col {
+	flex: 1 1 300px;
+}
+
+.infl-prefooter__slogan {
+	font-family: var(--font-display);
+	font-size: clamp(20px, 2.5vw, 28px);
+	font-weight: 700;
+	margin: 0;
+	line-height: 1.3;
+}
+
+.infl-prefooter__slogan-white {
+	color: #ffffff;
+}
+
+.infl-prefooter__slogan-blue {
+	color: #38b6ff;
+}
+
+.infl-prefooter__address p {
+	font-family: var(--font-sans);
+	font-size: 14px;
+	margin: 0 0 5px 0;
+	color: #e0e0e0;
+}
+
+.infl-prefooter__email {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	margin-top: 10px !important;
+}
+
+.infl-prefooter__email a {
+	color: #ffffff;
+	text-decoration: none;
+	transition: color 0.3s ease;
+}
+
+.infl-prefooter__email a:hover {
+	color: #38b6ff;
+}
+
+.infl-prefooter__contact-label {
+	font-family: var(--font-sans);
+	font-size: 14px;
+	margin: 0 0 5px 0;
+	color: #e0e0e0;
+}
+
+.infl-prefooter__phone {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	font-size: 16px;
+	font-weight: 600;
+	margin: 0 0 15px 0;
+}
+
+.infl-prefooter__phone a {
+	color: #ffffff;
+	text-decoration: none;
+	transition: color 0.3s ease;
+}
+
+.infl-prefooter__phone a:hover {
+	color: #38b6ff;
+}
+
+.infl-prefooter__social {
+	display: flex;
+	gap: 10px;
+}
+
+.infl-prefooter__social-link {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 32px;
+	height: 32px;
+	background: #38b6ff;
+	color: #000000;
+	border-radius: 4px;
+	text-decoration: none;
+	transition: background 0.3s ease, color 0.3s ease;
+}
+
+.infl-prefooter__social-link:hover {
+	background: #2ea3f2;
+	color: #ffffff;
+}
+
+@media (max-width: 768px) {
+	.infl-prefooter {
+		padding: 30px 15px;
+	}
+
+	.infl-prefooter__container {
+		gap: 20px;
+	}
+}
+
+/* ==========================================================================
+   FLOATING ACTIONS (WhatsApp & Scroll to Top)
+   ========================================================================== */
+.floating-actions {
+	position: fixed;
+	bottom: 28px;
+	right: 28px;
+	z-index: 9999;
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+	align-items: flex-end;
+	pointer-events: none;
+}
+
+.floating-btn {
+	pointer-events: auto;
+	width: 52px;
+	height: 52px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	border: none;
+	cursor: pointer;
+	position: relative;
+	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.22);
+	transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
+}
+
+.floating-btn--whatsapp {
+	background: #25D366;
+	color: #FFFFFF;
+}
+
+.floating-btn--whatsapp:hover {
+	transform: scale(1.12);
+	box-shadow: 0 14px 32px rgba(37, 211, 102, 0.45);
+	color: #FFFFFF;
+}
+
+.floating-btn__tooltip {
+	position: absolute;
+	right: 64px;
+	top: 50%;
+	transform: translateY(-50%) translateX(8px);
+	background: #17130F;
+	color: #FFFFFF;
+	font-size: 13px;
+	font-weight: 600;
+	padding: 8px 14px;
+	border-radius: 6px;
+	white-space: nowrap;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.25s ease, transform 0.25s ease;
+	box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.floating-btn__tooltip::after {
+	content: "";
+	position: absolute;
+	right: -6px;
+	top: 50%;
+	transform: translateY(-50%);
+	border-width: 6px 0 6px 6px;
+	border-style: solid;
+	border-color: transparent transparent transparent #17130F;
+}
+
+.floating-btn--whatsapp:hover .floating-btn__tooltip {
+	opacity: 1;
+	transform: translateY(-50%) translateX(0);
+}
+
+.floating-btn--top {
+	background: #17130F;
+	color: #FFFFFF;
+	border: 1px solid rgba(255, 255, 255, 0.15);
+	opacity: 0;
+	pointer-events: none;
+	transform: translateY(16px) scale(0.9);
+}
+
+.floating-btn--top.is-visible {
+	opacity: 1;
+	pointer-events: auto;
+	transform: translateY(0) scale(1);
+}
+
+.floating-btn--top:hover {
+	background: #EE894F;
+	color: #FFFFFF;
+	transform: translateY(-4px) scale(1.08);
+	box-shadow: 0 12px 28px rgba(238, 137, 79, 0.4);
+}
+
+@media (max-width: 576px) {
+	.floating-actions {
+		bottom: 20px;
+		right: 20px;
+		gap: 10px;
+	}
+
+	.floating-btn {
+		width: 46px;
+		height: 46px;
+	}
+
+	.floating-btn--whatsapp svg {
+		width: 22px;
+		height: 22px;
+	}
+
+	.floating-btn__tooltip {
+		display: none;
+	}
+}
+
+/* ==========================================================================
+   FORMULARIOS DE CONTACTO — TARJETA BLANCA ULTRA-CLEAN (#FFFFFF SOLID BG)
+   ========================================================================== */
+.wpcf7-form,
+.wpforms-form,
+.contact-form,
+form.wp-block-search,
+form {
+	max-width: 100%;
+	box-sizing: border-box;
+}
+
+/* Form Container Card */
+.wpcf7,
+.wpcf7-form,
+.wpforms-container,
+.wpforms-form,
+.contact-form,
+.contact-form-card,
+.infl-prefooter form,
+form.wp-block-search,
+div.wpcf7-form {
+	background: #FFFFFF !important;
+	background-color: #FFFFFF !important;
+	border: 1px solid #EAE6DF !important;
+	border-radius: 28px !important;
+	padding: 44px 40px !important;
+	box-shadow: 0 20px 50px rgba(23, 19, 15, 0.08) !important;
+	position: relative !important;
+	overflow: hidden !important;
+	box-sizing: border-box !important;
+}
+
+/* Eliminate any top blue line / pseudo-element */
+.wpcf7::before,
+.wpcf7::after,
+.wpcf7-form::before,
+.wpcf7-form::after,
+.wpforms-container::before,
+.wpforms-container::after,
+div.wpcf7-form::before,
+div.wpcf7-form::after {
+	display: none !important;
+	content: none !important;
+	border: none !important;
+	height: 0 !important;
+}
+
+/* Field Spacing */
+.wpcf7-form p,
+.wpforms-field,
+.form-group,
+form p {
+	margin-bottom: 24px !important;
+	position: relative !important;
+}
+
+.wpcf7-form-control-wrap {
+	display: block !important;
+	width: 100% !important;
+	margin-top: 4px !important;
+}
+
+/* Labels: Crisp & High Contrast */
+label,
+.wpcf7-form label,
+.wpforms-field-label,
+.form-group label {
+	font-size: 13px !important;
+	letter-spacing: 0.02em !important;
+	text-transform: none !important;
+	font-weight: 700 !important;
+	color: #17130F !important;
+	display: block !important;
+	margin-bottom: 6px !important;
+}
+
+/* Minimal Underline Inputs */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+input[type="number"],
+input[type="password"],
+textarea,
+.wpcf7-text,
+.wpcf7-textarea,
+.wpcf7-select,
+.wpforms-field input,
+.wpforms-field textarea,
+.wpforms-field select {
+	width: 100% !important;
+	background: transparent !important;
+	background-color: transparent !important;
+	border: none !important;
+	border-bottom: 1.5px solid #D8D2C6 !important;
+	border-radius: 0 !important;
+	padding: 12px 0 !important;
+	font-family: var(--font-sans) !important;
+	font-size: 15.5px !important;
+	color: #17130F !important;
+	box-sizing: border-box !important;
+	transition: border-color 0.25s ease, box-shadow 0.25s ease !important;
+	outline: none !important;
+	box-shadow: none !important;
+}
+
+/* Placeholders: Clean Muted Tone */
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="tel"]::placeholder,
+textarea::placeholder,
+.wpcf7-text::placeholder,
+.wpcf7-textarea::placeholder {
+	color: #A0988C !important;
+	font-weight: 400 !important;
+	opacity: 1 !important;
+}
+
+/* Focus State: Dark Gray Underline Glow */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+textarea:focus,
+.wpcf7-text:focus,
+.wpcf7-textarea:focus,
+.wpforms-field input:focus,
+.wpforms-field textarea:focus {
+	background: transparent !important;
+	border-bottom-color: #17130F !important;
+	border-bottom-width: 2px !important;
+	box-shadow: 0 2px 0 0 #17130F !important;
+}
+
+/* Textarea */
+textarea,
+.wpcf7-textarea,
+.wpforms-field textarea {
+	min-height: 100px !important;
+	line-height: 1.5 !important;
+	resize: vertical !important;
+}
+
+/* Submit Button: Right-aligned Pill */
+input[type="submit"],
+button[type="submit"],
+.wpcf7-submit,
+.wpforms-submit {
+	width: auto !important;
+	min-width: 170px !important;
+	float: right !important;
+	background: #EE894F !important;
+	background-color: #EE894F !important;
+	color: #FFFFFF !important;
+	font-family: var(--font-sans) !important;
+	font-size: 16px !important;
+	font-weight: 700 !important;
+	border: none !important;
+	border-radius: 999px !important;
+	padding: 14px 38px !important;
+	cursor: pointer !important;
+	box-shadow: 0 8px 22px rgba(238, 137, 79, 0.35) !important;
+	transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+	margin-top: 16px !important;
+}
+
+input[type="submit"]:hover,
+button[type="submit"]:hover,
+.wpcf7-submit:hover,
+.wpforms-submit:hover {
+	background: #d9743a !important;
+	background-color: #d9743a !important;
+	color: #FFFFFF !important;
+	transform: translateY(-3px) scale(1.03) !important;
+	box-shadow: 0 12px 28px rgba(238, 137, 79, 0.45) !important;
+}
+
+input[type="submit"]:active,
+button[type="submit"]:active,
+.wpcf7-submit:active,
+.wpforms-submit:active {
+	transform: translateY(-1px) !important;
+}
+
+/* Clearfix */
+.wpcf7-form::after,
+.wpforms-form::after,
+div.wpcf7-form::after,
+form::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* Validation Messages */
+.wpcf7-not-valid-tip,
+.wpforms-error {
+	font-size: 13px !important;
+	color: #e53935 !important;
+	margin-top: 6px !important;
+	font-weight: 600 !important;
+}
+
+div.wpcf7-response-output,
+.wpforms-confirmation-container {
+	border-radius: 12px !important;
+	padding: 14px 18px !important;
+	font-size: 14.5px !important;
+	font-weight: 600 !important;
+	margin-top: 20px !important;
+	clear: both !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+	.wpcf7,
+	.wpcf7-form,
+	.wpforms-container,
+	.contact-form-card,
+	div.wpcf7-form {
+		padding: 28px 20px !important;
+		border-radius: 20px !important;
+	}
+
+	input[type="submit"],
+	button[type="submit"],
+	.wpcf7-submit,
+	.wpforms-submit {
+		width: 100% !important;
+		float: none !important;
+	}
+}
+

@@ -185,7 +185,16 @@ document.addEventListener( 'DOMContentLoaded', () => {
 		const detailImg = document.querySelector( '.services-corp__detail-img' );
 
 		corpRows.forEach( ( row ) => {
-			row.addEventListener( 'click', () => {
+			row.addEventListener( 'click', ( e ) => {
+				const link = row.getAttribute( 'data-link' );
+				const isArrowClick = e.target.classList.contains( 'services-corp__row-arrow' ) || e.target.closest( '.services-corp__row-arrow' );
+				const isActive = row.classList.contains( 'services-corp__row--active' );
+
+				if ( link && ( isArrowClick || isActive ) ) {
+					window.location.href = link;
+					return;
+				}
+
 				corpRows.forEach( ( r ) => r.classList.remove( 'services-corp__row--active' ) );
 				row.classList.add( 'services-corp__row--active' );
 
@@ -193,7 +202,6 @@ document.addEventListener( 'DOMContentLoaded', () => {
 				const num = row.getAttribute( 'data-num' );
 				const name = row.getAttribute( 'data-name' );
 				const desc = row.getAttribute( 'data-desc' );
-				const link = row.getAttribute( 'data-link' );
 				const img = row.getAttribute( 'data-img' );
 
 				if ( watermark ) watermark.textContent = num;
@@ -994,6 +1002,268 @@ document.addEventListener( 'DOMContentLoaded', () => {
 		} );
 	};
 
+	// ==========================================
+	// 20. PODCAST PAGE SCENARIO MODAL
+	// ==========================================
+	const initPodcastScenarioModal = () => {
+		const modal = document.querySelector( '.js-podcast-modal' );
+		if ( ! modal ) return;
+
+		const modalTitle = modal.querySelector( '.js-podcast-modal-title' );
+		const modalDesc = modal.querySelector( '.js-podcast-modal-desc' );
+		const modalBg = modal.querySelector( '.js-podcast-modal-bg' );
+		const closeBtns = modal.querySelectorAll( '.js-podcast-modal-close' );
+		const openBtns = document.querySelectorAll( '.js-scenario-modal-open' );
+		const slides = document.querySelectorAll( '.podcast-carousel__slide' );
+
+		const openModal = ( slide ) => {
+			if ( ! slide ) return;
+			const title = slide.getAttribute( 'data-scenario-title' ) || '';
+			const desc = slide.getAttribute( 'data-scenario-desc' ) || '';
+			const img = slide.getAttribute( 'data-scenario-img' ) || '';
+
+			if ( modalTitle ) modalTitle.textContent = title;
+			if ( modalDesc ) modalDesc.textContent = desc;
+			if ( modalBg && img ) {
+				modalBg.style.backgroundImage = `url('${img}')`;
+			}
+
+			modal.classList.add( 'is-active' );
+			modal.setAttribute( 'aria-hidden', 'false' );
+			document.body.style.overflow = 'hidden';
+		};
+
+		const closeModal = () => {
+			modal.classList.remove( 'is-active' );
+			modal.setAttribute( 'aria-hidden', 'true' );
+			document.body.style.overflow = '';
+		};
+
+		openBtns.forEach( ( btn ) => {
+			btn.addEventListener( 'click', ( e ) => {
+				e.preventDefault();
+				e.stopPropagation();
+				const slide = btn.closest( '.podcast-carousel__slide' );
+				openModal( slide );
+			} );
+		} );
+
+		slides.forEach( ( slide ) => {
+			slide.addEventListener( 'click', ( e ) => {
+				// Open modal if user clicks on the center active slide card
+				if ( slide.classList.contains( 'podcast-carousel__slide--center' ) && ! e.target.classList.contains( 'podcast-carousel__arrow' ) ) {
+					openModal( slide );
+				}
+			} );
+		} );
+
+		closeBtns.forEach( ( btn ) => {
+			btn.addEventListener( 'click', ( e ) => {
+				e.preventDefault();
+				closeModal();
+			} );
+		} );
+
+		document.addEventListener( 'keydown', ( e ) => {
+			if ( e.key === 'Escape' && modal.classList.contains( 'is-active' ) ) {
+				closeModal();
+			}
+		} );
+	};
+
+	/* ==========================================================================
+	   PR & REPUTACIÓN: DIAGRAMA RADIAL DE NODOS & ACCORDION
+	   ========================================================================== */
+	const initPrNodeDiagram = () => {
+		const container = document.getElementById( 'js-pr-node-container' );
+		if ( ! container ) return;
+
+		const svgConnectors = document.getElementById( 'js-pr-connectors' );
+		const svgNodes = document.getElementById( 'js-pr-nodes' );
+		const tooltip = document.getElementById( 'js-pr-tooltip' );
+		const tooltipText = document.getElementById( 'js-pr-tooltip-text' );
+		const mobileRows = document.querySelectorAll( '.js-pr-node-row' );
+
+		const prServices = [
+			{ label: 'Estrategias integrales de RRPP', icon: 'M3 10v4h3l5 4V6l-5 4H3z M15.5 8.5c1.2 1.2 1.2 5.8 0 7 M18.5 6.5c2.5 2.5 2.5 8.5 0 11' },
+			{ label: 'Gestión de medios de comunicación', icon: 'M4 4h13v16H4z M17 8h3v9a2 2 0 01-2 2h-1V8z M7 8h7 M7 11.5h7 M7 15h4' },
+			{ label: 'Posicionamiento de líderes y voceros', icon: 'M12 3a3 3 0 013 3v6a3 3 0 01-6 0V6a3 3 0 013-3z M6 11a6 6 0 0012 0 M12 17v4 M9 21h6' },
+			{ label: 'Desarrollo de contenidos corporativos', icon: 'M6 3h8l5 5v13H6z M14 3v5h5 M9 15l6-6 2 2-6 6H9v-2z' },
+			{ label: 'Comunicación ejecutiva y thought leadership', icon: 'M4 21h16 M6 21V11h12v10 M9 11V7a3 3 0 016 0v4' },
+			{ label: 'Gestión de reputación corporativa', icon: 'M12 3l7 3v6c0 5-3 8-7 9-4-1-7-4-7-9V6z M9 12l2 2 4-4' },
+			{ label: 'Monitoreo y análisis de impacto mediático', icon: 'M3 20h18 M6 20v-6 M11 20v-9 M16 20v-4' },
+			{ label: 'Comunicación de lanzamientos y anuncios corporativos', icon: 'M12 2c3 3 4 7 3 12l-3 3-3-3c-1-5 0-9 3-12z M9 14l-3 3v3l3-1 M15 14l3 3v3l-3-1 M12 9.2a1 1 0 100 2 1 1 0 000-2z' }
+		];
+
+		const cx = 450, cy = 310, rx = 340, ry = 220;
+		const nodeElements = [];
+		const connectorElements = [];
+		let activeIndex = null;
+
+		const updateActiveState = ( index ) => {
+			activeIndex = index;
+			nodeElements.forEach( ( g, i ) => {
+				const isSelected = i === activeIndex;
+				const isDimmed = activeIndex !== null && ! isSelected;
+
+				if ( isSelected ) {
+					g.classList.add( 'is-active' );
+					g.classList.remove( 'is-dimmed' );
+					if ( connectorElements[i] ) connectorElements[i].classList.add( 'is-active' );
+				} else {
+					g.classList.remove( 'is-active' );
+					if ( isDimmed ) {
+						g.classList.add( 'is-dimmed' );
+					} else {
+						g.classList.remove( 'is-dimmed' );
+					}
+					if ( connectorElements[i] ) connectorElements[i].classList.remove( 'is-active' );
+				}
+			} );
+
+			mobileRows.forEach( ( row, i ) => {
+				if ( i === activeIndex ) {
+					row.classList.add( 'is-active' );
+				} else {
+					row.classList.remove( 'is-active' );
+				}
+			} );
+
+			if ( activeIndex !== null && prServices[activeIndex] && tooltip && tooltipText ) {
+				const item = prServices[activeIndex];
+				const angle = -Math.PI / 2 + activeIndex * ( ( 2 * Math.PI ) / prServices.length );
+				const x = cx + rx * Math.cos( angle );
+				const y = cy + ry * Math.sin( angle );
+
+				tooltipText.textContent = item.label;
+				tooltip.style.left = `${( x / 900 ) * 100}%`;
+				tooltip.style.top = `${( ( y - 44 ) / 620 ) * 100}%`;
+				tooltip.classList.add( 'is-visible' );
+			} else if ( tooltip ) {
+				tooltip.classList.remove( 'is-visible' );
+			}
+		};
+
+		if ( svgConnectors && svgNodes ) {
+			prServices.forEach( ( service, i ) => {
+				const angle = -Math.PI / 2 + i * ( ( 2 * Math.PI ) / prServices.length );
+				const x = cx + rx * Math.cos( angle );
+				const y = cy + ry * Math.sin( angle );
+				const ctrlX = cx + ( rx * 0.55 ) * Math.cos( angle );
+				const ctrlY = cy + ( ry * 0.55 ) * Math.sin( angle ) - 20;
+
+				// Create connector curve
+				const path = document.createElementNS( 'http://www.w3.org/2000/svg', 'path' );
+				path.setAttribute( 'd', `M ${cx} ${cy} Q ${ctrlX} ${ctrlY} ${x} ${y}` );
+				path.setAttribute( 'class', 'pr-services__connector-path' );
+				svgConnectors.appendChild( path );
+				connectorElements.push( path );
+
+				// Create node group
+				const g = document.createElementNS( 'http://www.w3.org/2000/svg', 'g' );
+				g.setAttribute( 'class', 'pr-services__node-group' );
+				g.setAttribute( 'tabindex', '0' );
+				g.setAttribute( 'role', 'button' );
+				g.setAttribute( 'aria-label', service.label );
+
+				const circle = document.createElementNS( 'http://www.w3.org/2000/svg', 'circle' );
+				circle.setAttribute( 'cx', x );
+				circle.setAttribute( 'cy', y );
+				circle.setAttribute( 'r', '32' );
+				circle.setAttribute( 'class', 'pr-services__node-circle' );
+
+				const iconGroup = document.createElementNS( 'http://www.w3.org/2000/svg', 'g' );
+				iconGroup.setAttribute( 'transform', `translate(${x - 12}, ${y - 12})` );
+
+				const iconPath = document.createElementNS( 'http://www.w3.org/2000/svg', 'path' );
+				iconPath.setAttribute( 'd', service.icon );
+				iconPath.setAttribute( 'class', 'pr-services__node-icon' );
+
+				iconGroup.appendChild( iconPath );
+				g.appendChild( circle );
+				g.appendChild( iconGroup );
+				svgNodes.appendChild( g );
+				nodeElements.push( g );
+
+				g.addEventListener( 'mouseenter', () => updateActiveState( i ) );
+				g.addEventListener( 'mouseleave', () => updateActiveState( null ) );
+				g.addEventListener( 'click', () => updateActiveState( activeIndex === i ? null : i ) );
+			} );
+		}
+
+		mobileRows.forEach( ( row ) => {
+			row.addEventListener( 'click', () => {
+				const idx = parseInt( row.getAttribute( 'data-node-index' ), 10 );
+				updateActiveState( activeIndex === idx ? null : idx );
+			} );
+		} );
+	};
+
+	const initPrFaqAccordion = () => {
+		const toggles = document.querySelectorAll( '.js-pr-faq-toggle' );
+		toggles.forEach( ( btn ) => {
+			btn.addEventListener( 'click', ( e ) => {
+				e.preventDefault();
+				const item = btn.closest( '.js-pr-faq-item' );
+				if ( ! item ) return;
+
+				const isOpen = item.classList.contains( 'pr-faq__item--open' );
+				
+				// Close all other items
+				document.querySelectorAll( '.js-pr-faq-item' ).forEach( ( other ) => {
+					other.classList.remove( 'pr-faq__item--open' );
+					const otherBtn = other.querySelector( '.js-pr-faq-toggle' );
+					if ( otherBtn ) otherBtn.setAttribute( 'aria-expanded', 'false' );
+				} );
+
+				if ( ! isOpen ) {
+					item.classList.add( 'pr-faq__item--open' );
+					btn.setAttribute( 'aria-expanded', 'true' );
+				}
+			} );
+		} );
+	};
+
+	const initAsuntosStakeholderNetwork = () => {
+		const container = document.getElementById( 'js-asuntos-network-container' );
+		if ( ! container ) return;
+
+		const nodes = container.querySelectorAll( '.js-ap-node' );
+		const lines = container.querySelectorAll( '.ap-network__line' );
+		const tooltip = document.getElementById( 'js-ap-tooltip' );
+		const tooltipText = document.getElementById( 'js-ap-tooltip-text' );
+
+		nodes.forEach( ( node, index ) => {
+			node.addEventListener( 'mouseenter', () => {
+				nodes.forEach( ( n ) => n.classList.remove( 'is-active' ) );
+				lines.forEach( ( l ) => l.classList.remove( 'is-active' ) );
+
+				node.classList.add( 'is-active' );
+				if ( lines[ index ] ) {
+					lines[ index ].classList.add( 'is-active' );
+				}
+
+				const label = node.getAttribute( 'data-node-label' );
+				if ( tooltipText && label ) {
+					tooltipText.textContent = label;
+				}
+				if ( tooltip ) {
+					tooltip.classList.add( 'is-visible' );
+				}
+			} );
+
+			node.addEventListener( 'mouseleave', () => {
+				node.classList.remove( 'is-active' );
+				if ( lines[ index ] ) {
+					lines[ index ].classList.remove( 'is-active' );
+				}
+				if ( tooltip ) {
+					tooltip.classList.remove( 'is-visible' );
+				}
+			} );
+		} );
+	};
+
 	// Initialize all components
 	initScrollReveals();
 	initHeroSlider();
@@ -1015,4 +1285,8 @@ document.addEventListener( 'DOMContentLoaded', () => {
 	initSectorsAutoplay();
 	initPodcastCarousel();
 	initPodcastTabs();
+	initPodcastScenarioModal();
+	initPrNodeDiagram();
+	initPrFaqAccordion();
+	initAsuntosStakeholderNetwork();
 } );

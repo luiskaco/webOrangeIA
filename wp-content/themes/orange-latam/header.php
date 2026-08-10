@@ -18,10 +18,13 @@
 $is_blog_context              = is_home() || is_singular( 'post' );
 $is_influencers_context       = is_page( 'marketing-de-influencers' );
 $is_marketing_digital_context = is_page( 'marketing-digital' );
-$nav_location                 = $is_marketing_digital_context ? 'marketing_digital' : ( $is_influencers_context ? 'influencers' : ( $is_blog_context ? 'blog' : 'primary' ) );
-$logo_url                     = ( $is_blog_context || $is_influencers_context || $is_marketing_digital_context ) ? home_url( '/' ) : '#inicio';
+$is_podcast_context           = is_page( 'podcast' ) || is_page_template( 'page-podcast.php' );
+$is_pr_context                = is_page( 'pr-gestion-reputacion' ) || is_page_template( 'page-pr-gestion-reputacion.php' );
+$is_asuntos_publicos_context  = is_page( 'asuntos-publicos' ) || is_page_template( 'page-asuntos-publicos.php' );
+$nav_location                 = $is_asuntos_publicos_context ? 'asuntos_publicos' : ( $is_pr_context ? 'pr' : ( $is_podcast_context ? 'podcast' : ( $is_marketing_digital_context ? 'marketing_digital' : ( $is_influencers_context ? 'influencers' : ( $is_blog_context ? 'blog' : 'primary' ) ) ) ) );
+$logo_url                     = ( $is_blog_context || $is_influencers_context || $is_marketing_digital_context || $is_podcast_context || $is_pr_context || $is_asuntos_publicos_context ) ? home_url( '/' ) : '#inicio';
 ?>
-<header class="header">
+<header class="header<?php echo ( $is_pr_context || $is_asuntos_publicos_context ) ? ' header--pr' : ''; ?>">
 	<div class="header__container">
 		<a href="<?php echo esc_url( $logo_url ); ?>" class="header__logo">
 			<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/logo.webp" alt="Orange Latam Logo" class="header__logo-img" style="height: 30px; width: auto; display: block;">
@@ -43,6 +46,34 @@ $logo_url                     = ( $is_blog_context || $is_influencers_context ||
 				foreach ( $menu_items as $item ) {
 					echo '<a href="' . esc_url( $item->url ) . '" class="header__link">' . esc_html( $item->title ) . '</a>';
 				}
+			} elseif ( $is_asuntos_publicos_context ) {
+				// Fallback if the Asuntos Públicos menu hasn't been generated yet.
+				?>
+				<a href="#inicio" class="header__link">Inicio</a>
+				<a href="#relacion-reguladores" class="header__link">Reguladores</a>
+				<a href="#comunicacion-politica" class="header__link">Comunicación Política</a>
+				<a href="#stakeholders" class="header__link">Stakeholders & Comunidades</a>
+				<a href="#contacto" class="header__link">Contacto</a>
+				<?php
+			} elseif ( $is_pr_context ) {
+				// Fallback if the PR menu hasn't been generated yet.
+				?>
+				<a href="#que-es" class="header__link">Qué es</a>
+				<a href="#servicio-pr" class="header__link">Servicio de PR</a>
+				<a href="#gestion-de-crisis" class="header__link">Gestión de Crisis</a>
+				<a href="#entrenamiento-voceros" class="header__link">Voceros</a>
+				<a href="#por-que-elegirnos" class="header__link">Por qué elegirnos</a>
+				<a href="#contacto" class="header__link">Contacto</a>
+				<?php
+			} elseif ( $is_podcast_context ) {
+				// Fallback if the podcast menu hasn't been generated yet.
+				?>
+				<a href="#inicio" class="header__link">Inicio</a>
+				<a href="#servicios" class="header__link">Servicio</a>
+				<a href="#escenarios" class="header__link">Escenarios</a>
+				<a href="#planes" class="header__link">Planes</a>
+				<a href="#contacto-podcast" class="header__link">Contacto</a>
+				<?php
 			} elseif ( $is_marketing_digital_context ) {
 				// Fallback if the marketing digital menu hasn't been generated yet.
 				?>

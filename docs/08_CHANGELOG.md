@@ -2,6 +2,7 @@
 
 ## [Unreleased]
 ### Añadido
+- CSS separado en padre/hijo por página (ver ADR 3 en `07_DECISIONS.md`): `assets/css/base.css` (fonts, variables, animaciones reveal, header/nav, footer global — todas las páginas) + `assets/css/pages/{home,podcast,marketing-influencers,marketing-digital}.css` (exclusivo de cada página, encolado condicionalmente por `is_front_page()` / `get_page_template()` en `functions.php`). `assets/css/style.css` quedó reducido a fallback genérico (~50 líneas, solo "Post Detail - Share Article") para `single.php`/`home.php` (blog). Helper `orange_latam_enqueue_versioned_style()` centraliza el cache-busting por `filemtime()`.
 - Nueva plantilla dedicada `page-podcast.php` para la página "Orange Studio Podcast" (`/podcast/`), maquetada fielmente a partir de la referencia de diseño `landing.png` y los 11 assets visuales cargados desde `postcash`: hero con video de YouTube embebido (`xkt_vSw_FK8`), grilla de 4 pilares, split block de entregables técnicos, carrusel interactivo de 3 escenarios (The Podcast Loft, Urban Corner, Estudio Noir) y formulario de reservación de sesión a 2 columnas.
 - Rediseño responsive móvil completo de la Home: cuadrícula 2x2 fluida para la barra de estadísticas (`.stats`), layout de 1 sola columna para la sección interactiva de Servicios (`.services-corp`), paddings laterales optimizados (`20px`), texto de descripción alineado a la izquierda sin espacios gigantes y grids de Voz de Expertos y Formulario adaptativos.
 - Aplicación estricta de las tipografías `PP Editorial New` (serif editorial) y `PP Neue Montreal` (sans-serif) a todas las secciones de la Home y subpáginas según el PDF de especificaciones.
@@ -39,6 +40,8 @@
 - Cache-busting de `style.css`/`main.js` vía `filemtime()` en vez de una versión estática, evitando que el navegador sirva CSS/JS desactualizado tras cada edición.
 - Pesos de fuente Inter (800/900) agregados a la carga de Google Fonts — corrige texto renderizado con negrita falsa en `.awards-list__item`.
 - `.header__overlay` sin `display:none` por defecto rompía el `justify-content: space-between` del header en desktop, descuadrando el menú.
+- Menú móvil (hamburguesa) sin funcionar en la página Podcast: el CSS del panel deslizable (`.header__nav` fijo, `--open`, `__overlay--visible`, `body.header-nav-open`) solo existía en un bloque de responsive mezclado de `style.css` y nunca se copió a `base.css` durante el primer split de CSS por página. Movido a `base.css`, ahora funciona en todas las páginas.
+- Hero en video de `marketing-digital` (`.infl-hero`, `.infl-hero__video-bg`, `.infl-hero__vignette`) sin estilos tras el split de CSS por página: el componente solo vivía en el hijo de Influencers. Duplicado en `marketing-digital.css`.
 
 ### Eliminado
 - Todas las entradas de prueba/anteriores (`post_type=post`) y sus metadatos/comentarios asociados, previo a la carga de contenido real por el cliente.

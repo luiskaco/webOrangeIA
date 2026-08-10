@@ -20,7 +20,7 @@ $podcast_img_uri = $theme_uri . '/assets/images/podcast';
 	<!-- ==========================================
 	     1. HERO SECTION (YouTube Video Background)
 	     ========================================== -->
-	<section class="podcast-hero">
+	<section class="podcast-hero" id="inicio">
 		<div class="podcast-hero__video-container">
 			<iframe class="podcast-hero__video" 
 				src="https://www.youtube.com/embed/xkt_vSw_FK8?autoplay=1&mute=1&loop=1&playlist=xkt_vSw_FK8&controls=0&showinfo=0&autohide=1&modestbranding=1&playsinline=1&enablejsapi=1&disablekb=1&fs=0&iv_load_policy=3&rel=0" 
@@ -49,18 +49,18 @@ $podcast_img_uri = $theme_uri . '/assets/images/podcast';
 	     2. INTRO & LOGO SECTION
 	     ========================================== -->
 	<section class="podcast-intro">
-		<div class="podcast-intro__container" data-reveal="up">
-			<div class="podcast-intro__logo-badge">
+		<div class="podcast-intro__container">
+			<div class="podcast-intro__logo-badge" data-reveal="left">
 				<img class="podcast-intro__logo-img" 
 					src="<?php echo esc_url( $podcast_img_uri . '/Graba-y-Edita-tu-Podcast-en-Orange-Latam-Studio-Podcast-1536x571.webp' ); ?>" 
 					alt="Podcast Orange Studio">
 			</div>
 
-			<p class="podcast-intro__desc">
+			<p class="podcast-intro__desc" data-reveal="right">
 				En <strong>ORANGE STUDIO</strong> ponemos a tu disposición un estudio para podcast en Miraflores, moderno, cómodo y totalmente equipado, ideal para grabaciones individuales, entrevistas, programas conversacionales y contenido para redes. Contamos con sonido profesional, microfonía de alta gama, iluminación y producción técnica, además de asistencia experta durante toda la sesión.
 			</p>
 
-			<div class="podcast-intro__curved-badge">
+			<div class="podcast-intro__curved-badge" data-reveal="scale">
 				<img class="podcast-intro__curved-img" 
 					src="<?php echo esc_url( $podcast_img_uri . '/Nuestro-estudio-esta-disenado-para-creadores-marcas-y-empresas-1536x328.webp' ); ?>" 
 					alt="Nuestro estudio está diseñado para creadores, marcas y empresas que buscan producir podcasts con calidad profesional y equipos de alta gama">
@@ -110,7 +110,7 @@ $podcast_img_uri = $theme_uri . '/assets/images/podcast';
 	<!-- ==========================================
 	     4. SERVICES HEADER & TABS
 	     ========================================== -->
-	<section class="podcast-service-header">
+	<section class="podcast-service-header" id="servicios">
 		<div class="podcast-service-header__container" data-reveal="up">
 			<div class="podcast-pill">GRABACIÓN Y EDICIÓN PROFESIONAL DE PODCAST EN LIMA</div>
 
@@ -129,8 +129,8 @@ $podcast_img_uri = $theme_uri . '/assets/images/podcast';
 	<!-- ==========================================
 	     5. INCLUDED DELIVERABLES (TAB PANES WITH VERTICAL SLIDE ANIMATION)
 	     ========================================== -->
-	<section class="podcast-included">
-		<div class="podcast-included__container">
+	<section class="podcast-included" id="planes">
+		<div class="podcast-included__container" data-reveal="up">
 			<!-- Pane 1: Grabación de Podcast (Default Active) -->
 			<div class="podcast-included__pane podcast-included__pane--active" id="tab-grabacion">
 				<div class="podcast-included__grid">
@@ -190,7 +190,7 @@ $podcast_img_uri = $theme_uri . '/assets/images/podcast';
 	<!-- ==========================================
 	     6. SCENARIOS & SLIDER
 	     ========================================== -->
-	<section class="podcast-scenarios">
+	<section class="podcast-scenarios" id="escenarios">
 		<div class="podcast-scenarios__container" data-reveal="up">
 			<div class="podcast-pill">NUESTRO ESTUDIO</div>
 
@@ -213,35 +213,44 @@ $podcast_img_uri = $theme_uri . '/assets/images/podcast';
 				</button>
 				
 				<div class="podcast-carousel__track">
-					<!-- Scenario 1 -->
-					<div class="podcast-carousel__slide podcast-carousel__slide--center">
+					<!-- Scenario 1: Blue Talks / Loft -->
+					<div class="podcast-carousel__slide podcast-carousel__slide--center" 
+						data-scenario-title="BLUE TALKS" 
+						data-scenario-desc="Un espacio inspirado en una sala acogedora, con sofá y una iluminación suave que crea una atmósfera cálida y cercana. El ambiente invita a la conversación natural, ideal para charlas honestas, entrevistas relajadas y encuentros que fluyen como entre amigos" 
+						data-scenario-img="<?php echo esc_url( $podcast_img_uri . '/The-Podcast-Loft-Orange-Latam-Podcast.webp' ); ?>">
 						<div class="podcast-carousel__card">
 							<img class="podcast-carousel__img" src="<?php echo esc_url( $podcast_img_uri . '/The-Podcast-Loft-Orange-Latam-Podcast.webp' ); ?>" alt="The Podcast Loft">
 							<div class="podcast-carousel__overlay">
 								<h3 class="podcast-carousel__title">THE PODCAST LOFT</h3>
-								<button class="podcast-carousel__btn">Ver más</button>
+								<button class="podcast-carousel__btn js-scenario-modal-open">Ver más</button>
 							</div>
 						</div>
 					</div>
 
-					<!-- Scenario 2 -->
-					<div class="podcast-carousel__slide podcast-carousel__slide--right">
+					<!-- Scenario 2: Urban Corner -->
+					<div class="podcast-carousel__slide podcast-carousel__slide--right" 
+						data-scenario-title="URBAN CORNER" 
+						data-scenario-desc="Un ambiente de inspiración urbana que combina sillones cómodos, una mesa de fondo y detalles naturales que aportan equilibrio y calidez. Ideal para conversaciones espontáneas, entrevistas relajadas y contenidos con un estilo moderno, cercano y auténtico" 
+						data-scenario-img="<?php echo esc_url( $podcast_img_uri . '/Urban-Corner-Orange-Latam-Podcast.webp' ); ?>">
 						<div class="podcast-carousel__card">
 							<img class="podcast-carousel__img" src="<?php echo esc_url( $podcast_img_uri . '/Urban-Corner-Orange-Latam-Podcast.webp' ); ?>" alt="Urban Corner">
 							<div class="podcast-carousel__overlay">
 								<h3 class="podcast-carousel__title">URBAN CORNER</h3>
-								<button class="podcast-carousel__btn">Ver más</button>
+								<button class="podcast-carousel__btn js-scenario-modal-open">Ver más</button>
 							</div>
 						</div>
 					</div>
 
-					<!-- Scenario 3 -->
-					<div class="podcast-carousel__slide podcast-carousel__slide--left">
+					<!-- Scenario 3: Essential Pink / Estudio Noir -->
+					<div class="podcast-carousel__slide podcast-carousel__slide--left" 
+						data-scenario-title="ESSENTIAL PINK" 
+						data-scenario-desc="Está diseñado para quienes buscan un espacio con una personalidad visual arrolladora. Es un fondo de alto impacto que aporta energía y frescura al contenido, ideal para marcas modernas que quieren destacar en el scroll infinito de las redes sociales. Su estética equilibrada ofrece un entorno profesional pero cercano, eliminando la rigidez de los estudios tradicionales" 
+						data-scenario-img="<?php echo esc_url( $podcast_img_uri . '/ESTUDIO-NOIR-Orange-Latam-Podcast-1.webp' ); ?>">
 						<div class="podcast-carousel__card">
 							<img class="podcast-carousel__img" src="<?php echo esc_url( $podcast_img_uri . '/ESTUDIO-NOIR-Orange-Latam-Podcast-1.webp' ); ?>" alt="Estudio Noir">
 							<div class="podcast-carousel__overlay">
 								<h3 class="podcast-carousel__title">ESTUDIO NOIR</h3>
-								<button class="podcast-carousel__btn">Ver más</button>
+								<button class="podcast-carousel__btn js-scenario-modal-open">Ver más</button>
 							</div>
 						</div>
 					</div>
@@ -252,7 +261,7 @@ $podcast_img_uri = $theme_uri . '/assets/images/podcast';
 				</button>
 			</div>
 
-			<p class="podcast-scenarios__footer-note">
+			<p class="podcast-scenarios__footer-note" data-reveal="up">
 				Sea cual sea el estilo de tu podcast, en <strong>ORANGE STUDIO</strong> encontrarás el escenario perfecto para grabar tu contenido profesional en Lima, a la medida de tu presupuesto y necesidades.
 			</p>
 		</div>
@@ -265,15 +274,17 @@ $podcast_img_uri = $theme_uri . '/assets/images/podcast';
 		<div class="podcast-booking__container" data-reveal="up">
 			<div class="podcast-pill">CONTACTO</div>
 
-			<div class="podcast-booking__badge">
-				¡Listo para grabar tu podcast con calidad profesional!
+			<div class="podcast-booking__badge-img-wrapper">
+				<img class="podcast-booking__badge-img" 
+					src="<?php echo esc_url( $podcast_img_uri . '/Listo-para-grabar-tu-podcast-con-calidad-profesional-en-Orange-Latam.png' ); ?>" 
+					alt="¡Listo para grabar tu podcast con calidad profesional en Orange Latam!">
 			</div>
 
 			<p class="podcast-booking__desc">
 				Completa el formulario o contáctanos por WhatsApp y reserva tu escenario de acuerdo a tu propuesta, o solicita tu paquete más completo de Lima.
 			</p>
 
-			<div class="podcast-form-card">
+			<div class="podcast-form-card" data-reveal="scale">
 				<form action="#" method="post" class="podcast-form">
 					<div class="podcast-form__row">
 						<div class="podcast-form__group">
@@ -338,6 +349,22 @@ $podcast_img_uri = $theme_uri . '/assets/images/podcast';
 			</div>
 		</div>
 	</section>
+
+	<!-- ==========================================
+	     8. PODCAST SCENARIO MODAL
+	     ========================================== -->
+	<div class="podcast-modal js-podcast-modal" aria-hidden="true" role="dialog">
+		<div class="podcast-modal__overlay js-podcast-modal-close"></div>
+		<div class="podcast-modal__card">
+			<button class="podcast-modal__close js-podcast-modal-close" aria-label="Cerrar modal">&times;</button>
+			<div class="podcast-modal__bg js-podcast-modal-bg"></div>
+			<div class="podcast-modal__vignette"></div>
+			<div class="podcast-modal__content">
+				<h2 class="podcast-modal__title js-podcast-modal-title"></h2>
+				<p class="podcast-modal__desc js-podcast-modal-desc"></p>
+			</div>
+		</div>
+	</div>
 </main>
 
 <?php

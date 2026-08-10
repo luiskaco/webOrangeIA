@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <?php
 // Mostrar el prefooter de contacto solo en las vistas del Blog y las páginas de Servicio específicas.
-if ( is_home() || is_singular( 'post' ) || is_page( 'marketing-de-influencers' ) || is_page( 'marketing-digital' ) ) :
+if ( is_home() || is_singular( 'post' ) || is_page( 'marketing-de-influencers' ) || is_page( 'marketing-digital' ) || is_page( 'podcast' ) || is_page_template( 'page-podcast.php' ) || is_page( 'pr-gestion-reputacion' ) || is_page_template( 'page-pr-gestion-reputacion.php' ) || is_page( 'asuntos-publicos' ) || is_page_template( 'page-asuntos-publicos.php' ) ) :
 ?>
 	<!-- ==========================================
 	     CONTACTO (PRE-FOOTER)
@@ -39,7 +39,7 @@ if ( is_home() || is_singular( 'post' ) || is_page( 'marketing-de-influencers' )
 				<p class="infl-prefooter__contact-label">Contacto:</p>
 				<p class="infl-prefooter__phone">
 					<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#38b6ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-					<a href="tel:993595252">993-595-252</a>
+					<a href="tel:51993595232">(+51) 993 595 232</a>
 				</p>
 				<div class="infl-prefooter__social">
 					<a href="#" class="infl-prefooter__social-link" aria-label="Instagram">
@@ -64,6 +64,47 @@ if ( is_home() || is_singular( 'post' ) || is_page( 'marketing-de-influencers' )
 <footer class="footer">
 	<span class="footer__text">Todos los Derechos Reservados <?php echo esc_html( date( 'Y' ) ); ?>© Orange Latam SAC</span>
 </footer>
+
+<!-- Acciones Flotantes: WhatsApp y Volver Arriba -->
+<div class="floating-actions">
+	<!-- Botón Flotante de WhatsApp -->
+	<a href="https://wa.me/51993595252?text=Hola%20Orange%20Latam%2C%20quisiera%20m%C3%A1s%20informaci%C3%B3n." class="floating-btn floating-btn--whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+		<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+			<path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+		</svg>
+		<span class="floating-btn__tooltip">¿Conversamos por WhatsApp?</span>
+	</a>
+
+	<!-- Botón Flotante Volver Arriba -->
+	<button id="scroll-to-top" class="floating-btn floating-btn--top" aria-label="Volver arriba">
+		<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+			<line x1="12" y1="19" x2="12" y2="5"></line>
+			<polyline points="5 12 12 5 19 12"></polyline>
+		</svg>
+	</button>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+	var scrollTopBtn = document.getElementById('scroll-to-top');
+	if (scrollTopBtn) {
+		window.addEventListener('scroll', function() {
+			if (window.scrollY > 300) {
+				scrollTopBtn.classList.add('is-visible');
+			} else {
+				scrollTopBtn.classList.remove('is-visible');
+			}
+		});
+
+		scrollTopBtn.addEventListener('click', function() {
+			window.scrollTo({
+				top: 0,
+				behavior: 'smooth'
+			});
+		});
+	}
+});
+</script>
 
 <?php wp_footer(); ?>
 </body>
