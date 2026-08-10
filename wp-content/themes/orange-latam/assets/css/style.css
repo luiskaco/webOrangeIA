@@ -538,7 +538,7 @@ input, textarea, button {
 	font-family: var(--font-cursive);
 	font-weight: 400;
 	color: var(--color-blue);
-	font-size: 1.15em;
+	font-size: 1.5em;
 }
 
 .about__heading-line {
