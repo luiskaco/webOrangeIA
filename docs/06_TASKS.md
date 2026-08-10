@@ -42,6 +42,7 @@
 - [x] Enlace de la fila "02 Marketing de Influencers" en `services-corp` (home) hacia `/marketing-de-influencers/`, wireado vía `data-link` + JS
 - [x] Menú propio de `marketing-de-influencers` (theme location `influencers`), auto-creado/auto-asignado en `class-theme-setup.php` para activarse solo al desplegar el tema
 - [x] Hero de `marketing-de-influencers` reconstruido como video full-bleed (`assets/videos/marketing-de-influencers-hero.mp4`) with título superpuesto, scrim de header y ajustes de legibilidad
+- [x] Crear plantilla dedicada `page-podcast.php` para Orange Studio Podcast con hero video de YouTube (`xkt_vSw_FK8`), grilla de 4 características, bloque de entregables, slider interactivo de escenarios (The Podcast Loft, Urban Corner, Estudio Noir) y formulario de reservación.
 - [x] Sección `infl-awards`: título + pill + ticker de premios en movimiento continuo (CSS puro, sin JS), con los 8 logos/textos reales descargados de `orange-la.com`
 - [x] Sección `infl-stat-block`: píldoras de estadística "+28 Influencers" + imagen con burbuja de cita superpuesta
 - [ ] Confirmar con el cliente los destinos reales de los ítems del menú `influencers` (hoy son anclas placeholder: `#servicios`, `#preguntas-frecuentes`, `#casos-de-exito`, `#por-que-nosotros`, `#contacto`)

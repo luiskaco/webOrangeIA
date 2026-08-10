@@ -908,6 +908,53 @@ document.addEventListener( 'DOMContentLoaded', () => {
 		startAutoplay();
 	};
 
+	// ==========================================
+	// 18. PODCAST PAGE SCENARIOS CAROUSEL
+	// ==========================================
+	const initPodcastCarousel = () => {
+		const container = document.querySelector( '.podcast-carousel' );
+		if ( ! container ) return;
+
+		const slides = container.querySelectorAll( '.podcast-carousel__slide' );
+		const prevBtn = container.querySelector( '.podcast-carousel__arrow--prev' );
+		const nextBtn = container.querySelector( '.podcast-carousel__arrow--next' );
+
+		if ( ! slides.length ) return;
+
+		let currentIndex = 0;
+
+		const updateCarousel = ( index ) => {
+			slides.forEach( ( slide, idx ) => {
+				if ( idx === index ) {
+					slide.classList.add( 'podcast-carousel__slide--active' );
+				} else {
+					slide.classList.remove( 'podcast-carousel__slide--active' );
+				}
+			} );
+		};
+
+		if ( prevBtn ) {
+			prevBtn.addEventListener( 'click', () => {
+				currentIndex = ( currentIndex - 1 + slides.length ) % slides.length;
+				updateCarousel( currentIndex );
+			} );
+		}
+
+		if ( nextBtn ) {
+			nextBtn.addEventListener( 'click', () => {
+				currentIndex = ( currentIndex + 1 ) % slides.length;
+				updateCarousel( currentIndex );
+			} );
+		}
+
+		slides.forEach( ( slide, idx ) => {
+			slide.addEventListener( 'click', () => {
+				currentIndex = idx;
+				updateCarousel( currentIndex );
+			} );
+		} );
+	};
+
 	// Initialize all components
 	initScrollReveals();
 	initHeroSlider();
@@ -927,4 +974,5 @@ document.addEventListener( 'DOMContentLoaded', () => {
 	initVideoModal();
 	initDigAdsSlider();
 	initSectorsAutoplay();
+	initPodcastCarousel();
 } );

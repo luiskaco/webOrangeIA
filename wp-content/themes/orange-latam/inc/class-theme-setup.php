@@ -36,6 +36,10 @@ class Orange_Theme_Setup {
 				'title'   => 'Marketing de Influencers',
 				'content' => '',
 			),
+			'podcast' => array(
+				'title'   => 'Orange Studio Podcast',
+				'content' => '',
+			),
 		);
 
 		$page_ids = array();
