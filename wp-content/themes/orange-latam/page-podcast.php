@@ -34,15 +34,13 @@ $podcast_img_uri = $theme_uri . '/assets/images/podcast';
 	</section>
 
 	<!-- ==========================================
-	     1b. SUB-BANNER SECTION (Gray Box Text)
+	     1b. SUB-BANNER SECTION (Graphic Image)
 	     ========================================== -->
 	<section class="podcast-subbanner">
 		<div class="podcast-subbanner__container" data-reveal="up">
-			<h2 class="podcast-subbanner__text">
-				Graba y edita tu Podcast en <strong>Orange Studio</strong>,<br>
-				el espacio ideal en Lima para lograr calidad<br>
-				de estudio con equipos de alto nivel
-			</h2>
+			<img class="podcast-subbanner__img" 
+				src="<?php echo esc_url( $podcast_img_uri . '/Graba-y-Edita-tu-Podcast-en-Orange-Latam-Studio-Podcast-1536x571.webp' ); ?>" 
+				alt="Graba y edita tu Podcast en Orange Studio, el espacio ideal en Lima para lograr calidad de estudio con equipos de alto nivel">
 		</div>
 	</section>
 
