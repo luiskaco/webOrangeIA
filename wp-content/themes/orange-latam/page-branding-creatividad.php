@@ -693,6 +693,21 @@ $theme_uri = get_template_directory_uri();
 	</section>
 
 	<!-- ==========================================
+	     8. BANNER TRABAJEMOS JUNTOS (CONTACTO)
+	     ========================================== -->
+	<section class="bc-cta" id="contacto">
+		<div class="bc-cta__container" data-reveal="up">
+			<span class="bc-cta__tag">Branding & Dirección de Arte</span>
+			<h2 class="bc-cta__title">Trabajemos juntos</h2>
+			<p class="bc-cta__desc">¿Listo para construir una marca memorable con estrategia, creatividad e IA? Conversemos sobre tu próximo proyecto.</p>
+			<a href="#contacto" class="bc-cta__btn open-contact-modal" data-service="Branding y Creatividad">
+				<span>Contactar ahora</span>
+				<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+			</a>
+		</div>
+	</section>
+
+	<!-- ==========================================
 	     MODAL DE DETALLE DE CASO DE ÉXITO (UX ENHANCED)
 	     ========================================== -->
 	<div class="bc-modal" id="bc-case-modal" aria-hidden="true" role="dialog" aria-labelledby="bc-modal-title">
