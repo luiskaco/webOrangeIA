@@ -1,0 +1,439 @@
+<?php
+/**
+ * Template Name: Eventos y Activaciones
+ * Template Post Type: page
+ *
+ * @package Orange_Latam
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
+
+get_header();
+
+$theme_uri = get_template_directory_uri();
+?>
+
+<!-- Schema JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "name": "Orange Latam",
+      "url": "<?php echo esc_url( home_url( '/' ) ); ?>",
+      "email": "negocios@orange-la.com",
+      "telephone": "+51993595252",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Calle Enrique Palacios 360 Of. 306, Centro Empresarial Abril, Miraflores",
+        "addressLocality": "Lima",
+        "addressCountry": "PE"
+      }
+    },
+    {
+      "@type": "Service",
+      "serviceType": "Agencia de Eventos Corporativos y Activaciones de Marca",
+      "provider": {
+        "@type": "Organization",
+        "name": "Orange Latam"
+      },
+      "areaServed": "PE",
+      "url": "<?php echo esc_url( home_url( '/eventos-activaciones/' ) ); ?>",
+      "description": "Diseño y producción de eventos corporativos, activaciones de marca, eventos BTL e híbridos en Perú. Agencia de eventos corporativos y activaciones BTL en Lima."
+    }
+  ]
+}
+</script>
+
+<main class="ea-page">
+
+	<!-- ==========================================
+	     1. HERO — DARK AURA & GLASSMORPHISM SHOWCASE
+	     ========================================== -->
+	<section class="ea-dark-hero" id="inicio">
+		<!-- Background Glow Effects -->
+		<div class="ea-dark-hero__glow ea-dark-hero__glow--purple"></div>
+		<div class="ea-dark-hero__glow ea-dark-hero__glow--orange"></div>
+		<div class="ea-dark-hero__glow ea-dark-hero__glow--teal"></div>
+
+		<div class="ea-container">
+			<div class="ea-dark-hero__grid">
+				
+				<!-- Left Column: Title, Subtitle & Metrics -->
+				<div class="ea-dark-hero__content" data-reveal="up">
+					<h1 class="ea-dark-hero__title">
+						Eventos y Activaciones <span class="ea-dark-hero__gradient-text">Memorables & de Alto Impacto</span>
+					</h1>
+
+					<p class="ea-dark-hero__lead">
+						Un evento es mucho más que una fecha en el calendario. Convertimos los objetivos de tu marca en experiencias inmersivas, presenciales, remotas o híbridas.
+					</p>
+
+					<!-- Stats Strip -->
+					<div class="ea-dark-hero__stats">
+						<div class="ea-dark-stat">
+							<span class="ea-dark-stat__num">150+</span>
+							<span class="ea-dark-stat__label">Eventos Producidos</span>
+						</div>
+						<div class="ea-dark-stat__divider"></div>
+						<div class="ea-dark-stat">
+							<span class="ea-dark-stat__num">10M+</span>
+							<span class="ea-dark-stat__label">Asistentes Impactados</span>
+						</div>
+						<div class="ea-dark-stat__divider"></div>
+						<div class="ea-dark-stat">
+							<span class="ea-dark-stat__num">99%</span>
+							<span class="ea-dark-stat__label">Satisfacción de Marca</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- Right Column: Dual Card Showcase + Glass Badges -->
+				<div class="ea-dark-hero__visual" data-reveal="up">
+					
+					<!-- Decorative Sparkles -->
+					<div class="ea-dark-sparkle ea-dark-sparkle--top">✦</div>
+					<div class="ea-dark-sparkle ea-dark-sparkle--bottom">✦</div>
+
+					<div class="ea-dark-hero__cards-wrapper">
+						
+						<!-- Card 1: Main Photo Card (Powder Blue Frame) -->
+						<div class="ea-dark-card ea-dark-card--main">
+							<div class="ea-dark-card__img-wrap">
+								<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/eventos/activaciones.png" alt="Activaciones BTL Orange Latam" class="ea-dark-card__img">
+							</div>
+							
+							<!-- Floating Glass Instructor / Production Badge -->
+							<div class="ea-dark-badge">
+								<div class="ea-dark-badge__avatar">
+									<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/eventos/corporativos.png" alt="Producción Orange Latam">
+								</div>
+								<div class="ea-dark-badge__info">
+									<span class="ea-dark-badge__name">Producción 360°</span>
+									<span class="ea-dark-badge__role">Líderes BTL en Perú</span>
+									<div class="ea-dark-badge__stars">
+										★★★★★
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Card 2: Secondary Card (Purple Overlay + Float Action Arrow) -->
+						<div class="ea-dark-card ea-dark-card--secondary">
+							<div class="ea-dark-card__img-wrap">
+								<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/eventos/hibridos.png" alt="Eventos Híbridos" class="ea-dark-card__img">
+							</div>
+							
+							<!-- Floating Glass Circle Arrow Button -->
+							<div class="ea-dark-card__float-btn">
+								<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+							</div>
+
+							<!-- Floating Glass Overlay Label -->
+							<div class="ea-dark-card__overlay-bar">
+								<span>Experiencias Inmersivas</span>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+
+			<!-- Trusted By / Brand Strip -->
+			<div class="ea-dark-hero__brands" data-reveal="up">
+				<span class="ea-dark-hero__brands-title">Empresas que confían en nuestras experiencias</span>
+				<div class="ea-dark-hero__brands-row">
+					<span class="ea-dark-brand">CORPORATIVOS</span>
+					<span class="ea-dark-brand">RETAIL</span>
+					<span class="ea-dark-brand">TECNOLOGÍA</span>
+					<span class="ea-dark-brand">CONSUMO MASIVO</span>
+					<span class="ea-dark-brand">ENTRETENIMIENTO</span>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<!-- ==========================================
+	     2. TIPOS DE EVENTOS Y ACTIVACIONES QUE PRODUCIMOS
+	     ========================================== -->
+	<section class="ea-plus-types" id="tipos-eventos">
+		<div class="ea-container">
+			<div class="ea-plus-types__grid" data-reveal="up">
+				
+				<!-- Left: Text & SEO Callout -->
+				<div class="ea-plus-types__content">
+					<span class="ea-section-tag">Formatos & Soluciones</span>
+					<h2 class="ea-plus-title">Tipos de eventos y activaciones que producimos</h2>
+					<p class="ea-plus-sub">
+						Cada audiencia y cada objetivo requieren una experiencia diferente. Por eso, desarrollamos formatos que se adaptan al propósito de la marca, al público y al contexto.
+					</p>
+					<div class="ea-plus-callout">
+						<p>Como <strong>agencia de activaciones BTL en Lima</strong> y <strong>eventos corporativos en Perú</strong>, garantizamos una ejecución coordinada de extremo a extremo.</p>
+					</div>
+				</div>
+
+				<!-- Right: 3 Tall Photo Cards -->
+				<div class="ea-plus-types__cards">
+					<div class="ea-plus-photo-card">
+						<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/eventos/corporativos.png" alt="Eventos Corporativos" class="ea-plus-photo-card__img" loading="lazy">
+						<div class="ea-plus-photo-card__overlay">
+							<span class="ea-plus-photo-card__badge">Corporativo</span>
+							<h3 class="ea-plus-photo-card__title">Eventos Corporativos</h3>
+						</div>
+					</div>
+
+					<div class="ea-plus-photo-card">
+						<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/eventos/activaciones.png" alt="Activaciones BTL" class="ea-plus-photo-card__img" loading="lazy">
+						<div class="ea-plus-photo-card__overlay">
+							<span class="ea-plus-photo-card__badge">BTL</span>
+							<h3 class="ea-plus-photo-card__title">Activaciones de Marca</h3>
+						</div>
+					</div>
+
+					<div class="ea-plus-photo-card">
+						<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/eventos/hibridos.png" alt="Eventos Híbridos" class="ea-plus-photo-card__img" loading="lazy">
+						<div class="ea-plus-photo-card__overlay">
+							<span class="ea-plus-photo-card__badge">Híbrido</span>
+							<h3 class="ea-plus-photo-card__title">Eventos Híbridos</h3>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<!-- ==========================================
+	     3. CÓMO TRABAJAMOS: DEL CONCEPTO A LA EJECUCIÓN
+	     ========================================== -->
+	<section class="ea-cat-section" id="como-trabajamos">
+		<div class="ea-container">
+			
+			<!-- Centered Header with Curved Accent -->
+			<div class="ea-cat-header" data-reveal="up">
+				<h2 class="ea-cat-header__title">
+					Cómo trabajamos: del concepto a la ejecución
+				</h2>
+				<p class="ea-cat-header__sub">
+					Un evento exitoso necesita una ejecución impecable, pero también una idea que le dé sentido. Nuestro proceso conecta estrategia, creatividad y producción.
+				</p>
+			</div>
+
+			<!-- 3-Column x 2-Row Pastel Pill Cards Grid -->
+			<div class="ea-cat-grid" data-reveal="up">
+
+				<!-- Card 1: Teal Tint -->
+				<div class="ea-cat-card ea-cat-card--teal">
+					<div class="ea-cat-card__icon"><span class="ea-cat-card__num">1</span></div>
+					<div class="ea-cat-card__text">
+						<h3 class="ea-cat-card__title">Entendemos el desafío</h3>
+						<p class="ea-cat-card__desc">Analizamos los objetivos, audiencia y resultados esperados.</p>
+					</div>
+				</div>
+
+				<!-- Card 2: Rose Tint -->
+				<div class="ea-cat-card ea-cat-card--rose">
+					<div class="ea-cat-card__icon"><span class="ea-cat-card__num">2</span></div>
+					<div class="ea-cat-card__text">
+						<h3 class="ea-cat-card__title">Creamos el concepto</h3>
+						<p class="ea-cat-card__desc">Desarrollamos una idea central relevante que guía la experiencia.</p>
+					</div>
+				</div>
+
+				<!-- Card 3: Emerald Tint -->
+				<div class="ea-cat-card ea-cat-card--emerald">
+					<div class="ea-cat-card__icon"><span class="ea-cat-card__num">3</span></div>
+					<div class="ea-cat-card__text">
+						<h3 class="ea-cat-card__title">Diseñamos la experiencia</h3>
+						<p class="ea-cat-card__desc">Recorrido del asistente, contenidos y tecnología interactiva.</p>
+					</div>
+				</div>
+
+				<!-- Card 4: Amber Tint -->
+				<div class="ea-cat-card ea-cat-card--amber">
+					<div class="ea-cat-card__icon"><span class="ea-cat-card__num">4</span></div>
+					<div class="ea-cat-card__text">
+						<h3 class="ea-cat-card__title">Producimos y coordinamos</h3>
+						<p class="ea-cat-card__desc">Logística, montaje y puesta en escena técnica integral 360°.</p>
+					</div>
+				</div>
+
+				<!-- Card 5: Purple Tint -->
+				<div class="ea-cat-card ea-cat-card--purple">
+					<div class="ea-cat-card__icon"><span class="ea-cat-card__num">5</span></div>
+					<div class="ea-cat-card__text">
+						<h3 class="ea-cat-card__title">Ejecutamos y medimos</h3>
+						<p class="ea-cat-card__desc">Acompañamiento en vivo y evaluación de resultados con KPIs.</p>
+					</div>
+				</div>
+
+				<!-- Card 6: Ocean Blue Tint -->
+				<div class="ea-cat-card ea-cat-card--blue">
+					<div class="ea-cat-card__icon"><span class="ea-cat-card__num">6</span></div>
+					<div class="ea-cat-card__text">
+						<h3 class="ea-cat-card__title">Garantía Orange Latam</h3>
+						<p class="ea-cat-card__desc">Ejecución impecable con altos estándares de calidad.</p>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<!-- ==========================================
+	     4. CASOS Y RESULTADOS — MULTI-CASE SHOWCASE
+	     ========================================== -->
+	<section class="ea-cases-section" id="casos-resultados">
+		<div class="ea-container">
+			
+			<!-- Header Block with Title & Filter Tabs -->
+			<div class="ea-cases-header" data-reveal="up">
+				<div class="ea-cases-header__text">
+					<span class="ea-section-tag">✦ Medición & Retorno de Experiencia</span>
+					<h2 class="ea-cases-header__title">Casos de éxito y resultados medibles</h2>
+					<p class="ea-cases-header__sub">
+						Transformamos los objetivos de negocio en experiencias reales con métricas cuantitativas de alcance, engagement y ROI.
+					</p>
+				</div>
+			</div>
+
+			<!-- Panel de Resultados: filas horizontales metric-first -->
+			<div class="ea-cases-list" data-reveal="up">
+
+				<!-- Case Row 1: BTL & Activaciones -->
+				<article class="ea-case-row">
+					<div class="ea-case-row__thumb-wrap">
+						<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/eventos/activaciones.png" alt="Activación Inmersiva 360°" class="ea-case-row__thumb">
+					</div>
+					<div class="ea-case-row__content">
+						<span class="ea-case-row__badge">BTL & Activaciones</span>
+						<h3 class="ea-case-row__title">Activación Inmersiva 360° de Marca</h3>
+						<p class="ea-case-row__desc">Despliegue conceptual BTL con estaciones interactivas, gamificación y recolección de leads en tiempo real.</p>
+					</div>
+					<div class="ea-case-row__stats">
+						<div class="ea-case-stat">
+							<span class="ea-case-stat__val">+15,000</span>
+							<span class="ea-case-stat__lbl">Asistentes</span>
+						</div>
+						<div class="ea-case-stat">
+							<span class="ea-case-stat__val">94%</span>
+							<span class="ea-case-stat__lbl">Engagement</span>
+						</div>
+						<div class="ea-case-stat">
+							<span class="ea-case-stat__val">3.2x</span>
+							<span class="ea-case-stat__lbl">ROI</span>
+						</div>
+					</div>
+					<div class="ea-case-row__go" aria-hidden="true">
+						<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+					</div>
+				</article>
+
+				<!-- Case Row 2: Eventos Corporativos -->
+				<article class="ea-case-row ea-case-row--corp">
+					<div class="ea-case-row__thumb-wrap">
+						<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/eventos/corporativos.png" alt="Summit Corporativo Anual" class="ea-case-row__thumb">
+					</div>
+					<div class="ea-case-row__content">
+						<span class="ea-case-row__badge">Corporativo</span>
+						<h3 class="ea-case-row__title">Summit Corporativo e Integración</h3>
+						<p class="ea-case-row__desc">Convención ejecutiva con puesta en escena técnica integral, ponentes internacionales y networking dinámico.</p>
+					</div>
+					<div class="ea-case-row__stats">
+						<div class="ea-case-stat">
+							<span class="ea-case-stat__val">+3,500</span>
+							<span class="ea-case-stat__lbl">Ejecutivos</span>
+						</div>
+						<div class="ea-case-stat">
+							<span class="ea-case-stat__val">98%</span>
+							<span class="ea-case-stat__lbl">NPS Promedio</span>
+						</div>
+						<div class="ea-case-stat">
+							<span class="ea-case-stat__val">100%</span>
+							<span class="ea-case-stat__lbl">Cobertura PR</span>
+						</div>
+					</div>
+					<div class="ea-case-row__go" aria-hidden="true">
+						<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+					</div>
+				</article>
+
+				<!-- Case Row 3: Eventos Híbridos & Lanzamientos -->
+				<article class="ea-case-row ea-case-row--hib">
+					<div class="ea-case-row__thumb-wrap">
+						<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/eventos/hibridos.png" alt="Lanzamiento de Producto Híbrido" class="ea-case-row__thumb">
+					</div>
+					<div class="ea-case-row__content">
+						<span class="ea-case-row__badge">Experiencia Híbrida</span>
+						<h3 class="ea-case-row__title">Lanzamiento de Producto & Streaming</h3>
+						<p class="ea-case-row__desc">Experiencia multicanal que combinó presencia VIP en vivo con transmisión HD interactiva en simultáneo.</p>
+					</div>
+					<div class="ea-case-row__stats">
+						<div class="ea-case-stat">
+							<span class="ea-case-stat__val">+25,000</span>
+							<span class="ea-case-stat__lbl">Interacciones</span>
+						</div>
+						<div class="ea-case-stat">
+							<span class="ea-case-stat__val">8,200</span>
+							<span class="ea-case-stat__lbl">Leads Capturados</span>
+						</div>
+						<div class="ea-case-stat">
+							<span class="ea-case-stat__val">+40%</span>
+							<span class="ea-case-stat__lbl">Conversión</span>
+						</div>
+					</div>
+					<div class="ea-case-row__go" aria-hidden="true">
+						<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+					</div>
+				</article>
+
+			</div>
+
+			<!-- Bottom Global Metrics Summary Bar -->
+			<div class="ea-cases-footer-bar" data-reveal="up">
+				<div class="ea-cases-footer-item">
+					<div class="ea-cases-footer-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
+					<span>Alcance e Impresiones Masivas</span>
+				</div>
+				<div class="ea-cases-footer-item">
+					<div class="ea-cases-footer-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+					<span>Interacción en Tiempo Real</span>
+				</div>
+				<div class="ea-cases-footer-item">
+					<div class="ea-cases-footer-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="5.5"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg></div>
+					<span>Generación de Leads Cualificados</span>
+				</div>
+				<div class="ea-cases-footer-item">
+					<div class="ea-cases-footer-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
+					<span>Retorno de Inversión (ROI) Medible</span>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<!-- ==========================================
+	     5. CONTÁCTANOS / TRABAJEMOS JUNTOS
+	     ========================================== -->
+	<section class="bc-cta" id="contacto">
+		<div class="bc-cta__container" data-reveal="up">
+			<h2 class="bc-cta__title">Trabajemos juntos</h2>
+			<p class="bc-cta__desc">
+				Cada evento es una oportunidad para hacer que una marca suceda en el mundo real. ¿Tienes un próximo evento, lanzamiento o activación? Conversemos y hagamos que tu audiencia sea parte de la experiencia.
+			</p>
+			<a href="#contacto" class="bc-cta__btn open-contact-modal" data-service="Eventos y Activaciones">
+				<span>Contactar ahora</span>
+				<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+			</a>
+		</div>
+	</section>
+
+</main>
+
+<?php
+get_footer();

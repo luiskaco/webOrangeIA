@@ -148,7 +148,7 @@ $theme_uri = get_template_directory_uri();
 						<div class="ap-mosaic-card ap-mosaic-card--dark">
 							<span class="ap-mosaic-card__tag">Opinión Pública</span>
 							<div class="ap-mosaic-card__icon">
-								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#29ABE2" stroke-width="2"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path></svg>
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path></svg>
 							</div>
 							<h4 class="ap-mosaic-card__title">Medios & Líderes</h4>
 							<p class="ap-mosaic-card__desc">Posicionamiento y comunicación gubernamental transparente en Perú.</p>
@@ -494,12 +494,14 @@ $theme_uri = get_template_directory_uri();
 	<!-- ==========================================
 	     5. BANNER CTA FINAL
 	     ========================================== -->
-	<section class="ap-cta" id="contacto">
-		<div class="ap-cta__container" data-reveal="up">
-			<span class="ap-cta__tag">Asuntos Públicos y Comunicación Institucional</span>
-			<h2 class="ap-cta__title">Trabajemos juntos</h2>
-			<p class="ap-cta__desc">¿Listo para anticipar escenarios regulatorios y fortalecer el <strong>relacionamiento con stakeholders</strong>? Conversemos sobre tu próximo proyecto en Perú.</p>
-			<a href="#contacto" class="ap-cta__btn open-contact-modal" data-service="Asuntos Públicos y Relaciones Institucionales">Agendar conversación</a>
+	<section class="bc-cta" id="contacto">
+		<div class="bc-cta__container" data-reveal="up">
+			<h2 class="bc-cta__title">Trabajemos juntos</h2>
+			<p class="bc-cta__desc">¿Listo para anticipar escenarios regulatorios y fortalecer el <strong>relacionamiento con stakeholders</strong>? Conversemos sobre tu próximo proyecto en Perú.</p>
+			<a href="#contacto" class="bc-cta__btn open-contact-modal" data-service="Asuntos Públicos y Relaciones Institucionales">
+				<span>Contactar ahora</span>
+				<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+			</a>
 		</div>
 	</section>
 

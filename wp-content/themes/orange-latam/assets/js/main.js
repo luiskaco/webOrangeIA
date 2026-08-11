@@ -208,7 +208,10 @@ document.addEventListener( 'DOMContentLoaded', () => {
 				if ( detailLabel ) detailLabel.textContent = `${num} - SERVICIO`;
 				if ( detailTitle ) detailTitle.textContent = name.toUpperCase();
 				if ( detailDesc ) detailDesc.textContent = desc;
-				if ( detailLink ) detailLink.href = link ? link : detailLink.getAttribute( 'data-default-href' );
+				if ( detailLink ) {
+					const targetUrl = ( link && link.trim() !== '' ) ? link : detailLink.getAttribute( 'data-default-href' );
+					detailLink.setAttribute( 'href', targetUrl );
+				}
 
 				if ( detailImg && img ) {
 					detailImg.style.transition = 'opacity 0.25s ease-in-out';
@@ -224,12 +227,12 @@ document.addEventListener( 'DOMContentLoaded', () => {
 
 		// Interactive Sensible Services Carousel
 		const sensData = [
-			{ name: 'GESTIÓN DE CRISIS Y PROBLEMAS', desc: 'El valor de marca es un activo muy importante para las empresas y protegerlo del impacto de crisis y problemas que impactan en la reputación es una de las especialidades de Orange Latam. Nuestro equipo de la unidad C&P se encuentra altamente capacitado para identificar, prevenir, gestionar y mitigar crisis y problemas, aplicando metodologías innovadoras, ágiles y eficaces.' },
-			{ name: 'GESTIÓN DE ACCESO', desc: 'Desbloqueamos barreras para que la sociedad acceda a avances médico-científicos de manera ética, oportuna y profesional, trabajando de la mano con reguladores y actores clave del sector salud.' },
-			{ name: 'COMUNICACIÓN POLÍTICA', desc: 'Estrategias de comunicación para candidatos e instituciones que generan legitimidad, confianza real y compromiso ciudadano en contextos de alta exposición pública.' },
-			{ name: 'ASUNTOS PÚBLICOS', desc: 'Relaciones estratégicas con administraciones y reguladores para anticipar cambios jurídicos y gestionar riesgos reputacionales antes de que escalen.' },
-			{ name: 'RELACIONAMIENTO CON STAKEHOLDERS', desc: 'Mapping y planes de relacionamiento con comunidades de alta influencia para garantizar operatividad y sostenibilidad del negocio en el largo plazo.' },
-			{ name: 'COMUNICACIÓN PARA ENTIDADES DEL ESTADO', desc: 'Estrategias para que instituciones públicas construyan confianza, respeto y credibilidad sólida ante la ciudadanía.' }
+			{ name: 'GESTIÓN DE CRISIS Y PROBLEMAS', desc: 'El valor de marca es un activo muy importante para las empresas y protegerlo del impacto de crisis y problemas que impactan en la reputación es una de las especialidades de Orange Latam. Nuestro equipo de la unidad C&P se encuentra altamente capacitado para identificar, prevenir, gestionar y mitigar crisis y problemas, aplicando metodologías innovadoras, ágiles y eficaces.', link: '/pr-gestion-reputacion/#gestion-de-crisis' },
+			{ name: 'GESTIÓN DE ACCESO', desc: 'Desbloqueamos barreras para que la sociedad acceda a avances médico-científicos de manera ética, oportuna y profesional, trabajando de la mano con reguladores y actores clave del sector salud.', link: '/gestion-de-acceso/' },
+			{ name: 'COMUNICACIÓN POLÍTICA', desc: 'Estrategias de comunicación para candidatos e instituciones que generan legitimidad, confianza real y compromiso ciudadano en contextos de alta exposición pública.', link: '/asuntos-publicos/#comunicacion-politica' },
+			{ name: 'ASUNTOS PÚBLICOS', desc: 'Relaciones estratégicas con administraciones y reguladores para anticipar cambios jurídicos y gestionar riesgos reputacionales antes de que escalen.', link: '/asuntos-publicos/' },
+			{ name: 'RELACIONAMIENTO CON STAKEHOLDERS', desc: 'Mapping y planes de relacionamiento con comunidades de alta influencia para garantizar operatividad y sostenibilidad del negocio en el largo plazo.', link: '/asuntos-publicos/#stakeholders' },
+			{ name: 'COMUNICACIÓN PARA ENTIDADES DEL ESTADO', desc: 'Estrategias para que instituciones públicas construyan confianza, respeto y credibilidad sólida ante la ciudadanía.', link: '/asuntos-publicos/' }
 		];
 
 		let activeSensIdx = 0;
@@ -237,6 +240,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
 		const sensWatermark = document.querySelector( '.services-sens__watermark-text' );
 		const sensCardTitle = document.querySelector( '.services-sens__card-title' );
 		const sensCardDesc = document.querySelector( '.services-sens__card-desc' );
+		const sensCardLink = document.querySelector( '.services-sens__card-link' );
 		const sensDotsContainer = document.querySelector( '.services-sens__dots' );
 		const sensPrevBtn = document.querySelector( '.services-sens__arrow--prev' );
 		const sensNextBtn = document.querySelector( '.services-sens__arrow--next' );
@@ -254,6 +258,15 @@ document.addEventListener( 'DOMContentLoaded', () => {
 			if ( sensWatermark ) sensWatermark.textContent = data.name;
 			if ( sensCardTitle ) sensCardTitle.textContent = data.name;
 			if ( sensCardDesc ) sensCardDesc.textContent = data.desc;
+
+			if ( sensCardLink ) {
+				if ( data.link ) {
+					sensCardLink.href = data.link;
+					sensCardLink.style.display = '';
+				} else {
+					sensCardLink.style.display = 'none';
+				}
+			}
 
 			// Update Dots
 			const dots = document.querySelectorAll( '.services-sens__dot' );
@@ -1099,6 +1112,9 @@ document.addEventListener( 'DOMContentLoaded', () => {
 		const nodeElements = [];
 		const connectorElements = [];
 		let activeIndex = null;
+		let autoplayTimer = null;
+		let isUserHovering = false;
+		let autoIndex = 0;
 
 		const updateActiveState = ( index ) => {
 			activeIndex = index;
@@ -1144,6 +1160,33 @@ document.addEventListener( 'DOMContentLoaded', () => {
 			}
 		};
 
+		const startAutoplay = () => {
+			stopAutoplay();
+			autoplayTimer = setInterval( () => {
+				if ( isUserHovering ) return;
+				updateActiveState( autoIndex );
+				autoIndex = ( autoIndex + 1 ) % prServices.length;
+			}, 2500 );
+		};
+
+		const stopAutoplay = () => {
+			if ( autoplayTimer ) {
+				clearInterval( autoplayTimer );
+				autoplayTimer = null;
+			}
+		};
+
+		container.addEventListener( 'mouseenter', () => {
+			isUserHovering = true;
+			stopAutoplay();
+		} );
+
+		container.addEventListener( 'mouseleave', () => {
+			isUserHovering = false;
+			updateActiveState( null );
+			startAutoplay();
+		} );
+
 		if ( svgConnectors && svgNodes ) {
 			prServices.forEach( ( service, i ) => {
 				const angle = -Math.PI / 2 + i * ( ( 2 * Math.PI ) / prServices.length );
@@ -1185,18 +1228,44 @@ document.addEventListener( 'DOMContentLoaded', () => {
 				svgNodes.appendChild( g );
 				nodeElements.push( g );
 
-				g.addEventListener( 'mouseenter', () => updateActiveState( i ) );
-				g.addEventListener( 'mouseleave', () => updateActiveState( null ) );
-				g.addEventListener( 'click', () => updateActiveState( activeIndex === i ? null : i ) );
+				g.addEventListener( 'mouseenter', () => {
+					isUserHovering = true;
+					stopAutoplay();
+					updateActiveState( i );
+				} );
+				g.addEventListener( 'click', () => {
+					isUserHovering = true;
+					stopAutoplay();
+					autoIndex = ( i + 1 ) % prServices.length;
+					updateActiveState( i );
+				} );
 			} );
 		}
 
 		mobileRows.forEach( ( row ) => {
 			row.addEventListener( 'click', () => {
 				const idx = parseInt( row.getAttribute( 'data-node-index' ), 10 );
+				isUserHovering = true;
+				stopAutoplay();
+				autoIndex = ( idx + 1 ) % prServices.length;
 				updateActiveState( activeIndex === idx ? null : idx );
 			} );
 		} );
+
+		if ( 'IntersectionObserver' in window ) {
+			const observer = new IntersectionObserver( ( entries ) => {
+				entries.forEach( ( entry ) => {
+					if ( entry.isIntersecting ) {
+						startAutoplay();
+					} else {
+						stopAutoplay();
+					}
+				} );
+			}, { threshold: 0.15 } );
+			observer.observe( container );
+		} else {
+			startAutoplay();
+		}
 	};
 
 	const initPrFaqAccordion = () => {

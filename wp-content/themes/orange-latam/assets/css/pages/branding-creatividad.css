@@ -819,11 +819,11 @@ body[class*="branding-creatividad"] .header .header__burger-line {
 
 /* Callout Banner */
 .bc-callout-banner {
-	background: linear-gradient(135deg, #091F34 0%, #0E3657 100%);
+	background: #F1F5F9;
 	border-radius: 28px;
 	padding: 40px 32px;
-	color: #FFFFFF;
-	box-shadow: 0 20px 40px rgba(9, 31, 52, 0.25);
+	color: #091F34;
+	box-shadow: 0 12px 30px rgba(9, 31, 52, 0.06);
 }
 
 @media (min-width: 768px) {
@@ -849,8 +849,8 @@ body[class*="branding-creatividad"] .header .header__burger-line {
 	width: 60px;
 	height: 60px;
 	border-radius: 18px;
-	background: #70B5E3;
-	color: #061929;
+	background: #EE894F;
+	color: #FFFFFF;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -862,13 +862,13 @@ body[class*="branding-creatividad"] .header .header__burger-line {
 	font-size: 1.6rem;
 	font-weight: 700;
 	margin-bottom: 12px;
-	color: #FFFFFF;
+	color: #091F34;
 }
 
 .bc-callout-banner__text p {
 	font-size: 1rem;
 	line-height: 1.7;
-	color: rgba(255, 255, 255, 0.85);
+	color: #64748B;
 }
 
 /* --------------------------------------------------------------------------
@@ -1537,6 +1537,7 @@ body[class*="branding-creatividad"] .header .header__burger-line {
 	display: grid;
 	grid-template-columns: 1fr;
 	gap: 24px;
+	align-items: stretch;
 }
 
 @media (min-width: 768px) {
@@ -1552,6 +1553,8 @@ body[class*="branding-creatividad"] .header .header__burger-line {
 }
 
 .bc-deliv-card {
+	height: 100%;
+	min-height: 280px;
 	background: #FFFFFF;
 	border: 1px solid #E2ECEC;
 	border-radius: 20px;
@@ -1559,23 +1562,15 @@ body[class*="branding-creatividad"] .header .header__burger-line {
 	display: flex;
 	flex-direction: column;
 	position: relative;
-	transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+	box-sizing: border-box;
+	transition: background-color 0.35s ease, border-color 0.35s ease, transform 0.35s ease, box-shadow 0.35s ease;
 }
 
 .bc-deliv-card:hover {
-	transform: translateY(-4px);
-	box-shadow: 0 16px 35px rgba(9, 31, 52, 0.08);
-	border-color: #70B5E3;
-}
-
-.bc-deliv-card--highlight {
-	background: linear-gradient(135deg, #091F34 0%, #0D304D 100%);
-	color: #FFFFFF;
-	border-color: #091F34;
-}
-
-.bc-deliv-card--highlight:hover {
-	border-color: #70B5E3;
+	background: #091F34 !important;
+	border-color: #091F34 !important;
+	transform: translateY(-6px);
+	box-shadow: 0 20px 40px rgba(9, 31, 52, 0.25);
 }
 
 .bc-deliv-card__icon {
@@ -1588,12 +1583,13 @@ body[class*="branding-creatividad"] .header .header__burger-line {
 	font-weight: 800;
 	text-transform: uppercase;
 	letter-spacing: 0.08em;
-	color: #70B5E3;
+	color: #EE894F;
 	margin-bottom: 8px;
+	transition: color 0.3s ease;
 }
 
-.bc-deliv-card--highlight .bc-deliv-card__badge {
-	color: #EE894F;
+.bc-deliv-card:hover .bc-deliv-card__badge {
+	color: #70B5E3 !important;
 }
 
 .bc-deliv-card__title {
@@ -1603,10 +1599,11 @@ body[class*="branding-creatividad"] .header .header__burger-line {
 	color: #091F34;
 	line-height: 1.25;
 	margin-bottom: 10px;
+	transition: color 0.3s ease;
 }
 
-.bc-deliv-card--highlight .bc-deliv-card__title {
-	color: #FFFFFF;
+.bc-deliv-card:hover .bc-deliv-card__title {
+	color: #FFFFFF !important;
 }
 
 .bc-deliv-card__desc {
@@ -1614,10 +1611,11 @@ body[class*="branding-creatividad"] .header .header__burger-line {
 	color: #64748B;
 	line-height: 1.55;
 	flex-grow: 1;
+	transition: color 0.3s ease;
 }
 
-.bc-deliv-card--highlight .bc-deliv-card__desc {
-	color: rgba(255, 255, 255, 0.8);
+.bc-deliv-card:hover .bc-deliv-card__desc {
+	color: rgba(255, 255, 255, 0.85) !important;
 }
 
 /* --------------------------------------------------------------------------

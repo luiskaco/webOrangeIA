@@ -336,11 +336,11 @@ body[class*="asuntos-publicos"] .header .header__burger-line,
 .ap-mosaic-card--dark {
 	background: #17130F;
 	color: #FFFFFF;
-	border-color: #29ABE2;
+	border-color: #332b23;
 }
 
 .ap-mosaic-card--dark .ap-mosaic-card__tag {
-	color: #29ABE2;
+	color: #ee894f;
 }
 
 .ap-mosaic-card--dark .ap-mosaic-card__title {
@@ -354,29 +354,30 @@ body[class*="asuntos-publicos"] .header .header__burger-line,
 .ap-mosaic-card--dark .ap-mosaic-card__icon {
 	background: #231e18;
 	border-color: #332b23;
+	color: #ee894f;
 }
 
 .ap-mosaic-card--dark:hover {
 	background: #231e18;
-	box-shadow: 0 20px 40px rgba(41, 171, 226, 0.25);
-	border-color: #29ABE2;
+	box-shadow: 0 20px 40px rgba(238, 137, 79, 0.25);
+	border-color: #ee894f;
 }
 
 .ap-mosaic-card--cyan {
-	background: #F0F8FC;
-	border-color: #CDE8F5;
+	background: #F8F3E7;
+	border-color: #E5D9BE;
 }
 
 .ap-mosaic-card--cyan .ap-mosaic-card__tag {
-	color: #29ABE2;
+	color: #ee894f;
 }
 
 .ap-mosaic-card--cyan .ap-mosaic-card__icon {
-	color: #29ABE2;
+	color: #ee894f;
 }
 
 .ap-mosaic-card--cyan:hover {
-	border-color: #29ABE2;
+	border-color: #ee894f;
 }
 
 .ap-mosaic-card--orange {
