@@ -2,6 +2,19 @@
 
 ## [Unreleased]
 ### Añadido
+- **Página Branding y Creatividad (`page-branding-creatividad.php`)**:
+  - Creación de plantilla dedicada con paleta **Azul Océano (`#091F34`)** e iluminaciones en azul `#70B5E3`, sustituyendo tonos verdes/teal.
+  - Configuración exacta de etiquetas SEO (Title, Meta Description, H1, H2, anclas `#creatividad-direccion-arte`, `#entregables`, `#faq`) e inclusión de datos estructurados Schema.org (`FAQPage`).
+  - Rediseño de la grilla de Servicio Integral a 4 columnas proporcionales en desktop (tarjetas superiores e inferiores al 25% de ancho).
+  - Carrusel interactivo slider con navegación nativa y visor modal UX flotante (`#bc-case-modal`) para la inspección detallada de métricas, desafíos, soluciones y resultados de cada caso de éxito.
+  - Reestructuración de la sección final en 2 bloques independientes de alto nivel: **Entregables Tangibles en la Era de la IA** (grilla 3x2 con tarjetas de Design System, Vectorial Master, Manual de Prompts IA, Naming Legal Indecopi, Kit Omnicanal y Plataforma de Marca) y **Preguntas Frecuentes (FAQ)** en formato acordeón 100% texto colapsado por defecto.
+  - Creación y auto-asignación del menú `Menú Branding Orange` (theme location `branding`).
+  - Enlace dinámico de las filas 06 (*Creatividad y Dirección de Arte*) y 07 (*Branding*) de la portada (`index.php`) mediante `get_permalink(get_page_by_path('branding-creatividad'))`.
+- **Modal Flotante de Contacto Global (`#global-contact-modal`) & AJAXMailer**:
+  - Modal flotante con efecto *glassmorphism*, responsive e interactivo implementado en `footer.php` y estilizado en `base.css`, habilitado para todas las páginas internas.
+  - Captura dinámica del servicio de origen a partir del título de la página activa e interacción con botones `.open-contact-modal` y `#contacto`.
+  - Procesamiento AJAX seguro en `functions.php` (`wp_ajax_send_service_contact`) con verificación de nonce `orange_contact_nonce`, sanitización estricta de inputs y envío mediante `wp_mail()`.
+  - **Asuntos de correo dinámicos por página origen** (ej. `[Cotización Web] Branding y Creatividad — Juan Pérez`, `[Cotización Web] PR y Gestión de la Reputación — Maria Gómez`), facilitando el rastreo comercial inmediato de leads.
 - CSS separado en padre/hijo por página (ver ADR 3 en `07_DECISIONS.md`): `assets/css/base.css` (fonts, variables, animaciones reveal, header/nav, footer global — todas las páginas) + `assets/css/pages/{home,podcast,marketing-influencers,marketing-digital}.css` (exclusivo de cada página, encolado condicionalmente por `is_front_page()` / `get_page_template()` en `functions.php`). `assets/css/style.css` quedó reducido a fallback genérico (~50 líneas, solo "Post Detail - Share Article") para `single.php`/`home.php` (blog). Helper `orange_latam_enqueue_versioned_style()` centraliza el cache-busting por `filemtime()`.
 - Nueva plantilla dedicada `page-podcast.php` para la página "Orange Studio Podcast" (`/podcast/`), maquetada fielmente a partir de la referencia de diseño `landing.png` y los 11 assets visuales cargados desde `postcash`: hero con video de YouTube embebido (`xkt_vSw_FK8`), grilla de 4 pilares, split block de entregables técnicos, carrusel interactivo de 3 escenarios (The Podcast Loft, Urban Corner, Estudio Noir) y formulario de reservación de sesión a 2 columnas.
 - Rediseño responsive móvil completo de la Home: cuadrícula 2x2 fluida para la barra de estadísticas (`.stats`), layout de 1 sola columna para la sección interactiva de Servicios (`.services-corp`), paddings laterales optimizados (`20px`), texto de descripción alineado a la izquierda sin espacios gigantes y grids de Voz de Expertos y Formulario adaptativos.
