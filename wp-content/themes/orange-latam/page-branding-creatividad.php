@@ -636,32 +636,13 @@ $theme_uri = get_template_directory_uri();
 				
 				<div class="bc-faq__list">
 					
-					<details class="bc-faq__item" open>
+					<details class="bc-faq__item">
 						<summary class="bc-faq__question">
 							<span>¿Cómo se integra la Inteligencia Artificial (IA) en el proceso de creación y estrategia de marca?</span>
 							<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
 						</summary>
 						<div class="bc-faq__answer">
-							<p>La IA acelera la investigación de mercado y el análisis competitivo. Combinamos modelos IA con dirección de arte humana para crear marcas precisas y ágiles.</p>
-							
-							<!-- Visual Example Box -->
-							<div class="bc-faq__example-box">
-								<div class="bc-faq__example-badge">Ejemplo de Metodología Hybrid-AI™</div>
-								<div class="bc-faq__example-grid">
-									<div class="bc-faq__example-chip">
-										<strong>1. Exploración IA</strong>
-										<span>Mapeo de +500 referencias en minutos</span>
-									</div>
-									<div class="bc-faq__example-chip bc-faq__example-chip--active">
-										<strong>2. Filtro Estratégico</strong>
-										<span>Validación de negocio y viabilidad</span>
-									</div>
-									<div class="bc-faq__example-chip">
-										<strong>3. Dirección de Arte</strong>
-										<span>Pulido y vectorización 100% humana</span>
-									</div>
-								</div>
-							</div>
+							<p>La IA acelera la fase de investigación de mercado y análisis competitivo. En Orange Latam combinamos herramientas de exploración de tendencias impulsadas por IA con dirección de arte y estrategia humana, logrando marcas ágiles, precisas y relevantes.</p>
 						</div>
 					</details>
 
@@ -671,22 +652,7 @@ $theme_uri = get_template_directory_uri();
 							<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
 						</summary>
 						<div class="bc-faq__answer">
-							<p>La IA genera imágenes inmediatas, pero no estrategia ni diferenciación real. El riesgo es caer en la homogeneidad visual ("clones de IA"). Una agencia construye narrativa, valor y activos de marca protegibles.</p>
-							
-							<!-- Comparison Example Box -->
-							<div class="bc-faq__example-box">
-								<div class="bc-faq__example-badge">Diferencia Real de Impacto</div>
-								<div class="bc-faq__compare">
-									<div class="bc-faq__compare-item bc-faq__compare-item--negative">
-										<strong>Logo de IA Genérica</strong>
-										<span>Sin estrategia, sin derechos de autor, idéntico a competidores.</span>
-									</div>
-									<div class="bc-faq__compare-item bc-faq__compare-item--positive">
-										<strong>Plataforma de Marca Orange™</strong>
-										<span>Estrategia de posicionamiento, activos vectoriales únicos e inscripción legal.</span>
-									</div>
-								</div>
-							</div>
+							<p>La IA genera imágenes inmediatas, pero no construye estrategia ni diferenciación real. El riesgo actual es caer en la homogeneidad visual ("clones algorítmicos"). Una agencia define el propósito, la propuesta de valor única, los activos protegibles y el lenguaje visual que aseguran que tu marca no se confunda en el mercado.</p>
 						</div>
 					</details>
 
@@ -696,13 +662,7 @@ $theme_uri = get_template_directory_uri();
 							<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
 						</summary>
 						<div class="bc-faq__answer">
-							<p>Desarrollamos Brandbooks dinámicos con reglas de Prompt Engineering de marca. Entregamos tokens de estilo para que tus equipos o sistemas automatizados generen piezas respetando la estética de marca.</p>
-							
-							<!-- Prompt Engineering Example Box -->
-							<div class="bc-faq__prompt-box">
-								<span class="bc-faq__prompt-label">Ejemplo de Token de Marca para IA incluido en tu Brandbook:</span>
-								<code>/prompt: [Subject] --style Brand-Orange-v4 --colors #091F34, #70B5E3, #EE894F --lighting Editorial Studio --no gradient-mesh, generic-stock</code>
-							</div>
+							<p>Desarrollamos Brandbooks dinámicos que incluyen guías de Prompt Engineering de marca. Entregamos las instrucciones estéticas, paletas, tipografías y reglas de estilo para que tus equipos internos o sistemas automatizados generen piezas respetando la coherencia gráfica original.</p>
 						</div>
 					</details>
 
@@ -712,7 +672,7 @@ $theme_uri = get_template_directory_uri();
 							<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
 						</summary>
 						<div class="bc-faq__answer">
-							<p>Garantizamos que todos los activos finales entregados sean 100% originales, pulidos por diseñadores sénior y verificados legalmente para su registro exclusivo en Indecopi sin contingencias.</p>
+							<p>Garantizamos que todos los activos finales entregados sean 100% originales, pulidos por diseñadores sénior y verificados legalmente para su registro exclusivo en Indecopi sin contingencias de derechos de autor.</p>
 						</div>
 					</details>
 
@@ -722,7 +682,7 @@ $theme_uri = get_template_directory_uri();
 							<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
 						</summary>
 						<div class="bc-faq__answer">
-							<p>Absolutamente. Ayudamos a marcas tradicionales a modernizar su posicionamiento e identidad visual para que compitan con ventaja en ecosistemas digitales e impulsados por IA.</p>
+							<p>Absolutamente. Ayudamos a marcas tradicionales a modernizar su posicionamiento, identidad visual y arquitectura de comunicación para que compitan con ventaja en ecosistemas digitales e impulsados por IA, preservando el valor histórico que construyeron.</p>
 						</div>
 					</details>
 
