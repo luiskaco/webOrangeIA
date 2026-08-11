@@ -1289,4 +1289,114 @@ document.addEventListener( 'DOMContentLoaded', () => {
 	initPrNodeDiagram();
 	initPrFaqAccordion();
 	initAsuntosStakeholderNetwork();
+	initGlobalContactModal();
 } );
+
+/* --------------------------------------------------------------------------
+   GLOBAL SERVICE CONTACT MODAL (AJAX & DYNAMIC SUBJECT)
+   -------------------------------------------------------------------------- */
+const initGlobalContactModal = () => {
+	const modal = document.getElementById( 'global-contact-modal' );
+	if ( ! modal ) return;
+
+	const form = document.getElementById( 'g-modal-form' );
+	const serviceTag = document.getElementById( 'g-modal-service-tag' );
+	const serviceOriginInput = document.getElementById( 'g-modal-service-origin' );
+	const responseContainer = document.getElementById( 'g-modal-response' );
+	const submitBtn = document.getElementById( 'g-modal-submit-btn' );
+
+	const openModal = ( serviceName ) => {
+		if ( serviceName ) {
+			if ( serviceTag ) serviceTag.textContent = `Cotización: ${serviceName}`;
+			if ( serviceOriginInput ) serviceOriginInput.value = serviceName;
+		}
+		modal.classList.add( 'is-open' );
+		modal.setAttribute( 'aria-hidden', 'false' );
+		document.body.style.overflow = 'hidden';
+	};
+
+	const closeModal = () => {
+		modal.classList.remove( 'is-open' );
+		modal.setAttribute( 'aria-hidden', 'true' );
+		document.body.style.overflow = '';
+		if ( responseContainer ) {
+			responseContainer.className = 'g-modal__response';
+			responseContainer.textContent = '';
+		}
+	};
+
+	// Delegate open click on buttons with class .open-contact-modal or href="#contacto"
+	document.addEventListener( 'click', ( e ) => {
+		const trigger = e.target.closest( '.open-contact-modal, a[href="#contacto"]' );
+		if ( trigger ) {
+			e.preventDefault();
+			const customService = trigger.getAttribute( 'data-service' ) || document.title.split( '|' )[0].trim();
+			openModal( customService );
+		}
+	} );
+
+	// Close handlers
+	modal.querySelectorAll( '[data-close-modal]' ).forEach( ( btn ) => {
+		btn.addEventListener( 'click', closeModal );
+	} );
+
+	document.addEventListener( 'keydown', ( e ) => {
+		if ( e.key === 'Escape' && modal.classList.contains( 'is-open' ) ) {
+			closeModal();
+		}
+	} );
+
+	// AJAX Form Submission
+	if ( form ) {
+		form.addEventListener( 'submit', ( e ) => {
+			e.preventDefault();
+			if ( ! window.orange_ajax || ! window.orange_ajax.ajax_url ) {
+				if ( responseContainer ) {
+					responseContainer.className = 'g-modal__response g-modal__response--error';
+					responseContainer.textContent = 'Error de configuración AJAX.';
+				}
+				return;
+			}
+
+			if ( submitBtn ) {
+				submitBtn.disabled = true;
+				submitBtn.classList.add( 'is-loading' );
+			}
+
+			const formData = new FormData( form );
+
+			fetch( window.orange_ajax.ajax_url, {
+				method: 'POST',
+				body: formData,
+			} )
+				.then( ( res ) => res.json() )
+				.then( ( data ) => {
+					if ( submitBtn ) {
+						submitBtn.disabled = false;
+						submitBtn.classList.remove( 'is-loading' );
+					}
+					if ( responseContainer ) {
+						if ( data.success ) {
+							responseContainer.className = 'g-modal__response g-modal__response--success';
+							responseContainer.textContent = data.data.message || '¡Mensaje enviado con éxito!';
+							form.reset();
+							setTimeout( closeModal, 3500 );
+						} else {
+							responseContainer.className = 'g-modal__response g-modal__response--error';
+							responseContainer.textContent = data.data.message || 'Error al enviar el formulario.';
+						}
+					}
+				} )
+				.catch( () => {
+					if ( submitBtn ) {
+						submitBtn.disabled = false;
+						submitBtn.classList.remove( 'is-loading' );
+					}
+					if ( responseContainer ) {
+						responseContainer.className = 'g-modal__response g-modal__response--error';
+						responseContainer.textContent = 'Ocurrió un error inesperado al conectar con el servidor.';
+					}
+				} );
+		} );
+	}
+};

@@ -834,3 +834,224 @@ div.wpcf7-response-output,
 	}
 }
 
+/* ==========================================================================
+   GLOBAL CONTACT MODAL POPUP STYLES
+   ========================================================================== */
+.g-modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 99999;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+	box-sizing: border-box;
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+	transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.35s ease;
+}
+
+.g-modal.is-open {
+	opacity: 1;
+	visibility: visible;
+	pointer-events: auto;
+}
+
+.g-modal__overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(9, 31, 52, 0.75);
+	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(8px);
+}
+
+.g-modal__dialog {
+	position: relative;
+	width: 100%;
+	max-width: 640px;
+	max-height: 90vh;
+	overflow-y: auto;
+	background: #FFFFFF;
+	border-radius: 28px;
+	padding: 40px;
+	box-shadow: 0 30px 70px rgba(9, 31, 52, 0.4);
+	transform: translateY(24px) scale(0.96);
+	transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+	z-index: 2;
+}
+
+.g-modal.is-open .g-modal__dialog {
+	transform: translateY(0) scale(1);
+}
+
+.g-modal__close {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	background: #F4F8FA;
+	border: 1px solid #E2ECEC;
+	color: #091F34;
+	font-size: 24px;
+	line-height: 1;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.25s ease;
+}
+
+.g-modal__close:hover {
+	background: #091F34;
+	color: #FFFFFF;
+	transform: rotate(90deg);
+}
+
+.g-modal__header {
+	margin-bottom: 24px;
+}
+
+.g-modal__tag {
+	display: inline-block;
+	font-size: 11px;
+	font-weight: 800;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	color: #EE894F;
+	background: #FFF5F0;
+	padding: 4px 12px;
+	border-radius: 99px;
+	margin-bottom: 12px;
+}
+
+.g-modal__title {
+	font-family: var(--font-display);
+	font-size: clamp(1.6rem, 2.5vw, 2.1rem);
+	font-weight: 800;
+	color: #091F34;
+	line-height: 1.2;
+	margin-bottom: 8px;
+}
+
+.g-modal__subtitle {
+	font-size: 0.95rem;
+	color: #64748B;
+	line-height: 1.5;
+}
+
+.g-modal__form {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	background: transparent !important;
+	border: none !important;
+	padding: 0 !important;
+	box-shadow: none !important;
+}
+
+.g-modal__field-group {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 16px;
+}
+
+@media (min-width: 576px) {
+	.g-modal__field-group {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+.g-modal__field {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 0 !important;
+}
+
+.g-modal__field label {
+	font-size: 12.5px !important;
+	font-weight: 700 !important;
+	color: #091F34 !important;
+	margin-bottom: 6px !important;
+}
+
+.g-modal__field input,
+.g-modal__field textarea {
+	width: 100% !important;
+	background: #F8FAFC !important;
+	border: 1px solid #E2E8F0 !important;
+	border-radius: 12px !important;
+	padding: 12px 16px !important;
+	font-size: 14.5px !important;
+	color: #091F34 !important;
+	transition: all 0.25s ease !important;
+	box-sizing: border-box !important;
+}
+
+.g-modal__field input:focus,
+.g-modal__field textarea:focus {
+	background: #FFFFFF !important;
+	border-color: #70B5E3 !important;
+	box-shadow: 0 0 0 3px rgba(112, 181, 227, 0.2) !important;
+}
+
+.g-modal__actions {
+	margin-top: 10px;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.g-modal__btn-submit {
+	display: inline-flex !important;
+	align-items: center !important;
+	gap: 10px !important;
+	background: #EE894F !important;
+	color: #FFFFFF !important;
+	border: none !important;
+	padding: 14px 32px !important;
+	border-radius: 99px !important;
+	font-size: 15px !important;
+	font-weight: 700 !important;
+	cursor: pointer !important;
+	box-shadow: 0 10px 25px rgba(238, 137, 79, 0.35) !important;
+	transition: all 0.25s ease !important;
+	float: none !important;
+}
+
+.g-modal__btn-submit:hover {
+	background: #e0773c !important;
+	transform: translateY(-2px) !important;
+	box-shadow: 0 14px 30px rgba(238, 137, 79, 0.45) !important;
+}
+
+.g-modal__response {
+	display: none;
+	padding: 14px 18px;
+	border-radius: 12px;
+	font-size: 13.5px;
+	font-weight: 600;
+	margin-top: 10px;
+}
+
+.g-modal__response--success {
+	display: block;
+	background: #F0FDF4;
+	border: 1px solid #BBF7D0;
+	color: #166534;
+}
+
+.g-modal__response--error {
+	display: block;
+	background: #FFF1F2;
+	border: 1px solid #FECDD3;
+	color: #9F1239;
+}
+

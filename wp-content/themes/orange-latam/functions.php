@@ -103,6 +103,11 @@ function orange_latam_enqueue_assets() {
 	if ( is_front_page() ) {
 		wp_localize_script( 'orange-latam-main-js', 'orangeLatamExperts', orange_latam_get_expert_posts() );
 	}
+
+	// Pass AJAX URL to main.js for service contact form
+	wp_localize_script( 'orange-latam-main-js', 'orange_ajax', array(
+		'ajax_url' => admin_url( 'admin-ajax.php' ),
+	) );
 }
 add_action( 'wp_enqueue_scripts', 'orange_latam_enqueue_assets' );
 
@@ -131,6 +136,65 @@ function orange_latam_get_expert_posts( $count = 6 ) {
 	}
 
 	return $posts;
+}
+
+// ==========================================
+// 3c. AJAX SERVICE CONTACT FORM HANDLER
+// ==========================================
+add_action( 'wp_ajax_send_service_contact', 'orange_send_service_contact_handler' );
+add_action( 'wp_ajax_nopriv_send_service_contact', 'orange_send_service_contact_handler' );
+
+function orange_send_service_contact_handler() {
+	// Verify Nonce
+	if ( ! isset( $_POST['contact_security'] ) || ! wp_verify_nonce( $_POST['contact_security'], 'orange_contact_nonce' ) ) {
+		wp_send_json_error( array( 'message' => 'Seguridad inválida. Por favor recarga la página e intenta de nuevo.' ) );
+	}
+
+	$name           = isset( $_POST['contact_name'] ) ? sanitize_text_field( $_POST['contact_name'] ) : '';
+	$email          = isset( $_POST['contact_email'] ) ? sanitize_email( $_POST['contact_email'] ) : '';
+	$phone          = isset( $_POST['contact_phone'] ) ? sanitize_text_field( $_POST['contact_phone'] ) : '';
+	$company        = isset( $_POST['contact_company'] ) ? sanitize_text_field( $_POST['contact_company'] ) : '';
+	$message        = isset( $_POST['contact_message'] ) ? sanitize_textarea_field( $_POST['contact_message'] ) : '';
+	$service_origin = isset( $_POST['service_origin'] ) ? sanitize_text_field( $_POST['service_origin'] ) : 'Contacto General';
+	$page_url       = isset( $_POST['page_url'] ) ? esc_url_raw( $_POST['page_url'] ) : '';
+
+	if ( empty( $name ) || empty( $email ) || empty( $message ) ) {
+		wp_send_json_error( array( 'message' => 'Por favor completa todos los campos requeridos.' ) );
+	}
+
+	if ( ! is_email( $email ) ) {
+		wp_send_json_error( array( 'message' => 'El correo electrónico ingresado no es válido.' ) );
+	}
+
+	$to      = get_option( 'admin_email', 'negocios@orange-la.com' );
+	$subject = sprintf( '[Cotización Web] %s — %s', $service_origin, $name );
+
+	$body  = "Has recibido una nueva solicitud de contacto desde la web de Orange Latam:\n\n";
+	$body .= "--------------------------------------------------\n";
+	$body .= "Servicio / Origen: " . $service_origin . "\n";
+	$body .= "Página URL: " . $page_url . "\n";
+	$body .= "--------------------------------------------------\n";
+	$body .= "Nombre: " . $name . "\n";
+	$body .= "Correo: " . $email . "\n";
+	$body .= "Teléfono: " . $phone . "\n";
+	$body .= "Empresa: " . ( $company ? $company : 'No especificada' ) . "\n";
+	$body .= "--------------------------------------------------\n";
+	$body .= "Mensaje:\n" . $message . "\n";
+	$body .= "--------------------------------------------------\n";
+
+	$headers = array(
+		'Content-Type: text/plain; charset=UTF-8',
+		'From: Orange Latam Web <no-reply@orange-la.com>',
+		'Reply-To: ' . $name . ' <' . $email . '>',
+	);
+
+	$sent = wp_mail( $to, $subject, $body, $headers );
+
+	if ( $sent ) {
+		wp_send_json_success( array( 'message' => '¡Muchas gracias! Tu mensaje ha sido enviado con éxito. Te contactaremos a la brevedad.' ) );
+	} else {
+		wp_send_json_error( array( 'message' => 'Ocurrió un inconveniente al enviar el correo. Por favor escríbenos a negocios@orange-la.com' ) );
+	}
 }
 
 // ==========================================

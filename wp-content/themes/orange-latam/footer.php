@@ -60,6 +60,63 @@ if ( is_home() || is_singular( 'post' ) || is_page( 'marketing-de-influencers' )
 	</section>
 <?php endif; ?>
 
+<!-- GLOBAL SERVICE CONTACT MODAL -->
+<div id="global-contact-modal" class="g-modal" aria-hidden="true" role="dialog" aria-labelledby="g-modal-title">
+	<div class="g-modal__overlay" tabindex="-1" data-close-modal></div>
+	<div class="g-modal__dialog">
+		<button type="button" class="g-modal__close" aria-label="Cerrar modal" data-close-modal>&times;</button>
+		
+		<div class="g-modal__header">
+			<span class="g-modal__tag" id="g-modal-service-tag">Cotización de Servicio</span>
+			<h2 class="g-modal__title" id="g-modal-title">Trabajemos juntos en tu proyecto</h2>
+			<p class="g-modal__subtitle">Déjanos tus datos y un especialista senior de nuestro equipo se pondrá en contacto en menos de 24 horas.</p>
+		</div>
+
+		<form id="g-modal-form" class="g-modal__form" method="POST">
+			<?php wp_nonce_field( 'orange_contact_nonce', 'contact_security' ); ?>
+			<input type="hidden" name="action" value="send_service_contact">
+			<input type="hidden" name="service_origin" id="g-modal-service-origin" value="<?php echo esc_attr( is_singular() ? get_the_title() : 'Contacto General' ); ?>">
+			<input type="hidden" name="page_url" value="<?php echo esc_url( is_singular() ? get_permalink() : home_url( '/' ) ); ?>">
+
+			<div class="g-modal__field-group">
+				<div class="g-modal__field">
+					<label for="contact_name">Nombre y Apellido *</label>
+					<input type="text" id="contact_name" name="contact_name" placeholder="Ej. Carlos Mendoza" required>
+				</div>
+				<div class="g-modal__field">
+					<label for="contact_email">Correo Corporativo *</label>
+					<input type="email" id="contact_email" name="contact_email" placeholder="ejemplo@empresa.com" required>
+				</div>
+			</div>
+
+			<div class="g-modal__field-group">
+				<div class="g-modal__field">
+					<label for="contact_phone">Teléfono / WhatsApp *</label>
+					<input type="tel" id="contact_phone" name="contact_phone" placeholder="+51 987 654 321" required>
+				</div>
+				<div class="g-modal__field">
+					<label for="contact_company">Empresa / Organización</label>
+					<input type="text" id="contact_company" name="contact_company" placeholder="Nombre de tu empresa">
+				</div>
+			</div>
+
+			<div class="g-modal__field">
+				<label for="contact_message">¿En qué podemos ayudarte? *</label>
+				<textarea id="contact_message" name="contact_message" rows="4" placeholder="Describe brevemente tus objetivos, tiempos o necesidades del proyecto..." required></textarea>
+			</div>
+
+			<div class="g-modal__response" id="g-modal-response"></div>
+
+			<div class="g-modal__actions">
+				<button type="submit" class="g-modal__btn-submit" id="g-modal-submit-btn">
+					<span>Enviar Solicitud</span>
+					<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+				</button>
+			</div>
+		</form>
+	</div>
+</div>
+
 <!-- FOOTER -->
 <footer class="footer">
 	<span class="footer__text">Todos los Derechos Reservados <?php echo esc_html( date( 'Y' ) ); ?>© Orange Latam SAC</span>
