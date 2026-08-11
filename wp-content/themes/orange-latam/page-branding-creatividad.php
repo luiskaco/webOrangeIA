@@ -430,7 +430,8 @@ $theme_uri = get_template_directory_uri();
 					<!-- Case 1 -->
 					<article class="bc-case-card">
 						<div class="bc-case-card__image-box">
-							<div class="bc-case-card__placeholder bc-case-card__placeholder--1">
+							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/branding/naming.png" alt="KREO FINTECH - Rebranding & Naming" class="bc-case-card__cover-img" loading="lazy">
+							<div class="bc-case-card__image-overlay">
 								<span class="bc-case-card__tag">Rebranding & Naming</span>
 								<div class="bc-case-card__mockup-content">
 									<span class="bc-case-card__brand-title">KREO FINTECH</span>
@@ -459,7 +460,8 @@ $theme_uri = get_template_directory_uri();
 					<!-- Case 2 -->
 					<article class="bc-case-card">
 						<div class="bc-case-card__image-box">
-							<div class="bc-case-card__placeholder bc-case-card__placeholder--2">
+							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/branding/identity.png" alt="ORIX HEALTH - Identidad Visual & Packaging" class="bc-case-card__cover-img" loading="lazy">
+							<div class="bc-case-card__image-overlay">
 								<span class="bc-case-card__tag">Identidad Visual & Packaging</span>
 								<div class="bc-case-card__mockup-content">
 									<span class="bc-case-card__brand-title">ORIX HEALTH</span>
@@ -488,7 +490,8 @@ $theme_uri = get_template_directory_uri();
 					<!-- Case 3 -->
 					<article class="bc-case-card">
 						<div class="bc-case-card__image-box">
-							<div class="bc-case-card__placeholder bc-case-card__placeholder--3">
+							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/branding/architecture.png" alt="LUMEN REALTY - Estrategia & Dirección de Arte" class="bc-case-card__cover-img" loading="lazy">
+							<div class="bc-case-card__image-overlay">
 								<span class="bc-case-card__tag">Estrategia & Dirección de Arte</span>
 								<div class="bc-case-card__mockup-content">
 									<span class="bc-case-card__brand-title">LUMEN REALTY</span>
@@ -517,7 +520,8 @@ $theme_uri = get_template_directory_uri();
 					<!-- Case 4 -->
 					<article class="bc-case-card">
 						<div class="bc-case-card__image-box">
-							<div class="bc-case-card__placeholder bc-case-card__placeholder--4">
+							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/branding/creation.png" alt="NOVA BIOTECH - Naming & Plataforma de Marca" class="bc-case-card__cover-img" loading="lazy">
+							<div class="bc-case-card__image-overlay">
 								<span class="bc-case-card__tag">Naming & Plataforma de Marca</span>
 								<div class="bc-case-card__mockup-content">
 									<span class="bc-case-card__brand-title">NOVA BIOTECH</span>
@@ -548,8 +552,9 @@ $theme_uri = get_template_directory_uri();
 
 			<!-- Portfolio CTA button -->
 			<div class="bc-cases__action" data-reveal="up">
-				<a href="#contacto" class="bc-btn bc-btn--cases open-contact-modal">
-					<span>[Conoce nuestros casos y proyectos →]</span>
+				<a href="#contacto" class="bc-btn bc-btn--cases open-contact-modal" data-service="Branding y Creatividad">
+					<span>Conoce nuestros casos y proyectos</span>
+					<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
 				</a>
 			</div>
 		</div>
