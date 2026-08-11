@@ -98,7 +98,7 @@ $pr_img_uri = $theme_uri . '/assets/images/pr';
 				</p>
 
 				<div class="pr-hero__actions">
-					<a href="#contacto" class="pr-btn pr-btn--primary">Trabajemos juntos</a>
+					<a href="#contacto" class="pr-btn pr-btn--primary open-contact-modal" data-service="PR y Gestión de la Reputación">Trabajemos juntos</a>
 					<a href="#servicio-pr" class="pr-btn pr-btn--outline">Ver nuestro servicio</a>
 				</div>
 			</div>
@@ -499,9 +499,9 @@ $pr_img_uri = $theme_uri . '/assets/images/pr';
 
 			<dl class="pr-faq__accordion">
 				<!-- FAQ 1 -->
-				<div class="pr-faq__item js-pr-faq-item pr-faq__item--open">
+				<div class="pr-faq__item js-pr-faq-item">
 					<dt class="pr-faq__dt">
-						<button class="pr-faq__button js-pr-faq-toggle" aria-expanded="true">
+						<button class="pr-faq__button js-pr-faq-toggle" aria-expanded="false">
 							<span class="pr-faq__question">¿Cuánto cuesta contratar una agencia de relaciones públicas en Perú?</span>
 							<span class="pr-faq__icon-wrapper">
 								<svg width="12" height="12" viewBox="0 0 12 12" class="pr-faq__icon"><path d="M6 0v12M0 6h12" stroke="#29ABE2" stroke-width="1.6"/></svg>
@@ -565,7 +565,7 @@ $pr_img_uri = $theme_uri . '/assets/images/pr';
 		<div class="pr-cta__container" data-reveal="up">
 			<h2 class="pr-cta__title">Trabajemos juntos</h2>
 			<p class="pr-cta__desc">¿Listo para fortalecer la reputación de tu marca? Conversemos sobre tu próximo proyecto.</p>
-			<a href="mailto:negocios@orange-la.com" class="pr-cta__btn">Contáctanos</a>
+			<a href="#contacto" class="pr-cta__btn open-contact-modal" data-service="PR y Gestión de la Reputación">Contáctanos</a>
 		</div>
 	</section>
 

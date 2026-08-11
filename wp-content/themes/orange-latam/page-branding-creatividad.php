@@ -730,7 +730,7 @@ $theme_uri = get_template_directory_uri();
 			</div>
 
 			<div class="bc-modal__footer">
-				<a href="#contacto" class="bc-btn bc-btn--primary open-contact-modal" id="bc-modal-cta">
+				<a href="#contacto" class="bc-btn bc-btn--primary open-contact-modal" id="bc-modal-cta" data-service="Branding y Creatividad">
 					<span>Solicitar propuesta similar</span>
 					<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
 				</a>

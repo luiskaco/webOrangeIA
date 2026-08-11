@@ -91,6 +91,10 @@ $theme_uri = get_template_directory_uri();
 				<p class="ap-hero__lead">
 					Estrategias de <strong>asuntos públicos</strong> para anticipar riesgos regulatorios, fortalecer el <strong>relacionamiento con stakeholders</strong> y gestionar escenarios complejos en Perú.
 				</p>
+
+				<div class="ap-hero__actions" style="margin-top: 24px;">
+					<a href="#contacto" class="ap-btn ap-btn--primary open-contact-modal" data-service="Asuntos Públicos y Relaciones Institucionales">Hablar con un Especialista</a>
+				</div>
 			</div>
 
 			<div class="ap-hero__media" data-reveal="right">
@@ -495,7 +499,7 @@ $theme_uri = get_template_directory_uri();
 			<span class="ap-cta__tag">Asuntos Públicos y Comunicación Institucional</span>
 			<h2 class="ap-cta__title">Trabajemos juntos</h2>
 			<p class="ap-cta__desc">¿Listo para anticipar escenarios regulatorios y fortalecer el <strong>relacionamiento con stakeholders</strong>? Conversemos sobre tu próximo proyecto en Perú.</p>
-			<a href="mailto:negocios@orange-la.com" class="ap-cta__btn">Agendar conversación</a>
+			<a href="#contacto" class="ap-cta__btn open-contact-modal" data-service="Asuntos Públicos y Relaciones Institucionales">Agendar conversación</a>
 		</div>
 	</section>
 
