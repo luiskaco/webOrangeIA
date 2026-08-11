@@ -556,21 +556,84 @@ $theme_uri = get_template_directory_uri();
 	</section>
 
 	<!-- ==========================================
-	     6. FAQ ACCORDION SECTION
+	     6. ENTREGABLES REALES EN LA ERA DE LA IA
 	     ========================================== -->
-	<!-- ==========================================
-	     6. FAQ ACCORDION SECTION (CON EJEMPLOS REALES & ENTREGABLES)
-	     ========================================== -->
-	<section class="bc-faq">
+	<section class="bc-deliverables" id="entregables">
 		<div class="bc-container" data-reveal="up">
-			<div class="bc-faq__header">
-				<span class="bc-section-tag">Dudas Frecuentes & Entregables</span>
-				<h2 class="bc-faq__title">Preguntas frecuentes y ejemplos de entregables en la era de la IA</h2>
+			<div class="bc-deliverables__header">
+				<span class="bc-section-tag">Entregables & Tangibles</span>
+				<h2 class="bc-section-title">Lo que recibes al finalizar tu proyecto de Branding</h2>
+				<p class="bc-deliverables__sub">
+					Entregables claros, estructurados y preparados para operar en la era digital e IA con máxima calidad y coherencia.
+				</p>
 			</div>
 
-			<div class="bc-faq__layout">
+			<div class="bc-deliverables__grid">
 				
-				<!-- Accordion Column with Rich Examples -->
+				<!-- Item 1 -->
+				<div class="bc-deliv-card">
+					<div class="bc-deliv-card__icon">📘</div>
+					<div class="bc-deliv-card__badge">Design System</div>
+					<h3 class="bc-deliv-card__title">Brandbook Digital Interactivo</h3>
+					<p class="bc-deliv-card__desc">Manual de marca en PDF interactivo y formato Web con guías cromáticas, tipografías, retículas y reglas de uso.</p>
+				</div>
+
+				<!-- Item 2 -->
+				<div class="bc-deliv-card">
+					<div class="bc-deliv-card__icon">🎨</div>
+					<div class="bc-deliv-card__badge">Formatos Master</div>
+					<h3 class="bc-deliv-card__title">Paquete Vectorial Completo</h3>
+					<p class="bc-deliv-card__desc">Isotipos, logotipos primarios/secundarios y versiones de alto contraste en SVG, EPS, AI y PNG sin fondo.</p>
+				</div>
+
+				<!-- Item 3 -->
+				<div class="bc-deliv-card bc-deliv-card--highlight">
+					<div class="bc-deliv-card__icon">🤖</div>
+					<div class="bc-deliv-card__badge">Innovación IA</div>
+					<h3 class="bc-deliv-card__title">Manual de Prompts & IA de Marca</h3>
+					<p class="bc-deliv-card__desc">Tokens estéticos e instrucciones de Prompt Engineering para que tu equipo genere piezas alineadas en herramientas de IA.</p>
+				</div>
+
+				<!-- Item 4 -->
+				<div class="bc-deliv-card">
+					<div class="bc-deliv-card__icon">⚖️</div>
+					<div class="bc-deliv-card__badge">Protección Legal</div>
+					<h3 class="bc-deliv-card__title">Reporte de Viabilidad & Naming</h3>
+					<p class="bc-deliv-card__desc">Estudio de disponibilidad de marca, evaluación fonética y dossier preparado para inscripción exclusiva en Indecopi.</p>
+				</div>
+
+				<!-- Item 5 -->
+				<div class="bc-deliv-card">
+					<div class="bc-deliv-card__icon">📦</div>
+					<div class="bc-deliv-card__badge">Kit Omnicanal</div>
+					<h3 class="bc-deliv-card__title">Plantillas de Aplicación Real</h3>
+					<p class="bc-deliv-card__desc">Kits editables para presentaciones corporativas, redes sociales, firmas de correo, papelería y empaques 3D.</p>
+				</div>
+
+				<!-- Item 6 -->
+				<div class="bc-deliv-card">
+					<div class="bc-deliv-card__icon">📊</div>
+					<div class="bc-deliv-card__badge">Estrategia de Marca</div>
+					<h3 class="bc-deliv-card__title">Plataforma & Nivelación de Marca</h3>
+					<p class="bc-deliv-card__desc">Documento de arquitectura de marca, definición de propósito, tono de voz y territorios de comunicación.</p>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<!-- ==========================================
+	     7. PREGUNTAS FRECUENTES (FAQ ACCORDION DEDICADO)
+	     ========================================== -->
+	<section class="bc-faq" id="faq">
+		<div class="bc-container" data-reveal="up">
+			<div class="bc-faq__header">
+				<span class="bc-section-tag">Dudas Frecuentes</span>
+				<h2 class="bc-faq__title">Preguntas frecuentes sobre Branding en la era de la IA</h2>
+			</div>
+
+			<div class="bc-faq__wrapper">
+				
 				<div class="bc-faq__list">
 					
 					<details class="bc-faq__item" open>
@@ -663,58 +726,6 @@ $theme_uri = get_template_directory_uri();
 						</div>
 					</details>
 
-				</div>
-
-				<!-- Sidebar Deliverables Showcase (Lo que recibes) -->
-				<div class="bc-faq__deliverables-card">
-					<div class="bc-faq__deliverables-header">
-						<span class="bc-faq__deliverables-tag">Entregables Garantizados</span>
-						<h3>Lo que recibes al finalizar el proyecto:</h3>
-					</div>
-
-					<ul class="bc-faq__deliverables-list">
-						<li class="bc-faq__deliverable-item">
-							<div class="bc-faq__deliverable-icon">📘</div>
-							<div>
-								<strong>Brandbook Digital & Design System</strong>
-								<span>Manual interactivo PDF/Web con reglas cromáticas, tipográficas y de uso.</span>
-							</div>
-						</li>
-						<li class="bc-faq__deliverable-item">
-							<div class="bc-faq__deliverable-icon">🎨</div>
-							<div>
-								<strong>Paquete Vectorial Master</strong>
-								<span>Isotipos, logotipos y sub-marcas en SVG, EPS, AI y PNG sin fondo.</span>
-							</div>
-						</li>
-						<li class="bc-faq__deliverable-item">
-							<div class="bc-faq__deliverable-icon">🤖</div>
-							<div>
-								<strong>Manual de Prompts & IA de Marca</strong>
-								<span>Tokens visuales para que tus herramientas de IA generen piezas alineadas.</span>
-							</div>
-						</li>
-						<li class="bc-faq__deliverable-item">
-							<div class="bc-faq__deliverable-icon">⚖️</div>
-							<div>
-								<strong>Reporte de Viabilidad de Naming</strong>
-								<span>Filtro de marcas y verificación para registro exclusivo en Indecopi.</span>
-							</div>
-						</li>
-						<li class="bc-faq__deliverable-item">
-							<div class="bc-faq__deliverable-icon">📦</div>
-							<div>
-								<strong>Kit Omnicanal de Aplicaciones</strong>
-								<span>Plantillas editables para redes, firmas de mail, merchandising y carpetas.</span>
-							</div>
-						</li>
-					</ul>
-
-					<div class="bc-faq__deliverables-footer">
-						<a href="#contacto" class="bc-btn bc-btn--primary open-contact-modal" style="width:100%; text-align:center; justify-content:center;">
-							<span>Solicitar alcance de proyecto</span>
-						</a>
-					</div>
 				</div>
 
 			</div>
