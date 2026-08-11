@@ -1084,23 +1084,23 @@ body[class*="branding-creatividad"] .header .header__burger-line {
 .bc-btn--cases {
 	display: inline-flex;
 	align-items: center;
-	gap: 10px;
-	background: #091F34;
+	gap: 12px;
+	background: #EE894F;
 	color: #FFFFFF;
-	padding: 14px 32px;
+	padding: 16px 36px;
 	border-radius: 99px;
 	font-size: 15px;
 	font-weight: 700;
 	text-decoration: none;
-	box-shadow: 0 10px 25px rgba(9, 31, 52, 0.2);
+	box-shadow: 0 10px 25px rgba(238, 137, 79, 0.35);
 	transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .bc-btn--cases:hover {
-	background: #EE894F;
+	background: #e0773c;
 	color: #FFFFFF;
 	transform: translateY(-2px);
-	box-shadow: 0 14px 30px rgba(238, 137, 79, 0.35);
+	box-shadow: 0 14px 30px rgba(238, 137, 79, 0.45);
 }
 
 /* Case Card inside Track */
@@ -1343,13 +1343,35 @@ body[class*="branding-creatividad"] .header .header__burger-line {
 	border-radius: 28px;
 	width: 100%;
 	max-width: 680px;
-	max-height: 90vh;
+	max-height: 88vh;
 	overflow-y: auto;
-	padding: 36px 30px;
+	overflow-x: hidden;
+	padding: 36px;
 	z-index: 2;
 	box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
 	transform: scale(0.92) translateY(20px);
 	transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+	scrollbar-width: thin;
+	scrollbar-color: rgba(9, 31, 52, 0.2) transparent;
+}
+
+/* Custom Sleek Scrollbar for Case Modal Dialog */
+.bc-modal__dialog::-webkit-scrollbar {
+	width: 6px;
+}
+
+.bc-modal__dialog::-webkit-scrollbar-track {
+	background: transparent;
+	margin: 20px 0;
+}
+
+.bc-modal__dialog::-webkit-scrollbar-thumb {
+	background: rgba(9, 31, 52, 0.2);
+	border-radius: 99px;
+}
+
+.bc-modal__dialog::-webkit-scrollbar-thumb:hover {
+	background: #EE894F;
 }
 
 .bc-modal.is-open .bc-modal__dialog {

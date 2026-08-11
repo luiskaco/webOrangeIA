@@ -553,7 +553,7 @@ $theme_uri = get_template_directory_uri();
 			<!-- Portfolio CTA button -->
 			<div class="bc-cases__action" data-reveal="up">
 				<a href="#contacto" class="bc-btn bc-btn--cases open-contact-modal" data-service="Branding y Creatividad">
-					<span>Conoce nuestros casos y proyectos</span>
+					<span>Solicitar propuesta de branding</span>
 					<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
 				</a>
 			</div>

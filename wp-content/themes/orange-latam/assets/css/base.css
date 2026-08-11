@@ -834,6 +834,30 @@ div.wpcf7-response-output,
 	}
 }
 
+/* Universal Sleek Scrollbars for Modals and Dialogs */
+[class*="modal__dialog"] {
+	scrollbar-width: thin;
+	scrollbar-color: rgba(9, 31, 52, 0.25) transparent;
+}
+
+[class*="modal__dialog"]::-webkit-scrollbar {
+	width: 6px;
+}
+
+[class*="modal__dialog"]::-webkit-scrollbar-track {
+	background: transparent;
+	margin: 20px 0;
+}
+
+[class*="modal__dialog"]::-webkit-scrollbar-thumb {
+	background: rgba(9, 31, 52, 0.25);
+	border-radius: 99px;
+}
+
+[class*="modal__dialog"]::-webkit-scrollbar-thumb:hover {
+	background: #EE894F;
+}
+
 /* ==========================================================================
    GLOBAL CONTACT MODAL POPUP STYLES
    ========================================================================== */
