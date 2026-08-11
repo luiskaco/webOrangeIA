@@ -558,64 +558,164 @@ $theme_uri = get_template_directory_uri();
 	<!-- ==========================================
 	     6. FAQ ACCORDION SECTION
 	     ========================================== -->
+	<!-- ==========================================
+	     6. FAQ ACCORDION SECTION (CON EJEMPLOS REALES & ENTREGABLES)
+	     ========================================== -->
 	<section class="bc-faq">
 		<div class="bc-container" data-reveal="up">
 			<div class="bc-faq__header">
-				<span class="bc-section-tag">Dudas Frecuentes</span>
-				<h2 class="bc-faq__title">Preguntas frecuentes sobre Branding</h2>
+				<span class="bc-section-tag">Dudas Frecuentes & Entregables</span>
+				<h2 class="bc-faq__title">Preguntas frecuentes y ejemplos de entregables en la era de la IA</h2>
 			</div>
 
-			<div class="bc-faq__list">
+			<div class="bc-faq__layout">
 				
-				<details class="bc-faq__item" open>
-					<summary class="bc-faq__question">
-						<span>¿Cómo se integra la Inteligencia Artificial (IA) en el proceso de creación y estrategia de marca?</span>
-						<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-					</summary>
-					<div class="bc-faq__answer">
-						<p>La IA acelera sustancialmente la fase de investigación de mercado, análisis competitivo y testeo de conceptos. En Orange Latam combinamos modelos de IA avanzados para análisis de tendencias con criterio estratégico y dirección de arte humana, logrando marcas más ágiles, precisas y relevantes.</p>
-					</div>
-				</details>
+				<!-- Accordion Column with Rich Examples -->
+				<div class="bc-faq__list">
+					
+					<details class="bc-faq__item" open>
+						<summary class="bc-faq__question">
+							<span>¿Cómo se integra la Inteligencia Artificial (IA) en el proceso de creación y estrategia de marca?</span>
+							<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+						</summary>
+						<div class="bc-faq__answer">
+							<p>La IA acelera la investigación de mercado y el análisis competitivo. Combinamos modelos IA con dirección de arte humana para crear marcas precisas y ágiles.</p>
+							
+							<!-- Visual Example Box -->
+							<div class="bc-faq__example-box">
+								<div class="bc-faq__example-badge">Ejemplo de Metodología Hybrid-AI™</div>
+								<div class="bc-faq__example-grid">
+									<div class="bc-faq__example-chip">
+										<strong>1. Exploración IA</strong>
+										<span>Mapeo de +500 referencias en minutos</span>
+									</div>
+									<div class="bc-faq__example-chip bc-faq__example-chip--active">
+										<strong>2. Filtro Estratégico</strong>
+										<span>Validación de negocio y viabilidad</span>
+									</div>
+									<div class="bc-faq__example-chip">
+										<strong>3. Dirección de Arte</strong>
+										<span>Pulido y vectorización 100% humana</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</details>
 
-				<details class="bc-faq__item">
-					<summary class="bc-faq__question">
-						<span>Si cualquiera puede generar imágenes o logos con IA, ¿por qué contratar una agencia de branding?</span>
-						<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-					</summary>
-					<div class="bc-faq__answer">
-						<p>La IA genera imágenes inmediatas, pero no construye estrategia ni diferenciación real. En la era de la IA, el gran peligro es caer en la homogeneidad ("clones algorítmicos"). Una agencia define el propósito, la propuesta de valor única, los activos protegibles y el lenguaje visual que aseguran que tu marca no se confunda en el mercado.</p>
-					</div>
-				</details>
+					<details class="bc-faq__item">
+						<summary class="bc-faq__question">
+							<span>Si cualquiera puede generar logos con IA, ¿por qué contratar una agencia de branding?</span>
+							<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+						</summary>
+						<div class="bc-faq__answer">
+							<p>La IA genera imágenes inmediatas, pero no estrategia ni diferenciación real. El riesgo es caer en la homogeneidad visual ("clones de IA"). Una agencia construye narrativa, valor y activos de marca protegibles.</p>
+							
+							<!-- Comparison Example Box -->
+							<div class="bc-faq__example-box">
+								<div class="bc-faq__example-badge">Diferencia Real de Impacto</div>
+								<div class="bc-faq__compare">
+									<div class="bc-faq__compare-item bc-faq__compare-item--negative">
+										<strong>Logo de IA Genérica</strong>
+										<span>Sin estrategia, sin derechos de autor, idéntico a competidores.</span>
+									</div>
+									<div class="bc-faq__compare-item bc-faq__compare-item--positive">
+										<strong>Plataforma de Marca Orange™</strong>
+										<span>Estrategia de posicionamiento, activos vectoriales únicos e inscripción legal.</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</details>
 
-				<details class="bc-faq__item">
-					<summary class="bc-faq__question">
-						<span>¿Cómo garantizan la consistencia de marca en contenido producido con herramientas de IA generativa?</span>
-						<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-					</summary>
-					<div class="bc-faq__answer">
-						<p>Desarrollamos Brandbooks dinámicos y guías de Prompt Engineering de marca. Entregamos las instrucciones estéticas, paletas, tipografías y reglas de estilo para que tus equipos internos o herramientas automatizadas generen piezas sin perder la coherencia gráfica original.</p>
-					</div>
-				</details>
+					<details class="bc-faq__item">
+						<summary class="bc-faq__question">
+							<span>¿Cómo garantizan la consistencia de marca en contenido producido con herramientas de IA?</span>
+							<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+						</summary>
+						<div class="bc-faq__answer">
+							<p>Desarrollamos Brandbooks dinámicos con reglas de Prompt Engineering de marca. Entregamos tokens de estilo para que tus equipos o sistemas automatizados generen piezas respetando la estética de marca.</p>
+							
+							<!-- Prompt Engineering Example Box -->
+							<div class="bc-faq__prompt-box">
+								<span class="bc-faq__prompt-label">Ejemplo de Token de Marca para IA incluido en tu Brandbook:</span>
+								<code>/prompt: [Subject] --style Brand-Orange-v4 --colors #091F34, #70B5E3, #EE894F --lighting Editorial Studio --no gradient-mesh, generic-stock</code>
+							</div>
+						</div>
+					</details>
 
-				<details class="bc-faq__item">
-					<summary class="bc-faq__question">
-						<span>¿Qué ocurre con la protección legal y derechos de autor de una marca creada en la era de la IA?</span>
-						<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-					</summary>
-					<div class="bc-faq__answer">
-						<p>Garantizamos que todos los activos finales entregados (logotipos, naming, tipografías y manuales de marca) sean 100% originales, pulidos por diseñadores sénior y verificados legalmente para su registro exclusivo en Indecopi sin contingencias de derechos de autor.</p>
-					</div>
-				</details>
+					<details class="bc-faq__item">
+						<summary class="bc-faq__question">
+							<span>¿Qué ocurre con la protección legal y derechos de autor de una marca creada en la era de la IA?</span>
+							<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+						</summary>
+						<div class="bc-faq__answer">
+							<p>Garantizamos que todos los activos finales entregados sean 100% originales, pulidos por diseñadores sénior y verificados legalmente para su registro exclusivo en Indecopi sin contingencias.</p>
+						</div>
+					</details>
 
-				<details class="bc-faq__item">
-					<summary class="bc-faq__question">
-						<span>¿Realizan rebranding para empresas consolidadas que necesitan adaptarse a la era digital e IA?</span>
-						<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-					</summary>
-					<div class="bc-faq__answer">
-						<p>Absolutamente. Ayudamos a marcas tradicionales a modernizar su posicionamiento, identidad visual y arquitectura de comunicación para que compitan con ventaja en ecosistemas digitales e impulsados por IA, preservando la equidad e historia que construyeron.</p>
+					<details class="bc-faq__item">
+						<summary class="bc-faq__question">
+							<span>¿Realizan rebranding para empresas consolidadas que necesitan adaptarse a la era digital e IA?</span>
+							<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+						</summary>
+						<div class="bc-faq__answer">
+							<p>Absolutamente. Ayudamos a marcas tradicionales a modernizar su posicionamiento e identidad visual para que compitan con ventaja en ecosistemas digitales e impulsados por IA.</p>
+						</div>
+					</details>
+
+				</div>
+
+				<!-- Sidebar Deliverables Showcase (Lo que recibes) -->
+				<div class="bc-faq__deliverables-card">
+					<div class="bc-faq__deliverables-header">
+						<span class="bc-faq__deliverables-tag">Entregables Garantizados</span>
+						<h3>Lo que recibes al finalizar el proyecto:</h3>
 					</div>
-				</details>
+
+					<ul class="bc-faq__deliverables-list">
+						<li class="bc-faq__deliverable-item">
+							<div class="bc-faq__deliverable-icon">📘</div>
+							<div>
+								<strong>Brandbook Digital & Design System</strong>
+								<span>Manual interactivo PDF/Web con reglas cromáticas, tipográficas y de uso.</span>
+							</div>
+						</li>
+						<li class="bc-faq__deliverable-item">
+							<div class="bc-faq__deliverable-icon">🎨</div>
+							<div>
+								<strong>Paquete Vectorial Master</strong>
+								<span>Isotipos, logotipos y sub-marcas en SVG, EPS, AI y PNG sin fondo.</span>
+							</div>
+						</li>
+						<li class="bc-faq__deliverable-item">
+							<div class="bc-faq__deliverable-icon">🤖</div>
+							<div>
+								<strong>Manual de Prompts & IA de Marca</strong>
+								<span>Tokens visuales para que tus herramientas de IA generen piezas alineadas.</span>
+							</div>
+						</li>
+						<li class="bc-faq__deliverable-item">
+							<div class="bc-faq__deliverable-icon">⚖️</div>
+							<div>
+								<strong>Reporte de Viabilidad de Naming</strong>
+								<span>Filtro de marcas y verificación para registro exclusivo en Indecopi.</span>
+							</div>
+						</li>
+						<li class="bc-faq__deliverable-item">
+							<div class="bc-faq__deliverable-icon">📦</div>
+							<div>
+								<strong>Kit Omnicanal de Aplicaciones</strong>
+								<span>Plantillas editables para redes, firmas de mail, merchandising y carpetas.</span>
+							</div>
+						</li>
+					</ul>
+
+					<div class="bc-faq__deliverables-footer">
+						<a href="#contacto" class="bc-btn bc-btn--primary open-contact-modal" style="width:100%; text-align:center; justify-content:center;">
+							<span>Solicitar alcance de proyecto</span>
+						</a>
+					</div>
+				</div>
 
 			</div>
 		</div>
