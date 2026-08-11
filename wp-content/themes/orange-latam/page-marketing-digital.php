@@ -437,6 +437,20 @@ get_header();
 		</div>
 	</section>
 
+	<!-- ==========================================
+	     BANNER TRABAJEMOS JUNTOS (CONTACTO)
+	     ========================================== -->
+	<section class="bc-cta" id="contacto">
+		<div class="bc-cta__container" data-reveal="up">
+			<h2 class="bc-cta__title">Trabajemos juntos</h2>
+			<p class="bc-cta__desc">¿Listo para impulsar la presencia digital de tu marca y acelerar tus conversiones? Conversemos sobre tu próximo proyecto.</p>
+			<a href="#contacto" class="bc-cta__btn open-contact-modal" data-service="Marketing Digital">
+				<span>Contactar ahora</span>
+				<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+			</a>
+		</div>
+	</section>
+
 </main>
 
 <?php

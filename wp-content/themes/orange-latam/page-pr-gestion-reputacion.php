@@ -86,10 +86,6 @@ $pr_img_uri = $theme_uri . '/assets/images/pr';
 	<section class="pr-hero" id="inicio">
 		<div class="pr-hero__container">
 			<div class="pr-hero__content" data-reveal="left">
-				<div class="pr-hero__eyebrow">
-					<span class="pr-hero__eyebrow-line"></span>
-					<span class="pr-hero__eyebrow-text">Agencia de Relaciones Públicas</span>
-				</div>
 
 				<h1 class="pr-hero__title">Gestión de la Reputación</h1>
 
@@ -97,10 +93,7 @@ $pr_img_uri = $theme_uri . '/assets/images/pr';
 					Construimos y protegemos la reputación de tu marca con estrategias de relaciones públicas, manejo de crisis y entrenamiento de voceros — para las organizaciones que no pueden darse el lujo de improvisar.
 				</p>
 
-				<div class="pr-hero__actions">
-					<a href="#contacto" class="pr-btn pr-btn--primary open-contact-modal" data-service="PR y Gestión de la Reputación">Trabajemos juntos</a>
-					<a href="#servicio-pr" class="pr-btn pr-btn--outline">Ver nuestro servicio</a>
-				</div>
+
 			</div>
 
 			<div class="pr-hero__media" data-reveal="right">
@@ -561,11 +554,14 @@ $pr_img_uri = $theme_uri . '/assets/images/pr';
 	<!-- ==========================================
 	     8. BANNER CTA FINAL
 	     ========================================== -->
-	<section class="pr-cta" id="contacto">
-		<div class="pr-cta__container" data-reveal="up">
-			<h2 class="pr-cta__title">Trabajemos juntos</h2>
-			<p class="pr-cta__desc">¿Listo para fortalecer la reputación de tu marca? Conversemos sobre tu próximo proyecto.</p>
-			<a href="#contacto" class="pr-cta__btn open-contact-modal" data-service="PR y Gestión de la Reputación">Contáctanos</a>
+	<section class="bc-cta" id="contacto">
+		<div class="bc-cta__container" data-reveal="up">
+			<h2 class="bc-cta__title">Trabajemos juntos</h2>
+			<p class="bc-cta__desc">¿Listo para construir y proteger la reputación de tu marca? Conversemos sobre tu próximo proyecto.</p>
+			<a href="#contacto" class="bc-cta__btn open-contact-modal" data-service="PR y Gestión de la Reputación">
+				<span>Contactar ahora</span>
+				<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+			</a>
 		</div>
 	</section>
 

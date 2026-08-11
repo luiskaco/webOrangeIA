@@ -1,0 +1,695 @@
+/* ==========================================================================
+   GESTIÓN DE ACCESO (MARKET ACCESS) — PAGE STYLESHEET
+   Loaded only on the "Gestión de Acceso" page template (page-gestion-de-acceso.php).
+   Parent/Child CSS architecture: inherits base.css tokens & components.
+   ========================================================================== */
+
+:root {
+	--ga-primary: #00C2A8;
+	--ga-primary-hover: #00A38D;
+	--ga-primary-light: #E6F9F6;
+	--ga-accent-blue: #29ABE2;
+	--ga-dark: #0E2528;
+	--ga-dark-card: #16383C;
+	--ga-body: #2D484B;
+	--ga-bg-light: #F4FAFA;
+	--ga-bg-mint: #EBF8F6;
+	--ga-border: #D4F0EC;
+	--ga-card-shadow: 0 16px 40px rgba(0, 194, 168, 0.07);
+	--ga-card-hover-shadow: 0 24px 48px rgba(0, 194, 168, 0.14);
+}
+
+/* --------------------------------------------------------------------------
+   HEADER OVERRIDES (HEALTH / MARKET ACCESS THEME)
+   -------------------------------------------------------------------------- */
+.page-template-page-gestion-de-acceso-php .header,
+.page-template-page-gestion-de-acceso .header,
+body[class*="gestion-de-acceso"] .header {
+	background-color: rgba(14, 37, 40, 0.94);
+	backdrop-filter: blur(12px);
+	border-bottom: 1px solid rgba(0, 194, 168, 0.15);
+}
+
+.page-template-page-gestion-de-acceso-php .header .header__link,
+.page-template-page-gestion-de-acceso .header .header__link,
+body[class*="gestion-de-acceso"] .header .header__link {
+	color: #E6F9F6;
+}
+
+.page-template-page-gestion-de-acceso-php .header .header__link:hover,
+.page-template-page-gestion-de-acceso .header .header__link:hover,
+body[class*="gestion-de-acceso"] .header .header__link:hover {
+	color: var(--ga-primary);
+}
+
+.page-template-page-gestion-de-acceso-php .header .header__burger-line,
+.page-template-page-gestion-de-acceso .header .header__burger-line,
+body[class*="gestion-de-acceso"] .header .header__burger-line {
+	background-color: #E6F9F6;
+}
+
+/* --------------------------------------------------------------------------
+   GLOBAL PAGE CONTAINER
+   -------------------------------------------------------------------------- */
+.ga-page {
+	background-color: var(--ga-bg-light);
+	color: var(--ga-body);
+	font-family: var(--font-body);
+	overflow-x: hidden;
+}
+
+.ga-section-tag {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	padding: 6px 14px;
+	background: var(--ga-primary-light);
+	border: 1px solid rgba(0, 194, 168, 0.3);
+	border-radius: 100px;
+	color: var(--ga-primary);
+	font-size: 13px;
+	font-weight: 700;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	margin-bottom: 16px;
+}
+
+.ga-section-tag::before {
+	content: '';
+	width: 6px;
+	height: 6px;
+	background-color: var(--ga-primary);
+	border-radius: 50%;
+}
+
+/* ==========================================================================
+   1. HERO SECTION
+   ========================================================================== */
+.ga-hero {
+	position: relative;
+	padding: 160px 32px 80px;
+	background: linear-gradient(180deg, #0E2528 0%, #16383C 60%, var(--ga-bg-light) 100%);
+	color: #FFFFFF;
+	overflow: hidden;
+}
+
+.ga-hero__bg-glow {
+	position: absolute;
+	top: -20%;
+	right: -10%;
+	width: 600px;
+	height: 600px;
+	background: radial-gradient(circle, rgba(0, 194, 168, 0.25) 0%, rgba(0, 194, 168, 0) 70%);
+	border-radius: 50%;
+	pointer-events: none;
+}
+
+.ga-hero__container {
+	max-width: 1280px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 1.1fr 0.9fr;
+	gap: 48px;
+	align-items: center;
+}
+
+.ga-hero__eyebrow {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin-bottom: 20px;
+}
+
+.ga-hero__eyebrow-text {
+	color: var(--ga-primary);
+	font-size: 14px;
+	font-weight: 700;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+}
+
+.ga-hero__title {
+	font-family: var(--font-display);
+	font-size: clamp(38px, 4.8vw, 64px);
+	line-height: 1.06;
+	color: #FFFFFF;
+	margin: 0 0 24px;
+	font-weight: 400;
+	letter-spacing: -0.01em;
+}
+
+.ga-hero__title span {
+	color: var(--ga-primary);
+	font-style: italic;
+}
+
+.ga-hero__desc {
+	font-size: 19px;
+	line-height: 1.6;
+	color: #D2EBE8;
+	max-width: 580px;
+	margin: 0;
+}
+
+.ga-hero__actions {
+	display: flex;
+	gap: 16px;
+	flex-wrap: wrap;
+}
+
+.ga-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	padding: 16px 32px;
+	border-radius: 100px;
+	font-size: 15px;
+	font-weight: 600;
+	text-decoration: none;
+	transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+	cursor: pointer;
+}
+
+.ga-btn--primary {
+	background-color: var(--ga-primary);
+	color: #0E2528;
+	box-shadow: 0 8px 24px rgba(0, 194, 168, 0.3);
+}
+
+.ga-btn--primary:hover {
+	background-color: #2FD5C4;
+	transform: translateY(-2px);
+	box-shadow: 0 12px 32px rgba(0, 194, 168, 0.4);
+	color: #0E2528;
+}
+
+.ga-btn--outline {
+	background: transparent;
+	color: #FFFFFF;
+	border: 1.5px solid rgba(255, 255, 255, 0.3);
+}
+
+.ga-btn--outline:hover {
+	border-color: var(--ga-primary);
+	color: var(--ga-primary);
+	background: rgba(0, 194, 168, 0.08);
+}
+
+.ga-hero__media {
+	position: relative;
+}
+
+.ga-hero__photo-wrapper {
+	position: relative;
+	width: 100%;
+	aspect-ratio: 4 / 4.2;
+	border-radius: 24px;
+	overflow: hidden;
+	box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+	border: 2px solid rgba(0, 194, 168, 0.3);
+}
+
+.ga-hero__photo {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+
+.ga-hero__badge-float {
+	position: absolute;
+	bottom: -20px;
+	left: -20px;
+	background: #FFFFFF;
+	padding: 16px 24px;
+	border-radius: 16px;
+	box-shadow: 0 16px 36px rgba(14, 37, 40, 0.18);
+	display: flex;
+	align-items: center;
+	gap: 14px;
+	border: 1px solid var(--ga-border);
+	z-index: 2;
+}
+
+.ga-hero__badge-icon {
+	width: 44px;
+	height: 44px;
+	background: var(--ga-primary-light);
+	border-radius: 12px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--ga-primary);
+}
+
+.ga-hero__badge-num {
+	font-size: 20px;
+	font-weight: 700;
+	color: var(--ga-dark);
+	line-height: 1.1;
+}
+
+.ga-hero__badge-label {
+	font-size: 12px;
+	color: #618285;
+	font-weight: 500;
+}
+
+/* ==========================================================================
+   2. FLOATING HIGHLIGHTS BAR (3 CARDS)
+   ========================================================================== */
+.ga-highlights {
+	position: relative;
+	margin-top: -50px;
+	padding: 0 32px;
+	z-index: 10;
+}
+
+.ga-highlights__container {
+	max-width: 1280px;
+	margin: 0 auto;
+}
+
+.ga-highlights__grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 24px;
+}
+
+.ga-highlight-card {
+	background: #FFFFFF;
+	padding: 32px 28px;
+	border-radius: 20px;
+	border: 1px solid var(--ga-border);
+	box-shadow: var(--ga-card-shadow);
+	transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ga-highlight-card:hover {
+	transform: translateY(-6px);
+	box-shadow: var(--ga-card-hover-shadow);
+	border-color: var(--ga-primary);
+}
+
+.ga-highlight-card__icon {
+	width: 52px;
+	height: 52px;
+	background: var(--ga-primary-light);
+	border-radius: 14px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--ga-primary);
+	margin-bottom: 20px;
+}
+
+.ga-highlight-card__title {
+	font-family: var(--font-display);
+	font-size: 22px;
+	color: var(--ga-dark);
+	margin: 0 0 10px;
+	font-weight: 400;
+}
+
+.ga-highlight-card__desc {
+	font-size: 15px;
+	line-height: 1.55;
+	color: var(--ga-body);
+	margin: 0;
+}
+
+/* ==========================================================================
+   3. SECCIÓN: LA BARRERA DE ACCESO A LA SALUD
+   ========================================================================== */
+.ga-about {
+	padding: 110px 32px 90px;
+}
+
+.ga-about__container {
+	max-width: 1280px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 0.95fr 1.05fr;
+	gap: 60px;
+	align-items: center;
+}
+
+.ga-about__media {
+	position: relative;
+}
+
+.ga-about__img-wrapper {
+	position: relative;
+	width: 100%;
+	aspect-ratio: 4 / 3.8;
+	border-radius: 24px;
+	overflow: hidden;
+	box-shadow: var(--ga-card-shadow);
+	border: 1px solid var(--ga-border);
+}
+
+.ga-about__img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+
+.ga-about__content {
+	padding-left: 10px;
+}
+
+.ga-about__title {
+	font-family: var(--font-display);
+	font-size: clamp(32px, 3.6vw, 48px);
+	line-height: 1.12;
+	color: var(--ga-dark);
+	margin: 0 0 20px;
+	font-weight: 400;
+}
+
+.ga-about__lead {
+	font-size: 18px;
+	line-height: 1.65;
+	color: var(--ga-dark);
+	font-weight: 500;
+	margin-bottom: 20px;
+}
+
+.ga-about__text {
+	font-size: 16px;
+	line-height: 1.65;
+	color: var(--ga-body);
+	margin-bottom: 28px;
+}
+
+.ga-about__features {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 18px;
+}
+
+.ga-about__feature-item {
+	display: flex;
+	align-items: flex-start;
+	gap: 12px;
+	background: #FFFFFF;
+	padding: 16px 20px;
+	border-radius: 14px;
+	border: 1px solid var(--ga-border);
+}
+
+.ga-about__feature-check {
+	width: 24px;
+	height: 24px;
+	background: var(--ga-primary);
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #0E2528;
+	flex-shrink: 0;
+	margin-top: 2px;
+}
+
+.ga-about__feature-text {
+	font-size: 14px;
+	font-weight: 600;
+	color: var(--ga-dark);
+	line-height: 1.35;
+}
+
+/* ==========================================================================
+   4. SECCIÓN: CÓMO DESBLOQUEAMOS EL ACCESO DE FORMA ÉTICA (6 PILARES)
+   ========================================================================== */
+.ga-pillars {
+	padding: 100px 32px;
+	background-color: var(--ga-bg-mint);
+	position: relative;
+}
+
+.ga-pillars__header {
+	max-width: 720px;
+	margin: 0 auto 60px;
+	text-align: center;
+}
+
+.ga-pillars__title {
+	font-family: var(--font-display);
+	font-size: clamp(32px, 3.8vw, 50px);
+	line-height: 1.1;
+	color: var(--ga-dark);
+	margin: 0 0 18px;
+	font-weight: 400;
+}
+
+.ga-pillars__desc {
+	font-size: 18px;
+	line-height: 1.6;
+	color: var(--ga-body);
+	margin: 0;
+}
+
+.ga-pillars__grid {
+	max-width: 1280px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 28px;
+}
+
+.ga-pillar-card {
+	background: #FFFFFF;
+	padding: 36px 30px;
+	border-radius: 20px;
+	border: 1px solid var(--ga-border);
+	box-shadow: 0 8px 24px rgba(0, 194, 168, 0.05);
+	transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	overflow: hidden;
+}
+
+.ga-pillar-card::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 4px;
+	background: var(--ga-primary);
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+
+.ga-pillar-card:hover {
+	transform: translateY(-6px);
+	box-shadow: var(--ga-card-hover-shadow);
+	border-color: var(--ga-primary);
+}
+
+.ga-pillar-card:hover::before {
+	opacity: 1;
+}
+
+.ga-pillar-card__icon-wrapper {
+	width: 56px;
+	height: 56px;
+	background: var(--ga-primary-light);
+	border-radius: 16px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--ga-primary);
+	margin-bottom: 22px;
+}
+
+.ga-pillar-card__title {
+	font-family: var(--font-display);
+	font-size: 21px;
+	color: var(--ga-dark);
+	margin: 0 0 12px;
+	font-weight: 400;
+	line-height: 1.25;
+}
+
+.ga-pillar-card__text {
+	font-size: 15px;
+	line-height: 1.6;
+	color: var(--ga-body);
+	margin: 0;
+}
+
+/* ==========================================================================
+   5. SECCIÓN: PARA QUIÉN ES ESTE SERVICIO (AUDIENCIAS)
+   ========================================================================== */
+.ga-targets {
+	padding: 110px 32px;
+	background: #FFFFFF;
+}
+
+.ga-targets__header {
+	max-width: 760px;
+	margin: 0 auto 60px;
+	text-align: center;
+}
+
+.ga-targets__title {
+	font-family: var(--font-display);
+	font-size: clamp(32px, 3.8vw, 48px);
+	line-height: 1.12;
+	color: var(--ga-dark);
+	margin: 0 0 16px;
+	font-weight: 400;
+}
+
+.ga-targets__desc {
+	font-size: 18px;
+	line-height: 1.6;
+	color: var(--ga-body);
+	margin: 0;
+}
+
+.ga-targets__grid {
+	max-width: 1280px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 24px;
+}
+
+.ga-target-card {
+	background: var(--ga-bg-light);
+	padding: 32px 26px;
+	border-radius: 20px;
+	border: 1px solid var(--ga-border);
+	transition: all 0.3s ease;
+}
+
+.ga-target-card:hover {
+	background: #FFFFFF;
+	transform: translateY(-4px);
+	box-shadow: var(--ga-card-hover-shadow);
+	border-color: var(--ga-primary);
+}
+
+.ga-target-card__badge {
+	display: inline-block;
+	padding: 4px 12px;
+	background: var(--ga-primary-light);
+	color: var(--ga-primary);
+	font-size: 12px;
+	font-weight: 700;
+	border-radius: 100px;
+	margin-bottom: 18px;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+}
+
+.ga-target-card__title {
+	font-family: var(--font-display);
+	font-size: 20px;
+	color: var(--ga-dark);
+	margin: 0 0 12px;
+	font-weight: 400;
+	line-height: 1.25;
+}
+
+.ga-target-card__desc {
+	font-size: 14.5px;
+	line-height: 1.55;
+	color: var(--ga-body);
+	margin: 0;
+}
+
+/* ==========================================================================
+   6. BANNER TRABAJEMOS JUNTOS (CONTACTO ESTÁNDAR .BC-CTA)
+   ========================================================================== */
+.ga-page .bc-cta {
+	background: linear-gradient(135deg, #0E2528 0%, #16383C 100%);
+}
+
+.ga-page .bc-cta__tag {
+	color: var(--ga-primary);
+	background: var(--ga-primary-light);
+	border-color: rgba(0, 194, 168, 0.3);
+}
+
+.ga-page .bc-cta__desc {
+	font-size: 16px;
+	line-height: 1.55;
+	color: #D2EBE8;
+}
+
+.ga-page .bc-cta__btn {
+	background: var(--ga-primary);
+	color: #0E2528;
+	box-shadow: 0 12px 30px rgba(0, 194, 168, 0.35);
+}
+
+.ga-page .bc-cta__btn:hover {
+	background: #2FD5C4;
+	color: #0E2528;
+	box-shadow: 0 18px 36px rgba(0, 194, 168, 0.45);
+}
+
+/* ==========================================================================
+   RESPONSIVE MEDIA QUERIES
+   ========================================================================== */
+@media (max-width: 1024px) {
+	.ga-hero__container {
+		grid-template-columns: 1fr;
+		gap: 40px;
+	}
+
+	.ga-hero__photo-wrapper {
+		max-width: 580px;
+		margin: 0 auto;
+	}
+
+	.ga-highlights__grid {
+		grid-template-columns: 1fr;
+	}
+
+	.ga-about__container {
+		grid-template-columns: 1fr;
+		gap: 40px;
+	}
+
+	.ga-pillars__grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.ga-targets__grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 768px) {
+	.ga-hero {
+		padding: 130px 20px 60px;
+	}
+
+	.ga-highlights {
+		margin-top: -30px;
+		padding: 0 20px;
+	}
+
+	.ga-about,
+	.ga-pillars,
+	.ga-targets,
+	.ga-cta {
+		padding: 70px 20px;
+	}
+
+	.ga-pillars__grid,
+	.ga-targets__grid {
+		grid-template-columns: 1fr;
+	}
+
+	.ga-about__features {
+		grid-template-columns: 1fr;
+	}
+}

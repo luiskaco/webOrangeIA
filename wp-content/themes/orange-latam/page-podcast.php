@@ -359,12 +359,10 @@ $podcast_img_uri = $theme_uri . '/assets/images/podcast';
 			<button class="podcast-modal__close js-podcast-modal-close" aria-label="Cerrar modal">&times;</button>
 			<div class="podcast-modal__bg js-podcast-modal-bg"></div>
 			<div class="podcast-modal__vignette"></div>
-			<div class="podcast-modal__content">
-				<h2 class="podcast-modal__title js-podcast-modal-title"></h2>
-				<p class="podcast-modal__desc js-podcast-modal-desc"></p>
 			</div>
 		</div>
 	</div>
+
 </main>
 
 <?php

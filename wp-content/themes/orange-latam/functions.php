@@ -38,6 +38,7 @@ function orange_latam_theme_setup() {
 		'pr'               => esc_html__( 'PR & Reputación Menu', 'orange-latam' ),
 		'asuntos_publicos' => esc_html__( 'Asuntos Públicos Menu', 'orange-latam' ),
 		'branding'         => esc_html__( 'Branding & Creatividad Menu', 'orange-latam' ),
+		'eventos'          => esc_html__( 'Eventos y Activaciones Menu', 'orange-latam' ),
 	) );
 
 	// Switch default core markup for search form, comment form, and comments to output valid HTML5.
@@ -91,6 +92,10 @@ function orange_latam_enqueue_assets() {
 		orange_latam_enqueue_versioned_style( 'orange-latam-asuntos-publicos-style', '/assets/css/pages/asuntos-publicos.css', array( 'orange-latam-base-style' ) );
 	} elseif ( 'page-branding-creatividad.php' === $page_template ) {
 		orange_latam_enqueue_versioned_style( 'orange-latam-branding-creatividad-style', '/assets/css/pages/branding-creatividad.css', array( 'orange-latam-base-style' ) );
+	} elseif ( 'page-eventos-activaciones.php' === $page_template ) {
+		orange_latam_enqueue_versioned_style( 'orange-latam-eventos-activaciones-style', '/assets/css/pages/eventos-activaciones.css', array( 'orange-latam-base-style' ) );
+	} elseif ( 'page-gestion-de-acceso.php' === $page_template ) {
+		orange_latam_enqueue_versioned_style( 'orange-latam-gestion-de-acceso-style', '/assets/css/pages/gestion-de-acceso.css', array( 'orange-latam-base-style' ) );
 	} else {
 		orange_latam_enqueue_versioned_style( 'orange-latam-custom-style', '/assets/css/style.css', array( 'orange-latam-base-style' ) );
 	}

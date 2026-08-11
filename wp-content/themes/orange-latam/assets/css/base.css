@@ -834,6 +834,90 @@ div.wpcf7-response-output,
 	}
 }
 
+/* ==========================================================================
+   GLOBAL TRABAJEMOS JUNTOS CTA BANNER STYLES
+   ========================================================================== */
+.bc-cta {
+	padding: 100px 0;
+	background: #091F34;
+	position: relative;
+	overflow: hidden;
+}
+
+.bc-cta::before {
+	content: '';
+	position: absolute;
+	top: -50%;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 800px;
+	height: 500px;
+	background: radial-gradient(circle, rgba(112, 181, 227, 0.15) 0%, rgba(9, 31, 52, 0) 70%);
+	pointer-events: none;
+}
+
+.bc-cta__container {
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 0 24px;
+	text-align: center;
+	position: relative;
+	z-index: 2;
+}
+
+.bc-cta__tag {
+	display: inline-block;
+	font-size: 12px;
+	font-weight: 800;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	color: #70B5E3;
+	background: rgba(112, 181, 227, 0.12);
+	border: 1px solid rgba(112, 181, 227, 0.25);
+	padding: 6px 16px;
+	border-radius: 99px;
+	margin-bottom: 20px;
+}
+
+.bc-cta__title {
+	font-family: var(--font-display);
+	font-size: clamp(2.2rem, 4vw, 3.4rem);
+	font-weight: 800;
+	color: #FFFFFF;
+	line-height: 1.15;
+	margin-bottom: 16px;
+}
+
+.bc-cta__desc {
+	font-size: clamp(0.95rem, 1.3vw, 1.1rem);
+	color: rgba(255, 255, 255, 0.75);
+	line-height: 1.55;
+	max-width: 680px;
+	margin: 0 auto 36px auto;
+}
+
+.bc-cta__btn {
+	display: inline-flex;
+	align-items: center;
+	gap: 12px;
+	background: #EE894F;
+	color: #FFFFFF;
+	padding: 16px 36px;
+	border-radius: 99px;
+	font-size: 16px;
+	font-weight: 700;
+	text-decoration: none;
+	box-shadow: 0 12px 30px rgba(238, 137, 79, 0.35);
+	transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bc-cta__btn:hover {
+	background: #e0773c;
+	transform: translateY(-3px);
+	box-shadow: 0 18px 36px rgba(238, 137, 79, 0.45);
+	color: #FFFFFF;
+}
+
 /* Universal Sleek Scrollbars for Modals and Dialogs */
 [class*="modal__dialog"] {
 	scrollbar-width: thin;

@@ -876,6 +876,20 @@ get_header();
 	</section>
 
 	<!-- ==========================================
+	     15. BANNER TRABAJEMOS JUNTOS (CONTACTO)
+	     ========================================== -->
+	<section class="bc-cta" id="contacto">
+		<div class="bc-cta__container" data-reveal="up">
+			<h2 class="bc-cta__title">Trabajemos juntos</h2>
+			<p class="bc-cta__desc">¿Listo para conectar tu marca con creadores de contenido de alto impacto? Conversemos sobre tu próxima campaña.</p>
+			<a href="#contacto" class="bc-cta__btn open-contact-modal" data-service="Marketing de Influencers">
+				<span>Contactar ahora</span>
+				<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+			</a>
+		</div>
+	</section>
+
+	<!-- ==========================================
 	     VIDEO MODAL (CASOS DE ÉXITO)
 	     ========================================== -->
 	<div class="video-modal js-video-modal">

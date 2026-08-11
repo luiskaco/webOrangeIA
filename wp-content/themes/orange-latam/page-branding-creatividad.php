@@ -228,10 +228,6 @@ $theme_uri = get_template_directory_uri();
 					<p class="bc-services__desc">
 						Unimos estrategia y creatividad para definir propuestas de valor sólidas y construir identidades de marca relevantes y sostenibles.
 					</p>
-					<a href="#contacto" class="bc-services__btn open-contact-modal">
-						<span>Habla con un Especialista</span>
-						<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-					</a>
 				</div>
 
 				<!-- Card 1: Estrategia de marca -->
@@ -569,7 +565,7 @@ $theme_uri = get_template_directory_uri();
 				<span class="bc-section-tag">Entregables & Tangibles</span>
 				<h2 class="bc-section-title">Lo que recibes al finalizar tu proyecto de Branding</h2>
 				<p class="bc-deliverables__sub">
-					Entregables claros, estructurados y preparados para operar en la era digital e IA con máxima calidad y coherencia.
+					Entregables claros, estructurados y preparados para operar con máxima calidad, originalidad y coherencia en todos los canales.
 				</p>
 			</div>
 
@@ -592,11 +588,11 @@ $theme_uri = get_template_directory_uri();
 				</div>
 
 				<!-- Item 3 -->
-				<div class="bc-deliv-card bc-deliv-card--highlight">
-					<div class="bc-deliv-card__icon">🤖</div>
-					<div class="bc-deliv-card__badge">Innovación IA</div>
-					<h3 class="bc-deliv-card__title">Manual de Prompts & IA de Marca</h3>
-					<p class="bc-deliv-card__desc">Tokens estéticos e instrucciones de Prompt Engineering para que tu equipo genere piezas alineadas en herramientas de IA.</p>
+				<div class="bc-deliv-card">
+					<div class="bc-deliv-card__icon">✨</div>
+					<div class="bc-deliv-card__badge">Escalabilidad de Marca</div>
+					<h3 class="bc-deliv-card__title">Guía de Consistencia & Manual de Estilo</h3>
+					<p class="bc-deliv-card__desc">Reglas de aplicación gráfica, parámetros de estilo y guías de producción para que tu equipo interno genere piezas respetando el 100% de la identidad original.</p>
 				</div>
 
 				<!-- Item 4 -->

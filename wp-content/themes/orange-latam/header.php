@@ -22,10 +22,12 @@ $is_podcast_context           = is_page( 'podcast' ) || is_page_template( 'page-
 $is_pr_context                = is_page( 'pr-gestion-reputacion' ) || is_page_template( 'page-pr-gestion-reputacion.php' );
 $is_asuntos_publicos_context  = is_page( 'asuntos-publicos' ) || is_page_template( 'page-asuntos-publicos.php' );
 $is_branding_context          = is_page( 'branding-creatividad' ) || is_page_template( 'page-branding-creatividad.php' );
-$nav_location                 = $is_branding_context ? 'branding' : ( $is_asuntos_publicos_context ? 'asuntos_publicos' : ( $is_pr_context ? 'pr' : ( $is_podcast_context ? 'podcast' : ( $is_marketing_digital_context ? 'marketing_digital' : ( $is_influencers_context ? 'influencers' : ( $is_blog_context ? 'blog' : 'primary' ) ) ) ) ) );
-$logo_url                     = ( $is_blog_context || $is_influencers_context || $is_marketing_digital_context || $is_podcast_context || $is_pr_context || $is_asuntos_publicos_context || $is_branding_context ) ? home_url( '/' ) : '#inicio';
+$is_eventos_context           = is_page( 'eventos-activaciones' ) || is_page_template( 'page-eventos-activaciones.php' );
+$is_gestion_acceso_context    = is_page( 'gestion-de-acceso' ) || is_page_template( 'page-gestion-de-acceso.php' );
+$nav_location                 = $is_gestion_acceso_context ? 'gestion_acceso' : ( $is_eventos_context ? 'eventos' : ( $is_branding_context ? 'branding' : ( $is_asuntos_publicos_context ? 'asuntos_publicos' : ( $is_pr_context ? 'pr' : ( $is_podcast_context ? 'podcast' : ( $is_marketing_digital_context ? 'marketing_digital' : ( $is_influencers_context ? 'influencers' : ( $is_blog_context ? 'blog' : 'primary' ) ) ) ) ) ) ) );
+$logo_url                     = ( $is_blog_context || $is_influencers_context || $is_marketing_digital_context || $is_podcast_context || $is_pr_context || $is_asuntos_publicos_context || $is_branding_context || $is_eventos_context || $is_gestion_acceso_context ) ? home_url( '/' ) : '#inicio';
 ?>
-<header class="header<?php echo ( $is_pr_context || $is_asuntos_publicos_context || $is_branding_context ) ? ' header--pr' : ''; ?>">
+<header class="header<?php echo ( $is_pr_context || $is_asuntos_publicos_context || $is_branding_context || $is_eventos_context || $is_gestion_acceso_context ) ? ' header--pr' : ''; ?>">
 	<div class="header__container">
 		<a href="<?php echo esc_url( $logo_url ); ?>" class="header__logo">
 			<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/logo.webp" alt="Orange Latam Logo" class="header__logo-img" style="height: 30px; width: auto; display: block;">
@@ -47,6 +49,15 @@ $logo_url                     = ( $is_blog_context || $is_influencers_context ||
 				foreach ( $menu_items as $item ) {
 					echo '<a href="' . esc_url( $item->url ) . '" class="header__link">' . esc_html( $item->title ) . '</a>';
 				}
+			} elseif ( $is_eventos_context ) {
+				// Fallback if the Eventos menu hasn't been generated yet.
+				?>
+				<a href="#inicio" class="header__link">Inicio</a>
+				<a href="#tipos-eventos" class="header__link">Tipos de Eventos</a>
+				<a href="#como-trabajamos" class="header__link">Cómo Trabajamos</a>
+				<a href="#casos-resultados" class="header__link">Casos y Resultados</a>
+				<a href="#contacto" class="header__link">Contacto</a>
+				<?php
 			} elseif ( $is_branding_context ) {
 				// Fallback if the Branding menu hasn't been generated yet.
 				?>
@@ -71,7 +82,7 @@ $logo_url                     = ( $is_blog_context || $is_influencers_context ||
 				<a href="#que-es" class="header__link">Qué es</a>
 				<a href="#servicio-pr" class="header__link">Servicio de PR</a>
 				<a href="#gestion-de-crisis" class="header__link">Gestión de Crisis</a>
-				<a href="#entrenamiento-voceros" class="header__link">Voceros</a>
+				<a href="<?php echo esc_url( home_url( '/eventos-activaciones/' ) ); ?>" class="header__link">Eventos y Voceros</a>
 				<a href="#por-que-elegirnos" class="header__link">Por qué elegirnos</a>
 				<a href="#contacto" class="header__link">Contacto</a>
 				<?php

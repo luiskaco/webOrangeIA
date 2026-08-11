@@ -52,6 +52,14 @@ class Orange_Theme_Setup {
 				'title'   => 'Branding y Creatividad',
 				'content' => '',
 			),
+			'eventos-activaciones' => array(
+				'title'   => 'Eventos y Activaciones',
+				'content' => '',
+			),
+			'gestion-de-acceso' => array(
+				'title'   => 'Gestión de Acceso',
+				'content' => '',
+			),
 		);
 
 		$page_ids = array();
@@ -301,6 +309,37 @@ class Orange_Theme_Setup {
 
 				$locations = get_theme_mod( 'nav_menu_locations' );
 				$locations['branding'] = $branding_menu_id;
+				set_theme_mod( 'nav_menu_locations', $locations );
+			}
+		}
+
+		// 10. Create and Assign Eventos y Activaciones Navigation Menu
+		$eventos_menu_name = 'Menú Eventos Orange';
+		$eventos_menu_exists = wp_get_nav_menu_object( $eventos_menu_name );
+
+		if ( ! $eventos_menu_exists ) {
+			$eventos_menu_id = wp_create_nav_menu( $eventos_menu_name );
+
+			if ( ! is_wp_error( $eventos_menu_id ) ) {
+				$eventos_menu_items = array(
+					'Inicio'            => '#inicio',
+					'Tipos de Eventos'  => '#tipos-eventos',
+					'Cómo Trabajamos'   => '#como-trabajamos',
+					'Casos y Resultados' => '#casos-resultados',
+					'Contacto'          => '#contacto',
+				);
+
+				foreach ( $eventos_menu_items as $title => $url ) {
+					wp_update_nav_menu_item( $eventos_menu_id, 0, array(
+						'menu-item-title'   => $title,
+						'menu-item-url'     => $url,
+						'menu-item-status'  => 'publish',
+						'menu-item-type'    => 'custom',
+					) );
+				}
+
+				$locations = get_theme_mod( 'nav_menu_locations' );
+				$locations['eventos'] = $eventos_menu_id;
 				set_theme_mod( 'nav_menu_locations', $locations );
 			}
 		}
