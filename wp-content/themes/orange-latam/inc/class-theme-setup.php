@@ -60,6 +60,10 @@ class Orange_Theme_Setup {
 				'title'   => 'Gestión de Acceso',
 				'content' => '',
 			),
+			'presencia-digital' => array(
+				'title'   => 'Presencia Digital: Web, SEO y E-Commerce',
+				'content' => '',
+			),
 		);
 
 		$page_ids = array();
@@ -340,6 +344,69 @@ class Orange_Theme_Setup {
 
 				$locations = get_theme_mod( 'nav_menu_locations' );
 				$locations['eventos'] = $eventos_menu_id;
+				set_theme_mod( 'nav_menu_locations', $locations );
+			}
+		}
+
+		// 11. Create and Assign Gestión de Acceso Navigation Menu
+		$ga_menu_name = 'Menú Gestión de Acceso Orange';
+		$ga_menu_exists = wp_get_nav_menu_object( $ga_menu_name );
+
+		if ( ! $ga_menu_exists ) {
+			$ga_menu_id = wp_create_nav_menu( $ga_menu_name );
+
+			if ( ! is_wp_error( $ga_menu_id ) ) {
+				$ga_menu_items = array(
+					'Inicio'          => '#inicio',
+					'La Barrera'      => '#la-barrera',
+					'Cómo Trabajamos' => '#como-trabajamos',
+					'Para Quién'      => '#para-quien',
+					'Contacto'        => '#contacto',
+				);
+
+				foreach ( $ga_menu_items as $title => $url ) {
+					wp_update_nav_menu_item( $ga_menu_id, 0, array(
+						'menu-item-title'   => $title,
+						'menu-item-url'     => $url,
+						'menu-item-status'  => 'publish',
+						'menu-item-type'    => 'custom',
+					) );
+				}
+
+				$locations = get_theme_mod( 'nav_menu_locations' );
+				$locations['gestion_acceso'] = $ga_menu_id;
+				set_theme_mod( 'nav_menu_locations', $locations );
+			}
+		}
+
+		// 12. Create and Assign Presencia Digital Navigation Menu
+		$pd_menu_name = 'Menú Presencia Digital Orange';
+		$pd_menu_exists = wp_get_nav_menu_object( $pd_menu_name );
+
+		if ( ! $pd_menu_exists ) {
+			$pd_menu_id = wp_create_nav_menu( $pd_menu_name );
+
+			if ( ! is_wp_error( $pd_menu_id ) ) {
+				$pd_menu_items = array(
+					'Inicio'          => '#inicio',
+					'Diseño Web UX'   => '#web-ux',
+					'SEO / SEM'       => '#seo-sem',
+					'E-Commerce'      => '#ecommerce',
+					'Resultados'      => '#resultados',
+					'Contacto'        => '#contacto',
+				);
+
+				foreach ( $pd_menu_items as $title => $url ) {
+					wp_update_nav_menu_item( $pd_menu_id, 0, array(
+						'menu-item-title'   => $title,
+						'menu-item-url'     => $url,
+						'menu-item-status'  => 'publish',
+						'menu-item-type'    => 'custom',
+					) );
+				}
+
+				$locations = get_theme_mod( 'nav_menu_locations' );
+				$locations['presencia_digital'] = $pd_menu_id;
 				set_theme_mod( 'nav_menu_locations', $locations );
 			}
 		}

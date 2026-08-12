@@ -87,10 +87,10 @@ $pr_img_uri = $theme_uri . '/assets/images/pr';
 		<div class="pr-hero__container">
 			<div class="pr-hero__content" data-reveal="left">
 
-				<h1 class="pr-hero__title">Gestión de la Reputación</h1>
+				<h1 class="pr-hero__title">Agencia de Relaciones Públicas y Gestión de la Reputación</h1>
 
 				<p class="pr-hero__desc">
-					Construimos y protegemos la reputación de tu marca con estrategias de relaciones públicas, manejo de crisis y entrenamiento de voceros — para las organizaciones que no pueden darse el lujo de improvisar.
+					Como <strong>agencia de relaciones públicas</strong> en Perú, construimos y protegemos la reputación de tu marca con estrategias de PR, manejo de crisis y entrenamiento de voceros — para las organizaciones que no pueden darse el lujo de improvisar.
 				</p>
 
 
@@ -157,6 +157,9 @@ $pr_img_uri = $theme_uri . '/assets/images/pr';
 					</p>
 					<p class="pr-about__box-text">
 						En <strong>Orange Latam</strong> ayudamos a construir reputaciones sólidas, con estrategias adaptadas al contexto peruano y regional.
+					</p>
+					<p class="pr-about__box-text">
+						Como <strong>empresa de relaciones públicas en Perú</strong>, combinamos investigación, creatividad y disciplina de datos para sostener esa reputación en el tiempo.
 					</p>
 				</div>
 			</div>
@@ -407,6 +410,7 @@ $pr_img_uri = $theme_uri . '/assets/images/pr';
 				<div class="pr-why__left-col" data-reveal="left">
 					<span class="pr-section-tag">Por qué elegir Orange Latam</span>
 					<h2 class="pr-why__title">Estrategias que generan resultados medibles y confianza a largo plazo.</h2>
+					<p class="pr-why__intro">Como <strong>agencia de PR en Lima</strong>, acompañamos a organizaciones de distintos sectores con un equipo especializado y presencia regional.</p>
 				</div>
 
 				<div class="pr-why__right-col" data-reveal="right">

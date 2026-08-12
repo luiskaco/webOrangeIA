@@ -2,6 +2,22 @@
 
 ## [Unreleased]
 ### Añadido
+- **Nueva página "Presencia Digital" (`page-presencia-digital.php`, `/presencia-digital/`)**: hero con orbes flotantes, retícula técnica y sparkline SVG animado por GSAP; vitrina de portafolio con filtros funcionales (`data-filter`/`data-category`) y 3 covers SVG artesanales propios (`assets/images/presencia-digital/`, referencia visual hasta que el cliente entregue casos reales); ticker de tecnologías como marquee infinito CSS; calculadora de componentes interactiva que compone el `data-service` del modal de contacto. Animaciones vía nuevo `assets/js/pages/presencia-digital.js` (GSAP 3.15 + ScrollTrigger, con degradación progresiva sin GSAP y con `prefers-reduced-motion`).
+- **Rediseño de "Asuntos Públicos" (`page-asuntos-publicos.php`)**: mismo playbook GSAP que Presencia Digital adaptado al carácter editorial — trazo caligráfico SVG bajo el H1, parallax de columnas del mosaico, image reveals con `clip-path`, entrada lateral de la quote card (`assets/js/pages/asuntos-publicos.js`). Filas de stakeholders convertidas de `div` decorativos a `<button>` reales que abren el modal de contacto con el stakeholder preseleccionado. Enqueue de GSAP refactorizado a mapa `$gsap_pages` multi-página en `functions.php`.
+- **Sistema de citabilidad para IA (AEO/GEO)**: `llms.txt` en la raíz del sitio (índice curado de servicios para agentes de IA — no versionado en git, ver nota abajo) y reglas `Allow` explícitas para bots de IA (GPTBot, ChatGPT-User, OAI-SearchBot, ClaudeBot, Claude-User, Claude-SearchBot, anthropic-ai, PerplexityBot, Perplexity-User, Google-Extended, CCBot) cargadas en el editor de robots.txt de Rank Math.
+- JSON-LD (`Organization` + `Service`) agregado a `page-marketing-digital.php`, `page-podcast.php` y `page-marketing-de-influencers.php`; `CollectionPage` agregado a `home.php` (listado del blog). Completa la cobertura de datos estructurados en todas las páginas de servicio + blog.
+
+### Corregido
+- **Auditoría SEO de las 6 páginas de servicio nuevas** contra `Estructura_SEO_Servicios_Orange_Latam_1.docx`: identificada la causa raíz de los scores bajos de Rank Math (4-49/100) — las plantillas PHP dedicadas hardcodean el contenido en HTML, dejando vacío el campo `post_content` que Rank Math analiza. Decisión del cliente: descartar el score del plugin para estas plantillas en vez de poblar Gutenberg con copy espejo (genera contenido invisible/duplicado); lo que sí importa para Google (meta title/description, focus keyword, schema, H1/H2/keywords en el HTML real) se corrigió a mano. H1 corregido para incluir el keyword principal en `page-pr-gestion-reputacion.php`, `page-eventos-activaciones.php` y `page-presencia-digital.php` (esta última no tenía ningún `<h1>`). Keywords secundarias/long-tail insertadas en el copy real de las mismas 3 páginas.
+- **Investigación de keywords para Marketing Digital y Podcast** (no tenían, a diferencia de las 6 páginas nuevas): datos reales confirmados en SEMrush (base Perú/PEN) — cargados en Rank Math (Focus Keyword + Title + Meta) y reflejados en el H1 real de ambas plantillas. `page-podcast.php` no tenía ningún `<h1>` en toda la página.
+- Path SVG malformado del ícono de teléfono en `footer.php` (rompía la consola en todo el sitio).
+- Fix responsive en `asuntos-publicos.css`: `min-height` + `aspect-ratio` combinados forzaban un ancho mínimo que desbordaba el grid en móvil (enmascarado por `overflow-x:hidden`).
+- Auditoría de anti-patrones de diseño IA (skill `impeccable`) en `asuntos-publicos.css`: bordes side-tab eliminados, easings con rebote → ease-out expo, transiciones de `width`/`height` → `transform: scale`, CSS muerto (`.ap-cta`, ~60 líneas) eliminado.
+
+### Nota de infraestructura
+- `llms.txt` y el fix de charset UTF-8 para `.txt` en `.htaccess` viven en la raíz del sitio, **fuera** de `wp-content/themes/orange-latam/` — el `.gitignore` de este repo solo trackea el theme, `docs/`, `.agents/`, `.claude/` y `.md` de raíz. No viajan con `git push` ni con deploys de theme-only; requieren copia manual al servidor.
+
+
 - **Página Branding y Creatividad (`page-branding-creatividad.php`)**:
   - Creación de plantilla dedicada con paleta **Azul Océano (`#091F34`)** e iluminaciones en azul `#70B5E3`, sustituyendo tonos verdes/teal.
   - Configuración exacta de etiquetas SEO (Title, Meta Description, H1, H2, anclas `#creatividad-direccion-arte`, `#entregables`, `#faq`) e inclusión de datos estructurados Schema.org (`FAQPage`).

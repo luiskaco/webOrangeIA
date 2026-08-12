@@ -39,6 +39,8 @@ function orange_latam_theme_setup() {
 		'asuntos_publicos' => esc_html__( 'Asuntos Públicos Menu', 'orange-latam' ),
 		'branding'         => esc_html__( 'Branding & Creatividad Menu', 'orange-latam' ),
 		'eventos'          => esc_html__( 'Eventos y Activaciones Menu', 'orange-latam' ),
+		'gestion_acceso'   => esc_html__( 'Gestión de Acceso Menu', 'orange-latam' ),
+		'presencia_digital' => esc_html__( 'Presencia Digital Menu', 'orange-latam' ),
 	) );
 
 	// Switch default core markup for search form, comment form, and comments to output valid HTML5.
@@ -96,6 +98,8 @@ function orange_latam_enqueue_assets() {
 		orange_latam_enqueue_versioned_style( 'orange-latam-eventos-activaciones-style', '/assets/css/pages/eventos-activaciones.css', array( 'orange-latam-base-style' ) );
 	} elseif ( 'page-gestion-de-acceso.php' === $page_template ) {
 		orange_latam_enqueue_versioned_style( 'orange-latam-gestion-de-acceso-style', '/assets/css/pages/gestion-de-acceso.css', array( 'orange-latam-base-style' ) );
+	} elseif ( 'page-presencia-digital.php' === $page_template ) {
+		orange_latam_enqueue_versioned_style( 'orange-latam-presencia-digital-style', '/assets/css/pages/presencia-digital.css', array( 'orange-latam-base-style' ) );
 	} else {
 		orange_latam_enqueue_versioned_style( 'orange-latam-custom-style', '/assets/css/style.css', array( 'orange-latam-base-style' ) );
 	}
@@ -103,6 +107,33 @@ function orange_latam_enqueue_assets() {
 	// Enqueue Vanilla JS (cache-busted with file modification time)
 	$main_js_path = ORANGE_THEME_DIR . '/assets/js/main.js';
 	wp_enqueue_script( 'orange-latam-main-js', ORANGE_THEME_URI . '/assets/js/main.js', array(), file_exists( $main_js_path ) ? filemtime( $main_js_path ) : ORANGE_THEME_VERSION, true );
+
+	// GSAP + ScrollTrigger + script de página — solo en páginas con animaciones de scroll
+	$gsap_pages = array(
+		'page-presencia-digital.php' => array(
+			'handle' => 'orange-latam-presencia-digital-js',
+			'path'   => '/assets/js/pages/presencia-digital.js',
+		),
+		'page-asuntos-publicos.php'  => array(
+			'handle' => 'orange-latam-asuntos-publicos-js',
+			'path'   => '/assets/js/pages/asuntos-publicos.js',
+		),
+	);
+
+	if ( isset( $gsap_pages[ $page_template ] ) ) {
+		wp_enqueue_script( 'gsap', 'https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js', array(), '3.15.0', true );
+		wp_enqueue_script( 'gsap-scrolltrigger', 'https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/ScrollTrigger.min.js', array( 'gsap' ), '3.15.0', true );
+
+		$gsap_page      = $gsap_pages[ $page_template ];
+		$gsap_page_path = ORANGE_THEME_DIR . $gsap_page['path'];
+		wp_enqueue_script(
+			$gsap_page['handle'],
+			ORANGE_THEME_URI . $gsap_page['path'],
+			array( 'gsap-scrolltrigger' ),
+			file_exists( $gsap_page_path ) ? filemtime( $gsap_page_path ) : ORANGE_THEME_VERSION,
+			true
+		);
+	}
 
 	// Pass "Voz de Expertos" real post data to the carousel script (front page only)
 	if ( is_front_page() ) {
@@ -206,3 +237,108 @@ function orange_send_service_contact_handler() {
 // 4. AUTO-INITIALIZATION SETUP CLASS
 // ==========================================
 require_once ORANGE_THEME_DIR . '/inc/class-theme-setup.php';
+
+// ==========================================
+// 5. ON-PAGE SEO META & OPEN GRAPH GENERATOR
+// ==========================================
+function orange_latam_seo_meta_tags() {
+	if ( is_admin() ) {
+		return;
+	}
+
+	$title       = wp_get_document_title();
+	$site_name   = get_bloginfo( 'name' );
+	$description = 'Orange Latam — Agencia líder en comunicación estratégica, relaciones públicas, reputación corporativa, marketing de influencers y desarrollo web en Perú y Latam.';
+	$url         = is_singular() ? get_permalink() : home_url( '/' );
+	$og_image    = get_template_directory_uri() . '/assets/images/Orange-LAtam-dentro-de-las-40-mejores-campanas-del-mundo-en-Global-Sabre-Awards-2025-desktop.webp';
+
+	if ( is_singular() ) {
+		$post_id = get_the_ID();
+		if ( has_excerpt( $post_id ) ) {
+			$description = wp_strip_all_tags( get_the_excerpt( $post_id ) );
+		} else {
+			$content = wp_strip_all_tags( get_post_field( 'post_content', $post_id ) );
+			if ( ! empty( $content ) ) {
+				$description = mb_strimwidth( $content, 0, 155, '...' );
+			}
+		}
+		if ( has_post_thumbnail( $post_id ) ) {
+			$og_image = get_the_post_thumbnail_url( $post_id, 'full' );
+		}
+	}
+
+	echo "\n<!-- On-Page SEO Meta Tags & Open Graph -->\n";
+	echo '<meta name="description" content="' . esc_attr( $description ) . '">' . "\n";
+	echo '<link rel="canonical" href="' . esc_url( $url ) . '">' . "\n";
+	
+	// Open Graph
+	echo '<meta property="og:site_name" content="' . esc_attr( $site_name ) . '">' . "\n";
+	echo '<meta property="og:title" content="' . esc_attr( $title ) . '">' . "\n";
+	echo '<meta property="og:description" content="' . esc_attr( $description ) . '">' . "\n";
+	echo '<meta property="og:url" content="' . esc_url( $url ) . '">' . "\n";
+	echo '<meta property="og:type" content="' . ( is_single() ? 'article' : 'website' ) . '">' . "\n";
+	echo '<meta property="og:locale" content="es_ES">' . "\n";
+	echo '<meta property="og:image" content="' . esc_url( $og_image ) . '">' . "\n";
+	echo '<meta property="og:image:width" content="1200">' . "\n";
+	echo '<meta property="og:image:height" content="630">' . "\n";
+
+	// Twitter Card
+	echo '<meta name="twitter:card" content="summary_large_image">' . "\n";
+	echo '<meta name="twitter:title" content="' . esc_attr( $title ) . '">' . "\n";
+	echo '<meta name="twitter:description" content="' . esc_attr( $description ) . '">' . "\n";
+	echo '<meta name="twitter:image" content="' . esc_url( $og_image ) . '">' . "\n";
+}
+add_action( 'wp_head', 'orange_latam_seo_meta_tags', 2 );
+
+// ==========================================
+// 6. AUTOMATIC IMAGE SEO & PERFORMANCE OPTIMIZER
+// ==========================================
+function orange_latam_optimize_image_attributes( $attr, $attachment = null, $size = null ) {
+	// Add decoding="async" for non-blocking browser rendering
+	if ( ! isset( $attr['decoding'] ) ) {
+		$attr['decoding'] = 'async';
+	}
+
+	// Enforce loading="lazy" unless explicitly set to eager
+	if ( ! isset( $attr['loading'] ) ) {
+		$attr['loading'] = 'lazy';
+	}
+
+	// Automatic SEO alt fallback if alt is empty
+	if ( empty( $attr['alt'] ) && $attachment ) {
+		$title = get_the_title( $attachment->ID );
+		if ( ! empty( $title ) ) {
+			$attr['alt'] = esc_attr( $title . ' — Orange Latam' );
+		}
+	}
+
+	return $attr;
+}
+add_filter( 'wp_get_attachment_image_attributes', 'orange_latam_optimize_image_attributes', 10, 3 );
+
+/**
+ * Filter HTML content output to auto-inject decoding="async" and missing alt tags for inline images.
+ */
+function orange_latam_filter_html_image_seo( $content ) {
+	if ( empty( $content ) || is_admin() ) {
+		return $content;
+	}
+
+	return preg_replace_callback( '/<img\s+([^>]+)>/i', function( $matches ) {
+		$img_html = $matches[0];
+		
+		// Inject decoding="async" if missing
+		if ( false === strpos( $img_html, 'decoding=' ) ) {
+			$img_html = str_replace( '<img ', '<img decoding="async" ', $img_html );
+		}
+
+		// Inject loading="lazy" if missing and not explicitly eager
+		if ( false === strpos( $img_html, 'loading=' ) ) {
+			$img_html = str_replace( '<img ', '<img loading="lazy" ', $img_html );
+		}
+
+		return $img_html;
+	}, $content );
+}
+add_filter( 'the_content', 'orange_latam_filter_html_image_seo' );
+

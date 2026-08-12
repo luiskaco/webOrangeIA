@@ -49,7 +49,7 @@ $theme_uri = get_template_directory_uri();
 				</h1>
 
 				<p class="ga-hero__desc">
-					Ayudamos a que la sociedad acceda a avances médicos y tratamientos de forma ética y oportuna. Desarrollamos estrategias integrales de comunicación farmacéutica y relacionamiento institucional para el sector salud y farma en Perú y Latinoamérica.
+					Ayudamos a que la sociedad acceda a avances médicos y tratamientos de forma ética y oportuna, con estrategias de comunicación farmacéutica y relacionamiento institucional para el sector salud y farma en Perú y Latinoamérica.
 				</p>
 			</div>
 
@@ -74,47 +74,7 @@ $theme_uri = get_template_directory_uri();
 		</div>
 	</section>
 
-	<!-- ==========================================
-	     2. FLOATING HIGHLIGHTS BAR (3 CARDS)
-	     ========================================== -->
-	<section class="ga-highlights">
-		<div class="ga-highlights__container">
-			<div class="ga-highlights__grid">
-				<!-- Highlight Card 1 -->
-				<div class="ga-highlight-card" data-reveal="up">
-					<div class="ga-highlight-card__icon">
-						<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
-					</div>
-					<h3 class="ga-highlight-card__title">Análisis del Ecosistema</h3>
-					<p class="ga-highlight-card__desc">
-						Comprendemos las dinámicas regulatorias, económicas e institucionales que influyen en el acceso a la salud.
-					</p>
-				</div>
 
-				<!-- Highlight Card 2 -->
-				<div class="ga-highlight-card" data-reveal="up" data-reveal-delay="100">
-					<div class="ga-highlight-card__icon">
-						<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><path d="M9 8h6M9 12h4"/></svg>
-					</div>
-					<h3 class="ga-highlight-card__title">Comunicación en Salud</h3>
-					<p class="ga-highlight-card__desc">
-						Traducimos información científica compleja en mensajes claros, relevantes y con sustento técnico responsable.
-					</p>
-				</div>
-
-				<!-- Highlight Card 3 -->
-				<div class="ga-highlight-card" data-reveal="up" data-reveal-delay="200">
-					<div class="ga-highlight-card__icon">
-						<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-					</div>
-					<h3 class="ga-highlight-card__title">Relacionamiento Ético</h3>
-					<p class="ga-highlight-card__desc">
-						Facilitamos espacios de diálogo y confianza entre múltiples actores para desbloquear el acceso a medicamentos.
-					</p>
-				</div>
-			</div>
-		</div>
-	</section>
 
 	<!-- ==========================================
 	     3. LA BARRERA DE ACCESO A LA SALUD
@@ -122,15 +82,56 @@ $theme_uri = get_template_directory_uri();
 	<section class="ga-about" id="la-barrera">
 		<div class="ga-about__container">
 			<div class="ga-about__media" data-reveal="left">
-				<div class="ga-about__img-wrapper">
-					<img class="ga-about__img" 
-						src="<?php echo esc_url( $theme_uri . '/assets/images/gestion-de-acceso/barrera.png' ); ?>" 
-						alt="Equipo de salud analizando barreras de acceso a tratamientos médicos en Perú">
+				<div class="ga-about__avatar-composition">
+					<!-- Avatar 1 (Top Left) -->
+					<div class="ga-about__avatar-item ga-about__avatar-item--1">
+						<div class="ga-about__circle">
+							<img src="<?php echo esc_url( $theme_uri . '/assets/images/gestion-de-acceso/avatar-1.png' ); ?>" alt="Paciente">
+						</div>
+						<div class="ga-about__pill-badge ga-about__pill-badge--left">
+							<span class="ga-about__pill-icon">
+								<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+							</span>
+							<div class="ga-about__pill-text">
+								<strong>Comunidad</strong>
+								<span>Acceso a Salud</span>
+							</div>
+						</div>
+					</div>
+
+					<!-- Avatar 2 (Top Right Small) -->
+					<div class="ga-about__avatar-item ga-about__avatar-item--2">
+						<div class="ga-about__circle">
+							<img src="<?php echo esc_url( $theme_uri . '/assets/images/gestion-de-acceso/avatar-2.png' ); ?>" alt="Especialista Médica">
+						</div>
+					</div>
+
+					<!-- Avatar 3 (Bottom Left Medium) -->
+					<div class="ga-about__avatar-item ga-about__avatar-item--3">
+						<div class="ga-about__circle">
+							<img src="<?php echo esc_url( $theme_uri . '/assets/images/gestion-de-acceso/avatar-3.png' ); ?>" alt="Usuario de Salud">
+						</div>
+					</div>
+
+					<!-- Avatar 4 (Bottom Right Main) -->
+					<div class="ga-about__avatar-item ga-about__avatar-item--4">
+						<div class="ga-about__circle">
+							<img src="<?php echo esc_url( $theme_uri . '/assets/images/gestion-de-acceso/avatar-4.png' ); ?>" alt="Pacientes y Tratamientos">
+						</div>
+						<div class="ga-about__pill-badge ga-about__pill-badge--right">
+							<span class="ga-about__pill-icon">
+								<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+							</span>
+							<div class="ga-about__pill-text">
+								<strong>Soluciones</strong>
+								<span>Innovación Médica</span>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 
 			<div class="ga-about__content" data-reveal="right">
-				<span class="ga-section-tag">Desafío Sanitario</span>
 				<h2 class="ga-about__title">La barrera de acceso a la salud</h2>
 				
 				<p class="ga-about__lead">
@@ -138,11 +139,11 @@ $theme_uri = get_template_directory_uri();
 				</p>
 
 				<p class="ga-about__text">
-					Intervienen factores regulatorios, económicos, institucionales, sociales y de información que dificultan que las soluciones sanitarias lleguen a quienes más las necesitan. En este contexto, la <strong>gestión de acceso o market access en salud</strong> busca comprender y abordar estas barreras.
+					Factores regulatorios, económicos, institucionales, sociales y de información dificultan que las soluciones sanitarias lleguen a quienes más las necesitan. La <strong>gestión de acceso o market access en salud</strong> busca comprender y superar estas barreras.
 				</p>
 
 				<p class="ga-about__text">
-					En <strong>Orange Latam</strong> trabajamos desde la estrategia y la comunicación en salud para ayudar a las organizaciones a comprender el ecosistema y comunicar el valor de sus soluciones de manera clara, responsable y sustentada.
+					En <strong>Orange Latam</strong> trabajamos la estrategia y comunicación en salud para ayudar a las organizaciones a comprender el ecosistema y comunicar el valor de sus soluciones con claridad y responsabilidad.
 				</p>
 
 				<div class="ga-about__features">
@@ -172,78 +173,29 @@ $theme_uri = get_template_directory_uri();
 	     ========================================== -->
 	<section class="ga-pillars" id="como-trabajamos">
 		<div class="ga-pillars__header" data-reveal="up">
-			<span class="ga-section-tag">Nuestras Soluciones</span>
 			<h2 class="ga-pillars__title">Cómo desbloqueamos el acceso de forma ética</h2>
 			<p class="ga-pillars__desc">
-				El acceso sostenible requiere construir confianza y generar conversaciones basadas en evidencia. Desarrollamos estrategias de comunicación respetando los marcos regulatorios y principios éticos del sector.
+				El acceso sostenible requiere confianza y conversaciones basadas en evidencia. Desarrollamos estrategias de comunicación que respetan los marcos regulatorios y principios éticos del sector.
 			</p>
 		</div>
 
-		<div class="ga-pillars__grid">
+		<div class="ga-pillars__grid" data-reveal="up">
 			<!-- Pilar 1 -->
-			<div class="ga-pillar-card" data-reveal="up">
-				<div class="ga-pillar-card__icon-wrapper">
-					<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
-				</div>
-				<h3 class="ga-pillar-card__title">Análisis del Ecosistema de Salud</h3>
-				<p class="ga-pillar-card__text">
-					Identificamos actores, dinámicas, barreras y oportunidades que influyen en el acceso a una solución o innovación sanitaria.
-				</p>
+			<div class="ga-pillar-card">
+				<h3 class="ga-pillar-card__title">Análisis del Ecosistema</h3>
+				<p class="ga-pillar-card__desc">Comprendemos las dinámicas regulatorias, económicas e institucionales que influyen en el acceso a la salud.</p>
 			</div>
 
 			<!-- Pilar 2 -->
-			<div class="ga-pillar-card" data-reveal="up" data-reveal-delay="100">
-				<div class="ga-pillar-card__icon-wrapper">
-					<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-				</div>
-				<h3 class="ga-pillar-card__title">Estrategia de Comunicación en Salud</h3>
-				<p class="ga-pillar-card__text">
-					Traducimos información técnica y científica en mensajes claros y relevantes para diferentes audiencias del sector salud.
-				</p>
+			<div class="ga-pillar-card">
+				<h3 class="ga-pillar-card__title">Comunicación en Salud</h3>
+				<p class="ga-pillar-card__desc">Traducimos información científica compleja en mensajes claros, relevantes y técnicamente responsables.</p>
 			</div>
 
 			<!-- Pilar 3 -->
-			<div class="ga-pillar-card" data-reveal="up" data-reveal-delay="200">
-				<div class="ga-pillar-card__icon-wrapper">
-					<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-				</div>
-				<h3 class="ga-pillar-card__title">Relacionamiento con Stakeholders</h3>
-				<p class="ga-pillar-card__text">
-					Generamos espacios de diálogo directo con actores relevantes del sistema de salud de acuerdo con las metas de cada proyecto.
-				</p>
-			</div>
-
-			<!-- Pilar 4 -->
-			<div class="ga-pillar-card" data-reveal="up">
-				<div class="ga-pillar-card__icon-wrapper">
-					<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.5 20.5L3 13l3-3 7.5 7.5z"/><path d="M13.5 17.5L21 10l-3-3-7.5 7.5z"/><circle cx="17.5" cy="6.5" r="2.5"/></svg>
-				</div>
-				<h3 class="ga-pillar-card__title">Comunicación Farmacéutica</h3>
-				<p class="ga-pillar-card__text">
-					Desarrollamos contenidos orientados a explicar la propuesta de valor de tratamientos e innovaciones a públicos especializados y generales.
-				</p>
-			</div>
-
-			<!-- Pilar 5 -->
-			<div class="ga-pillar-card" data-reveal="up" data-reveal-delay="100">
-				<div class="ga-pillar-card__icon-wrapper">
-					<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
-				</div>
-				<h3 class="ga-pillar-card__title">Acceso a Medicamentos</h3>
-				<p class="ga-pillar-card__text">
-					Acompañamos la comunicación alrededor de la incorporación y disponibilidad de medicamentos en el mercado local e institucional.
-				</p>
-			</div>
-
-			<!-- Pilar 6 -->
-			<div class="ga-pillar-card" data-reveal="up" data-reveal-delay="200">
-				<div class="ga-pillar-card__icon-wrapper">
-					<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18"/><path d="M9 8h6"/><path d="M9 12h6"/><path d="M9 16h6"/><path d="M6 21V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v17"/></svg>
-				</div>
-				<h3 class="ga-pillar-card__title">Gestión de Asuntos Públicos en Salud</h3>
-				<p class="ga-pillar-card__text">
-					Integramos el análisis del entorno institucional y regulatorio para abordar desafíos complejos del sector con legitimidad.
-				</p>
+			<div class="ga-pillar-card">
+				<h3 class="ga-pillar-card__title">Relacionamiento Ético</h3>
+				<p class="ga-pillar-card__desc">Facilitamos espacios de diálogo y confianza entre múltiples actores para desbloquear el acceso a medicamentos.</p>
 			</div>
 		</div>
 	</section>
@@ -253,10 +205,9 @@ $theme_uri = get_template_directory_uri();
 	     ========================================== -->
 	<section class="ga-targets" id="para-quien">
 		<div class="ga-targets__header" data-reveal="up">
-			<span class="ga-section-tag">Especialización por Sector</span>
 			<h2 class="ga-targets__title">Para quién es este servicio</h2>
 			<p class="ga-targets__desc">
-				La gestión de acceso es relevante para organizaciones que desarrollan, representan, financian o implementan soluciones destinadas a mejorar los resultados en salud.
+				La gestión de acceso es clave para organizaciones que desarrollan, representan, financian o implementan soluciones para mejorar los resultados en salud.
 			</p>
 		</div>
 
@@ -304,7 +255,6 @@ $theme_uri = get_template_directory_uri();
 	     ========================================== -->
 	<section class="bc-cta" id="contacto">
 		<div class="bc-cta__container" data-reveal="up">
-			<span class="bc-cta__tag">Market Access & Salud</span>
 			<h2 class="bc-cta__title">Trabajemos juntos</h2>
 			<p class="bc-cta__desc">¿Tienes un desafío de acceso, comunicación o posicionamiento en salud? Conversemos sobre tu próximo proyecto.</p>
 			<a href="#contacto" class="bc-cta__btn open-contact-modal" data-service="Gestión de Acceso (Market Access)">

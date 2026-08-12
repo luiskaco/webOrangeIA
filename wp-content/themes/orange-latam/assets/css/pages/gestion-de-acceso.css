@@ -278,45 +278,117 @@ body[class*="gestion-de-acceso"] .header .header__burger-line {
 }
 
 .ga-highlight-card {
+	position: relative;
 	background: #FFFFFF;
-	padding: 32px 28px;
-	border-radius: 20px;
-	border: 1px solid var(--ga-border);
-	box-shadow: var(--ga-card-shadow);
-	transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+	padding: 36px 30px 30px;
+	border-radius: 24px;
+	border: 1px solid rgba(0, 194, 168, 0.15);
+	box-shadow: 0 12px 32px rgba(9, 31, 52, 0.05), 0 2px 8px rgba(0, 194, 168, 0.04);
+	transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+.ga-highlight-card__top-bar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 4px;
+	background: linear-gradient(90deg, var(--ga-primary), #2FD5C4);
+	opacity: 0.7;
+	transition: opacity 0.3s ease, height 0.3s ease;
 }
 
 .ga-highlight-card:hover {
-	transform: translateY(-6px);
-	box-shadow: var(--ga-card-hover-shadow);
-	border-color: var(--ga-primary);
+	transform: translateY(-8px);
+	box-shadow: 0 24px 48px rgba(0, 194, 168, 0.15), 0 4px 16px rgba(9, 31, 52, 0.06);
+	border-color: rgba(0, 194, 168, 0.4);
+}
+
+.ga-highlight-card:hover .ga-highlight-card__top-bar {
+	opacity: 1;
+	height: 5px;
+}
+
+.ga-highlight-card__num {
+	position: absolute;
+	top: 18px;
+	right: 24px;
+	font-family: var(--font-display);
+	font-size: 38px;
+	font-weight: 700;
+	color: rgba(0, 194, 168, 0.12);
+	line-height: 1;
+	user-select: none;
+	transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.ga-highlight-card:hover .ga-highlight-card__num {
+	color: rgba(0, 194, 168, 0.25);
+	transform: scale(1.1);
 }
 
 .ga-highlight-card__icon {
-	width: 52px;
-	height: 52px;
-	background: var(--ga-primary-light);
-	border-radius: 14px;
+	width: 54px;
+	height: 54px;
+	background: linear-gradient(135deg, rgba(0, 194, 168, 0.12) 0%, rgba(0, 194, 168, 0.04) 100%);
+	border: 1px solid rgba(0, 194, 168, 0.2);
+	border-radius: 16px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	color: var(--ga-primary);
-	margin-bottom: 20px;
+	margin-bottom: 22px;
+	transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+}
+
+.ga-highlight-card:hover .ga-highlight-card__icon {
+	transform: scale(1.08) rotate(-3deg);
+	background: var(--ga-primary);
+	color: #FFFFFF;
+	border-color: var(--ga-primary);
 }
 
 .ga-highlight-card__title {
 	font-family: var(--font-display);
 	font-size: 22px;
 	color: var(--ga-dark);
-	margin: 0 0 10px;
-	font-weight: 400;
+	margin: 0 0 12px;
+	font-weight: 500;
+	transition: color 0.3s ease;
+}
+
+.ga-highlight-card:hover .ga-highlight-card__title {
+	color: var(--ga-primary);
 }
 
 .ga-highlight-card__desc {
 	font-size: 15px;
-	line-height: 1.55;
+	line-height: 1.6;
 	color: var(--ga-body);
-	margin: 0;
+	margin: 0 0 24px;
+	flex-grow: 1;
+}
+
+.ga-highlight-card__footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-top: 16px;
+	border-top: 1px dashed rgba(0, 194, 168, 0.18);
+	font-size: 13px;
+	font-weight: 600;
+	color: var(--ga-primary);
+}
+
+.ga-highlight-card__arrow {
+	transition: transform 0.3s ease;
+}
+
+.ga-highlight-card:hover .ga-highlight-card__arrow {
+	transform: translateX(5px);
 }
 
 /* ==========================================================================
@@ -339,21 +411,132 @@ body[class*="gestion-de-acceso"] .header .header__burger-line {
 	position: relative;
 }
 
-.ga-about__img-wrapper {
+.ga-about__avatar-composition {
 	position: relative;
 	width: 100%;
-	aspect-ratio: 4 / 3.8;
-	border-radius: 24px;
-	overflow: hidden;
-	box-shadow: var(--ga-card-shadow);
-	border: 1px solid var(--ga-border);
+	max-width: 560px;
+	margin: 0 auto;
+	min-height: 460px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-.ga-about__img {
+.ga-about__avatar-item {
+	position: absolute;
+	transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+
+.ga-about__avatar-item:hover {
+	transform: translateY(-8px) scale(1.04);
+	z-index: 10;
+}
+
+.ga-about__circle {
+	border-radius: 50%;
+	overflow: hidden;
+	box-shadow: 0 16px 40px rgba(0, 194, 168, 0.15), 0 4px 16px rgba(9, 31, 52, 0.08);
+	border: 4px solid #ffffff;
+	background: #f0fdfa;
+}
+
+.ga-about__circle img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
 	display: block;
+	border-radius: 50%;
+}
+
+/* Avatar positioning and sizing inspired by reference design */
+.ga-about__avatar-item--1 {
+	top: 75px;
+	left: 4%;
+}
+.ga-about__avatar-item--1 .ga-about__circle {
+	width: 190px;
+	height: 190px;
+}
+
+.ga-about__avatar-item--2 {
+	top: 10px;
+	right: 28%;
+}
+.ga-about__avatar-item--2 .ga-about__circle {
+	width: 115px;
+	height: 115px;
+}
+
+.ga-about__avatar-item--3 {
+	bottom: 15px;
+	left: 0;
+}
+.ga-about__avatar-item--3 .ga-about__circle {
+	width: 160px;
+	height: 160px;
+}
+
+.ga-about__avatar-item--4 {
+	bottom: 10px;
+	right: 2%;
+}
+.ga-about__avatar-item--4 .ga-about__circle {
+	width: 250px;
+	height: 250px;
+}
+
+/* Floating White Pill Badges */
+.ga-about__pill-badge {
+	position: absolute;
+	background: #ffffff;
+	border-radius: 30px;
+	padding: 8px 16px;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	box-shadow: 0 10px 28px rgba(9, 31, 52, 0.12);
+	border: 1px solid rgba(0, 194, 168, 0.25);
+	white-space: nowrap;
+	z-index: 5;
+}
+
+.ga-about__pill-badge--left {
+	bottom: 10px;
+	right: -15px;
+}
+
+.ga-about__pill-badge--right {
+	bottom: 16px;
+	right: 20px;
+}
+
+.ga-about__pill-icon {
+	width: 28px;
+	height: 28px;
+	border-radius: 50%;
+	background: rgba(0, 194, 168, 0.12);
+	color: var(--ga-teal);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+}
+
+.ga-about__pill-text {
+	display: flex;
+	flex-direction: column;
+	line-height: 1.25;
+}
+
+.ga-about__pill-text strong {
+	font-size: 13px;
+	color: var(--ga-dark);
+	font-weight: 600;
+}
+
+.ga-about__pill-text span {
+	font-size: 11px;
+	color: #64748b;
 }
 
 .ga-about__content {
@@ -451,8 +634,9 @@ body[class*="gestion-de-acceso"] .header .header__burger-line {
 	margin: 0;
 }
 
+/* Minimalist Pillars Grid */
 .ga-pillars__grid {
-	max-width: 1280px;
+	max-width: 1200px;
 	margin: 0 auto;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
@@ -461,15 +645,18 @@ body[class*="gestion-de-acceso"] .header .header__burger-line {
 
 .ga-pillar-card {
 	background: #FFFFFF;
-	padding: 36px 30px;
 	border-radius: 20px;
-	border: 1px solid var(--ga-border);
-	box-shadow: 0 8px 24px rgba(0, 194, 168, 0.05);
-	transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+	padding: 40px 30px;
+	border: 1px solid rgba(0, 194, 168, 0.22);
+	box-shadow: 0 10px 30px rgba(0, 194, 168, 0.05), 0 2px 8px rgba(9, 31, 52, 0.03);
 	display: flex;
 	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
 	position: relative;
 	overflow: hidden;
+	transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease;
 }
 
 .ga-pillar-card::before {
@@ -477,49 +664,56 @@ body[class*="gestion-de-acceso"] .header .header__burger-line {
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 100%;
+	right: 0;
 	height: 4px;
-	background: var(--ga-primary);
-	opacity: 0;
+	background: linear-gradient(90deg, var(--ga-primary) 0%, rgba(0, 194, 168, 0.4) 100%);
+	opacity: 0.8;
 	transition: opacity 0.3s ease;
 }
 
 .ga-pillar-card:hover {
 	transform: translateY(-6px);
-	box-shadow: var(--ga-card-hover-shadow);
-	border-color: var(--ga-primary);
+	border-color: rgba(0, 194, 168, 0.45);
+	box-shadow: 0 20px 40px rgba(0, 194, 168, 0.15), 0 4px 14px rgba(9, 31, 52, 0.06);
 }
 
 .ga-pillar-card:hover::before {
 	opacity: 1;
 }
 
-.ga-pillar-card__icon-wrapper {
-	width: 56px;
-	height: 56px;
-	background: var(--ga-primary-light);
-	border-radius: 16px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	color: var(--ga-primary);
-	margin-bottom: 22px;
-}
-
 .ga-pillar-card__title {
 	font-family: var(--font-display);
-	font-size: 21px;
+	font-size: 22px;
+	font-weight: 500;
 	color: var(--ga-dark);
-	margin: 0 0 12px;
-	font-weight: 400;
+	margin: 0 0 14px;
 	line-height: 1.25;
+	transition: color 0.3s ease;
 }
 
-.ga-pillar-card__text {
+.ga-pillar-card:hover .ga-pillar-card__title {
+	color: var(--ga-primary);
+}
+
+.ga-pillar-card__desc {
 	font-size: 15px;
 	line-height: 1.6;
 	color: var(--ga-body);
 	margin: 0;
+}
+
+@media (max-width: 1024px) {
+	.ga-pillars__grid {
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px;
+	}
+}
+
+@media (max-width: 860px) {
+	.ga-pillars__grid {
+		grid-template-columns: 1fr;
+		max-width: 540px;
+	}
 }
 
 /* ==========================================================================
@@ -658,10 +852,6 @@ body[class*="gestion-de-acceso"] .header .header__burger-line {
 		gap: 40px;
 	}
 
-	.ga-pillars__grid {
-		grid-template-columns: repeat(2, 1fr);
-	}
-
 	.ga-targets__grid {
 		grid-template-columns: repeat(2, 1fr);
 	}
@@ -692,4 +882,26 @@ body[class*="gestion-de-acceso"] .header .header__burger-line {
 	.ga-about__features {
 		grid-template-columns: 1fr;
 	}
+
+	.ga-about__avatar-composition {
+		max-width: 380px;
+		min-height: 313px;
+	}
+
+	.ga-about__avatar-item--1 { top: 75px; }
+	.ga-about__avatar-item--1 .ga-about__circle { width: 130px; height: 130px; }
+
+	.ga-about__avatar-item--2 { top: 25px; }
+	.ga-about__avatar-item--2 .ga-about__circle { width: 80px; height: 80px; }
+
+	.ga-about__avatar-item--3 { bottom: 10px; }
+	.ga-about__avatar-item--3 .ga-about__circle { width: 110px; height: 110px; }
+
+	.ga-about__avatar-item--4 .ga-about__circle { width: 170px; height: 170px; }
+
+	.ga-about__pill-badge { padding: 6px 12px; }
+	.ga-about__pill-badge--left { bottom: 3px; left: -4px; }
+	.ga-about__pill-badge--right { bottom: 8px; right: -7px; }
+	.ga-about__pill-text strong { font-size: 11px; }
+	.ga-about__pill-text span { font-size: 10px; }
 }

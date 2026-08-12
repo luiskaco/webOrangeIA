@@ -24,13 +24,14 @@ $is_asuntos_publicos_context  = is_page( 'asuntos-publicos' ) || is_page_templat
 $is_branding_context          = is_page( 'branding-creatividad' ) || is_page_template( 'page-branding-creatividad.php' );
 $is_eventos_context           = is_page( 'eventos-activaciones' ) || is_page_template( 'page-eventos-activaciones.php' );
 $is_gestion_acceso_context    = is_page( 'gestion-de-acceso' ) || is_page_template( 'page-gestion-de-acceso.php' );
-$nav_location                 = $is_gestion_acceso_context ? 'gestion_acceso' : ( $is_eventos_context ? 'eventos' : ( $is_branding_context ? 'branding' : ( $is_asuntos_publicos_context ? 'asuntos_publicos' : ( $is_pr_context ? 'pr' : ( $is_podcast_context ? 'podcast' : ( $is_marketing_digital_context ? 'marketing_digital' : ( $is_influencers_context ? 'influencers' : ( $is_blog_context ? 'blog' : 'primary' ) ) ) ) ) ) ) );
-$logo_url                     = ( $is_blog_context || $is_influencers_context || $is_marketing_digital_context || $is_podcast_context || $is_pr_context || $is_asuntos_publicos_context || $is_branding_context || $is_eventos_context || $is_gestion_acceso_context ) ? home_url( '/' ) : '#inicio';
+$is_presencia_digital_context = is_page( 'presencia-digital' ) || is_page_template( 'page-presencia-digital.php' );
+$nav_location                 = $is_presencia_digital_context ? 'presencia_digital' : ( $is_gestion_acceso_context ? 'gestion_acceso' : ( $is_eventos_context ? 'eventos' : ( $is_branding_context ? 'branding' : ( $is_asuntos_publicos_context ? 'asuntos_publicos' : ( $is_pr_context ? 'pr' : ( $is_podcast_context ? 'podcast' : ( $is_marketing_digital_context ? 'marketing_digital' : ( $is_influencers_context ? 'influencers' : ( $is_blog_context ? 'blog' : 'primary' ) ) ) ) ) ) ) ) );
+$logo_url                     = ( $is_blog_context || $is_influencers_context || $is_marketing_digital_context || $is_podcast_context || $is_pr_context || $is_asuntos_publicos_context || $is_branding_context || $is_eventos_context || $is_gestion_acceso_context || $is_presencia_digital_context ) ? home_url( '/' ) : '#inicio';
 ?>
-<header class="header<?php echo ( $is_pr_context || $is_asuntos_publicos_context || $is_branding_context || $is_eventos_context || $is_gestion_acceso_context ) ? ' header--pr' : ''; ?>">
+<header class="header<?php echo ( $is_pr_context || $is_asuntos_publicos_context || $is_branding_context || $is_eventos_context || $is_gestion_acceso_context || $is_presencia_digital_context ) ? ' header--pr' : ''; ?>">
 	<div class="header__container">
 		<a href="<?php echo esc_url( $logo_url ); ?>" class="header__logo">
-			<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/logo.webp" alt="Orange Latam Logo" class="header__logo-img" style="height: 30px; width: auto; display: block;">
+			<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/logo.webp" alt="Orange Latam — Agencia de Comunicación Estratégica, PR y Soluciones Digitales" class="header__logo-img" loading="eager" decoding="async" fetchpriority="high" width="160" height="30" style="height: 30px; width: auto; display: block;">
 		</a>
 
 		<button type="button" class="header__burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="header-nav">
@@ -49,6 +50,25 @@ $logo_url                     = ( $is_blog_context || $is_influencers_context ||
 				foreach ( $menu_items as $item ) {
 					echo '<a href="' . esc_url( $item->url ) . '" class="header__link">' . esc_html( $item->title ) . '</a>';
 				}
+			} elseif ( $is_presencia_digital_context ) {
+				// Fallback if the Presencia Digital menu hasn't been generated yet.
+				?>
+				<a href="#inicio" class="header__link">Inicio</a>
+				<a href="#web-ux" class="header__link">Diseño Web UX</a>
+				<a href="#seo-sem" class="header__link">SEO / SEM</a>
+				<a href="#ecommerce" class="header__link">E-Commerce</a>
+				<a href="#resultados" class="header__link">Resultados</a>
+				<a href="#contacto" class="header__link">Contacto</a>
+				<?php
+			} elseif ( $is_gestion_acceso_context ) {
+				// Fallback if the Gestión de Acceso menu hasn't been generated yet.
+				?>
+				<a href="#inicio" class="header__link">Inicio</a>
+				<a href="#la-barrera" class="header__link">La Barrera</a>
+				<a href="#como-trabajamos" class="header__link">Cómo Trabajamos</a>
+				<a href="#para-quien" class="header__link">Para Quién</a>
+				<a href="#contacto" class="header__link">Contacto</a>
+				<?php
 			} elseif ( $is_eventos_context ) {
 				// Fallback if the Eventos menu hasn't been generated yet.
 				?>

@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" role="img" aria-label="Vista previa de tienda e-commerce de alta conversión">
+  <defs>
+    <linearGradient id="ecBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B132B"/>
+      <stop offset="1" stop-color="#070B19"/>
+    </linearGradient>
+    <linearGradient id="ecAccent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#00F0FF"/>
+      <stop offset="1" stop-color="#38BDF8"/>
+    </linearGradient>
+    <linearGradient id="ecProd1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#123052"/>
+      <stop offset="1" stop-color="#0C1B3E"/>
+    </linearGradient>
+    <linearGradient id="ecProd2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#251A4E"/>
+      <stop offset="1" stop-color="#141032"/>
+    </linearGradient>
+    <radialGradient id="ecGlow" cx="0.15" cy="0.9" r="0.9">
+      <stop offset="0" stop-color="#8B5CF6" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#8B5CF6" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="560" rx="20" fill="url(#ecBg)"/>
+  <rect width="800" height="560" rx="20" fill="url(#ecGlow)"/>
+
+  <!-- Browser chrome -->
+  <rect x="36" y="30" width="728" height="46" rx="14" fill="#101B3D"/>
+  <circle cx="66" cy="53" r="6" fill="#EF4444"/>
+  <circle cx="88" cy="53" r="6" fill="#F59E0B"/>
+  <circle cx="110" cy="53" r="6" fill="#10B981"/>
+  <rect x="150" y="41" width="380" height="24" rx="12" fill="#0B132B" stroke="#1C2541"/>
+  <text x="170" y="58" font-family="monospace" font-size="13" fill="#64748B">tienda-online.pe/checkout</text>
+
+  <!-- Store header -->
+  <rect x="36" y="92" width="728" height="52" rx="12" fill="#0E1935"/>
+  <rect x="60" y="108" width="96" height="20" rx="6" fill="url(#ecAccent)" opacity="0.9"/>
+  <rect x="330" y="106" width="240" height="24" rx="12" fill="#0B132B" stroke="#1C2541"/>
+  <circle cx="352" cy="118" r="6" fill="none" stroke="#475569" stroke-width="2"/>
+  <g>
+    <rect x="700" y="100" width="42" height="36" rx="12" fill="#0B2B3A" stroke="#00F0FF" stroke-opacity="0.5"/>
+    <path d="M712 111 h4 l3 12 h9 l3 -9 h-13" fill="none" stroke="#00F0FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="740" cy="104" r="8" fill="#00F0FF"/>
+    <text x="740" y="108" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="10" fill="#0B132B">3</text>
+  </g>
+
+  <!-- Product grid (left 2x2) -->
+  <g>
+    <rect x="36" y="160" width="222" height="170" rx="14" fill="#0E1935" stroke="#1C2541"/>
+    <rect x="52" y="176" width="190" height="92" rx="10" fill="url(#ecProd1)"/>
+    <circle cx="147" cy="222" r="26" fill="#1B4468" opacity="0.85"/>
+    <rect x="52" y="280" width="110" height="10" rx="5" fill="#CBD5E1"/>
+    <text x="52" y="316" font-family="Arial, sans-serif" font-weight="700" font-size="17" fill="#00F0FF">S/ 149</text>
+    <rect x="162" y="296" width="80" height="26" rx="13" fill="url(#ecAccent)"/>
+  </g>
+  <g>
+    <rect x="274" y="160" width="222" height="170" rx="14" fill="#0E1935" stroke="#1C2541"/>
+    <rect x="290" y="176" width="190" height="92" rx="10" fill="url(#ecProd2)"/>
+    <rect x="356" y="196" width="58" height="52" rx="10" fill="#3A2C6E" opacity="0.9"/>
+    <rect x="290" y="280" width="110" height="10" rx="5" fill="#CBD5E1"/>
+    <text x="290" y="316" font-family="Arial, sans-serif" font-weight="700" font-size="17" fill="#00F0FF">S/ 89</text>
+    <rect x="400" y="296" width="80" height="26" rx="13" fill="url(#ecAccent)"/>
+  </g>
+  <g>
+    <rect x="36" y="346" width="222" height="170" rx="14" fill="#0E1935" stroke="#1C2541"/>
+    <rect x="52" y="362" width="190" height="92" rx="10" fill="url(#ecProd2)"/>
+    <circle cx="147" cy="408" r="26" fill="#3A2C6E" opacity="0.85"/>
+    <rect x="52" y="466" width="110" height="10" rx="5" fill="#CBD5E1"/>
+    <text x="52" y="502" font-family="Arial, sans-serif" font-weight="700" font-size="17" fill="#00F0FF">S/ 210</text>
+    <rect x="162" y="482" width="80" height="26" rx="13" fill="url(#ecAccent)"/>
+  </g>
+  <g>
+    <rect x="274" y="346" width="222" height="170" rx="14" fill="#0E1935" stroke="#1C2541"/>
+    <rect x="290" y="362" width="190" height="92" rx="10" fill="url(#ecProd1)"/>
+    <rect x="356" y="382" width="58" height="52" rx="10" fill="#1B4468" opacity="0.9"/>
+    <rect x="290" y="466" width="110" height="10" rx="5" fill="#CBD5E1"/>
+    <text x="290" y="502" font-family="Arial, sans-serif" font-weight="700" font-size="17" fill="#00F0FF">S/ 65</text>
+    <rect x="400" y="482" width="80" height="26" rx="13" fill="url(#ecAccent)"/>
+  </g>
+
+  <!-- Checkout panel (right) -->
+  <rect x="512" y="160" width="252" height="356" rx="16" fill="#111E42" stroke="#00F0FF" stroke-opacity="0.35"/>
+  <rect x="534" y="184" width="120" height="12" rx="6" fill="#E2E8F0"/>
+
+  <g>
+    <rect x="534" y="214" width="208" height="54" rx="10" fill="#0B132B"/>
+    <rect x="546" y="226" width="30" height="30" rx="8" fill="url(#ecProd1)"/>
+    <rect x="588" y="228" width="90" height="9" rx="4.5" fill="#94A3B8"/>
+    <rect x="588" y="246" width="50" height="8" rx="4" fill="#475569"/>
+    <text x="742" y="248" text-anchor="end" font-family="Arial, sans-serif" font-weight="700" font-size="13" fill="#CBD5E1">S/ 149</text>
+  </g>
+  <g>
+    <rect x="534" y="276" width="208" height="54" rx="10" fill="#0B132B"/>
+    <rect x="546" y="288" width="30" height="30" rx="8" fill="url(#ecProd2)"/>
+    <rect x="588" y="290" width="90" height="9" rx="4.5" fill="#94A3B8"/>
+    <rect x="588" y="308" width="50" height="8" rx="4" fill="#475569"/>
+    <text x="742" y="310" text-anchor="end" font-family="Arial, sans-serif" font-weight="700" font-size="13" fill="#CBD5E1">S/ 89</text>
+  </g>
+
+  <!-- Payment methods -->
+  <rect x="534" y="348" width="208" height="38" rx="10" fill="#0B132B" stroke="#1C2541"/>
+  <rect x="548" y="358" width="30" height="18" rx="4" fill="#1B4468"/>
+  <rect x="586" y="358" width="30" height="18" rx="4" fill="#3A2C6E"/>
+  <rect x="624" y="358" width="30" height="18" rx="4" fill="#123052"/>
+  <rect x="662" y="358" width="30" height="18" rx="4" fill="#1C2541"/>
+
+  <!-- Total + CTA -->
+  <line x1="534" y1="406" x2="742" y2="406" stroke="#1C2541" stroke-width="1.5"/>
+  <rect x="534" y="420" width="60" height="10" rx="5" fill="#94A3B8"/>
+  <text x="742" y="432" text-anchor="end" font-family="Arial, sans-serif" font-weight="700" font-size="20" fill="#00F0FF">S/ 238</text>
+  <rect x="534" y="452" width="208" height="42" rx="21" fill="url(#ecAccent)"/>
+  <text x="638" y="478" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="14" fill="#0B132B">Pagar en 1 paso</text>
+</svg>

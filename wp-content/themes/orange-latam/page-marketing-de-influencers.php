@@ -14,6 +14,39 @@ if ( ! defined( 'ABSPATH' ) ) {
 get_header();
 ?>
 
+<!-- Schema JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "name": "Orange Latam",
+      "url": "<?php echo esc_url( home_url( '/' ) ); ?>",
+      "email": "negocios@orange-la.com",
+      "telephone": "+51993595252",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Calle Enrique Palacios 360 Of. 306, Centro Empresarial Abril, Miraflores",
+        "addressLocality": "Lima",
+        "addressCountry": "PE"
+      }
+    },
+    {
+      "@type": "Service",
+      "serviceType": "Agencia de Marketing de Influencers",
+      "provider": {
+        "@type": "Organization",
+        "name": "Orange Latam"
+      },
+      "areaServed": "PE",
+      "url": "<?php echo esc_url( home_url( '/marketing-de-influencers/' ) ); ?>",
+      "description": "Somos la mejor agencia de marketing de influencers del Perú. Historias reales, resultados medibles y campañas que se vuelven tendencia en Perú."
+    }
+  ]
+}
+</script>
+
 <main class="infl">
 
 	<!-- ==========================================

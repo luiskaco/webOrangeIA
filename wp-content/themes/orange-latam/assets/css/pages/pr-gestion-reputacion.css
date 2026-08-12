@@ -362,9 +362,9 @@
 }
 
 .pr-services__header-col {
-	max-width: 580px;
-	margin-left: auto;
-	text-align: right;
+	max-width: 680px;
+	margin: 0 auto;
+	text-align: center;
 }
 
 .pr-services__title {
@@ -827,6 +827,14 @@
 	line-height: 1.15;
 	margin: 18px 0 0;
 	font-weight: 400;
+}
+
+.pr-why__intro {
+	font-size: 16px;
+	line-height: 1.6;
+	color: #3a352d;
+	margin: 16px 0 0;
+	max-width: 480px;
 }
 
 .pr-why__list {

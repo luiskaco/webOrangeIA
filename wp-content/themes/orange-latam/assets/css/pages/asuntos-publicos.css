@@ -93,6 +93,15 @@ body[class*="asuntos-publicos"] .header .header__burger-line,
 	color: #FFFFFF;
 }
 
+.ap-btn:active {
+	transform: scale(0.97);
+}
+
+.ap-btn:focus-visible {
+	outline: 2px solid #17130F;
+	outline-offset: 3px;
+}
+
 .ap-btn--outline {
 	border: 1px solid #17130F;
 	color: #17130F;
@@ -114,6 +123,44 @@ body[class*="asuntos-publicos"] .header .header__burger-line,
 	margin: 0 auto;
 	width: 100% !important;
 	box-sizing: border-box !important;
+}
+
+/* Trama editorial de puntos, desvanecida hacia el contenido */
+.ap-hero__pattern {
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+	background-image: radial-gradient(rgba(238, 137, 79, 0.14) 1.5px, transparent 1.5px);
+	background-size: 26px 26px;
+	-webkit-mask-image: radial-gradient(ellipse 55% 45% at 78% 22%, #000 20%, transparent 72%);
+	mask-image: radial-gradient(ellipse 55% 45% at 78% 22%, #000 20%, transparent 72%);
+}
+
+/* Subrayado caligráfico dibujado con GSAP bajo el término clave del H1 */
+.ap-title-mark {
+	position: relative;
+	display: inline-block;
+	white-space: nowrap;
+}
+
+.ap-title-mark__stroke {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -6px;
+	width: 100%;
+	height: 12px;
+	overflow: visible;
+}
+
+@media (max-width: 576px) {
+	.ap-title-mark {
+		white-space: normal;
+	}
+
+	.ap-title-mark__stroke {
+		display: none;
+	}
 }
 
 .ap-hero__container {
@@ -303,7 +350,7 @@ body[class*="asuntos-publicos"] .header .header__burger-line,
 	justify-content: center;
 	color: #ee894f;
 	margin-bottom: 12px;
-	transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.3s ease;
+	transition: transform 0.35s cubic-bezier(0.23, 1, 0.32, 1), background-color 0.3s ease;
 }
 
 .ap-mosaic-card:hover .ap-mosaic-card__icon {
@@ -637,9 +684,11 @@ body[class*="asuntos-publicos"] .header .header__burger-line,
 	top: 0;
 	left: 0;
 	height: 4px;
-	width: 0;
+	width: 100%;
 	background: linear-gradient(90deg, #ee894f 0%, #29ABE2 100%);
-	transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .ap-service-card:hover {
@@ -650,7 +699,7 @@ body[class*="asuntos-publicos"] .header .header__burger-line,
 }
 
 .ap-service-card:hover::before {
-	width: 100%;
+	transform: scaleX(1);
 }
 
 .ap-service-card__icon-box {
@@ -663,7 +712,7 @@ body[class*="asuntos-publicos"] .header .header__burger-line,
 	align-items: center;
 	justify-content: center;
 	margin-bottom: 16px;
-	transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.35s ease, border-color 0.35s ease;
+	transition: transform 0.35s cubic-bezier(0.23, 1, 0.32, 1), background-color 0.35s ease, border-color 0.35s ease;
 }
 
 .ap-service-card:hover .ap-service-card__icon-box {
@@ -780,18 +829,17 @@ body[class*="asuntos-publicos"] .header .header__burger-line,
 
 /* Quote Card */
 .ap-dark-bento__quote-card {
-	background: #231e18;
+	background: linear-gradient(150deg, #2a241c 0%, #231e18 55%);
 	border: 1px solid #332b23;
-	border-left: 4px solid #29ABE2;
 	padding: 40px 36px;
-	border-radius: 8px;
+	border-radius: 12px;
 	box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
 	transition: transform 0.35s ease, border-color 0.35s ease;
 }
 
 .ap-dark-bento__quote-card:hover {
 	transform: translateY(-6px);
-	border-left-color: #ee894f;
+	border-color: rgba(238, 137, 79, 0.45);
 }
 
 .ap-dark-bento__icon {
@@ -923,6 +971,30 @@ body[class*="asuntos-publicos"] .header .header__burger-line,
 	overflow: hidden;
 	transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease;
 	cursor: pointer;
+	/* Reset de <button>: las filas abren el modal de contacto */
+	appearance: none;
+	font: inherit;
+	color: inherit;
+	text-align: left;
+	width: 100%;
+}
+
+.ap-stake-row:active {
+	transform: scale(0.99);
+}
+
+.ap-stake-row:focus-visible {
+	outline: 2px solid #ee894f;
+	outline-offset: 3px;
+}
+
+.ap-stake-row__info {
+	display: block;
+}
+
+.ap-stake-row__title,
+.ap-stake-row__desc {
+	display: block;
 }
 
 .ap-stake-row::before {
@@ -931,9 +1003,11 @@ body[class*="asuntos-publicos"] .header .header__burger-line,
 	left: 0;
 	top: 0;
 	width: 4px;
-	height: 0;
+	height: 100%;
 	background: #ee894f;
-	transition: height 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+	transform: scaleY(0);
+	transform-origin: top;
+	transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .ap-stake-row:hover {
@@ -969,7 +1043,7 @@ body[class*="asuntos-publicos"] .header .header__burger-line,
 	align-items: center;
 	justify-content: center;
 	flex-shrink: 0;
-	transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.35s ease;
+	transition: transform 0.35s cubic-bezier(0.23, 1, 0.32, 1), background-color 0.35s ease;
 }
 
 .ap-stake-row:hover .ap-stake-row__icon-box {
@@ -1014,11 +1088,10 @@ body[class*="asuntos-publicos"] .header .header__burger-line,
 
 /* Callout Diferencial */
 .ap-diff-callout {
-	background: #FDE8DB;
+	background: linear-gradient(120deg, #FDEBDF 0%, #FDE8DB 60%);
 	border: 1px solid #F5C7A9;
-	border-left: 4px solid #ee894f;
 	padding: 26px 32px;
-	border-radius: 8px;
+	border-radius: 12px;
 	display: flex;
 	align-items: center;
 	gap: 20px;
@@ -1045,65 +1118,9 @@ body[class*="asuntos-publicos"] .header .header__burger-line,
 
 /* ==========================================================================
    5. BANNER CTA FINAL
+   La página usa el banner global .bc-cta (base.css); estilos .ap-cta
+   anteriores eliminados por ser CSS muerto.
    ========================================================================== */
-.ap-cta {
-	background: #17130F;
-	padding: 110px 32px;
-	text-align: center;
-	position: relative;
-	border-top: 4px solid #ee894f;
-}
-
-.ap-cta__container {
-	max-width: 680px;
-	margin: 0 auto;
-}
-
-.ap-cta__tag {
-	font-size: 12px;
-	letter-spacing: 0.14em;
-	text-transform: uppercase;
-	color: #ee894f;
-	font-weight: 800;
-	display: block;
-	margin-bottom: 16px;
-}
-
-.ap-cta__title {
-	font-family: var(--font-display);
-	font-size: clamp(34px, 4.2vw, 54px);
-	line-height: 1.1;
-	margin: 0 0 20px;
-	font-weight: 400;
-	color: #FFFFFF;
-}
-
-.ap-cta__desc {
-	font-size: 18.5px;
-	line-height: 1.6;
-	color: #c9c3b7;
-	margin: 0 0 36px;
-}
-
-.ap-cta__btn {
-	background: #ee894f;
-	color: #FFFFFF;
-	padding: 18px 42px;
-	border-radius: 2px;
-	text-decoration: none;
-	font-size: 16px;
-	font-weight: 700;
-	display: inline-block;
-	transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-	box-shadow: 0 6px 20px rgba(238, 137, 79, 0.3);
-}
-
-.ap-cta__btn:hover {
-	background: #FFFFFF;
-	color: #17130F;
-	transform: translateY(-3px);
-	box-shadow: 0 10px 28px rgba(255, 255, 255, 0.2);
-}
 
 /* Global Typography Safety for Page Titles */
 .ap-hero__title,
@@ -1154,7 +1171,9 @@ body[class*="asuntos-publicos"] .header .header__burger-line,
 		max-width: 100%;
 		margin: 0 auto;
 		width: 100%;
-		min-height: 280px;
+		/* min-height + aspect-ratio fuerzan min-width (h×1.6) y desbordan
+		   la columna del grid en móvil — la altura la da el aspect-ratio */
+		min-height: 0;
 		aspect-ratio: 16 / 10;
 	}
 }
@@ -1292,7 +1311,7 @@ body[class*="asuntos-publicos"] .header .header__burger-line,
 	}
 
 	.ap-stakeholders-visual__box {
-		min-height: 260px;
+		min-height: 0;
 	}
 
 	.ap-stakeholders-visual__content {
@@ -1379,6 +1398,23 @@ body[class*="asuntos-publicos"] .header .header__burger-line,
 		width: 100%;
 		box-sizing: border-box;
 		padding: 16px 20px;
+	}
+}
+
+/* ==========================================================================
+   ACCESIBILIDAD: MOVIMIENTO REDUCIDO
+   Se conservan transiciones de opacidad/color; se elimina el movimiento.
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+	.ap-mosaic-card,
+	.ap-pillars-banner__item,
+	.ap-service-card,
+	.ap-pillar-item,
+	.ap-dark-bento__quote-card,
+	.ap-stake-row,
+	.ap-diff-callout,
+	.ap-btn {
+		transition-property: border-color, background-color, color, box-shadow, opacity;
 	}
 }
 

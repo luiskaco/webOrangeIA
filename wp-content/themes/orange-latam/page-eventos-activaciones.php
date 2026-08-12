@@ -65,11 +65,11 @@ $theme_uri = get_template_directory_uri();
 				<!-- Left Column: Title, Subtitle & Metrics -->
 				<div class="ea-dark-hero__content" data-reveal="up">
 					<h1 class="ea-dark-hero__title">
-						Eventos y Activaciones <span class="ea-dark-hero__gradient-text">Memorables & de Alto Impacto</span>
+						Agencia de Eventos Corporativos <span class="ea-dark-hero__gradient-text">y Activaciones de Alto Impacto</span>
 					</h1>
 
 					<p class="ea-dark-hero__lead">
-						Un evento es mucho más que una fecha en el calendario. Convertimos los objetivos de tu marca en experiencias inmersivas, presenciales, remotas o híbridas.
+						Como <strong>agencia de eventos corporativos</strong> en Perú, convertimos los objetivos de tu marca en experiencias inmersivas: activaciones, eventos híbridos y producciones presenciales o remotas.
 					</p>
 
 					<!-- Stats Strip -->
@@ -170,7 +170,7 @@ $theme_uri = get_template_directory_uri();
 					<span class="ea-section-tag">Formatos & Soluciones</span>
 					<h2 class="ea-plus-title">Tipos de eventos y activaciones que producimos</h2>
 					<p class="ea-plus-sub">
-						Cada audiencia y cada objetivo requieren una experiencia diferente. Por eso, desarrollamos formatos que se adaptan al propósito de la marca, al público y al contexto.
+						Especialistas en <strong>organización de eventos empresariales en Perú</strong>: cada audiencia y cada objetivo requieren una experiencia diferente, desde <strong>eventos corporativos híbridos</strong> hasta activaciones 360°, adaptada al propósito de la marca, al público y al contexto.
 					</p>
 					<div class="ea-plus-callout">
 						<p>Como <strong>agencia de activaciones BTL en Lima</strong> y <strong>eventos corporativos en Perú</strong>, garantizamos una ejecución coordinada de extremo a extremo.</p>

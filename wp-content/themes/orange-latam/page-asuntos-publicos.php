@@ -83,21 +83,22 @@ $theme_uri = get_template_directory_uri();
 	     1. HERO & INTRO
 	     ========================================== -->
 	<section class="ap-hero" id="inicio">
+		<div class="ap-hero__pattern" aria-hidden="true"></div>
 		<div class="ap-hero__container">
-			<div class="ap-hero__content" data-reveal="left">
-				<h1 class="ap-hero__title">Asuntos Públicos y Relaciones Institucionales</h1>
-				<h2 class="ap-hero__subtitle">El rol de los asuntos públicos hoy</h2>
+			<div class="ap-hero__content">
+				<h1 class="ap-hero__title" data-ap-hero-title>
+					Asuntos Públicos y
+					<span class="ap-title-mark">Relaciones Institucionales<svg class="ap-title-mark__stroke" viewBox="0 0 300 12" preserveAspectRatio="none" aria-hidden="true"><path d="M3 9 C 60 3, 170 2, 297 6" fill="none" stroke="#ee894f" stroke-width="5" stroke-linecap="round"/></svg></span>
+				</h1>
+				<h2 class="ap-hero__subtitle" data-ap-hero-item>El rol de los asuntos públicos hoy</h2>
 
-				<p class="ap-hero__lead">
+				<p class="ap-hero__lead" data-ap-hero-item>
 					Estrategias de <strong>asuntos públicos</strong> para anticipar riesgos regulatorios, fortalecer el <strong>relacionamiento con stakeholders</strong> y gestionar escenarios complejos en Perú.
 				</p>
 
-				<div class="ap-hero__actions" style="margin-top: 24px;">
-					<a href="#contacto" class="ap-btn ap-btn--primary open-contact-modal" data-service="Asuntos Públicos y Relaciones Institucionales">Hablar con un Especialista</a>
-				</div>
 			</div>
 
-			<div class="ap-hero__media" data-reveal="right">
+			<div class="ap-hero__media" data-ap-hero-media>
 				<!-- Imagen Hero Real -->
 				<div class="ap-hero-image-card">
 					<?php
@@ -113,14 +114,14 @@ $theme_uri = get_template_directory_uri();
 		</div>
 
 		<!-- MOSAICO DE TARJETAS FLOTANTES: RED DE RELACIONES E INFLUENCIA -->
-		<div class="ap-influence-hub" id="red-influencia" data-reveal="up">
+		<div class="ap-influence-hub" id="red-influencia" data-ap-reveal>
 			<div class="ap-influence-hub__container">
-				
+
 				<!-- Lado Izquierdo: Mosaico Flotante de Tarjetas -->
 				<div class="ap-influence-mosaic">
-					
+
 					<!-- Columna 1 (Elevada) -->
-					<div class="ap-mosaic-col ap-mosaic-col--1">
+					<div class="ap-mosaic-col ap-mosaic-col--1" data-ap-parallax="-8">
 						<!-- Card 1 -->
 						<div class="ap-mosaic-card ap-mosaic-card--primary">
 							<span class="ap-mosaic-card__tag">Regulación & Licencias</span>
@@ -143,7 +144,7 @@ $theme_uri = get_template_directory_uri();
 					</div>
 
 					<!-- Columna 2 (Desplazada hacia abajo) -->
-					<div class="ap-mosaic-col ap-mosaic-col--2">
+					<div class="ap-mosaic-col ap-mosaic-col--2" data-ap-parallax="8">
 						<!-- Card 3 -->
 						<div class="ap-mosaic-card ap-mosaic-card--dark">
 							<span class="ap-mosaic-card__tag">Opinión Pública</span>
@@ -203,8 +204,8 @@ $theme_uri = get_template_directory_uri();
 	<!-- ==========================================
 	     BANNER DEDICADO DE PILARES DE VALOR (FUERA DEL HERO)
 	     ========================================== -->
-	<div class="ap-pillars-banner" data-reveal="up">
-		<div class="ap-pillars-banner__container">
+	<div class="ap-pillars-banner">
+		<div class="ap-pillars-banner__container" data-ap-cards>
 			<div class="ap-pillars-banner__item">
 				<div class="ap-pillars-banner__icon">
 					<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ee894f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
@@ -242,7 +243,7 @@ $theme_uri = get_template_directory_uri();
 	     ========================================== -->
 	<section class="ap-section ap-section--light" id="relacion-reguladores">
 		<div class="ap-section__container">
-			<div class="ap-section__header-center" data-reveal="up">
+			<div class="ap-section__header-center" data-ap-reveal>
 				<span class="ap-section-tag">Relación Institucional</span>
 				<h2 class="ap-section__title">Asuntos Públicos: relación con reguladores y administraciones</h2>
 				<p class="ap-section__subtitle">
@@ -251,8 +252,8 @@ $theme_uri = get_template_directory_uri();
 			</div>
 
 			<!-- Split: Imagen + Grilla de Tarjetas -->
-			<div class="ap-reguladores-split" data-reveal="up">
-				<div class="ap-reguladores-image-box">
+			<div class="ap-reguladores-split">
+				<div class="ap-reguladores-image-box" data-ap-img-reveal>
 					<?php
 					$reg_img = $theme_uri . '/assets/images/asuntos-publicos/reguladores.png';
 					?>
@@ -263,7 +264,7 @@ $theme_uri = get_template_directory_uri();
 					</div>
 				</div>
 
-				<div class="ap-services-grid ap-services-grid--split">
+				<div class="ap-services-grid ap-services-grid--split" data-ap-cards>
 					<!-- Card 1 -->
 					<div class="ap-service-card">
 						<div class="ap-service-card__icon-box">
@@ -309,8 +310,8 @@ $theme_uri = get_template_directory_uri();
 	     ========================================== -->
 	<section class="ap-section ap-section--dark" id="comunicacion-politica">
 		<div class="ap-section__container">
-			<div class="ap-dark-bento" data-reveal="up">
-				<div class="ap-dark-bento__main">
+			<div class="ap-dark-bento">
+				<div class="ap-dark-bento__main" data-ap-reveal>
 					<span class="ap-section-tag ap-section-tag--cyan">Gestión de Percepciones</span>
 					<h2 class="ap-section__title ap-section__title--white">Comunicación Política</h2>
 					<p class="ap-dark-bento__lead">
@@ -337,7 +338,7 @@ $theme_uri = get_template_directory_uri();
 					</div>
 				</div>
 
-				<div class="ap-dark-bento__quote-card">
+				<div class="ap-dark-bento__quote-card" data-ap-quote>
 					<div class="ap-dark-bento__icon">
 						<svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#29ABE2" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.75-2-2-2H4c-1.25 0-2 .75-2 2v6c0 1.25.75 2 2 2h3c0 3-1 6-4 6z"></path><path d="M16 21c3 0 7-1 7-8V5c0-1.25-.75-2-2-2h-4c-1.25 0-2 .75-2 2v6c0 1.25.75 2 2 2h3c0 3-1 6-4 6z"></path></svg>
 					</div>
@@ -359,7 +360,7 @@ $theme_uri = get_template_directory_uri();
 	     ========================================== -->
 	<section class="ap-section ap-section--light" id="stakeholders">
 		<div class="ap-section__container">
-			<div class="ap-section__header-center" data-reveal="up">
+			<div class="ap-section__header-center" data-ap-reveal>
 				<span class="ap-section-tag">Comunidades y Gremios</span>
 				<h2 class="ap-section__title">Relacionamiento con Stakeholders y Comunidades</h2>
 				<p class="ap-section__subtitle">
@@ -368,14 +369,14 @@ $theme_uri = get_template_directory_uri();
 			</div>
 
 			<!-- Split: Imagen + Filas Interactivas -->
-			<div class="ap-stakeholders-fresh-layout" data-reveal="up">
-				
+			<div class="ap-stakeholders-fresh-layout">
+
 				<!-- Columna Izquierda: Tarjeta Visual -->
 				<div class="ap-stakeholders-visual">
 					<?php
 					$com_img = $theme_uri . '/assets/images/asuntos-publicos/comunidades.png';
 					?>
-					<div class="ap-stakeholders-visual__box">
+					<div class="ap-stakeholders-visual__box" data-ap-img-reveal>
 						<img src="<?php echo esc_url( $com_img ); ?>" alt="Reunión de diálogo con comunidades en Perú" class="ap-stakeholders-visual__img">
 						<div class="ap-stakeholders-visual__content">
 							<span class="ap-stakeholders-visual__tag">Diálogo Social en Territorio</span>
@@ -385,104 +386,105 @@ $theme_uri = get_template_directory_uri();
 					</div>
 				</div>
 
-				<!-- Columna Derecha: Filas Interactivas Ecosistema -->
-				<div class="ap-stakeholder-list-rows">
-					
+				<!-- Columna Derecha: Filas Interactivas Ecosistema
+				     Cada fila abre el modal de contacto con el stakeholder preseleccionado -->
+				<div class="ap-stakeholder-list-rows" data-ap-cards>
+
 					<!-- Row 01 -->
-					<div class="ap-stake-row">
-						<div class="ap-stake-row__num">01</div>
-						<div class="ap-stake-row__icon-box">
+					<button type="button" class="ap-stake-row open-contact-modal" data-service="Asuntos Públicos — Autoridades Reguladoras">
+						<span class="ap-stake-row__num">01</span>
+						<span class="ap-stake-row__icon-box">
 							<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ee894f" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
-						</div>
-						<div class="ap-stake-row__info">
-							<h4 class="ap-stake-row__title">Autoridades Reguladoras</h4>
-							<p class="ap-stake-row__desc">Ministerios y organismos reguladores del Estado.</p>
-						</div>
-						<div class="ap-stake-row__arrow">
+						</span>
+						<span class="ap-stake-row__info">
+							<span class="ap-stake-row__title">Autoridades Reguladoras</span>
+							<span class="ap-stake-row__desc">Ministerios y organismos reguladores del Estado.</span>
+						</span>
+						<span class="ap-stake-row__arrow">
 							<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7,7 17,7 17,17"></polyline></svg>
-						</div>
-					</div>
+						</span>
+					</button>
 
 					<!-- Row 02 -->
-					<div class="ap-stake-row">
-						<div class="ap-stake-row__num">02</div>
-						<div class="ap-stake-row__icon-box">
+					<button type="button" class="ap-stake-row open-contact-modal" data-service="Asuntos Públicos — Comunidades Locales">
+						<span class="ap-stake-row__num">02</span>
+						<span class="ap-stake-row__icon-box">
 							<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ee894f" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>
-						</div>
-						<div class="ap-stake-row__info">
-							<h4 class="ap-stake-row__title">Comunidades Locales</h4>
-							<p class="ap-stake-row__desc">Licencia social y entorno operativo directo.</p>
-						</div>
-						<div class="ap-stake-row__arrow">
+						</span>
+						<span class="ap-stake-row__info">
+							<span class="ap-stake-row__title">Comunidades Locales</span>
+							<span class="ap-stake-row__desc">Licencia social y entorno operativo directo.</span>
+						</span>
+						<span class="ap-stake-row__arrow">
 							<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7,7 17,7 17,17"></polyline></svg>
-						</div>
-					</div>
+						</span>
+					</button>
 
 					<!-- Row 03 -->
-					<div class="ap-stake-row">
-						<div class="ap-stake-row__num">03</div>
-						<div class="ap-stake-row__icon-box">
+					<button type="button" class="ap-stake-row open-contact-modal" data-service="Asuntos Públicos — Organizaciones Sociales">
+						<span class="ap-stake-row__num">03</span>
+						<span class="ap-stake-row__icon-box">
 							<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ee894f" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-						</div>
-						<div class="ap-stake-row__info">
-							<h4 class="ap-stake-row__title">Organizaciones Sociales</h4>
-							<p class="ap-stake-row__desc">ONGs y colectivos ciudadanos organizados.</p>
-						</div>
-						<div class="ap-stake-row__arrow">
+						</span>
+						<span class="ap-stake-row__info">
+							<span class="ap-stake-row__title">Organizaciones Sociales</span>
+							<span class="ap-stake-row__desc">ONGs y colectivos ciudadanos organizados.</span>
+						</span>
+						<span class="ap-stake-row__arrow">
 							<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7,7 17,7 17,17"></polyline></svg>
-						</div>
-					</div>
+						</span>
+					</button>
 
 					<!-- Row 04 -->
-					<div class="ap-stake-row">
-						<div class="ap-stake-row__num">04</div>
-						<div class="ap-stake-row__icon-box">
+					<button type="button" class="ap-stake-row open-contact-modal" data-service="Asuntos Públicos — Gremios & Cámaras">
+						<span class="ap-stake-row__num">04</span>
+						<span class="ap-stake-row__icon-box">
 							<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ee894f" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
-						</div>
-						<div class="ap-stake-row__info">
-							<h4 class="ap-stake-row__title">Gremios & Cámaras</h4>
-							<p class="ap-stake-row__desc">Consenso sectorial y cámaras empresariales.</p>
-						</div>
-						<div class="ap-stake-row__arrow">
+						</span>
+						<span class="ap-stake-row__info">
+							<span class="ap-stake-row__title">Gremios & Cámaras</span>
+							<span class="ap-stake-row__desc">Consenso sectorial y cámaras empresariales.</span>
+						</span>
+						<span class="ap-stake-row__arrow">
 							<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7,7 17,7 17,17"></polyline></svg>
-						</div>
-					</div>
+						</span>
+					</button>
 
 					<!-- Row 05 -->
-					<div class="ap-stake-row">
-						<div class="ap-stake-row__num">05</div>
-						<div class="ap-stake-row__icon-box">
+					<button type="button" class="ap-stake-row open-contact-modal" data-service="Asuntos Públicos — Líderes de Opinión">
+						<span class="ap-stake-row__num">05</span>
+						<span class="ap-stake-row__icon-box">
 							<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ee894f" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="12 8 8 12 12 16 16 12 12 8"></polygon></svg>
-						</div>
-						<div class="ap-stake-row__info">
-							<h4 class="ap-stake-row__title">Líderes de Opinión</h4>
-							<p class="ap-stake-row__desc">Voceros y analistas del debate público.</p>
-						</div>
-						<div class="ap-stake-row__arrow">
+						</span>
+						<span class="ap-stake-row__info">
+							<span class="ap-stake-row__title">Líderes de Opinión</span>
+							<span class="ap-stake-row__desc">Voceros y analistas del debate público.</span>
+						</span>
+						<span class="ap-stake-row__arrow">
 							<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7,7 17,7 17,17"></polyline></svg>
-						</div>
-					</div>
+						</span>
+					</button>
 
 					<!-- Row 06 -->
-					<div class="ap-stake-row">
-						<div class="ap-stake-row__num">06</div>
-						<div class="ap-stake-row__icon-box">
+					<button type="button" class="ap-stake-row open-contact-modal" data-service="Asuntos Públicos — Medios de Comunicación">
+						<span class="ap-stake-row__num">06</span>
+						<span class="ap-stake-row__icon-box">
 							<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ee894f" stroke-width="2"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg>
-						</div>
-						<div class="ap-stake-row__info">
-							<h4 class="ap-stake-row__title">Medios de Comunicación</h4>
-							<p class="ap-stake-row__desc">Prensa nacional y portales regionales.</p>
-						</div>
-						<div class="ap-stake-row__arrow">
+						</span>
+						<span class="ap-stake-row__info">
+							<span class="ap-stake-row__title">Medios de Comunicación</span>
+							<span class="ap-stake-row__desc">Prensa nacional y portales regionales.</span>
+						</span>
+						<span class="ap-stake-row__arrow">
 							<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7,7 17,7 17,17"></polyline></svg>
-						</div>
-					</div>
+						</span>
+					</button>
 
 				</div>
 			</div>
 
 			<!-- Bloque Destacado de Diferencial -->
-			<div class="ap-diff-callout" data-reveal="up">
+			<div class="ap-diff-callout" data-ap-reveal>
 				<div class="ap-diff-callout__icon">✦</div>
 				<p class="ap-diff-callout__text">
 					<strong>Nuestro diferencial:</strong> Conectamos el <strong>relacionamiento con stakeholders</strong> con los objetivos estratégicos de la organización, construyendo una visión integral de cada ecosistema.
@@ -495,7 +497,7 @@ $theme_uri = get_template_directory_uri();
 	     5. BANNER CTA FINAL
 	     ========================================== -->
 	<section class="bc-cta" id="contacto">
-		<div class="bc-cta__container" data-reveal="up">
+		<div class="bc-cta__container" data-ap-reveal>
 			<h2 class="bc-cta__title">Trabajemos juntos</h2>
 			<p class="bc-cta__desc">¿Listo para anticipar escenarios regulatorios y fortalecer el <strong>relacionamiento con stakeholders</strong>? Conversemos sobre tu próximo proyecto en Perú.</p>
 			<a href="#contacto" class="bc-cta__btn open-contact-modal" data-service="Asuntos Públicos y Relaciones Institucionales">

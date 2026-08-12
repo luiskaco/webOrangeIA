@@ -14,6 +14,39 @@ if ( ! defined( 'ABSPATH' ) ) {
 get_header();
 ?>
 
+<!-- Schema JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "name": "Orange Latam",
+      "url": "<?php echo esc_url( home_url( '/' ) ); ?>",
+      "email": "negocios@orange-la.com",
+      "telephone": "+51993595252",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Calle Enrique Palacios 360 Of. 306, Centro Empresarial Abril, Miraflores",
+        "addressLocality": "Lima",
+        "addressCountry": "PE"
+      }
+    },
+    {
+      "@type": "Service",
+      "serviceType": "Agencia de Marketing Digital: Redes Sociales, Publicidad y Contenido Estratégico",
+      "provider": {
+        "@type": "Organization",
+        "name": "Orange Latam"
+      },
+      "areaServed": "PE",
+      "url": "<?php echo esc_url( home_url( '/marketing-digital/' ) ); ?>",
+      "description": "Agencia de marketing digital en Lima: gestión de redes sociales, publicidad digital, contenido estratégico y consultoría. Resultados medibles para tu marca."
+    }
+  ]
+}
+</script>
+
 <main class="marketing-digital">
 
 	<!-- ==========================================
@@ -33,9 +66,9 @@ get_header();
 		<div class="dig-social__container">
 			<div class="dig-social__content" data-reveal="left">
 				<span class="dig-social__badge">CREAMOS VÍNCULOS AUTÉNTICOS</span>
-				<h1 class="dig-social__title">ENTRE MARCAS Y PERSONAS</h1>
+				<h1 class="dig-social__title">Agencia de Marketing Digital en Lima: Entre Marcas y Personas</h1>
 				<p class="dig-social__desc">
-					En la era digital, la conexión real lo es todo. Diseñamos estrategias personalizadas en redes sociales que transforman a tu audiencia pasiva en una comunidad activa e identificada con el propósito de tu marca. A través de contenido relevante, interacción humana genuina y análisis constante, convertimos cada clic en una relación de confianza duradera.
+					Como <strong>agencia de marketing digital en Lima</strong>, sabemos que en la era digital la conexión real lo es todo. Diseñamos estrategias de gestión de redes sociales personalizadas que transforman a tu audiencia pasiva en una comunidad activa e identificada con el propósito de tu marca. A través de contenido relevante, interacción humana genuina y análisis constante, convertimos cada clic en una relación de confianza duradera.
 				</p>
 			</div>
 			<div class="dig-social__media" data-reveal="right">

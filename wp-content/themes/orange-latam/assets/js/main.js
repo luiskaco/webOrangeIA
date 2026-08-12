@@ -1374,10 +1374,14 @@ const initGlobalContactModal = () => {
 	const responseContainer = document.getElementById( 'g-modal-response' );
 	const submitBtn = document.getElementById( 'g-modal-submit-btn' );
 
-	const openModal = ( serviceName ) => {
+	const openModal = ( serviceName, customMessage ) => {
 		if ( serviceName ) {
 			if ( serviceTag ) serviceTag.textContent = `Cotización: ${serviceName}`;
 			if ( serviceOriginInput ) serviceOriginInput.value = serviceName;
+		}
+		const messageInput = document.getElementById( 'contact_message' );
+		if ( messageInput && typeof customMessage === 'string' ) {
+			messageInput.value = customMessage;
 		}
 		modal.classList.add( 'is-open' );
 		modal.setAttribute( 'aria-hidden', 'false' );
@@ -1394,13 +1398,14 @@ const initGlobalContactModal = () => {
 		}
 	};
 
-	// Delegate open click on buttons with class .open-contact-modal or href="#contacto"
+	// Delegate open click ONLY on buttons explicitly designated with .open-contact-modal
 	document.addEventListener( 'click', ( e ) => {
-		const trigger = e.target.closest( '.open-contact-modal, a[href="#contacto"]' );
+		const trigger = e.target.closest( '.open-contact-modal' );
 		if ( trigger ) {
 			e.preventDefault();
 			const customService = trigger.getAttribute( 'data-service' ) || document.title.split( '|' )[0].trim();
-			openModal( customService );
+			const customMessage = trigger.getAttribute( 'data-message' );
+			openModal( customService, customMessage );
 		}
 	} );
 

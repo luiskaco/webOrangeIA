@@ -11,6 +11,36 @@ get_header();
 <main class="post-detail" style="background: var(--color-bg-dark); color: var(--color-bg-light); padding: 120px 48px 96px; min-height: 80vh;">
 	<article class="post-detail__container" style="max-width: 800px; margin: 0 auto;">
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
+			<!-- SEO Structured Data (JSON-LD BlogPosting Schema) -->
+			<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "BlogPosting",
+				"headline": "<?php echo esc_js( get_the_title() ); ?>",
+				"datePublished": "<?php echo esc_js( get_the_date( 'c' ) ); ?>",
+				"dateModified": "<?php echo esc_js( get_the_modified_date( 'c' ) ); ?>",
+				"author": {
+					"@type": "Person",
+					"name": "<?php echo esc_js( get_the_author() ); ?>"
+				},
+				"publisher": {
+					"@type": "Organization",
+					"name": "Orange Latam",
+					"logo": {
+						"@type": "ImageObject",
+						"url": "<?php echo esc_url( get_template_directory_uri() . '/assets/images/logo.webp' ); ?>"
+					}
+				},
+				"mainEntityOfPage": {
+					"@type": "WebPage",
+					"@id": "<?php echo esc_url( get_permalink() ); ?>"
+				}
+				<?php if ( has_post_thumbnail() ) : ?>,
+				"image": "<?php echo esc_url( get_the_post_thumbnail_url( get_the_ID(), 'full' ) ); ?>"
+				<?php endif; ?>
+			}
+			</script>
 			
 			<a href="<?php echo esc_url( get_post_type_archive_link( 'post' ) ? get_post_type_archive_link( 'post' ) : home_url( '/blog/' ) ); ?>" style="font-size: 11px; font-weight: 700; color: var(--color-blue); text-decoration: none; text-transform: uppercase; letter-spacing: 0.05em; display: inline-flex; align-items: center; gap: 6px; margin-bottom: 24px;">
 				<span>←</span> Volver al blog

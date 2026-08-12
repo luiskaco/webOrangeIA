@@ -16,6 +16,39 @@ $theme_uri = get_template_directory_uri();
 $podcast_img_uri = $theme_uri . '/assets/images/podcast';
 ?>
 
+<!-- Schema JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "name": "Orange Latam",
+      "url": "<?php echo esc_url( home_url( '/' ) ); ?>",
+      "email": "negocios@orange-la.com",
+      "telephone": "+51993595252",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Calle Enrique Palacios 360 Of. 306, Centro Empresarial Abril, Miraflores",
+        "addressLocality": "Lima",
+        "addressCountry": "PE"
+      }
+    },
+    {
+      "@type": "Service",
+      "serviceType": "Estudio de Podcast: Grabación y Edición Profesional",
+      "provider": {
+        "@type": "Organization",
+        "name": "Orange Latam"
+      },
+      "areaServed": "PE",
+      "url": "<?php echo esc_url( home_url( '/podcast/' ) ); ?>",
+      "description": "Graba y edita tu podcast en Orange Studio, Miraflores. Estudio profesional con equipos de alta gama para audio, video, Spotify, YouTube y Reels."
+    }
+  ]
+}
+</script>
+
 <main class="podcast-page">
 	<!-- ==========================================
 	     1. HERO SECTION (YouTube Video Background)
@@ -37,11 +70,11 @@ $podcast_img_uri = $theme_uri . '/assets/images/podcast';
 	     ========================================== -->
 	<section class="podcast-subbanner">
 		<div class="podcast-subbanner__container" data-reveal="up">
-			<h2 class="podcast-subbanner__text">
-				Graba y edita tu Podcast en <strong>Orange Studio</strong>,<br>
-				el espacio ideal en Lima para lograr calidad<br>
+			<h1 class="podcast-subbanner__text">
+				Estudio de Podcast en Lima: graba y edita en <strong>Orange Studio</strong>,<br>
+				el espacio ideal para lograr calidad<br>
 				de estudio con equipos de alto nivel
-			</h2>
+			</h1>
 		</div>
 	</section>
 

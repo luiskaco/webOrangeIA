@@ -12,6 +12,32 @@ if ( ! defined( 'ABSPATH' ) ) {
 get_header();
 ?>
 
+<!-- SEO Structured Data (JSON-LD Organization Schema) -->
+<script type="application/ld+json">
+{
+	"@context": "https://schema.org",
+	"@type": "Organization",
+	"name": "Orange Latam",
+	"alternateName": "Orange LATAM Agencia de PR y Comunicación",
+	"url": "<?php echo esc_url( home_url( '/' ) ); ?>",
+	"logo": "<?php echo esc_url( get_template_directory_uri() . '/assets/images/logo.webp' ); ?>",
+	"description": "Agencia líder en relaciones públicas, reputación corporativa, marketing de influencers y soluciones digitales en Perú y Latinoamérica.",
+	"address": {
+		"@type": "PostalAddress",
+		"streetAddress": "Calle Enrique Palacios 360 Of. 306, Miraflores",
+		"addressLocality": "Lima",
+		"addressCountry": "PE"
+	},
+	"contactPoint": {
+		"@type": "ContactPoint",
+		"telephone": "+51-993-595-232",
+		"contactType": "customer service",
+		"email": "negocios@orange-la.com",
+		"areaServed": ["PE", "LATAM"]
+	}
+}
+</script>
+
 <main>
 	<!-- ==========================================
 	     1. HERO SLIDER SECTION
@@ -40,9 +66,9 @@ get_header();
 					<img class="hero__img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/Orange-LAtam-dentro-de-las-40-mejores-campanas-del-mundo-en-Global-Sabre-Awards-2025-desktop.webp" alt="Global Sabre Awards 2025">
 				</picture>
 				<div class="hero__content">
-					<h1 style="font-family: var(--font-sans); font-size: clamp(32px, 5vw, 64px); font-weight: 900; margin-bottom: 12px; color: var(--color-bg-light);">
+					<h2 style="font-family: var(--font-sans); font-size: clamp(32px, 5vw, 64px); font-weight: 900; margin-bottom: 12px; color: var(--color-bg-light);">
 						Impulsamos tu Marca
-					</h1>
+					</h2>
 					<p style="font-size: clamp(14px, 2vw, 18px); color: rgba(252, 245, 233, 0.7); max-width: 600px; margin: 0 auto;">
 						Somos expertos en gestión de reputación, relaciones públicas y estrategias de influencers de alto valor.
 					</p>
@@ -55,9 +81,9 @@ get_header();
 					<img class="hero__img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/Orange-Latam-denro-de-las-15-mejores-agencias-de-Latinoamerica-por-PRovoke-Media-desktop.webp" alt="PRovoke Media Top 15 Latam">
 				</picture>
 				<div class="hero__content">
-					<h1 style="font-family: var(--font-sans); font-size: clamp(32px, 5vw, 64px); font-weight: 900; margin-bottom: 12px; color: var(--color-bg-light);">
+					<h2 style="font-family: var(--font-sans); font-size: clamp(32px, 5vw, 64px); font-weight: 900; margin-bottom: 12px; color: var(--color-bg-light);">
 						Excelencia y Creatividad
-					</h1>
+					</h2>
 					<p style="font-size: clamp(14px, 2vw, 18px); color: rgba(252, 245, 233, 0.7); max-width: 600px; margin: 0 auto;">
 						Reconocidos como la mejor agencia del Perú y Top 5 de Iberoamérica.
 					</p>
@@ -185,7 +211,7 @@ get_header();
 						array( 'id' => 1, 'num' => '01', 'name' => 'PR y Gestión de la reputación', 'desc' => 'Planificar y ejecutar estrategias de Relaciones Públicas (PR) y gestión de la reputación permite a marcas y empresas influir de manera poderosa en la percepción de distintos públicos. En Orange Latam nos especializamos en la creación de planes que permiten construir una reputación sólida a empresas, productos y/o servicios, a partir de una interacción asertiva con públicos diversos, a todo nivel.', 'link' => home_url( '/pr-gestion-reputacion/' ), 'file' => 'pr-reputacion.png' ),
 						array( 'id' => 2, 'num' => '02', 'name' => 'Asuntos Públicos y Relaciones Institucionales', 'desc' => 'Estrategias de asuntos públicos, comunicación política y relacionamiento responsable con autoridades, ministerios, comunidades y stakeholders clave en Perú y la región.', 'link' => home_url( '/asuntos-publicos/' ), 'file' => 'asuntos-publicos.png' ),
 						array( 'id' => 3, 'num' => '03', 'name' => 'Marketing de Influencers', 'desc' => 'Conectamos marcas con líderes de opinión altamente relevantes para campañas de máximo alcance, impacto y retorno de inversión medible en cada plataforma digital.', 'link' => home_url( '/marketing-de-influencers/' ), 'file' => 'marketing-influencers.png' ),
-						array( 'id' => 4, 'num' => '04', 'name' => 'Digital y Social Media', 'desc' => 'Gestión estratégica de presencia digital, comunidades online y creación de contenido en todos los canales relevantes para tu audiencia.', 'link' => home_url( '/presencia-digital/' ), 'file' => 'digital-social-media.png' ),
+						array( 'id' => 4, 'num' => '04', 'name' => 'Digital y Social Media', 'desc' => 'Gestión estratégica de presencia digital, comunidades online y creación de contenido en todos los canales relevantes para tu audiencia.', 'link' => home_url( '/marketing-digital/' ), 'file' => 'digital-social-media.png' ),
 						array( 'id' => 5, 'num' => '05', 'name' => 'Producción Audiovisual Orange Studio', 'desc' => 'Producción de video, fotografía y animación de primer nivel para todas las plataformas y formatos del ecosistema digital y tradicional.', 'link' => 'https://orangelatamstudio.com/', 'file' => 'produccion-audiovisual.png' ),
 						array( 'id' => 6, 'num' => '06', 'name' => 'Creatividad y Dirección de Arte', 'desc' => 'El diferencial creativo que hace que tu comunicación se destaque y genere el impacto deseado en el público objetivo.', 'link' => $branding_url . '#creatividad-direccion-arte', 'file' => 'creatividad-arte.png' ),
 						array( 'id' => 7, 'num' => '07', 'name' => 'Branding', 'desc' => 'De naming a consolidación: creamos y posicionamos marcas memorables y deseadas en mercados nacionales e internacionales.', 'link' => $branding_url, 'file' => 'branding.png' ),

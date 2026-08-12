@@ -8,6 +8,38 @@
 get_header();
 ?>
 
+<!-- Schema JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "name": "Orange Latam",
+      "url": "<?php echo esc_url( home_url( '/' ) ); ?>",
+      "email": "negocios@orange-la.com",
+      "telephone": "+51993595252",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Calle Enrique Palacios 360 Of. 306, Centro Empresarial Abril, Miraflores",
+        "addressLocality": "Lima",
+        "addressCountry": "PE"
+      }
+    },
+    {
+      "@type": "CollectionPage",
+      "name": "Blog: Comunicación y Marketing en Perú",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Orange Latam"
+      },
+      "url": "<?php echo esc_url( home_url( '/blog/' ) ); ?>",
+      "description": "Artículos, tendencias y opinión sobre comunicación estratégica, relaciones públicas y marketing en Perú. El blog de Orange Latam."
+    }
+  ]
+}
+</script>
+
 <main class="blog-index" style="background: var(--color-bg-dark); color: var(--color-bg-light); padding: 120px 48px 96px; min-height: 80vh;">
 	<div class="blog-index__container" style="max-width: 1320px; margin: 0 auto;">
 		<header class="blog-index__header" style="margin-bottom: 64px;" data-reveal="up">

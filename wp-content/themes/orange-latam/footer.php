@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <?php
 // Mostrar el prefooter de contacto solo en las vistas del Blog y las páginas de Servicio específicas.
-if ( is_home() || is_singular( 'post' ) || is_page( 'marketing-de-influencers' ) || is_page( 'marketing-digital' ) || is_page( 'eventos-activaciones' ) || is_page_template( 'page-eventos-activaciones.php' ) || is_page( 'podcast' ) || is_page_template( 'page-podcast.php' ) || is_page( 'pr-gestion-reputacion' ) || is_page_template( 'page-pr-gestion-reputacion.php' ) || is_page( 'asuntos-publicos' ) || is_page_template( 'page-asuntos-publicos.php' ) || is_page( 'branding-creatividad' ) || is_page_template( 'page-branding-creatividad.php' ) || is_page( 'gestion-de-acceso' ) || is_page_template( 'page-gestion-de-acceso.php' ) ) :
+if ( is_home() || is_singular( 'post' ) || is_page( 'marketing-de-influencers' ) || is_page( 'marketing-digital' ) || is_page( 'eventos-activaciones' ) || is_page_template( 'page-eventos-activaciones.php' ) || is_page( 'podcast' ) || is_page_template( 'page-podcast.php' ) || is_page( 'pr-gestion-reputacion' ) || is_page_template( 'page-pr-gestion-reputacion.php' ) || is_page( 'asuntos-publicos' ) || is_page_template( 'page-asuntos-publicos.php' ) || is_page( 'branding-creatividad' ) || is_page_template( 'page-branding-creatividad.php' ) || is_page( 'gestion-de-acceso' ) || is_page_template( 'page-gestion-de-acceso.php' ) || is_page( 'presencia-digital' ) || is_page_template( 'page-presencia-digital.php' ) ) :
 ?>
 	<!-- ==========================================
 	     CONTACTO (PRE-FOOTER)
@@ -38,7 +38,7 @@ if ( is_home() || is_singular( 'post' ) || is_page( 'marketing-de-influencers' )
 			<div class="infl-prefooter__col infl-prefooter__col--contact" data-reveal="fade">
 				<p class="infl-prefooter__contact-label">Contacto:</p>
 				<p class="infl-prefooter__phone">
-					<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#38b6ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+					<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#38b6ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
 					<a href="tel:51993595232">(+51) 993 595 232</a>
 				</p>
 				<div class="infl-prefooter__social">
