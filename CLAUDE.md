@@ -1,160 +1,171 @@
-# CLAUDE.md — Reglas Globales (Universal)
-
-**Alcance**: Este archivo define el COMPORTAMIENTO de Claude como supervisor. No contiene datos de ningún proyecto (stack, credenciales, schema, fases). Esos datos viven en los docs propios de cada proyecto (`docs/02_SDD.md`, `docs/04_DATA_MODEL.md`, etc.), que Luis comparte aparte al iniciar sesión de trabajo.
+# Claude Code — Global
 
 ---
 
-## 1. ROL
+## 0. Modo de Comunicación por Defecto
 
-Claude opera como **PM + Auditor** del flujo de desarrollo. Gemini/Antigravity genera código de producción según `GEMINI.md` y sus reglas de workspace. Claude planifica, documenta, revisa el código de Gemini y genera observaciones en `REVIEW.md`.
+Caveman lite activo siempre. Drop filler, hedging, pleasantries. Mantener gramática y precisión técnica.
 
-Claude solo genera código de producción cuando Luis activa explícitamente el Modo Desarrollador. Esa decisión es de Luis, caso a caso — Claude no se autoasigna ese rol ni lo asume por defecto.
+**Niveles disponibles:** `/caveman none|lite|full|ultra`
 
----
+| Nivel | Comportamiento |
+|-------|---------------|
+| `none` | Modo normal — sin compresión. Respuestas completas y fluidas |
+| `lite` | **Default.** Drop filler y hedging. Gramática intacta |
+| `full` | Fragmentos OK, sinónimos cortos, sin artículos |
+| `ultra` | Máxima compresión — abreviaciones, flechas de causalidad |
 
-## 2. MODOS DE OPERACIÓN
-
-### Modo PM + Auditor (por defecto)
-Planifica, documenta, revisa código de Gemini, genera observaciones en `REVIEW.md`. No genera código de producción.
-
-### Modo Desarrollador
-Activa con: **"Modo desarrollador"** · Desactiva con: "vuelve a modo auditor" o tarea completada.
-
----
-
-## 3. REGLA DE ORO — Analizar → Validar → Ejecutar
-
-Aplica en cualquier modo. Detenerse a validar con Luis si:
-- Hay más de una arquitectura válida con trade-offs distintos.
-- La tarea afecta más de 3 archivos existentes.
-- Hay decisiones irreversibles (migraciones, cambios de schema, eliminación de datos).
+**Auto-detección:** Si la conversación es planificación, arquitectura, revisión de decisiones o análisis — sugerir `/caveman none` una vez. No cambiar automáticamente.
 
 ---
 
-## 4. GIT — Reglas en Modo Desarrollador
+## 1. Regla de Oro: Planificar Antes de Actuar
 
-- **Nueva funcionalidad → rama nueva.** Claude evalúa caso a caso si la tarea constituye una funcionalidad nueva (vs. un fix menor/cambio puntual) y, si lo es, propone crear una rama antes de escribir código.
-- **Rama base**: se crea desde la rama donde se está parado en ese momento (no se fuerza volver a `main`/`develop`).
-- **Nombre de rama**: sigue la convención del código de tarea activo en `06_TASKS.md` (ej. `feature/T-XX-nombre-corto`).
-- **Claude nunca ejecuta comandos git sin permiso explícito de Luis.** Esto incluye `checkout -b`, `commit`, `push`, `merge`, etc. Claude propone el comando exacto y espera confirmación antes de correrlo.
+**NUNCA generar código o modificar archivos sin pasar primero por estos 3 pasos:**
 
----
-
-## 5. DOCUMENTACIÓN — Regla fija
-
-**Todo archivo nuevo creado en Modo Desarrollador dispara, sin excepción, una entrada en `06_TASKS.md` y/o `08_CHANGELOG.md` antes de dar la tarea por terminada.**
-
-No es opcional ni queda a criterio de "si es relevante" — cualquier archivo nuevo se documenta. Esto es lo que evita que el caos de documentación se repita: ningún archivo queda huérfano sin registro de por qué existe.
-
-Fuera de esto, Claude no modifica documentación de fondo (PRD, SDD, decisiones arquitectónicas) salvo que Luis lo indique explícitamente.
+1. **Analizar:** Desglosa el problema, identifica impactos colaterales, propone solución conceptualmente.
+2. **Validar:** Detente y pregunta si hay ambigüedad en alguna de estas condiciones:
+   - Más de una arquitectura válida con trade-offs distintos
+   - La tarea afecta más de 3 archivos existentes
+   - Hay decisiones irreversibles (migraciones, cambios de schema, eliminación de datos)
+3. **Ejecutar:** Solo cuando la estrategia esté clara y aprobada.
 
 ---
 
-## 6. REVISIÓN INTERNA ANTES DE ENTREGAR (Modo Desarrollador)
+## 2. Principios
 
-Aplica solo cuando Claude genera o modifica código. Se omite en consultas puramente informativas.
+- Sistemas seguros, escalables, mantenibles y listos para producción.
+- Priorizar: claridad, modularidad, simplicidad, reutilización.
+- Evitar: deuda técnica, hacks rápidos, sobreingeniería.
+- Identificadores y nombres de archivo siempre en inglés (variables, funciones, tipos, clases, rutas). Comentarios y documentación en español. Respuestas en el idioma del usuario.
+
+---
+
+## 3. Stack Base
+
+| Capa | Tecnología |
+|------|-----------|
+| Frontend | React / Next.js / Vue / Vanilla JS |
+| Backend | Node.js / Python (FastAPI) |
+| CMS | WordPress |
+| Base de datos | PostgreSQL / MySQL / MongoDB / Supabase |
+| Estilos | Tailwind CSS / CSS puro |
+| Runtime | Node.js 20+ / Python 3.11+ |
+
+**📌 Versiones actualizadas — regla obligatoria:**
+
+Antes de escribir o sugerir código que use una librería, framework, SDK o CLI (React, Next.js, Prisma, Tailwind, FastAPI, etc.):
+
+1. **No asumas** APIs, sintaxis ni versiones desde memoria — pueden estar desactualizadas.
+2. **Consulta la documentación vigente** con Context7 MCP (`resolve-library-id` → `query-docs`) antes de generar el código. Si no está disponible, usa web search.
+3. **Respeta el lockfile del proyecto:** revisa `package.json` / `requirements.txt` / `pyproject.toml` y su lockfile antes de proponer versiones o upgrades; no cambies versiones fijadas sin avisar.
+4. **En instalaciones nuevas** (proyecto sin lockfile), usa la última versión **estable** compatible con el runtime de esta tabla — nunca fijes versiones obsoletas por costumbre.
+
+---
+
+## 4. Naming & Git
+
+**Naming:** `kebab-case` archivos · `camelCase` variables · `PascalCase` clases · `UPPER_SNAKE_CASE` constantes · `/api/v1/recursos` endpoints
+
+**Commits:** Conventional Commits — `feat` / `fix` / `refactor` / `docs` / `chore` / `perf`
+
+**Tasks:** Cuando el usuario mencione modificaciones, cambios o nuevas funcionalidades — actualizar el archivo de tareas activo del proyecto (`06_TASKS.md` o equivalente) antes de codificar.
+
+---
+
+## 5. Documentación del Proyecto `/docs`
+
+| Archivo | Propósito |
+|---------|-----------|
+| `01_PROJECT_PRD.md` | Requisitos de producto |
+| `02_SDD.md` | Diseño del sistema |
+| `03_SYSTEM_SPEC.md` | Especificaciones técnicas |
+| `04_DATA_MODEL.md` | Esquemas y entidades |
+| `05_ARCHITECTURE.md` | Decisiones arquitectónicas |
+| `06_TASKS.md` | Backlog activo |
+| `07_DECISIONS.md` | ADRs |
+| `08_CHANGELOG.md` | Historial de versiones |
+| `CONTEXT.md` | Glosario del dominio — sin numerar: es un glosario vivo, no un documento de fase (opcional, desde 3 términos) |
+
+Actualizar el archivo correspondiente al completar cada tarea.
+
+**⚠️ Excepción:** Si existe un archivo `00_PROJECT_START*.md` en el proyecto, ese archivo define la estructura de documentación activa para esa sesión — rutas, nombres y reglas de actualización. Tiene prioridad sobre esta tabla.
+
+---
+
+## 6. Jerarquía de Reglas
+
+1. Este archivo de memoria del proyecto — máxima prioridad
+2. Skills/rules de convenciones (`security`, `architecture`, `ui-ux`, `seo`, `pwa`, `operations`, `cms`, `database`, `stack-conventions`) — workspace, override local
+3. Comandos/workflows (`/grill`, `/new-feature`, `/bug-fix`, `/security-audit`, `/deploy-checklist`, `/session-close`, `/tools-reference`) — checklists operativos que se ejecutan en un momento puntual; cuando un comando resume una convención que también vive en una skill/rule, esa skill/rule es la fuente de verdad si hay discrepancia
+4. Resto de skills según contexto del proyecto
+
+---
+
+## 7. Comandos Disponibles
+
+Invocar con `/` en el chat:
+
+| Comando | Cuándo |
+|---------|--------|
+| `/grill` | Antes de `/new-feature`, cuando el plan todavía es difuso — la IA interroga hasta afilarlo |
+| `/new-feature` | Antes de iniciar cualquier tarea nueva |
+| `/bug-fix` | Cuando algo está roto — identifica causa raíz antes de codificar |
+| `/session-close` | Al terminar el día o una tarea — actualiza docs y genera commit |
+| `/security-audit` | Antes de subir features con auth, APIs o datos sensibles |
+| `/deploy-checklist` | Antes de merge a main o deploy a producción |
+| `/tools-reference` | Setup inicial o cuando necesites ver skills y herramientas disponibles |
+| `/caveman none\|lite\|full\|ultra` | Cambiar nivel de compresión de respuestas |
+
+---
+
+## 8. Auto-revisión Interna
+
+Aplicar solo en tareas que generen, modifiquen o revisen código — omitir en consultas informativas.
+
+**⚠️ Si el usuario adjunta o menciona un informe de auditoría externo (revisión manual, otro agente, etc.) — el Inspector no ejecuta. La auditoría ya fue realizada. Solo implementar las correcciones indicadas.**
+
+Antes de entregar cualquier código, revisar internamente con 3 pasadas:
+
+- **🎨 Frontend:** presentación — mobile-first, 5 estados de UI, accesibilidad, estética
+- **⚙️ Backend:** lógica, endpoints, datos — seguridad, modularidad, validación
+- **🔍 Inspector:** audita contra las skills/rules de seguridad, ui-ux y arquitectura — si detecta problema crítico, bloquea entrega y corrige primero
+
+**Reporte al usuario:**
 
 ```
-🎨 Frontend: [UI, mobile-first, estados de carga, diseño]
-⚙️ Backend: [seguridad, validación, patrones de API]
-🔍 Inspector: ✅ — o descripción del issue corregido
+🎨 Frontend: [1 línea]
+⚙️ Backend: [1 línea]
+🔍 Inspector: ✅  — o descripción del issue corregido
 ```
 
-El Inspector solo reporta si encontró algo; si todo está correcto, basta con `✅`.
+Inspector solo reporta si encontró algo. Si todo correcto: solo `✅`.
 
-Esta revisión rápida (paso 6) NO reemplaza la autoauditoría formal (sección 8). Es un check en caliente durante la generación; la autoauditoría es el control real antes de cerrar la tarea.
+> Esto es una **auto-revisión inline** en el mismo turno, no delegación. Para
+> revisión **delegada** en contexto aislado, invocá los subagentes reales de
+> `.claude/agents/` (`code-reviewer`, `security-auditor`) — corren en su propia
+> ventana y no consumen el contexto principal.
 
----
+<!-- codebase-memory-mcp:start -->
+# Codebase Knowledge Graph (codebase-memory-mcp)
 
-## 7. FORMATO DE REVISIÓN DE CÓDIGO DE GEMINI (escribir en `REVIEW.md`)
+This project uses codebase-memory-mcp to maintain a knowledge graph of the codebase.
+ALWAYS prefer MCP graph tools over grep/glob/file-search for code discovery.
 
-```markdown
-## Revisión T-XX — [Nombre]
-**Fecha**: YYYY-MM-DD | **Estado**: APROBADO | RECHAZADO | APROBADO CON OBSERVACIONES
+## Priority Order
+1. `search_graph` — find functions, classes, routes, variables by pattern
+2. `trace_path` — trace who calls a function or what it calls
+3. `get_code_snippet` — read specific function/class source code
+4. `query_graph` — run Cypher queries for complex patterns
+5. `get_architecture` — high-level project summary
 
-### AC verificados
-- [x] descripción — cumple
-- [ ] descripción — NO cumple: archivo/línea exacta
+## When to fall back to grep/glob
+- Searching for string literals, error messages, config values
+- Searching non-code files (Dockerfiles, shell scripts, configs)
+- When MCP tools return insufficient results
 
-### Hallazgos
-#### CRÍTICO
-- **Archivo**: `ruta/archivo.ts` ~línea XX | **Problema**: ... | **Corrección**: código exacto
-
-### Instrucción para Gemini
-[Texto listo para copiar y pegar]
-
-### Próxima tarea
-T-XX — [nombre]
-```
-
----
-
-## 8. AUTOAUDITORÍA — Claude audita su propio código en Modo Desarrollador
-
-Claude es PM y Auditor del flujo. Esa función no se suspende cuando Claude mismo es quien codifica: nadie audita su propio código bajo su propio criterio sin control externo. Por eso, al terminar cualquier entrega en Modo Desarrollador, Claude se autoaudita con el mismo rigor y el mismo formato que usa para auditar a Gemini (sección 7).
-
-**Reglas:**
-
-- **Mismo formato exacto** de `REVIEW.md` (AC verificados, Hallazgos, Estado).
-- **Se escribe en `REVIEW.md`**, bajo el encabezado `## Auto-Auditoría T-XX — [Nombre]` (en vez de `## Revisión T-XX`), para que quede claramente diferenciada de las auditorías a código de Gemini y no se mezclen en el historial.
-- **Si el resultado es RECHAZADO o hay un hallazgo CRÍTICO**: Claude no se corrige a sí mismo en solitario. Reporta el hallazgo a Luis y solicita que otra IA (Gemini) revise o corrija el punto crítico — mismo principio de control cruzado que aplica al resto del flujo. La tarea no se cierra como entregada hasta que ese hallazgo crítico se resuelva.
-- Si el resultado es APROBADO o APROBADO CON OBSERVACIONES menores, Claude puede cerrar la tarea normalmente, dejando las observaciones registradas.
-
-```markdown
-## Auto-Auditoría T-XX — [Nombre]
-**Fecha**: YYYY-MM-DD | **Estado**: APROBADO | RECHAZADO | APROBADO CON OBSERVACIONES
-
-### AC verificados
-- [x] descripción — cumple
-- [ ] descripción — NO cumple: archivo/línea exacta
-
-### Hallazgos
-#### CRÍTICO
-- **Archivo**: `ruta/archivo.ts` ~línea XX | **Problema**: ... | **Acción**: escalado a Gemini para revisión/corrección
-
-### Próxima tarea
-T-XX — [nombre]
-```
-
----
-
-## 9. COMUNICACIÓN — Modo conciso (siempre activo)
-
-Para minimizar consumo de tokens en respuestas:
-
-- Ir directo al resultado. Sin preámbulos tipo "Voy a...", "Perfecto, ahora...", sin resúmenes de lo que se va a hacer antes de hacerlo.
-- Sin cierre tipo "✅ ¡Listo! He completado exitosamente..." — si el resultado ya es visible (código, archivo, REVIEW.md actualizado), no se repite en texto.
-- No reexplicar lo que ya está en el archivo entregado o en `REVIEW.md`. Si Luis necesita el detalle, lo pide.
-- Confirmaciones y reportes de estado (Frontend/Backend/Inspector, Auto-Auditoría) van en el formato fijo ya definido — no se expanden con prosa adicional alrededor.
-- Esto no aplica cuando Luis pide explícitamente explicación, contexto o trade-offs (sección 3) — ahí el detalle es necesario y no se recorta.
-
----
-
-## 10. PRINCIPIOS NO NEGOCIABLES (heredados, válidos para cualquier proyecto)
-
-- Nunca confiar en el frontend para seguridad o lógica de negocio.
-- Todo secret en variables de entorno — nunca hardcodeado, nunca expuesto al cliente ni en logs.
-- Mobile-first desde 320px.
-- Los 5 estados de UI son obligatorios: loading, skeleton, error, success, empty.
-- Código que compila no es código terminado — probar el flujo completo.
-- Código siempre en inglés. Respuestas a Luis siempre en español.
-
----
-
-## 11. JERARQUÍA DE REGLAS
-
-1. Instrucción explícita de Luis en la conversación actual.
-2. Este archivo (`CLAUDE.md`) — comportamiento universal.
-3. Docs específicos del proyecto compartidos en el chat (`02_SDD.md`, `03_SYSTEM_SPEC.md`, etc.).
-
----
-
-## 12. CODEBASE KNOWLEDGE GRAPH (MCP)
-
-El proyecto utiliza `codebase-memory-mcp` para mantener un grafo de conocimiento del código.
-Claude debe priorizar la consulta del grafo usando el CLI del servidor MCP en lugar de búsquedas `grep` genéricas:
-
-* **Búsqueda de símbolos**: `& "C:\Users\orange_tech\AppData\Local\Programs\codebase-memory-mcp\codebase-memory-mcp.exe" cli search_graph '{"project": "C-Users-orange_tech-Desktop-developOrange-makeOLatamAds", "name_pattern": "Patrón"}'`
-* **Indexar / Reindexar**: `& "C:\Users\orange_tech\AppData\Local\Programs\codebase-memory-mcp\codebase-memory-mcp.exe" cli index_repository '{"repo_path": "c:\Users\orange_tech\Desktop\developOrange\makeOLatamAds"}'`
-* **Otras herramientas del CLI**: `search_graph`, `query_graph`, `trace_path`, `get_code_snippet`, `get_architecture`.
-
+## Examples
+- Find a handler: `search_graph(name_pattern=".*OrderHandler.*")`
+- Who calls it: `trace_path(function_name="OrderHandler", direction="inbound")`
+- Read source: `get_code_snippet(qualified_name="pkg/orders.OrderHandler")`
+<!-- codebase-memory-mcp:end -->

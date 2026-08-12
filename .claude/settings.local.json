@@ -6,7 +6,24 @@
       "Bash(curl -s http://orangeia.test/blog/)",
       "Bash(which wp *)",
       "Read(//c/laragon/bin/**)",
-      "Bash(/c/laragon/bin/mysql/mysql-8.4.3-winx64/bin/mysql.exe -uroot orangeIA --default-character-set=utf8mb4 -e ' *)"
+      "Bash(/c/laragon/bin/mysql/mysql-8.4.3-winx64/bin/mysql.exe -uroot orangeIA --default-character-set=utf8mb4 -e ' *)",
+      "WebFetch(domain:cdn.jsdelivr.net)",
+      "Bash(php -l \"wp-content/themes/orange-latam/page-presencia-digital.php\")",
+      "Bash(php -l \"wp-content/themes/orange-latam/functions.php\")",
+      "PowerShell($php = Get-ChildItem \"C:\\\\laragon\\\\bin\\\\php\" -Directory | Select-Object -Last 1; & \"$\\($php.FullName\\)\\\\php.exe\" -l \"wp-content\\\\themes\\\\orange-latam\\\\page-presencia-digital.php\"; & \"$\\($php.FullName\\)\\\\php.exe\" -l \"wp-content\\\\themes\\\\orange-latam\\\\functions.php\")",
+      "mcp__claude-in-chrome__list_connected_browsers",
+      "mcp__claude-in-chrome__tabs_context_mcp",
+      "mcp__claude-in-chrome__navigate",
+      "mcp__claude-in-chrome__get_page_text",
+      "Bash(pandoc --track-changes=all \"/c/Users/orange_tech/Desktop/SEO_documentos/Nuevas paginas Orange Latam/Estructura_SEO_Servicios_Orange_Latam_1.docx\" -o /tmp/seo_doc.md)",
+      "Bash(echo \"---EXIT $?---\")",
+      "Read(//tmp/**)",
+      "Bash(python3 \"/c/Users/orange_tech/AppData/Roaming/Claude/local-agent-mode-sessions/09f706c5-be0c-4385-82e5-ed42186eaabe/89997b8f-534b-4df7-b131-c39aa289f6d1/rpm/plugin_01PgNupW83EYec6SPD6JCc2o/skills/docx/scripts/office/unpack.py\" \"/c/Users/orange_tech/Desktop/SEO_documentos/Nuevas paginas Orange Latam/Estructura_SEO_Servicios_Orange_Latam_1.docx\" /tmp/seo_unpacked/)",
+      "PowerShell($py = \"C:\\\\laragon\\\\bin\\\\python\\\\python-3.13\\\\python.exe\"; & $py --version)",
+      "mcp__claude-in-chrome__read_page",
+      "mcp__claude-in-chrome__find",
+      "mcp__claude-in-chrome__browser_batch",
+      "mcp__claude-in-chrome__computer"
     ]
   }
 }
