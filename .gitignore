@@ -20,6 +20,10 @@
 !*.md
 !.gitignore
 
+# Excepción puntual: archivos de raíz fuera del theme que sí queremos versionar
+!llms.txt
+!.htaccess
+
 # Ignorar archivos temporales ocultos del sistema
 .DS_Store
 Thumbs.db
