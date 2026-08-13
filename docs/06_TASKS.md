@@ -120,3 +120,9 @@
 - [x] Resolver canibalización Home ↔ `/pr-gestion-reputacion/` (post 91): ambas competían por el mismo Focus Keyword primario "agencia de relaciones públicas" (hallazgo del informe, corroborado en Rank Math). Post 91 pasó su primaria a "gestión de reputación"; "agencia de relaciones públicas" bajó a secundaria en post 91
 - [ ] Decidir con el cliente si se abordan los demás quick-wins del informe: 300-500 palabras de copy narrativo real en la Home y reescritura del H1/title con intención de búsqueda real (no solo superlativo de marca) — no implementado, fuera del alcance pedido
 
+## Modal demo interna de SEO (temporal — remover tras la presentación a dirección)
+- [x] Crear `inc/temp-seo-demo-modal.php` (self-contained, 1 sola línea `require_once` en `functions.php`): modal público que se levanta en cada página con Meta Title, Meta Description y Focus Keywords (peso %, fuente del dato y justificación en lenguaje llano) — pensado para presentar la estrategia SEO a dirección sin necesidad de acceso a wp-admin
+- [x] Consultar en SEMrush (base PE) el volumen/dificultad real de las 39 Focus Keywords cargadas hoy en todo el sitio (Home, PR, Branding, Marketing Digital, Podcast, Asuntos Públicos, Eventos, Gestión de Acceso, Presencia Digital, Influencers) — 39/39 con dato real de SEMrush, cero cifras inventadas
+- [x] Reescribir el copy del modal en lenguaje simple (sin jerga: nada de "KD", "Rank Math", "long-tail", "SEMrush (PE)") tras feedback de que sonaba a jerga de SEO y luego a "sin sustento" cuando decía "no verificado"
+- [x] Fix de bug propio: el `form_input` de Rank Math sobreescribía el array completo de Focus Keywords en vez de agregar — causó que "agencia de PR" quedara como primaria en la Home en lugar de "agencia de relaciones públicas"; detectado por el propio modal y corregido en Rank Math
+
