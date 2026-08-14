@@ -20,8 +20,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /**
  * Datos reales confirmados en SEMrush (base de datos Perú), consultados vía
- * Análisis Grupal de Palabras Clave sobre las 39 Focus Keywords que están
- * cargadas hoy en Rank Math en todo el sitio. 'volume' = búsquedas/mes exacto
+ * Análisis Grupal de Palabras Clave sobre las Focus Keywords que están
+ * cargadas hoy en Rank Math en todo el sitio (incluye una ronda de reemplazo
+ * de keywords ausentes del contenido real, 2026-08-14). 'volume' = búsquedas/mes exacto
  * de SEMrush (incluye 0 cuando SEMrush lo reporta así — no se oculta).
  * 'kd' = dificultad de keyword (0-100) cuando SEMrush la reporta, incluso si
  * el volumen exacto no está disponible ("n/d" en SEMrush). Todo lo que no
@@ -35,9 +36,7 @@ function orange_latam_seo_demo_known_volumes() {
 		'agencia'                                => array( 'volume' => 6600, 'kd' => 48 ),
 		'relaciones públicas'                    => array( 'volume' => 1600, 'kd' => 30 ),
 		'nota de prensa'                         => array( 'volume' => 1000, 'kd' => 25 ),
-		'agencia de pr'                          => array( 'volume' => 10, 'kd' => null ),
 		'gestión de reputación'                  => array( 'volume' => 20, 'kd' => null ),
-		'agencia de pr lima'                     => array( 'volume' => 0, 'kd' => null ),
 		'agencia de marketing de influencers'    => array( 'volume' => 20, 'kd' => null ),
 		'agencia de branding'                    => array( 'volume' => 170, 'kd' => 37 ),
 		'creación de marca'                      => array( 'volume' => 110, 'kd' => null ),
@@ -45,9 +44,7 @@ function orange_latam_seo_demo_known_volumes() {
 		'agencia de marketing digital en lima'   => array( 'volume' => 390, 'kd' => 50 ),
 		'gestion de redes sociales'               => array( 'volume' => 320, 'kd' => 16 ),
 		'publicidad digital peru'                => array( 'volume' => 20, 'kd' => null ),
-		'community management lima'              => array( 'volume' => 0, 'kd' => null ),
 		'contenido estrategico redes sociales'   => array( 'volume' => null, 'kd' => 22 ),
-		'alquiler de estudio de podcast'         => array( 'volume' => null, 'kd' => 8 ),
 		'estudio de podcast profesional'         => array( 'volume' => null, 'kd' => 8 ),
 		'asuntos públicos'                       => array( 'volume' => 1600, 'kd' => null ),
 		'comunicación política'                  => array( 'volume' => 210, 'kd' => null ),
@@ -56,7 +53,9 @@ function orange_latam_seo_demo_known_volumes() {
 		'gestión de acceso'                      => array( 'volume' => 20, 'kd' => null ),
 		'comunicación en salud'                  => array( 'volume' => 210, 'kd' => null ),
 		'acceso a medicamentos'                  => array( 'volume' => 40, 'kd' => null ),
-		'agencia seo perú'                       => array( 'volume' => 20, 'kd' => null ),
+		'agencia seo perú'                       => array( 'volume' => 20, 'kd' => 39 ),
+		'presencia digital'                      => array( 'volume' => 110, 'kd' => 20 ),
+		'posicionamiento seo'                    => array( 'volume' => 320, 'kd' => 42 ),
 		'diseño web lima'                        => array( 'volume' => 170, 'kd' => null ),
 		'agencia ecommerce'                      => array( 'volume' => 20, 'kd' => null ),
 		'agencia de comunicación política perú'  => array( 'volume' => null, 'kd' => 16 ),
@@ -64,7 +63,6 @@ function orange_latam_seo_demo_known_volumes() {
 		'cómo crear una marca desde cero'        => array( 'volume' => null, 'kd' => 30 ),
 		'cómo manejar una crisis de reputación'  => array( 'volume' => null, 'kd' => 20 ),
 		'diseño de identidad de marca'           => array( 'volume' => null, 'kd' => 26 ),
-		'empresa de relaciones públicas perú'    => array( 'volume' => null, 'kd' => 14 ),
 		'estudio de podcast en lima'             => array( 'volume' => null, 'kd' => 7 ),
 		'eventos híbridos'                       => array( 'volume' => null, 'kd' => 24 ),
 		'grabacion de podcast en miraflores'     => array( 'volume' => null, 'kd' => 10 ),
@@ -73,6 +71,12 @@ function orange_latam_seo_demo_known_volumes() {
 		'agencia de activaciones btl lima'                  => array( 'volume' => null, 'kd' => 9 ),
 		'comunicación farmacéutica perú'                    => array( 'volume' => null, 'kd' => 17 ),
 		'agencia de comunicación para el sector salud perú' => array( 'volume' => null, 'kd' => 8 ),
+		// Reemplazos de keywords ausentes del contenido — extraídas del copy real (2026-08-14).
+		'gestión de comunicación y relaciones públicas'      => array( 'volume' => null, 'kd' => 17 ),
+		'empresa experta en relaciones públicas'             => array( 'volume' => null, 'kd' => 11 ),
+		'agencia de pr en lima perú'                         => array( 'volume' => null, 'kd' => 16 ),
+		'presencia en redes sociales'                        => array( 'volume' => 20, 'kd' => null ),
+		'grabacion y edicion profesional de podcast en lima' => array( 'volume' => null, 'kd' => 7 ),
 	);
 }
 
@@ -96,14 +100,24 @@ function orange_latam_seo_demo_known_reasons() {
 	return array(
 		7 => array( // Home
 			'agencia de relaciones públicas' => 'Es la frase principal por la que queremos que nos encuentren en Google. Ahora mismo ya aparecemos en el puesto #2 de resultados para esta búsqueda — mejor que Trend.pe, nuestro competidor directo (ellos están en el puesto 5-6). Por eso la reforzamos aquí, en la home, y no la repetimos como principal en otra página: si dos páginas del mismo sitio compiten por la misma frase, Google no sabe cuál mostrar primero y ninguna de las dos sube bien. Mejor concentrar toda la fuerza en una sola.',
-			'agencia de pr' => 'Versión corta agregada por pedido explícito de dirección. La palabra "PR" ya forma parte del nombre con el que nos identificamos ante Google ("Orange LATAM Agencia de PR y Comunicación"), así que esta frase refuerza esa asociación.',
+			'gestión de comunicación y relaciones públicas' => 'Reemplaza a "agencia de PR", que solo existía en el código invisible de la página (el JSON-LD que lee Google pero nadie ve) y nunca aparecía en el texto real. Esta frase, en cambio, ya está escrita palabra por palabra en el subtítulo visible del inicio ("...por nuestra gestión de comunicación y relaciones públicas"), así que no inventamos nada nuevo — solo alineamos la keyword con lo que la página ya dice.',
 		),
 		91 => array( // PR y Gestión de la Reputación
 			'gestión de reputación' => 'Pasó a ser la frase principal de esta página porque antes competía con la Home por la misma frase ("agencia de relaciones públicas"), y eso confundía a Google sobre cuál de las dos mostrar — perjudicando a ambas. Ahora cada página tiene su propia frase y ya no compiten entre sí.',
-			'empresa de relaciones públicas perú' => 'La misma idea, pero agregando "Perú": sirve para aparecer también cuando alguien busca especificando el país.',
-			'agencia de pr lima' => 'La misma idea, pero agregando "Lima": captura a alguien que ya busca algo más puntual y local, donde normalmente hay menos agencias compitiendo por esa frase exacta.',
+			'empresa experta en relaciones públicas' => 'Reemplaza a "empresa de relaciones públicas Perú", que no aparecía en ningún lugar del texto visible de la página. Esta frase sí es real: está escrita en negrita dentro del bloque "Nosotros" ("...empresa experta en relaciones públicas con presencia en el Perú y otros países").',
+			'agencia de pr en lima perú' => 'Reemplaza a "agencia de PR Lima", que tampoco aparecía tal cual en el texto. La frase real que sí está en negrita en la página es "agencia de PR en Lima, Perú" (sección "Por qué elegirnos"); usamos esa versión exacta como keyword.',
 			'cómo manejar una crisis de reputación' => 'Esta frase la busca alguien que todavía no sabe que necesita contratar una agencia — solo quiere entender el problema. Es una oportunidad de aparecer temprano, antes de que decida a quién contratar. Nuestro competidor Trend.pe ya está aprovechando este tipo de búsquedas y nosotros todavía no.',
 			'agencia de relaciones públicas' => 'Ya no es la frase principal de esta página — se la dejamos a la Home porque ella ya tiene mejor posición en Google para esa búsqueda. La mantenemos aquí como frase de apoyo para no perder del todo la relación con el tema de la página.',
+		),
+		81 => array( // Marketing Digital
+			'presencia en redes sociales' => 'Reemplaza a "community management lima", que no aparecía en ningún lugar del texto — ni siquiera la palabra "community" está escrita en la página. Esta frase sí es real: aparece textualmente en el subtítulo del servicio de Gestión de Redes Sociales ("Creamos y gestionamos tu presencia en redes sociales de manera estratégica...").',
+		),
+		84 => array( // Podcast
+			'grabacion y edicion profesional de podcast en lima' => 'Reemplaza a "alquiler de estudio de podcast", que no aparecía en el texto — la palabra "alquiler" no se usa en ningún lugar de la página. Esta frase sí es real: es el texto exacto de la etiqueta visible sobre la sección de servicios ("GRABACIÓN Y EDICIÓN PROFESIONAL DE PODCAST EN LIMA").',
+		),
+		122 => array( // Presencia Digital
+			'presencia digital' => 'Reemplazó a "Agencia SEO Perú" como frase principal, a pedido de dirección. Comparamos ambas en SEMrush junto con "Posicionamiento SEO" antes de decidir: "Presencia Digital" trae más búsquedas que la frase anterior (110 al mes vs. 20) y es mucho más fácil de posicionar (la mitad de difícil que "Posicionamiento SEO"). Además describe mejor lo que ofrece la página completa — diseño web, SEO y e-commerce — en vez de reducirla solo a SEO.',
+			'posicionamiento seo' => 'Es la frase con más búsquedas de las tres que comparamos (320 al mes, el triple que "Presencia Digital"), y por eso la sumamos como frase de apoyo — no como principal, porque es más difícil de posicionar (el doble que "Presencia Digital") al competir con agencias de SEO grandes de toda la región, no solo de Perú. Ya aparece de forma natural en el título visible de la página ("Posicionamiento SEO y presencia digital..."), así que suma sin esfuerzo extra.',
 		),
 	);
 }

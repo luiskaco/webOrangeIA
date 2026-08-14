@@ -88,12 +88,12 @@ $theme_uri = get_template_directory_uri();
 			<div class="ap-hero__content">
 				<h1 class="ap-hero__title" data-ap-hero-title>
 					Asuntos Públicos y
-					<span class="ap-title-mark">Relaciones Institucionales<svg class="ap-title-mark__stroke" viewBox="0 0 300 12" preserveAspectRatio="none" aria-hidden="true"><path d="M3 9 C 60 3, 170 2, 297 6" fill="none" stroke="#ee894f" stroke-width="5" stroke-linecap="round"/></svg></span>
+					<span class="ap-title-mark">Relaciones Institucionales</span>
 				</h1>
-				<h2 class="ap-hero__subtitle" data-ap-hero-item>El rol de los asuntos públicos hoy</h2>
+
 
 				<p class="ap-hero__lead" data-ap-hero-item>
-					Estrategias de <strong>asuntos públicos</strong> para anticipar riesgos regulatorios, fortalecer el <strong>relacionamiento con stakeholders</strong> y gestionar escenarios complejos en Perú.
+					Estrategias de <strong>asuntos públicos</strong> para anticipar riesgos regulatorios, fortalecer el <strong>relacionamiento con stakeholders</strong> y gestionar escenarios complejos en Perú y en otros países.
 				</p>
 
 			</div>
@@ -105,10 +105,6 @@ $theme_uri = get_template_directory_uri();
 					$hero_img = $theme_uri . '/assets/images/asuntos-publicos/hero.png';
 					?>
 					<img src="<?php echo esc_url( $hero_img ); ?>" alt="Mesa de diálogo de Asuntos Públicos y Relaciones Institucionales en Perú" class="ap-hero-image-card__img">
-					<div class="ap-hero-image-card__overlay">
-						<span class="ap-hero-image-card__tag">Mesa Estratégica</span>
-						<h4 class="ap-hero-image-card__title">Gestión de Escenarios Complejos</h4>
-					</div>
 				</div>
 			</div>
 		</div>
@@ -123,21 +119,15 @@ $theme_uri = get_template_directory_uri();
 					<!-- Columna 1 (Elevada) -->
 					<div class="ap-mosaic-col ap-mosaic-col--1" data-ap-parallax="-8">
 						<!-- Card 1 -->
-						<div class="ap-mosaic-card ap-mosaic-card--primary">
+						<div class="ap-mosaic-card">
 							<span class="ap-mosaic-card__tag">Regulación & Licencias</span>
-							<div class="ap-mosaic-card__icon">
-								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-							</div>
 							<h4 class="ap-mosaic-card__title">Reguladores & Ministerios</h4>
 							<p class="ap-mosaic-card__desc">Anticipación normativa y prevención de riesgos regulatorios.</p>
 						</div>
 
 						<!-- Card 2 -->
-						<div class="ap-mosaic-card ap-mosaic-card--cyan">
+						<div class="ap-mosaic-card">
 							<span class="ap-mosaic-card__tag">Licencia Social</span>
-							<div class="ap-mosaic-card__icon">
-								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>
-							</div>
 							<h4 class="ap-mosaic-card__title">Comunidades Locales</h4>
 							<p class="ap-mosaic-card__desc">Diálogo responsable y gestión de relaciones con comunidades.</p>
 						</div>
@@ -146,21 +136,15 @@ $theme_uri = get_template_directory_uri();
 					<!-- Columna 2 (Desplazada hacia abajo) -->
 					<div class="ap-mosaic-col ap-mosaic-col--2" data-ap-parallax="8">
 						<!-- Card 3 -->
-						<div class="ap-mosaic-card ap-mosaic-card--dark">
+						<div class="ap-mosaic-card">
 							<span class="ap-mosaic-card__tag">Opinión Pública</span>
-							<div class="ap-mosaic-card__icon">
-								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path></svg>
-							</div>
 							<h4 class="ap-mosaic-card__title">Medios & Líderes</h4>
-							<p class="ap-mosaic-card__desc">Posicionamiento y comunicación gubernamental transparente en Perú.</p>
+							<p class="ap-mosaic-card__desc">Posicionamiento y comunicación gubernamental transparente.</p>
 						</div>
 
 						<!-- Card 4 -->
-						<div class="ap-mosaic-card ap-mosaic-card--orange">
+						<div class="ap-mosaic-card">
 							<span class="ap-mosaic-card__tag">Alianzas Sectoriales</span>
-							<div class="ap-mosaic-card__icon">
-								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
-							</div>
 							<h4 class="ap-mosaic-card__title">Gremios & Cámaras</h4>
 							<p class="ap-mosaic-card__desc">Consenso institucional y articulación con el sector privado.</p>
 						</div>
@@ -173,7 +157,7 @@ $theme_uri = get_template_directory_uri();
 					<span class="ap-section-tag">RED ESTRATÉGICA Y MAPAS DE PODER</span>
 					<h3 class="ap-influence-editorial__title">Red de Relaciones e Influencia</h3>
 					<p class="ap-influence-editorial__lead">
-						Conectamos los nodos de decisión clave en Perú mediante mapas de poder y <strong>relacionamiento con stakeholders</strong> de alto nivel.
+						Conectamos los nodos de decisión clave en Perú y en otros países mediante mapas de poder y <strong>relacionamiento con stakeholders</strong> de alto nivel.
 					</p>
 
 					<div class="ap-influence-editorial__list">
@@ -191,9 +175,7 @@ $theme_uri = get_template_directory_uri();
 						</div>
 					</div>
 
-					<div class="ap-influence-editorial__actions">
-						<a href="#contacto" class="ap-btn ap-btn--orange">Agendar consulta de mapa de actores</a>
-					</div>
+
 				</div>
 
 			</div>
@@ -201,42 +183,7 @@ $theme_uri = get_template_directory_uri();
 
 	</section>
 
-	<!-- ==========================================
-	     BANNER DEDICADO DE PILARES DE VALOR (FUERA DEL HERO)
-	     ========================================== -->
-	<div class="ap-pillars-banner">
-		<div class="ap-pillars-banner__container" data-ap-cards>
-			<div class="ap-pillars-banner__item">
-				<div class="ap-pillars-banner__icon">
-					<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ee894f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-				</div>
-				<div class="ap-pillars-banner__info">
-					<h4 class="ap-pillars-banner__title">Anticipación de riesgos regulatorios</h4>
-					<p class="ap-pillars-banner__desc">Prevención normativa y análisis de escenarios en Perú.</p>
-				</div>
-			</div>
 
-			<div class="ap-pillars-banner__item">
-				<div class="ap-pillars-banner__icon">
-					<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ee894f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-				</div>
-				<div class="ap-pillars-banner__info">
-					<h4 class="ap-pillars-banner__title">Relacionamiento con stakeholders</h4>
-					<p class="ap-pillars-banner__desc">Articulación con autoridades, comunidades y gremios.</p>
-				</div>
-			</div>
-
-			<div class="ap-pillars-banner__item">
-				<div class="ap-pillars-banner__icon">
-					<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ee894f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-				</div>
-				<div class="ap-pillars-banner__info">
-					<h4 class="ap-pillars-banner__title">Comunicación política en Perú</h4>
-					<p class="ap-pillars-banner__desc">Estrategias de opinión pública y gestión de percepciones.</p>
-				</div>
-			</div>
-		</div>
-	</div>
 
 	<!-- ==========================================
 	     2. REGULADORES Y ADMINISTRACIONES
@@ -258,18 +205,12 @@ $theme_uri = get_template_directory_uri();
 					$reg_img = $theme_uri . '/assets/images/asuntos-publicos/reguladores.png';
 					?>
 					<img src="<?php echo esc_url( $reg_img ); ?>" alt="Fachada institucional de entidad gubernamental en Perú" class="ap-reguladores-image-box__img">
-					<div class="ap-reguladores-image-box__caption">
-						<span>Sede Institucional & Ministerios</span>
-						<p>Facilitación de diálogo técnico ante entidades públicas</p>
-					</div>
+
 				</div>
 
 				<div class="ap-services-grid ap-services-grid--split" data-ap-cards>
 					<!-- Card 1 -->
 					<div class="ap-service-card">
-						<div class="ap-service-card__icon-box">
-							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ee894f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"></path><path d="M9 8h1"></path><path d="M9 12h1"></path><path d="M9 16h1"></path><path d="M14 8h1"></path><path d="M14 12h1"></path><path d="M14 16h1"></path><path d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16"></path></svg>
-						</div>
 						<span class="ap-service-card__step">01</span>
 						<h3 class="ap-service-card__title">Análisis Regulativo</h3>
 						<p class="ap-service-card__desc">
@@ -279,9 +220,6 @@ $theme_uri = get_template_directory_uri();
 
 					<!-- Card 2 -->
 					<div class="ap-service-card">
-						<div class="ap-service-card__icon-box">
-							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ee894f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-						</div>
 						<span class="ap-service-card__step">02</span>
 						<h3 class="ap-service-card__title">Comunicación Gubernamental</h3>
 						<p class="ap-service-card__desc">
@@ -291,9 +229,6 @@ $theme_uri = get_template_directory_uri();
 
 					<!-- Card 3 -->
 					<div class="ap-service-card">
-						<div class="ap-service-card__icon-box">
-							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ee894f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-						</div>
 						<span class="ap-service-card__step">03</span>
 						<h3 class="ap-service-card__title">Construcción de Confianza</h3>
 						<p class="ap-service-card__desc">
@@ -315,7 +250,7 @@ $theme_uri = get_template_directory_uri();
 					<span class="ap-section-tag ap-section-tag--cyan">Gestión de Percepciones</span>
 					<h2 class="ap-section__title ap-section__title--white">Comunicación Política</h2>
 					<p class="ap-dark-bento__lead">
-						Como <strong>agencia de comunicación política en Perú</strong>, estructuramos estrategias basadas en el análisis contextual y la gestión de percepciones.
+						Como <strong>agencia experta en comunicación política en Perú y otros países</strong>, estructuramos estrategias basadas en el análisis contextual y la gestión de percepciones.
 					</p>
 
 					<!-- Pilares -->
@@ -339,12 +274,8 @@ $theme_uri = get_template_directory_uri();
 				</div>
 
 				<div class="ap-dark-bento__quote-card" data-ap-quote>
-					<div class="ap-dark-bento__icon">
-						<svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#29ABE2" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.75-2-2-2H4c-1.25 0-2 .75-2 2v6c0 1.25.75 2 2 2h3c0 3-1 6-4 6z"></path><path d="M16 21c3 0 7-1 7-8V5c0-1.25-.75-2-2-2h-4c-1.25 0-2 .75-2 2v6c0 1.25.75 2 2 2h3c0 3-1 6-4 6z"></path></svg>
-					</div>
-					<h3 class="ap-dark-bento__quote-title">Agencia de Comunicación Política en Perú</h3>
 					<p class="ap-dark-bento__quote-text">
-						"Trabajamos sobre el contexto político y social para construir posicionamientos institucionales legítimos y duraderos."
+						Trabajamos sobre el contexto político y social para construir posicionamientos institucionales legítimos y duraderos.
 					</p>
 					<div class="ap-dark-bento__author">
 						<span class="ap-dark-bento__author-name">Orange Latam</span>
@@ -378,11 +309,7 @@ $theme_uri = get_template_directory_uri();
 					?>
 					<div class="ap-stakeholders-visual__box" data-ap-img-reveal>
 						<img src="<?php echo esc_url( $com_img ); ?>" alt="Reunión de diálogo con comunidades en Perú" class="ap-stakeholders-visual__img">
-						<div class="ap-stakeholders-visual__content">
-							<span class="ap-stakeholders-visual__tag">Diálogo Social en Territorio</span>
-							<h3 class="ap-stakeholders-visual__title">Gestión de Relaciones con Comunidades</h3>
-							<p class="ap-stakeholders-visual__desc">Licencia social y proximidad territorial con planificación responsable.</p>
-						</div>
+
 					</div>
 				</div>
 
@@ -393,9 +320,6 @@ $theme_uri = get_template_directory_uri();
 					<!-- Row 01 -->
 					<button type="button" class="ap-stake-row open-contact-modal" data-service="Asuntos Públicos — Autoridades Reguladoras">
 						<span class="ap-stake-row__num">01</span>
-						<span class="ap-stake-row__icon-box">
-							<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ee894f" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
-						</span>
 						<span class="ap-stake-row__info">
 							<span class="ap-stake-row__title">Autoridades Reguladoras</span>
 							<span class="ap-stake-row__desc">Ministerios y organismos reguladores del Estado.</span>
@@ -408,9 +332,6 @@ $theme_uri = get_template_directory_uri();
 					<!-- Row 02 -->
 					<button type="button" class="ap-stake-row open-contact-modal" data-service="Asuntos Públicos — Comunidades Locales">
 						<span class="ap-stake-row__num">02</span>
-						<span class="ap-stake-row__icon-box">
-							<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ee894f" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>
-						</span>
 						<span class="ap-stake-row__info">
 							<span class="ap-stake-row__title">Comunidades Locales</span>
 							<span class="ap-stake-row__desc">Licencia social y entorno operativo directo.</span>
@@ -423,9 +344,6 @@ $theme_uri = get_template_directory_uri();
 					<!-- Row 03 -->
 					<button type="button" class="ap-stake-row open-contact-modal" data-service="Asuntos Públicos — Organizaciones Sociales">
 						<span class="ap-stake-row__num">03</span>
-						<span class="ap-stake-row__icon-box">
-							<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ee894f" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-						</span>
 						<span class="ap-stake-row__info">
 							<span class="ap-stake-row__title">Organizaciones Sociales</span>
 							<span class="ap-stake-row__desc">ONGs y colectivos ciudadanos organizados.</span>
@@ -438,9 +356,6 @@ $theme_uri = get_template_directory_uri();
 					<!-- Row 04 -->
 					<button type="button" class="ap-stake-row open-contact-modal" data-service="Asuntos Públicos — Gremios & Cámaras">
 						<span class="ap-stake-row__num">04</span>
-						<span class="ap-stake-row__icon-box">
-							<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ee894f" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
-						</span>
 						<span class="ap-stake-row__info">
 							<span class="ap-stake-row__title">Gremios & Cámaras</span>
 							<span class="ap-stake-row__desc">Consenso sectorial y cámaras empresariales.</span>
@@ -453,9 +368,6 @@ $theme_uri = get_template_directory_uri();
 					<!-- Row 05 -->
 					<button type="button" class="ap-stake-row open-contact-modal" data-service="Asuntos Públicos — Líderes de Opinión">
 						<span class="ap-stake-row__num">05</span>
-						<span class="ap-stake-row__icon-box">
-							<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ee894f" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="12 8 8 12 12 16 16 12 12 8"></polygon></svg>
-						</span>
 						<span class="ap-stake-row__info">
 							<span class="ap-stake-row__title">Líderes de Opinión</span>
 							<span class="ap-stake-row__desc">Voceros y analistas del debate público.</span>
@@ -468,9 +380,6 @@ $theme_uri = get_template_directory_uri();
 					<!-- Row 06 -->
 					<button type="button" class="ap-stake-row open-contact-modal" data-service="Asuntos Públicos — Medios de Comunicación">
 						<span class="ap-stake-row__num">06</span>
-						<span class="ap-stake-row__icon-box">
-							<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ee894f" stroke-width="2"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg>
-						</span>
 						<span class="ap-stake-row__info">
 							<span class="ap-stake-row__title">Medios de Comunicación</span>
 							<span class="ap-stake-row__desc">Prensa nacional y portales regionales.</span>

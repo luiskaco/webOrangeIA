@@ -59,17 +59,6 @@ $theme_uri = get_template_directory_uri();
 						src="<?php echo esc_url( $theme_uri . '/assets/images/gestion-de-acceso/hero.png' ); ?>" 
 						alt="Investigadora médica y consultora de market access en laboratorio de salud - Orange Latam">
 				</div>
-
-				<!-- Floating Stat Badge -->
-				<div class="ga-hero__badge-float">
-					<div class="ga-hero__badge-icon">
-						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
-					</div>
-					<div>
-						<div class="ga-hero__badge-num">100% Ético</div>
-						<div class="ga-hero__badge-label">Riguroso & Regulatorio</div>
-					</div>
-				</div>
 			</div>
 		</div>
 	</section>
@@ -132,7 +121,7 @@ $theme_uri = get_template_directory_uri();
 			</div>
 
 			<div class="ga-about__content" data-reveal="right">
-				<h2 class="ga-about__title">La barrera de acceso a la salud</h2>
+				<h2 class="ga-about__title">Las barreras de acceso a la salud</h2>
 				
 				<p class="ga-about__lead">
 					El acceso a la salud no depende únicamente de que exista un tratamiento o una innovación disponible.
@@ -173,7 +162,7 @@ $theme_uri = get_template_directory_uri();
 	     ========================================== -->
 	<section class="ga-pillars" id="como-trabajamos">
 		<div class="ga-pillars__header" data-reveal="up">
-			<h2 class="ga-pillars__title">Cómo desbloqueamos el acceso de forma ética</h2>
+			<h2 class="ga-pillars__title">Cómo aperturamos el acceso de forma ética</h2>
 			<p class="ga-pillars__desc">
 				El acceso sostenible requiere confianza y conversaciones basadas en evidencia. Desarrollamos estrategias de comunicación que respetan los marcos regulatorios y principios éticos del sector.
 			</p>

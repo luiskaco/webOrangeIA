@@ -752,8 +752,8 @@ button[type="submit"],
 	width: auto !important;
 	min-width: 170px !important;
 	float: right !important;
-	background: #EE894F !important;
-	background-color: #EE894F !important;
+	background: #29ABE2 !important;
+	background-color: #29ABE2 !important;
 	color: #FFFFFF !important;
 	font-family: var(--font-sans) !important;
 	font-size: 16px !important;
@@ -762,7 +762,7 @@ button[type="submit"],
 	border-radius: 999px !important;
 	padding: 14px 38px !important;
 	cursor: pointer !important;
-	box-shadow: 0 8px 22px rgba(238, 137, 79, 0.35) !important;
+	box-shadow: 0 8px 22px rgba(41, 171, 226, 0.35) !important;
 	transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
 	margin-top: 16px !important;
 }
@@ -771,11 +771,11 @@ input[type="submit"]:hover,
 button[type="submit"]:hover,
 .wpcf7-submit:hover,
 .wpforms-submit:hover {
-	background: #d9743a !important;
-	background-color: #d9743a !important;
+	background: #1F96C8 !important;
+	background-color: #1F96C8 !important;
 	color: #FFFFFF !important;
 	transform: translateY(-3px) scale(1.03) !important;
-	box-shadow: 0 12px 28px rgba(238, 137, 79, 0.45) !important;
+	box-shadow: 0 12px 28px rgba(41, 171, 226, 0.45) !important;
 }
 
 input[type="submit"]:active,
@@ -1058,8 +1058,8 @@ div.wpcf7-response-output,
 	font-weight: 800;
 	text-transform: uppercase;
 	letter-spacing: 0.08em;
-	color: #EE894F;
-	background: #FFF5F0;
+	color: #29ABE2;
+	background: rgba(41, 171, 226, 0.12);
 	padding: 4px 12px;
 	border-radius: 99px;
 	margin-bottom: 12px;
@@ -1131,8 +1131,8 @@ div.wpcf7-response-output,
 .g-modal__field input:focus,
 .g-modal__field textarea:focus {
 	background: #FFFFFF !important;
-	border-color: #70B5E3 !important;
-	box-shadow: 0 0 0 3px rgba(112, 181, 227, 0.2) !important;
+	border-color: #29ABE2 !important;
+	box-shadow: 0 0 0 3px rgba(41, 171, 226, 0.2) !important;
 }
 
 .g-modal__actions {
@@ -1141,11 +1141,15 @@ div.wpcf7-response-output,
 	justify-content: flex-end;
 }
 
-.g-modal__btn-submit {
+.g-modal__btn-submit,
+#g-modal-submit-btn,
+button[type="submit"].g-modal__btn-submit,
+.g-modal button[type="submit"] {
 	display: inline-flex !important;
 	align-items: center !important;
 	gap: 10px !important;
-	background: #EE894F !important;
+	background: #29ABE2 !important;
+	background-color: #29ABE2 !important;
 	color: #FFFFFF !important;
 	border: none !important;
 	padding: 14px 32px !important;
@@ -1153,15 +1157,19 @@ div.wpcf7-response-output,
 	font-size: 15px !important;
 	font-weight: 700 !important;
 	cursor: pointer !important;
-	box-shadow: 0 10px 25px rgba(238, 137, 79, 0.35) !important;
+	box-shadow: 0 10px 25px rgba(41, 171, 226, 0.35) !important;
 	transition: all 0.25s ease !important;
 	float: none !important;
 }
 
-.g-modal__btn-submit:hover {
-	background: #e0773c !important;
+.g-modal__btn-submit:hover,
+#g-modal-submit-btn:hover,
+button[type="submit"].g-modal__btn-submit:hover,
+.g-modal button[type="submit"]:hover {
+	background: #1F96C8 !important;
+	background-color: #1F96C8 !important;
 	transform: translateY(-2px) !important;
-	box-shadow: 0 14px 30px rgba(238, 137, 79, 0.45) !important;
+	box-shadow: 0 14px 30px rgba(41, 171, 226, 0.45) !important;
 }
 
 .g-modal__response {

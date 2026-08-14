@@ -75,7 +75,6 @@ $logo_url                     = ( $is_blog_context || $is_influencers_context ||
 				<a href="#inicio" class="header__link">Inicio</a>
 				<a href="#tipos-eventos" class="header__link">Tipos de Eventos</a>
 				<a href="#como-trabajamos" class="header__link">Cómo Trabajamos</a>
-				<a href="#casos-resultados" class="header__link">Casos y Resultados</a>
 				<a href="#contacto" class="header__link">Contacto</a>
 				<?php
 			} elseif ( $is_branding_context ) {
@@ -84,7 +83,6 @@ $logo_url                     = ( $is_blog_context || $is_influencers_context ||
 				<a href="#inicio" class="header__link">Inicio</a>
 				<a href="#servicios-branding" class="header__link">Branding</a>
 				<a href="#creatividad-direccion-arte" class="header__link">Creatividad</a>
-				<a href="#casos" class="header__link">Casos</a>
 				<a href="#contacto" class="header__link">Contacto</a>
 				<?php
 			} elseif ( $is_asuntos_publicos_context ) {

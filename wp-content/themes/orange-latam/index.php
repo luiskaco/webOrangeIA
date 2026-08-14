@@ -235,7 +235,7 @@ get_header();
 						$active_class = $svc['id'] === 1 ? 'services-corp__row--active' : '';
 						echo '<div class="services-corp__row ' . esc_attr( $active_class ) . '" data-id="' . esc_attr( $svc['id'] ) . '" data-num="' . esc_attr( $svc['num'] ) . '" data-name="' . esc_attr( $svc['name'] ) . '" data-desc="' . esc_attr( $svc['desc'] ) . '" data-link="' . esc_attr( isset( $svc['link'] ) ? $svc['link'] : '' ) . '" data-img="' . esc_url( $svc['img'] ) . '">';
 						echo '<span class="services-corp__row-num">' . esc_html( $svc['num'] ) . '</span>';
-						echo '<span class="services-corp__row-name">' . esc_html( $svc['name'] ) . '</span>';
+						echo '<span class="services-corp__row-name">' . wp_kses_post( $svc['name'] ) . '</span>';
 						echo '<span class="services-corp__row-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7,7 17,7 17,17"></polyline></svg></span>';
 						echo '</div>';
 					}
@@ -463,7 +463,7 @@ get_header();
 		<div class="contact__grid">
 			<div data-reveal="left">
 				<h2 class="contact__title">CONTÁCTANOS</h2>
-				<p class="contact__subtitle">Descubre cómo podemos hacer tu marca aún más grande</p>
+				<p class="contact__subtitle">Descubre cómo podemos hacer que tu marca sea aún más grande</p>
 				<div class="contact__info-list">
 					<div class="contact__info-item">
 						<span class="contact__info-bullet"></span>

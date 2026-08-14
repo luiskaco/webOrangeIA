@@ -65,11 +65,11 @@ $theme_uri = get_template_directory_uri();
 				<!-- Left Column: Title, Subtitle & Metrics -->
 				<div class="ea-dark-hero__content" data-reveal="up">
 					<h1 class="ea-dark-hero__title">
-						Agencia de Eventos Corporativos <span class="ea-dark-hero__gradient-text">y Activaciones de Alto Impacto</span>
+						Eventos Corporativos <span class="ea-dark-hero__gradient-text">y Activaciones de Alto Impacto</span>
 					</h1>
 
 					<p class="ea-dark-hero__lead">
-						Como <strong>agencia de eventos corporativos</strong> en Perú, convertimos los objetivos de tu marca en experiencias inmersivas: activaciones, eventos híbridos y producciones presenciales o remotas.
+						Como <strong>agencia de eventos corporativos</strong>, convertimos los objetivos de tu marca en experiencias inmersivas: activaciones, eventos híbridos y producciones presenciales o remotas.
 					</p>
 
 					<!-- Stats Strip -->
@@ -145,13 +145,17 @@ $theme_uri = get_template_directory_uri();
 
 			<!-- Trusted By / Brand Strip -->
 			<div class="ea-dark-hero__brands" data-reveal="up">
-				<span class="ea-dark-hero__brands-title">Empresas que confían en nuestras experiencias</span>
+				<span class="ea-dark-hero__brands-title">Sectores que confían en nuestra experiencia</span>
 				<div class="ea-dark-hero__brands-row">
-					<span class="ea-dark-brand">CORPORATIVOS</span>
+					<span class="ea-dark-brand">BANCA</span>
+					<span class="ea-dark-brand">FINANZAS</span>
+					<span class="ea-dark-brand">SEGUROS</span>
+					<span class="ea-dark-brand">AFP</span>
 					<span class="ea-dark-brand">RETAIL</span>
 					<span class="ea-dark-brand">TECNOLOGÍA</span>
 					<span class="ea-dark-brand">CONSUMO MASIVO</span>
 					<span class="ea-dark-brand">ENTRETENIMIENTO</span>
+					<span class="ea-dark-brand">DEPORTES</span>
 				</div>
 			</div>
 
@@ -168,12 +172,12 @@ $theme_uri = get_template_directory_uri();
 				<!-- Left: Text & SEO Callout -->
 				<div class="ea-plus-types__content">
 					<span class="ea-section-tag">Formatos & Soluciones</span>
-					<h2 class="ea-plus-title">Tipos de eventos y activaciones que producimos</h2>
+					<h2 class="ea-plus-title">Nuestro Expertise</h2>
 					<p class="ea-plus-sub">
-						Especialistas en <strong>organización de eventos empresariales en Perú</strong>: cada audiencia y cada objetivo requieren una experiencia diferente, desde <strong>eventos corporativos híbridos</strong> hasta activaciones 360°, adaptada al propósito de la marca, al público y al contexto.
+						Especialistas en <strong>organización de eventos empresariales</strong>: cada audiencia y cada objetivo requieren una experiencia diferente, desde <strong>eventos corporativos híbridos</strong> hasta activaciones 360°, adaptada al propósito de la marca, al público y al contexto.
 					</p>
 					<div class="ea-plus-callout">
-						<p>Como <strong>agencia de activaciones BTL en Lima</strong> y <strong>eventos corporativos en Perú</strong>, garantizamos una ejecución coordinada de extremo a extremo.</p>
+						<p>Como <strong>agencia de activaciones BTL en Lima</strong> y <strong>eventos corporativos en Perú y otros países</strong>, garantizamos una ejecución coordinada de extremo a extremo.</p>
 					</div>
 				</div>
 
@@ -286,134 +290,55 @@ $theme_uri = get_template_directory_uri();
 	</section>
 
 	<!-- ==========================================
-	     4. CASOS Y RESULTADOS — MULTI-CASE SHOWCASE
+	     4. RESUMEN DE BENEFICIOS & RESULTADOS (PREMIUM STRIP)
 	     ========================================== -->
-	<section class="ea-cases-section" id="casos-resultados">
+	<section class="ea-metrics-strip">
 		<div class="ea-container">
-			
-			<!-- Header Block with Title & Filter Tabs -->
-			<div class="ea-cases-header" data-reveal="up">
-				<div class="ea-cases-header__text">
-					<span class="ea-section-tag">✦ Medición & Retorno de Experiencia</span>
-					<h2 class="ea-cases-header__title">Casos de éxito y resultados medibles</h2>
-					<p class="ea-cases-header__sub">
-						Transformamos los objetivos de negocio en experiencias reales con métricas cuantitativas de alcance, engagement y ROI.
-					</p>
+			<div class="ea-metrics-strip__inner" data-reveal="up">
+				<div class="ea-cases-footer-bar">
+					
+					<div class="ea-cases-footer-item">
+						<div class="ea-cases-footer-icon">
+							<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+						</div>
+						<div class="ea-cases-footer-text">
+							<strong>Alcance e Impresiones</strong>
+							<span>Masivas en cada impacto</span>
+						</div>
+					</div>
+
+					<div class="ea-cases-footer-item">
+						<div class="ea-cases-footer-icon">
+							<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+						</div>
+						<div class="ea-cases-footer-text">
+							<strong>Interacción</strong>
+							<span>En tiempo real con audiencia</span>
+						</div>
+					</div>
+
+					<div class="ea-cases-footer-item">
+						<div class="ea-cases-footer-icon">
+							<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="5.5"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg>
+						</div>
+						<div class="ea-cases-footer-text">
+							<strong>Generación de Leads</strong>
+							<span>Cualificados de alto valor</span>
+						</div>
+					</div>
+
+					<div class="ea-cases-footer-item">
+						<div class="ea-cases-footer-icon">
+							<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+						</div>
+						<div class="ea-cases-footer-text">
+							<strong>Retorno de Inversión</strong>
+							<span>ROI 100% medible</span>
+						</div>
+					</div>
+
 				</div>
 			</div>
-
-			<!-- Panel de Resultados: filas horizontales metric-first -->
-			<div class="ea-cases-list" data-reveal="up">
-
-				<!-- Case Row 1: BTL & Activaciones -->
-				<article class="ea-case-row">
-					<div class="ea-case-row__thumb-wrap">
-						<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/eventos/activaciones.png" alt="Activación Inmersiva 360°" class="ea-case-row__thumb">
-					</div>
-					<div class="ea-case-row__content">
-						<span class="ea-case-row__badge">BTL & Activaciones</span>
-						<h3 class="ea-case-row__title">Activación Inmersiva 360° de Marca</h3>
-						<p class="ea-case-row__desc">Despliegue conceptual BTL con estaciones interactivas, gamificación y recolección de leads en tiempo real.</p>
-					</div>
-					<div class="ea-case-row__stats">
-						<div class="ea-case-stat">
-							<span class="ea-case-stat__val">+15,000</span>
-							<span class="ea-case-stat__lbl">Asistentes</span>
-						</div>
-						<div class="ea-case-stat">
-							<span class="ea-case-stat__val">94%</span>
-							<span class="ea-case-stat__lbl">Engagement</span>
-						</div>
-						<div class="ea-case-stat">
-							<span class="ea-case-stat__val">3.2x</span>
-							<span class="ea-case-stat__lbl">ROI</span>
-						</div>
-					</div>
-					<div class="ea-case-row__go" aria-hidden="true">
-						<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-					</div>
-				</article>
-
-				<!-- Case Row 2: Eventos Corporativos -->
-				<article class="ea-case-row ea-case-row--corp">
-					<div class="ea-case-row__thumb-wrap">
-						<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/eventos/corporativos.png" alt="Summit Corporativo Anual" class="ea-case-row__thumb">
-					</div>
-					<div class="ea-case-row__content">
-						<span class="ea-case-row__badge">Corporativo</span>
-						<h3 class="ea-case-row__title">Summit Corporativo e Integración</h3>
-						<p class="ea-case-row__desc">Convención ejecutiva con puesta en escena técnica integral, ponentes internacionales y networking dinámico.</p>
-					</div>
-					<div class="ea-case-row__stats">
-						<div class="ea-case-stat">
-							<span class="ea-case-stat__val">+3,500</span>
-							<span class="ea-case-stat__lbl">Ejecutivos</span>
-						</div>
-						<div class="ea-case-stat">
-							<span class="ea-case-stat__val">98%</span>
-							<span class="ea-case-stat__lbl">NPS Promedio</span>
-						</div>
-						<div class="ea-case-stat">
-							<span class="ea-case-stat__val">100%</span>
-							<span class="ea-case-stat__lbl">Cobertura PR</span>
-						</div>
-					</div>
-					<div class="ea-case-row__go" aria-hidden="true">
-						<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-					</div>
-				</article>
-
-				<!-- Case Row 3: Eventos Híbridos & Lanzamientos -->
-				<article class="ea-case-row ea-case-row--hib">
-					<div class="ea-case-row__thumb-wrap">
-						<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/eventos/hibridos.png" alt="Lanzamiento de Producto Híbrido" class="ea-case-row__thumb">
-					</div>
-					<div class="ea-case-row__content">
-						<span class="ea-case-row__badge">Experiencia Híbrida</span>
-						<h3 class="ea-case-row__title">Lanzamiento de Producto & Streaming</h3>
-						<p class="ea-case-row__desc">Experiencia multicanal que combinó presencia VIP en vivo con transmisión HD interactiva en simultáneo.</p>
-					</div>
-					<div class="ea-case-row__stats">
-						<div class="ea-case-stat">
-							<span class="ea-case-stat__val">+25,000</span>
-							<span class="ea-case-stat__lbl">Interacciones</span>
-						</div>
-						<div class="ea-case-stat">
-							<span class="ea-case-stat__val">8,200</span>
-							<span class="ea-case-stat__lbl">Leads Capturados</span>
-						</div>
-						<div class="ea-case-stat">
-							<span class="ea-case-stat__val">+40%</span>
-							<span class="ea-case-stat__lbl">Conversión</span>
-						</div>
-					</div>
-					<div class="ea-case-row__go" aria-hidden="true">
-						<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-					</div>
-				</article>
-
-			</div>
-
-			<!-- Bottom Global Metrics Summary Bar -->
-			<div class="ea-cases-footer-bar" data-reveal="up">
-				<div class="ea-cases-footer-item">
-					<div class="ea-cases-footer-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
-					<span>Alcance e Impresiones Masivas</span>
-				</div>
-				<div class="ea-cases-footer-item">
-					<div class="ea-cases-footer-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
-					<span>Interacción en Tiempo Real</span>
-				</div>
-				<div class="ea-cases-footer-item">
-					<div class="ea-cases-footer-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="5.5"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg></div>
-					<span>Generación de Leads Cualificados</span>
-				</div>
-				<div class="ea-cases-footer-item">
-					<div class="ea-cases-footer-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
-					<span>Retorno de Inversión (ROI) Medible</span>
-				</div>
-			</div>
-
 		</div>
 	</section>
 

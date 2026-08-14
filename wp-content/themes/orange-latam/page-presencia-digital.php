@@ -49,10 +49,10 @@ $theme_uri = get_template_directory_uri();
 		<div class="pd-hero__container">
 			<div class="pd-hero__content">
 				<h1 class="pd-hero__title" data-pd-hero-title>
-					Agencia SEO Perú: tu presencia digital como <span>activo de valor</span>
+					Posicionamiento SEO y presencia digital como <span>activo de valor</span>
 				</h1>
 				<p class="pd-hero__desc" data-pd-hero-item>
-					Como <strong>agencia de diseño web</strong> y SEO en Perú, sabemos que tu presencia digital es mucho más que una página web: es el activo de negocio donde tus clientes descubren tu marca, evalúan tu propuesta e interactúan para tomar la decisión de comprar o contactarte.
+					Como <strong>agencia experta en diseño web</strong> y SEO en Perú y en otros países, sabemos que tu presencia digital es mucho más que una página web: es el activo de negocio donde tus clientes descubren tu marca, evalúan tu propuesta e interactúan para tomar la decisión de comprar o contactarte.
 				</p>
 			</div>
 
@@ -121,17 +121,6 @@ $theme_uri = get_template_directory_uri();
 	<section class="pd-portfolio" id="portafolio">
 		<div class="pd-section-header" data-pd-reveal>
 			<h2 class="pd-section-title pd-section-title--light">Webs y Apps desarrolladas</h2>
-			<p class="pd-section-desc">
-				Proyectos digitales construidos con arquitectura robusta, velocidad óptima y diseños pensados para convertir visitas en oportunidades reales.
-			</p>
-		</div>
-
-		<!-- Filtros interactivos por tipo de proyecto -->
-		<div class="pd-portfolio__filter" role="group" aria-label="Filtrar proyectos por tipo" data-pd-reveal>
-			<button type="button" class="pd-filter-btn active" data-filter="all" aria-pressed="true">Todos los Proyectos</button>
-			<button type="button" class="pd-filter-btn" data-filter="b2b" aria-pressed="false">Webs B2B Corporativas</button>
-			<button type="button" class="pd-filter-btn" data-filter="ecommerce" aria-pressed="false">E-Commerce Tiendas Online</button>
-			<button type="button" class="pd-filter-btn" data-filter="pwa" aria-pressed="false">Web Apps PWA</button>
 		</div>
 
 		<div class="pd-portfolio__grid" data-pd-cards>
@@ -190,7 +179,7 @@ $theme_uri = get_template_directory_uri();
 	     ========================================== -->
 	<section class="pd-web" id="web-ux">
 		<div class="pd-section-header" data-pd-reveal>
-			<h2 class="pd-section-title">Diseño Web y Landings con criterio UX</h2>
+			<h2 class="pd-section-title">Diseño Web y Landings<br>UX Criteria</h2>
 			<p class="pd-section-desc">
 				Como <strong>agencia de diseño web para empresas</strong>, sabemos que un buen sitio debe responder a las necesidades de sus usuarios y cumplir los objetivos de la organización. Diseñamos experiencias donde la estética está respaldada por estrategia.
 			</p>
@@ -271,14 +260,6 @@ $theme_uri = get_template_directory_uri();
 				<p class="pd-card-dark__desc">Ajustes iterativos a partir del comportamiento real para elevar la autoridad del dominio.</p>
 			</div>
 		</div>
-
-		<!-- FAQ Destacada sobre Costo SEO -->
-		<div class="pd-faq-box" data-pd-reveal>
-			<h3 class="pd-faq-box__title">¿Cuánto cuesta posicionar una web en Google Perú?</h3>
-			<p class="pd-faq-box__text">
-				No existe una tarifa única: el costo depende de factores como la competencia de las palabras clave, el estado técnico del sitio, la autoridad del dominio y los objetivos del negocio. Desarrollamos estrategias y presupuestos de SEO a la medida de cada proyecto.
-			</p>
-		</div>
 	</section>
 
 	<!-- ==========================================
@@ -288,7 +269,7 @@ $theme_uri = get_template_directory_uri();
 		<div class="pd-section-header" data-pd-reveal>
 			<h2 class="pd-section-title">E-Commerce: Plataformas que venden</h2>
 			<p class="pd-section-desc">
-				Como <strong>agencia ecommerce en Lima</strong>, sabemos que una tienda online debe hacer mucho más que mostrar productos. Desarrollamos soluciones de comercio electrónico que facilitan la decisión de compra y reducen fricciones.
+				Como <strong>agencia ecommerce en Lima y otras ciudades del Perú y el mundo</strong>, sabemos que una tienda online debe hacer mucho más que mostrar productos. Desarrollamos soluciones de comercio electrónico que facilitan la decisión de compra.
 			</p>
 		</div>
 

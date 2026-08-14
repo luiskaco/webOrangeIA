@@ -90,7 +90,7 @@ $pr_img_uri = $theme_uri . '/assets/images/pr';
 				<h1 class="pr-hero__title">Agencia de Relaciones Públicas y Gestión de la Reputación</h1>
 
 				<p class="pr-hero__desc">
-					Como <strong>agencia de relaciones públicas</strong> en Perú, construimos y protegemos la reputación de tu marca con estrategias de PR, manejo de crisis y entrenamiento de voceros — para las organizaciones que no pueden darse el lujo de improvisar.
+					Construimos y protegemos la reputación de tu marca, empresa u organización, con estrategias efectivas de posicionamiento, manejo de crisis y entrenamiento de voceros, con un impacto robusto en los negocios.
 				</p>
 
 
@@ -103,17 +103,6 @@ $pr_img_uri = $theme_uri . '/assets/images/pr';
 						alt="Vocero dando entrevista de prensa - Agencia de PR Orange Latam">
 				</div>
 
-				<!-- Pulse Ring SVG Shield Badge -->
-				<div class="pr-hero__badge-pulse">
-					<svg viewBox="0 0 200 200" width="100%" height="100%" class="pr-hero__pulse-svg">
-						<circle cx="100" cy="100" r="70" class="pr-hero__pulse-ring pr-hero__pulse-ring--1" />
-						<circle cx="100" cy="100" r="70" class="pr-hero__pulse-ring pr-hero__pulse-ring--2" />
-						<circle cx="100" cy="100" r="94" class="pr-hero__pulse-dashed" />
-						<circle cx="100" cy="100" r="60" class="pr-hero__pulse-center" />
-						<path d="M100 44 L146 62 V100 C146 134 126 156 100 168 C74 156 54 134 54 100 V62 Z" class="pr-hero__shield" />
-						<path d="M80 104 L94 118 L124 84" class="pr-hero__checkmark" />
-					</svg>
-				</div>
 			</div>
 		</div>
 	</section>
@@ -159,7 +148,7 @@ $pr_img_uri = $theme_uri . '/assets/images/pr';
 						En <strong>Orange Latam</strong> ayudamos a construir reputaciones sólidas, con estrategias adaptadas al contexto peruano y regional.
 					</p>
 					<p class="pr-about__box-text">
-						Como <strong>empresa de relaciones públicas en Perú</strong>, combinamos investigación, creatividad y disciplina de datos para sostener esa reputación en el tiempo.
+						Como <strong>empresa experta en relaciones públicas con presencia en el Perú y otros países</strong>, combinamos investigación, creatividad y disciplina de datos para sostener esa reputación en el tiempo.
 					</p>
 				</div>
 			</div>
@@ -199,7 +188,7 @@ $pr_img_uri = $theme_uri . '/assets/images/pr';
 						<div class="pr-services__mobile-icon">
 							<svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 4h13v16H4z M17 8h3v9a2 2 0 01-2 2h-1V8z M7 8h7 M7 11.5h7 M7 15h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
 						</div>
-						<span class="pr-services__mobile-label">Gestión de medios de comunicación</span>
+						<span class="pr-services__mobile-label">Gestión con medios de comunicación</span>
 					</button>
 
 					<button class="pr-services__mobile-row js-pr-node-row" data-node-index="2">
@@ -239,7 +228,7 @@ $pr_img_uri = $theme_uri . '/assets/images/pr';
 
 					<button class="pr-services__mobile-row js-pr-node-row" data-node-index="7">
 						<div class="pr-services__mobile-icon">
-							<svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 2c3 3 4 7 3 12l-3 3-3-3c-1-5 0-9 3-12z M9 14l-3 3v3l3-1 M15 14l3 3v3l-3-1 M12 9.2a1 1 0 100 2 1 1 0 000-2z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+							<svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3a2 2 0 100 4 2 2 0 000-4z M8 10a4 4 0 018 0 M5 11h14 M7 11l1 10h8l1-10 M14 11v-3a1 1 0 00-2 0 M17 4.5a2.5 2.5 0 010 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
 						</div>
 						<span class="pr-services__mobile-label">Comunicación de lanzamientos y anuncios corporativos</span>
 					</button>
@@ -284,7 +273,7 @@ $pr_img_uri = $theme_uri . '/assets/images/pr';
 				<span class="pr-section-tag pr-section-tag--cyan">Gestión de Crisis y Problemas</span>
 				<h2 class="pr-crisis__title">Preparación antes que reacción</h2>
 				<p class="pr-crisis__desc">
-					Toda organización puede enfrentar una crisis — la diferencia está en la preparación y la velocidad de respuesta. Anticipamos riesgos, reducimos el impacto reputacional y protegemos la confianza de los públicos clave.
+					Toda organización puede enfrentar una crisis, pero la diferencia está en la preparación y la velocidad de respuesta. Anticipamos riesgos, reducimos el impacto reputacional y protegemos la confianza de los públicos clave.
 				</p>
 			</div>
 
@@ -340,10 +329,9 @@ $pr_img_uri = $theme_uri . '/assets/images/pr';
 
 			<!-- Tagline Quote Box -->
 			<div class="pr-crisis__quote-box" data-reveal="up">
-				<span class="pr-crisis__quote-mark">&ldquo;</span>
-				<p class="pr-crisis__quote-text">
-					Una crisis bien gestionada puede ser una oportunidad para demostrar transparencia y liderazgo.
-				</p>
+				<blockquote class="pr-crisis__quote-text">
+					<span class="pr-crisis__quote-mark">&ldquo;</span>Una crisis bien gestionada puede ser una oportunidad para demostrar transparencia y liderazgo<span class="pr-crisis__quote-mark">&rdquo;</span>.
+				</blockquote>
 			</div>
 		</div>
 	</section>
@@ -410,7 +398,7 @@ $pr_img_uri = $theme_uri . '/assets/images/pr';
 				<div class="pr-why__left-col" data-reveal="left">
 					<span class="pr-section-tag">Por qué elegir Orange Latam</span>
 					<h2 class="pr-why__title">Estrategias que generan resultados medibles y confianza a largo plazo.</h2>
-					<p class="pr-why__intro">Como <strong>agencia de PR en Lima</strong>, acompañamos a organizaciones de distintos sectores con un equipo especializado y presencia regional.</p>
+					<p class="pr-why__intro">Brindamos los servicios de <strong>agencia de PR en Lima, Perú</strong> y a nivel internacional, acompañando a organizaciones de distintos sectores con un equipo especializado de alto nivel.</p>
 				</div>
 
 				<div class="pr-why__right-col" data-reveal="right">

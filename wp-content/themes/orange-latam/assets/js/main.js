@@ -206,7 +206,11 @@ document.addEventListener( 'DOMContentLoaded', () => {
 
 				if ( watermark ) watermark.textContent = num;
 				if ( detailLabel ) detailLabel.textContent = `${num} - SERVICIO`;
-				if ( detailTitle ) detailTitle.textContent = name.toUpperCase();
+				let formattedTitle = name.toUpperCase();
+				if ( formattedTitle.includes( 'CREATIVIDAD Y DIRECCIÓN' ) ) {
+					formattedTitle = formattedTitle.replace( 'CREATIVIDAD Y DIRECCIÓN', 'CREATIVIDAD Y<br class="u-desktop-br">DIRECCIÓN' );
+				}
+				if ( detailTitle ) detailTitle.innerHTML = formattedTitle;
 				if ( detailDesc ) detailDesc.textContent = desc;
 				if ( detailLink ) {
 					const targetUrl = ( link && link.trim() !== '' ) ? link : detailLink.getAttribute( 'data-default-href' );
@@ -1099,13 +1103,13 @@ document.addEventListener( 'DOMContentLoaded', () => {
 
 		const prServices = [
 			{ label: 'Estrategias integrales de RRPP', icon: 'M3 10v4h3l5 4V6l-5 4H3z M15.5 8.5c1.2 1.2 1.2 5.8 0 7 M18.5 6.5c2.5 2.5 2.5 8.5 0 11' },
-			{ label: 'Gestión de medios de comunicación', icon: 'M4 4h13v16H4z M17 8h3v9a2 2 0 01-2 2h-1V8z M7 8h7 M7 11.5h7 M7 15h4' },
+			{ label: 'Gestión con medios de comunicación', icon: 'M4 4h13v16H4z M17 8h3v9a2 2 0 01-2 2h-1V8z M7 8h7 M7 11.5h7 M7 15h4' },
 			{ label: 'Posicionamiento de líderes y voceros', icon: 'M12 3a3 3 0 013 3v6a3 3 0 01-6 0V6a3 3 0 013-3z M6 11a6 6 0 0012 0 M12 17v4 M9 21h6' },
 			{ label: 'Desarrollo de contenidos corporativos', icon: 'M6 3h8l5 5v13H6z M14 3v5h5 M9 15l6-6 2 2-6 6H9v-2z' },
 			{ label: 'Comunicación ejecutiva y thought leadership', icon: 'M4 21h16 M6 21V11h12v10 M9 11V7a3 3 0 016 0v4' },
 			{ label: 'Gestión de reputación corporativa', icon: 'M12 3l7 3v6c0 5-3 8-7 9-4-1-7-4-7-9V6z M9 12l2 2 4-4' },
 			{ label: 'Monitoreo y análisis de impacto mediático', icon: 'M3 20h18 M6 20v-6 M11 20v-9 M16 20v-4' },
-			{ label: 'Comunicación de lanzamientos y anuncios corporativos', icon: 'M12 2c3 3 4 7 3 12l-3 3-3-3c-1-5 0-9 3-12z M9 14l-3 3v3l3-1 M15 14l3 3v3l-3-1 M12 9.2a1 1 0 100 2 1 1 0 000-2z' }
+			{ label: 'Comunicación de lanzamientos y anuncios corporativos', icon: 'M12 3a2 2 0 100 4 2 2 0 000-4z M8 10a4 4 0 018 0 M5 11h14 M7 11l1 10h8l1-10 M14 11v-3a1 1 0 00-2 0 M17 4.5a2.5 2.5 0 010 3.5' }
 		];
 
 		const cx = 450, cy = 310, rx = 340, ry = 220;

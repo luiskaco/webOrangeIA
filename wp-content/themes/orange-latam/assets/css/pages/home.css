@@ -524,6 +524,16 @@
 	margin-bottom: 20px;
 }
 
+.u-desktop-br {
+	display: none;
+}
+
+@media (min-width: 992px) {
+	.u-desktop-br {
+		display: block;
+	}
+}
+
 .services-corp__detail-desc {
 	font-size: 13.5px;
 	line-height: 1.72;

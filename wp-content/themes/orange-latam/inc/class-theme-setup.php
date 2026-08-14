@@ -298,7 +298,6 @@ class Orange_Theme_Setup {
 					'Inicio'      => '#inicio',
 					'Branding'    => '#servicios-branding',
 					'Creatividad' => '#creatividad-direccion-arte',
-					'Casos'       => '#casos',
 					'Contacto'    => '#contacto',
 				);
 
@@ -329,7 +328,6 @@ class Orange_Theme_Setup {
 					'Inicio'            => '#inicio',
 					'Tipos de Eventos'  => '#tipos-eventos',
 					'Cómo Trabajamos'   => '#como-trabajamos',
-					'Casos y Resultados' => '#casos-resultados',
 					'Contacto'          => '#contacto',
 				);
 

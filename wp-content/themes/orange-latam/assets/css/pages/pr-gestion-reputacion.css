@@ -681,29 +681,35 @@
 }
 
 .pr-crisis__quote-box {
-	margin-top: 88px;
-	display: grid;
-	grid-template-columns: auto 1fr;
-	gap: 24px;
-	align-items: start;
-	max-width: 680px;
-}
-
-.pr-crisis__quote-mark {
-	font-family: var(--font-display);
-	font-size: 64px;
-	line-height: 1;
-	color: #29ABE2;
+	margin-top: 64px;
+	position: relative;
+	max-width: 840px;
+	padding: 0;
+	background: transparent;
+	border: none;
+	box-shadow: none;
 }
 
 .pr-crisis__quote-text {
 	font-family: var(--font-display);
-	font-size: 23px;
+	font-size: 26px;
+	font-weight: 400;
 	line-height: 1.5;
 	color: #FBF9F4;
-	margin: 8px 0 0;
-	padding-left: 24px;
-	border-left: 1px solid #3a3024;
+	margin: 0;
+	padding: 0;
+	border: none;
+	font-style: normal;
+	letter-spacing: -0.01em;
+}
+
+.pr-crisis__quote-mark {
+	color: #29ABE2;
+	font-family: var(--font-display);
+	font-size: 1.15em;
+	font-weight: 600;
+	line-height: 1;
+	margin: 0 2px;
 }
 
 /* ==========================================================================
@@ -1162,13 +1168,13 @@
 	}
 
 	.pr-crisis__quote-box {
-		grid-template-columns: 1fr;
-		gap: 12px;
+		margin-top: 48px;
+		padding: 0;
 	}
 
 	.pr-crisis__quote-text {
-		padding-left: 0;
-		border-left: none;
+		font-size: 20px;
+		line-height: 1.5;
 	}
 
 	.pr-photo-band__wrapper {
