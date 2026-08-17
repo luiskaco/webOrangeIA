@@ -126,6 +126,7 @@
 - [x] Reescribir el copy del modal en lenguaje simple (sin jerga: nada de "KD", "Rank Math", "long-tail", "SEMrush (PE)") tras feedback de que sonaba a jerga de SEO y luego a "sin sustento" cuando decía "no verificado"
 - [x] Fix de bug propio: el `form_input` de Rank Math sobreescribía el array completo de Focus Keywords en vez de agregar — causó que "agencia de PR" quedara como primaria en la Home en lugar de "agencia de relaciones públicas"; detectado por el propio modal y corregido en Rank Math
 - [x] Agregar "posicionamiento SEO" como Focus Keyword secundaria en Presencia Digital (post 122) y en el modal, tras el cambio de H1 a "Posicionamiento SEO y presencia digital..."
+- [x] Desactivar auto-ejecución del modal SEO (`window.setTimeout` removido en `inc/temp-seo-demo-modal.php`), manteniéndolo accesible mediante el botón flotante `SEO ⓘ` (`#olSeoDemoReopen`) en la esquina inferior derecha.
 
 ## Auditoría keyword-vs-contenido (2026-08-14)
 - [x] Cruzar las Focus Keywords de Rank Math contra el H1/copy real de las 10 páginas del sitio (vía `Grep`, sin tocar contenido) — hallazgo: 5 keywords configuradas no existían en ningún texto visible: "agencia de PR" (Home), "empresa de relaciones públicas Perú" y "agencia de PR Lima" (PR), "community management lima" (Marketing Digital), "alquiler de estudio de podcast" (Podcast)

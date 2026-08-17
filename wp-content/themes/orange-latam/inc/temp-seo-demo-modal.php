@@ -436,8 +436,6 @@ function orange_latam_seo_demo_render_modal() {
 			overlay.setAttribute('aria-hidden', 'true');
 		}
 
-		window.setTimeout(openModal, 600);
-
 		closeBtn.addEventListener('click', closeModal);
 		reopenBtn.addEventListener('click', openModal);
 		overlay.addEventListener('click', function (e) {
