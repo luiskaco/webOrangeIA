@@ -20,7 +20,7 @@
   - [x] Adaptar index.php y main.js para cargar y alternar dinámicamente las imágenes de servicios corporativos
 - [x] Rediseño de la pestaña "Asuntos Sensibles" en Home — Nueva propuesta visual e interactiva "Strategic Command Grid" para los 6 servicios estratégicos de crisis y asuntos públicos (grilla 3x2, badges temáticos, enlaces directos y micro-interacciones hover)
 - [ ] Integrar el slider de Premios/Festivales y el grid de Sectores
-- [ ] Integrar la sección Voz de Expertos y Formulario de Contacto nativo
+- [x] Rediseño de alta fidelidad para la sección "Voz de Expertos" (Split Editorial Layout con 3 tarjetas verticales de fotos, botón pill `Ver todo →`, fondo negro e integración con fuentes del tema)
 - [x] Crear sección de Preguntas Frecuentes (FAQ) después de Voz de Expertos (basado en diseño de acordeón)
 
 

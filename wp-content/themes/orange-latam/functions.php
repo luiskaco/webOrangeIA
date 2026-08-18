@@ -159,15 +159,34 @@ function orange_latam_get_expert_posts( $count = 6 ) {
 		'tag'            => 'voz-de-expertos',
 	) );
 
+	// Fallback to recent posts if no tag exists
+	if ( empty( $query->posts ) ) {
+		$query = new WP_Query( array(
+			'post_type'      => 'post',
+			'post_status'    => 'publish',
+			'posts_per_page' => $count,
+			'no_found_rows'  => true,
+		) );
+	}
+
 	$posts = array();
 	foreach ( $query->posts as $post ) {
+		$thumb = get_the_post_thumbnail_url( $post, 'large' );
+		if ( ! $thumb ) {
+			$thumb = get_the_post_thumbnail_url( $post, 'medium_large' );
+		}
+		$author_name = get_the_author_meta( 'display_name', $post->post_author );
+		if ( empty( $author_name ) || 'admin' === strtolower( $author_name ) ) {
+			$author_name = 'Manuel Ayllón Gamarra';
+		}
+
 		$posts[] = array(
 			'id'        => $post->ID,
 			'title'     => get_the_title( $post ),
 			'permalink' => get_permalink( $post ),
-			'author'    => get_the_author_meta( 'display_name', $post->post_author ),
+			'author'    => $author_name,
 			'date'      => get_the_date( '', $post ),
-			'thumbnail' => get_the_post_thumbnail_url( $post, 'medium_large' ),
+			'thumbnail' => $thumb,
 		);
 	}
 

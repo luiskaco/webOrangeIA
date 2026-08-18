@@ -431,47 +431,75 @@ get_header();
 	</section>
 
 	<!-- ==========================================
-	     7. VOZ DE EXPERTOS SECTION
+	     7. VOZ DE EXPERTOS SECTION (Split Editorial Layout)
 	     ========================================== -->
-	<section class="experts">
+	<section class="experts" id="noticias">
 		<div class="experts__container">
-			<h2 class="experts__title" data-reveal="up">VOZ DE EXPERTOS</h2>
-			<p class="experts__subtitle" data-reveal="up">
-				Conoce la opinión de nuestros líderes sobre los principales temas que están dando que hablar en la sociedad y en la industria.
-			</p>
-			<?php $expert_posts = orange_latam_get_expert_posts(); ?>
-			<div class="experts__grid" data-stagger>
-				<?php if ( ! empty( $expert_posts ) ) : ?>
-					<?php foreach ( array_slice( $expert_posts, 0, 3 ) as $ep ) : ?>
-						<a href="<?php echo esc_url( $ep['permalink'] ); ?>" class="experts__card" data-id="<?php echo esc_attr( $ep['id'] ); ?>">
-							<div class="experts__card-img-box">
-								<?php if ( $ep['thumbnail'] ) : ?>
-									<img class="experts__card-img" src="<?php echo esc_url( $ep['thumbnail'] ); ?>" alt="<?php echo esc_attr( $ep['title'] ); ?>">
-								<?php else : ?>
-									<div class="experts__card-img-placeholder">Foto de la nota</div>
-								<?php endif; ?>
-							</div>
-							<div class="experts__card-footer">
-								<div class="experts__card-author"><?php echo esc_html( $ep['title'] ); ?></div>
-								<div class="experts__card-role"><?php echo esc_html( $ep['date'] ); ?> · Por <?php echo esc_html( $ep['author'] ); ?></div>
-							</div>
-						</a>
-					<?php endforeach; ?>
-				<?php else : ?>
-					<div class="experts__card-empty">Aún no hay publicaciones. ¡Vuelve pronto!</div>
-				<?php endif; ?>
-				<!-- Special Link Card -->
-				<a href="<?php echo esc_url( get_permalink( get_option( 'page_for_posts' ) ) ); ?>" class="experts__special-card">
-					<span class="experts__special-arrow">→</span>
-					<span class="experts__special-title">Ver todas las noticias<br>y opiniones</span>
-					<span class="experts__special-label">BLOG DE ORANGE LATAM</span>
-				</a>
-			</div>
-			<!-- Carousel controls -->
-			<div class="experts__controls">
-				<button class="experts__arrow experts__arrow--prev" aria-label="Notas anteriores">‹</button>
-				<div class="experts__dots"></div>
-				<button class="experts__arrow experts__arrow--next" aria-label="Notas siguientes">›</button>
+			<div class="experts__layout">
+				
+				<!-- LADO IZQUIERDO: Encabezado, Descripción y Botón Pill -->
+				<div class="experts__intro" data-reveal="up">
+					<h2 class="experts__title">
+						VOZ DE <span class="experts__title-accent">EXPERTOS</span>
+					</h2>
+					<p class="experts__subtitle">
+						Conoce la opinión de nuestros líderes sobre los principales temas que están dando que hablar en la sociedad y en la industria.
+					</p>
+					<a href="<?php echo esc_url( get_permalink( get_option( 'page_for_posts' ) ) ?: home_url( '/blog/' ) ); ?>" class="experts__cta-pill">
+						<span>Ver todas las noticias y opiniones &rarr;</span>
+					</a>
+				</div>
+
+				<!-- LADO DERECHO: Grid de 3 Fotos Verticales en Alta Fidelidad -->
+				<div class="experts__gallery" data-reveal="up">
+					<?php 
+					$expert_posts = orange_latam_get_expert_posts( 3 );
+					$fallback_demo_cards = array(
+						array(
+							'title'     => 'El impacto de la reputación digital en la percepción de marca',
+							'permalink' => get_permalink( get_option( 'page_for_posts' ) ) ?: home_url( '/blog/' ),
+							'thumbnail' => content_url( '/uploads/2024/11/istockphoto-1906606079-2048x2048_png-1024x717.png' ),
+						),
+						array(
+							'title'     => 'Gestión de crisis y conflictos sociales en el sector minero',
+							'permalink' => get_permalink( get_option( 'page_for_posts' ) ) ?: home_url( '/blog/' ),
+							'thumbnail' => content_url( '/uploads/2026/06/protesta-comunidades-mineria-peru-conflicto-social-1024x538.webp' ),
+						),
+						array(
+							'title'     => 'Compliance y transparencia empresarial ante investigaciones',
+							'permalink' => get_permalink( get_option( 'page_for_posts' ) ) ?: home_url( '/blog/' ),
+							'thumbnail' => content_url( '/uploads/2026/06/Crisis-Empresarial-Reputacion-Corporativa-Corrupcion-Compliance-Transparencia-1024x683.webp' ),
+						),
+					);
+					$cards_to_show = ! empty( $expert_posts ) ? $expert_posts : $fallback_demo_cards;
+					?>
+					
+					<div class="experts__cards-grid">
+						<?php foreach ( array_slice( $cards_to_show, 0, 3 ) as $idx => $card ) : 
+							$card_link = ! empty( $card['permalink'] ) ? $card['permalink'] : ( get_permalink( get_option( 'page_for_posts' ) ) ?: home_url( '/blog/' ) );
+							$card_thumb = ! empty( $card['thumbnail'] ) ? $card['thumbnail'] : ( isset( $fallback_demo_cards[$idx] ) ? $fallback_demo_cards[$idx]['thumbnail'] : '' );
+							$card_title = ! empty( $card['title'] ) ? $card['title'] : ( isset( $fallback_demo_cards[$idx] ) ? $fallback_demo_cards[$idx]['title'] : 'Noticia destacada' );
+						?>
+							<article class="experts__card">
+								<a href="<?php echo esc_url( $card_link ); ?>" class="experts__card-link">
+									<div class="experts__card-media">
+										<?php if ( ! empty( $card_thumb ) ) : ?>
+											<img src="<?php echo esc_url( $card_thumb ); ?>" alt="<?php echo esc_attr( $card_title ); ?>" class="experts__card-img" loading="lazy">
+										<?php else : ?>
+											<div class="experts__card-placeholder">
+												<span>Orange Latam</span>
+											</div>
+										<?php endif; ?>
+										<div class="experts__card-overlay">
+											<h3 class="experts__card-news-title"><?php echo esc_html( $card_title ); ?></h3>
+										</div>
+									</div>
+								</a>
+							</article>
+						<?php endforeach; ?>
+					</div>
+				</div>
+
 			</div>
 		</div>
 	</section>
