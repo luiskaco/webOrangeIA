@@ -343,7 +343,7 @@ function orange_latam_seo_demo_render_modal() {
 		.ol-seo-demo-overlay.is-open { display: flex; }
 		.ol-seo-demo-modal {
 			position: relative;
-			background: #FCF5E9;
+			background: #F4F4F6;
 			color: #14120F;
 			width: 100%; max-width: 640px;
 			max-height: 86vh; overflow-y: auto;
@@ -408,7 +408,7 @@ function orange_latam_seo_demo_render_modal() {
 		}
 		.ol-seo-demo-reopen {
 			position: fixed; bottom: 20px; right: 20px; z-index: 999998;
-			background: #14120F; color: #FCF5E9; border: none;
+			background: #14120F; color: #FFFFFF; border: none;
 			padding: 10px 16px; border-radius: 999px;
 			font-size: 12px; font-weight: 700; letter-spacing: 0.04em;
 			cursor: pointer; box-shadow: 0 8px 24px rgba(0,0,0,0.25);

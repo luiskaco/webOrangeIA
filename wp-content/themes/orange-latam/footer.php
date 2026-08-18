@@ -42,17 +42,20 @@ if ( is_home() || is_singular( 'post' ) || is_page( 'marketing-de-influencers' )
 					<a href="tel:51993595232">(+51) 993 595 232</a>
 				</p>
 				<div class="infl-prefooter__social">
-					<a href="#" class="infl-prefooter__social-link" aria-label="Instagram">
-						<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+					<a href="https://www.facebook.com/Orange360Latam?locale=es_LA" target="_blank" rel="noopener noreferrer" class="infl-prefooter__social-link" aria-label="Facebook">
+						<svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"></path></svg>
 					</a>
-					<a href="#" class="infl-prefooter__social-link" aria-label="Facebook">
-						<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+					<a href="https://www.instagram.com/orange_latam/" target="_blank" rel="noopener noreferrer" class="infl-prefooter__social-link" aria-label="Instagram">
+						<svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 3.3.15 4.8 1.7 5 5 .06 1.3.07 1.6.07 4.8s0 3.5-.07 4.8c-.15 3.3-1.7 4.8-5 5-1.3.06-1.6.07-4.9.07s-3.6 0-4.9-.07c-3.3-.15-4.8-1.7-5-5C2.04 15.6 2 15.3 2 12s0-3.5.07-4.8c.15-3.3 1.7-4.85 5-5C8.4 2.24 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.7.07-2.4.1-3.6 1.3-3.7 3.7C3.5 8.9 3.5 9.3 3.5 12s0 3.1.07 4.3c.1 2.4 1.3 3.6 3.7 3.7 1.2.06 1.6.07 4.7.07s3.5 0 4.7-.07c2.4-.1 3.6-1.3 3.7-3.7.06-1.2.07-1.6.07-4.3s0-3.1-.07-4.3c-.1-2.4-1.3-3.6-3.7-3.7C15.5 4 15.1 4 12 4zm0 3.4a4.6 4.6 0 1 1 0 9.2 4.6 4.6 0 0 1 0-9.2zm0 1.8a2.8 2.8 0 1 0 0 5.6 2.8 2.8 0 0 0 0-5.6zm5.9-2a1.08 1.08 0 1 1-2.15 0 1.08 1.08 0 0 1 2.15 0z"></path></svg>
 					</a>
-					<a href="#" class="infl-prefooter__social-link" aria-label="TikTok">
-						<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path></svg>
+					<a href="https://pe.linkedin.com/company/orangelatam" target="_blank" rel="noopener noreferrer" class="infl-prefooter__social-link" aria-label="LinkedIn">
+						<svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.9 3.87 6 2.5 6S0 4.9 0 3.5 1.12 1 2.5 1s2.48 1.1 2.48 2.5zM.2 8.24h4.6V23H.2V8.24zM8.4 8.24h4.4v2h.06c.6-1.1 2.1-2.3 4.3-2.3 4.6 0 5.5 3 5.5 6.9V23h-4.6v-6.9c0-1.6 0-3.7-2.3-3.7-2.3 0-2.6 1.8-2.6 3.6V23H8.4V8.24z"></path></svg>
 					</a>
-					<a href="#" class="infl-prefooter__social-link" aria-label="LinkedIn">
-						<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+					<a href="https://www.tiktok.com/@orange_latam_studio" target="_blank" rel="noopener noreferrer" class="infl-prefooter__social-link" aria-label="TikTok">
+						<svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.89 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.32 0 .62.05.91.13v-3.52a6.37 6.37 0 0 0-.91-.07 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.75a8.16 8.16 0 0 0 4.76 1.5V6.8a4.86 4.86 0 0 1-1-.11z"></path></svg>
+					</a>
+					<a href="https://www.youtube.com/@orange_latam" target="_blank" rel="noopener noreferrer" class="infl-prefooter__social-link" aria-label="YouTube">
+						<svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2s-.2-1.6-.9-2.4c-.9-1-1.9-1-2.4-1.1C16.9 2.5 12 2.5 12 2.5s-4.9 0-8.2.2c-.5 0-1.5.1-2.4 1-.7.8-.9 2.4-.9 2.4S.3 8.1.3 10v1.9c0 1.9.2 3.8.2 3.8s.2 1.6.9 2.4c.9 1 2.1.9 2.6 1 1.9.2 8 .2 8 .2s4.9 0 8.2-.2c.5-.1 1.5-.1 2.4-1 .7-.8.9-2.4.9-2.4s.2-1.9.2-3.8V10c0-1.9-.2-3.8-.2-3.8zM9.6 14.4V7.6l6.5 3.4-6.5 3.4z"></path></svg>
 					</a>
 				</div>
 			</div>

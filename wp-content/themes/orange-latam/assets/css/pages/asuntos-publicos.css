@@ -11,7 +11,7 @@ html, body {
 }
 
 .ap-page {
-	background: #F5F1E7;
+	background: #FFFFFF;
 	color: #17130F;
 	overflow-x: hidden !important;
 	width: 100% !important;
@@ -215,7 +215,7 @@ body[class*="asuntos-publicos"] .header .header__burger-line,
 	border-radius: 12px;
 	overflow: hidden;
 	box-shadow: 0 20px 48px rgba(23, 19, 15, 0.12);
-	border: 1px solid #DAD2C0;
+	border: 1px solid #E2E4E8;
 	aspect-ratio: 4 / 3;
 }
 
@@ -262,11 +262,11 @@ body[class*="asuntos-publicos"] .header .header__burger-line,
 /* RED DE RELACIONES E INFLUENCIA (MOSAICO DE TARJETAS FLOTANTES) */
 .ap-influence-hub {
 	margin-top: 60px;
-	background: #FFFFFF;
-	border: 1px solid #DAD2C0;
+	background: #F4F4F6;
+	border: 1px solid #E2E4E8;
 	border-radius: 16px;
 	padding: 48px 40px;
-	box-shadow: 0 20px 50px rgba(23, 19, 15, 0.06);
+	box-shadow: 0 16px 40px rgba(23, 19, 15, 0.04);
 	position: relative;
 	overflow: hidden;
 	width: 100% !important;
@@ -309,54 +309,81 @@ body[class*="asuntos-publicos"] .header .header__burger-line,
 }
 
 .ap-mosaic-card {
-	background: #F5F1E7;
-	border: 1px solid #DAD2C0;
 	border-radius: 14px;
 	padding: 24px 20px;
 	position: relative;
 	overflow: hidden;
-	box-shadow: 0 8px 24px rgba(23, 19, 15, 0.04);
-	transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, background-color 0.3s ease;
+	transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease;
 	width: 100% !important;
 	max-width: 100% !important;
 	box-sizing: border-box !important;
 }
 
-.ap-mosaic-card:hover {
-	transform: translateY(-8px) scale(1.025);
-	box-shadow: 0 20px 40px rgba(238, 137, 79, 0.18);
-	border-color: #ee894f;
+/* Tarjeta Celeste */
+.ap-mosaic-card--cyan {
+	background: #29ABE2;
+	border: 1px solid #29ABE2;
+	box-shadow: 0 10px 24px rgba(41, 171, 226, 0.25);
+}
+
+.ap-mosaic-card--cyan .ap-mosaic-card__tag {
+	color: #FF7020;
+	font-weight: 800;
+	background: rgba(255, 255, 255, 0.95);
+	padding: 4px 10px;
+	border-radius: 4px;
+	display: inline-block;
+}
+
+.ap-mosaic-card--cyan .ap-mosaic-card__title {
+	color: #FFFFFF;
+}
+
+.ap-mosaic-card--cyan .ap-mosaic-card__desc {
+	color: #FFFFFF;
+	opacity: 0.95;
+}
+
+.ap-mosaic-card--cyan:hover {
+	transform: translateY(-6px) scale(1.02);
+	box-shadow: 0 18px 36px rgba(41, 171, 226, 0.4);
+}
+
+/* Tarjeta Blanca */
+.ap-mosaic-card--white {
 	background: #FFFFFF;
+	border: 1px solid #E2E4E8;
+	box-shadow: 0 8px 20px rgba(23, 19, 15, 0.04);
+}
+
+.ap-mosaic-card--white .ap-mosaic-card__tag {
+	color: #FF7020;
+	font-weight: 800;
+	background: #FFF2EA;
+	padding: 4px 10px;
+	border-radius: 4px;
+	display: inline-block;
+}
+
+.ap-mosaic-card--white .ap-mosaic-card__title {
+	color: #17130F;
+}
+
+.ap-mosaic-card--white .ap-mosaic-card__desc {
+	color: #4a443a;
+}
+
+.ap-mosaic-card--white:hover {
+	transform: translateY(-6px) scale(1.02);
+	border-color: #29ABE2;
+	box-shadow: 0 18px 36px rgba(41, 171, 226, 0.18);
 }
 
 .ap-mosaic-card__tag {
 	font-size: 10.5px;
 	letter-spacing: 0.12em;
 	text-transform: uppercase;
-	color: #ee894f;
-	font-weight: 800;
-	display: inline-block;
-	margin-bottom: 10px;
-}
-
-.ap-mosaic-card__icon {
-	width: 44px;
-	height: 44px;
-	background: #FFFFFF;
-	border: 1px solid #DAD2C0;
-	border-radius: 10px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	color: #ee894f;
 	margin-bottom: 12px;
-	transition: transform 0.35s cubic-bezier(0.23, 1, 0.32, 1), background-color 0.3s ease;
-}
-
-.ap-mosaic-card:hover .ap-mosaic-card__icon {
-	transform: scale(1.12) rotate(-5deg);
-	background: #FDE8DB;
-	border-color: #ee894f;
 }
 
 .ap-mosaic-card__title {
@@ -364,23 +391,14 @@ body[class*="asuntos-publicos"] .header .header__burger-line,
 	font-size: 19px;
 	line-height: 1.25;
 	margin: 0 0 8px;
-	color: #17130F;
 	font-weight: 400;
-	transition: color 0.3s ease;
-}
-
-.ap-mosaic-card:hover .ap-mosaic-card__title {
-	color: #ee894f;
 }
 
 .ap-mosaic-card__desc {
 	font-size: 13.5px;
 	line-height: 1.48;
-	color: #4a443a;
 	margin: 0;
 }
-
-
 
 .ap-influence-editorial {
 	width: 100% !important;
@@ -420,18 +438,20 @@ body[class*="asuntos-publicos"] .header .header__burger-line,
 	color: #3a352d;
 }
 
-.ap-inf-list-item__icon {
+.ap-inf-list-item__icon,
+.ap-inf-list-item__icon--cyan {
 	width: 26px;
 	height: 26px;
 	border-radius: 50%;
-	background: #FDE8DB;
-	color: #ee894f;
+	background: #29ABE2;
+	color: #FFFFFF;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	font-weight: 800;
-	font-size: 13px;
+	font-size: 12px;
 	flex-shrink: 0;
+	box-shadow: 0 2px 8px rgba(41, 171, 226, 0.35);
 }
 
 .ap-influence-editorial__actions {
@@ -443,8 +463,8 @@ body[class*="asuntos-publicos"] .header .header__burger-line,
    ========================================================================== */
 .ap-pillars-banner {
 	background: #FFFFFF;
-	border-top: 1px solid #DAD2C0;
-	border-bottom: 1px solid #DAD2C0;
+	border-top: 1px solid #E2E4E8;
+	border-bottom: 1px solid #E2E4E8;
 	padding: 48px 32px;
 	box-shadow: 0 4px 20px rgba(23, 19, 15, 0.03);
 }
@@ -462,8 +482,8 @@ body[class*="asuntos-publicos"] .header .header__burger-line,
 	display: flex;
 	align-items: flex-start;
 	gap: 16px;
-	background: #F5F1E7;
-	border: 1px solid #DAD2C0;
+	background: #F4F4F6;
+	border: 1px solid #E2E4E8;
 	padding: 22px 24px;
 	border-radius: 10px;
 	height: 100%;
@@ -473,16 +493,16 @@ body[class*="asuntos-publicos"] .header .header__burger-line,
 
 .ap-pillars-banner__item:hover {
 	transform: translateY(-5px);
-	border-color: #ee894f;
+	border-color: #29ABE2;
 	background: #FFFFFF;
-	box-shadow: 0 12px 28px rgba(238, 137, 79, 0.14);
+	box-shadow: 0 12px 28px rgba(41, 171, 226, 0.15);
 }
 
 .ap-pillars-banner__icon {
 	width: 46px;
 	height: 46px;
 	background: #FFFFFF;
-	border: 1px solid #DAD2C0;
+	border: 1px solid #E2E4E8;
 	border-radius: 10px;
 	display: flex;
 	align-items: center;
@@ -572,9 +592,9 @@ body[class*="asuntos-publicos"] .header .header__burger-line,
 
 .ap-reguladores-image-box {
 	position: relative;
-	border-radius: 12px;
+	border-radius: 0;
 	overflow: hidden;
-	border: 1px solid #DAD2C0;
+	border: 1px solid #E2E4E8;
 	box-shadow: 0 14px 36px rgba(23, 19, 15, 0.08);
 	aspect-ratio: 4 / 4.5;
 }
@@ -623,15 +643,15 @@ body[class*="asuntos-publicos"] .header .header__burger-line,
 	gap: 20px;
 }
 
-/* Service Card Animation */
+/* Service Card (Caja Gris Claro, Puntas Rectas, Números Celestes) */
 .ap-service-card {
-	background: #F5F1E7;
-	border: 1px solid #DAD2C0;
-	border-radius: 10px;
+	background: #F4F4F6;
+	border: 1px solid #E2E4E8;
+	border-radius: 0;
 	padding: 30px 28px;
 	position: relative;
 	overflow: hidden;
-	transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, background-color 0.4s ease;
+	transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.3s ease, background-color 0.3s ease;
 }
 
 .ap-service-card::before {
@@ -639,18 +659,18 @@ body[class*="asuntos-publicos"] .header .header__burger-line,
 	position: absolute;
 	top: 0;
 	left: 0;
-	height: 4px;
+	height: 3px;
 	width: 100%;
-	background: linear-gradient(90deg, #ee894f 0%, #29ABE2 100%);
+	background: #29ABE2;
 	transform: scaleX(0);
 	transform-origin: left;
-	transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+	transition: transform 0.35s ease;
 }
 
 .ap-service-card:hover {
-	transform: translateY(-8px) scale(1.015);
-	box-shadow: 0 20px 40px rgba(238, 137, 79, 0.14), 0 4px 12px rgba(23, 19, 15, 0.05);
-	border-color: #ee894f;
+	transform: translateY(-5px);
+	box-shadow: 0 14px 32px rgba(41, 171, 226, 0.14), 0 4px 12px rgba(23, 19, 15, 0.04);
+	border-color: #29ABE2;
 	background: #FFFFFF;
 }
 
@@ -662,8 +682,8 @@ body[class*="asuntos-publicos"] .header .header__burger-line,
 	width: 52px;
 	height: 52px;
 	background: #FFFFFF;
-	border: 1px solid #DAD2C0;
-	border-radius: 10px;
+	border: 1px solid #E2E4E8;
+	border-radius: 0;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -672,10 +692,9 @@ body[class*="asuntos-publicos"] .header .header__burger-line,
 }
 
 .ap-service-card:hover .ap-service-card__icon-box {
-	transform: scale(1.14) rotate(-5deg);
-	background: #FDE8DB;
-	border-color: #ee894f;
-	box-shadow: 0 6px 16px rgba(238, 137, 79, 0.25);
+	transform: scale(1.08);
+	background: #F4F4F6;
+	border-color: #29ABE2;
 }
 
 .ap-service-card__step {
@@ -683,15 +702,15 @@ body[class*="asuntos-publicos"] .header .header__burger-line,
 	top: 28px;
 	right: 24px;
 	font-family: var(--font-display);
-	font-size: 17px;
+	font-size: 19px;
 	font-weight: 700;
-	color: #ee894f;
+	color: #29ABE2;
 	transition: transform 0.35s ease, color 0.35s ease;
 }
 
 .ap-service-card:hover .ap-service-card__step {
-	transform: scale(1.2) translateX(-4px);
-	color: #29ABE2;
+	transform: scale(1.15) translateX(-2px);
+	color: #1C8BC7;
 }
 
 .ap-service-card__title {
@@ -705,7 +724,7 @@ body[class*="asuntos-publicos"] .header .header__burger-line,
 }
 
 .ap-service-card:hover .ap-service-card__title {
-	color: #ee894f;
+	color: #29ABE2;
 }
 
 .ap-service-card__desc {
@@ -814,7 +833,7 @@ body[class*="asuntos-publicos"] .header .header__burger-line,
 	font-family: var(--font-display);
 	font-size: 18px;
 	line-height: 1.55;
-	color: #F5F1E7;
+	color: #FFFFFF;
 	margin: 0 0 24px;
 	font-weight: 400;
 	font-style: italic;
@@ -849,13 +868,13 @@ body[class*="asuntos-publicos"] .header .header__burger-line,
 	margin-bottom: 48px;
 }
 
-/* Columna Izquierda: Tarjeta Visual */
+/* Columna Izquierda: Tarjeta Visual (Puntas Rectas) */
 .ap-stakeholders-visual__box {
 	position: relative;
-	border-radius: 12px;
+	border-radius: 0;
 	overflow: hidden;
-	border: 1px solid #DAD2C0;
-	box-shadow: 0 16px 40px rgba(23, 19, 15, 0.09);
+	border: 1px solid #E2E4E8;
+	box-shadow: 0 16px 40px rgba(23, 19, 15, 0.08);
 	height: 100%;
 	min-height: 520px;
 }
@@ -908,7 +927,7 @@ body[class*="asuntos-publicos"] .header .header__burger-line,
 	margin: 0;
 }
 
-/* Columna Derecha: Filas Interactivas Horizontal (Rows List) */
+/* Columna Derecha: Filas Interactivas Horizontal (Puntas Rectas, Números Celestes) */
 .ap-stakeholder-list-rows {
 	display: flex;
 	flex-direction: column;
@@ -920,14 +939,13 @@ body[class*="asuntos-publicos"] .header .header__burger-line,
 	align-items: center;
 	gap: 20px;
 	background: #FFFFFF;
-	border: 1px solid #DAD2C0;
-	border-radius: 10px;
+	border: 1px solid #E2E4E8;
+	border-radius: 0;
 	padding: 18px 24px;
 	position: relative;
 	overflow: hidden;
-	transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease;
+	transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
 	cursor: pointer;
-	/* Reset de <button>: las filas abren el modal de contacto */
 	appearance: none;
 	font: inherit;
 	color: inherit;
@@ -940,7 +958,7 @@ body[class*="asuntos-publicos"] .header .header__burger-line,
 }
 
 .ap-stake-row:focus-visible {
-	outline: 2px solid #ee894f;
+	outline: 2px solid #29ABE2;
 	outline-offset: 3px;
 }
 
@@ -960,52 +978,34 @@ body[class*="asuntos-publicos"] .header .header__burger-line,
 	top: 0;
 	width: 4px;
 	height: 100%;
-	background: #ee894f;
+	background: #29ABE2;
 	transform: scaleY(0);
 	transform-origin: top;
-	transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+	transition: transform 0.35s ease;
 }
 
 .ap-stake-row:hover {
-	transform: translateX(10px) scale(1.01);
-	border-color: #ee894f;
-	box-shadow: 0 12px 30px rgba(238, 137, 79, 0.14);
+	transform: translateX(8px);
+	border-color: #29ABE2;
+	box-shadow: 0 12px 28px rgba(41, 171, 226, 0.15);
 }
 
 .ap-stake-row:hover::before {
-	height: 100%;
+	transform: scaleY(1);
 }
 
 .ap-stake-row__num {
 	font-family: var(--font-display);
-	font-size: 16px;
+	font-size: 18px;
 	font-weight: 700;
-	color: #ee894f;
+	color: #29ABE2;
 	flex-shrink: 0;
-	transition: transform 0.3s ease;
+	transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .ap-stake-row:hover .ap-stake-row__num {
-	transform: scale(1.2);
-}
-
-.ap-stake-row__icon-box {
-	width: 42px;
-	height: 42px;
-	background: #F5F1E7;
-	border: 1px solid #DAD2C0;
-	border-radius: 8px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-shrink: 0;
-	transition: transform 0.35s cubic-bezier(0.23, 1, 0.32, 1), background-color 0.35s ease;
-}
-
-.ap-stake-row:hover .ap-stake-row__icon-box {
-	transform: scale(1.15) rotate(-6deg);
-	background: #FDE8DB;
-	border-color: #ee894f;
+	transform: scale(1.15);
+	color: #1C8BC7;
 }
 
 .ap-stake-row__info {
@@ -1021,37 +1021,37 @@ body[class*="asuntos-publicos"] .header .header__burger-line,
 }
 
 .ap-stake-row:hover .ap-stake-row__title {
-	color: #ee894f;
+	color: #29ABE2;
 }
 
 .ap-stake-row__desc {
 	font-size: 13.8px;
 	line-height: 1.45;
-	color: #5a5448;
+	color: #555555;
 	margin: 0;
 }
 
 .ap-stake-row__arrow {
-	color: #DAD2C0;
+	color: #B0B5BC;
 	flex-shrink: 0;
 	transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .ap-stake-row:hover .ap-stake-row__arrow {
-	transform: translateX(4px);
-	color: #ee894f;
+	transform: translate(3px, -3px);
+	color: #29ABE2;
 }
 
-/* Callout Diferencial */
+/* Callout Diferencial (Puntas Rectas) */
 .ap-diff-callout {
-	background: linear-gradient(120deg, #FDEBDF 0%, #FDE8DB 60%);
-	border: 1px solid #F5C7A9;
+	background: #F4F4F6;
+	border: 1px solid #E2E4E8;
 	padding: 26px 32px;
-	border-radius: 12px;
+	border-radius: 0;
 	display: flex;
 	align-items: center;
 	gap: 20px;
-	box-shadow: 0 4px 16px rgba(238, 137, 79, 0.08);
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
 	transition: transform 0.3s ease;
 }
 
@@ -1061,12 +1061,12 @@ body[class*="asuntos-publicos"] .header .header__burger-line,
 
 .ap-diff-callout__icon {
 	font-size: 22px;
-	color: #ee894f;
+	color: #29ABE2;
 	flex-shrink: 0;
 }
 
 .ap-diff-callout__text {
-	font-size: 16.5px;
+	font-size: 16px;
 	line-height: 1.6;
 	color: #17130F;
 	margin: 0;

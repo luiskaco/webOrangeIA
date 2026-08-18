@@ -108,22 +108,33 @@ $pr_img_uri = $theme_uri . '/assets/images/pr';
 	</section>
 
 	<!-- ==========================================
-	     1b. TICKER MARQUEE INFINITO
+	     1b. PILARES CLAVE DE PR & REPUTACIÓN (SECCIÓN FIJA)
 	     ========================================== -->
-	<div class="pr-ticker">
-		<div class="pr-ticker__track">
-			<span class="pr-ticker__item">Relaciones Públicas <span class="pr-ticker__star">✦</span></span>
-			<span class="pr-ticker__item">Reputación corporativa <span class="pr-ticker__star">✦</span></span>
-			<span class="pr-ticker__item">Gestión de crisis <span class="pr-ticker__star">✦</span></span>
-			<span class="pr-ticker__item">Entrenamiento de voceros <span class="pr-ticker__star">✦</span></span>
-			<span class="pr-ticker__item">Posicionamiento mediático <span class="pr-ticker__star">✦</span></span>
-			<span class="pr-ticker__item">Relaciones Públicas <span class="pr-ticker__star">✦</span></span>
-			<span class="pr-ticker__item">Reputación corporativa <span class="pr-ticker__star">✦</span></span>
-			<span class="pr-ticker__item">Gestión de crisis <span class="pr-ticker__star">✦</span></span>
-			<span class="pr-ticker__item">Entrenamiento de voceros <span class="pr-ticker__star">✦</span></span>
-			<span class="pr-ticker__item">Posicionamiento mediático <span class="pr-ticker__star">✦</span></span>
+	<section class="pr-pillars-bar" aria-label="Especialidades de PR y Reputación">
+		<div class="pr-pillars-bar__container">
+			<div class="pr-pillars-bar__list" data-reveal="up">
+				<div class="pr-pillars-bar__item">
+					<span class="pr-pillars-bar__text">Relaciones Públicas</span>
+				</div>
+				<span class="pr-pillars-bar__star" aria-hidden="true">✦</span>
+				<div class="pr-pillars-bar__item">
+					<span class="pr-pillars-bar__text">Reputación corporativa</span>
+				</div>
+				<span class="pr-pillars-bar__star" aria-hidden="true">✦</span>
+				<div class="pr-pillars-bar__item">
+					<span class="pr-pillars-bar__text">Gestión de crisis</span>
+				</div>
+				<span class="pr-pillars-bar__star" aria-hidden="true">✦</span>
+				<div class="pr-pillars-bar__item">
+					<span class="pr-pillars-bar__text">Entrenamiento de voceros</span>
+				</div>
+				<span class="pr-pillars-bar__star" aria-hidden="true">✦</span>
+				<div class="pr-pillars-bar__item">
+					<span class="pr-pillars-bar__text">Posicionamiento mediático</span>
+				</div>
+			</div>
 		</div>
-	</div>
+	</section>
 
 	<!-- ==========================================
 	     2. QUÉ ES LA GESTIÓN DE REPUTACIÓN
@@ -179,56 +190,56 @@ $pr_img_uri = $theme_uri . '/assets/images/pr';
 				<div class="pr-services__mobile-items">
 					<button class="pr-services__mobile-row js-pr-node-row" data-node-index="0">
 						<div class="pr-services__mobile-icon">
-							<svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 10v4h3l5 4V6l-5 4H3z M15.5 8.5c1.2 1.2 1.2 5.8 0 7 M18.5 6.5c2.5 2.5 2.5 8.5 0 11" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 3a9 9 0 1 1-6.36 2.64L3 8 M3 3v5h5 M12 8v4l3 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
 						</div>
 						<span class="pr-services__mobile-label">Estrategias integrales de RRPP</span>
 					</button>
 
 					<button class="pr-services__mobile-row js-pr-node-row" data-node-index="1">
 						<div class="pr-services__mobile-icon">
-							<svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 4h13v16H4z M17 8h3v9a2 2 0 01-2 2h-1V8z M7 8h7 M7 11.5h7 M7 15h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 4h14a2 2 0 0 1 2 2v14H4V4zm0 4h16 M8 12h8 M8 16h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
 						</div>
 						<span class="pr-services__mobile-label">Gestión con medios de comunicación</span>
 					</button>
 
 					<button class="pr-services__mobile-row js-pr-node-row" data-node-index="2">
 						<div class="pr-services__mobile-icon">
-							<svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3a3 3 0 013 3v6a3 3 0 01-6 0V6a3 3 0 013-3z M6 11a6 6 0 0012 0 M12 17v4 M9 21h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 19v-1a3 3 0 0 1 3-3 M4 9a2 2 0 1 1 0-4 2 2 0 0 1 0 4 M20 19v-1a3 3 0 0 0-3-3 M20 9a2 2 0 1 0 0-4 2 2 0 0 0 0 4 M12 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6z M7 21v-2a5 5 0 0 1 10 0v2 M12 2l.6 1.3 1.4.2-1 1 .2 1.5-1.2-.7-1.2.7.2-1.5-1-1 1.4-.2z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
 						</div>
 						<span class="pr-services__mobile-label">Posicionamiento de líderes y voceros</span>
 					</button>
 
 					<button class="pr-services__mobile-row js-pr-node-row" data-node-index="3">
 						<div class="pr-services__mobile-icon">
-							<svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M6 3h8l5 5v13H6z M14 3v5h5 M9 15l6-6 2 2-6 6H9v-2z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 19l7-7 3 3-7 7-5 1 2-4z M18 5l3 3 M2 21h20 M6 13L3 16v3h3l3-3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
 						</div>
 						<span class="pr-services__mobile-label">Desarrollo de contenidos corporativos</span>
 					</button>
 
 					<button class="pr-services__mobile-row js-pr-node-row" data-node-index="4">
 						<div class="pr-services__mobile-icon">
-							<svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 21h16 M6 21V11h12v10 M9 11V7a3 3 0 016 0v4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9 18h6 M10 22h4 M12 2a7 7 0 0 0-5 11.9c.7.7 1 1.6 1 2.6v.5h8v-.5c0-1 .3-1.9 1-2.6A7 7 0 0 0 12 2z M12 6v4 M10 8h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
 						</div>
 						<span class="pr-services__mobile-label">Comunicación ejecutiva y thought leadership</span>
 					</button>
 
 					<button class="pr-services__mobile-row js-pr-node-row" data-node-index="5">
 						<div class="pr-services__mobile-icon">
-							<svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v6c0 5-3 8-7 9-4-1-7-4-7-9V6z M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2l8 3.5v6c0 5.5-3.5 9.5-8 10.5-4.5-1-8-5-8-10.5v-6L12 2z M12 7.5l1.1 2.3 2.5.4-1.8 1.8.4 2.5-2.2-1.2-2.2 1.2.4-2.5-1.8-1.8 2.5-.4z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
 						</div>
 						<span class="pr-services__mobile-label">Gestión de reputación corporativa</span>
 					</button>
 
 					<button class="pr-services__mobile-row js-pr-node-row" data-node-index="6">
 						<div class="pr-services__mobile-icon">
-							<svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 20h18 M6 20v-6 M11 20v-9 M16 20v-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 3v18h18 M6 15l4-5 4 3 6-7 M18 6h3v3 M14 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
 						</div>
 						<span class="pr-services__mobile-label">Monitoreo y análisis de impacto mediático</span>
 					</button>
 
 					<button class="pr-services__mobile-row js-pr-node-row" data-node-index="7">
 						<div class="pr-services__mobile-icon">
-							<svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3a2 2 0 100 4 2 2 0 000-4z M8 10a4 4 0 018 0 M5 11h14 M7 11l1 10h8l1-10 M14 11v-3a1 1 0 00-2 0 M17 4.5a2.5 2.5 0 010 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 4a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z M6 12h12 M5 12l2 9h10l2-9 M9 8l-2-2 M15 8l2-2 M9 21h6 M9 12v-2a3 3 0 0 1 6 0v2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
 						</div>
 						<span class="pr-services__mobile-label">Comunicación de lanzamientos y anuncios corporativos</span>
 					</button>
@@ -285,11 +296,15 @@ $pr_img_uri = $theme_uri . '/assets/images/pr';
 						<span class="pr-crisis__phase-name">Antes</span>
 					</div>
 					<div class="pr-crisis__item">
-						<svg width="22" height="22" viewBox="0 0 24 24" fill="none" class="pr-crisis__item-icon"><path d="M12 3l10 18H2z M12 9v5 M12 17h.01" stroke="#29ABE2" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+						<div class="pr-crisis__icon-box">
+							<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 6h2v6h-2V7zm0 8h2v2h-2v-2z"/></svg>
+						</div>
 						<span class="pr-crisis__item-label">Diagnóstico y evaluación de riesgos reputacionales</span>
 					</div>
 					<div class="pr-crisis__item">
-						<svg width="22" height="22" viewBox="0 0 24 24" fill="none" class="pr-crisis__item-icon"><path d="M12 6c-1.5-1-4-2-8-2v14c4 0 6.5 1 8 2 1.5-1 4-2 8-2V4c-4 0-6.5 1-8 2z" stroke="#29ABE2" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+						<div class="pr-crisis__icon-box">
+							<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4zm12 16H6v-2h12v2zm0-4H6v-2h12v2zm0-4h-5V6h5v6z"/></svg>
+						</div>
 						<span class="pr-crisis__item-label">Manuales y protocolos de crisis</span>
 					</div>
 				</div>
@@ -301,11 +316,15 @@ $pr_img_uri = $theme_uri . '/assets/images/pr';
 						<span class="pr-crisis__phase-name">Durante</span>
 					</div>
 					<div class="pr-crisis__item">
-						<svg width="22" height="22" viewBox="0 0 24 24" fill="none" class="pr-crisis__item-icon"><path d="M4 4h16v11H8l-4 4z" stroke="#29ABE2" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+						<div class="pr-crisis__icon-box">
+							<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM7 9h10v2H7V9zm6 4H7v-2h6v2zm4-6H7V5h10v2z"/></svg>
+						</div>
 						<span class="pr-crisis__item-label">Diseño de mensajes estratégicos</span>
 					</div>
 					<div class="pr-crisis__item">
-						<svg width="22" height="22" viewBox="0 0 24 24" fill="none" class="pr-crisis__item-icon"><path d="M4 8h3l2-3h6l2 3h3v11H4z M12 18a4 4 0 100-8 4 4 0 000 8z" stroke="#29ABE2" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+						<div class="pr-crisis__icon-box">
+							<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.3-3c0 3-2.54 5.1-5.3 5.1S6.7 14 6.7 11H5c0 3.41 2.72 6.23 6 6.72V21h2v-3.28c3.28-.48 6-3.3 6-6.72h-1.7z"/></svg>
+						</div>
 						<span class="pr-crisis__item-label">Gestión de medios durante contingencias</span>
 					</div>
 				</div>
@@ -317,11 +336,15 @@ $pr_img_uri = $theme_uri . '/assets/images/pr';
 						<span class="pr-crisis__phase-name">Después</span>
 					</div>
 					<div class="pr-crisis__item">
-						<svg width="22" height="22" viewBox="0 0 24 24" fill="none" class="pr-crisis__item-icon"><path d="M12 3a9 9 0 100 18 9 9 0 000-18z M12 7a5 5 0 100 10 5 5 0 000-10z M12 11a1 1 0 100 2 1 1 0 000-2z" stroke="#29ABE2" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+						<div class="pr-crisis__icon-box">
+							<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-10 14H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg>
+						</div>
 						<span class="pr-crisis__item-label">Monitoreo de medios y redes sociales</span>
 					</div>
 					<div class="pr-crisis__item">
-						<svg width="22" height="22" viewBox="0 0 24 24" fill="none" class="pr-crisis__item-icon"><path d="M8 11a3 3 0 100-6 3 3 0 000 6z M2 21v-2a4 4 0 014-4h4a4 4 0 014 4v2 M17 11a3 3 0 100-6 M23 21v-2a4 4 0 00-3-3.87" stroke="#29ABE2" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+						<div class="pr-crisis__icon-box">
+							<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+						</div>
 						<span class="pr-crisis__item-label">Comité de crisis y asesoría ejecutiva</span>
 					</div>
 				</div>
@@ -360,30 +383,53 @@ $pr_img_uri = $theme_uri . '/assets/images/pr';
 				</p>
 			</div>
 
-			<div class="pr-voceros__pills" data-stagger>
-				<div class="pr-voceros__pill">
-					<span class="pr-voceros__pill-num">1</span>
-					<span class="pr-voceros__pill-label">Simulaciones de entrevistas</span>
+			<div class="pr-voceros__grid" data-stagger>
+				<div class="pr-voceros__card" data-reveal="up">
+					<div class="pr-voceros__card-top">
+						<span class="pr-voceros__card-num">01</span>
+					</div>
+					<h3 class="pr-voceros__card-title">Simulaciones de entrevistas</h3>
+					<p class="pr-voceros__card-desc">Prácticas intensivas frente a cámara simulando escenarios reales de prensa, televisión, radio y medios digitales.</p>
 				</div>
-				<div class="pr-voceros__pill">
-					<span class="pr-voceros__pill-num">2</span>
-					<span class="pr-voceros__pill-label">Manejo de preguntas difíciles</span>
+
+				<div class="pr-voceros__card" data-reveal="up">
+					<div class="pr-voceros__card-top">
+						<span class="pr-voceros__card-num">02</span>
+					</div>
+					<h3 class="pr-voceros__card-title">Manejo de preguntas difíciles</h3>
+					<p class="pr-voceros__card-desc">Técnicas de puenteo (bridging), control de agenda y neutralización efectiva de cuestionamientos complejos.</p>
 				</div>
-				<div class="pr-voceros__pill">
-					<span class="pr-voceros__pill-num">3</span>
-					<span class="pr-voceros__pill-label">Desarrollo de mensajes clave</span>
+
+				<div class="pr-voceros__card" data-reveal="up">
+					<div class="pr-voceros__card-top">
+						<span class="pr-voceros__card-num">03</span>
+					</div>
+					<h3 class="pr-voceros__card-title">Desarrollo de mensajes clave</h3>
+					<p class="pr-voceros__card-desc">Estructuración y jerarquización de ideas fuerza claras, memorables y alineadas a los objetivos de negocio.</p>
 				</div>
-				<div class="pr-voceros__pill">
-					<span class="pr-voceros__pill-num">4</span>
-					<span class="pr-voceros__pill-label">Comunicación verbal y no verbal</span>
+
+				<div class="pr-voceros__card" data-reveal="up">
+					<div class="pr-voceros__card-top">
+						<span class="pr-voceros__card-num">04</span>
+					</div>
+					<h3 class="pr-voceros__card-title">Comunicación verbal y no verbal</h3>
+					<p class="pr-voceros__card-desc">Dominio del lenguaje corporal, modulación de voz, contacto visual y proyección de autoridad ejecutiva.</p>
 				</div>
-				<div class="pr-voceros__pill">
-					<span class="pr-voceros__pill-num">5</span>
-					<span class="pr-voceros__pill-label">Storytelling</span>
+
+				<div class="pr-voceros__card" data-reveal="up">
+					<div class="pr-voceros__card-top">
+						<span class="pr-voceros__card-num">05</span>
+					</div>
+					<h3 class="pr-voceros__card-title">Storytelling corporativo</h3>
+					<p class="pr-voceros__card-desc">Construcción de narrativas persuasivas que transforman datos técnicos en historias de alto impacto e interés público.</p>
 				</div>
-				<div class="pr-voceros__pill">
-					<span class="pr-voceros__pill-num">6</span>
-					<span class="pr-voceros__pill-label">Entrenamiento para escenarios de crisis</span>
+
+				<div class="pr-voceros__card" data-reveal="up">
+					<div class="pr-voceros__card-top">
+						<span class="pr-voceros__card-num">06</span>
+					</div>
+					<h3 class="pr-voceros__card-title">Escenarios de crisis</h3>
+					<p class="pr-voceros__card-desc">Entrenamiento bajo presión para emitir declaraciones oficiales, contención de contingencias y defensa reputacional.</p>
 				</div>
 			</div>
 		</div>
@@ -421,53 +467,67 @@ $pr_img_uri = $theme_uri . '/assets/images/pr';
 						</div>
 					</div>
 
-					<!-- Awards & Recognition Grid -->
-					<div class="pr-why__logos-box" data-reveal="up">
-						<p class="pr-why__logos-note">AGENCIA PREMIADA Y RESPALDADA POR MARCAS LÍDERES EN LATINOAMÉRICA</p>
-						
-						<div class="pr-why__awards-grid">
-							<div class="pr-why__award-card">
-								<div class="pr-why__award-logo-box">
-									<img class="pr-why__award-logo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/awards/purpose-awards.webp" alt="Purpose Awards" loading="lazy">
-								</div>
-								<span class="pr-why__award-title">PURPOSE AWARDS</span>
-							</div>
-
-							<div class="pr-why__award-card">
-								<div class="pr-why__award-logo-box">
-									<img class="pr-why__award-logo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/awards/pr-week-global-awards.webp" alt="PR Week Global Awards" loading="lazy">
-								</div>
-								<span class="pr-why__award-title">PR WEEK GLOBAL</span>
-							</div>
-
-							<div class="pr-why__award-card">
-								<div class="pr-why__award-logo-box">
-									<img class="pr-why__award-logo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/awards/ipra-golden-world-awards.png" alt="IPRA Golden World Awards" loading="lazy">
-								</div>
-								<span class="pr-why__award-title">IPRA GOLDEN WORLD</span>
-							</div>
-
-							<div class="pr-why__award-card">
-								<div class="pr-why__award-logo-box">
-									<img class="pr-why__award-logo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/awards/sabre-global-world-awards.png" alt="Sabre Latin America Awards" loading="lazy">
-								</div>
-								<span class="pr-why__award-title">SABRE AWARDS</span>
-							</div>
-
-							<div class="pr-why__award-card">
-								<div class="pr-why__award-logo-box">
-									<img class="pr-why__award-logo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/awards/effie-awards.png" alt="Effie Awards" loading="lazy">
-								</div>
-								<span class="pr-why__award-title">EFFIE AWARDS</span>
-							</div>
-
-							<div class="pr-why__award-card">
-								<div class="pr-why__award-logo-box">
-									<img class="pr-why__award-logo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/awards/cannes-lions.webp" alt="Cannes Lions" loading="lazy">
-								</div>
-								<span class="pr-why__award-title">CANNES LIONS</span>
+					<!-- Awards & Recognition Mini Carousel -->
+					<div class="pr-why__logos-box js-pr-awards-carousel" data-reveal="up">
+						<div class="pr-why__logos-top">
+							<p class="pr-why__logos-note">AGENCIA PREMIADA Y RESPALDADA POR MARCAS LÍDERES EN LATINOAMÉRICA</p>
+							<div class="pr-why__carousel-nav">
+								<button type="button" class="pr-why__carousel-btn pr-why__carousel-btn--prev js-pr-carousel-prev" aria-label="Premio anterior">
+									<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+								</button>
+								<button type="button" class="pr-why__carousel-btn pr-why__carousel-btn--next js-pr-carousel-next" aria-label="Siguiente premio">
+									<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+								</button>
 							</div>
 						</div>
+						
+						<div class="pr-why__carousel-viewport">
+							<div class="pr-why__carousel-track js-pr-carousel-track">
+								<div class="pr-why__award-card">
+									<div class="pr-why__award-logo-box">
+										<img class="pr-why__award-logo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/awards/purpose-awards.webp" alt="Purpose Awards" loading="lazy">
+									</div>
+									<span class="pr-why__award-title">PURPOSE AWARDS</span>
+								</div>
+
+								<div class="pr-why__award-card">
+									<div class="pr-why__award-logo-box">
+										<img class="pr-why__award-logo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/awards/pr-week-global-awards.webp" alt="PR Week Global Awards" loading="lazy">
+									</div>
+									<span class="pr-why__award-title">PR WEEK GLOBAL</span>
+								</div>
+
+								<div class="pr-why__award-card">
+									<div class="pr-why__award-logo-box">
+										<img class="pr-why__award-logo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/awards/ipra-golden-world-awards.png" alt="IPRA Golden World Awards" loading="lazy">
+									</div>
+									<span class="pr-why__award-title">IPRA GOLDEN WORLD</span>
+								</div>
+
+								<div class="pr-why__award-card">
+									<div class="pr-why__award-logo-box">
+										<img class="pr-why__award-logo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/awards/sabre-global-world-awards.png" alt="Sabre Latin America Awards" loading="lazy">
+									</div>
+									<span class="pr-why__award-title">SABRE AWARDS</span>
+								</div>
+
+								<div class="pr-why__award-card">
+									<div class="pr-why__award-logo-box">
+										<img class="pr-why__award-logo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/awards/effie-awards.png" alt="Effie Awards" loading="lazy">
+									</div>
+									<span class="pr-why__award-title">EFFIE AWARDS</span>
+								</div>
+
+								<div class="pr-why__award-card">
+									<div class="pr-why__award-logo-box">
+										<img class="pr-why__award-logo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/awards/cannes-lions.webp" alt="Cannes Lions" loading="lazy">
+									</div>
+									<span class="pr-why__award-title">CANNES LIONS</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="pr-why__carousel-dots js-pr-carousel-dots"></div>
 					</div>
 				</div>
 			</div>

@@ -139,5 +139,6 @@
 ## Rediseño Sección Asuntos Sensibles & Migración de Medios (2026-08-18)
 - [x] Migración completa de medios y metadatos SEO de artículos desde OrangeV2026 a OrangeIA (19 posts vinculados con imágenes destacadas y metadatos alt/title).
 - [x] Rediseño de sección Asuntos Sensibles en Home: cuadrícula de 6 cajas cuadradas (editorial box grid), continuidad de fondo `#0B0B0B`, paleta corporativa azul/blanco/negro, animación de scroll escalonada y título en blanco puro.
+- [x] fix: textos y enlaces con caracteres alternos o glifos mixtos mayúscula/minúscula (`MÁs INfORMACiÓN`) — causa: archivo .otf de `PP Neue Montreal` en `assets/fonts/` con corte unicase/experimental que forzaba glifos de caja baja en caracteres como `S`, `F`, `I` aun con `text-transform: uppercase`. Fix: normalización de `--font-sans` a `Poppins` (Google Fonts y archivos locales TTF) + `Plus Jakarta Sans` / `Inter`, asegurando consistencia tipográfica y legibilidad en todo el sitio.
 
 

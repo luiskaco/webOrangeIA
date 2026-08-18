@@ -239,10 +239,9 @@ function orange_send_service_contact_handler() {
 require_once ORANGE_THEME_DIR . '/inc/class-theme-setup.php';
 
 // ==========================================
-// TEMPORAL — DEMO INTERNA DE SEO (remover tras la presentación a dirección)
-// Borrar esta línea + el archivo inc/temp-seo-demo-modal.php para quitarlo.
+// TEMPORAL — DEMO INTERNA DE SEO (desactivado)
 // ==========================================
-require_once ORANGE_THEME_DIR . '/inc/temp-seo-demo-modal.php';
+// require_once ORANGE_THEME_DIR . '/inc/temp-seo-demo-modal.php';
 
 // ==========================================
 // 5. ON-PAGE SEO META & OPEN GRAPH GENERATOR

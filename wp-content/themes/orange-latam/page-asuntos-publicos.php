@@ -118,15 +118,15 @@ $theme_uri = get_template_directory_uri();
 
 					<!-- Columna 1 (Elevada) -->
 					<div class="ap-mosaic-col ap-mosaic-col--1" data-ap-parallax="-8">
-						<!-- Card 1 -->
-						<div class="ap-mosaic-card">
+						<!-- Card 1 (Celeste) -->
+						<div class="ap-mosaic-card ap-mosaic-card--cyan">
 							<span class="ap-mosaic-card__tag">Regulación & Licencias</span>
 							<h4 class="ap-mosaic-card__title">Reguladores & Ministerios</h4>
 							<p class="ap-mosaic-card__desc">Anticipación normativa y prevención de riesgos regulatorios.</p>
 						</div>
 
-						<!-- Card 2 -->
-						<div class="ap-mosaic-card">
+						<!-- Card 2 (Blanca) -->
+						<div class="ap-mosaic-card ap-mosaic-card--white">
 							<span class="ap-mosaic-card__tag">Licencia Social</span>
 							<h4 class="ap-mosaic-card__title">Comunidades Locales</h4>
 							<p class="ap-mosaic-card__desc">Diálogo responsable y gestión de relaciones con comunidades.</p>
@@ -135,15 +135,15 @@ $theme_uri = get_template_directory_uri();
 
 					<!-- Columna 2 (Desplazada hacia abajo) -->
 					<div class="ap-mosaic-col ap-mosaic-col--2" data-ap-parallax="8">
-						<!-- Card 3 -->
-						<div class="ap-mosaic-card">
+						<!-- Card 3 (Blanca) -->
+						<div class="ap-mosaic-card ap-mosaic-card--white">
 							<span class="ap-mosaic-card__tag">Opinión Pública</span>
 							<h4 class="ap-mosaic-card__title">Medios & Líderes</h4>
 							<p class="ap-mosaic-card__desc">Posicionamiento y comunicación gubernamental transparente.</p>
 						</div>
 
-						<!-- Card 4 -->
-						<div class="ap-mosaic-card">
+						<!-- Card 4 (Celeste) -->
+						<div class="ap-mosaic-card ap-mosaic-card--cyan">
 							<span class="ap-mosaic-card__tag">Alianzas Sectoriales</span>
 							<h4 class="ap-mosaic-card__title">Gremios & Cámaras</h4>
 							<p class="ap-mosaic-card__desc">Consenso institucional y articulación con el sector privado.</p>
@@ -154,7 +154,7 @@ $theme_uri = get_template_directory_uri();
 
 				<!-- Lado Derecho: Editorial Estratégico -->
 				<div class="ap-influence-editorial">
-					<span class="ap-section-tag">RED ESTRATÉGICA Y MAPAS DE PODER</span>
+					<span class="ap-section-tag ap-section-tag--cyan">RED ESTRATÉGICA Y MAPAS DE PODER</span>
 					<h3 class="ap-influence-editorial__title">Red de Relaciones e Influencia</h3>
 					<p class="ap-influence-editorial__lead">
 						Conectamos los nodos de decisión clave en Perú y en otros países mediante mapas de poder y <strong>relacionamiento con stakeholders</strong> de alto nivel.
@@ -162,15 +162,15 @@ $theme_uri = get_template_directory_uri();
 
 					<div class="ap-influence-editorial__list">
 						<div class="ap-inf-list-item">
-							<div class="ap-inf-list-item__icon">✓</div>
+							<div class="ap-inf-list-item__icon ap-inf-list-item__icon--cyan">✓</div>
 							<p><strong>Mapeo de actores:</strong> Autoridades, reguladores, comunidades y sociedad civil.</p>
 						</div>
 						<div class="ap-inf-list-item">
-							<div class="ap-inf-list-item__icon">✓</div>
+							<div class="ap-inf-list-item__icon ap-inf-list-item__icon--cyan">✓</div>
 							<p><strong>Diálogo técnico:</strong> Propuestas éticas con sustento técnico e institucional.</p>
 						</div>
 						<div class="ap-inf-list-item">
-							<div class="ap-inf-list-item__icon">✓</div>
+							<div class="ap-inf-list-item__icon ap-inf-list-item__icon--cyan">✓</div>
 							<p><strong>Gestión de riesgos:</strong> Alertas tempranas ante cambios regulatorios y proyectos de ley.</p>
 						</div>
 					</div>
@@ -191,7 +191,7 @@ $theme_uri = get_template_directory_uri();
 	<section class="ap-section ap-section--light" id="relacion-reguladores">
 		<div class="ap-section__container">
 			<div class="ap-section__header-center" data-ap-reveal>
-				<span class="ap-section-tag">Relación Institucional</span>
+				<span class="ap-section-tag ap-section-tag--cyan">Relación Institucional</span>
 				<h2 class="ap-section__title">Asuntos Públicos: relación con reguladores y administraciones</h2>
 				<p class="ap-section__subtitle">
 					Gestión de <strong>comunicación gubernamental en Perú</strong> ante autoridades y ministerios para facilitar el diálogo técnico.
@@ -292,7 +292,7 @@ $theme_uri = get_template_directory_uri();
 	<section class="ap-section ap-section--light" id="stakeholders">
 		<div class="ap-section__container">
 			<div class="ap-section__header-center" data-ap-reveal>
-				<span class="ap-section-tag">Comunidades y Gremios</span>
+				<span class="ap-section-tag ap-section-tag--cyan">Comunidades y Gremios</span>
 				<h2 class="ap-section__title">Relacionamiento con Stakeholders y Comunidades</h2>
 				<p class="ap-section__subtitle">
 					Especialistas en <strong>gestión de relaciones con comunidades</strong> y articulación responsable con el ecosistema de stakeholders.

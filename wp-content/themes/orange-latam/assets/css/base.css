@@ -7,48 +7,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 /* ==========================================================================
-   0. FONTS (@font-face)
+   0. FONTS (@font-face & Google Fonts)
    ========================================================================== */
 @font-face {
-	font-family: 'PP Neue Montreal';
-	src: local('PP Neue Montreal'), local('Neue Montreal'),
-	     url('../fonts/NeueMontreal-Regular.otf') format('opentype');
+	font-family: 'Poppins';
+	src: local('Poppins Light'), local('Poppins-Light'),
+	     url('../fonts/Poppins-Light.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Poppins';
+	src: local('Poppins Regular'), local('Poppins-Regular'),
+	     url('../fonts/Poppins-Regular.ttf') format('truetype');
 	font-weight: 400;
 	font-style: normal;
 	font-display: swap;
 }
 
 @font-face {
-	font-family: 'PP Neue Montreal';
-	src: local('PP Neue Montreal'), local('Neue Montreal'),
-	     url('../fonts/NeueMontreal-Medium.otf') format('opentype');
-	font-weight: 500;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: 'PP Neue Montreal';
-	src: local('PP Neue Montreal'), local('Neue Montreal'),
-	     url('../fonts/NeueMontreal-Bold.otf') format('opentype');
-	font-weight: 700;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: 'Neue Montreal';
-	src: local('PP Neue Montreal'), local('Neue Montreal'),
-	     url('../fonts/NeueMontreal-Regular.otf') format('opentype');
-	font-weight: 400;
-	font-style: normal;
-	font-display: swap;
-}
-
-@font-face {
-	font-family: 'Neue Montreal';
-	src: local('PP Neue Montreal'), local('Neue Montreal'),
-	     url('../fonts/NeueMontreal-Bold.otf') format('opentype');
+	font-family: 'Poppins';
+	src: local('Poppins Bold'), local('Poppins-Bold'),
+	     url('../fonts/Poppins-Bold.ttf') format('truetype');
 	font-weight: 700;
 	font-style: normal;
 	font-display: swap;
@@ -84,7 +66,7 @@
    1. DESIGN SYSTEM VARIABLES & BASE RESET
    ========================================================================== */
 :root {
-	--color-bg-light: #FCF5E9;
+	--color-bg-light: #F4F4F6;
 	--color-text-dark: #14120F;
 	--color-blue: #70B5E3;
 	--color-bg-dark: #0B0B0B;
@@ -92,7 +74,7 @@
 	--color-yellow: #F7D769;
 	
 	--font-display: 'PP Editorial New', 'Editorial New', 'Cormorant Garamond', 'Playfair Display', serif;
-	--font-sans: 'PP Neue Montreal', 'Neue Montreal', 'Plus Jakarta Sans', 'Inter', sans-serif;
+	--font-sans: 'Poppins', 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 	--font-cursive: 'Maca', 'Playball', cursive;
 }
 
@@ -450,24 +432,38 @@ input, textarea, button {
 .infl-prefooter__social {
 	display: flex;
 	gap: 10px;
+	margin-top: 8px;
 }
 
 .infl-prefooter__social-link {
-	display: flex;
+	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	width: 32px;
-	height: 32px;
-	background: #38b6ff;
-	color: #000000;
-	border-radius: 4px;
+	width: 36px;
+	height: 36px;
+	background: rgba(255, 255, 255, 0.08);
+	border: 1px solid rgba(255, 255, 255, 0.15);
+	color: #FFFFFF;
+	border-radius: 50%;
 	text-decoration: none;
-	transition: background 0.3s ease, color 0.3s ease;
+	transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.infl-prefooter__social-link svg {
+	display: block;
+	transition: transform 0.25s ease;
 }
 
 .infl-prefooter__social-link:hover {
-	background: #2ea3f2;
-	color: #ffffff;
+	background: #29ABE2;
+	border-color: #29ABE2;
+	color: #FFFFFF;
+	transform: translateY(-3px) scale(1.06);
+	box-shadow: 0 8px 20px rgba(41, 171, 226, 0.4);
+}
+
+.infl-prefooter__social-link:hover svg {
+	transform: scale(1.08);
 }
 
 @media (max-width: 768px) {
@@ -691,20 +687,19 @@ textarea,
 .wpforms-field input,
 .wpforms-field textarea,
 .wpforms-field select {
-	width: 100% !important;
-	background: transparent !important;
-	background-color: transparent !important;
-	border: none !important;
-	border-bottom: 1.5px solid #D8D2C6 !important;
-	border-radius: 0 !important;
-	padding: 12px 0 !important;
-	font-family: var(--font-sans) !important;
-	font-size: 15.5px !important;
-	color: #17130F !important;
-	box-sizing: border-box !important;
-	transition: border-color 0.25s ease, box-shadow 0.25s ease !important;
-	outline: none !important;
-	box-shadow: none !important;
+	width: 100%;
+	background: transparent;
+	border: none;
+	border-bottom: 1.5px solid #D8D2C6;
+	border-radius: 0;
+	padding: 12px 0;
+	font-family: var(--font-sans);
+	font-size: 15.5px;
+	color: #17130F;
+	box-sizing: border-box;
+	transition: border-color 0.25s ease, box-shadow 0.25s ease;
+	outline: none;
+	box-shadow: none;
 }
 
 /* Placeholders: Clean Muted Tone */
@@ -714,9 +709,9 @@ input[type="tel"]::placeholder,
 textarea::placeholder,
 .wpcf7-text::placeholder,
 .wpcf7-textarea::placeholder {
-	color: #A0988C !important;
-	font-weight: 400 !important;
-	opacity: 1 !important;
+	color: #A0988C;
+	font-weight: 400;
+	opacity: 1;
 }
 
 /* Focus State: Dark Gray Underline Glow */
@@ -729,19 +724,19 @@ textarea:focus,
 .wpcf7-textarea:focus,
 .wpforms-field input:focus,
 .wpforms-field textarea:focus {
-	background: transparent !important;
-	border-bottom-color: #17130F !important;
-	border-bottom-width: 2px !important;
-	box-shadow: 0 2px 0 0 #17130F !important;
+	background: transparent;
+	border-bottom-color: #17130F;
+	border-bottom-width: 2px;
+	box-shadow: 0 2px 0 0 #17130F;
 }
 
 /* Textarea */
 textarea,
 .wpcf7-textarea,
 .wpforms-field textarea {
-	min-height: 100px !important;
-	line-height: 1.5 !important;
-	resize: vertical !important;
+	min-height: 100px;
+	line-height: 1.5;
+	resize: vertical;
 }
 
 /* Submit Button: Right-aligned Pill */
@@ -749,40 +744,38 @@ input[type="submit"],
 button[type="submit"],
 .wpcf7-submit,
 .wpforms-submit {
-	width: auto !important;
-	min-width: 170px !important;
-	float: right !important;
-	background: #29ABE2 !important;
-	background-color: #29ABE2 !important;
-	color: #FFFFFF !important;
-	font-family: var(--font-sans) !important;
-	font-size: 16px !important;
-	font-weight: 700 !important;
-	border: none !important;
-	border-radius: 999px !important;
-	padding: 14px 38px !important;
-	cursor: pointer !important;
-	box-shadow: 0 8px 22px rgba(41, 171, 226, 0.35) !important;
-	transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
-	margin-top: 16px !important;
+	width: auto;
+	min-width: 170px;
+	float: right;
+	background: #29ABE2;
+	color: #FFFFFF;
+	font-family: var(--font-sans);
+	font-size: 16px;
+	font-weight: 700;
+	border: none;
+	border-radius: 999px;
+	padding: 14px 38px;
+	cursor: pointer;
+	box-shadow: 0 8px 22px rgba(41, 171, 226, 0.35);
+	transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+	margin-top: 16px;
 }
 
 input[type="submit"]:hover,
 button[type="submit"]:hover,
 .wpcf7-submit:hover,
 .wpforms-submit:hover {
-	background: #1F96C8 !important;
-	background-color: #1F96C8 !important;
-	color: #FFFFFF !important;
-	transform: translateY(-3px) scale(1.03) !important;
-	box-shadow: 0 12px 28px rgba(41, 171, 226, 0.45) !important;
+	background: #1F96C8;
+	color: #FFFFFF;
+	transform: translateY(-3px) scale(1.03);
+	box-shadow: 0 12px 28px rgba(41, 171, 226, 0.45);
 }
 
 input[type="submit"]:active,
 button[type="submit"]:active,
 .wpcf7-submit:active,
 .wpforms-submit:active {
-	transform: translateY(-1px) !important;
+	transform: translateY(-1px);
 }
 
 /* Clearfix */

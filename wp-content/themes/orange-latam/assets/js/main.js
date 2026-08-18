@@ -1033,14 +1033,38 @@ document.addEventListener( 'DOMContentLoaded', () => {
 		const mobileRows = document.querySelectorAll( '.js-pr-node-row' );
 
 		const prServices = [
-			{ label: 'Estrategias integrales de RRPP', icon: 'M3 10v4h3l5 4V6l-5 4H3z M15.5 8.5c1.2 1.2 1.2 5.8 0 7 M18.5 6.5c2.5 2.5 2.5 8.5 0 11' },
-			{ label: 'Gestión con medios de comunicación', icon: 'M4 4h13v16H4z M17 8h3v9a2 2 0 01-2 2h-1V8z M7 8h7 M7 11.5h7 M7 15h4' },
-			{ label: 'Posicionamiento de líderes y voceros', icon: 'M12 3a3 3 0 013 3v6a3 3 0 01-6 0V6a3 3 0 013-3z M6 11a6 6 0 0012 0 M12 17v4 M9 21h6' },
-			{ label: 'Desarrollo de contenidos corporativos', icon: 'M6 3h8l5 5v13H6z M14 3v5h5 M9 15l6-6 2 2-6 6H9v-2z' },
-			{ label: 'Comunicación ejecutiva y thought leadership', icon: 'M4 21h16 M6 21V11h12v10 M9 11V7a3 3 0 016 0v4' },
-			{ label: 'Gestión de reputación corporativa', icon: 'M12 3l7 3v6c0 5-3 8-7 9-4-1-7-4-7-9V6z M9 12l2 2 4-4' },
-			{ label: 'Monitoreo y análisis de impacto mediático', icon: 'M3 20h18 M6 20v-6 M11 20v-9 M16 20v-4' },
-			{ label: 'Comunicación de lanzamientos y anuncios corporativos', icon: 'M12 3a2 2 0 100 4 2 2 0 000-4z M8 10a4 4 0 018 0 M5 11h14 M7 11l1 10h8l1-10 M14 11v-3a1 1 0 00-2 0 M17 4.5a2.5 2.5 0 010 3.5' }
+			{ 
+				label: 'Estrategias integrales de RRPP', 
+				icon: 'M12 3a9 9 0 1 1-6.36 2.64L3 8 M3 3v5h5 M12 8v4l3 2' 
+			},
+			{ 
+				label: 'Gestión con medios de comunicación', 
+				icon: 'M4 4h14a2 2 0 0 1 2 2v14H4V4zm0 4h16 M8 12h8 M8 16h5' 
+			},
+			{ 
+				label: 'Posicionamiento de líderes y voceros', 
+				icon: 'M4 19v-1a3 3 0 0 1 3-3 M4 9a2 2 0 1 1 0-4 2 2 0 0 1 0 4 M20 19v-1a3 3 0 0 0-3-3 M20 9a2 2 0 1 0 0-4 2 2 0 0 0 0 4 M12 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6z M7 21v-2a5 5 0 0 1 10 0v2 M12 2l.6 1.3 1.4.2-1 1 .2 1.5-1.2-.7-1.2.7.2-1.5-1-1 1.4-.2z' 
+			},
+			{ 
+				label: 'Desarrollo de contenidos corporativos', 
+				icon: 'M12 19l7-7 3 3-7 7-5 1 2-4z M18 5l3 3 M2 21h20 M6 13L3 16v3h3l3-3' 
+			},
+			{ 
+				label: 'Comunicación ejecutiva y thought leadership', 
+				icon: 'M9 18h6 M10 22h4 M12 2a7 7 0 0 0-5 11.9c.7.7 1 1.6 1 2.6v.5h8v-.5c0-1 .3-1.9 1-2.6A7 7 0 0 0 12 2z M12 6v4 M10 8h4' 
+			},
+			{ 
+				label: 'Gestión de reputación corporativa', 
+				icon: 'M12 2l8 3.5v6c0 5.5-3.5 9.5-8 10.5-4.5-1-8-5-8-10.5v-6L12 2z M12 7.5l1.1 2.3 2.5.4-1.8 1.8.4 2.5-2.2-1.2-2.2 1.2.4-2.5-1.8-1.8 2.5-.4z' 
+			},
+			{ 
+				label: 'Monitoreo y análisis de impacto mediático', 
+				icon: 'M3 3v18h18 M6 15l4-5 4 3 6-7 M18 6h3v3 M14 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6z' 
+			},
+			{ 
+				label: 'Comunicación de lanzamientos y anuncios corporativos', 
+				icon: 'M12 4a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z M6 12h12 M5 12l2 9h10l2-9 M9 8l-2-2 M15 8l2-2 M9 21h6 M9 12v-2a3 3 0 0 1 6 0v2' 
+			}
 		];
 
 		const cx = 450, cy = 310, rx = 340, ry = 220;
@@ -1137,28 +1161,32 @@ document.addEventListener( 'DOMContentLoaded', () => {
 				svgConnectors.appendChild( path );
 				connectorElements.push( path );
 
-				// Create node group
+				// Create node group (free of circle container)
 				const g = document.createElementNS( 'http://www.w3.org/2000/svg', 'g' );
 				g.setAttribute( 'class', 'pr-services__node-group' );
 				g.setAttribute( 'tabindex', '0' );
 				g.setAttribute( 'role', 'button' );
 				g.setAttribute( 'aria-label', service.label );
+				g.setAttribute( 'transform', `translate(${x}, ${y})` );
 
-				const circle = document.createElementNS( 'http://www.w3.org/2000/svg', 'circle' );
-				circle.setAttribute( 'cx', x );
-				circle.setAttribute( 'cy', y );
-				circle.setAttribute( 'r', '32' );
-				circle.setAttribute( 'class', 'pr-services__node-circle' );
+				// Invisible interactive hit area
+				const hitArea = document.createElementNS( 'http://www.w3.org/2000/svg', 'circle' );
+				hitArea.setAttribute( 'cx', '0' );
+				hitArea.setAttribute( 'cy', '0' );
+				hitArea.setAttribute( 'r', '28' );
+				hitArea.setAttribute( 'class', 'pr-services__node-hit' );
 
+				// Free-floating SVG Icon
 				const iconGroup = document.createElementNS( 'http://www.w3.org/2000/svg', 'g' );
-				iconGroup.setAttribute( 'transform', `translate(${x - 12}, ${y - 12})` );
+				iconGroup.setAttribute( 'class', 'pr-services__node-icon-wrap' );
+				iconGroup.setAttribute( 'transform', 'translate(-16, -16) scale(1.33)' );
 
 				const iconPath = document.createElementNS( 'http://www.w3.org/2000/svg', 'path' );
 				iconPath.setAttribute( 'd', service.icon );
 				iconPath.setAttribute( 'class', 'pr-services__node-icon' );
 
 				iconGroup.appendChild( iconPath );
-				g.appendChild( circle );
+				g.appendChild( hitArea );
 				g.appendChild( iconGroup );
 				svgNodes.appendChild( g );
 				nodeElements.push( g );
@@ -1268,6 +1296,147 @@ document.addEventListener( 'DOMContentLoaded', () => {
 		} );
 	};
 
+	/* --------------------------------------------------------------------------
+	   22. PR WHY AWARDS MINI CAROUSEL
+	   -------------------------------------------------------------------------- */
+	const initPrAwardsCarousel = () => {
+		const carousel = document.querySelector( '.js-pr-awards-carousel' );
+		if ( ! carousel ) return;
+
+		const track = carousel.querySelector( '.js-pr-carousel-track' );
+		const prevBtn = carousel.querySelector( '.js-pr-carousel-prev' );
+		const nextBtn = carousel.querySelector( '.js-pr-carousel-next' );
+		const dotsContainer = carousel.querySelector( '.js-pr-carousel-dots' );
+		const cards = carousel.querySelectorAll( '.pr-why__award-card' );
+		if ( ! track || ! cards.length ) return;
+
+		let currentIndex = 0;
+		let autoplayTimer = null;
+
+		const getVisibleCount = () => {
+			if ( window.innerWidth <= 576 ) return 2;
+			if ( window.innerWidth <= 992 ) return 3;
+			return 4;
+		};
+
+		const getMaxIndex = () => {
+			const visible = getVisibleCount();
+			return Math.max( 0, cards.length - visible );
+		};
+
+		const renderDots = () => {
+			if ( ! dotsContainer ) return;
+			dotsContainer.innerHTML = '';
+			const max = getMaxIndex();
+			for ( let i = 0; i <= max; i++ ) {
+				const dot = document.createElement( 'button' );
+				dot.type = 'button';
+				dot.className = `pr-why__carousel-dot ${ i === currentIndex ? 'is-active' : '' }`;
+				dot.setAttribute( 'aria-label', `Ir a posición ${ i + 1 }` );
+				dot.addEventListener( 'click', () => {
+					goToSlide( i );
+					resetAutoplay();
+				} );
+				dotsContainer.appendChild( dot );
+			}
+		};
+
+		const updateSlider = () => {
+			const card = cards[0];
+			if ( ! card ) return;
+			const gap = 14;
+			const cardWidth = card.getBoundingClientRect().width;
+			const offset = currentIndex * ( cardWidth + gap );
+			track.style.transform = `translateX(-${offset}px)`;
+
+			if ( dotsContainer ) {
+				const dots = dotsContainer.querySelectorAll( '.pr-why__carousel-dot' );
+				dots.forEach( ( dot, idx ) => {
+					dot.classList.toggle( 'is-active', idx === currentIndex );
+				} );
+			}
+		};
+
+		const goToSlide = ( index ) => {
+			const max = getMaxIndex();
+			if ( index < 0 ) {
+				currentIndex = max;
+			} else if ( index > max ) {
+				currentIndex = 0;
+			} else {
+				currentIndex = index;
+			}
+			updateSlider();
+		};
+
+		if ( prevBtn ) {
+			prevBtn.addEventListener( 'click', () => {
+				goToSlide( currentIndex - 1 );
+				resetAutoplay();
+			} );
+		}
+
+		if ( nextBtn ) {
+			nextBtn.addEventListener( 'click', () => {
+				goToSlide( currentIndex + 1 );
+				resetAutoplay();
+			} );
+		}
+
+		// Touch swipe
+		let touchStartX = 0;
+		track.addEventListener( 'touchstart', ( e ) => {
+			touchStartX = e.touches[0].clientX;
+			stopAutoplay();
+		}, { passive: true } );
+
+		track.addEventListener( 'touchend', ( e ) => {
+			const diffX = touchStartX - e.changedTouches[0].clientX;
+			if ( Math.abs( diffX ) > 40 ) {
+				if ( diffX > 0 ) {
+					goToSlide( currentIndex + 1 );
+				} else {
+					goToSlide( currentIndex - 1 );
+				}
+			}
+			startAutoplay();
+		}, { passive: true } );
+
+		const startAutoplay = () => {
+			stopAutoplay();
+			autoplayTimer = setInterval( () => {
+				goToSlide( currentIndex + 1 );
+			}, 3200 );
+		};
+
+		const stopAutoplay = () => {
+			if ( autoplayTimer ) {
+				clearInterval( autoplayTimer );
+				autoplayTimer = null;
+			}
+		};
+
+		const resetAutoplay = () => {
+			stopAutoplay();
+			startAutoplay();
+		};
+
+		carousel.addEventListener( 'mouseenter', stopAutoplay );
+		carousel.addEventListener( 'mouseleave', startAutoplay );
+
+		window.addEventListener( 'resize', () => {
+			if ( currentIndex > getMaxIndex() ) {
+				currentIndex = getMaxIndex();
+			}
+			renderDots();
+			updateSlider();
+		} );
+
+		renderDots();
+		updateSlider();
+		startAutoplay();
+	};
+
 	// Initialize all components
 	initScrollReveals();
 	initHeroSlider();
@@ -1291,6 +1460,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
 	initPodcastTabs();
 	initPodcastScenarioModal();
 	initPrNodeDiagram();
+	initPrAwardsCarousel();
 	initPrFaqAccordion();
 	initAsuntosStakeholderNetwork();
 	initGlobalContactModal();

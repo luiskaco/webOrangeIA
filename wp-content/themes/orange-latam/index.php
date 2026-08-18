@@ -95,10 +95,10 @@ get_header();
 
 		<!-- Navigation Arrows -->
 		<button class="hero__arrow hero__arrow--prev" aria-label="Anterior slide">
-			<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#FCF5E9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15,18 9,12 15,6"></polyline></svg>
+			<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15,18 9,12 15,6"></polyline></svg>
 		</button>
 		<button class="hero__arrow hero__arrow--next" aria-label="Siguiente slide">
-			<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#FCF5E9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9,18 15,12 9,6"></polyline></svg>
+			<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9,18 15,12 9,6"></polyline></svg>
 		</button>
 
 		<!-- Slider Dots -->
@@ -325,7 +325,7 @@ get_header();
 				</div>
 				<div class="sensibles-grid-section__header-right">
 					<p class="sensibles-grid-section__subtitle">
-						Gestión estratégica de situaciones de alta complejidad, reputación crítica, entorno regulatorio y relacionamiento con actores clave en Perú y Latinoamérica.
+						Gestión estratégica de situaciones de alta complejidad, reputación crítica, entorno regulatorio y relacionamiento con actores clave en Perú y el mundo.
 					</p>
 				</div>
 			</div>
@@ -553,7 +553,7 @@ get_header();
 				</div>
 				
 				<div class="contact__socials">
-					<a href="https://www.facebook.com" target="_blank" class="contact__social-link" aria-label="Facebook">
+					<a href="https://www.facebook.com/Orange360Latam?locale=es_LA" target="_blank" class="contact__social-link" aria-label="Facebook">
 						<svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"></path></svg>
 					</a>
 					<a href="https://www.youtube.com/@orange_latam" target="_blank" class="contact__social-link" aria-label="Youtube">
@@ -564,6 +564,9 @@ get_header();
 					</a>
 					<a href="https://www.instagram.com/orange_latam/" target="_blank" class="contact__social-link" aria-label="Instagram">
 						<svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 3.3.15 4.8 1.7 5 5 .06 1.3.07 1.6.07 4.8s0 3.5-.07 4.8c-.15 3.3-1.7 4.8-5 5-1.3.06-1.6.07-4.9.07s-3.6 0-4.9-.07c-3.3-.15-4.8-1.7-5-5C2.04 15.6 2 15.3 2 12s0-3.5.07-4.8c.15-3.3 1.7-4.85 5-5C8.4 2.24 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.7.07-2.4.1-3.6 1.3-3.7 3.7C3.5 8.9 3.5 9.3 3.5 12s0 3.1.07 4.3c.1 2.4 1.3 3.6 3.7 3.7 1.2.06 1.6.07 4.7.07s3.5 0 4.7-.07c2.4-.1 3.6-1.3 3.7-3.7.06-1.2.07-1.6.07-4.3s0-3.1-.07-4.3c-.1-2.4-1.3-3.6-3.7-3.7C15.5 4 15.1 4 12 4zm0 3.4a4.6 4.6 0 1 1 0 9.2 4.6 4.6 0 0 1 0-9.2zm0 1.8a2.8 2.8 0 1 0 0 5.6 2.8 2.8 0 0 0 0-5.6zm5.9-2a1.08 1.08 0 1 1-2.15 0 1.08 1.08 0 0 1 2.15 0z"></path></svg>
+					</a>
+					<a href="https://www.tiktok.com/@orange_latam_studio" target="_blank" class="contact__social-link" aria-label="TikTok">
+						<svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.89 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.32 0 .62.05.91.13v-3.52a6.37 6.37 0 0 0-.91-.07 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.75a8.16 8.16 0 0 0 4.76 1.5V6.8a4.86 4.86 0 0 1-1-.11z"></path></svg>
 					</a>
 				</div>
 				<a href="#" class="contact__privacy-link">Política de privacidad y cookies</a>
@@ -593,9 +596,9 @@ get_header();
 							<input type="tel" id="contact-phone" name="phone" placeholder="Tu teléfono" class="contact__form-input">
 						</div>
 					</div>
-					<div style="margin-bottom: 24px;">
+					<div class="contact__form-group contact__form-group--textarea">
 						<label for="contact-message" class="contact__form-label">Mensaje</label>
-						<textarea id="contact-message" name="message" rows="4" placeholder="Tu mensaje" class="contact__form-textarea" required></textarea>
+						<textarea id="contact-message" name="message" rows="4" class="contact__form-textarea" required></textarea>
 					</div>
 					<button type="submit" class="contact__form-submit">Enviar mensaje</button>
 				</form>

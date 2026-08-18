@@ -3,7 +3,7 @@
    Loaded only on the "Eventos y Activaciones" page template
    (page-eventos-activaciones.php). Depends on base.css.
    Paleta "Amber Ignition": header carbón #231710, acento naranja de marca
-   #EE894F, highlight teal eléctrico #2FD5C4, fondo crema #FCF5E9 (tokens
+   #EE894F, highlight teal eléctrico #2FD5C4, fondo neutro #F4F4F6 (tokens
    compartidos de base.css).
    ========================================================================== */
 
@@ -19,8 +19,8 @@ html, body {
 	--ea-accent: #EE894F;
 	--ea-teal: #2FD5C4;
 	--ea-card-bg: #FFFFFF;
-	--ea-border: #E7DBC4;
-	background: #FCF5E9;
+	--ea-border: #E2E4E8;
+	background: #FFFFFF;
 	color: var(--ea-ink);
 	overflow-x: hidden !important;
 	width: 100% !important;
@@ -1358,7 +1358,7 @@ body[class*="eventos-activaciones"] .header .header__burger-line,
    -------------------------------------------------------------------------- */
 .ea-process {
 	padding: 72px 0;
-	background: #FCF5E9;
+	background: #F4F4F6;
 }
 
 .ea-process__header {
@@ -1460,7 +1460,7 @@ body[class*="eventos-activaciones"] .header .header__burger-line,
 	display: flex;
 	align-items: center;
 	gap: 12px;
-	background: #FCF5E9;
+	background: #F4F4F6;
 	border: 1px solid var(--ea-border);
 	border-radius: 12px;
 	padding: 18px 18px;
