@@ -108,7 +108,8 @@ function orange_latam_enqueue_assets() {
 	$main_js_path = ORANGE_THEME_DIR . '/assets/js/main.js';
 	wp_enqueue_script( 'orange-latam-main-js', ORANGE_THEME_URI . '/assets/js/main.js', array(), file_exists( $main_js_path ) ? filemtime( $main_js_path ) : ORANGE_THEME_VERSION, true );
 
-	// GSAP + ScrollTrigger + script de página — solo en páginas con animaciones de scroll
+	// GSAP + ScrollTrigger + script de página — home y páginas de servicio dedicadas
+	$is_front = is_front_page();
 	$gsap_pages = array(
 		'page-presencia-digital.php' => array(
 			'handle' => 'orange-latam-presencia-digital-js',
@@ -120,19 +121,30 @@ function orange_latam_enqueue_assets() {
 		),
 	);
 
-	if ( isset( $gsap_pages[ $page_template ] ) ) {
+	if ( $is_front || isset( $gsap_pages[ $page_template ] ) ) {
 		wp_enqueue_script( 'gsap', 'https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js', array(), '3.15.0', true );
 		wp_enqueue_script( 'gsap-scrolltrigger', 'https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/ScrollTrigger.min.js', array( 'gsap' ), '3.15.0', true );
 
-		$gsap_page      = $gsap_pages[ $page_template ];
-		$gsap_page_path = ORANGE_THEME_DIR . $gsap_page['path'];
-		wp_enqueue_script(
-			$gsap_page['handle'],
-			ORANGE_THEME_URI . $gsap_page['path'],
-			array( 'gsap-scrolltrigger' ),
-			file_exists( $gsap_page_path ) ? filemtime( $gsap_page_path ) : ORANGE_THEME_VERSION,
-			true
-		);
+		if ( $is_front ) {
+			$home_gsap_path = ORANGE_THEME_DIR . '/assets/js/pages/home-gsap.js';
+			wp_enqueue_script(
+				'orange-latam-home-gsap-js',
+				ORANGE_THEME_URI . '/assets/js/pages/home-gsap.js',
+				array( 'gsap-scrolltrigger' ),
+				file_exists( $home_gsap_path ) ? filemtime( $home_gsap_path ) : ORANGE_THEME_VERSION,
+				true
+			);
+		} elseif ( isset( $gsap_pages[ $page_template ] ) ) {
+			$gsap_page      = $gsap_pages[ $page_template ];
+			$gsap_page_path = ORANGE_THEME_DIR . $gsap_page['path'];
+			wp_enqueue_script(
+				$gsap_page['handle'],
+				ORANGE_THEME_URI . $gsap_page['path'],
+				array( 'gsap-scrolltrigger' ),
+				file_exists( $gsap_page_path ) ? filemtime( $gsap_page_path ) : ORANGE_THEME_VERSION,
+				true
+			);
+		}
 	}
 
 	// Pass "Voz de Expertos" real post data to the carousel script (front page only)

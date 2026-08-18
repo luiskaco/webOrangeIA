@@ -25,7 +25,7 @@
 
 
 ## Sprint 3: Optimización y Pruebas
-- [x] Refinar animaciones de Scroll (Reveal) mediante `IntersectionObserver`
+- [x] Refinar animaciones de Scroll (Reveal) mediante `IntersectionObserver` y sistema de animaciones editoriales fluidas GSAP 3.15 + ScrollTrigger (`home-gsap.js`) para Asuntos Sensibles, Voz de Expertos, Barra de Estadísticas y Badges de Sectores
 - [x] Optimizar diseño responsive en móviles (Header, Stats 2x2 grid, Servicios 1-col layout, Sectores pills, Voz de Expertos grid, Formulario)
 - [x] Auditar accesibilidad (A11y), responsive y tiempos de carga
 - [ ] Documentar despliegue y cierre de sesión

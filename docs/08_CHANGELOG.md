@@ -2,12 +2,10 @@
 
 ## [Unreleased]
 ### Añadido
-- **Rediseño de alta fidelidad de la sección "Voz de Expertos" en Home (`index.php`, `home.css`)**:
-  - Maquetado split editorial con 3 tarjetas de fotos verticales con esquinas redondeadas (`border-radius: 20px`).
-  - Títulos de noticias integrados directamente como overlay inferior dentro de la imagen (`.experts__card-overlay`), eliminando el bloque de texto exterior inferior.
-  - Botón pill oficial en `--color-blue` (`#70B5E3`) con el texto `Ver todas las noticias y opiniones →`.
-  - Normalización tipográfica de los encabezados principales del home a `var(--font-display)` (`PP Editorial New`).
-  - Adaptación responsive móvil (<= 768px): grilla simétrica de exactamente 2 noticias visibles (`repeat(2, 1fr)`), ocultando automáticamente la 3ra tarjeta.
+- **Mini Carousel Minimalista y Animaciones GSAP en Home (`index.php`, `home.css`, `home-gsap.js`)**:
+  - Implementación de mini carousel minimalista en la sección "Voz de Expertos" con navegación táctil/swipe, flechas circulares translúcidas y contador de posición dinámico (`01 / 06`).
+  - Integración de GSAP 3.15 + ScrollTrigger en la Home (`home-gsap.js`): animación en cascada para las 6 cajas tácticas de Asuntos Sensibles, entrada lateral en Voz de Expertos, conteo progresivo y títulos de Premios.
+  - Corrección y estandarización de cajas/badges en la sección Sectores (`.sectors__badge`), eliminando deformaciones por escala y garantizando alineación visual y padding uniforme.
 - **Nueva página "Presencia Digital" (`page-presencia-digital.php`, `/presencia-digital/`)**: hero con orbes flotantes, retícula técnica y sparkline SVG animado por GSAP; vitrina de portafolio con filtros funcionales (`data-filter`/`data-category`) y 3 covers SVG artesanales propios (`assets/images/presencia-digital/`, referencia visual hasta que el cliente entregue casos reales); ticker de tecnologías como marquee infinito CSS; calculadora de componentes interactiva que compone el `data-service` del modal de contacto. Animaciones vía nuevo `assets/js/pages/presencia-digital.js` (GSAP 3.15 + ScrollTrigger, con degradación progresiva sin GSAP y con `prefers-reduced-motion`).
 - **Rediseño de "Asuntos Públicos" (`page-asuntos-publicos.php`)**: mismo playbook GSAP que Presencia Digital adaptado al carácter editorial — trazo caligráfico SVG bajo el H1, parallax de columnas del mosaico, image reveals con `clip-path`, entrada lateral de la quote card (`assets/js/pages/asuntos-publicos.js`). Filas de stakeholders convertidas de `div` decorativos a `<button>` reales que abren el modal de contacto con el stakeholder preseleccionado. Enqueue de GSAP refactorizado a mapa `$gsap_pages` multi-página en `functions.php`.
 - **Sistema de citabilidad para IA (AEO/GEO)**: `llms.txt` en la raíz del sitio (índice curado de servicios para agentes de IA — no versionado en git, ver nota abajo) y reglas `Allow` explícitas para bots de IA (GPTBot, ChatGPT-User, OAI-SearchBot, ClaudeBot, Claude-User, Claude-SearchBot, anthropic-ai, PerplexityBot, Perplexity-User, Google-Extended, CCBot) cargadas en el editor de robots.txt de Rank Math.

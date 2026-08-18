@@ -317,7 +317,7 @@ get_header();
 
 	<section id="asuntos-sensibles" class="sensibles-grid-section">
 		<div class="sensibles-grid-section__container">
-			<div class="sensibles-grid-section__header" data-reveal="up">
+			<div class="sensibles-grid-section__header">
 				<div class="sensibles-grid-section__header-left">
 					<h2 class="sensibles-grid-section__title">
 						ASUNTOS<br>SENSIBLES
@@ -331,9 +331,9 @@ get_header();
 			</div>
 
 			<!-- Square Boxes Grid (3x2 Layout with Staggered Scroll Reveal) -->
-			<div class="sensibles-box-grid" data-stagger="true">
+			<div class="sensibles-box-grid">
 				<?php foreach ( $sensible_boxes_data as $index => $box ) : ?>
-					<a href="<?php echo esc_url( $box['link'] ); ?>" class="sensibles-box <?php echo esc_attr( $box['theme'] ); ?>" data-reveal="up" style="--stagger-idx: <?php echo esc_attr( $index ); ?>;">
+					<a href="<?php echo esc_url( $box['link'] ); ?>" class="sensibles-box <?php echo esc_attr( $box['theme'] ); ?>">
 						<div class="sensibles-box__inner">
 							<!-- Top Header Bar with category -->
 							<div class="sensibles-box__top">
@@ -437,23 +437,39 @@ get_header();
 		<div class="experts__container">
 			<div class="experts__layout">
 				
-				<!-- LADO IZQUIERDO: Encabezado, Descripción y Botón Pill -->
-				<div class="experts__intro" data-reveal="up">
+				<!-- LADO IZQUIERDO: Encabezado, Descripción, Botón Pill y Controles Minimalistas -->
+				<div class="experts__intro">
 					<h2 class="experts__title">
 						VOZ DE <span class="experts__title-accent">EXPERTOS</span>
 					</h2>
 					<p class="experts__subtitle">
 						Conoce la opinión de nuestros líderes sobre los principales temas que están dando que hablar en la sociedad y en la industria.
 					</p>
-					<a href="<?php echo esc_url( get_permalink( get_option( 'page_for_posts' ) ) ?: home_url( '/blog/' ) ); ?>" class="experts__cta-pill">
-						<span>Ver todas las noticias y opiniones &rarr;</span>
-					</a>
+					
+					<div class="experts__intro-actions">
+						<a href="<?php echo esc_url( get_permalink( get_option( 'page_for_posts' ) ) ?: home_url( '/blog/' ) ); ?>" class="experts__cta-pill">
+							<span>Ver todas las noticias y opiniones &rarr;</span>
+						</a>
+
+						<!-- Minimalist Carousel Controls -->
+						<div class="experts__carousel-nav" aria-label="Navegación de noticias">
+							<button type="button" class="experts__nav-arrow experts__nav-arrow--prev" aria-label="Noticia anterior">
+								<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+							</button>
+							<span class="experts__nav-counter" aria-live="polite">
+								<span class="experts__nav-counter-current">01</span><span class="experts__nav-counter-sep">/</span><span class="experts__nav-counter-total">06</span>
+							</span>
+							<button type="button" class="experts__nav-arrow experts__nav-arrow--next" aria-label="Noticia siguiente">
+								<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+							</button>
+						</div>
+					</div>
 				</div>
 
-				<!-- LADO DERECHO: Grid de 3 Fotos Verticales en Alta Fidelidad -->
-				<div class="experts__gallery" data-reveal="up">
+				<!-- LADO DERECHO: Mini Carousel de Fotos Verticales en Alta Fidelidad -->
+				<div class="experts__gallery">
 					<?php 
-					$expert_posts = orange_latam_get_expert_posts( 3 );
+					$expert_posts = orange_latam_get_expert_posts( 6 );
 					$fallback_demo_cards = array(
 						array(
 							'title'     => 'El impacto de la reputación digital en la percepción de marca',
@@ -470,33 +486,50 @@ get_header();
 							'permalink' => get_permalink( get_option( 'page_for_posts' ) ) ?: home_url( '/blog/' ),
 							'thumbnail' => content_url( '/uploads/2026/06/Crisis-Empresarial-Reputacion-Corporativa-Corrupcion-Compliance-Transparencia-1024x683.webp' ),
 						),
+						array(
+							'title'     => 'Estrategias de comunicación política en la era de la hiperpolarización',
+							'permalink' => get_permalink( get_option( 'page_for_posts' ) ) ?: home_url( '/blog/' ),
+							'thumbnail' => content_url( '/uploads/2024/03/Comunicacion-politica-en-panales-1024x577.webp' ),
+						),
+						array(
+							'title'     => 'Relacionamiento con comunidades: construyendo puentes y confianza mutua',
+							'permalink' => get_permalink( get_option( 'page_for_posts' ) ) ?: home_url( '/blog/' ),
+							'thumbnail' => content_url( '/uploads/2026/06/protesta-comunidades-mineria-peru-conflicto-social-1024x538.webp' ),
+						),
+						array(
+							'title'     => 'Liderazgo y comunicación institucional ante escenarios de incertidumbre',
+							'permalink' => get_permalink( get_option( 'page_for_posts' ) ) ?: home_url( '/blog/' ),
+							'thumbnail' => content_url( '/uploads/2024/11/istockphoto-1906606079-2048x2048_png-1024x717.png' ),
+						),
 					);
 					$cards_to_show = ! empty( $expert_posts ) ? $expert_posts : $fallback_demo_cards;
 					?>
 					
-					<div class="experts__cards-grid">
-						<?php foreach ( array_slice( $cards_to_show, 0, 3 ) as $idx => $card ) : 
-							$card_link = ! empty( $card['permalink'] ) ? $card['permalink'] : ( get_permalink( get_option( 'page_for_posts' ) ) ?: home_url( '/blog/' ) );
-							$card_thumb = ! empty( $card['thumbnail'] ) ? $card['thumbnail'] : ( isset( $fallback_demo_cards[$idx] ) ? $fallback_demo_cards[$idx]['thumbnail'] : '' );
-							$card_title = ! empty( $card['title'] ) ? $card['title'] : ( isset( $fallback_demo_cards[$idx] ) ? $fallback_demo_cards[$idx]['title'] : 'Noticia destacada' );
-						?>
-							<article class="experts__card">
-								<a href="<?php echo esc_url( $card_link ); ?>" class="experts__card-link">
-									<div class="experts__card-media">
-										<?php if ( ! empty( $card_thumb ) ) : ?>
-											<img src="<?php echo esc_url( $card_thumb ); ?>" alt="<?php echo esc_attr( $card_title ); ?>" class="experts__card-img" loading="lazy">
-										<?php else : ?>
-											<div class="experts__card-placeholder">
-												<span>Orange Latam</span>
+					<div class="experts__carousel-viewport">
+						<div class="experts__cards-track">
+							<?php foreach ( $cards_to_show as $idx => $card ) : 
+								$card_link = ! empty( $card['permalink'] ) ? $card['permalink'] : ( get_permalink( get_option( 'page_for_posts' ) ) ?: home_url( '/blog/' ) );
+								$card_thumb = ! empty( $card['thumbnail'] ) ? $card['thumbnail'] : ( isset( $fallback_demo_cards[$idx] ) ? $fallback_demo_cards[$idx]['thumbnail'] : '' );
+								$card_title = ! empty( $card['title'] ) ? $card['title'] : ( isset( $fallback_demo_cards[$idx] ) ? $fallback_demo_cards[$idx]['title'] : 'Noticia destacada' );
+							?>
+								<article class="experts__card" data-card-idx="<?php echo esc_attr( $idx ); ?>">
+									<a href="<?php echo esc_url( $card_link ); ?>" class="experts__card-link">
+										<div class="experts__card-media">
+											<?php if ( ! empty( $card_thumb ) ) : ?>
+												<img src="<?php echo esc_url( $card_thumb ); ?>" alt="<?php echo esc_attr( $card_title ); ?>" class="experts__card-img" loading="lazy">
+											<?php else : ?>
+												<div class="experts__card-placeholder">
+													<span>Orange Latam</span>
+												</div>
+											<?php endif; ?>
+											<div class="experts__card-overlay">
+												<h3 class="experts__card-news-title"><?php echo esc_html( $card_title ); ?></h3>
 											</div>
-										<?php endif; ?>
-										<div class="experts__card-overlay">
-											<h3 class="experts__card-news-title"><?php echo esc_html( $card_title ); ?></h3>
 										</div>
-									</div>
-								</a>
-							</article>
-						<?php endforeach; ?>
+									</a>
+								</article>
+							<?php endforeach; ?>
+						</div>
 					</div>
 				</div>
 
