@@ -263,31 +263,96 @@ get_header();
 				</div>
 			</div>
 		</div>
+	</section>
 
-		<!-- Asuntos Sensibles Subsections -->
-		<div class="services-sens">
-			<div class="services-sens__watermark">
-				<span class="services-sens__watermark-text">ASUNTOS<br>SENSIBLES</span>
-			</div>
-			<div class="services-sens__card-container" data-reveal="scale">
-				<div class="services-sens__card">
-					<div class="services-sens__card-header">
-						<span class="services-sens__card-header-tag">Trabajemos Juntos</span>
-						<span class="services-sens__card-header-year">2026</span>
-					</div>
-					<div class="services-sens__card-body">
-						<h3 class="services-sens__card-title">GESTIÓN DE CRISIS Y PROBLEMAS</h3>
-						<p class="services-sens__card-desc">
-							El valor de marca es un activo muy importante para las empresas y protegerlo del impacto de crisis y problemas que impactan en la reputación es una de las especialidades de Orange Latam. Nuestro equipo de la unidad C&P se encuentra altamente capacitado para identificar, prevenir, gestionar y mitigar crisis y problemas, aplicando metodologías innovadoras, ágiles y eficaces.
-						</p>
-						<a href="<?php echo esc_url( home_url( '/pr-gestion-reputacion/#gestion-de-crisis' ) ); ?>" class="services-sens__card-link">Más información <span>→</span></a>
-					</div>
+	<!-- ==========================================
+	     4b. ASUNTOS SENSIBLES BOX GRID SECTION
+	     ========================================== -->
+	<?php
+	$sensible_boxes_data = array(
+		array(
+			'tag'   => 'Prevención & Contingencia',
+			'title' => 'Gestión de Crisis y Problemas',
+			'desc'  => 'Metodologías ágiles para identificar, prevenir, contener y mitigar riesgos reputacionales que puedan impactar el valor de marca ante contingencias críticas.',
+			'link'  => home_url( '/pr-gestion-reputacion/#gestion-de-crisis' ),
+			'theme' => 'sensibles-box--blue',
+		),
+		array(
+			'tag'   => 'Sector Salud & Farma',
+			'title' => 'Gestión de Acceso',
+			'desc'  => 'Desbloqueo de barreras para que la sociedad acceda a avances médico-científicos de forma ética y oportuna, articulando con reguladores y actores clave.',
+			'link'  => home_url( '/gestion-de-acceso/' ),
+			'theme' => 'sensibles-box--white',
+		),
+		array(
+			'tag'   => 'Liderazgo & Opinión',
+			'title' => 'Comunicación Política',
+			'desc'  => 'Estrategias de comunicación y posicionamiento para candidatos, líderes e instituciones públicas que generan legitimidad y respaldo ciudadano real.',
+			'link'  => home_url( '/asuntos-publicos/#comunicacion-politica' ),
+			'theme' => 'sensibles-box--dark',
+		),
+		array(
+			'tag'   => 'Entorno Regulatorio',
+			'title' => 'Asuntos Públicos y Relaciones Institucionales',
+			'desc'  => 'Relacionamiento estratégico con administraciones y entes reguladores para anticipar marcos normativos, alinear intereses y mitigar riesgos antes de que escalen.',
+			'link'  => home_url( '/asuntos-publicos/' ),
+			'theme' => 'sensibles-box--dark',
+		),
+		array(
+			'tag'   => 'Licencia Social',
+			'title' => 'Relacionamiento con Stakeholders y Comunidades',
+			'desc'  => 'Mapping y planes de relacionamiento de alta influencia con comunidades para garantizar viabilidad operativa, licencia social y sostenibilidad a largo plazo.',
+			'link'  => home_url( '/asuntos-publicos/#stakeholders' ),
+			'theme' => 'sensibles-box--blue',
+		),
+		array(
+			'tag'   => 'Sector Público',
+			'title' => 'Comunicación para Entidades del Estado',
+			'desc'  => 'Estrategias de comunicación pública orientadas a construir cercanía, transparencia, respeto y credibilidad sólida de las instituciones ante la ciudadanía.',
+			'link'  => home_url( '/asuntos-publicos/' ),
+			'theme' => 'sensibles-box--white',
+		),
+	);
+	?>
+
+	<section id="asuntos-sensibles" class="sensibles-grid-section">
+		<div class="sensibles-grid-section__container">
+			<div class="sensibles-grid-section__header" data-reveal="up">
+				<div class="sensibles-grid-section__header-left">
+					<h2 class="sensibles-grid-section__title">
+						ASUNTOS<br>SENSIBLES
+					</h2>
+				</div>
+				<div class="sensibles-grid-section__header-right">
+					<p class="sensibles-grid-section__subtitle">
+						Gestión estratégica de situaciones de alta complejidad, reputación crítica, entorno regulatorio y relacionamiento con actores clave en Perú y Latinoamérica.
+					</p>
 				</div>
 			</div>
-			<div class="services-sens__controls">
-				<button class="services-sens__arrow services-sens__arrow--prev" aria-label="Servicio sensible anterior">‹</button>
-				<div class="services-sens__dots"></div>
-				<button class="services-sens__arrow services-sens__arrow--next" aria-label="Servicio sensible siguiente">›</button>
+
+			<!-- Square Boxes Grid (3x2 Layout with Staggered Scroll Reveal) -->
+			<div class="sensibles-box-grid" data-stagger="true">
+				<?php foreach ( $sensible_boxes_data as $index => $box ) : ?>
+					<a href="<?php echo esc_url( $box['link'] ); ?>" class="sensibles-box <?php echo esc_attr( $box['theme'] ); ?>" data-reveal="up" style="--stagger-idx: <?php echo esc_attr( $index ); ?>;">
+						<div class="sensibles-box__inner">
+							<!-- Top Header Bar with category -->
+							<div class="sensibles-box__top">
+								<span class="sensibles-box__tag"><?php echo esc_html( $box['tag'] ); ?></span>
+							</div>
+
+							<!-- Center Title & Body Content -->
+							<div class="sensibles-box__content">
+								<h3 class="sensibles-box__title"><?php echo esc_html( $box['title'] ); ?></h3>
+								<p class="sensibles-box__desc"><?php echo esc_html( $box['desc'] ); ?></p>
+							</div>
+
+							<!-- Bottom Footer Bar with Action -->
+							<div class="sensibles-box__bottom">
+								<span class="sensibles-box__cta">Conoce más</span>
+							</div>
+						</div>
+					</a>
+				<?php endforeach; ?>
 			</div>
 		</div>
 	</section>

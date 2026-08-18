@@ -18,6 +18,7 @@
 - [x] Implementar la sección Interactiva de Servicios (Corporativo vs Asuntos Sensibles) con Vanilla JS
   - [x] Crear una imagen única e ilustrativa en el core del tema para cada uno de los 12 servicios corporativos
   - [x] Adaptar index.php y main.js para cargar y alternar dinámicamente las imágenes de servicios corporativos
+- [x] Rediseño de la pestaña "Asuntos Sensibles" en Home — Nueva propuesta visual e interactiva "Strategic Command Grid" para los 6 servicios estratégicos de crisis y asuntos públicos (grilla 3x2, badges temáticos, enlaces directos y micro-interacciones hover)
 - [ ] Integrar el slider de Premios/Festivales y el grid de Sectores
 - [ ] Integrar la sección Voz de Expertos y Formulario de Contacto nativo
 - [x] Crear sección de Preguntas Frecuentes (FAQ) después de Voz de Expertos (basado en diseño de acordeón)
@@ -134,4 +135,9 @@
 - [x] Reemplazar las 5 keywords en Rank Math (Home post 7, PR post 91 ×2, Marketing Digital post 81, Podcast post 84) y actualizar `temp-seo-demo-modal.php` con los datos reales y las justificaciones
 - [ ] Marketing de Influencers: la plantilla no tiene ningún `<h1>` en toda la página (hero solo con video) — problema estructural distinto a una keyword ausente, pendiente de decisión con el cliente
 - [ ] Revisar y confirmar con el cliente los demás gaps ⚠️ encontrados en la auditoría (variantes cercanas sin el sufijo "Perú"/"Lima" — confirmado que esa omisión fue intencional, no requieren fix)
+
+## Rediseño Sección Asuntos Sensibles & Migración de Medios (2026-08-18)
+- [x] Migración completa de medios y metadatos SEO de artículos desde OrangeV2026 a OrangeIA (19 posts vinculados con imágenes destacadas y metadatos alt/title).
+- [x] Rediseño de sección Asuntos Sensibles en Home: cuadrícula de 6 cajas cuadradas (editorial box grid), continuidad de fondo `#0B0B0B`, paleta corporativa azul/blanco/negro, animación de scroll escalonada y título en blanco puro.
+
 

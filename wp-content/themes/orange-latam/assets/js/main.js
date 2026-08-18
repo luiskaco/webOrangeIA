@@ -140,159 +140,90 @@ document.addEventListener( 'DOMContentLoaded', () => {
 	};
 
 	// ==========================================
-	// 3. SERVICES SECTION SWITCHER (Corp vs Sensible)
+	// 3. SERVICES SECTION (Corp Services)
 	// ==========================================
 	const initServicesSection = () => {
 		const corpBtn = document.querySelector( '.services-banner__btn--corp' );
 		const sensBtn = document.querySelector( '.services-banner__btn--sensible' );
 		const corpView = document.querySelector( '.services-corp' );
-		const sensView = document.querySelector( '.services-sens' );
-		const awardSection = document.querySelector( '.award-teaser' );
-		const festivalSection = document.querySelector( '.awards-list' );
 		
-		if ( ! corpBtn || ! sensBtn ) return;
-
-		const setCategory = ( category ) => {
-			if ( category === 'corporativa' ) {
-				corpBtn.classList.add( 'services-banner__btn--active' );
-				sensBtn.classList.remove( 'services-banner__btn--active' );
-				corpView.classList.add( 'services-corp--active' );
-				sensView.classList.remove( 'services-sens--active' );
-				
-				if ( awardSection ) awardSection.style.display = 'block';
-				if ( festivalSection ) festivalSection.style.display = 'block';
-			} else {
-				sensBtn.classList.add( 'services-banner__btn--active' );
-				corpBtn.classList.remove( 'services-banner__btn--active' );
-				sensView.classList.add( 'services-sens--active' );
-				corpView.classList.remove( 'services-corp--active' );
-
-				if ( awardSection ) awardSection.style.display = 'none';
-				if ( festivalSection ) festivalSection.style.display = 'none';
-			}
-		};
-
-		corpBtn.addEventListener( 'click', () => setCategory( 'corporativa' ) );
-		sensBtn.addEventListener( 'click', () => setCategory( 'sensible' ) );
-
-		// Interactive Corp Service Rows
-		const corpRows = document.querySelectorAll( '.services-corp__row' );
-		const watermark = document.querySelector( '.services-corp__detail-watermark' );
-		const detailLabel = document.querySelector( '.services-corp__detail-label' );
-		const detailTitle = document.querySelector( '.services-corp__detail-title' );
-		const detailDesc = document.querySelector( '.services-corp__detail-desc' );
-		const detailLink = document.querySelector( '.services-corp__detail-link' );
-		const detailImg = document.querySelector( '.services-corp__detail-img' );
-
-		corpRows.forEach( ( row ) => {
-			row.addEventListener( 'click', ( e ) => {
-				const link = row.getAttribute( 'data-link' );
-				const isArrowClick = e.target.classList.contains( 'services-corp__row-arrow' ) || e.target.closest( '.services-corp__row-arrow' );
-				const isActive = row.classList.contains( 'services-corp__row--active' );
-
-				if ( link && ( isArrowClick || isActive ) ) {
-					window.location.href = link;
-					return;
+		if ( sensBtn ) {
+			sensBtn.addEventListener( 'click', ( e ) => {
+				e.preventDefault();
+				const targetSection = document.getElementById( 'asuntos-sensibles' );
+				if ( targetSection ) {
+					targetSection.scrollIntoView( { behavior: 'smooth', block: 'start' } );
 				}
-
-				corpRows.forEach( ( r ) => r.classList.remove( 'services-corp__row--active' ) );
-				row.classList.add( 'services-corp__row--active' );
-
-				const id = row.getAttribute( 'data-id' );
-				const num = row.getAttribute( 'data-num' );
-				const name = row.getAttribute( 'data-name' );
-				const desc = row.getAttribute( 'data-desc' );
-				const img = row.getAttribute( 'data-img' );
-
-				if ( watermark ) watermark.textContent = num;
-				if ( detailLabel ) detailLabel.textContent = `${num} - SERVICIO`;
-				let formattedTitle = name.toUpperCase();
-				if ( formattedTitle.includes( 'CREATIVIDAD Y DIRECCIÓN' ) ) {
-					formattedTitle = formattedTitle.replace( 'CREATIVIDAD Y DIRECCIÓN', 'CREATIVIDAD Y<br class="u-desktop-br">DIRECCIÓN' );
-				}
-				if ( detailTitle ) detailTitle.innerHTML = formattedTitle;
-				if ( detailDesc ) detailDesc.textContent = desc;
-				if ( detailLink ) {
-					const targetUrl = ( link && link.trim() !== '' ) ? link : detailLink.getAttribute( 'data-default-href' );
-					detailLink.setAttribute( 'href', targetUrl );
-				}
-
-				if ( detailImg && img ) {
-					detailImg.style.transition = 'opacity 0.25s ease-in-out';
-					detailImg.style.opacity = '0';
-					setTimeout( () => {
-						detailImg.src = img;
-						detailImg.alt = name;
-						detailImg.style.opacity = '1';
-					}, 250 );
-				}
-			} );
-		});
-
-		// Interactive Sensible Services Carousel
-		const sensData = [
-			{ name: 'GESTIÓN DE CRISIS Y PROBLEMAS', desc: 'El valor de marca es un activo muy importante para las empresas y protegerlo del impacto de crisis y problemas que impactan en la reputación es una de las especialidades de Orange Latam. Nuestro equipo de la unidad C&P se encuentra altamente capacitado para identificar, prevenir, gestionar y mitigar crisis y problemas, aplicando metodologías innovadoras, ágiles y eficaces.', link: '/pr-gestion-reputacion/#gestion-de-crisis' },
-			{ name: 'GESTIÓN DE ACCESO', desc: 'Desbloqueamos barreras para que la sociedad acceda a avances médico-científicos de manera ética, oportuna y profesional, trabajando de la mano con reguladores y actores clave del sector salud.', link: '/gestion-de-acceso/' },
-			{ name: 'COMUNICACIÓN POLÍTICA', desc: 'Estrategias de comunicación para candidatos e instituciones que generan legitimidad, confianza real y compromiso ciudadano en contextos de alta exposición pública.', link: '/asuntos-publicos/#comunicacion-politica' },
-			{ name: 'ASUNTOS PÚBLICOS', desc: 'Relaciones estratégicas con administraciones y reguladores para anticipar cambios jurídicos y gestionar riesgos reputacionales antes de que escalen.', link: '/asuntos-publicos/' },
-			{ name: 'RELACIONAMIENTO CON STAKEHOLDERS', desc: 'Mapping y planes de relacionamiento con comunidades de alta influencia para garantizar operatividad y sostenibilidad del negocio en el largo plazo.', link: '/asuntos-publicos/#stakeholders' },
-			{ name: 'COMUNICACIÓN PARA ENTIDADES DEL ESTADO', desc: 'Estrategias para que instituciones públicas construyan confianza, respeto y credibilidad sólida ante la ciudadanía.', link: '/asuntos-publicos/' }
-		];
-
-		let activeSensIdx = 0;
-		const sensCard = document.querySelector( '.services-sens__card' );
-		const sensWatermark = document.querySelector( '.services-sens__watermark-text' );
-		const sensCardTitle = document.querySelector( '.services-sens__card-title' );
-		const sensCardDesc = document.querySelector( '.services-sens__card-desc' );
-		const sensCardLink = document.querySelector( '.services-sens__card-link' );
-		const sensDotsContainer = document.querySelector( '.services-sens__dots' );
-		const sensPrevBtn = document.querySelector( '.services-sens__arrow--prev' );
-		const sensNextBtn = document.querySelector( '.services-sens__arrow--next' );
-
-		const updateSensCard = ( index ) => {
-			activeSensIdx = ( index + sensData.length ) % sensData.length;
-			const data = sensData[activeSensIdx];
-
-			// Pulse animation effect
-			if ( sensCard ) {
-				sensCard.classList.add( 'services-sens__card--pulse' );
-				setTimeout( () => sensCard.classList.remove( 'services-sens__card--pulse' ), 220 );
-			}
-
-			if ( sensWatermark ) sensWatermark.textContent = data.name;
-			if ( sensCardTitle ) sensCardTitle.textContent = data.name;
-			if ( sensCardDesc ) sensCardDesc.textContent = data.desc;
-
-			if ( sensCardLink ) {
-				if ( data.link ) {
-					sensCardLink.href = data.link;
-					sensCardLink.style.display = '';
-				} else {
-					sensCardLink.style.display = 'none';
-				}
-			}
-
-			// Update Dots
-			const dots = document.querySelectorAll( '.services-sens__dot' );
-			dots.forEach( ( d, i ) => {
-				d.classList.toggle( 'services-sens__dot--active', i === activeSensIdx );
-			} );
-		};
-
-		if ( sensDotsContainer ) {
-			sensDotsContainer.innerHTML = '';
-			sensData.forEach( ( _, i ) => {
-				const dot = document.createElement( 'span' );
-				dot.className = `services-sens__dot ${ i === 0 ? 'services-sens__dot--active' : '' }`;
-				dot.addEventListener( 'click', () => updateSensCard( i ) );
-				sensDotsContainer.appendChild( dot );
 			} );
 		}
 
-		if ( sensPrevBtn && sensNextBtn ) {
-			sensPrevBtn.addEventListener( 'click', () => updateSensCard( activeSensIdx - 1 ) );
-			sensNextBtn.addEventListener( 'click', () => updateSensCard( activeSensIdx + 1 ) );
-		}
+		if ( ! corpBtn || ! corpView ) return;
+
+		// Interactive Service Rows (Helper function for both tabs)
+		const setupServiceRows = ( rowSelector, activeClass, watermarkSel, labelSel, titleSel, descSel, linkSel, imgSel ) => {
+			const rows = document.querySelectorAll( rowSelector );
+			const watermark = document.querySelector( watermarkSel );
+			const detailLabel = document.querySelector( labelSel );
+			const detailTitle = document.querySelector( titleSel );
+			const detailDesc = document.querySelector( descSel );
+			const detailLink = document.querySelector( linkSel );
+			const detailImg = document.querySelector( imgSel );
+
+			rows.forEach( ( row ) => {
+				row.addEventListener( 'click', ( e ) => {
+					const link = row.getAttribute( 'data-link' );
+					const isArrowClick = e.target.classList.contains( 'services-corp__row-arrow' ) || e.target.closest( '.services-corp__row-arrow' );
+					const isActive = row.classList.contains( activeClass );
+
+					if ( link && ( isArrowClick || isActive ) ) {
+						window.location.href = link;
+						return;
+					}
+
+					rows.forEach( ( r ) => r.classList.remove( activeClass ) );
+					row.classList.add( activeClass );
+
+					const num = row.getAttribute( 'data-num' );
+					const name = row.getAttribute( 'data-name' );
+					const desc = row.getAttribute( 'data-desc' );
+					const img = row.getAttribute( 'data-img' );
+
+					if ( watermark ) watermark.textContent = num;
+					if ( detailLabel ) detailLabel.textContent = `${num} - SERVICIO`;
+					let formattedTitle = name.toUpperCase();
+					if ( formattedTitle.includes( 'CREATIVIDAD Y DIRECCIÓN' ) ) {
+						formattedTitle = formattedTitle.replace( 'CREATIVIDAD Y DIRECCIÓN', 'CREATIVIDAD Y<br class="u-desktop-br">DIRECCIÓN' );
+					}
+					if ( detailTitle ) detailTitle.innerHTML = formattedTitle;
+					if ( detailDesc ) detailDesc.textContent = desc;
+					if ( detailLink ) {
+						const targetUrl = ( link && link.trim() !== '' ) ? link : detailLink.getAttribute( 'data-default-href' );
+						detailLink.setAttribute( 'href', targetUrl );
+					}
+
+					if ( detailImg && img ) {
+						detailImg.style.transition = 'opacity 0.25s ease-in-out';
+						detailImg.style.opacity = '0';
+						setTimeout( () => {
+							detailImg.src = img;
+							detailImg.alt = name;
+							detailImg.style.opacity = '1';
+						}, 250 );
+					}
+				} );
+			} );
+		};
+
+		setupServiceRows(
+			'.services-corp__list > .services-corp__row:not(.services-sens__row)',
+			'services-corp__row--active',
+			'.services-corp > .services-corp__grid .services-corp__detail-watermark',
+			'.services-corp > .services-corp__grid .services-corp__detail-label',
+			'.services-corp > .services-corp__grid .services-corp__detail-title',
+			'.services-corp > .services-corp__grid .services-corp__detail-desc',
+			'.services-corp > .services-corp__grid .services-corp__detail-link',
+			'.services-corp > .services-corp__grid .services-corp__detail-img'
+		);
 	};
 
 	// ==========================================
