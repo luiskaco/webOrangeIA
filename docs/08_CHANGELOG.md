@@ -3,6 +3,7 @@
 ## [Unreleased]
 ### Seguridad
 - **Auditoría de seguridad completa** (ver `docs/06_TASKS.md`): regeneradas las 8 salts de autenticación de WordPress en `wp-config.php` (estaban todas duplicadas del mismo string — riesgo de forjar cookies de sesión de admin). Corregido host header injection en `WP_SITEURL`/`WP_HOME` con allowlist de dominios válidos. Movido fuera del docroot un backup completo del sitio (127 MB, con hashes de password y datos de leads) que quedaba accesible por HTTP sin protección real. `wp-config.php` no está trackeado en git — estos cambios no viajan con `git push`, aplican solo al entorno donde se editó el archivo.
+- **Anti-spam en el formulario de contacto** (`functions.php`, `footer.php`, `index.php`, `page-podcast.php`, `base.css`): honeypot invisible (`contact_website`), rechazo de envíos a menos de 3 segundos de cargada la página, y rate limiting de 3 envíos por hora por IP vía transients — el endpoint AJAX `send_service_contact` no tenía ninguna protección contra spam automatizado.
 
 ### Añadido
 - **Gestión de Leads en Base de Datos y Notificaciones Multi-Destinatario (`functions.php`, `inc/class-leads-manager.php`)**:

@@ -213,8 +213,32 @@ add_action( 'wp_ajax_nopriv_send_service_contact', 'orange_send_service_contact_
 
 function orange_send_service_contact_handler() {
 	// Verify Nonce
-	if ( ! isset( $_POST['contact_security'] ) || ! wp_verify_nonce( $_POST['contact_security'], 'orange_contact_nonce' ) ) {
+	if ( ! isset( $_POST['contact_security'] ) || ! wp_verify_nonce( wp_unslash( $_POST['contact_security'] ), 'orange_contact_nonce' ) ) {
 		wp_send_json_error( array( 'message' => 'Seguridad inválida. Por favor recarga la página e intenta de nuevo.' ) );
+	}
+
+	// Honeypot: campo invisible para personas, atractivo para bots. Si llega
+	// lleno, fingimos éxito para no delatar el mecanismo (el bot no reintenta).
+	if ( ! empty( $_POST['contact_website'] ) ) {
+		wp_send_json_success( array( 'message' => '¡Muchas gracias! Tu mensaje ha sido enviado con éxito. Te contactaremos a la brevedad.' ) );
+	}
+
+	// Envío demasiado rápido (formulario cargado y enviado en <3s) es casi
+	// siempre un bot que ignora el timing humano de completar el formulario.
+	$submitted_at = isset( $_POST['contact_ts'] ) ? absint( $_POST['contact_ts'] ) : 0;
+	if ( $submitted_at > 0 && ( time() - $submitted_at ) < 3 ) {
+		wp_send_json_error( array( 'message' => 'Por favor completa el formulario e intenta de nuevo.' ) );
+	}
+
+	// Rate limiting por IP: máximo 3 envíos por hora.
+	$client_ip = isset( $_SERVER['REMOTE_ADDR'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REMOTE_ADDR'] ) ) : '';
+	if ( $client_ip ) {
+		$rate_key   = 'orange_contact_rl_' . md5( $client_ip );
+		$rate_count = (int) get_transient( $rate_key );
+		if ( $rate_count >= 3 ) {
+			wp_send_json_error( array( 'message' => 'Has enviado demasiadas solicitudes. Por favor intenta de nuevo en un rato, o escríbenos directo a negocios@orange-la.com' ) );
+		}
+		set_transient( $rate_key, $rate_count + 1, HOUR_IN_SECONDS );
 	}
 
 	$name           = isset( $_POST['contact_name'] ) ? sanitize_text_field( $_POST['contact_name'] ) : ( isset( $_POST['name'] ) ? sanitize_text_field( $_POST['name'] . ( ! empty( $_POST['lastname'] ) ? ' ' . $_POST['lastname'] : '' ) ) : '' );

@@ -84,6 +84,17 @@
 	padding: 0;
 }
 
+/* Campo honeypot anti-spam: fuera de pantalla, no display:none (algunos bots
+   lo detectan y lo saltean) — invisible y no-tabulable para personas reales */
+.orange-hp-field {
+	position: absolute;
+	left: -9999px;
+	top: -9999px;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+
 html {
 	scroll-behavior: smooth;
 }
