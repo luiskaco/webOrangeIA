@@ -313,12 +313,12 @@ function orange_send_service_contact_handler() {
 		wp_send_json_error( array( 'message' => 'Por favor completa el formulario e intenta de nuevo.' ) );
 	}
 
-	// Rate limiting por IP: máximo 3 envíos por hora.
+	// Rate limiting por IP: máximo 10 envíos por hora.
 	$client_ip = isset( $_SERVER['REMOTE_ADDR'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REMOTE_ADDR'] ) ) : '';
 	if ( $client_ip ) {
 		$rate_key   = 'orange_contact_rl_' . md5( $client_ip );
 		$rate_count = (int) get_transient( $rate_key );
-		if ( $rate_count >= 3 ) {
+		if ( $rate_count >= 10 ) {
 			wp_send_json_error( array( 'message' => 'Has enviado demasiadas solicitudes. Por favor intenta de nuevo en un rato, o escríbenos directo a negocios@orange-la.com' ) );
 		}
 		set_transient( $rate_key, $rate_count + 1, HOUR_IN_SECONDS );
@@ -360,39 +360,77 @@ function orange_send_service_contact_handler() {
 
 	$subject = sprintf( '[Cotización Web] %s — %s', $service_origin, $name );
 
-	$body  = "Has recibido una nueva solicitud de contacto desde la web de Orange Latam:\n\n";
-	$body .= "--------------------------------------------------\n";
-	$body .= "Servicio / Origen: " . $service_origin . "\n";
+	$rows = array();
 	if ( ! empty( $page_url ) ) {
-		$body .= "Página URL: " . $page_url . "\n";
+		$rows['Página de origen'] = $page_url;
 	}
-	$body .= "--------------------------------------------------\n";
-	$body .= "Nombre: " . $name . "\n";
-	$body .= "Correo: " . $email . "\n";
+	$rows['Nombre']  = $name;
+	$rows['Correo']  = $email;
 	if ( ! empty( $phone ) ) {
-		$body .= "Teléfono: " . $phone . "\n";
+		$rows['Teléfono'] = $phone;
 	}
 	if ( ! empty( $company ) ) {
-		$body .= "Empresa: " . $company . "\n";
+		$rows['Empresa'] = $company;
 	}
 	if ( ! empty( $podcast_type ) ) {
-		$body .= "Tipo de Podcast: " . $podcast_type . "\n";
+		$rows['Tipo de Podcast'] = $podcast_type;
 	}
 	if ( ! empty( $scenario_type ) ) {
-		$body .= "Escenario: " . $scenario_type . "\n";
+		$rows['Escenario'] = $scenario_type;
 	}
 	if ( ! empty( $session_date ) ) {
-		$body .= "Fecha de Sesión: " . $session_date . "\n";
+		$rows['Fecha de Sesión'] = $session_date;
 	}
 	if ( ! empty( $session_time ) ) {
-		$body .= "Hora de Sesión: " . $session_time . "\n";
+		$rows['Hora de Sesión'] = $session_time;
 	}
-	$body .= "--------------------------------------------------\n";
-	$body .= "Mensaje:\n" . ( ! empty( $message ) ? $message : 'Sin mensaje adicional' ) . "\n";
-	$body .= "--------------------------------------------------\n";
+
+	$rows_html = '';
+	foreach ( $rows as $label => $value ) {
+		$rows_html .= '<tr>'
+			. '<td style="padding:10px 0;border-bottom:1px solid #EDEDED;font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#8A8A8A;width:150px;vertical-align:top;">' . esc_html( $label ) . '</td>'
+			. '<td style="padding:10px 0;border-bottom:1px solid #EDEDED;font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#14120F;vertical-align:top;">' . esc_html( $value ) . '</td>'
+			. '</tr>';
+	}
+
+	$body  = '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"></head>';
+	$body .= '<body style="margin:0;padding:0;background:#F4F4F6;">';
+	$body .= '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#F4F4F6;padding:32px 16px;">';
+	$body .= '<tr><td align="center">';
+	$body .= '<table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background:#FFFFFF;border-radius:8px;overflow:hidden;">';
+
+	// Header
+	$body .= '<tr><td style="background:#0B0B0B;padding:28px 32px;">';
+	$body .= '<span style="font-family:Arial,Helvetica,sans-serif;font-size:20px;font-weight:800;color:#FFFFFF;letter-spacing:-0.02em;">Orange<span style="color:#70B5E3;">Latam</span></span>';
+	$body .= '<div style="font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#B5B5B5;margin-top:4px;">Nueva solicitud de contacto</div>';
+	$body .= '</td></tr>';
+
+	// Service badge
+	$body .= '<tr><td style="padding:24px 32px 0;">';
+	$body .= '<span style="display:inline-block;background:#EE894F;color:#FFFFFF;font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.03em;padding:6px 14px;border-radius:100px;">' . esc_html( $service_origin ) . '</span>';
+	$body .= '</td></tr>';
+
+	// Data table
+	$body .= '<tr><td style="padding:20px 32px 4px;">';
+	$body .= '<table role="presentation" width="100%" cellpadding="0" cellspacing="0">' . $rows_html . '</table>';
+	$body .= '</td></tr>';
+
+	// Message
+	$body .= '<tr><td style="padding:20px 32px 28px;">';
+	$body .= '<div style="font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#8A8A8A;margin-bottom:8px;">Mensaje</div>';
+	$body .= '<div style="background:#F4F4F6;border-radius:6px;padding:16px;font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#14120F;line-height:1.6;white-space:pre-wrap;">' . nl2br( esc_html( ! empty( $message ) ? $message : 'Sin mensaje adicional' ) ) . '</div>';
+	$body .= '</td></tr>';
+
+	// Footer
+	$body .= '<tr><td style="background:#F4F4F6;padding:18px 32px;border-top:1px solid #EDEDED;">';
+	$body .= '<span style="font-family:Arial,Helvetica,sans-serif;font-size:12px;color:#8A8A8A;">Enviado automáticamente desde el formulario de contacto de <a href="https://orange-la.com" style="color:#70B5E3;text-decoration:none;">orange-la.com</a></span>';
+	$body .= '</td></tr>';
+
+	$body .= '</table></td></tr></table>';
+	$body .= '</body></html>';
 
 	$headers = array(
-		'Content-Type: text/plain; charset=UTF-8',
+		'Content-Type: text/html; charset=UTF-8',
 		'From: Orange Latam Web <no-reply@orange-la.com>',
 		'Reply-To: ' . $name . ' <' . $email . '>',
 	);

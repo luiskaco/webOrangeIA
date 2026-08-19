@@ -21,9 +21,7 @@ class Orange_Theme_Setup {
 	/**
 	 * Contenido de la página de Política de Privacidad. Cubre los datos que
 	 * el sitio realmente recolecta hoy (formularios de contacto: nombre,
-	 * email, teléfono, empresa, mensaje, IP) — no incluye cláusulas de
-	 * cookies de analítica/marketing porque el sitio no carga ninguna
-	 * (verificado en la auditoría de seguridad de 2026-08-19). Redactado en
+	 * email, teléfono, empresa, mensaje, IP). Redactado en
 	 * lenguaje simple con referencia a la Ley N° 29733 de Protección de
 	 * Datos Personales (Perú). Es un borrador funcional, no un documento
 	 * validado por un abogado — recomendado revisión legal antes de
@@ -68,10 +66,6 @@ class Orange_Theme_Setup {
 
 <!-- wp:paragraph -->
 <p>Además, guardamos automáticamente la dirección IP desde la que se envía el formulario, como medida de seguridad para prevenir spam y abuso.</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:paragraph -->
-<p>Este sitio no utiliza cookies de análisis (como Google Analytics) ni de publicidad (como Meta Pixel) al día de esta actualización. Si en el futuro incorporamos alguna, primero te lo pediremos explícitamente mediante un aviso de cookies, y podrás aceptar o rechazar cada tipo por separado.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:heading -->
