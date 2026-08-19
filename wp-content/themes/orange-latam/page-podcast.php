@@ -64,7 +64,7 @@ $podcast_img_uri = $theme_uri . '/assets/images/podcast';
 		</div>
 		<div class="podcast-hero__vignette"></div>
 		<h1 class="podcast-hero__title">
-			Estudio de Podcast en Lima: graba y edita en <strong style="white-space: nowrap;">Orange Studio</strong>
+			Estudio de Podcast en Lima. Graba y edita en <strong style="white-space: nowrap;">Orange Studio</strong>
 		</h1>
 	</section>
 
