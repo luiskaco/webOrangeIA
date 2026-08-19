@@ -228,7 +228,7 @@ class Orange_Leads_Manager {
 				<?php endif; ?>
 			</div>
 
-			<table class="wp-list-table widefat fixed striped table-view-list posts" style="margin-top:10px;">
+			<table class="wp-list-table widefat striped table-view-list posts" style="margin-top:10px; table-layout:auto;">
 				<thead>
 					<tr>
 						<th style="width:130px;">Fecha</th>
@@ -236,7 +236,7 @@ class Orange_Leads_Manager {
 						<th style="width:180px;">Contacto</th>
 						<th style="width:140px;">Empresa</th>
 						<th style="width:180px;">Servicio / Origen</th>
-						<th>Mensaje / Requerimientos</th>
+						<th style="min-width:220px;">Mensaje / Requerimientos</th>
 						<th style="width:110px;">Estado</th>
 						<th style="width:90px;">Acciones</th>
 					</tr>
