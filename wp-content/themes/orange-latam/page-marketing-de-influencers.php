@@ -57,7 +57,7 @@ get_header();
 			<source src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/videos/marketing-de-influencers-hero.mp4" type="video/mp4">
 		</video>
 		<div class="infl-hero__vignette"></div>
-		<h1 class="infl-hero__title">Agencia de Marketing de Influencers en Perú</h1>
+		<h1 class="infl-hero__title"><span class="infl-hero__title-inner">Agencia de Marketing de Influencers en Perú</span></h1>
 	</section>
 
 	<!-- ==========================================
