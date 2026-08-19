@@ -94,6 +94,15 @@
 	margin: 0 auto;
 }
 
+.podcast-subbanner__text {
+	font-family: var(--font-display);
+	font-weight: 800;
+	font-size: clamp(20px, 2.6vw, 32px);
+	line-height: 1.4;
+	letter-spacing: -0.01em;
+	color: var(--color-text-dark);
+}
+
 .podcast-subbanner__img {
 	width: 100%;
 	height: auto;
