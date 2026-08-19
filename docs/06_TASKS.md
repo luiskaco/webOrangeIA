@@ -133,8 +133,19 @@
 - [x] Cruzar las Focus Keywords de Rank Math contra el H1/copy real de las 10 páginas del sitio (vía `Grep`, sin tocar contenido) — hallazgo: 5 keywords configuradas no existían en ningún texto visible: "agencia de PR" (Home), "empresa de relaciones públicas Perú" y "agencia de PR Lima" (PR), "community management lima" (Marketing Digital), "alquiler de estudio de podcast" (Podcast)
 - [x] Extraer del contenido real (sin modificarlo) frases equivalentes que sí están escritas palabra por palabra, y verificar cada una en SEMrush (base PE): "gestión de comunicación y relaciones públicas" (Home, KD 17), "empresa experta en relaciones públicas" (PR, KD 11), "agencia de PR en Lima Perú" (PR, KD 16), "presencia en redes sociales" (Marketing Digital, 20 búsquedas/mes), "grabación y edición profesional de podcast en Lima" (Podcast, KD 7 — guardada sin tildes en Rank Math por una limitación del campo Focus Keyword al tipear acentos)
 - [x] Reemplazar las 5 keywords en Rank Math (Home post 7, PR post 91 ×2, Marketing Digital post 81, Podcast post 84) y actualizar `temp-seo-demo-modal.php` con los datos reales y las justificaciones
-- [ ] Marketing de Influencers: la plantilla no tiene ningún `<h1>` en toda la página (hero solo con video) — problema estructural distinto a una keyword ausente, pendiente de decisión con el cliente
+- [x] Marketing de Influencers: la plantilla no tenía ningún `<h1>` en toda la página (hero solo con video). Agregado `<h1 class="infl-hero__title-sr">Agencia de Marketing de Influencers en Perú</h1>` visualmente oculto (clip-path, sin alterar el diseño de hero full-bleed) con la Focus Keyword primaria exacta.
 - [ ] Revisar y confirmar con el cliente los demás gaps ⚠️ encontrados en la auditoría (variantes cercanas sin el sufijo "Perú"/"Lima" — confirmado que esa omisión fue intencional, no requieren fix)
+
+## Auditoría SEO on-page (2026-08-19)
+- [x] Auditoría contra `.agents/rules/seo.md` de las 11 páginas publicadas: title/description length, robots, canonical, OG/Twitter, H1, alt text, schema
+- [x] Eliminada función legacy `orange_latam_seo_meta_tags()` en `functions.php` (predata Rank Math, `wp_head` prioridad 2) que duplicaba meta description/OG/Twitter con valores genéricos incorrectos (en Home mostraba "Bienvenidos a Orange Latam. Impulsamos tu marca." en vez de la descripción real de Rank Math)
+- [x] Recortados 5 Meta Titles que excedían 60 caracteres: Asuntos Públicos (74→50), Gestión de Acceso (72→56), Eventos y Activaciones (66→56, además tenía doble espacio), Branding (62→54), Presencia Digital (60→59, doble espacio)
+- [x] Sitemap XML roto (`/sitemap_index.xml` devolvía 404 pese al módulo de Rank Math activo) — causa: `rewrite_rules` cacheado en `wp_options` desde antes de que el módulo de sitemap quedara activo. Fix: limpiar la opción para forzar regeneración de WordPress
+- [x] `blog_public=0` (noindex global) confirmado como intencional — es el entorno local, no tocar; pendiente verificar que en producción (`orange-la.com`) esté desmarcado
+- [x] Lighthouse (SEO + Accesibilidad) corrido contra Home local vía `npx lighthouse`: SEO 66/100 (único fallo: noindex local, ya conocido) — accesibilidad 91/100 con 2 hallazgos reales, corregidos en el mismo día (ver abajo)
+- [x] Fix contraste `.stats__value` (Home): `#3386BE` (3.66:1) → `#2D6E9E` (5.05:1), cumple WCAG AA
+- [x] Fix área táctil `.hero__dot` (Home): de 10×3px a 24×24px de zona clickeable real, manteniendo la barra visual delgada vía `::before`
+- [x] Re-verificado con Lighthouse: accesibilidad del Home 91 → 100/100
 
 ## Rediseño Sección Asuntos Sensibles & Migración de Medios (2026-08-18)
 - [x] Migración completa de medios y metadatos SEO de artículos desde OrangeV2026 a OrangeIA (19 posts vinculados con imágenes destacadas y metadatos alt/title).
