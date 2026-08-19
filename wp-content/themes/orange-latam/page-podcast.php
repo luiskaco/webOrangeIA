@@ -320,12 +320,23 @@ $podcast_img_uri = $theme_uri . '/assets/images/podcast';
 					</div>
 					<div class="podcast-form__row">
 						<div class="podcast-form__group">
-							<label for="pod-name" class="podcast-form__label">NOMBRE</label>
-							<input type="text" id="pod-name" name="name" class="podcast-form__input" required>
+							<label for="pod-name" class="podcast-form__label">NOMBRE Y APELLIDO *</label>
+							<input type="text" id="pod-name" name="contact_name" placeholder="Ej. Carlos Mendoza" class="podcast-form__input" required>
 						</div>
 						<div class="podcast-form__group">
-							<label for="pod-email" class="podcast-form__label">EMAIL</label>
-							<input type="email" id="pod-email" name="email" class="podcast-form__input" required>
+							<label for="pod-email" class="podcast-form__label">CORREO CORPORATIVO *</label>
+							<input type="email" id="pod-email" name="contact_email" placeholder="ejemplo@empresa.com" class="podcast-form__input" required>
+						</div>
+					</div>
+
+					<div class="podcast-form__row">
+						<div class="podcast-form__group">
+							<label for="pod-phone" class="podcast-form__label">TELÉFONO / WHATSAPP *</label>
+							<input type="tel" id="pod-phone" name="contact_phone" placeholder="+51 987 654 321" class="podcast-form__input" required>
+						</div>
+						<div class="podcast-form__group">
+							<label for="pod-company" class="podcast-form__label">EMPRESA / ORGANIZACIÓN</label>
+							<input type="text" id="pod-company" name="contact_company" placeholder="Nombre de tu empresa" class="podcast-form__input">
 						</div>
 					</div>
 
@@ -370,8 +381,8 @@ $podcast_img_uri = $theme_uri . '/assets/images/podcast';
 					</div>
 
 					<div class="podcast-form__group podcast-form__group--full">
-						<label for="pod-message" class="podcast-form__label">MENSAJE</label>
-						<textarea id="pod-message" name="message" rows="4" class="podcast-form__textarea" placeholder="Cuéntanos detalles de tu proyecto o requerimientos especiales..."></textarea>
+						<label for="pod-message" class="podcast-form__label">¿EN QUÉ PODEMOS AYUDARTE? *</label>
+						<textarea id="pod-message" name="contact_message" rows="4" class="podcast-form__textarea" placeholder="Cuéntanos detalles de tu proyecto o requerimientos especiales..." required></textarea>
 					</div>
 
 					<div class="podcast-form__response" id="podcast-form-response" style="display:none;margin-bottom:14px;font-size:13.5px;font-weight:600;padding:10px 14px;border-radius:4px;"></div>
