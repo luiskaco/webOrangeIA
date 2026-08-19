@@ -21,3 +21,11 @@ RewriteRule . /index.php [L]
 		Header set Content-Type "text/plain; charset=utf-8"
 	</FilesMatch>
 </IfModule>
+
+# Bloquear xmlrpc.php — no se usa Jetpack ni la app móvil de WordPress.
+# xmlrpc.php habilita amplificación de fuerza bruta (system.multicall prueba
+# cientos de passwords en un solo request) y pingback SSRF/DDoS.
+<Files xmlrpc.php>
+	Order Deny,Allow
+	Deny from all
+</Files>

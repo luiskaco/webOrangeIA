@@ -190,11 +190,20 @@ document.addEventListener( 'DOMContentLoaded', () => {
 
 					if ( watermark ) watermark.textContent = num;
 					if ( detailLabel ) detailLabel.textContent = `${num} - SERVICIO`;
-					let formattedTitle = name.toUpperCase();
-					if ( formattedTitle.includes( 'CREATIVIDAD Y DIRECCIÓN' ) ) {
-						formattedTitle = formattedTitle.replace( 'CREATIVIDAD Y DIRECCIÓN', 'CREATIVIDAD Y<br class="u-desktop-br">DIRECCIÓN' );
+					const formattedTitle = name.toUpperCase();
+					if ( detailTitle ) {
+						detailTitle.textContent = '';
+						if ( formattedTitle.includes( 'CREATIVIDAD Y DIRECCIÓN' ) ) {
+							const [ before, after ] = formattedTitle.split( 'CREATIVIDAD Y DIRECCIÓN' );
+							detailTitle.appendChild( document.createTextNode( before + 'CREATIVIDAD Y' ) );
+							const br = document.createElement( 'br' );
+							br.className = 'u-desktop-br';
+							detailTitle.appendChild( br );
+							detailTitle.appendChild( document.createTextNode( 'DIRECCIÓN' + after ) );
+						} else {
+							detailTitle.textContent = formattedTitle;
+						}
 					}
-					if ( detailTitle ) detailTitle.innerHTML = formattedTitle;
 					if ( detailDesc ) detailDesc.textContent = desc;
 					if ( detailLink ) {
 						const targetUrl = ( link && link.trim() !== '' ) ? link : detailLink.getAttribute( 'data-default-href' );
@@ -278,9 +287,19 @@ document.addEventListener( 'DOMContentLoaded', () => {
 				if ( authorEl ) authorEl.textContent = data.title;
 				if ( roleEl ) roleEl.textContent = `${data.date} · Por ${data.author}`;
 				if ( imgBox ) {
-					imgBox.innerHTML = data.thumbnail
-						? `<img class="experts__card-img" src="${data.thumbnail}" alt="${data.title}">`
-						: `<div class="experts__card-img-placeholder">Foto de la nota</div>`;
+					imgBox.textContent = '';
+					if ( data.thumbnail ) {
+						const img = document.createElement( 'img' );
+						img.className = 'experts__card-img';
+						img.src = data.thumbnail;
+						img.alt = data.title;
+						imgBox.appendChild( img );
+					} else {
+						const placeholder = document.createElement( 'div' );
+						placeholder.className = 'experts__card-img-placeholder';
+						placeholder.textContent = 'Foto de la nota';
+						imgBox.appendChild( placeholder );
+					}
 				}
 			} );
 

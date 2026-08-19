@@ -96,6 +96,50 @@ function orange_latam_block_comment_submission() {
 add_action( 'pre_comment_on_post', 'orange_latam_block_comment_submission' );
 
 // ==========================================
+// 2c. SECURITY HEADERS
+// ==========================================
+// CSP con 'unsafe-inline' en script-src/style-src: el theme usa scripts y
+// estilos inline extensivamente (animaciones, modales) sin sistema de nonces.
+// No es una CSP estricta anti-XSS, pero sí bloquea la carga de recursos desde
+// dominios no autorizados — que es la superficie de ataque real hoy (CDN
+// comprometido, script inyectado por un plugin vulnerable, etc.).
+function orange_latam_security_headers() {
+	if ( is_admin() ) {
+		return;
+	}
+
+	$csp = "default-src 'self'; "
+		. "script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; "
+		. "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; "
+		. "font-src 'self' https://fonts.gstatic.com data:; "
+		. "img-src 'self' data: https:; "
+		. "media-src 'self'; "
+		. "frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com; "
+		. "connect-src 'self'; "
+		. "worker-src 'self' blob:; "
+		. "object-src 'none'; "
+		. "base-uri 'self'; "
+		. "form-action 'self'; "
+		. "frame-ancestors 'none';";
+
+	header( 'Content-Security-Policy: ' . $csp );
+	header( 'X-Frame-Options: DENY' );
+	header( 'X-Content-Type-Options: nosniff' );
+	header( 'Referrer-Policy: strict-origin-when-cross-origin' );
+	header( 'Permissions-Policy: camera=(), microphone=(), geolocation=()' );
+
+	if ( is_ssl() ) {
+		header( 'Strict-Transport-Security: max-age=31536000; includeSubDomains' );
+	}
+}
+add_action( 'send_headers', 'orange_latam_security_headers' );
+
+// Deshabilita XML-RPC (no se usa Jetpack ni la app móvil de WordPress) —
+// filtro nativo de WP como respaldo por si el .htaccess no aplica (ej. nginx
+// en producción, que ignora .htaccess).
+add_filter( 'xmlrpc_enabled', '__return_false' );
+
+// ==========================================
 // 3. ENQUEUE ASSETS (CSS & JS)
 // ==========================================
 

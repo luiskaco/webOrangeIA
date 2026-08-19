@@ -27,6 +27,19 @@ class Orange_Leads_Manager {
 	}
 
 	/**
+	 * Neutraliza CSV/formula injection: si el valor empieza con un carácter
+	 * que Excel/Sheets interpreta como inicio de fórmula (= + - @ tab CR),
+	 * lo prefija con una comilla simple para que se trate como texto plano.
+	 */
+	public static function csv_safe( $value ) {
+		$value = (string) $value;
+		if ( preg_match( '/^[=+\-@\t\r]/', $value ) ) {
+			return "'" . $value;
+		}
+		return $value;
+	}
+
+	/**
 	 * Get full table name with prefix.
 	 */
 	public static function get_table_name() {
@@ -83,14 +96,12 @@ class Orange_Leads_Manager {
 
 		$table_name = self::get_table_name();
 
-		$ip_address = '';
-		if ( ! empty( $_SERVER['HTTP_CLIENT_IP'] ) ) {
-			$ip_address = sanitize_text_field( wp_unslash( $_SERVER['HTTP_CLIENT_IP'] ) );
-		} elseif ( ! empty( $_SERVER['HTTP_X_FORWARDED_FOR'] ) ) {
-			$ip_address = sanitize_text_field( wp_unslash( $_SERVER['HTTP_X_FORWARDED_FOR'] ) );
-		} elseif ( ! empty( $_SERVER['REMOTE_ADDR'] ) ) {
-			$ip_address = sanitize_text_field( wp_unslash( $_SERVER['REMOTE_ADDR'] ) );
-		}
+		// REMOTE_ADDR es la única IP que el cliente no puede falsificar (la
+		// pone el servidor web, no un header). HTTP_CLIENT_IP y
+		// HTTP_X_FORWARDED_FOR son controlados 100% por quien hace el
+		// request salvo que haya un proxy de confianza reescribiéndolos —
+		// no es el caso de este sitio hoy.
+		$ip_address = ! empty( $_SERVER['REMOTE_ADDR'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REMOTE_ADDR'] ) ) : '';
 
 		$insert_data = array(
 			'name'           => ! empty( $data['name'] ) ? sanitize_text_field( $data['name'] ) : 'Sin nombre',
@@ -383,14 +394,14 @@ class Orange_Leads_Manager {
 				fputcsv( $output, array(
 					$l->id,
 					$l->created_at,
-					$l->name,
-					$l->email,
-					$l->phone,
-					$l->company,
-					$l->service_origin,
-					$l->page_url,
-					$l->message,
-					$l->extra_data,
+					self::csv_safe( $l->name ),
+					self::csv_safe( $l->email ),
+					self::csv_safe( $l->phone ),
+					self::csv_safe( $l->company ),
+					self::csv_safe( $l->service_origin ),
+					self::csv_safe( $l->page_url ),
+					self::csv_safe( $l->message ),
+					self::csv_safe( $l->extra_data ),
 					$l->status,
 				) );
 			}
