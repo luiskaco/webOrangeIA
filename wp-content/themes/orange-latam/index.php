@@ -630,7 +630,7 @@ get_header();
 						<svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.89 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.32 0 .62.05.91.13v-3.52a6.37 6.37 0 0 0-.91-.07 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.75a8.16 8.16 0 0 0 4.76 1.5V6.8a4.86 4.86 0 0 1-1-.11z"></path></svg>
 					</a>
 				</div>
-				<a href="<?php echo esc_url( home_url( '/politica-de-privacidad/' ) ); ?>" class="contact__privacy-link">Política de privacidad y cookies</a>
+				<a href="<?php echo esc_url( home_url( '/politica-de-privacidad/' ) ); ?>" target="_blank" rel="noopener" class="contact__privacy-link">Política de privacidad y cookies</a>
 			</div>
 
 			<!-- Contact Form Card -->

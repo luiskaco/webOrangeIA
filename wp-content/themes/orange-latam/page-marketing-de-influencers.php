@@ -53,11 +53,20 @@ get_header();
 	     1. HERO
 	     ========================================== -->
 	<section class="infl-hero" id="inicio">
-		<h1 class="infl-hero__title-sr">Agencia de Marketing de Influencers en Perú</h1>
 		<video class="infl-hero__video-bg" autoplay muted loop playsinline preload="auto">
 			<source src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/videos/marketing-de-influencers-hero.mp4" type="video/mp4">
 		</video>
 		<div class="infl-hero__vignette"></div>
+	</section>
+
+	<!-- ==========================================
+	     1a. SUB-BANNER (mismo patrón que Podcast: hero de video sin
+	     overlay + H1 real y visible en una franja debajo)
+	     ========================================== -->
+	<section class="infl-subbanner">
+		<div class="infl-subbanner__container" data-reveal="up">
+			<h1 class="infl-subbanner__text">Agencia de Marketing de Influencers en Perú</h1>
+		</div>
 	</section>
 
 	<!-- ==========================================
