@@ -71,9 +71,7 @@ $podcast_img_uri = $theme_uri . '/assets/images/podcast';
 	<section class="podcast-subbanner">
 		<div class="podcast-subbanner__container" data-reveal="up">
 			<h1 class="podcast-subbanner__text">
-				Estudio de Podcast en Lima: graba y edita en <strong style="white-space: nowrap;">Orange Studio</strong>,<br>
-				el espacio ideal para lograr calidad<br>
-				de estudio con equipos de alto nivel
+				Estudio de Podcast en Lima: graba y edita en <strong style="white-space: nowrap;">Orange Studio</strong>
 			</h1>
 		</div>
 	</section>
