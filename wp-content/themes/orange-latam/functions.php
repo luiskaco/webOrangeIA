@@ -275,58 +275,6 @@ require_once ORANGE_THEME_DIR . '/inc/class-theme-setup.php';
 // require_once ORANGE_THEME_DIR . '/inc/temp-seo-demo-modal.php';
 
 // ==========================================
-// 5. ON-PAGE SEO META & OPEN GRAPH GENERATOR
-// ==========================================
-function orange_latam_seo_meta_tags() {
-	if ( is_admin() ) {
-		return;
-	}
-
-	$title       = wp_get_document_title();
-	$site_name   = get_bloginfo( 'name' );
-	$description = 'Orange Latam — Agencia líder en comunicación estratégica, relaciones públicas, reputación corporativa, marketing de influencers y desarrollo web en Perú y Latam.';
-	$url         = is_singular() ? get_permalink() : home_url( '/' );
-	$og_image    = get_template_directory_uri() . '/assets/images/Orange-LAtam-dentro-de-las-40-mejores-campanas-del-mundo-en-Global-Sabre-Awards-2025-desktop.webp';
-
-	if ( is_singular() ) {
-		$post_id = get_the_ID();
-		if ( has_excerpt( $post_id ) ) {
-			$description = wp_strip_all_tags( get_the_excerpt( $post_id ) );
-		} else {
-			$content = wp_strip_all_tags( get_post_field( 'post_content', $post_id ) );
-			if ( ! empty( $content ) ) {
-				$description = mb_strimwidth( $content, 0, 155, '...' );
-			}
-		}
-		if ( has_post_thumbnail( $post_id ) ) {
-			$og_image = get_the_post_thumbnail_url( $post_id, 'full' );
-		}
-	}
-
-	echo "\n<!-- On-Page SEO Meta Tags & Open Graph -->\n";
-	echo '<meta name="description" content="' . esc_attr( $description ) . '">' . "\n";
-	echo '<link rel="canonical" href="' . esc_url( $url ) . '">' . "\n";
-	
-	// Open Graph
-	echo '<meta property="og:site_name" content="' . esc_attr( $site_name ) . '">' . "\n";
-	echo '<meta property="og:title" content="' . esc_attr( $title ) . '">' . "\n";
-	echo '<meta property="og:description" content="' . esc_attr( $description ) . '">' . "\n";
-	echo '<meta property="og:url" content="' . esc_url( $url ) . '">' . "\n";
-	echo '<meta property="og:type" content="' . ( is_single() ? 'article' : 'website' ) . '">' . "\n";
-	echo '<meta property="og:locale" content="es_ES">' . "\n";
-	echo '<meta property="og:image" content="' . esc_url( $og_image ) . '">' . "\n";
-	echo '<meta property="og:image:width" content="1200">' . "\n";
-	echo '<meta property="og:image:height" content="630">' . "\n";
-
-	// Twitter Card
-	echo '<meta name="twitter:card" content="summary_large_image">' . "\n";
-	echo '<meta name="twitter:title" content="' . esc_attr( $title ) . '">' . "\n";
-	echo '<meta name="twitter:description" content="' . esc_attr( $description ) . '">' . "\n";
-	echo '<meta name="twitter:image" content="' . esc_url( $og_image ) . '">' . "\n";
-}
-add_action( 'wp_head', 'orange_latam_seo_meta_tags', 2 );
-
-// ==========================================
 // 6. AUTOMATIC IMAGE SEO & PERFORMANCE OPTIMIZER
 // ==========================================
 function orange_latam_optimize_image_attributes( $attr, $attachment = null, $size = null ) {
