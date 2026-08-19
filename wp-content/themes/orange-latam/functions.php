@@ -217,36 +217,71 @@ function orange_send_service_contact_handler() {
 		wp_send_json_error( array( 'message' => 'Seguridad inválida. Por favor recarga la página e intenta de nuevo.' ) );
 	}
 
-	$name           = isset( $_POST['contact_name'] ) ? sanitize_text_field( $_POST['contact_name'] ) : '';
-	$email          = isset( $_POST['contact_email'] ) ? sanitize_email( $_POST['contact_email'] ) : '';
-	$phone          = isset( $_POST['contact_phone'] ) ? sanitize_text_field( $_POST['contact_phone'] ) : '';
-	$company        = isset( $_POST['contact_company'] ) ? sanitize_text_field( $_POST['contact_company'] ) : '';
-	$message        = isset( $_POST['contact_message'] ) ? sanitize_textarea_field( $_POST['contact_message'] ) : '';
+	$name           = isset( $_POST['contact_name'] ) ? sanitize_text_field( $_POST['contact_name'] ) : ( isset( $_POST['name'] ) ? sanitize_text_field( $_POST['name'] . ( ! empty( $_POST['lastname'] ) ? ' ' . $_POST['lastname'] : '' ) ) : '' );
+	$email          = isset( $_POST['contact_email'] ) ? sanitize_email( $_POST['contact_email'] ) : ( isset( $_POST['email'] ) ? sanitize_email( $_POST['email'] ) : '' );
+	$phone          = isset( $_POST['contact_phone'] ) ? sanitize_text_field( $_POST['contact_phone'] ) : ( isset( $_POST['phone'] ) ? sanitize_text_field( $_POST['phone'] ) : '' );
+	$company        = isset( $_POST['contact_company'] ) ? sanitize_text_field( $_POST['contact_company'] ) : ( isset( $_POST['company'] ) ? sanitize_text_field( $_POST['company'] ) : '' );
+	$message        = isset( $_POST['contact_message'] ) ? sanitize_textarea_field( $_POST['contact_message'] ) : ( isset( $_POST['message'] ) ? sanitize_textarea_field( $_POST['message'] ) : '' );
 	$service_origin = isset( $_POST['service_origin'] ) ? sanitize_text_field( $_POST['service_origin'] ) : 'Contacto General';
 	$page_url       = isset( $_POST['page_url'] ) ? esc_url_raw( $_POST['page_url'] ) : '';
 
-	if ( empty( $name ) || empty( $email ) || empty( $message ) ) {
-		wp_send_json_error( array( 'message' => 'Por favor completa todos los campos requeridos.' ) );
+	// Podcast specific fields
+	$podcast_type   = isset( $_POST['podcast_type'] ) ? sanitize_text_field( $_POST['podcast_type'] ) : '';
+	$scenario_type  = isset( $_POST['scenario_type'] ) ? sanitize_text_field( $_POST['scenario_type'] ) : '';
+	$session_date   = isset( $_POST['session_date'] ) ? sanitize_text_field( $_POST['session_date'] ) : '';
+	$session_time   = isset( $_POST['session_time'] ) ? sanitize_text_field( $_POST['session_time'] ) : '';
+
+	if ( empty( $name ) || empty( $email ) ) {
+		wp_send_json_error( array( 'message' => 'Por favor completa todos los campos obligatorios.' ) );
 	}
 
 	if ( ! is_email( $email ) ) {
 		wp_send_json_error( array( 'message' => 'El correo electrónico ingresado no es válido.' ) );
 	}
 
-	$to      = get_option( 'admin_email', 'negocios@orange-la.com' );
+	// Lista de destinatarios oficiales solicitados
+	$to = array(
+		'gorellana@orange-la.com',
+		'mayllon@orange-la.com',
+		'negocios@orange-la.com',
+	);
+	$admin_email = get_option( 'admin_email' );
+	if ( $admin_email && is_email( $admin_email ) ) {
+		$to[] = $admin_email;
+	}
+	$to = array_values( array_unique( $to ) );
+
 	$subject = sprintf( '[Cotización Web] %s — %s', $service_origin, $name );
 
 	$body  = "Has recibido una nueva solicitud de contacto desde la web de Orange Latam:\n\n";
 	$body .= "--------------------------------------------------\n";
 	$body .= "Servicio / Origen: " . $service_origin . "\n";
-	$body .= "Página URL: " . $page_url . "\n";
+	if ( ! empty( $page_url ) ) {
+		$body .= "Página URL: " . $page_url . "\n";
+	}
 	$body .= "--------------------------------------------------\n";
 	$body .= "Nombre: " . $name . "\n";
 	$body .= "Correo: " . $email . "\n";
-	$body .= "Teléfono: " . $phone . "\n";
-	$body .= "Empresa: " . ( $company ? $company : 'No especificada' ) . "\n";
+	if ( ! empty( $phone ) ) {
+		$body .= "Teléfono: " . $phone . "\n";
+	}
+	if ( ! empty( $company ) ) {
+		$body .= "Empresa: " . $company . "\n";
+	}
+	if ( ! empty( $podcast_type ) ) {
+		$body .= "Tipo de Podcast: " . $podcast_type . "\n";
+	}
+	if ( ! empty( $scenario_type ) ) {
+		$body .= "Escenario: " . $scenario_type . "\n";
+	}
+	if ( ! empty( $session_date ) ) {
+		$body .= "Fecha de Sesión: " . $session_date . "\n";
+	}
+	if ( ! empty( $session_time ) ) {
+		$body .= "Hora de Sesión: " . $session_time . "\n";
+	}
 	$body .= "--------------------------------------------------\n";
-	$body .= "Mensaje:\n" . $message . "\n";
+	$body .= "Mensaje:\n" . ( ! empty( $message ) ? $message : 'Sin mensaje adicional' ) . "\n";
 	$body .= "--------------------------------------------------\n";
 
 	$headers = array(
@@ -255,6 +290,27 @@ function orange_send_service_contact_handler() {
 		'Reply-To: ' . $name . ' <' . $email . '>',
 	);
 
+	// 1. Almacenar lead en Base de Datos
+	$extra_payload = array();
+	if ( ! empty( $podcast_type ) )  $extra_payload['podcast_type'] = $podcast_type;
+	if ( ! empty( $scenario_type ) ) $extra_payload['scenario_type'] = $scenario_type;
+	if ( ! empty( $session_date ) )  $extra_payload['session_date'] = $session_date;
+	if ( ! empty( $session_time ) )  $extra_payload['session_time'] = $session_time;
+
+	if ( class_exists( 'Orange_Leads_Manager' ) ) {
+		Orange_Leads_Manager::save_lead( array(
+			'name'           => $name,
+			'email'          => $email,
+			'phone'          => $phone,
+			'company'        => $company,
+			'service_origin' => $service_origin,
+			'page_url'       => $page_url,
+			'message'        => $message,
+			'extra_data'     => $extra_payload,
+		) );
+	}
+
+	// 2. Enviar notificación por correo a la lista oficial
 	$sent = wp_mail( $to, $subject, $body, $headers );
 
 	if ( $sent ) {
@@ -265,9 +321,10 @@ function orange_send_service_contact_handler() {
 }
 
 // ==========================================
-// 4. AUTO-INITIALIZATION SETUP CLASS
+// 4. AUTO-INITIALIZATION SETUP & LEADS DB
 // ==========================================
 require_once ORANGE_THEME_DIR . '/inc/class-theme-setup.php';
+require_once ORANGE_THEME_DIR . '/inc/class-leads-manager.php';
 
 // ==========================================
 // TEMPORAL — DEMO INTERNA DE SEO (desactivado)

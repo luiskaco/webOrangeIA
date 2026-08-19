@@ -1525,24 +1525,36 @@ const initGlobalContactModal = () => {
 		}
 	} );
 
-	// AJAX Form Submission
-	if ( form ) {
-		form.addEventListener( 'submit', ( e ) => {
+	// Generic AJAX Form Submitter Helper
+	const setupAjaxForm = ( formEl, submitBtnEl, responseEl, onSuccessCallback ) => {
+		if ( ! formEl ) return;
+
+		formEl.addEventListener( 'submit', ( e ) => {
 			e.preventDefault();
 			if ( ! window.orange_ajax || ! window.orange_ajax.ajax_url ) {
-				if ( responseContainer ) {
-					responseContainer.className = 'g-modal__response g-modal__response--error';
-					responseContainer.textContent = 'Error de configuración AJAX.';
+				if ( responseEl ) {
+					responseEl.style.display = 'block';
+					responseEl.style.background = 'rgba(239, 68, 68, 0.12)';
+					responseEl.style.border = '1px solid rgba(239, 68, 68, 0.3)';
+					responseEl.style.color = '#ef4444';
+					responseEl.textContent = 'Error de configuración AJAX en el sitio.';
 				}
 				return;
 			}
 
-			if ( submitBtn ) {
-				submitBtn.disabled = true;
-				submitBtn.classList.add( 'is-loading' );
+			const originalBtnText = submitBtnEl ? submitBtnEl.innerHTML : '';
+			if ( submitBtnEl ) {
+				submitBtnEl.disabled = true;
+				submitBtnEl.classList.add( 'is-loading' );
+				submitBtnEl.style.opacity = '0.7';
 			}
 
-			const formData = new FormData( form );
+			if ( responseEl ) {
+				responseEl.style.display = 'none';
+				responseEl.textContent = '';
+			}
+
+			const formData = new FormData( formEl );
 
 			fetch( window.orange_ajax.ajax_url, {
 				method: 'POST',
@@ -1550,32 +1562,70 @@ const initGlobalContactModal = () => {
 			} )
 				.then( ( res ) => res.json() )
 				.then( ( data ) => {
-					if ( submitBtn ) {
-						submitBtn.disabled = false;
-						submitBtn.classList.remove( 'is-loading' );
+					if ( submitBtnEl ) {
+						submitBtnEl.disabled = false;
+						submitBtnEl.classList.remove( 'is-loading' );
+						submitBtnEl.style.opacity = '';
+						submitBtnEl.innerHTML = originalBtnText;
 					}
-					if ( responseContainer ) {
+					if ( responseEl ) {
+						responseEl.style.display = 'block';
 						if ( data.success ) {
-							responseContainer.className = 'g-modal__response g-modal__response--success';
-							responseContainer.textContent = data.data.message || '¡Mensaje enviado con éxito!';
-							form.reset();
-							setTimeout( closeModal, 3500 );
+							responseEl.className = ( responseEl.className || '' ) + ' g-modal__response--success';
+							responseEl.style.background = 'rgba(34, 197, 94, 0.12)';
+							responseEl.style.border = '1px solid rgba(34, 197, 94, 0.35)';
+							responseEl.style.color = '#22c55e';
+							responseEl.textContent = data.data.message || '¡Mensaje enviado con éxito!';
+							formEl.reset();
+							if ( typeof onSuccessCallback === 'function' ) {
+								onSuccessCallback();
+							}
 						} else {
-							responseContainer.className = 'g-modal__response g-modal__response--error';
-							responseContainer.textContent = data.data.message || 'Error al enviar el formulario.';
+							responseEl.className = ( responseEl.className || '' ) + ' g-modal__response--error';
+							responseEl.style.background = 'rgba(239, 68, 68, 0.12)';
+							responseEl.style.border = '1px solid rgba(239, 68, 68, 0.35)';
+							responseEl.style.color = '#ef4444';
+							responseEl.textContent = data.data.message || 'Error al enviar el formulario.';
 						}
 					}
 				} )
 				.catch( () => {
-					if ( submitBtn ) {
-						submitBtn.disabled = false;
-						submitBtn.classList.remove( 'is-loading' );
+					if ( submitBtnEl ) {
+						submitBtnEl.disabled = false;
+						submitBtnEl.classList.remove( 'is-loading' );
+						submitBtnEl.style.opacity = '';
+						submitBtnEl.innerHTML = originalBtnText;
 					}
-					if ( responseContainer ) {
-						responseContainer.className = 'g-modal__response g-modal__response--error';
-						responseContainer.textContent = 'Ocurrió un error inesperado al conectar con el servidor.';
+					if ( responseEl ) {
+						responseEl.style.display = 'block';
+						responseEl.style.background = 'rgba(239, 68, 68, 0.12)';
+						responseEl.style.border = '1px solid rgba(239, 68, 68, 0.35)';
+						responseEl.style.color = '#ef4444';
+						responseEl.textContent = 'Ocurrió un error de conexión con el servidor. Inténtalo de nuevo.';
 					}
 				} );
 		} );
+	};
+
+	// 1. Setup Global Modal Form
+	setupAjaxForm( form, submitBtn, responseContainer, () => {
+		setTimeout( closeModal, 3500 );
+	} );
+
+	// 2. Setup Home Contact Form
+	const homeForm = document.getElementById( 'home-contact-form' );
+	const homeSubmit = document.getElementById( 'home-contact-submit' );
+	const homeResponse = document.getElementById( 'home-contact-response' );
+	if ( homeForm ) {
+		setupAjaxForm( homeForm, homeSubmit, homeResponse );
+	}
+
+	// 3. Setup Podcast Booking Form
+	const podcastForm = document.getElementById( 'podcast-booking-form' );
+	const podcastSubmit = document.getElementById( 'podcast-form-submit' );
+	const podcastResponse = document.getElementById( 'podcast-form-response' );
+	if ( podcastForm ) {
+		setupAjaxForm( podcastForm, podcastSubmit, podcastResponse );
 	}
 };
+

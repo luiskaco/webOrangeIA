@@ -318,7 +318,11 @@ $podcast_img_uri = $theme_uri . '/assets/images/podcast';
 			</p>
 
 			<div class="podcast-form-card" data-reveal="scale">
-				<form action="#" method="post" class="podcast-form">
+				<form action="#" method="post" class="podcast-form" id="podcast-booking-form">
+					<?php wp_nonce_field( 'orange_contact_nonce', 'contact_security' ); ?>
+					<input type="hidden" name="action" value="send_service_contact">
+					<input type="hidden" name="service_origin" value="Orange Studio Podcast — Reserva">
+					<input type="hidden" name="page_url" value="<?php echo esc_url( get_permalink() ); ?>">
 					<div class="podcast-form__row">
 						<div class="podcast-form__group">
 							<label for="pod-name" class="podcast-form__label">NOMBRE</label>
@@ -335,19 +339,19 @@ $podcast_img_uri = $theme_uri . '/assets/images/podcast';
 							<label for="pod-type" class="podcast-form__label">TIPO DE PODCAST</label>
 							<select id="pod-type" name="podcast_type" class="podcast-form__select">
 								<option value="">Selecciona un tipo</option>
-								<option value="entrevista">Entrevista / Conversatorio</option>
-								<option value="corporativo">Corporativo / Negocios</option>
-								<option value="estilo-de-vida">Estilo de Vida / Entretenimiento</option>
-								<option value="educativo">Educativo / Formativo</option>
+								<option value="Entrevista / Conversatorio">Entrevista / Conversatorio</option>
+								<option value="Corporativo / Negocios">Corporativo / Negocios</option>
+								<option value="Estilo de Vida / Entretenimiento">Estilo de Vida / Entretenimiento</option>
+								<option value="Educativo / Formativo">Educativo / Formativo</option>
 							</select>
 						</div>
 						<div class="podcast-form__group">
 							<label for="pod-scenario" class="podcast-form__label">TIPO DE ESCENARIO</label>
 							<select id="pod-scenario" name="scenario_type" class="podcast-form__select">
 								<option value="">Selecciona un escenario</option>
-								<option value="loft">The Podcast Loft</option>
-								<option value="urban">Urban Corner</option>
-								<option value="noir">Estudio Noir</option>
+								<option value="The Podcast Loft">The Podcast Loft</option>
+								<option value="Urban Corner">Urban Corner</option>
+								<option value="Estudio Noir">Estudio Noir</option>
 							</select>
 						</div>
 					</div>
@@ -361,22 +365,24 @@ $podcast_img_uri = $theme_uri . '/assets/images/podcast';
 							<label for="pod-time" class="podcast-form__label">HORA</label>
 							<select id="pod-time" name="session_time" class="podcast-form__select">
 								<option value="">Selecciona la hora</option>
-								<option value="09:00">09:00 AM</option>
-								<option value="11:00">11:00 AM</option>
-								<option value="14:00">02:00 PM</option>
-								<option value="16:00">04:00 PM</option>
-								<option value="18:00">06:00 PM</option>
+								<option value="09:00 AM">09:00 AM</option>
+								<option value="11:00 AM">11:00 AM</option>
+								<option value="02:00 PM">02:00 PM</option>
+								<option value="04:00 PM">04:00 PM</option>
+								<option value="06:00 PM">06:00 PM</option>
 							</select>
 						</div>
 					</div>
 
 					<div class="podcast-form__group podcast-form__group--full">
 						<label for="pod-message" class="podcast-form__label">MENSAJE</label>
-						<textarea id="pod-message" name="message" rows="4" class="podcast-form__textarea"></textarea>
+						<textarea id="pod-message" name="message" rows="4" class="podcast-form__textarea" placeholder="Cuéntanos detalles de tu proyecto o requerimientos especiales..."></textarea>
 					</div>
 
+					<div class="podcast-form__response" id="podcast-form-response" style="display:none;margin-bottom:14px;font-size:13.5px;font-weight:600;padding:10px 14px;border-radius:4px;"></div>
+
 					<div class="podcast-form__submit-row">
-						<button type="submit" class="podcast-form__submit-btn">RESERVAR SESIÓN</button>
+						<button type="submit" class="podcast-form__submit-btn" id="podcast-form-submit">RESERVAR SESIÓN</button>
 					</div>
 				</form>
 			</div>

@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 ### Añadido
+- **Gestión de Leads en Base de Datos y Notificaciones Multi-Destinatario (`functions.php`, `inc/class-leads-manager.php`)**:
+  - Creación automática de la tabla `wp_orange_leads` para registrar todos los envíos de formularios de contacto (Modal Global, Home y Podcast).
+  - Panel en wp-admin (**"Leads Web"**) con contador en tiempo real, cambio de estado, buscador y exportación directa a Excel en formato CSV con UTF-8 BOM.
+  - Enrutamiento unificado de correos a la lista oficial (`gorellana@orange-la.com`, `mayllon@orange-la.com`, `negocios@orange-la.com` y admin) con sanitización y nonces de seguridad.
 - **Mini Carousel Minimalista y Animaciones GSAP en Home (`index.php`, `home.css`, `home-gsap.js`)**:
   - Implementación de mini carousel minimalista en la sección "Voz de Expertos" con navegación táctil/swipe, flechas circulares translúcidas y contador de posición dinámico (`01 / 06`).
   - Integración de GSAP 3.15 + ScrollTrigger en la Home (`home-gsap.js`): animación en cascada para las 6 cajas tácticas de Asuntos Sensibles, entrada lateral en Voz de Expertos, conteo progresivo y títulos de Premios.

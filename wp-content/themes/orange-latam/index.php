@@ -636,7 +636,11 @@ get_header();
 			<!-- Contact Form Card -->
 			<div class="contact__form-card" data-reveal="right">
 				<div class="contact__form-accent-bar"></div>
-				<form action="#" method="post" class="contact__form-body">
+				<form action="#" method="post" class="contact__form-body" id="home-contact-form">
+					<?php wp_nonce_field( 'orange_contact_nonce', 'contact_security' ); ?>
+					<input type="hidden" name="action" value="send_service_contact">
+					<input type="hidden" name="service_origin" value="Home — Contacto General">
+					<input type="hidden" name="page_url" value="<?php echo esc_url( home_url( '/' ) ); ?>">
 					<div class="contact__form-row">
 						<div class="contact__form-group">
 							<label for="contact-name" class="contact__form-label">Nombres</label>
@@ -659,9 +663,10 @@ get_header();
 					</div>
 					<div class="contact__form-group contact__form-group--textarea">
 						<label for="contact-message" class="contact__form-label">Mensaje</label>
-						<textarea id="contact-message" name="message" rows="4" class="contact__form-textarea" required></textarea>
+						<textarea id="contact-message" name="message" rows="4" class="contact__form-textarea" placeholder="¿En qué podemos ayudarte?" required></textarea>
 					</div>
-					<button type="submit" class="contact__form-submit">Enviar mensaje</button>
+					<div class="contact__form-response" id="home-contact-response" style="display:none;margin-bottom:14px;font-size:13.5px;font-weight:600;padding:10px 14px;border-radius:4px;"></div>
+					<button type="submit" class="contact__form-submit" id="home-contact-submit">Enviar mensaje</button>
 				</form>
 			</div>
 		</div>
