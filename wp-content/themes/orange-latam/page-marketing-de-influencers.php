@@ -53,6 +53,7 @@ get_header();
 	     1. HERO
 	     ========================================== -->
 	<section class="infl-hero" id="inicio">
+		<h1 class="infl-hero__title-sr">Agencia de Marketing de Influencers en Perú</h1>
 		<video class="infl-hero__video-bg" autoplay muted loop playsinline preload="auto">
 			<source src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/videos/marketing-de-influencers-hero.mp4" type="video/mp4">
 		</video>

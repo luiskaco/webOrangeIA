@@ -109,16 +109,28 @@
 }
 
 .hero__dot {
+	width: 24px;
+	height: 24px;
+	padding: 0;
+	border: none;
+	background: transparent;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.hero__dot::before {
+	content: "";
+	display: block;
 	width: 10px;
 	height: 3px;
 	background: rgba(252, 245, 233, 0.35);
-	border: none;
-	cursor: pointer;
+	border-radius: 999px;
 	transition: all 0.3s;
-	padding: 0;
 }
 
-.hero__dot--active {
+.hero__dot--active::before {
 	width: 28px;
 	background: var(--color-bg-light);
 }
@@ -189,7 +201,7 @@
 	font-family: var(--font-display);
 	font-weight: 900;
 	font-size: clamp(28px, 3.2vw, 42px);
-	color: #3386BE;
+	color: #2D6E9E;
 }
 
 .stats__label {
