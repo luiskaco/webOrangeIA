@@ -1,7 +1,6 @@
 <?php
 /**
- * Generic fallback template for WordPress pages that don't have a
- * dedicated page-{slug}.php template (e.g. Política de Privacidad).
+ * Template for the Política de Privacidad page.
  *
  * @package Orange_Latam
  */
