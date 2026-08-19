@@ -1,6 +1,9 @@
 # 08_CHANGELOG.md — Historial de Versiones
 
 ## [Unreleased]
+### Seguridad
+- **Auditoría de seguridad completa** (ver `docs/06_TASKS.md`): regeneradas las 8 salts de autenticación de WordPress en `wp-config.php` (estaban todas duplicadas del mismo string — riesgo de forjar cookies de sesión de admin). Corregido host header injection en `WP_SITEURL`/`WP_HOME` con allowlist de dominios válidos. Movido fuera del docroot un backup completo del sitio (127 MB, con hashes de password y datos de leads) que quedaba accesible por HTTP sin protección real. `wp-config.php` no está trackeado en git — estos cambios no viajan con `git push`, aplican solo al entorno donde se editó el archivo.
+
 ### Añadido
 - **Gestión de Leads en Base de Datos y Notificaciones Multi-Destinatario (`functions.php`, `inc/class-leads-manager.php`)**:
   - Creación automática de la tabla `wp_orange_leads` para registrar todos los envíos de formularios de contacto (Modal Global, Home y Podcast).

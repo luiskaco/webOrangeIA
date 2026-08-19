@@ -1,5 +1,15 @@
   # 06_TASKS.md — Backlog Activo
 
+## Auditoría de seguridad (2026-08-19)
+- [x] Auditoría de seguridad completa (subagente `security-auditor`, solo lectura) sobre `functions.php` (endpoint AJAX de leads), `wp-config.php`, headers HTTP, secrets, GDPR/consentimiento, XSS y hardening general — reporte con 3 críticos, 5 altos, 7 medios, 6 bajos
+- [x] **Crítico**: las 8 salts de autenticación (`AUTH_KEY`, `NONCE_SALT`, etc. en `wp-config.php`) eran el mismo string copiado — regeneradas 8 salts únicas de 64 caracteres. Desloguea a todos los usuarios admin (esperado)
+- [x] **Crítico**: `WP_SITEURL`/`WP_HOME` se armaban con `$_SERVER['HTTP_HOST']` sin validar (host header injection — permite falsificar el link de reset de password). Fix: allowlist de hosts válidos (`orangeia.test`, `orange-la.com`, `www.orange-la.com`) en `wp-config.php`
+- [x] **Alto**: backup completo del sitio (127 MB, `.wpress`, contenía hashes de password y todos los leads) accesible por HTTP en `wp-content/ai1wm-backups/` sin protección real del `.htaccess` — movido fuera del docroot a `C:\laragon\backups-fuera-del-sitio\` (no borrado, por si se necesita)
+- [ ] **Crítico pendiente de confirmar**: verificar que `wp-config.php` de producción usa un usuario de MySQL con privilegios mínimos (no root sin password como en local)
+- [ ] **Alto pendiente**: rate limiting/honeypot en el endpoint AJAX del formulario de contacto (`wp_ajax_nopriv_send_service_contact`), plugin "All in One WP Migration Unlimited" parece ser una versión nulled (no oficial) — evaluar desinstalar, headers de seguridad HTTP (CSP, X-Frame-Options, etc.) ausentes en todo el sitio
+- [ ] **Medio/Bajo pendiente**: CSV injection en exportación de leads (`inc/class-leads-manager.php`), XSS potencial en `main.js` (carrusel Voz de Expertos, requiere rol Autor comprometido), IP de leads tomada de headers falsificables, `xmlrpc.php` expuesto sin bloqueo, falta `DISALLOW_FILE_EDIT`, confirmar si existe usuario `admin` (username débil)
+- [ ] **GDPR pendiente**: formulario de contacto captura datos personales (incluida IP) sin checkbox de consentimiento ni página de política de privacidad real (el link actual apunta a `#`) — requiere contenido legal, no solo código
+
 ## Sprint 1: Cimiento del Tema & Auto-configuración
 - [x] Documentar especificaciones del tema (PRD, SDD, SYSTEM_SPEC, ARCHITECTURE)
 - [/] Diseñar e implementar plan de la primera vista (Home/Landing)
