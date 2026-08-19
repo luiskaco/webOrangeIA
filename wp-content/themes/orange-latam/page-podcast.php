@@ -55,25 +55,17 @@ $podcast_img_uri = $theme_uri . '/assets/images/podcast';
 	     ========================================== -->
 	<section class="podcast-hero" id="inicio">
 		<div class="podcast-hero__video-container">
-			<iframe class="podcast-hero__video" 
-				src="https://www.youtube.com/embed/xkt_vSw_FK8?autoplay=1&mute=1&loop=1&playlist=xkt_vSw_FK8&controls=0&showinfo=0&autohide=1&modestbranding=1&playsinline=1&enablejsapi=1&disablekb=1&fs=0&iv_load_policy=3&rel=0" 
+			<iframe class="podcast-hero__video"
+				src="https://www.youtube.com/embed/xkt_vSw_FK8?autoplay=1&mute=1&loop=1&playlist=xkt_vSw_FK8&controls=0&showinfo=0&autohide=1&modestbranding=1&playsinline=1&enablejsapi=1&disablekb=1&fs=0&iv_load_policy=3&rel=0"
 				title="Orange Studio Podcast Video"
-				frameborder="0" 
+				frameborder="0"
 				allow="autoplay; encrypted-media; picture-in-picture">
 			</iframe>
 		</div>
 		<div class="podcast-hero__vignette"></div>
-	</section>
-
-	<!-- ==========================================
-	     1b. SUB-BANNER SECTION (Gray Box Text)
-	     ========================================== -->
-	<section class="podcast-subbanner">
-		<div class="podcast-subbanner__container" data-reveal="up">
-			<h1 class="podcast-subbanner__text">
-				Estudio de Podcast en Lima: graba y edita en <strong style="white-space: nowrap;">Orange Studio</strong>
-			</h1>
-		</div>
+		<h1 class="podcast-hero__title">
+			Estudio de Podcast en Lima: graba y edita en <strong style="white-space: nowrap;">Orange Studio</strong>
+		</h1>
 	</section>
 
 	<!-- ==========================================
