@@ -648,27 +648,27 @@ get_header();
 					</div>
 					<div class="contact__form-row">
 						<div class="contact__form-group">
-							<label for="contact-name" class="contact__form-label">Nombres</label>
-							<input type="text" id="contact-name" name="name" placeholder="Tu nombre" class="contact__form-input" required>
+							<label for="contact-name" class="contact__form-label">Nombre y Apellido *</label>
+							<input type="text" id="contact-name" name="contact_name" placeholder="Ej. Carlos Mendoza" class="contact__form-input" required>
 						</div>
 						<div class="contact__form-group">
-							<label for="contact-lastname" class="contact__form-label">Apellidos</label>
-							<input type="text" id="contact-lastname" name="lastname" placeholder="Tu apellido" class="contact__form-input" required>
+							<label for="contact-email" class="contact__form-label">Correo Corporativo *</label>
+							<input type="email" id="contact-email" name="contact_email" placeholder="ejemplo@empresa.com" class="contact__form-input" required>
 						</div>
 					</div>
 					<div class="contact__form-row">
 						<div class="contact__form-group">
-							<label for="contact-email" class="contact__form-label">Email</label>
-							<input type="email" id="contact-email" name="email" placeholder="Tu email" class="contact__form-input" required>
+							<label for="contact-phone" class="contact__form-label">Teléfono / WhatsApp *</label>
+							<input type="tel" id="contact-phone" name="contact_phone" placeholder="+51 987 654 321" class="contact__form-input" required>
 						</div>
 						<div class="contact__form-group">
-							<label for="contact-phone" class="contact__form-label">Teléfono</label>
-							<input type="tel" id="contact-phone" name="phone" placeholder="Tu teléfono" class="contact__form-input">
+							<label for="contact-company" class="contact__form-label">Empresa / Organización</label>
+							<input type="text" id="contact-company" name="contact_company" placeholder="Nombre de tu empresa" class="contact__form-input">
 						</div>
 					</div>
 					<div class="contact__form-group contact__form-group--textarea">
-						<label for="contact-message" class="contact__form-label">Mensaje</label>
-						<textarea id="contact-message" name="message" rows="4" class="contact__form-textarea" placeholder="¿En qué podemos ayudarte?" required></textarea>
+						<label for="contact-message" class="contact__form-label">¿En qué podemos ayudarte? *</label>
+						<textarea id="contact-message" name="contact_message" rows="4" class="contact__form-textarea" placeholder="Describe brevemente tus objetivos, tiempos o necesidades del proyecto..." required></textarea>
 					</div>
 					<div class="contact__form-response" id="home-contact-response" style="display:none;margin-bottom:14px;font-size:13.5px;font-weight:600;padding:10px 14px;border-radius:4px;"></div>
 					<button type="submit" class="contact__form-submit" id="home-contact-submit">Enviar mensaje</button>
