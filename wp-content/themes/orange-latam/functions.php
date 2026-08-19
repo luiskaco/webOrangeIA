@@ -57,6 +57,45 @@ function orange_latam_theme_setup() {
 add_action( 'after_setup_theme', 'orange_latam_theme_setup' );
 
 // ==========================================
+// 2b. DISABLE COMMENTS SITE-WIDE
+// ==========================================
+// Ningún template del theme renderiza comment_form()/comments_template(), pero
+// WordPress igual acepta submits directos a wp-comments-post.php si el post
+// tiene comment_status=open. Estos filtros lo cierran a nivel código, así no
+// depende de la config de la base de datos (que se puede revertir sola con
+// un post nuevo si default_comment_status vuelve a 'open').
+add_filter( 'comments_open', '__return_false', 20, 2 );
+add_filter( 'pings_open', '__return_false', 20, 2 );
+add_filter( 'comments_array', '__return_empty_array', 10, 2 );
+
+function orange_latam_remove_comments_support() {
+	remove_post_type_support( 'post', 'comments' );
+	remove_post_type_support( 'page', 'comments' );
+	remove_post_type_support( 'post', 'trackbacks' );
+	remove_post_type_support( 'page', 'trackbacks' );
+}
+add_action( 'init', 'orange_latam_remove_comments_support', 100 );
+
+function orange_latam_remove_comments_admin_menu() {
+	remove_menu_page( 'edit-comments.php' );
+}
+add_action( 'admin_menu', 'orange_latam_remove_comments_admin_menu' );
+
+function orange_latam_remove_comments_admin_bar() {
+	if ( is_admin_bar_showing() ) {
+		global $wp_admin_bar;
+		$wp_admin_bar->remove_menu( 'comments' );
+	}
+}
+add_action( 'wp_before_admin_bar_render', 'orange_latam_remove_comments_admin_bar' );
+
+// Redirige cualquier intento directo de POST a wp-comments-post.php.
+function orange_latam_block_comment_submission() {
+	wp_die( __( 'Los comentarios están deshabilitados en este sitio.', 'orange-latam' ), '', array( 'response' => 403 ) );
+}
+add_action( 'pre_comment_on_post', 'orange_latam_block_comment_submission' );
+
+// ==========================================
 // 3. ENQUEUE ASSETS (CSS & JS)
 // ==========================================
 
