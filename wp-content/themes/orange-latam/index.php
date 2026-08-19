@@ -371,14 +371,14 @@ get_header();
 				<div class="home-awards__track">
 					<?php
 					$home_awards = array(
-						array( 'name' => 'Purpose Awards', 'image' => 'Purpose-Awards.webp', 'line1' => 'Purpose Awards', 'line2' => 'Best Use of', 'line3' => 'Celebrity Campaign' ),
-						array( 'name' => 'PR Week Global Awards', 'image' => 'PR-Week-Global-Awards.webp', 'line1' => 'PR Week Global Awards', 'line2' => 'Best Influencers', 'line3' => 'Marketing Campaign' ),
-						array( 'name' => 'IPRA Golden World Awards', 'image' => 'IPRA-Golden-World-Awards.png', 'line1' => 'IPRA Golden World Awards', 'line2' => 'Best Influencers', 'line3' => 'Management Campaign' ),
-						array( 'name' => 'Sabre Latin America Awards', 'image' => 'Sabre-Global-World-Awards.png', 'line1' => 'Sabre Latin America Awards', 'line2' => 'Diamond', 'line3' => 'Awards Category' ),
-						array( 'name' => 'Sabre Latin America Awards', 'image' => 'Sabre-Global-World-Awards.png', 'line1' => 'Sabre Latin America Awards', 'line2' => 'Best Influencer', 'line3' => 'Marketing Campaign' ),
-						array( 'name' => 'Effie Awards', 'image' => 'Effie-Awards.png', 'line1' => 'Effie Awards', 'line2' => 'Mejor Campaña de', 'line3' => 'Marketing de Influencers' ),
+						array( 'name' => 'Purpose Awards', 'image' => 'purpose-awards.webp', 'line1' => 'Purpose Awards', 'line2' => 'Best Use of', 'line3' => 'Celebrity Campaign' ),
+						array( 'name' => 'PR Week Global Awards', 'image' => 'pr-week-global-awards.webp', 'line1' => 'PR Week Global Awards', 'line2' => 'Best Influencers', 'line3' => 'Marketing Campaign' ),
+						array( 'name' => 'IPRA Golden World Awards', 'image' => 'ipra-golden-world-awards.png', 'line1' => 'IPRA Golden World Awards', 'line2' => 'Best Influencers', 'line3' => 'Management Campaign' ),
+						array( 'name' => 'Sabre Latin America Awards', 'image' => 'sabre-global-world-awards.png', 'line1' => 'Sabre Latin America Awards', 'line2' => 'Diamond', 'line3' => 'Awards Category' ),
+						array( 'name' => 'Sabre Latin America Awards', 'image' => 'sabre-global-world-awards.png', 'line1' => 'Sabre Latin America Awards', 'line2' => 'Best Influencer', 'line3' => 'Marketing Campaign' ),
+						array( 'name' => 'Effie Awards', 'image' => 'effie-awards.png', 'line1' => 'Effie Awards', 'line2' => 'Mejor Campaña de', 'line3' => 'Marketing de Influencers' ),
 						array( 'name' => 'Cannes Lions', 'image' => 'Cannes-Lions-.webp', 'line1' => 'Cannes Lions', 'line2' => 'Best Social &', 'line3' => 'Influencer Campaign' ),
-						array( 'name' => 'Sabre Global World Awards', 'image' => 'Sabre-Global-World-Awards.png', 'line1' => 'Sabre Global World Awards', 'line2' => 'Best Influencer', 'line3' => 'Marketing Campaign' ),
+						array( 'name' => 'Sabre Global World Awards', 'image' => 'sabre-global-world-awards.png', 'line1' => 'Sabre Global World Awards', 'line2' => 'Best Influencer', 'line3' => 'Marketing Campaign' ),
 					);
 					// Render twice for continuous loop
 					for ( $i = 0; $i < 2; $i++ ) :
