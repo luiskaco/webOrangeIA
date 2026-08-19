@@ -127,7 +127,7 @@ if ( is_home() || is_singular( 'post' ) || is_page( 'marketing-de-influencers' )
 
 <!-- FOOTER -->
 <footer class="footer">
-	<span class="footer__text">Todos los Derechos Reservados <?php echo esc_html( date( 'Y' ) ); ?>© Orange Latam SAC</span>
+	<span class="footer__text">Todos los Derechos Reservados <?php echo esc_html( date( 'Y' ) ); ?>© Orange Latam SAC · <a href="<?php echo esc_url( home_url( '/politica-de-privacidad/' ) ); ?>" style="color: inherit; text-decoration: underline;">Política de Privacidad</a></span>
 </footer>
 
 <!-- Acciones Flotantes: WhatsApp y Volver Arriba -->

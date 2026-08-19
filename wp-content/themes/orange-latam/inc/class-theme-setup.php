@@ -19,6 +19,120 @@ class Orange_Theme_Setup {
 	}
 
 	/**
+	 * Contenido de la página de Política de Privacidad. Cubre los datos que
+	 * el sitio realmente recolecta hoy (formularios de contacto: nombre,
+	 * email, teléfono, empresa, mensaje, IP) — no incluye cláusulas de
+	 * cookies de analítica/marketing porque el sitio no carga ninguna
+	 * (verificado en la auditoría de seguridad de 2026-08-19). Redactado en
+	 * lenguaje simple con referencia a la Ley N° 29733 de Protección de
+	 * Datos Personales (Perú). Es un borrador funcional, no un documento
+	 * validado por un abogado — recomendado revisión legal antes de
+	 * considerarlo definitivo, especialmente el plazo de conservación y el
+	 * procedimiento exacto de ejercicio de derechos ARCO.
+	 */
+	private static function get_privacy_policy_content() {
+		return <<<'HTML'
+<!-- wp:paragraph -->
+<p><em>Última actualización: agosto de 2026.</em></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>En Orange Latam nos tomamos en serio la protección de tus datos personales. Esta política explica, en lenguaje simple, qué información recolectamos cuando visitas este sitio o completas alguno de nuestros formularios, para qué la usamos y qué derechos tienes sobre ella, conforme a la Ley N° 29733, Ley de Protección de Datos Personales del Perú, y su Reglamento.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2>¿Quién es responsable de tus datos?</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Orange Latam, con domicilio en Calle Enrique Palacios 360 Of. 306, Centro Empresarial Abril, Miraflores, Lima, Perú. Puedes contactarnos para cualquier consulta sobre tus datos personales escribiendo a <a href="mailto:negocios@orange-la.com">negocios@orange-la.com</a>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2>¿Qué datos recolectamos?</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Solo recolectamos datos cuando completas voluntariamente alguno de nuestros formularios de contacto o cotización. Los campos que solicitamos son:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul>
+<li>Nombre y apellido</li>
+<li>Correo electrónico</li>
+<li>Teléfono / WhatsApp</li>
+<li>Empresa u organización (opcional, según el formulario)</li>
+<li>El mensaje o consulta que nos escribes</li>
+</ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Además, guardamos automáticamente la dirección IP desde la que se envía el formulario, como medida de seguridad para prevenir spam y abuso.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Este sitio no utiliza cookies de análisis (como Google Analytics) ni de publicidad (como Meta Pixel) al día de esta actualización. Si en el futuro incorporamos alguna, primero te lo pediremos explícitamente mediante un aviso de cookies, y podrás aceptar o rechazar cada tipo por separado.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2>¿Para qué usamos tus datos?</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul>
+<li>Responder a tu consulta o solicitud de cotización</li>
+<li>Contactarte por correo, teléfono o WhatsApp respecto al servicio que nos consultaste</li>
+<li>Llevar un registro interno de nuestras oportunidades comerciales (leads)</li>
+</ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>No vendemos, alquilamos ni compartimos tus datos con terceros para fines comerciales ajenos a Orange Latam.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2>¿Cuál es la base legal para tratar tus datos?</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Tu consentimiento expreso, que otorgas al marcar la casilla correspondiente antes de enviar cualquiera de nuestros formularios. Enviar el formulario sin marcar esa casilla no es válido como consentimiento.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2>¿Cuánto tiempo conservamos tus datos?</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Conservamos los datos de contacto hasta 24 meses desde tu último contacto con nosotros, o hasta que nos solicites su eliminación, lo que ocurra primero.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2>¿Qué derechos tienes?</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Como titular de tus datos personales, tienes derecho a acceder, rectificar, cancelar (eliminar) u oponerte al uso de tus datos (derechos ARCO), así como a revocar tu consentimiento en cualquier momento. Para ejercer cualquiera de estos derechos, escríbenos a <a href="mailto:negocios@orange-la.com">negocios@orange-la.com</a> indicando tu nombre y el correo con el que nos contactaste — responderemos tu solicitud dentro de los plazos que establece la ley.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2>¿Cómo protegemos tus datos?</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Aplicamos medidas técnicas razonables para proteger tu información contra accesos no autorizados, incluyendo conexión cifrada (HTTPS), controles de acceso a nuestros sistemas internos y protecciones contra envíos automatizados (spam) en nuestros formularios.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2>Cambios a esta política</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Podemos actualizar esta política ocasionalmente. La fecha de la última actualización siempre estará indicada al inicio de esta página.</p>
+<!-- /wp:paragraph -->
+HTML;
+	}
+
+	/**
 	 * Setup pages, static home page, and menu programmatically.
 	 */
 	public static function setup_theme_defaults() {
@@ -63,6 +177,10 @@ class Orange_Theme_Setup {
 			'presencia-digital' => array(
 				'title'   => 'Presencia Digital: Web, SEO y E-Commerce',
 				'content' => '',
+			),
+			'politica-de-privacidad' => array(
+				'title'   => 'Política de Privacidad',
+				'content' => self::get_privacy_policy_content(),
 			),
 		);
 
