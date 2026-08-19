@@ -25,8 +25,9 @@ $is_branding_context          = is_page( 'branding-creatividad' ) || is_page_tem
 $is_eventos_context           = is_page( 'eventos-activaciones' ) || is_page_template( 'page-eventos-activaciones.php' );
 $is_gestion_acceso_context    = is_page( 'gestion-de-acceso' ) || is_page_template( 'page-gestion-de-acceso.php' );
 $is_presencia_digital_context = is_page( 'presencia-digital' ) || is_page_template( 'page-presencia-digital.php' );
+$is_privacy_context           = is_page( 'politica-de-privacidad' ) || is_page_template( 'page-politica-de-privacidad.php' );
 $nav_location                 = $is_presencia_digital_context ? 'presencia_digital' : ( $is_gestion_acceso_context ? 'gestion_acceso' : ( $is_eventos_context ? 'eventos' : ( $is_branding_context ? 'branding' : ( $is_asuntos_publicos_context ? 'asuntos_publicos' : ( $is_pr_context ? 'pr' : ( $is_podcast_context ? 'podcast' : ( $is_marketing_digital_context ? 'marketing_digital' : ( $is_influencers_context ? 'influencers' : ( $is_blog_context ? 'blog' : 'primary' ) ) ) ) ) ) ) ) );
-$logo_url                     = ( $is_blog_context || $is_influencers_context || $is_marketing_digital_context || $is_podcast_context || $is_pr_context || $is_asuntos_publicos_context || $is_branding_context || $is_eventos_context || $is_gestion_acceso_context || $is_presencia_digital_context ) ? home_url( '/' ) : '#inicio';
+$logo_url                     = ( $is_blog_context || $is_influencers_context || $is_marketing_digital_context || $is_podcast_context || $is_pr_context || $is_asuntos_publicos_context || $is_branding_context || $is_eventos_context || $is_gestion_acceso_context || $is_presencia_digital_context || $is_privacy_context ) ? home_url( '/' ) : '#inicio';
 ?>
 <header class="header<?php echo ( $is_pr_context || $is_asuntos_publicos_context || $is_branding_context || $is_eventos_context || $is_gestion_acceso_context || $is_presencia_digital_context ) ? ' header--pr' : ''; ?>">
 	<div class="header__container">
@@ -46,7 +47,15 @@ $logo_url                     = ( $is_blog_context || $is_influencers_context ||
 			$menu_id = isset( $locations[ $nav_location ] ) ? $locations[ $nav_location ] : null;
 			$menu_items = $menu_id ? wp_get_nav_menu_items( $menu_id ) : array();
 
-			if ( ! empty( $menu_items ) ) {
+			if ( $is_privacy_context ) {
+				// Página legal standalone: solo necesita volver al Home, no
+				// tiene secciones propias que linkear con anclas. Se evalúa
+				// antes que el menú registrado porque el menú "primary" del
+				// Home usa anclas (#inicio, #nosotros) que no existen acá.
+				?>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="header__link">Inicio</a>
+				<?php
+			} elseif ( ! empty( $menu_items ) ) {
 				foreach ( $menu_items as $item ) {
 					echo '<a href="' . esc_url( $item->url ) . '" class="header__link">' . esc_html( $item->title ) . '</a>';
 				}
