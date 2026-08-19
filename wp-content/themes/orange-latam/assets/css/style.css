@@ -5,6 +5,70 @@
    ========================================================================== */
 
 /* ==========================================================================
+   12a. POST DETAIL - ARTICLE BODY (restaura espaciado que el reset global
+   de base.css [* { margin: 0 }] anula en el contenido de the_content())
+   ========================================================================== */
+.post-detail__content p {
+	margin-bottom: 24px;
+}
+
+.post-detail__content p:last-child {
+	margin-bottom: 0;
+}
+
+.post-detail__content h2,
+.post-detail__content h3,
+.post-detail__content h4 {
+	margin-top: 40px;
+	margin-bottom: 16px;
+	color: var(--color-bg-light);
+	font-family: var(--font-display);
+	line-height: 1.3;
+}
+
+.post-detail__content h2 {
+	font-size: clamp(22px, 2.6vw, 30px);
+}
+
+.post-detail__content h3 {
+	font-size: clamp(19px, 2.2vw, 24px);
+}
+
+.post-detail__content ul,
+.post-detail__content ol {
+	margin-bottom: 24px;
+	padding-left: 24px;
+}
+
+.post-detail__content li {
+	margin-bottom: 8px;
+}
+
+.post-detail__content li:last-child {
+	margin-bottom: 0;
+}
+
+.post-detail__content blockquote {
+	margin: 32px 0;
+	padding: 16px 24px;
+	border-left: 3px solid var(--color-orange);
+	color: rgba(252, 245, 233, 0.65);
+	font-style: italic;
+}
+
+.post-detail__content img {
+	margin: 32px 0;
+	max-width: 100%;
+	height: auto;
+	border-radius: 8px;
+}
+
+.post-detail__content a {
+	color: var(--color-blue);
+	text-decoration: underline;
+}
+
+/* ==========================================================================
    12b. POST DETAIL - SHARE ARTICLE
    ========================================================================== */
 .share {
