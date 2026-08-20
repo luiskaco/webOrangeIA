@@ -120,7 +120,7 @@ $theme_uri = get_template_directory_uri();
 	     ========================================== -->
 	<section class="pd-portfolio" id="portafolio">
 		<div class="pd-section-header" data-pd-reveal>
-			<h2 class="pd-section-title pd-section-title--light">Webs y Apps desarrolladas</h2>
+			<h2 class="pd-section-title pd-section-title--light">Lo que desarrollamos para tu marca</h2>
 		</div>
 
 		<div class="pd-portfolio__grid" data-pd-cards>
