@@ -11,11 +11,11 @@
 	--pd-card-dark: #1C2541;
 	--pd-card-glass: rgba(28, 37, 65, 0.65);
 	--pd-card-light: #FFFFFF;
-	--pd-border-cyan: rgba(0, 240, 255, 0.22);
+	--pd-border-cyan: rgba(112, 181, 227, 0.22);
 	--pd-border-light: rgba(15, 23, 42, 0.08);
-	--pd-cyan: #00F0FF;
-	--pd-cyan-glow: rgba(0, 240, 255, 0.3);
-	--pd-blue: #3B82F6;
+	--pd-cyan: #70B5E3;
+	--pd-cyan-glow: rgba(112, 181, 227, 0.3);
+	--pd-blue: #70B5E3;
 	--pd-purple: #8B5CF6;
 	--pd-dark-text: #0B132B;
 	--pd-body-text: #475569;
