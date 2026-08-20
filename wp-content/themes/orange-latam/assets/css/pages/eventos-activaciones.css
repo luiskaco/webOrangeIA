@@ -390,11 +390,11 @@ body[class*="eventos-activaciones"] .header .header__burger-line,
 	min-height: 440px;
 }
 
-/* Main Card — Yellow to Cream */
+/* Main Powder Blue Card */
 .ea-dark-card--main {
 	position: relative;
 	width: 64%;
-	background: linear-gradient(135deg, #F7D769 0%, #FFF3DD 100%);
+	background: linear-gradient(135deg, #BBE1FA 0%, #89C4F4 100%);
 	padding: 12px;
 	border-radius: 36px;
 	box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
