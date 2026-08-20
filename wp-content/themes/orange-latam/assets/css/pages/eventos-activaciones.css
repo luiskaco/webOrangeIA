@@ -251,7 +251,7 @@ body[class*="eventos-activaciones"] .header .header__burger-line,
 }
 
 .ea-dark-hero__gradient-text {
-	background: linear-gradient(135deg, #EE894F 0%, #F59E0B 40%, #2FD5C4 100%);
+	background: linear-gradient(135deg, #70B5E3 0%, #3D7FAE 55%, #1C2A3A 100%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
@@ -390,11 +390,11 @@ body[class*="eventos-activaciones"] .header .header__burger-line,
 	min-height: 440px;
 }
 
-/* Main Powder Blue Card */
+/* Main Card — Yellow to Cream */
 .ea-dark-card--main {
 	position: relative;
 	width: 64%;
-	background: linear-gradient(135deg, #BBE1FA 0%, #89C4F4 100%);
+	background: linear-gradient(135deg, #F7D769 0%, #FFF3DD 100%);
 	padding: 12px;
 	border-radius: 36px;
 	box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
@@ -427,13 +427,13 @@ body[class*="eventos-activaciones"] .header .header__burger-line,
 	transform: scale(1.06);
 }
 
-/* Secondary Purple/Lavender Card */
+/* Secondary Card — Yellow to Cream */
 .ea-dark-card--secondary {
 	position: absolute;
 	right: 0;
 	top: 30px;
 	width: 46%;
-	background: linear-gradient(135deg, #DDD6FE 0%, #C4B5FD 100%);
+	background: linear-gradient(135deg, #F7D769 0%, #FFF3DD 100%);
 	padding: 12px;
 	border-radius: 36px;
 	box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
