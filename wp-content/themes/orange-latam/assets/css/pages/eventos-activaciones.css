@@ -849,7 +849,7 @@ body[class*="eventos-activaciones"] .header .header__burger-line,
 	margin: 0;
 }
 
-/* Cajas 1, 3, 5: fondo celeste, número naranja, letra blanca */
+/* Cajas 1, 3, 5: fondo celeste, número y letra blanca */
 .ea-cat-card--teal,
 .ea-cat-card--emerald,
 .ea-cat-card--purple {
@@ -862,7 +862,7 @@ body[class*="eventos-activaciones"] .header .header__burger-line,
 .ea-cat-card--teal .ea-cat-card__num,
 .ea-cat-card--emerald .ea-cat-card__num,
 .ea-cat-card--purple .ea-cat-card__num {
-	color: #EE894F;
+	color: #FFFFFF;
 }
 .ea-cat-card--teal .ea-cat-card__title,
 .ea-cat-card--emerald .ea-cat-card__title,
