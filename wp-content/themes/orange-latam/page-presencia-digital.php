@@ -126,22 +126,22 @@ $theme_uri = get_template_directory_uri();
 		<div class="pd-portfolio__grid" data-pd-cards>
 			<!-- Proyecto 1: Web B2B -->
 			<div class="pd-portfolio-card" data-category="b2b" data-project-trigger data-project-title="Plataforma Web B2B" data-project-badge="Web B2B" data-project-stat="Performance 99/100" data-project-desc="Ecosistema web corporativo enfocado en arquitectura de información, generación de leads B2B y posicionamiento institucional de alta autoridad." data-project-techs="WordPress, React, SEO On-Page, GA4 Analytics" data-project-img="<?php echo esc_url( $theme_uri . '/assets/images/presencia-digital/project-b2b.png' ); ?>" role="button" tabindex="0" aria-label="Ver detalles de Plataforma Web B2B">
-				<img class="pd-portfolio-card__flat-img" src="<?php echo esc_url( $theme_uri . '/assets/images/presencia-digital/project-b2b.png' ); ?>" alt="Plataforma Web B2B — Ecosistema web optimizado para generación de leads B2B" loading="lazy" width="800" height="560">
+				<img class="pd-portfolio-card__flat-img" src="<?php echo esc_url( $theme_uri . '/assets/images/presencia-digital/project-b2b.png' ); ?>" alt="Plataforma Web B2B — Ecosistema web optimizado para generación de leads B2B" loading="lazy" width="800" height="640">
 			</div>
 
 			<!-- Proyecto 2: E-Commerce -->
 			<div class="pd-portfolio-card pd-portfolio-card--featured" data-category="ecommerce" data-project-trigger data-project-title="Tienda E-Commerce Multi-Categoría" data-project-badge="E-Commerce Top" data-project-stat="Ventas +145%" data-project-desc="Plataforma de comercio electrónico de alta conversión con pasarelas de pago integradas, checkout optimizado en un solo paso y analítica avanzada." data-project-techs="WooCommerce, Shopify, Stripe, GA4 Analytics" data-project-img="<?php echo esc_url( $theme_uri . '/assets/images/presencia-digital/project-ecommerce.png' ); ?>" role="button" tabindex="0" aria-label="Ver detalles de Tienda E-Commerce">
-				<img class="pd-portfolio-card__flat-img" src="<?php echo esc_url( $theme_uri . '/assets/images/presencia-digital/project-ecommerce.png' ); ?>" alt="Tienda E-Commerce — Plataforma de comercio electrónico con checkout fluido" loading="lazy" width="800" height="560">
+				<img class="pd-portfolio-card__flat-img" src="<?php echo esc_url( $theme_uri . '/assets/images/presencia-digital/project-ecommerce.png' ); ?>" alt="Tienda E-Commerce — Plataforma de comercio electrónico con checkout fluido" loading="lazy" width="800" height="640">
 			</div>
 
 			<!-- Proyecto 3: App Web -->
 			<div class="pd-portfolio-card" data-category="pwa" data-project-trigger data-project-title="App Web & Dashboard Interactivo" data-project-badge="App Web PWA" data-project-stat="Tiempo Carga 0.8s" data-project-desc="Aplicación web progresiva con experiencia móvil tipo app nativa, autenticación segura y panel de control de usuario en tiempo real." data-project-techs="React, Next.js, PWA, REST API" data-project-img="<?php echo esc_url( $theme_uri . '/assets/images/presencia-digital/project-pwa.png' ); ?>" role="button" tabindex="0" aria-label="Ver detalles de App Web & Dashboard">
-				<img class="pd-portfolio-card__flat-img" src="<?php echo esc_url( $theme_uri . '/assets/images/presencia-digital/project-pwa.png' ); ?>" alt="App Web & Dashboard — Aplicación web progresiva con experiencia tipo app nativa" loading="lazy" width="800" height="560">
+				<img class="pd-portfolio-card__flat-img" src="<?php echo esc_url( $theme_uri . '/assets/images/presencia-digital/project-pwa.png' ); ?>" alt="App Web & Dashboard — Aplicación web progresiva con experiencia tipo app nativa" loading="lazy" width="800" height="640">
 			</div>
 
 			<!-- Proyecto 4: Landing SaaS -->
 			<div class="pd-portfolio-card" data-category="b2b" data-project-trigger data-project-title="Landing Page & Portal SaaS" data-project-badge="Landing SaaS" data-project-stat="Captación +3.2x Leads" data-project-desc="Página de aterrizaje optimizada para campañas SEM de adquisición de usuarios con formularios dinámicos e integración directa a CRM." data-project-techs="Next.js, Google Ads, CRM Integration, Tailwind" data-project-img="<?php echo esc_url( $theme_uri . '/assets/images/presencia-digital/project-saas.png' ); ?>" role="button" tabindex="0" aria-label="Ver detalles de Landing Page SaaS">
-				<img class="pd-portfolio-card__flat-img" src="<?php echo esc_url( $theme_uri . '/assets/images/presencia-digital/project-saas.png' ); ?>" alt="Landing Page SaaS — Página de aterrizaje enfocada en captación y conversión" loading="lazy" width="800" height="560">
+				<img class="pd-portfolio-card__flat-img" src="<?php echo esc_url( $theme_uri . '/assets/images/presencia-digital/project-saas.png' ); ?>" alt="Landing Page SaaS — Página de aterrizaje enfocada en captación y conversión" loading="lazy" width="800" height="640">
 			</div>
 		</div>
 	</section>
