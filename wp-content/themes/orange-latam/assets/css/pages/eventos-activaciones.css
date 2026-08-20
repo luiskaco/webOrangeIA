@@ -875,12 +875,12 @@ body[class*="eventos-activaciones"] .header .header__burger-line,
 	color: rgba(255, 255, 255, 0.85);
 }
 
-/* Cajas 2, 4, 6: fondo gris, número celeste, letra negra */
+/* Cajas 2, 4, 6: fondo gris oscuro, número y letra blanca */
 .ea-cat-card--rose,
 .ea-cat-card--amber,
 .ea-cat-card--blue {
-	background: #CBD5E1;
-	border: 1px solid #B6C3D1;
+	background: #4B5563;
+	border: 1px solid #3F4753;
 }
 .ea-cat-card--rose .ea-cat-card__icon,
 .ea-cat-card--amber .ea-cat-card__icon,
@@ -888,17 +888,17 @@ body[class*="eventos-activaciones"] .header .header__burger-line,
 .ea-cat-card--rose .ea-cat-card__num,
 .ea-cat-card--amber .ea-cat-card__num,
 .ea-cat-card--blue .ea-cat-card__num {
-	color: #70B5E3;
+	color: #FFFFFF;
 }
 .ea-cat-card--rose .ea-cat-card__title,
 .ea-cat-card--amber .ea-cat-card__title,
 .ea-cat-card--blue .ea-cat-card__title {
-	color: #14120F;
+	color: #FFFFFF;
 }
 .ea-cat-card--rose .ea-cat-card__desc,
 .ea-cat-card--amber .ea-cat-card__desc,
 .ea-cat-card--blue .ea-cat-card__desc {
-	color: #475569;
+	color: rgba(255, 255, 255, 0.8);
 }
 
 /* Section 3: Types of Events (Plusdemic style) */
