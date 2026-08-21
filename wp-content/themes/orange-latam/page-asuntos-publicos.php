@@ -102,7 +102,7 @@ $theme_uri = get_template_directory_uri();
 				<!-- Imagen Hero Real -->
 				<div class="ap-hero-image-card">
 					<?php
-					$hero_img = $theme_uri . '/assets/images/asuntos-publicos/hero.png';
+					$hero_img = $theme_uri . '/assets/images/asuntos-publicos/hero.webp';
 					?>
 					<img src="<?php echo esc_url( $hero_img ); ?>" alt="Mesa de diálogo de Asuntos Públicos y Relaciones Institucionales en Perú" class="ap-hero-image-card__img">
 				</div>
@@ -192,7 +192,7 @@ $theme_uri = get_template_directory_uri();
 			<div class="ap-reguladores-split">
 				<div class="ap-reguladores-image-box" data-ap-img-reveal>
 					<?php
-					$reg_img = $theme_uri . '/assets/images/asuntos-publicos/reguladores.png';
+					$reg_img = $theme_uri . '/assets/images/asuntos-publicos/reguladores.webp';
 					?>
 					<img src="<?php echo esc_url( $reg_img ); ?>" alt="Fachada institucional de entidad gubernamental en Perú" class="ap-reguladores-image-box__img">
 
@@ -295,7 +295,7 @@ $theme_uri = get_template_directory_uri();
 				<!-- Columna Izquierda: Tarjeta Visual -->
 				<div class="ap-stakeholders-visual">
 					<?php
-					$com_img = $theme_uri . '/assets/images/asuntos-publicos/comunidades.png';
+					$com_img = $theme_uri . '/assets/images/asuntos-publicos/comunidades.webp';
 					?>
 					<div class="ap-stakeholders-visual__box" data-ap-img-reveal>
 						<img src="<?php echo esc_url( $com_img ); ?>" alt="Reunión de diálogo con comunidades en Perú" class="ap-stakeholders-visual__img">

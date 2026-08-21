@@ -1,5 +1,16 @@
 # 08_CHANGELOG.md — Historial de Versiones
 
+## [1.0.5] - 2026-08-21
+### Añadido y Optimizado
+- **Nuevas imágenes de Branding (`assets/images/branding/`)**:
+  - Incorporadas 6 nuevas imágenes de servicios (`architecture.webp`, `creation.webp`, `identity.webp`, `strategy.webp`, `naming.webp`, `positioning.webp`) convertidas a WebP con **-91.9% de reducción de peso** (de 5.56 MB a 448 KB).
+- **Estilos y Microinteracciones en Branding (`branding-creatividad.css`)**:
+  - Borde celeste corporativo (`#29ABE2`, 1.5px) con sombra de resplandor.
+  - Microinteracción de elevación sutil (`transform: translateY(-5px)`) sin zoom en las imágenes internas.
+- **Íconos de PR como Siluetas Sólidas (`page-pr-gestion-reputacion.php`, `main.js`)**:
+  - Rediseño de todos los glifos de la página de PR a estilo sólido plano en Cyan (`#29ABE2`) y Negro (`#17130F`) con calados en blanco (diagrama orbital, acordeón móvil, 3 fases de crisis y las 6 insignias de voceros).
+- **Bumping de versión del tema a `1.0.5`** en `functions.php` y `style.css`.
+
 ## [1.0.4] - 2026-08-21
 ### Seguridad
 - **Incidente en producción: `robots.txt` comprometido + sitemap roto** (ver `docs/06_TASKS.md`): un checklist de validación pasado por el cliente (reportado como ya resuelto por soporte del hosting) se verificó punto por punto directo contra `orange-la.com` — 2 de los 5 ítems eran falsos. `robots.txt` seguía con 19 entradas `sitemap-hot-XXXXXXX.xml` inyectadas (firma de malware SEO en WP comprometido, archivo físico en la raíz del hosting, no lo genera WordPress); reemplazado por el cliente con contenido limpio, verificado. `sitemap_index.xml` de Rank Math daba 404 pese a reportarse 200 OK — causa: rewrite rules sin regenerar tras la migración a producción; resuelto con un guardado en Ajustes → Enlaces permanentes. Pendiente recomendado: revisión de seguridad completa en el hosting (mu-plugins, usuarios admin, cron) ante evidencia de compromiso pasado, aunque ya inactivo.
@@ -15,6 +26,11 @@
 - **Tabla de Leads en wp-admin** (`inc/class-leads-manager.php`): columna "Mensaje / Requerimientos" se veía colapsada (texto apilado letra por letra) por `table-layout:fixed` (clase `fixed` de WP) sin ancho propio en esa columna. Quitada la clase, agregado `table-layout:auto` y `min-width`.
 
 ### Añadido
+- **Conversión Integral de Imágenes a Formato WebP (`assets/images/`, `wp-content/uploads/`)**:
+  - Conversión automatizada de 83 imágenes del tema (`assets/images/`) de PNG/JPG a WebP: reducción de peso de **43.15 MB a 5.64 MB** (**-86.9% de ahorro**).
+  - Conversión de 29 imágenes de la biblioteca de medios (`wp-content/uploads/`) a WebP: reducción de **10.44 MB a 1.42 MB** (**-86.4% de ahorro**).
+  - Ahorro total global: **46.53 MB** de transferencia y ancho de banda eliminados.
+  - Actualizadas al 100% las referencias de imágenes en todas las plantillas PHP (`index.php`, `page-asuntos-publicos.php`, `page-branding-creatividad.php`, `page-eventos-activaciones.php`, `page-gestion-de-acceso.php`, `page-marketing-de-influencers.php`, `page-marketing-digital.php`, `page-podcast.php`, `page-pr-gestion-reputacion.php`, `page-presencia-digital.php`).
 - **Rediseño de Layout en Asuntos Públicos (`page-asuntos-publicos.php`, `asuntos-publicos.css`)**:
   - Reestructuración de la sección *Red de Relaciones e Influencia*: se trasladó el bloque editorial y los puntos clave a la parte superior con un grid horizontal, y se reposicionaron las 4 tarjetas de stakeholders en una cuadrícula horizontal de 4 columnas en la parte inferior, optimizada para desktop (4 columnas), tablet (2 columnas) y móvil (1 columna).
 - **Nuevos Íconos Ilustrados (Flat Outline Color) en la página de PR (`page-pr-gestion-reputacion.php`, `main.js`, `pr-gestion-reputacion.css`)**:

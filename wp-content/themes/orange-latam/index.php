@@ -208,19 +208,19 @@ get_header();
 					$branding_url  = $branding_page ? get_permalink( $branding_page ) : home_url( '/branding-creatividad/' );
 
 					$services_data = array(
-						array( 'id' => 1, 'num' => '01', 'name' => 'PR y Gestión de la reputación', 'desc' => 'Planificar y ejecutar estrategias de Relaciones Públicas (PR) y gestión de la reputación permite a marcas y empresas influir de manera poderosa en la percepción de distintos públicos. En Orange Latam nos especializamos en la creación de planes que permiten construir una reputación sólida a empresas, productos y/o servicios, a partir de una interacción asertiva con públicos diversos, a todo nivel.', 'link' => home_url( '/pr-gestion-reputacion/' ), 'file' => 'pr-reputacion.png' ),
-						array( 'id' => 2, 'num' => '02', 'name' => 'Asuntos Públicos y Relaciones Institucionales', 'desc' => 'Estrategias de asuntos públicos, comunicación política y relacionamiento responsable con autoridades, ministerios, comunidades y stakeholders clave en Perú y la región.', 'link' => home_url( '/asuntos-publicos/' ), 'file' => 'asuntos-publicos.png' ),
-						array( 'id' => 3, 'num' => '03', 'name' => 'Marketing de Influencers', 'desc' => 'Conectamos marcas con líderes de opinión altamente relevantes para campañas de máximo alcance, impacto y retorno de inversión medible en cada plataforma digital.', 'link' => home_url( '/marketing-de-influencers/' ), 'file' => 'marketing-influencers.png' ),
-						array( 'id' => 4, 'num' => '04', 'name' => 'Digital y Social Media', 'desc' => 'Gestión estratégica de presencia digital, comunidades online y creación de contenido en todos los canales relevantes para tu audiencia.', 'link' => home_url( '/marketing-digital/' ), 'file' => 'digital-social-media.png' ),
-						array( 'id' => 5, 'num' => '05', 'name' => 'Producción Audiovisual Orange Studio', 'desc' => 'Producción de video, fotografía y animación de primer nivel para todas las plataformas y formatos del ecosistema digital y tradicional.', 'link' => 'https://orangelatamstudio.com/', 'file' => 'produccion-audiovisual.png' ),
-						array( 'id' => 6, 'num' => '06', 'name' => 'Creatividad y Dirección de Arte', 'desc' => 'El diferencial creativo que hace que tu comunicación se destaque y genere el impacto deseado en el público objetivo.', 'link' => $branding_url . '#creatividad-direccion-arte', 'file' => 'creatividad-arte.png' ),
-						array( 'id' => 7, 'num' => '07', 'name' => 'Branding', 'desc' => 'De naming a consolidación: creamos y posicionamos marcas memorables y deseadas en mercados nacionales e internacionales.', 'link' => $branding_url, 'file' => 'branding.png' ),
-						array( 'id' => 8, 'num' => '08', 'name' => 'Estratégias ATL', 'desc' => 'Campañas de alto alcance con planificación de medios, segmentación de audiencias y ejecución integrada con el mejor ROI del mercado.', 'link' => home_url( '/eventos-activaciones/' ), 'file' => 'estrategias-atl.png' ),
-						array( 'id' => 9, 'num' => '09', 'name' => 'Eventos y Activaciones Presenciales', 'desc' => 'Experiencias presenciales, remotas e híbridas de primer nivel que conectan con el público de manera poderosa y memorable.', 'link' => home_url( '/eventos-activaciones/' ), 'file' => 'eventos-presenciales.png' ),
-						array( 'id' => 10, 'num' => '10', 'name' => 'Entrenamiento de Voceros', 'desc' => 'Preparamos líderes para comunicar con autoridad y credibilidad ante medios, inversores y audiencias clave en cualquier escenario.', 'link' => home_url( '/pr-gestion-reputacion/#entrenamiento-voceros' ), 'file' => 'entrenamiento-voceros.png' ),
-						array( 'id' => 11, 'num' => '11', 'name' => 'SEO / SEM', 'desc' => 'Optimizamos la presencia digital con estrategias de búsqueda integradas a los objetivos comerciales e institucionales de la marca.', 'link' => home_url( '/presencia-digital/#seo-sem' ), 'file' => 'seo-sem.png' ),
-						array( 'id' => 12, 'num' => '12', 'name' => 'Web site / Landing UX Criteria', 'desc' => 'Diseñamos experiencias digitales que convierten, con navegación intuitiva, visual atractivo y arquitectura de información óptima.', 'link' => home_url( '/presencia-digital/#web-ux' ), 'file' => 'website-ux.png' ),
-						array( 'id' => 13, 'num' => '13', 'name' => 'E-Commerce', 'desc' => 'Plataformas y estrategias digitales completas para potenciar ventas, captación de leads y fidelización de clientes.', 'link' => home_url( '/presencia-digital/#ecommerce' ), 'file' => 'ecommerce.png' ),
+						array( 'id' => 1, 'num' => '01', 'name' => 'PR y Gestión de la reputación', 'desc' => 'Planificar y ejecutar estrategias de Relaciones Públicas (PR) y gestión de la reputación permite a marcas y empresas influir de manera poderosa en la percepción de distintos públicos. En Orange Latam nos especializamos en la creación de planes que permiten construir una reputación sólida a empresas, productos y/o servicios, a partir de una interacción asertiva con públicos diversos, a todo nivel.', 'link' => home_url( '/pr-gestion-reputacion/' ), 'file' => 'pr-reputacion.webp' ),
+						array( 'id' => 2, 'num' => '02', 'name' => 'Asuntos Públicos y Relaciones Institucionales', 'desc' => 'Estrategias de asuntos públicos, comunicación política y relacionamiento responsable con autoridades, ministerios, comunidades y stakeholders clave en Perú y la región.', 'link' => home_url( '/asuntos-publicos/' ), 'file' => 'asuntos-publicos.webp' ),
+						array( 'id' => 3, 'num' => '03', 'name' => 'Marketing de Influencers', 'desc' => 'Conectamos marcas con líderes de opinión altamente relevantes para campañas de máximo alcance, impacto y retorno de inversión medible en cada plataforma digital.', 'link' => home_url( '/marketing-de-influencers/' ), 'file' => 'marketing-influencers.webp' ),
+						array( 'id' => 4, 'num' => '04', 'name' => 'Digital y Social Media', 'desc' => 'Gestión estratégica de presencia digital, comunidades online y creación de contenido en todos los canales relevantes para tu audiencia.', 'link' => home_url( '/marketing-digital/' ), 'file' => 'digital-social-media.webp' ),
+						array( 'id' => 5, 'num' => '05', 'name' => 'Producción Audiovisual Orange Studio', 'desc' => 'Producción de video, fotografía y animación de primer nivel para todas las plataformas y formatos del ecosistema digital y tradicional.', 'link' => 'https://orangelatamstudio.com/', 'file' => 'produccion-audiovisual.webp' ),
+						array( 'id' => 6, 'num' => '06', 'name' => 'Creatividad y Dirección de Arte', 'desc' => 'El diferencial creativo que hace que tu comunicación se destaque y genere el impacto deseado en el público objetivo.', 'link' => $branding_url . '#creatividad-direccion-arte', 'file' => 'creatividad-arte.webp' ),
+						array( 'id' => 7, 'num' => '07', 'name' => 'Branding', 'desc' => 'De naming a consolidación: creamos y posicionamos marcas memorables y deseadas en mercados nacionales e internacionales.', 'link' => $branding_url, 'file' => 'branding.webp' ),
+						array( 'id' => 8, 'num' => '08', 'name' => 'Estratégias ATL', 'desc' => 'Campañas de alto alcance con planificación de medios, segmentación de audiencias y ejecución integrada con el mejor ROI del mercado.', 'link' => home_url( '/eventos-activaciones/' ), 'file' => 'estrategias-atl.webp' ),
+						array( 'id' => 9, 'num' => '09', 'name' => 'Eventos y Activaciones Presenciales', 'desc' => 'Experiencias presenciales, remotas e híbridas de primer nivel que conectan con el público de manera poderosa y memorable.', 'link' => home_url( '/eventos-activaciones/' ), 'file' => 'eventos-presenciales.webp' ),
+						array( 'id' => 10, 'num' => '10', 'name' => 'Entrenamiento de Voceros', 'desc' => 'Preparamos líderes para comunicar con autoridad y credibilidad ante medios, inversores y audiencias clave en cualquier escenario.', 'link' => home_url( '/pr-gestion-reputacion/#entrenamiento-voceros' ), 'file' => 'entrenamiento-voceros.webp' ),
+						array( 'id' => 11, 'num' => '11', 'name' => 'SEO / SEM', 'desc' => 'Optimizamos la presencia digital con estrategias de búsqueda integradas a los objetivos comerciales e institucionales de la marca.', 'link' => home_url( '/presencia-digital/#seo-sem' ), 'file' => 'seo-sem.webp' ),
+						array( 'id' => 12, 'num' => '12', 'name' => 'Web site / Landing UX Criteria', 'desc' => 'Diseñamos experiencias digitales que convierten, con navegación intuitiva, visual atractivo y arquitectura de información óptima.', 'link' => home_url( '/presencia-digital/#web-ux' ), 'file' => 'website-ux.webp' ),
+						array( 'id' => 13, 'num' => '13', 'name' => 'E-Commerce', 'desc' => 'Plataformas y estrategias digitales completas para potenciar ventas, captación de leads y fidelización de clientes.', 'link' => home_url( '/presencia-digital/#ecommerce' ), 'file' => 'ecommerce.webp' ),
 					);
 
 					$corp_services = array();
@@ -252,9 +252,9 @@ get_header();
 						</p>
 						<a href="<?php echo esc_url( home_url( '/pr-gestion-reputacion/' ) ); ?>" class="services-corp__detail-link" data-default-href="<?php echo esc_url( home_url( '/pr-gestion-reputacion/' ) ); ?>">Más información <span>→</span></a>
 						<?php
-						$default_img_path = get_template_directory() . '/assets/images/services/pr-reputacion.png';
+						$default_img_path = get_template_directory() . '/assets/images/services/pr-reputacion.webp';
 						$default_img_ver = file_exists( $default_img_path ) ? filemtime( $default_img_path ) : '1.0.0';
-						$default_img_url = get_stylesheet_directory_uri() . '/assets/images/services/pr-reputacion.png?v=' . $default_img_ver;
+						$default_img_url = get_stylesheet_directory_uri() . '/assets/images/services/pr-reputacion.webp?v=' . $default_img_ver;
 						?>
 						<div class="services-corp__detail-img-box">
 							<img class="services-corp__detail-img" src="<?php echo esc_url( $default_img_url ); ?>" alt="PR y Gestión de la reputación" style="width: 100%; height: 324px; object-fit: cover; display: block;">
@@ -373,12 +373,12 @@ get_header();
 					$home_awards = array(
 						array( 'name' => 'Purpose Awards', 'image' => 'purpose-awards.webp', 'line1' => 'Purpose Awards', 'line2' => 'Best Use of', 'line3' => 'Celebrity Campaign' ),
 						array( 'name' => 'PR Week Global Awards', 'image' => 'pr-week-global-awards.webp', 'line1' => 'PR Week Global Awards', 'line2' => 'Best Influencers', 'line3' => 'Marketing Campaign' ),
-						array( 'name' => 'IPRA Golden World Awards', 'image' => 'ipra-golden-world-awards.png', 'line1' => 'IPRA Golden World Awards', 'line2' => 'Best Influencers', 'line3' => 'Management Campaign' ),
-						array( 'name' => 'Sabre Latin America Awards', 'image' => 'sabre-global-world-awards.png', 'line1' => 'Sabre Latin America Awards', 'line2' => 'Diamond', 'line3' => 'Awards Category' ),
-						array( 'name' => 'Sabre Latin America Awards', 'image' => 'sabre-global-world-awards.png', 'line1' => 'Sabre Latin America Awards', 'line2' => 'Best Influencer', 'line3' => 'Marketing Campaign' ),
-						array( 'name' => 'Effie Awards', 'image' => 'effie-awards.png', 'line1' => 'Effie Awards', 'line2' => 'Mejor Campaña de', 'line3' => 'Marketing de Influencers' ),
+						array( 'name' => 'IPRA Golden World Awards', 'image' => 'ipra-golden-world-awards.webp', 'line1' => 'IPRA Golden World Awards', 'line2' => 'Best Influencers', 'line3' => 'Management Campaign' ),
+						array( 'name' => 'Sabre Latin America Awards', 'image' => 'sabre-global-world-awards.webp', 'line1' => 'Sabre Latin America Awards', 'line2' => 'Diamond', 'line3' => 'Awards Category' ),
+						array( 'name' => 'Sabre Latin America Awards', 'image' => 'sabre-global-world-awards.webp', 'line1' => 'Sabre Latin America Awards', 'line2' => 'Best Influencer', 'line3' => 'Marketing Campaign' ),
+						array( 'name' => 'Effie Awards', 'image' => 'effie-awards.webp', 'line1' => 'Effie Awards', 'line2' => 'Mejor Campaña de', 'line3' => 'Marketing de Influencers' ),
 						array( 'name' => 'Cannes Lions', 'image' => 'Cannes-Lions-.webp', 'line1' => 'Cannes Lions', 'line2' => 'Best Social &', 'line3' => 'Influencer Campaign' ),
-						array( 'name' => 'Sabre Global World Awards', 'image' => 'sabre-global-world-awards.png', 'line1' => 'Sabre Global World Awards', 'line2' => 'Best Influencer', 'line3' => 'Marketing Campaign' ),
+						array( 'name' => 'Sabre Global World Awards', 'image' => 'sabre-global-world-awards.webp', 'line1' => 'Sabre Global World Awards', 'line2' => 'Best Influencer', 'line3' => 'Marketing Campaign' ),
 					);
 					// Render twice for continuous loop
 					for ( $i = 0; $i < 2; $i++ ) :
@@ -474,7 +474,7 @@ get_header();
 						array(
 							'title'     => 'El impacto de la reputación digital en la percepción de marca',
 							'permalink' => get_permalink( get_option( 'page_for_posts' ) ) ?: home_url( '/blog/' ),
-							'thumbnail' => content_url( '/uploads/2024/11/istockphoto-1906606079-2048x2048_png-1024x717.png' ),
+							'thumbnail' => content_url( '/uploads/2024/11/istockphoto-1906606079-2048x2048_png-1024x717.webp' ),
 						),
 						array(
 							'title'     => 'Gestión de crisis y conflictos sociales en el sector minero',
@@ -499,7 +499,7 @@ get_header();
 						array(
 							'title'     => 'Liderazgo y comunicación institucional ante escenarios de incertidumbre',
 							'permalink' => get_permalink( get_option( 'page_for_posts' ) ) ?: home_url( '/blog/' ),
-							'thumbnail' => content_url( '/uploads/2024/11/istockphoto-1906606079-2048x2048_png-1024x717.png' ),
+							'thumbnail' => content_url( '/uploads/2024/11/istockphoto-1906606079-2048x2048_png-1024x717.webp' ),
 						),
 					);
 					$cards_to_show = ! empty( $expert_posts ) ? $expert_posts : $fallback_demo_cards;

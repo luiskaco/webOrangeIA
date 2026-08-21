@@ -99,7 +99,7 @@ $pr_img_uri = $theme_uri . '/assets/images/pr';
 			<div class="pr-hero__media" data-reveal="right">
 				<div class="pr-hero__photo-wrapper">
 					<img class="pr-hero__photo" 
-						src="<?php echo esc_url( $theme_uri . '/assets/images/services/pr-reputacion.png' ); ?>" 
+						src="<?php echo esc_url( $theme_uri . '/assets/images/services/pr-reputacion.webp' ); ?>" 
 						alt="Vocero dando entrevista de prensa - Agencia de PR Orange Latam">
 				</div>
 
@@ -191,13 +191,12 @@ $pr_img_uri = $theme_uri . '/assets/images/pr';
 					<button class="pr-services__mobile-row js-pr-node-row" data-node-index="0">
 						<div class="pr-services__mobile-icon">
 							<svg viewBox="0 0 36 36" width="30" height="30" fill="none">
-								<circle cx="18" cy="18" r="9.5" fill="#70B5E3" stroke="#17130F" stroke-width="1.8"/>
-								<path d="M11 16.5c1-2.5 3-1.5 4-3 1-1 2.5-.5 3 1s-1 3-2.5 3.5-3.5 0-4.5-1.5z" fill="#48CFAD" stroke="#17130F" stroke-width="1.2" stroke-linejoin="round"/>
-								<path d="M16.5 21.5c1.5 0 3 1.5 2 3.5-1.5 1.5-3.5 1-4.5 0-.5-1.5.5-3.5 2.5-3.5z" fill="#48CFAD" stroke="#17130F" stroke-width="1.2" stroke-linejoin="round"/>
-								<path d="M22 14c1 0 2.5 1 2 2.5s-2 1.5-3 1c-.5-.5 0-3.5 1-3.5z" fill="#48CFAD" stroke="#17130F" stroke-width="1.2"/>
-								<path d="M6 19c0 6 5.5 10.5 12 10.5 7.5 0 13-5 13-11 0-3.5-2-6.5-5.5-8.5" fill="none" stroke="#FC6E51" stroke-width="2" stroke-linecap="round"/>
-								<polygon points="27,6 27,12 21.5,9.5" fill="#FC6E51" stroke="#17130F" stroke-width="1.4" stroke-linejoin="round"/>
-								<path d="M9 13.5C11 10.5 14.5 8.5 18.5 8.5c1.5 0 3 .3 4.5.8" fill="none" stroke="#FC6E51" stroke-width="1.8" stroke-dasharray="2.5 2.5" stroke-linecap="round"/>
+								<circle cx="18" cy="18" r="10" fill="#29ABE2"/>
+								<path d="M12 16c1-2 3-1 4-2.5 1-1 2-.5 2.5 1s-.8 2.5-2 3-3 0-4-1.5z" fill="#FFFFFF"/>
+								<path d="M17 21c1.2 0 2.5 1 1.6 2.8-1.2 1.2-2.8.8-3.6 0-.4-1.2.4-2.8 2-2.8z" fill="#FFFFFF"/>
+								<path d="M21 14.5c.8 0 2 .8 1.6 2s-1.6 1.2-2.4.8c-.4-.4 0-2.8.8-2.8z" fill="#FFFFFF"/>
+								<path d="M6 18.5c0 6.5 5 11 11.5 11 7 0 12-4.5 12-10 0-3-1.8-5.5-5-7.2" fill="none" stroke="#29ABE2" stroke-width="2.5" stroke-linecap="round"/>
+								<polygon points="26,6 26,12 21,9" fill="#29ABE2"/>
 							</svg>
 						</div>
 						<span class="pr-services__mobile-label">Estrategias integrales de RRPP</span>
@@ -206,14 +205,13 @@ $pr_img_uri = $theme_uri . '/assets/images/pr';
 					<button class="pr-services__mobile-row js-pr-node-row" data-node-index="1">
 						<div class="pr-services__mobile-icon">
 							<svg viewBox="0 0 36 36" width="30" height="30" fill="none">
-								<path d="M7 6h22v24H7a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z" fill="#FFFFFF" stroke="#17130F" stroke-width="1.8" stroke-linejoin="round"/>
-								<rect x="8" y="9" width="20" height="4.5" rx="1" fill="#70B5E3" stroke="#17130F" stroke-width="1.5"/>
-								<rect x="8" y="16" width="9" height="8" rx="1" fill="#FFE8D6" stroke="#17130F" stroke-width="1.5"/>
-								<path d="M9 22l2.5-3 2 2.2 2-2.7 1.5 2" fill="none" stroke="#EE894F" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
-								<line x1="19.5" y1="17.5" x2="27.5" y2="17.5" stroke="#17130F" stroke-width="1.5" stroke-linecap="round"/>
-								<line x1="19.5" y1="20.5" x2="27.5" y2="20.5" stroke="#17130F" stroke-width="1.5" stroke-linecap="round"/>
-								<line x1="19.5" y1="23.5" x2="25" y2="23.5" stroke="#17130F" stroke-width="1.5" stroke-linecap="round"/>
-								<line x1="8" y1="27" x2="27.5" y2="27" stroke="#17130F" stroke-width="1.5" stroke-linecap="round"/>
+								<path d="M6 5h24v24a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V5z" fill="#29ABE2"/>
+								<rect x="9" y="8" width="18" height="4.5" rx="1" fill="#FFFFFF"/>
+								<rect x="9" y="15.5" width="8" height="7.5" rx="1" fill="#FFFFFF"/>
+								<rect x="19" y="15.5" width="8" height="2" rx="1" fill="#FFFFFF"/>
+								<rect x="19" y="19" width="8" height="2" rx="1" fill="#FFFFFF"/>
+								<rect x="19" y="22.5" width="5" height="2" rx="1" fill="#FFFFFF"/>
+								<rect x="9" y="25" width="18" height="2" rx="1" fill="#FFFFFF"/>
 							</svg>
 						</div>
 						<span class="pr-services__mobile-label">Gestión con medios de comunicación</span>
@@ -222,11 +220,9 @@ $pr_img_uri = $theme_uri . '/assets/images/pr';
 					<button class="pr-services__mobile-row js-pr-node-row" data-node-index="2">
 						<div class="pr-services__mobile-icon">
 							<svg viewBox="0 0 36 36" width="30" height="30" fill="none">
-								<circle cx="18" cy="18" r="13" fill="#D1F4E8" stroke="#17130F" stroke-width="1.8"/>
-								<circle cx="18" cy="13.5" r="4.5" fill="#FFE8D6" stroke="#17130F" stroke-width="1.8"/>
-								<path d="M9.5 27.5c0-4.5 3.8-7.5 8.5-7.5s8.5 3 8.5 7.5z" fill="#48CFAD" stroke="#17130F" stroke-width="1.8"/>
-								<polygon points="18,20 19,24.5 18,26 17,24.5" fill="#17130F"/>
-								<polygon points="28,4 29.7,8.2 34,8.5 30.7,11.3 31.7,15.5 28,13.2 24.3,15.5 25.3,11.3 22,8.5 26.3,8.2" fill="#FDBB42" stroke="#17130F" stroke-width="1.5" stroke-linejoin="round"/>
+								<circle cx="18" cy="11.5" r="5" fill="#29ABE2"/>
+								<path d="M7 28c0-5.5 5-8.5 11-8.5s11 3 11 8.5z" fill="#29ABE2"/>
+								<polygon points="29,5 30.5,8.8 34.5,9 31.5,11.5 32.5,15.5 29,13.2 25.5,15.5 26.5,11.5 23.5,9 27.5,8.8" fill="#17130F"/>
 							</svg>
 						</div>
 						<span class="pr-services__mobile-label">Posicionamiento de líderes y voceros</span>
@@ -235,17 +231,11 @@ $pr_img_uri = $theme_uri . '/assets/images/pr';
 					<button class="pr-services__mobile-row js-pr-node-row" data-node-index="3">
 						<div class="pr-services__mobile-icon">
 							<svg viewBox="0 0 36 36" width="30" height="30" fill="none">
-								<path d="M5 6a2 2 0 0 1 2-2h11l7 7v19a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6z" fill="#FFFFFF" stroke="#17130F" stroke-width="1.8" stroke-linejoin="round"/>
-								<path d="M18 4v7h7" fill="#E1F2FB" stroke="#17130F" stroke-width="1.8" stroke-linejoin="round"/>
-								<line x1="9" y1="12" x2="14" y2="12" stroke="#70B5E3" stroke-width="1.8" stroke-linecap="round"/>
-								<line x1="9" y1="17" x2="16" y2="17" stroke="#17130F" stroke-width="1.6" stroke-linecap="round"/>
-								<line x1="9" y1="22" x2="14" y2="22" stroke="#17130F" stroke-width="1.6" stroke-linecap="round"/>
-								<g transform="translate(17, 13) rotate(45)">
-									<rect x="0" y="0" width="5.5" height="15" rx="1" fill="#FDBB42" stroke="#17130F" stroke-width="1.6"/>
-									<rect x="0" y="0" width="5.5" height="3" fill="#FC6E51" stroke="#17130F" stroke-width="1.6"/>
-									<polygon points="0,15 5.5,15 2.75,20" fill="#FFE8D6" stroke="#17130F" stroke-width="1.6" stroke-linejoin="round"/>
-									<polygon points="1.5,18 4,18 2.75,20" fill="#17130F"/>
-								</g>
+								<path d="M6 4h14l8 8v18a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z" fill="#29ABE2"/>
+								<polygon points="20,4 28,12 20,12" fill="#17130F"/>
+								<rect x="9" y="14" width="8" height="2.5" rx="1" fill="#FFFFFF"/>
+								<rect x="9" y="19" width="12" height="2.5" rx="1" fill="#FFFFFF"/>
+								<rect x="9" y="24" width="7" height="2.5" rx="1" fill="#FFFFFF"/>
 							</svg>
 						</div>
 						<span class="pr-services__mobile-label">Desarrollo de contenidos corporativos</span>
@@ -254,17 +244,13 @@ $pr_img_uri = $theme_uri . '/assets/images/pr';
 					<button class="pr-services__mobile-row js-pr-node-row" data-node-index="4">
 						<div class="pr-services__mobile-icon">
 							<svg viewBox="0 0 36 36" width="30" height="30" fill="none">
-								<line x1="18" y1="2" x2="18" y2="4.5" stroke="#FDBB42" stroke-width="2" stroke-linecap="round"/>
-								<line x1="6.5" y1="8" x2="8.5" y2="10" stroke="#FDBB42" stroke-width="2" stroke-linecap="round"/>
-								<line x1="29.5" y1="8" x2="27.5" y2="10" stroke="#FDBB42" stroke-width="2" stroke-linecap="round"/>
-								<line x1="4" y1="17" x2="6.5" y2="17" stroke="#FDBB42" stroke-width="2" stroke-linecap="round"/>
-								<line x1="32" y1="17" x2="29.5" y2="17" stroke="#FDBB42" stroke-width="2" stroke-linecap="round"/>
-								<path d="M12 23c-1.5-1.5-3.5-4-3.5-7a9.5 9.5 0 1 1 19 0c0 3-2 5.5-3.5 7h-12z" fill="#FDBB42" stroke="#17130F" stroke-width="1.8" stroke-linejoin="round"/>
-								<path d="M13 12a5.5 5.5 0 0 1 5-4.5" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round"/>
-								<path d="M15 17l1.5-4h3l1.5 4" stroke="#17130F" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-								<rect x="13.5" y="24" width="9" height="3" rx="1" fill="#CCD1D9" stroke="#17130F" stroke-width="1.6"/>
-								<rect x="14.5" y="27.5" width="7" height="2.5" rx="1" fill="#A0AAB5" stroke="#17130F" stroke-width="1.6"/>
-								<path d="M16 30.5h4" stroke="#17130F" stroke-width="1.6" stroke-linecap="round"/>
+								<path d="M12 21c-1.8-1.8-3.5-4.2-3.5-7.5a9.5 9.5 0 1 1 19 0c0 3.3-1.7 5.7-3.5 7.5z" fill="#29ABE2"/>
+								<rect x="13" y="22" width="10" height="3" rx="1" fill="#17130F"/>
+								<rect x="14.5" y="26" width="7" height="2.5" rx="1" fill="#17130F"/>
+								<line x1="16" y1="29.5" x2="20" y2="29.5" stroke="#17130F" stroke-width="2" stroke-linecap="round"/>
+								<line x1="18" y1="2" x2="18" y2="4.5" stroke="#29ABE2" stroke-width="2.5" stroke-linecap="round"/>
+								<line x1="7" y1="7" x2="9" y2="9" stroke="#29ABE2" stroke-width="2.5" stroke-linecap="round"/>
+								<line x1="29" y1="7" x2="27" y2="9" stroke="#29ABE2" stroke-width="2.5" stroke-linecap="round"/>
 							</svg>
 						</div>
 						<span class="pr-services__mobile-label">Comunicación ejecutiva y thought leadership</span>
@@ -273,13 +259,11 @@ $pr_img_uri = $theme_uri . '/assets/images/pr';
 					<button class="pr-services__mobile-row js-pr-node-row" data-node-index="5">
 						<div class="pr-services__mobile-icon">
 							<svg viewBox="0 0 36 36" width="30" height="30" fill="none">
-								<path d="M9 11H6a4 4 0 0 0 4 4h1" fill="none" stroke="#17130F" stroke-width="1.8" stroke-linecap="round"/>
-								<path d="M27 11h3a4 4 0 0 1-4 4h-1" fill="none" stroke="#17130F" stroke-width="1.8" stroke-linecap="round"/>
-								<path d="M9 6h18v7a9 9 0 0 1-18 0V6z" fill="#FDBB42" stroke="#17130F" stroke-width="1.8" stroke-linejoin="round"/>
-								<path d="M16 22h4v3h-4z" fill="#EE894F" stroke="#17130F" stroke-width="1.8" stroke-linejoin="round"/>
-								<path d="M12 25h12l1.5 4H10.5L12 25z" fill="#FC6E51" stroke="#17130F" stroke-width="1.8" stroke-linejoin="round"/>
-								<line x1="8" y1="30" x2="28" y2="30" stroke="#17130F" stroke-width="1.8" stroke-linecap="round"/>
-								<polygon points="18,9 19.2,11.8 22,12 19.8,13.8 20.5,16.5 18,15 15.5,16.5 16.2,13.8 14,12 16.8,11.8" fill="#FFFFFF" stroke="#17130F" stroke-width="1.2" stroke-linejoin="round"/>
+								<path d="M9 7h18v7a9 9 0 0 1-18 0V7z" fill="#29ABE2"/>
+								<path d="M9 10H5a4 4 0 0 0 4 4v-4zm18 0h4a4 4 0 0 1-4 4v-4z" fill="#29ABE2"/>
+								<rect x="16" y="22" width="4" height="4" fill="#17130F"/>
+								<path d="M11 26h14l1.5 4H9.5L11 26z" fill="#17130F"/>
+								<polygon points="18,9.5 19,12 21.5,12.2 19.6,13.7 20.2,16 18,14.7 15.8,16 16.4,13.7 14.5,12.2 17,12" fill="#FFFFFF"/>
 							</svg>
 						</div>
 						<span class="pr-services__mobile-label">Gestión de reputación corporativa</span>
@@ -288,14 +272,10 @@ $pr_img_uri = $theme_uri . '/assets/images/pr';
 					<button class="pr-services__mobile-row js-pr-node-row" data-node-index="6">
 						<div class="pr-services__mobile-icon">
 							<svg viewBox="0 0 36 36" width="30" height="30" fill="none">
-								<line x1="5" y1="29" x2="31" y2="29" stroke="#17130F" stroke-width="1.8" stroke-linecap="round"/>
-								<rect x="7" y="19" width="5.5" height="10" rx="1.5" fill="#70B5E3" stroke="#17130F" stroke-width="1.8"/>
-								<rect x="15" y="13" width="5.5" height="16" rx="1.5" fill="#48CFAD" stroke="#17130F" stroke-width="1.8"/>
-								<rect x="23" y="7" width="5.5" height="22" rx="1.5" fill="#AC92EC" stroke="#17130F" stroke-width="1.8"/>
-								<polyline points="9.5,15 17.5,8.5 26,4" fill="none" stroke="#FC6E51" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-								<circle cx="9.5" cy="15" r="2.2" fill="#FFFFFF" stroke="#17130F" stroke-width="1.5"/>
-								<circle cx="17.5" cy="8.5" r="2.2" fill="#FFFFFF" stroke="#17130F" stroke-width="1.5"/>
-								<circle cx="26" cy="4" r="2.2" fill="#FFFFFF" stroke="#17130F" stroke-width="1.5"/>
+								<rect x="6" y="19" width="6" height="11" rx="1.5" fill="#29ABE2"/>
+								<rect x="15" y="13" width="6" height="17" rx="1.5" fill="#29ABE2"/>
+								<rect x="24" y="6" width="6" height="24" rx="1.5" fill="#29ABE2"/>
+								<line x1="4" y1="30.5" x2="32" y2="30.5" stroke="#17130F" stroke-width="2" stroke-linecap="round"/>
 							</svg>
 						</div>
 						<span class="pr-services__mobile-label">Monitoreo y análisis de impacto mediático</span>
@@ -304,17 +284,15 @@ $pr_img_uri = $theme_uri . '/assets/images/pr';
 					<button class="pr-services__mobile-row js-pr-node-row" data-node-index="7">
 						<div class="pr-services__mobile-icon">
 							<svg viewBox="0 0 36 36" width="30" height="30" fill="none">
-								<circle cx="18" cy="9.5" r="4" fill="#FFE8D6" stroke="#17130F" stroke-width="1.8"/>
-								<path d="M11.5 19c0-3.5 2.8-5 6.5-5s6.5 1.5 6.5 5z" fill="#70B5E3" stroke="#17130F" stroke-width="1.8"/>
-								<polygon points="18,14 19,18 18,19.5 17,18" fill="#17130F"/>
-								<polygon points="8,18 28,18 26.5,21.5 9.5,21.5" fill="#FDBB42" stroke="#17130F" stroke-width="1.8" stroke-linejoin="round"/>
-								<polygon points="11.5,21.5 24.5,21.5 23,29.5 13,29.5" fill="#EE894F" stroke="#17130F" stroke-width="1.8" stroke-linejoin="round"/>
-								<rect x="15" y="23.5" width="6" height="4" rx="1" fill="#FFFFFF" stroke="#17130F" stroke-width="1.3"/>
+								<circle cx="18" cy="8.5" r="4" fill="#29ABE2"/>
+								<path d="M12 17c0-3 2.5-4.5 6-4.5s6 1.5 6 4.5z" fill="#29ABE2"/>
+								<rect x="8" y="17" width="20" height="4" rx="1" fill="#17130F"/>
+								<polygon points="11.5,21 24.5,21 23,29.5 13,29.5" fill="#17130F"/>
 								<line x1="9" y1="30" x2="27" y2="30" stroke="#17130F" stroke-width="2" stroke-linecap="round"/>
-								<line x1="13" y1="18" x2="10.5" y2="14" stroke="#17130F" stroke-width="1.6" stroke-linecap="round"/>
-								<circle cx="10" cy="13.5" r="1.6" fill="#FC6E51" stroke="#17130F" stroke-width="1.2"/>
-								<line x1="23" y1="18" x2="25.5" y2="14" stroke="#17130F" stroke-width="1.6" stroke-linecap="round"/>
-								<circle cx="26" cy="13.5" r="1.6" fill="#FC6E51" stroke="#17130F" stroke-width="1.2"/>
+								<line x1="13.5" y1="17" x2="11.5" y2="13" stroke="#29ABE2" stroke-width="1.8" stroke-linecap="round"/>
+								<circle cx="11" cy="12.5" r="1.8" fill="#29ABE2"/>
+								<line x1="22.5" y1="17" x2="24.5" y2="13" stroke="#29ABE2" stroke-width="1.8" stroke-linecap="round"/>
+								<circle cx="25" cy="12.5" r="1.8" fill="#29ABE2"/>
 							</svg>
 						</div>
 						<span class="pr-services__mobile-label">Comunicación de lanzamientos y anuncios corporativos</span>
@@ -374,12 +352,8 @@ $pr_img_uri = $theme_uri . '/assets/images/pr';
 					<div class="pr-crisis__item">
 						<div class="pr-crisis__icon-box">
 							<svg viewBox="0 0 36 36" width="28" height="28" fill="none">
-								<path d="M18 4l12 5v9c0 8-5.5 13-12 15C11.5 31 6 26 6 18V9l12-5z" fill="#E1F2FB" stroke="#17130F" stroke-width="1.8" stroke-linejoin="round"/>
-								<circle cx="18" cy="18" r="6" fill="#70B5E3" stroke="#17130F" stroke-width="1.5"/>
-								<line x1="18" y1="12" x2="18" y2="24" stroke="#17130F" stroke-width="1.2"/>
-								<line x1="12" y1="18" x2="24" y2="18" stroke="#17130F" stroke-width="1.2"/>
-								<circle cx="22" cy="22" r="3.5" fill="#FFE8D6" stroke="#17130F" stroke-width="1.5"/>
-								<line x1="24.5" y1="24.5" x2="28" y2="28" stroke="#FC6E51" stroke-width="2.2" stroke-linecap="round"/>
+								<path d="M18 3l12 5v10c0 7.5-5.5 13-12 15C11.5 31 6 25.5 6 18V8l12-5z" fill="#29ABE2"/>
+								<path d="M13 18l3.5 3.5 7-7" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
 							</svg>
 						</div>
 						<span class="pr-crisis__item-label">Diagnóstico y evaluación de riesgos reputacionales</span>
@@ -387,11 +361,9 @@ $pr_img_uri = $theme_uri . '/assets/images/pr';
 					<div class="pr-crisis__item">
 						<div class="pr-crisis__icon-box">
 							<svg viewBox="0 0 36 36" width="28" height="28" fill="none">
-								<path d="M5 10a2 2 0 0 1 2-2h8l3 3h11a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V10z" fill="#FDBB42" stroke="#17130F" stroke-width="1.8" stroke-linejoin="round"/>
-								<path d="M5 14h24v13a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V14z" fill="#FFE8D6" stroke="#17130F" stroke-width="1.8" stroke-linejoin="round"/>
-								<rect x="14" y="18" width="8" height="7" rx="1.5" fill="#EE894F" stroke="#17130F" stroke-width="1.4"/>
-								<path d="M16 18v-2a2 2 0 0 1 4 0v2" stroke="#17130F" stroke-width="1.4"/>
-								<circle cx="18" cy="21.5" r="0.8" fill="#17130F"/>
+								<path d="M5 8a2 2 0 0 1 2-2h8l3 3h11a2 2 0 0 1 2 2v17a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V8z" fill="#29ABE2"/>
+								<rect x="14" y="16" width="8" height="7" rx="1.5" fill="#FFFFFF"/>
+								<path d="M16 16v-2.5a2 2 0 0 1 4 0v2.5" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round"/>
 							</svg>
 						</div>
 						<span class="pr-crisis__item-label">Manuales y protocolos de crisis</span>
@@ -407,10 +379,8 @@ $pr_img_uri = $theme_uri . '/assets/images/pr';
 					<div class="pr-crisis__item">
 						<div class="pr-crisis__icon-box">
 							<svg viewBox="0 0 36 36" width="28" height="28" fill="none">
-								<path d="M7 8h15a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3h-4l-5 4v-4H7a3 3 0 0 1-3-3v-6a3 3 0 0 1 3-3z" fill="#70B5E3" stroke="#17130F" stroke-width="1.8" stroke-linejoin="round"/>
-								<path d="M14 16h13a3 3 0 0 1 3 3v5a3 3 0 0 1-3 3h-2l-4 3v-3h-7a3 3 0 0 1-3-3v-5a3 3 0 0 1 3-3z" fill="#48CFAD" stroke="#17130F" stroke-width="1.8" stroke-linejoin="round"/>
-								<line x1="8" y1="13" x2="16" y2="13" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round"/>
-								<line x1="17" y1="21" x2="25" y2="21" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round"/>
+								<path d="M6 7h16a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-4l-5 4v-4H6a3 3 0 0 1-3-3v-7a3 3 0 0 1 3-3z" fill="#29ABE2"/>
+								<path d="M15 15h14a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3h-2l-4 3v-3h-8a3 3 0 0 1-3-3v-6a3 3 0 0 1 3-3z" fill="#FFFFFF"/>
 							</svg>
 						</div>
 						<span class="pr-crisis__item-label">Diseño de mensajes estratégicos</span>
@@ -418,12 +388,10 @@ $pr_img_uri = $theme_uri . '/assets/images/pr';
 					<div class="pr-crisis__item">
 						<div class="pr-crisis__icon-box">
 							<svg viewBox="0 0 36 36" width="28" height="28" fill="none">
-								<rect x="13.5" y="5" width="9" height="15" rx="4.5" fill="#CCD1D9" stroke="#17130F" stroke-width="1.8"/>
-								<path d="M9 13.5v2a9 9 0 0 0 18 0v-2" stroke="#17130F" stroke-width="1.8" stroke-linecap="round"/>
-								<line x1="18" y1="24.5" x2="18" y2="30" stroke="#17130F" stroke-width="1.8"/>
-								<line x1="12" y1="30" x2="24" y2="30" stroke="#17130F" stroke-width="2" stroke-linecap="round"/>
-								<circle cx="18" cy="10" r="1.8" fill="#FC6E51"/>
-								<line x1="14.5" y1="14" x2="21.5" y2="14" stroke="#17130F" stroke-width="1.4"/>
+								<rect x="13" y="4" width="10" height="17" rx="5" fill="#29ABE2"/>
+								<path d="M8 14.5v2a10 10 0 0 0 20 0v-2" stroke="#29ABE2" stroke-width="2.5" stroke-linecap="round"/>
+								<line x1="18" y1="26.5" x2="18" y2="31" stroke="#29ABE2" stroke-width="2.5" stroke-linecap="round"/>
+								<line x1="12" y1="31" x2="24" y2="31" stroke="#29ABE2" stroke-width="2.5" stroke-linecap="round"/>
 							</svg>
 						</div>
 						<span class="pr-crisis__item-label">Gestión de medios durante contingencias</span>
@@ -439,13 +407,10 @@ $pr_img_uri = $theme_uri . '/assets/images/pr';
 					<div class="pr-crisis__item">
 						<div class="pr-crisis__icon-box">
 							<svg viewBox="0 0 36 36" width="28" height="28" fill="none">
-								<circle cx="18" cy="18" r="11" fill="#70B5E3" stroke="#17130F" stroke-width="1.8"/>
-								<ellipse cx="18" cy="18" rx="5" ry="11" fill="#E1F2FB" stroke="#17130F" stroke-width="1.5"/>
-								<line x1="7" y1="18" x2="29" y2="18" stroke="#17130F" stroke-width="1.5"/>
-								<line x1="9" y1="12" x2="27" y2="12" stroke="#17130F" stroke-width="1.4"/>
-								<line x1="9" y1="24" x2="27" y2="24" stroke="#17130F" stroke-width="1.4"/>
-								<path d="M4 14a16 16 0 0 1 28 8" stroke="#FC6E51" stroke-width="1.8" stroke-dasharray="2 3" stroke-linecap="round"/>
-								<circle cx="30" cy="20" r="2.2" fill="#FDBB42" stroke="#17130F" stroke-width="1.3"/>
+								<circle cx="18" cy="18" r="13" fill="#29ABE2"/>
+								<circle cx="18" cy="18" r="8" fill="#17130F"/>
+								<circle cx="18" cy="18" r="3.5" fill="#FFFFFF"/>
+								<path d="M18 5v5M18 26v5M5 18h5M26 18h5" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
 							</svg>
 						</div>
 						<span class="pr-crisis__item-label">Monitoreo de medios y redes sociales</span>
@@ -453,10 +418,9 @@ $pr_img_uri = $theme_uri . '/assets/images/pr';
 					<div class="pr-crisis__item">
 						<div class="pr-crisis__icon-box">
 							<svg viewBox="0 0 36 36" width="28" height="28" fill="none">
-								<path d="M14 9h8v3h-8z" fill="#CCD1D9" stroke="#17130F" stroke-width="1.8" stroke-linejoin="round"/>
-								<rect x="5" y="12" width="26" height="18" rx="3" fill="#FDBB42" stroke="#17130F" stroke-width="1.8"/>
-								<path d="M5 19h26" stroke="#17130F" stroke-width="1.6"/>
-								<rect x="15.5" y="17" width="5" height="4.5" rx="1" fill="#FFFFFF" stroke="#17130F" stroke-width="1.4"/>
+								<rect x="4" y="10" width="28" height="20" rx="3" fill="#29ABE2"/>
+								<path d="M13 10V7a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v3" stroke="#29ABE2" stroke-width="2.5" stroke-linecap="round"/>
+								<rect x="15" y="17" width="6" height="6" rx="1" fill="#FFFFFF"/>
 							</svg>
 						</div>
 						<span class="pr-crisis__item-label">Comité de crisis y asesoría ejecutiva</span>
@@ -479,7 +443,7 @@ $pr_img_uri = $theme_uri . '/assets/images/pr';
 	<section class="pr-photo-band">
 		<div class="pr-photo-band__wrapper">
 			<img class="pr-photo-band__img" 
-				src="<?php echo esc_url( $theme_uri . '/assets/images/services/entrenamiento-voceros.png' ); ?>" 
+				src="<?php echo esc_url( $theme_uri . '/assets/images/services/entrenamiento-voceros.webp' ); ?>" 
 				alt="Equipo de comunicaciones Orange Latam en reunión estratégica de PR">
 		</div>
 	</section>
@@ -502,10 +466,9 @@ $pr_img_uri = $theme_uri . '/assets/images/pr';
 					<div class="pr-voceros__card-top">
 						<div class="pr-voceros__card-icon">
 							<svg viewBox="0 0 36 36" width="34" height="34" fill="none">
-								<rect x="5" y="11" width="18" height="14" rx="2.5" fill="#EE894F" stroke="#17130F" stroke-width="1.8"/>
-								<polygon points="23,15 31,10 31,26 23,21" fill="#CCD1D9" stroke="#17130F" stroke-width="1.8" stroke-linejoin="round"/>
-								<circle cx="10" cy="18" r="3.5" fill="#FFE8D6" stroke="#17130F" stroke-width="1.5"/>
-								<circle cx="8" cy="8" r="2.2" fill="#FC6E51" stroke="#17130F" stroke-width="1.4"/>
+								<rect x="4" y="9" width="19" height="18" rx="3" fill="#29ABE2"/>
+								<polygon points="23,14 32,8 32,28 23,22" fill="#29ABE2"/>
+								<circle cx="13.5" cy="18" r="4.5" fill="#FFFFFF"/>
 							</svg>
 						</div>
 						<span class="pr-voceros__card-num">01</span>
@@ -518,11 +481,11 @@ $pr_img_uri = $theme_uri . '/assets/images/pr';
 					<div class="pr-voceros__card-top">
 						<div class="pr-voceros__card-icon">
 							<svg viewBox="0 0 36 36" width="34" height="34" fill="none">
-								<circle cx="18" cy="18" r="13" fill="#E1F2FB" stroke="#17130F" stroke-width="1.8"/>
-								<circle cx="18" cy="18" r="8.5" fill="#70B5E3" stroke="#17130F" stroke-width="1.6"/>
-								<circle cx="18" cy="18" r="4" fill="#FC6E51" stroke="#17130F" stroke-width="1.6"/>
-								<line x1="28" y1="8" x2="19.5" y2="16.5" stroke="#17130F" stroke-width="2" stroke-linecap="round"/>
-								<polygon points="27,5 31,9 29,11 25,7" fill="#FDBB42" stroke="#17130F" stroke-width="1.4"/>
+								<circle cx="18" cy="18" r="14" fill="#29ABE2"/>
+								<circle cx="18" cy="18" r="9" fill="#FFFFFF"/>
+								<circle cx="18" cy="18" r="4.5" fill="#29ABE2"/>
+								<polygon points="27,4 32,9 29,11 25,7" fill="#17130F"/>
+								<line x1="28" y1="8" x2="19.5" y2="16.5" stroke="#17130F" stroke-width="2.5" stroke-linecap="round"/>
 							</svg>
 						</div>
 						<span class="pr-voceros__card-num">02</span>
@@ -535,10 +498,8 @@ $pr_img_uri = $theme_uri . '/assets/images/pr';
 					<div class="pr-voceros__card-top">
 						<div class="pr-voceros__card-icon">
 							<svg viewBox="0 0 36 36" width="34" height="34" fill="none">
-								<circle cx="14" cy="16" r="8" fill="#FDBB42" stroke="#17130F" stroke-width="1.8"/>
-								<circle cx="14" cy="16" r="3.5" fill="#FFFFFF" stroke="#17130F" stroke-width="1.6"/>
-								<path d="M21 18l10 10-2.5 2.5-2.5-2.5-2 2-2.5-2.5 2-2z" fill="#EE894F" stroke="#17130F" stroke-width="1.6" stroke-linejoin="round"/>
-								<polygon points="27,6 28.5,10 32.5,10 29.5,12.5 30.5,16.5 27,14 23.5,16.5 24.5,12.5 21.5,10 25.5,10" fill="#FC6E51" stroke="#17130F" stroke-width="1.2" stroke-linejoin="round"/>
+								<path d="M5 8a2 2 0 0 1 2-2h22a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H14l-6 6v-6H7a2 2 0 0 1-2-2V8z" fill="#29ABE2"/>
+								<polygon points="18,10 19.5,13.8 23.5,14 20.5,16.5 21.5,20.5 18,18.2 14.5,20.5 15.5,16.5 12.5,14 16.5,13.8" fill="#FFFFFF"/>
 							</svg>
 						</div>
 						<span class="pr-voceros__card-num">03</span>
@@ -551,11 +512,11 @@ $pr_img_uri = $theme_uri . '/assets/images/pr';
 					<div class="pr-voceros__card-top">
 						<div class="pr-voceros__card-icon">
 							<svg viewBox="0 0 36 36" width="34" height="34" fill="none">
-								<path d="M8 19a10 10 0 0 1 20 0" stroke="#17130F" stroke-width="2.2" stroke-linecap="round"/>
-								<rect x="5" y="17" width="6" height="11" rx="3" fill="#FC6E51" stroke="#17130F" stroke-width="1.8"/>
-								<rect x="25" y="17" width="6" height="11" rx="3" fill="#70B5E3" stroke="#17130F" stroke-width="1.8"/>
-								<path d="M28 26c0 4-3.5 6-7 6" stroke="#17130F" stroke-width="1.8" stroke-linecap="round"/>
-								<circle cx="21" cy="32" r="2" fill="#FDBB42" stroke="#17130F" stroke-width="1.4"/>
+								<path d="M7 19a11 11 0 0 1 22 0" stroke="#29ABE2" stroke-width="3" stroke-linecap="round"/>
+								<rect x="4" y="16" width="7" height="12" rx="3.5" fill="#29ABE2"/>
+								<rect x="25" y="16" width="7" height="12" rx="3.5" fill="#29ABE2"/>
+								<path d="M28 26c0 4-3.5 6.5-7 6.5" stroke="#29ABE2" stroke-width="2.5" stroke-linecap="round"/>
+								<circle cx="21" cy="32.5" r="2.5" fill="#17130F"/>
 							</svg>
 						</div>
 						<span class="pr-voceros__card-num">04</span>
@@ -568,13 +529,12 @@ $pr_img_uri = $theme_uri . '/assets/images/pr';
 					<div class="pr-voceros__card-top">
 						<div class="pr-voceros__card-icon">
 							<svg viewBox="0 0 36 36" width="34" height="34" fill="none">
-								<path d="M7 18c0-7 6-12 13-12s11 4 11 9c0 6-4 8-7 8-2 0-3 1-3 2.5 0 2 1.5 2.5 1.5 4.5 0 2-2 4-5.5 4C9 34 7 27 7 18z" fill="#FFE8D6" stroke="#17130F" stroke-width="1.8" stroke-linejoin="round"/>
-								<circle cx="13" cy="14" r="2.2" fill="#70B5E3"/>
-								<circle cx="19" cy="11" r="2.2" fill="#FC6E51"/>
-								<circle cx="25" cy="14" r="2.2" fill="#FDBB42"/>
-								<circle cx="16" cy="28" r="2.5" fill="#48CFAD"/>
-								<line x1="28" y1="22" x2="22" y2="28" stroke="#17130F" stroke-width="1.8" stroke-linecap="round"/>
-								<path d="M20 30l2-2 1 1-2 2z" fill="#17130F"/>
+								<path d="M5 8c0-1.5 1-2.5 2.5-2.5H16v22H7.5A2.5 2.5 0 0 1 5 25V8z" fill="#29ABE2"/>
+								<path d="M31 8c0-1.5-1-2.5-2.5-2.5H20v22h8.5A2.5 2.5 0 0 0 31 25V8z" fill="#29ABE2"/>
+								<line x1="9" y1="11" x2="13" y2="11" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+								<line x1="9" y1="16" x2="13" y2="16" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+								<line x1="23" y1="11" x2="27" y2="11" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+								<line x1="23" y1="16" x2="27" y2="16" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
 							</svg>
 						</div>
 						<span class="pr-voceros__card-num">05</span>
@@ -587,13 +547,8 @@ $pr_img_uri = $theme_uri . '/assets/images/pr';
 					<div class="pr-voceros__card-top">
 						<div class="pr-voceros__card-icon">
 							<svg viewBox="0 0 36 36" width="34" height="34" fill="none">
-								<circle cx="18" cy="18" r="13" fill="#FFFFFF" stroke="#17130F" stroke-width="1.8"/>
-								<circle cx="18" cy="18" r="6" fill="#E1F2FB" stroke="#17130F" stroke-width="1.8"/>
-								<path d="M18 5v7M18 24v7M5 18h7M24 18h7" stroke="#17130F" stroke-width="1.8"/>
-								<path d="M14 5.5l2 6.5h4l2-6.5" fill="#FC6E51" stroke="#17130F" stroke-width="1.4"/>
-								<path d="M14 30.5l2-6.5h4l2 6.5" fill="#FC6E51" stroke="#17130F" stroke-width="1.4"/>
-								<path d="M5.5 14l6.5 2v4l-6.5 2" fill="#FC6E51" stroke="#17130F" stroke-width="1.4"/>
-								<path d="M30.5 14l-6.5 2v4l6.5 2" fill="#FC6E51" stroke="#17130F" stroke-width="1.4"/>
+								<path d="M18 3l13 5.5v10.5c0 8-6 13.5-13 15.5-7-2-13-7.5-13-15.5V8.5L18 3z" fill="#29ABE2"/>
+								<polygon points="19,10 12,20 18,20 17,27 24,17 18,17" fill="#FFFFFF"/>
 							</svg>
 						</div>
 						<span class="pr-voceros__card-num">06</span>
@@ -669,21 +624,21 @@ $pr_img_uri = $theme_uri . '/assets/images/pr';
 
 								<div class="pr-why__award-card">
 									<div class="pr-why__award-logo-box">
-										<img class="pr-why__award-logo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/awards/ipra-golden-world-awards.png" alt="IPRA Golden World Awards" loading="lazy">
+										<img class="pr-why__award-logo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/awards/ipra-golden-world-awards.webp" alt="IPRA Golden World Awards" loading="lazy">
 									</div>
 									<span class="pr-why__award-title">IPRA GOLDEN WORLD</span>
 								</div>
 
 								<div class="pr-why__award-card">
 									<div class="pr-why__award-logo-box">
-										<img class="pr-why__award-logo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/awards/sabre-global-world-awards.png" alt="Sabre Latin America Awards" loading="lazy">
+										<img class="pr-why__award-logo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/awards/sabre-global-world-awards.webp" alt="Sabre Latin America Awards" loading="lazy">
 									</div>
 									<span class="pr-why__award-title">SABRE AWARDS</span>
 								</div>
 
 								<div class="pr-why__award-card">
 									<div class="pr-why__award-logo-box">
-										<img class="pr-why__award-logo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/awards/effie-awards.png" alt="Effie Awards" loading="lazy">
+										<img class="pr-why__award-logo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/awards/effie-awards.webp" alt="Effie Awards" loading="lazy">
 									</div>
 									<span class="pr-why__award-title">EFFIE AWARDS</span>
 								</div>

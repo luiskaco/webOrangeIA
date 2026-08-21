@@ -56,7 +56,7 @@ $theme_uri = get_template_directory_uri();
 			<div class="ga-hero__media" data-reveal="right">
 				<div class="ga-hero__photo-wrapper">
 					<img class="ga-hero__photo" 
-						src="<?php echo esc_url( $theme_uri . '/assets/images/gestion-de-acceso/hero.png' ); ?>" 
+						src="<?php echo esc_url( $theme_uri . '/assets/images/gestion-de-acceso/hero.webp' ); ?>" 
 						alt="Investigadora médica y consultora de market access en laboratorio de salud - Orange Latam">
 				</div>
 			</div>
@@ -75,7 +75,7 @@ $theme_uri = get_template_directory_uri();
 					<!-- Avatar 1 (Top Left) -->
 					<div class="ga-about__avatar-item ga-about__avatar-item--1">
 						<div class="ga-about__circle">
-							<img src="<?php echo esc_url( $theme_uri . '/assets/images/gestion-de-acceso/avatar-1.png' ); ?>" alt="Paciente">
+							<img src="<?php echo esc_url( $theme_uri . '/assets/images/gestion-de-acceso/avatar-1.webp' ); ?>" alt="Paciente">
 						</div>
 						<div class="ga-about__pill-badge ga-about__pill-badge--left">
 							<span class="ga-about__pill-icon">
@@ -91,21 +91,21 @@ $theme_uri = get_template_directory_uri();
 					<!-- Avatar 2 (Top Right Small) -->
 					<div class="ga-about__avatar-item ga-about__avatar-item--2">
 						<div class="ga-about__circle">
-							<img src="<?php echo esc_url( $theme_uri . '/assets/images/gestion-de-acceso/avatar-2.png' ); ?>" alt="Especialista Médica">
+							<img src="<?php echo esc_url( $theme_uri . '/assets/images/gestion-de-acceso/avatar-2.webp' ); ?>" alt="Especialista Médica">
 						</div>
 					</div>
 
 					<!-- Avatar 3 (Bottom Left Medium) -->
 					<div class="ga-about__avatar-item ga-about__avatar-item--3">
 						<div class="ga-about__circle">
-							<img src="<?php echo esc_url( $theme_uri . '/assets/images/gestion-de-acceso/avatar-3.png' ); ?>" alt="Usuario de Salud">
+							<img src="<?php echo esc_url( $theme_uri . '/assets/images/gestion-de-acceso/avatar-3.webp' ); ?>" alt="Usuario de Salud">
 						</div>
 					</div>
 
 					<!-- Avatar 4 (Bottom Right Main) -->
 					<div class="ga-about__avatar-item ga-about__avatar-item--4">
 						<div class="ga-about__circle">
-							<img src="<?php echo esc_url( $theme_uri . '/assets/images/gestion-de-acceso/avatar-4.png' ); ?>" alt="Pacientes y Tratamientos">
+							<img src="<?php echo esc_url( $theme_uri . '/assets/images/gestion-de-acceso/avatar-4.webp' ); ?>" alt="Pacientes y Tratamientos">
 						</div>
 						<div class="ga-about__pill-badge ga-about__pill-badge--right">
 							<span class="ga-about__pill-icon">

@@ -98,7 +98,7 @@ get_header();
 
 			<div class="dig-services__objective-card" data-reveal="fade">
 				<div class="dig-services__objective-icon-wrapper">
-					<img class="dig-services__objective-icon" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/marketing-digital/promote.png" alt="Objetivo">
+					<img class="dig-services__objective-icon" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/marketing-digital/promote.webp" alt="Objetivo">
 				</div>
 				<p class="dig-services__objective-text">
 					NUESTRO OBJETIVO ES AUMENTAR LA VISIBILIDAD, MEJORAR EL ENGAGEMENT, FIDELIZAR A TU COMUNIDAD Y GENERAR UNA PERCEPCIÓN DE MARCA PROFESIONAL Y COHERENTE PARA LO CUAL:
@@ -179,7 +179,7 @@ get_header();
 
 			<div class="dig-ads__objective-card" data-reveal="fade">
 				<div class="dig-ads__objective-icon-wrapper">
-					<img class="dig-ads__objective-icon" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/marketing-digital/promote.png" alt="Objetivo">
+					<img class="dig-ads__objective-icon" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/marketing-digital/promote.webp" alt="Objetivo">
 				</div>
 				<p class="dig-ads__objective-text">
 					NUESTRO OBJETIVO ES ALCANZAR AL PÚBLICO IDEAL CON MENSAJES CLAROS Y CREATIVOS, OPTIMIZANDO EL PRESUPUESTO PARA OBTENER EL MAYOR RETORNO POSSIBLE. PARA LOGRARLO:
@@ -283,7 +283,7 @@ get_header();
 
 			<div class="dig-content__objective-card" data-reveal="fade">
 				<div class="dig-content__objective-icon-wrapper">
-					<img class="dig-content__objective-icon" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/marketing-digital/promote.png" alt="Objetivo">
+					<img class="dig-content__objective-icon" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/marketing-digital/promote.webp" alt="Objetivo">
 				</div>
 				<p class="dig-content__objective-text">
 					NUESTRO OBJETIVO ES GENERAR AUTORIDAD, CONSTRUIR CONFIANZA, RESOLVER DUDAS FRECUENTES Y PROVOCAR INTERACCIÓN REAL PARA LO CUAL:
@@ -294,28 +294,28 @@ get_header();
 				
 				<div class="dig-content__grid-item dig-content__grid-item--blue" data-reveal="fade">
 					<div class="dig-content__grid-icon-wrapper">
-						<img class="dig-content__grid-icon" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/bullseye-arrow.png" alt="Planes de Contenido">
+						<img class="dig-content__grid-icon" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/bullseye-arrow.webp" alt="Planes de Contenido">
 					</div>
 					<p class="dig-content__grid-text">Trabajamos planes de contenido alineados a objetivos de marca</p>
 				</div>
 
 				<div class="dig-content__grid-item dig-content__grid-item--light" data-reveal="fade">
 					<div class="dig-content__grid-icon-wrapper">
-						<img class="dig-content__grid-icon" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/videocamera-symbol.png" alt="Copy y Storytelling">
+						<img class="dig-content__grid-icon" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/videocamera-symbol.webp" alt="Copy y Storytelling">
 					</div>
 					<p class="dig-content__grid-text">Redactamos textos persuasivos con técnicas de storytelling</p>
 				</div>
 
 				<div class="dig-content__grid-item dig-content__grid-item--blue" data-reveal="fade">
 					<div class="dig-content__grid-icon-wrapper">
-						<img class="dig-content__grid-icon" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/megaphone.png" alt="Diseño de Contenido">
+						<img class="dig-content__grid-icon" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/megaphone.webp" alt="Diseño de Contenido">
 					</div>
 					<p class="dig-content__grid-text">Diseñamos contenidos y recursos para feed y stories</p>
 				</div>
 
 				<div class="dig-content__grid-item dig-content__grid-item--light" data-reveal="fade">
 					<div class="dig-content__grid-icon-wrapper">
-						<img class="dig-content__grid-icon" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/diagram.png" alt="Edición de Reels y TikToks">
+						<img class="dig-content__grid-icon" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/diagram.webp" alt="Edición de Reels y TikToks">
 					</div>
 					<p class="dig-content__grid-text">Editamos reels / TikToks</p>
 				</div>
@@ -350,7 +350,7 @@ get_header();
 
 			<div class="dig-consult__objective-card" data-reveal="fade">
 				<div class="dig-consult__objective-icon-wrapper">
-					<img class="dig-consult__objective-icon" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/marketing-digital/promote.png" alt="Objetivo">
+					<img class="dig-consult__objective-icon" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/marketing-digital/promote.webp" alt="Objetivo">
 				</div>
 				<p class="dig-consult__objective-text">
 					NUESTRO OBJETIVO ES GENERAR AUTORIDAD, CONSTRUIR CONFIANZA, RESOLVER DUDAS FRECUENTES Y PROVOCAR INTERACCIÓN REAL PARA LO CUAL:
@@ -420,48 +420,48 @@ get_header();
 					<!-- Row 1: moves left -->
 					<div class="dig-brands__row">
 						<div class="dig-brands__track">
-							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/carousel/GG-3.png" alt="G&G" class="dig-brands__logo">
-							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/carousel/Tiffany.png" alt="Tiffany" class="dig-brands__logo">
-							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/carousel/abosult.png" alt="Absolut" class="dig-brands__logo">
-							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/carousel/banco.png" alt="Banco de Alimentos" class="dig-brands__logo">
-							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/carousel/chivas.png" alt="Chivas" class="dig-brands__logo">
-							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/carousel/swissotel.png" alt="Swissôtel" class="dig-brands__logo">
-							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/carousel/worldreader.png" alt="Worldreader" class="dig-brands__logo">
-							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/carousel/bcp.png" alt="BCP" class="dig-brands__logo">
+							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/carousel/GG-3.webp" alt="G&G" class="dig-brands__logo">
+							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/carousel/Tiffany.webp" alt="Tiffany" class="dig-brands__logo">
+							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/carousel/abosult.webp" alt="Absolut" class="dig-brands__logo">
+							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/carousel/banco.webp" alt="Banco de Alimentos" class="dig-brands__logo">
+							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/carousel/chivas.webp" alt="Chivas" class="dig-brands__logo">
+							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/carousel/swissotel.webp" alt="Swissôtel" class="dig-brands__logo">
+							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/carousel/worldreader.webp" alt="Worldreader" class="dig-brands__logo">
+							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/carousel/bcp.webp" alt="BCP" class="dig-brands__logo">
 							
 							<!-- Duplicate for loop -->
-							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/carousel/GG-3.png" alt="G&G" class="dig-brands__logo">
-							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/carousel/Tiffany.png" alt="Tiffany" class="dig-brands__logo">
-							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/carousel/abosult.png" alt="Absolut" class="dig-brands__logo">
-							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/carousel/banco.png" alt="Banco de Alimentos" class="dig-brands__logo">
-							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/carousel/chivas.png" alt="Chivas" class="dig-brands__logo">
-							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/carousel/swissotel.png" alt="Swissôtel" class="dig-brands__logo">
-							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/carousel/worldreader.png" alt="Worldreader" class="dig-brands__logo">
-							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/carousel/bcp.png" alt="BCP" class="dig-brands__logo">
+							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/carousel/GG-3.webp" alt="G&G" class="dig-brands__logo">
+							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/carousel/Tiffany.webp" alt="Tiffany" class="dig-brands__logo">
+							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/carousel/abosult.webp" alt="Absolut" class="dig-brands__logo">
+							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/carousel/banco.webp" alt="Banco de Alimentos" class="dig-brands__logo">
+							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/carousel/chivas.webp" alt="Chivas" class="dig-brands__logo">
+							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/carousel/swissotel.webp" alt="Swissôtel" class="dig-brands__logo">
+							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/carousel/worldreader.webp" alt="Worldreader" class="dig-brands__logo">
+							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/carousel/bcp.webp" alt="BCP" class="dig-brands__logo">
 						</div>
 					</div>
 					
 					<!-- Row 2: moves right -->
 					<div class="dig-brands__row">
 						<div class="dig-brands__track dig-brands__track--reverse">
-							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/carousel/banco.png" alt="Banco de Alimentos" class="dig-brands__logo">
-							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/carousel/chivas.png" alt="Chivas" class="dig-brands__logo">
-							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/carousel/swissotel.png" alt="Swissôtel" class="dig-brands__logo">
-							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/carousel/worldreader.png" alt="Worldreader" class="dig-brands__logo">
-							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/carousel/GG-3.png" alt="G&G" class="dig-brands__logo">
-							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/carousel/Tiffany.png" alt="Tiffany" class="dig-brands__logo">
-							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/carousel/abosult.png" alt="Absolut" class="dig-brands__logo">
-							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/carousel/bcp.png" alt="BCP" class="dig-brands__logo">
+							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/carousel/banco.webp" alt="Banco de Alimentos" class="dig-brands__logo">
+							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/carousel/chivas.webp" alt="Chivas" class="dig-brands__logo">
+							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/carousel/swissotel.webp" alt="Swissôtel" class="dig-brands__logo">
+							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/carousel/worldreader.webp" alt="Worldreader" class="dig-brands__logo">
+							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/carousel/GG-3.webp" alt="G&G" class="dig-brands__logo">
+							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/carousel/Tiffany.webp" alt="Tiffany" class="dig-brands__logo">
+							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/carousel/abosult.webp" alt="Absolut" class="dig-brands__logo">
+							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/carousel/bcp.webp" alt="BCP" class="dig-brands__logo">
 							
 							<!-- Duplicate for loop -->
-							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/carousel/banco.png" alt="Banco de Alimentos" class="dig-brands__logo">
-							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/carousel/chivas.png" alt="Chivas" class="dig-brands__logo">
-							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/carousel/swissotel.png" alt="Swissôtel" class="dig-brands__logo">
-							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/carousel/worldreader.png" alt="Worldreader" class="dig-brands__logo">
-							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/carousel/GG-3.png" alt="G&G" class="dig-brands__logo">
-							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/carousel/Tiffany.png" alt="Tiffany" class="dig-brands__logo">
-							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/carousel/abosult.png" alt="Absolut" class="dig-brands__logo">
-							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/carousel/bcp.png" alt="BCP" class="dig-brands__logo">
+							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/carousel/banco.webp" alt="Banco de Alimentos" class="dig-brands__logo">
+							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/carousel/chivas.webp" alt="Chivas" class="dig-brands__logo">
+							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/carousel/swissotel.webp" alt="Swissôtel" class="dig-brands__logo">
+							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/carousel/worldreader.webp" alt="Worldreader" class="dig-brands__logo">
+							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/carousel/GG-3.webp" alt="G&G" class="dig-brands__logo">
+							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/carousel/Tiffany.webp" alt="Tiffany" class="dig-brands__logo">
+							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/carousel/abosult.webp" alt="Absolut" class="dig-brands__logo">
+							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/carousel/bcp.webp" alt="BCP" class="dig-brands__logo">
 						</div>
 					</div>
 				</div>

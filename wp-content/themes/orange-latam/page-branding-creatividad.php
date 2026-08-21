@@ -195,7 +195,7 @@ $theme_uri = get_template_directory_uri();
 				<!-- Card 1: Estrategia de marca -->
 				<div class="bc-cat-card bc-cat-card--purple" data-reveal="up">
 					<div class="bc-cat-card__visual">
-						<img class="bc-cat-card__img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/branding/strategy.png" alt="Estrategia de marca" loading="lazy">
+						<img class="bc-cat-card__img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/branding/strategy.webp" alt="Estrategia de marca" loading="lazy">
 					</div>
 					<div class="bc-cat-card__content">
 						<h3 class="bc-cat-card__title">Estrategia de marca</h3>
@@ -206,7 +206,7 @@ $theme_uri = get_template_directory_uri();
 				<!-- Card 2: Naming -->
 				<div class="bc-cat-card bc-cat-card--pink" data-reveal="up">
 					<div class="bc-cat-card__visual">
-						<img class="bc-cat-card__img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/branding/naming.png" alt="Naming de marca" loading="lazy">
+						<img class="bc-cat-card__img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/branding/naming.webp" alt="Naming de marca" loading="lazy">
 					</div>
 					<div class="bc-cat-card__content">
 						<h3 class="bc-cat-card__title">Naming</h3>
@@ -222,7 +222,7 @@ $theme_uri = get_template_directory_uri();
 				<!-- Card 3: Creación de marca -->
 				<div class="bc-cat-card bc-cat-card--blue" data-reveal="up">
 					<div class="bc-cat-card__visual">
-						<img class="bc-cat-card__img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/branding/creation.png" alt="Creación de marca" loading="lazy">
+						<img class="bc-cat-card__img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/branding/creation.webp" alt="Creación de marca" loading="lazy">
 					</div>
 					<div class="bc-cat-card__content">
 						<h3 class="bc-cat-card__title">Creación de marca</h3>
@@ -233,7 +233,7 @@ $theme_uri = get_template_directory_uri();
 				<!-- Card 4: Diseño de identidad de marca -->
 				<div class="bc-cat-card bc-cat-card--peach" data-reveal="up">
 					<div class="bc-cat-card__visual">
-						<img class="bc-cat-card__img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/branding/identity.png" alt="Diseño de identidad de marca" loading="lazy">
+						<img class="bc-cat-card__img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/branding/identity.webp" alt="Diseño de identidad de marca" loading="lazy">
 					</div>
 					<div class="bc-cat-card__content">
 						<h3 class="bc-cat-card__title">Diseño de identidad</h3>
@@ -244,7 +244,7 @@ $theme_uri = get_template_directory_uri();
 				<!-- Card 5: Arquitectura de marca -->
 				<div class="bc-cat-card bc-cat-card--teal" data-reveal="up">
 					<div class="bc-cat-card__visual">
-						<img class="bc-cat-card__img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/branding/architecture.png" alt="Arquitectura de marca" loading="lazy">
+						<img class="bc-cat-card__img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/branding/architecture.webp" alt="Arquitectura de marca" loading="lazy">
 					</div>
 					<div class="bc-cat-card__content">
 						<h3 class="bc-cat-card__title">Arquitectura de marca</h3>
@@ -255,7 +255,7 @@ $theme_uri = get_template_directory_uri();
 				<!-- Card 6: Posicionamiento -->
 				<div class="bc-cat-card bc-cat-card--lavender" data-reveal="up">
 					<div class="bc-cat-card__visual">
-						<img class="bc-cat-card__img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/branding/positioning.png" alt="Posicionamiento de marca" loading="lazy">
+						<img class="bc-cat-card__img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/branding/positioning.webp" alt="Posicionamiento de marca" loading="lazy">
 					</div>
 					<div class="bc-cat-card__content">
 						<h3 class="bc-cat-card__title">Posicionamiento</h3>

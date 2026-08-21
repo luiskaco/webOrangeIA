@@ -103,13 +103,13 @@ $theme_uri = get_template_directory_uri();
 						<!-- Card 1: Main Photo Card (Powder Blue Frame) -->
 						<div class="ea-dark-card ea-dark-card--main">
 							<div class="ea-dark-card__img-wrap">
-								<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/eventos/activaciones.png" alt="Activaciones BTL Orange Latam" class="ea-dark-card__img">
+								<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/eventos/activaciones.webp" alt="Activaciones BTL Orange Latam" class="ea-dark-card__img">
 							</div>
 							
 							<!-- Floating Glass Instructor / Production Badge -->
 							<div class="ea-dark-badge">
 								<div class="ea-dark-badge__avatar">
-									<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/eventos/corporativos.png" alt="Producción Orange Latam">
+									<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/eventos/corporativos.webp" alt="Producción Orange Latam">
 								</div>
 								<div class="ea-dark-badge__info">
 									<span class="ea-dark-badge__name">Producción 360°</span>
@@ -124,7 +124,7 @@ $theme_uri = get_template_directory_uri();
 						<!-- Card 2: Secondary Card (Purple Overlay + Float Action Arrow) -->
 						<div class="ea-dark-card ea-dark-card--secondary">
 							<div class="ea-dark-card__img-wrap">
-								<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/eventos/hibridos.png" alt="Eventos Híbridos" class="ea-dark-card__img">
+								<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/eventos/hibridos.webp" alt="Eventos Híbridos" class="ea-dark-card__img">
 							</div>
 							
 							<!-- Floating Glass Circle Arrow Button -->
@@ -184,7 +184,7 @@ $theme_uri = get_template_directory_uri();
 				<!-- Right: 3 Tall Photo Cards -->
 				<div class="ea-plus-types__cards">
 					<div class="ea-plus-photo-card">
-						<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/eventos/corporativos.png" alt="Eventos Corporativos" class="ea-plus-photo-card__img" loading="lazy">
+						<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/eventos/corporativos.webp" alt="Eventos Corporativos" class="ea-plus-photo-card__img" loading="lazy">
 						<div class="ea-plus-photo-card__overlay">
 							<span class="ea-plus-photo-card__badge">Corporativo</span>
 							<h3 class="ea-plus-photo-card__title">Eventos Corporativos</h3>
@@ -192,7 +192,7 @@ $theme_uri = get_template_directory_uri();
 					</div>
 
 					<div class="ea-plus-photo-card">
-						<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/eventos/activaciones.png" alt="Activaciones BTL" class="ea-plus-photo-card__img" loading="lazy">
+						<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/eventos/activaciones.webp" alt="Activaciones BTL" class="ea-plus-photo-card__img" loading="lazy">
 						<div class="ea-plus-photo-card__overlay">
 							<span class="ea-plus-photo-card__badge">BTL</span>
 							<h3 class="ea-plus-photo-card__title">Activaciones de Marca</h3>
@@ -200,7 +200,7 @@ $theme_uri = get_template_directory_uri();
 					</div>
 
 					<div class="ea-plus-photo-card">
-						<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/eventos/hibridos.png" alt="Eventos Híbridos" class="ea-plus-photo-card__img" loading="lazy">
+						<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/eventos/hibridos.webp" alt="Eventos Híbridos" class="ea-plus-photo-card__img" loading="lazy">
 						<div class="ea-plus-photo-card__overlay">
 							<span class="ea-plus-photo-card__badge">Híbrido</span>
 							<h3 class="ea-plus-photo-card__title">Eventos Híbridos</h3>

@@ -75,13 +75,13 @@ get_header();
 				<div class="infl-awards__track">
 					<?php
 					$influencer_awards = array(
-						array( 'name' => 'Sabre Global World Awards', 'image' => 'sabre-global-world-awards.png', 'line1' => 'Best Influencer', 'line2' => 'Marketing Campaign' ),
-						array( 'name' => 'Sabre Latin America Awards', 'image' => 'sabre-global-world-awards.png', 'line1' => 'Diamond', 'line2' => 'Awards Category' ),
-						array( 'name' => 'Sabre Latin America Awards', 'image' => 'sabre-global-world-awards.png', 'line1' => 'Best Influencer', 'line2' => 'Marketing Campaign' ),
-						array( 'name' => 'Effie Awards', 'image' => 'effie-awards.png', 'line1' => 'Mejor Campaña de', 'line2' => 'Marketing de Influencers' ),
+						array( 'name' => 'Sabre Global World Awards', 'image' => 'sabre-global-world-awards.webp', 'line1' => 'Best Influencer', 'line2' => 'Marketing Campaign' ),
+						array( 'name' => 'Sabre Latin America Awards', 'image' => 'sabre-global-world-awards.webp', 'line1' => 'Diamond', 'line2' => 'Awards Category' ),
+						array( 'name' => 'Sabre Latin America Awards', 'image' => 'sabre-global-world-awards.webp', 'line1' => 'Best Influencer', 'line2' => 'Marketing Campaign' ),
+						array( 'name' => 'Effie Awards', 'image' => 'effie-awards.webp', 'line1' => 'Mejor Campaña de', 'line2' => 'Marketing de Influencers' ),
 						array( 'name' => 'Purpose Awards', 'image' => 'purpose-awards.webp', 'line1' => 'Best Use of', 'line2' => 'Celebrity Campaign' ),
 						array( 'name' => 'PR Week Global Awards', 'image' => 'pr-week-global-awards.webp', 'line1' => 'Best Influencers', 'line2' => 'Marketing Campaign' ),
-						array( 'name' => 'IPRA Golden World Awards', 'image' => 'ipra-golden-world-awards.png', 'line1' => 'Best Influencers', 'line2' => 'Management Campaign' ),
+						array( 'name' => 'IPRA Golden World Awards', 'image' => 'ipra-golden-world-awards.webp', 'line1' => 'Best Influencers', 'line2' => 'Management Campaign' ),
 						array( 'name' => 'Cannes Lions', 'image' => 'cannes-lions.webp', 'line1' => 'Best Social &', 'line2' => 'Influencer Campaign' ),
 					);
 					// Rendered twice back-to-back so the CSS animation can loop seamlessly at -50%.
@@ -418,7 +418,7 @@ get_header();
 								<p class="infl-includes__text">Derechos de uso para que puedas reutilizar el contenido en tus propios canales</p>
 							</div>
 							<div class="infl-includes__media-col">
-								<img class="infl-includes__img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/derechos-de-uso.jpg" alt="Derechos de uso">
+								<img class="infl-includes__img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/derechos-de-uso.webp" alt="Derechos de uso">
 							</div>
 						</div>
 					</div>
@@ -430,7 +430,7 @@ get_header();
 								<p class="infl-includes__text">Briefs estratégicos para asegurar coherencia con tu identidad de marca</p>
 							</div>
 							<div class="infl-includes__media-col">
-								<img class="infl-includes__img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/briefs-estrategicos.jpg" alt="Briefs estratégicos">
+								<img class="infl-includes__img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/briefs-estrategicos.webp" alt="Briefs estratégicos">
 							</div>
 						</div>
 					</div>
@@ -442,7 +442,7 @@ get_header();
 								<p class="infl-includes__text">Diseño de campañas creativas personalizadas para cada red social</p>
 							</div>
 							<div class="infl-includes__media-col">
-								<img class="infl-includes__img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/diseno-de-campanas.jpg" alt="Diseño de campañas">
+								<img class="infl-includes__img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/diseno-de-campanas.webp" alt="Diseño de campañas">
 							</div>
 						</div>
 					</div>
@@ -466,7 +466,7 @@ get_header();
 								<p class="infl-includes__text">Revisión y edición para asegurar calidad, autenticidad y resultados</p>
 							</div>
 							<div class="infl-includes__media-col">
-								<img class="infl-includes__img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/revision-y-edicion.jpg" alt="Revisión y edición">
+								<img class="infl-includes__img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/revision-y-edicion.webp" alt="Revisión y edición">
 							</div>
 						</div>
 					</div>
@@ -496,7 +496,7 @@ get_header();
 				<!-- Card 1 -->
 				<div class="infl-benefits__card infl-benefits__card--blue">
 					<div class="infl-benefits__icon-box">
-						<img class="infl-benefits__icon" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/bullseye-arrow.png" alt="Contenido Adaptado">
+						<img class="infl-benefits__icon" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/bullseye-arrow.webp" alt="Contenido Adaptado">
 					</div>
 					<p class="infl-benefits__text">Contenido 100% adaptado a tu público y a tus objetivos</p>
 				</div>
@@ -504,7 +504,7 @@ get_header();
 				<!-- Card 2 -->
 				<div class="infl-benefits__card infl-benefits__card--grey">
 					<div class="infl-benefits__icon-box">
-						<img class="infl-benefits__icon" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/videocamera-symbol.png" alt="Producción Rápida">
+						<img class="infl-benefits__icon" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/videocamera-symbol.webp" alt="Producción Rápida">
 					</div>
 					<p class="infl-benefits__text">Producción rápida con estilo real y cercano</p>
 				</div>
@@ -512,7 +512,7 @@ get_header();
 				<!-- Card 3 -->
 				<div class="infl-benefits__card infl-benefits__card--blue">
 					<div class="infl-benefits__icon-box">
-						<img class="infl-benefits__icon" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/megaphone.png" alt="Mayor Engagement">
+						<img class="infl-benefits__icon" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/megaphone.webp" alt="Mayor Engagement">
 					</div>
 					<p class="infl-benefits__text">Mayor engagement y confianza que los anuncios tradicionales</p>
 				</div>
@@ -520,7 +520,7 @@ get_header();
 				<!-- Card 4 -->
 				<div class="infl-benefits__card infl-benefits__card--grey">
 					<div class="infl-benefits__icon-box">
-						<img class="infl-benefits__icon" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/diagram.png" alt="Escalar Campañas">
+						<img class="infl-benefits__icon" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/diagram.webp" alt="Escalar Campañas">
 					</div>
 					<p class="infl-benefits__text">Posibilidad de escalar campañas sin producir en casa</p>
 				</div>
@@ -547,7 +547,7 @@ get_header();
 					<div class="infl-types__slide active">
 						<div class="infl-types__card">
 							<div class="infl-types__img-box">
-								<img class="infl-types__img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/Ejemplos-de-Marketing-de-Influencers-Exitoso-Orange-Latam.png" alt="Marketing Exitoso">
+								<img class="infl-types__img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/Ejemplos-de-Marketing-de-Influencers-Exitoso-Orange-Latam.webp" alt="Marketing Exitoso">
 							</div>
 							<div class="infl-types__text-box">
 								<h3 class="infl-types__card-title">Ejemplos de Marketing de Influencers Exitoso</h3>
@@ -560,7 +560,7 @@ get_header();
 					<div class="infl-types__slide">
 						<div class="infl-types__card">
 							<div class="infl-types__img-box">
-								<img class="infl-types__img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/Micro-Influencers-vs-Macro-Influencers-Orange-Latam.png" alt="Micro vs Macro">
+								<img class="infl-types__img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/Micro-Influencers-vs-Macro-Influencers-Orange-Latam.webp" alt="Micro vs Macro">
 							</div>
 							<div class="infl-types__text-box">
 								<h3 class="infl-types__card-title">Micro-Influencers vs Macro-Influencers</h3>
@@ -586,7 +586,7 @@ get_header();
 					<div class="infl-types__slide">
 						<div class="infl-types__card">
 							<div class="infl-types__img-box">
-								<img class="infl-types__img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/Marketing-de-Influencers-en-Instagram-Orange-Latam.png" alt="Instagram">
+								<img class="infl-types__img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/Marketing-de-Influencers-en-Instagram-Orange-Latam.webp" alt="Instagram">
 							</div>
 							<div class="infl-types__text-box">
 								<h3 class="infl-types__card-title">Marketing de Influencers en Instagram</h3>
@@ -787,9 +787,9 @@ get_header();
 					array( 'file' => 'carlos_alcántara.webp', 'video' => 'https://youtu.be/V9HdFIV2CQI' ),
 					array( 'file' => 'christh_palomino.webp', 'video' => 'https://youtube.com/shorts/PVj9Ojj1DS0?feature=share' ),
 					array( 'file' => 'edison_flores.webp', 'video' => 'https://youtu.be/XGOJksenISk' ),
-					array( 'file' => 'maria-pia-slider.jpg', 'video' => 'https://youtu.be/abEee4gCBPA' ),
-					array( 'file' => 'patricia_barreto.jpg', 'video' => 'https://youtu.be/n2l8czwGvwI' ),
-					array( 'file' => 'yordana-slider.jpg', 'video' => 'https://youtube.com/shorts/NmyN8tEt2Ms?feature=share' )
+					array( 'file' => 'maria-pia-slider.webp', 'video' => 'https://youtu.be/abEee4gCBPA' ),
+					array( 'file' => 'patricia_barreto.webp', 'video' => 'https://youtu.be/n2l8czwGvwI' ),
+					array( 'file' => 'yordana-slider.webp', 'video' => 'https://youtube.com/shorts/NmyN8tEt2Ms?feature=share' )
 				);
 				
 				// Duplicamos el array para el efecto infinito (marquee)
@@ -829,7 +829,7 @@ get_header();
 			<div class="infl-clients__carousel">
 				<div class="infl-clients__track">
 					<?php
-					$clients_row1 = array( 'boss-1.png', 'GG-3.png', 'abosult.png', 'World-Vision.png', 'worldreader.png', 'pernord-1.png', 'Jet-smart.png' );
+					$clients_row1 = array( 'boss-1.webp', 'GG-3.webp', 'abosult.webp', 'World-Vision.webp', 'worldreader.webp', 'pernord-1.webp', 'Jet-smart.webp' );
 					$clients_row1_inf = array_merge( $clients_row1, $clients_row1 );
 					foreach ( $clients_row1_inf as $logo ) :
 					?>
@@ -843,7 +843,7 @@ get_header();
 			<div class="infl-clients__carousel">
 				<div class="infl-clients__track infl-clients__track--reverse">
 					<?php
-					$clients_row2 = array( 'Tiffany.png', 'banco.png', 'bcp.png', 'chivas.png', 'merck.png', 'omega-1.png', 'swissotel.png' );
+					$clients_row2 = array( 'Tiffany.webp', 'banco.webp', 'bcp.webp', 'chivas.webp', 'merck.webp', 'omega-1.webp', 'swissotel.webp' );
 					$clients_row2_inf = array_merge( $clients_row2, $clients_row2 );
 					foreach ( $clients_row2_inf as $logo ) :
 					?>

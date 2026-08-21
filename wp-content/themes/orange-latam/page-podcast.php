@@ -299,7 +299,7 @@ $podcast_img_uri = $theme_uri . '/assets/images/podcast';
 
 			<div class="podcast-booking__badge-img-wrapper">
 				<img class="podcast-booking__badge-img" 
-					src="<?php echo esc_url( $podcast_img_uri . '/Listo-para-grabar-tu-podcast-con-calidad-profesional-en-Orange-Latam.png' ); ?>" 
+					src="<?php echo esc_url( $podcast_img_uri . '/Listo-para-grabar-tu-podcast-con-calidad-profesional-en-Orange-Latam.webp' ); ?>" 
 					alt="¡Listo para grabar tu podcast con calidad profesional en Orange Latam!">
 			</div>
 
