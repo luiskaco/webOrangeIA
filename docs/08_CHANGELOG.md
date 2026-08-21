@@ -1,6 +1,6 @@
 # 08_CHANGELOG.md — Historial de Versiones
 
-## [Unreleased]
+## [1.0.4] - 2026-08-21
 ### Seguridad
 - **Incidente en producción: `robots.txt` comprometido + sitemap roto** (ver `docs/06_TASKS.md`): un checklist de validación pasado por el cliente (reportado como ya resuelto por soporte del hosting) se verificó punto por punto directo contra `orange-la.com` — 2 de los 5 ítems eran falsos. `robots.txt` seguía con 19 entradas `sitemap-hot-XXXXXXX.xml` inyectadas (firma de malware SEO en WP comprometido, archivo físico en la raíz del hosting, no lo genera WordPress); reemplazado por el cliente con contenido limpio, verificado. `sitemap_index.xml` de Rank Math daba 404 pese a reportarse 200 OK — causa: rewrite rules sin regenerar tras la migración a producción; resuelto con un guardado en Ajustes → Enlaces permanentes. Pendiente recomendado: revisión de seguridad completa en el hosting (mu-plugins, usuarios admin, cron) ante evidencia de compromiso pasado, aunque ya inactivo.
 - **Auditoría de seguridad completa** (ver `docs/06_TASKS.md`): regeneradas las 8 salts de autenticación de WordPress en `wp-config.php` (estaban todas duplicadas del mismo string — riesgo de forjar cookies de sesión de admin). Corregido host header injection en `WP_SITEURL`/`WP_HOME` con allowlist de dominios válidos. Movido fuera del docroot un backup completo del sitio (127 MB, con hashes de password y datos de leads) que quedaba accesible por HTTP sin protección real. `wp-config.php` no está trackeado en git — estos cambios no viajan con `git push`, aplican solo al entorno donde se editó el archivo.
@@ -15,6 +15,13 @@
 - **Tabla de Leads en wp-admin** (`inc/class-leads-manager.php`): columna "Mensaje / Requerimientos" se veía colapsada (texto apilado letra por letra) por `table-layout:fixed` (clase `fixed` de WP) sin ancho propio en esa columna. Quitada la clase, agregado `table-layout:auto` y `min-width`.
 
 ### Añadido
+- **Rediseño de Layout en Asuntos Públicos (`page-asuntos-publicos.php`, `asuntos-publicos.css`)**:
+  - Reestructuración de la sección *Red de Relaciones e Influencia*: se trasladó el bloque editorial y los puntos clave a la parte superior con un grid horizontal, y se reposicionaron las 4 tarjetas de stakeholders en una cuadrícula horizontal de 4 columnas en la parte inferior, optimizada para desktop (4 columnas), tablet (2 columnas) y móvil (1 columna).
+- **Nuevos Íconos Ilustrados (Flat Outline Color) en la página de PR (`page-pr-gestion-reputacion.php`, `main.js`, `pr-gestion-reputacion.css`)**:
+  - Rediseño de los 8 íconos del diagrama radial interactivo y acordeón móvil de servicios con trazo negro `#17130F` estructurado y rellenos multicolor (planeta Tierra con flecha envolvente 360° para estrategias integrales, periódico de prensa, avatar ejecutivo con estrella de liderazgo, documento con lápiz, bombilla con destellos, trofeo con estrella, gráfico de barras analíticas con línea de tendencia, y persona/vocero en atril con micrófonos dando entrevista para lanzamientos y anuncios corporativos).
+  - Renovación de los 6 íconos temáticos en el bloque oscuro de Gestión de Crisis (escudo con radar de diagnóstico, carpeta de manuales, globos de mensajes, micrófono de contingencia, globo terráqueo de monitoreo y maletín de comité ejecutivo).
+  - Incorporación de insignias de íconos ilustrados en el encabezado de las 6 tarjetas de Entrenamiento de Voceros (cámara de estudio, diana de preguntas difíciles, llave de mensajes maestros, audífonos con micrófono, paleta creativa de storytelling y salvavidas de contención).
+
 - **Gestión de Leads en Base de Datos y Notificaciones Multi-Destinatario (`functions.php`, `inc/class-leads-manager.php`)**:
   - Creación automática de la tabla `wp_orange_leads` para registrar todos los envíos de formularios de contacto (Modal Global, Home y Podcast).
   - Panel en wp-admin (**"Leads Web"**) con contador en tiempo real, cambio de estado, buscador y exportación directa a Excel en formato CSV con UTF-8 BOM.

@@ -109,50 +109,11 @@ $theme_uri = get_template_directory_uri();
 			</div>
 		</div>
 
-		<!-- MOSAICO DE TARJETAS FLOTANTES: RED DE RELACIONES E INFLUENCIA -->
+		<!-- RED DE RELACIONES E INFLUENCIA -->
 		<div class="ap-influence-hub" id="red-influencia" data-ap-reveal>
 			<div class="ap-influence-hub__container">
 
-				<!-- Lado Izquierdo: Mosaico Flotante de Tarjetas -->
-				<div class="ap-influence-mosaic">
-
-					<!-- Columna 1 (Elevada) -->
-					<div class="ap-mosaic-col ap-mosaic-col--1" data-ap-parallax="-8">
-						<!-- Card 1 (Celeste) -->
-						<div class="ap-mosaic-card ap-mosaic-card--cyan">
-							<span class="ap-mosaic-card__tag">Regulación & Licencias</span>
-							<h4 class="ap-mosaic-card__title">Reguladores & Ministerios</h4>
-							<p class="ap-mosaic-card__desc">Anticipación normativa y prevención de riesgos regulatorios.</p>
-						</div>
-
-						<!-- Card 2 (Blanca) -->
-						<div class="ap-mosaic-card ap-mosaic-card--white">
-							<span class="ap-mosaic-card__tag">Licencia Social</span>
-							<h4 class="ap-mosaic-card__title">Comunidades Locales</h4>
-							<p class="ap-mosaic-card__desc">Diálogo responsable y gestión de relaciones con comunidades.</p>
-						</div>
-					</div>
-
-					<!-- Columna 2 (Desplazada hacia abajo) -->
-					<div class="ap-mosaic-col ap-mosaic-col--2" data-ap-parallax="8">
-						<!-- Card 3 (Blanca) -->
-						<div class="ap-mosaic-card ap-mosaic-card--white">
-							<span class="ap-mosaic-card__tag">Opinión Pública</span>
-							<h4 class="ap-mosaic-card__title">Medios & Líderes</h4>
-							<p class="ap-mosaic-card__desc">Posicionamiento y comunicación gubernamental transparente.</p>
-						</div>
-
-						<!-- Card 4 (Celeste) -->
-						<div class="ap-mosaic-card ap-mosaic-card--cyan">
-							<span class="ap-mosaic-card__tag">Alianzas Sectoriales</span>
-							<h4 class="ap-mosaic-card__title">Gremios & Cámaras</h4>
-							<p class="ap-mosaic-card__desc">Consenso institucional y articulación con el sector privado.</p>
-						</div>
-					</div>
-
-				</div>
-
-				<!-- Lado Derecho: Editorial Estratégico -->
+				<!-- Parte Superior: Editorial Estratégico -->
 				<div class="ap-influence-editorial">
 					<span class="ap-section-tag ap-section-tag--cyan">RED ESTRATÉGICA Y MAPAS DE PODER</span>
 					<h3 class="ap-influence-editorial__title">Red de Relaciones e Influencia</h3>
@@ -174,8 +135,37 @@ $theme_uri = get_template_directory_uri();
 							<p><strong>Gestión de riesgos:</strong> Alertas tempranas ante cambios regulatorios y proyectos de ley.</p>
 						</div>
 					</div>
+				</div>
 
+				<!-- Parte Inferior: Cuadrícula de 4 Tarjetas de Stakeholders -->
+				<div class="ap-influence-mosaic">
+					<!-- Card 1 (Celeste) -->
+					<div class="ap-mosaic-card ap-mosaic-card--cyan">
+						<span class="ap-mosaic-card__tag">Regulación & Licencias</span>
+						<h4 class="ap-mosaic-card__title">Reguladores & Ministerios</h4>
+						<p class="ap-mosaic-card__desc">Anticipación normativa y prevención de riesgos regulatorios.</p>
+					</div>
 
+					<!-- Card 2 (Blanca) -->
+					<div class="ap-mosaic-card ap-mosaic-card--white">
+						<span class="ap-mosaic-card__tag">Opinión Pública</span>
+						<h4 class="ap-mosaic-card__title">Medios & Líderes</h4>
+						<p class="ap-mosaic-card__desc">Posicionamiento y comunicación gubernamental transparente.</p>
+					</div>
+
+					<!-- Card 3 (Blanca) -->
+					<div class="ap-mosaic-card ap-mosaic-card--white">
+						<span class="ap-mosaic-card__tag">Licencia Social</span>
+						<h4 class="ap-mosaic-card__title">Comunidades Locales</h4>
+						<p class="ap-mosaic-card__desc">Diálogo responsable y gestión de relaciones con comunidades.</p>
+					</div>
+
+					<!-- Card 4 (Celeste) -->
+					<div class="ap-mosaic-card ap-mosaic-card--cyan">
+						<span class="ap-mosaic-card__tag">Alianzas Sectoriales</span>
+						<h4 class="ap-mosaic-card__title">Gremios & Cámaras</h4>
+						<p class="ap-mosaic-card__desc">Consenso institucional y articulación con el sector privado.</p>
+					</div>
 				</div>
 
 			</div>

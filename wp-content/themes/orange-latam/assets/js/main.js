@@ -1054,43 +1054,105 @@ document.addEventListener( 'DOMContentLoaded', () => {
 		const prServices = [
 			{
 				label: 'Estrategias integrales de RRPP',
-				icon: 'M12 3a9 9 0 1 1-6.36 2.64L3 8 M3 3v5h5 M12 8v4l3 2',
-				color: '#70B5E3'
+				color: '#70B5E3',
+				svg: `<circle cx="18" cy="18" r="9.5" fill="#70B5E3" stroke="#17130F" stroke-width="1.8"/>
+				<path d="M11 16.5c1-2.5 3-1.5 4-3 1-1 2.5-.5 3 1s-1 3-2.5 3.5-3.5 0-4.5-1.5z" fill="#48CFAD" stroke="#17130F" stroke-width="1.2" stroke-linejoin="round"/>
+				<path d="M16.5 21.5c1.5 0 3 1.5 2 3.5-1.5 1.5-3.5 1-4.5 0-.5-1.5.5-3.5 2.5-3.5z" fill="#48CFAD" stroke="#17130F" stroke-width="1.2" stroke-linejoin="round"/>
+				<path d="M22 14c1 0 2.5 1 2 2.5s-2 1.5-3 1c-.5-.5 0-3.5 1-3.5z" fill="#48CFAD" stroke="#17130F" stroke-width="1.2"/>
+				<path d="M6 19c0 6 5.5 10.5 12 10.5 7.5 0 13-5 13-11 0-3.5-2-6.5-5.5-8.5" fill="none" stroke="#FC6E51" stroke-width="2" stroke-linecap="round"/>
+				<polygon points="27,6 27,12 21.5,9.5" fill="#FC6E51" stroke="#17130F" stroke-width="1.4" stroke-linejoin="round"/>
+				<path d="M9 13.5C11 10.5 14.5 8.5 18.5 8.5c1.5 0 3 .3 4.5.8" fill="none" stroke="#FC6E51" stroke-width="1.8" stroke-dasharray="2.5 2.5" stroke-linecap="round"/>`
 			},
 			{
 				label: 'Gestión con medios de comunicación',
-				icon: 'M4 4h14a2 2 0 0 1 2 2v14H4V4zm0 4h16 M8 12h8 M8 16h5',
-				color: '#EE894F'
+				color: '#EE894F',
+				svg: `<path d="M7 6h22v24H7a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z" fill="#FFFFFF" stroke="#17130F" stroke-width="1.8" stroke-linejoin="round"/>
+				<rect x="8" y="9" width="20" height="4.5" rx="1" fill="#70B5E3" stroke="#17130F" stroke-width="1.5"/>
+				<rect x="8" y="16" width="9" height="8" rx="1" fill="#FFE8D6" stroke="#17130F" stroke-width="1.5"/>
+				<path d="M9 22l2.5-3 2 2.2 2-2.7 1.5 2" fill="none" stroke="#EE894F" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+				<line x1="19.5" y1="17.5" x2="27.5" y2="17.5" stroke="#17130F" stroke-width="1.5" stroke-linecap="round"/>
+				<line x1="19.5" y1="20.5" x2="27.5" y2="20.5" stroke="#17130F" stroke-width="1.5" stroke-linecap="round"/>
+				<line x1="19.5" y1="23.5" x2="25" y2="23.5" stroke="#17130F" stroke-width="1.5" stroke-linecap="round"/>
+				<line x1="8" y1="27" x2="27.5" y2="27" stroke="#17130F" stroke-width="1.5" stroke-linecap="round"/>`
 			},
 			{
 				label: 'Posicionamiento de líderes y voceros',
-				icon: 'M4 19v-1a3 3 0 0 1 3-3 M4 9a2 2 0 1 1 0-4 2 2 0 0 1 0 4 M20 19v-1a3 3 0 0 0-3-3 M20 9a2 2 0 1 0 0-4 2 2 0 0 0 0 4 M12 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6z M7 21v-2a5 5 0 0 1 10 0v2 M12 2l.6 1.3 1.4.2-1 1 .2 1.5-1.2-.7-1.2.7.2-1.5-1-1 1.4-.2z',
-				color: '#10B981'
+				color: '#10B981',
+				svg: `<circle cx="18" cy="18" r="13" fill="#D1F4E8" stroke="#17130F" stroke-width="1.8"/>
+				<g>
+					<circle cx="18" cy="13.5" r="4.5" fill="#FFE8D6" stroke="#17130F" stroke-width="1.8"/>
+					<path d="M9.5 27.5c0-4.5 3.8-7.5 8.5-7.5s8.5 3 8.5 7.5z" fill="#48CFAD" stroke="#17130F" stroke-width="1.8"/>
+					<polygon points="18,20 19,24.5 18,26 17,24.5" fill="#17130F"/>
+				</g>
+				<polygon points="28,4 29.7,8.2 34,8.5 30.7,11.3 31.7,15.5 28,13.2 24.3,15.5 25.3,11.3 22,8.5 26.3,8.2" fill="#FDBB42" stroke="#17130F" stroke-width="1.5" stroke-linejoin="round"/>`
 			},
 			{
 				label: 'Desarrollo de contenidos corporativos',
-				icon: 'M12 19l7-7 3 3-7 7-5 1 2-4z M18 5l3 3 M2 21h20 M6 13L3 16v3h3l3-3',
-				color: '#8B5CF6'
+				color: '#8B5CF6',
+				svg: `<path d="M5 6a2 2 0 0 1 2-2h11l7 7v19a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6z" fill="#FFFFFF" stroke="#17130F" stroke-width="1.8" stroke-linejoin="round"/>
+				<path d="M18 4v7h7" fill="#E1F2FB" stroke="#17130F" stroke-width="1.8" stroke-linejoin="round"/>
+				<line x1="9" y1="12" x2="14" y2="12" stroke="#70B5E3" stroke-width="1.8" stroke-linecap="round"/>
+				<line x1="9" y1="17" x2="16" y2="17" stroke="#17130F" stroke-width="1.6" stroke-linecap="round"/>
+				<line x1="9" y1="22" x2="14" y2="22" stroke="#17130F" stroke-width="1.6" stroke-linecap="round"/>
+				<g transform="translate(17, 13) rotate(45)">
+					<rect x="0" y="0" width="5.5" height="15" rx="1" fill="#FDBB42" stroke="#17130F" stroke-width="1.6"/>
+					<rect x="0" y="0" width="5.5" height="3" fill="#FC6E51" stroke="#17130F" stroke-width="1.6"/>
+					<polygon points="0,15 5.5,15 2.75,20" fill="#FFE8D6" stroke="#17130F" stroke-width="1.6" stroke-linejoin="round"/>
+					<polygon points="1.5,18 4,18 2.75,20" fill="#17130F"/>
+				</g>`
 			},
 			{
 				label: 'Comunicación ejecutiva y thought leadership',
-				icon: 'M9 18h6 M10 22h4 M12 2a7 7 0 0 0-5 11.9c.7.7 1 1.6 1 2.6v.5h8v-.5c0-1 .3-1.9 1-2.6A7 7 0 0 0 12 2z M12 6v4 M10 8h4',
-				color: '#F59E0B'
+				color: '#F59E0B',
+				svg: `<line x1="18" y1="2" x2="18" y2="4.5" stroke="#FDBB42" stroke-width="2" stroke-linecap="round"/>
+				<line x1="6.5" y1="8" x2="8.5" y2="10" stroke="#FDBB42" stroke-width="2" stroke-linecap="round"/>
+				<line x1="29.5" y1="8" x2="27.5" y2="10" stroke="#FDBB42" stroke-width="2" stroke-linecap="round"/>
+				<line x1="4" y1="17" x2="6.5" y2="17" stroke="#FDBB42" stroke-width="2" stroke-linecap="round"/>
+				<line x1="32" y1="17" x2="29.5" y2="17" stroke="#FDBB42" stroke-width="2" stroke-linecap="round"/>
+				<path d="M12 23c-1.5-1.5-3.5-4-3.5-7a9.5 9.5 0 1 1 19 0c0 3-2 5.5-3.5 7h-12z" fill="#FDBB42" stroke="#17130F" stroke-width="1.8" stroke-linejoin="round"/>
+				<path d="M13 12a5.5 5.5 0 0 1 5-4.5" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round"/>
+				<path d="M15 17l1.5-4h3l1.5 4" stroke="#17130F" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+				<rect x="13.5" y="24" width="9" height="3" rx="1" fill="#CCD1D9" stroke="#17130F" stroke-width="1.6"/>
+				<rect x="14.5" y="27.5" width="7" height="2.5" rx="1" fill="#A0AAB5" stroke="#17130F" stroke-width="1.6"/>
+				<path d="M16 30.5h4" stroke="#17130F" stroke-width="1.6" stroke-linecap="round"/>`
 			},
 			{
 				label: 'Gestión de reputación corporativa',
-				icon: 'M12 2l8 3.5v6c0 5.5-3.5 9.5-8 10.5-4.5-1-8-5-8-10.5v-6L12 2z M12 7.5l1.1 2.3 2.5.4-1.8 1.8.4 2.5-2.2-1.2-2.2 1.2.4-2.5-1.8-1.8 2.5-.4z',
-				color: '#EC4899'
+				color: '#EC4899',
+				svg: `<path d="M9 11H6a4 4 0 0 0 4 4h1" fill="none" stroke="#17130F" stroke-width="1.8" stroke-linecap="round"/>
+				<path d="M27 11h3a4 4 0 0 1-4 4h-1" fill="none" stroke="#17130F" stroke-width="1.8" stroke-linecap="round"/>
+				<path d="M9 6h18v7a9 9 0 0 1-18 0V6z" fill="#FDBB42" stroke="#17130F" stroke-width="1.8" stroke-linejoin="round"/>
+				<path d="M16 22h4v3h-4z" fill="#EE894F" stroke="#17130F" stroke-width="1.8" stroke-linejoin="round"/>
+				<path d="M12 25h12l1.5 4H10.5L12 25z" fill="#FC6E51" stroke="#17130F" stroke-width="1.8" stroke-linejoin="round"/>
+				<line x1="8" y1="30" x2="28" y2="30" stroke="#17130F" stroke-width="1.8" stroke-linecap="round"/>
+				<polygon points="18,9 19.2,11.8 22,12 19.8,13.8 20.5,16.5 18,15 15.5,16.5 16.2,13.8 14,12 16.8,11.8" fill="#FFFFFF" stroke="#17130F" stroke-width="1.2" stroke-linejoin="round"/>`
 			},
 			{
 				label: 'Monitoreo y análisis de impacto mediático',
-				icon: 'M3 3v18h18 M6 15l4-5 4 3 6-7 M18 6h3v3 M14 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6z',
-				color: '#14B8A6'
+				color: '#14B8A6',
+				svg: `<line x1="5" y1="29" x2="31" y2="29" stroke="#17130F" stroke-width="1.8" stroke-linecap="round"/>
+				<rect x="7" y="19" width="5.5" height="10" rx="1.5" fill="#70B5E3" stroke="#17130F" stroke-width="1.8"/>
+				<rect x="15" y="13" width="5.5" height="16" rx="1.5" fill="#48CFAD" stroke="#17130F" stroke-width="1.8"/>
+				<rect x="23" y="7" width="5.5" height="22" rx="1.5" fill="#AC92EC" stroke="#17130F" stroke-width="1.8"/>
+				<polyline points="9.5,15 17.5,8.5 26,4" fill="none" stroke="#FC6E51" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+				<circle cx="9.5" cy="15" r="2.2" fill="#FFFFFF" stroke="#17130F" stroke-width="1.5"/>
+				<circle cx="17.5" cy="8.5" r="2.2" fill="#FFFFFF" stroke="#17130F" stroke-width="1.5"/>
+				<circle cx="26" cy="4" r="2.2" fill="#FFFFFF" stroke="#17130F" stroke-width="1.5"/>`
 			},
 			{
 				label: 'Comunicación de lanzamientos y anuncios corporativos',
-				icon: 'M12 4a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z M6 12h12 M5 12l2 9h10l2-9 M9 8l-2-2 M15 8l2-2 M9 21h6 M9 12v-2a3 3 0 0 1 6 0v2',
-				color: '#EF4444'
+				color: '#EF4444',
+				svg: `<circle cx="18" cy="9.5" r="4" fill="#FFE8D6" stroke="#17130F" stroke-width="1.8"/>
+				<path d="M11.5 19c0-3.5 2.8-5 6.5-5s6.5 1.5 6.5 5z" fill="#70B5E3" stroke="#17130F" stroke-width="1.8"/>
+				<polygon points="18,14 19,18 18,19.5 17,18" fill="#17130F"/>
+				<polygon points="8,18 28,18 26.5,21.5 9.5,21.5" fill="#FDBB42" stroke="#17130F" stroke-width="1.8" stroke-linejoin="round"/>
+				<polygon points="11.5,21.5 24.5,21.5 23,29.5 13,29.5" fill="#EE894F" stroke="#17130F" stroke-width="1.8" stroke-linejoin="round"/>
+				<rect x="15" y="23.5" width="6" height="4" rx="1" fill="#FFFFFF" stroke="#17130F" stroke-width="1.3"/>
+				<line x1="9" y1="30" x2="27" y2="30" stroke="#17130F" stroke-width="2" stroke-linecap="round"/>
+				<line x1="13" y1="18" x2="10.5" y2="14" stroke="#17130F" stroke-width="1.6" stroke-linecap="round"/>
+				<circle cx="10" cy="13.5" r="1.6" fill="#FC6E51" stroke="#17130F" stroke-width="1.2"/>
+				<line x1="23" y1="18" x2="25.5" y2="14" stroke="#17130F" stroke-width="1.6" stroke-linecap="round"/>
+				<circle cx="26" cy="13.5" r="1.6" fill="#FC6E51" stroke="#17130F" stroke-width="1.2"/>`
 			}
 		];
 
@@ -1201,26 +1263,21 @@ document.addEventListener( 'DOMContentLoaded', () => {
 				const hitArea = document.createElementNS( 'http://www.w3.org/2000/svg', 'circle' );
 				hitArea.setAttribute( 'cx', '0' );
 				hitArea.setAttribute( 'cy', '0' );
-				hitArea.setAttribute( 'r', '28' );
+				hitArea.setAttribute( 'r', '32' );
 				hitArea.setAttribute( 'class', 'pr-services__node-hit' );
 
-				// Círculo insignia blanco con sombra, detrás del ícono
+				// Círculo insignia blanco con sombra detrás del ícono
 				const badge = document.createElementNS( 'http://www.w3.org/2000/svg', 'circle' );
 				badge.setAttribute( 'cx', '0' );
 				badge.setAttribute( 'cy', '0' );
-				badge.setAttribute( 'r', '26' );
+				badge.setAttribute( 'r', '27' );
 				badge.setAttribute( 'class', 'pr-services__node-badge' );
 
-				// Free-floating SVG Icon
+				// Free-floating SVG Icon wrapper centrado exactamente en el origen (0,0)
 				const iconGroup = document.createElementNS( 'http://www.w3.org/2000/svg', 'g' );
 				iconGroup.setAttribute( 'class', 'pr-services__node-icon-wrap' );
-				iconGroup.setAttribute( 'transform', 'translate(-16, -16) scale(1.33)' );
+				iconGroup.innerHTML = `<g transform="translate(-18, -18)">${service.svg}</g>`;
 
-				const iconPath = document.createElementNS( 'http://www.w3.org/2000/svg', 'path' );
-				iconPath.setAttribute( 'd', service.icon );
-				iconPath.setAttribute( 'class', 'pr-services__node-icon' );
-
-				iconGroup.appendChild( iconPath );
 				g.appendChild( hitArea );
 				g.appendChild( badge );
 				g.appendChild( iconGroup );

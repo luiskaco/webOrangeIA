@@ -190,56 +190,132 @@ $pr_img_uri = $theme_uri . '/assets/images/pr';
 				<div class="pr-services__mobile-items">
 					<button class="pr-services__mobile-row js-pr-node-row" data-node-index="0">
 						<div class="pr-services__mobile-icon">
-							<svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 3a9 9 0 1 1-6.36 2.64L3 8 M3 3v5h5 M12 8v4l3 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+							<svg viewBox="0 0 36 36" width="30" height="30" fill="none">
+								<circle cx="18" cy="18" r="9.5" fill="#70B5E3" stroke="#17130F" stroke-width="1.8"/>
+								<path d="M11 16.5c1-2.5 3-1.5 4-3 1-1 2.5-.5 3 1s-1 3-2.5 3.5-3.5 0-4.5-1.5z" fill="#48CFAD" stroke="#17130F" stroke-width="1.2" stroke-linejoin="round"/>
+								<path d="M16.5 21.5c1.5 0 3 1.5 2 3.5-1.5 1.5-3.5 1-4.5 0-.5-1.5.5-3.5 2.5-3.5z" fill="#48CFAD" stroke="#17130F" stroke-width="1.2" stroke-linejoin="round"/>
+								<path d="M22 14c1 0 2.5 1 2 2.5s-2 1.5-3 1c-.5-.5 0-3.5 1-3.5z" fill="#48CFAD" stroke="#17130F" stroke-width="1.2"/>
+								<path d="M6 19c0 6 5.5 10.5 12 10.5 7.5 0 13-5 13-11 0-3.5-2-6.5-5.5-8.5" fill="none" stroke="#FC6E51" stroke-width="2" stroke-linecap="round"/>
+								<polygon points="27,6 27,12 21.5,9.5" fill="#FC6E51" stroke="#17130F" stroke-width="1.4" stroke-linejoin="round"/>
+								<path d="M9 13.5C11 10.5 14.5 8.5 18.5 8.5c1.5 0 3 .3 4.5.8" fill="none" stroke="#FC6E51" stroke-width="1.8" stroke-dasharray="2.5 2.5" stroke-linecap="round"/>
+							</svg>
 						</div>
 						<span class="pr-services__mobile-label">Estrategias integrales de RRPP</span>
 					</button>
 
 					<button class="pr-services__mobile-row js-pr-node-row" data-node-index="1">
 						<div class="pr-services__mobile-icon">
-							<svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 4h14a2 2 0 0 1 2 2v14H4V4zm0 4h16 M8 12h8 M8 16h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+							<svg viewBox="0 0 36 36" width="30" height="30" fill="none">
+								<path d="M7 6h22v24H7a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z" fill="#FFFFFF" stroke="#17130F" stroke-width="1.8" stroke-linejoin="round"/>
+								<rect x="8" y="9" width="20" height="4.5" rx="1" fill="#70B5E3" stroke="#17130F" stroke-width="1.5"/>
+								<rect x="8" y="16" width="9" height="8" rx="1" fill="#FFE8D6" stroke="#17130F" stroke-width="1.5"/>
+								<path d="M9 22l2.5-3 2 2.2 2-2.7 1.5 2" fill="none" stroke="#EE894F" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+								<line x1="19.5" y1="17.5" x2="27.5" y2="17.5" stroke="#17130F" stroke-width="1.5" stroke-linecap="round"/>
+								<line x1="19.5" y1="20.5" x2="27.5" y2="20.5" stroke="#17130F" stroke-width="1.5" stroke-linecap="round"/>
+								<line x1="19.5" y1="23.5" x2="25" y2="23.5" stroke="#17130F" stroke-width="1.5" stroke-linecap="round"/>
+								<line x1="8" y1="27" x2="27.5" y2="27" stroke="#17130F" stroke-width="1.5" stroke-linecap="round"/>
+							</svg>
 						</div>
 						<span class="pr-services__mobile-label">Gestión con medios de comunicación</span>
 					</button>
 
 					<button class="pr-services__mobile-row js-pr-node-row" data-node-index="2">
 						<div class="pr-services__mobile-icon">
-							<svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 19v-1a3 3 0 0 1 3-3 M4 9a2 2 0 1 1 0-4 2 2 0 0 1 0 4 M20 19v-1a3 3 0 0 0-3-3 M20 9a2 2 0 1 0 0-4 2 2 0 0 0 0 4 M12 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6z M7 21v-2a5 5 0 0 1 10 0v2 M12 2l.6 1.3 1.4.2-1 1 .2 1.5-1.2-.7-1.2.7.2-1.5-1-1 1.4-.2z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+							<svg viewBox="0 0 36 36" width="30" height="30" fill="none">
+								<circle cx="18" cy="18" r="13" fill="#D1F4E8" stroke="#17130F" stroke-width="1.8"/>
+								<circle cx="18" cy="13.5" r="4.5" fill="#FFE8D6" stroke="#17130F" stroke-width="1.8"/>
+								<path d="M9.5 27.5c0-4.5 3.8-7.5 8.5-7.5s8.5 3 8.5 7.5z" fill="#48CFAD" stroke="#17130F" stroke-width="1.8"/>
+								<polygon points="18,20 19,24.5 18,26 17,24.5" fill="#17130F"/>
+								<polygon points="28,4 29.7,8.2 34,8.5 30.7,11.3 31.7,15.5 28,13.2 24.3,15.5 25.3,11.3 22,8.5 26.3,8.2" fill="#FDBB42" stroke="#17130F" stroke-width="1.5" stroke-linejoin="round"/>
+							</svg>
 						</div>
 						<span class="pr-services__mobile-label">Posicionamiento de líderes y voceros</span>
 					</button>
 
 					<button class="pr-services__mobile-row js-pr-node-row" data-node-index="3">
 						<div class="pr-services__mobile-icon">
-							<svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 19l7-7 3 3-7 7-5 1 2-4z M18 5l3 3 M2 21h20 M6 13L3 16v3h3l3-3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+							<svg viewBox="0 0 36 36" width="30" height="30" fill="none">
+								<path d="M5 6a2 2 0 0 1 2-2h11l7 7v19a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6z" fill="#FFFFFF" stroke="#17130F" stroke-width="1.8" stroke-linejoin="round"/>
+								<path d="M18 4v7h7" fill="#E1F2FB" stroke="#17130F" stroke-width="1.8" stroke-linejoin="round"/>
+								<line x1="9" y1="12" x2="14" y2="12" stroke="#70B5E3" stroke-width="1.8" stroke-linecap="round"/>
+								<line x1="9" y1="17" x2="16" y2="17" stroke="#17130F" stroke-width="1.6" stroke-linecap="round"/>
+								<line x1="9" y1="22" x2="14" y2="22" stroke="#17130F" stroke-width="1.6" stroke-linecap="round"/>
+								<g transform="translate(17, 13) rotate(45)">
+									<rect x="0" y="0" width="5.5" height="15" rx="1" fill="#FDBB42" stroke="#17130F" stroke-width="1.6"/>
+									<rect x="0" y="0" width="5.5" height="3" fill="#FC6E51" stroke="#17130F" stroke-width="1.6"/>
+									<polygon points="0,15 5.5,15 2.75,20" fill="#FFE8D6" stroke="#17130F" stroke-width="1.6" stroke-linejoin="round"/>
+									<polygon points="1.5,18 4,18 2.75,20" fill="#17130F"/>
+								</g>
+							</svg>
 						</div>
 						<span class="pr-services__mobile-label">Desarrollo de contenidos corporativos</span>
 					</button>
 
 					<button class="pr-services__mobile-row js-pr-node-row" data-node-index="4">
 						<div class="pr-services__mobile-icon">
-							<svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9 18h6 M10 22h4 M12 2a7 7 0 0 0-5 11.9c.7.7 1 1.6 1 2.6v.5h8v-.5c0-1 .3-1.9 1-2.6A7 7 0 0 0 12 2z M12 6v4 M10 8h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+							<svg viewBox="0 0 36 36" width="30" height="30" fill="none">
+								<line x1="18" y1="2" x2="18" y2="4.5" stroke="#FDBB42" stroke-width="2" stroke-linecap="round"/>
+								<line x1="6.5" y1="8" x2="8.5" y2="10" stroke="#FDBB42" stroke-width="2" stroke-linecap="round"/>
+								<line x1="29.5" y1="8" x2="27.5" y2="10" stroke="#FDBB42" stroke-width="2" stroke-linecap="round"/>
+								<line x1="4" y1="17" x2="6.5" y2="17" stroke="#FDBB42" stroke-width="2" stroke-linecap="round"/>
+								<line x1="32" y1="17" x2="29.5" y2="17" stroke="#FDBB42" stroke-width="2" stroke-linecap="round"/>
+								<path d="M12 23c-1.5-1.5-3.5-4-3.5-7a9.5 9.5 0 1 1 19 0c0 3-2 5.5-3.5 7h-12z" fill="#FDBB42" stroke="#17130F" stroke-width="1.8" stroke-linejoin="round"/>
+								<path d="M13 12a5.5 5.5 0 0 1 5-4.5" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round"/>
+								<path d="M15 17l1.5-4h3l1.5 4" stroke="#17130F" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+								<rect x="13.5" y="24" width="9" height="3" rx="1" fill="#CCD1D9" stroke="#17130F" stroke-width="1.6"/>
+								<rect x="14.5" y="27.5" width="7" height="2.5" rx="1" fill="#A0AAB5" stroke="#17130F" stroke-width="1.6"/>
+								<path d="M16 30.5h4" stroke="#17130F" stroke-width="1.6" stroke-linecap="round"/>
+							</svg>
 						</div>
 						<span class="pr-services__mobile-label">Comunicación ejecutiva y thought leadership</span>
 					</button>
 
 					<button class="pr-services__mobile-row js-pr-node-row" data-node-index="5">
 						<div class="pr-services__mobile-icon">
-							<svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2l8 3.5v6c0 5.5-3.5 9.5-8 10.5-4.5-1-8-5-8-10.5v-6L12 2z M12 7.5l1.1 2.3 2.5.4-1.8 1.8.4 2.5-2.2-1.2-2.2 1.2.4-2.5-1.8-1.8 2.5-.4z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+							<svg viewBox="0 0 36 36" width="30" height="30" fill="none">
+								<path d="M9 11H6a4 4 0 0 0 4 4h1" fill="none" stroke="#17130F" stroke-width="1.8" stroke-linecap="round"/>
+								<path d="M27 11h3a4 4 0 0 1-4 4h-1" fill="none" stroke="#17130F" stroke-width="1.8" stroke-linecap="round"/>
+								<path d="M9 6h18v7a9 9 0 0 1-18 0V6z" fill="#FDBB42" stroke="#17130F" stroke-width="1.8" stroke-linejoin="round"/>
+								<path d="M16 22h4v3h-4z" fill="#EE894F" stroke="#17130F" stroke-width="1.8" stroke-linejoin="round"/>
+								<path d="M12 25h12l1.5 4H10.5L12 25z" fill="#FC6E51" stroke="#17130F" stroke-width="1.8" stroke-linejoin="round"/>
+								<line x1="8" y1="30" x2="28" y2="30" stroke="#17130F" stroke-width="1.8" stroke-linecap="round"/>
+								<polygon points="18,9 19.2,11.8 22,12 19.8,13.8 20.5,16.5 18,15 15.5,16.5 16.2,13.8 14,12 16.8,11.8" fill="#FFFFFF" stroke="#17130F" stroke-width="1.2" stroke-linejoin="round"/>
+							</svg>
 						</div>
 						<span class="pr-services__mobile-label">Gestión de reputación corporativa</span>
 					</button>
 
 					<button class="pr-services__mobile-row js-pr-node-row" data-node-index="6">
 						<div class="pr-services__mobile-icon">
-							<svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 3v18h18 M6 15l4-5 4 3 6-7 M18 6h3v3 M14 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+							<svg viewBox="0 0 36 36" width="30" height="30" fill="none">
+								<line x1="5" y1="29" x2="31" y2="29" stroke="#17130F" stroke-width="1.8" stroke-linecap="round"/>
+								<rect x="7" y="19" width="5.5" height="10" rx="1.5" fill="#70B5E3" stroke="#17130F" stroke-width="1.8"/>
+								<rect x="15" y="13" width="5.5" height="16" rx="1.5" fill="#48CFAD" stroke="#17130F" stroke-width="1.8"/>
+								<rect x="23" y="7" width="5.5" height="22" rx="1.5" fill="#AC92EC" stroke="#17130F" stroke-width="1.8"/>
+								<polyline points="9.5,15 17.5,8.5 26,4" fill="none" stroke="#FC6E51" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+								<circle cx="9.5" cy="15" r="2.2" fill="#FFFFFF" stroke="#17130F" stroke-width="1.5"/>
+								<circle cx="17.5" cy="8.5" r="2.2" fill="#FFFFFF" stroke="#17130F" stroke-width="1.5"/>
+								<circle cx="26" cy="4" r="2.2" fill="#FFFFFF" stroke="#17130F" stroke-width="1.5"/>
+							</svg>
 						</div>
 						<span class="pr-services__mobile-label">Monitoreo y análisis de impacto mediático</span>
 					</button>
 
 					<button class="pr-services__mobile-row js-pr-node-row" data-node-index="7">
 						<div class="pr-services__mobile-icon">
-							<svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 4a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z M6 12h12 M5 12l2 9h10l2-9 M9 8l-2-2 M15 8l2-2 M9 21h6 M9 12v-2a3 3 0 0 1 6 0v2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+							<svg viewBox="0 0 36 36" width="30" height="30" fill="none">
+								<circle cx="18" cy="9.5" r="4" fill="#FFE8D6" stroke="#17130F" stroke-width="1.8"/>
+								<path d="M11.5 19c0-3.5 2.8-5 6.5-5s6.5 1.5 6.5 5z" fill="#70B5E3" stroke="#17130F" stroke-width="1.8"/>
+								<polygon points="18,14 19,18 18,19.5 17,18" fill="#17130F"/>
+								<polygon points="8,18 28,18 26.5,21.5 9.5,21.5" fill="#FDBB42" stroke="#17130F" stroke-width="1.8" stroke-linejoin="round"/>
+								<polygon points="11.5,21.5 24.5,21.5 23,29.5 13,29.5" fill="#EE894F" stroke="#17130F" stroke-width="1.8" stroke-linejoin="round"/>
+								<rect x="15" y="23.5" width="6" height="4" rx="1" fill="#FFFFFF" stroke="#17130F" stroke-width="1.3"/>
+								<line x1="9" y1="30" x2="27" y2="30" stroke="#17130F" stroke-width="2" stroke-linecap="round"/>
+								<line x1="13" y1="18" x2="10.5" y2="14" stroke="#17130F" stroke-width="1.6" stroke-linecap="round"/>
+								<circle cx="10" cy="13.5" r="1.6" fill="#FC6E51" stroke="#17130F" stroke-width="1.2"/>
+								<line x1="23" y1="18" x2="25.5" y2="14" stroke="#17130F" stroke-width="1.6" stroke-linecap="round"/>
+								<circle cx="26" cy="13.5" r="1.6" fill="#FC6E51" stroke="#17130F" stroke-width="1.2"/>
+							</svg>
 						</div>
 						<span class="pr-services__mobile-label">Comunicación de lanzamientos y anuncios corporativos</span>
 					</button>
@@ -297,13 +373,26 @@ $pr_img_uri = $theme_uri . '/assets/images/pr';
 					</div>
 					<div class="pr-crisis__item">
 						<div class="pr-crisis__icon-box">
-							<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 6h2v6h-2V7zm0 8h2v2h-2v-2z"/></svg>
+							<svg viewBox="0 0 36 36" width="28" height="28" fill="none">
+								<path d="M18 4l12 5v9c0 8-5.5 13-12 15C11.5 31 6 26 6 18V9l12-5z" fill="#E1F2FB" stroke="#17130F" stroke-width="1.8" stroke-linejoin="round"/>
+								<circle cx="18" cy="18" r="6" fill="#70B5E3" stroke="#17130F" stroke-width="1.5"/>
+								<line x1="18" y1="12" x2="18" y2="24" stroke="#17130F" stroke-width="1.2"/>
+								<line x1="12" y1="18" x2="24" y2="18" stroke="#17130F" stroke-width="1.2"/>
+								<circle cx="22" cy="22" r="3.5" fill="#FFE8D6" stroke="#17130F" stroke-width="1.5"/>
+								<line x1="24.5" y1="24.5" x2="28" y2="28" stroke="#FC6E51" stroke-width="2.2" stroke-linecap="round"/>
+							</svg>
 						</div>
 						<span class="pr-crisis__item-label">Diagnóstico y evaluación de riesgos reputacionales</span>
 					</div>
 					<div class="pr-crisis__item">
 						<div class="pr-crisis__icon-box">
-							<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4zm12 16H6v-2h12v2zm0-4H6v-2h12v2zm0-4h-5V6h5v6z"/></svg>
+							<svg viewBox="0 0 36 36" width="28" height="28" fill="none">
+								<path d="M5 10a2 2 0 0 1 2-2h8l3 3h11a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V10z" fill="#FDBB42" stroke="#17130F" stroke-width="1.8" stroke-linejoin="round"/>
+								<path d="M5 14h24v13a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V14z" fill="#FFE8D6" stroke="#17130F" stroke-width="1.8" stroke-linejoin="round"/>
+								<rect x="14" y="18" width="8" height="7" rx="1.5" fill="#EE894F" stroke="#17130F" stroke-width="1.4"/>
+								<path d="M16 18v-2a2 2 0 0 1 4 0v2" stroke="#17130F" stroke-width="1.4"/>
+								<circle cx="18" cy="21.5" r="0.8" fill="#17130F"/>
+							</svg>
 						</div>
 						<span class="pr-crisis__item-label">Manuales y protocolos de crisis</span>
 					</div>
@@ -317,13 +406,25 @@ $pr_img_uri = $theme_uri . '/assets/images/pr';
 					</div>
 					<div class="pr-crisis__item">
 						<div class="pr-crisis__icon-box">
-							<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM7 9h10v2H7V9zm6 4H7v-2h6v2zm4-6H7V5h10v2z"/></svg>
+							<svg viewBox="0 0 36 36" width="28" height="28" fill="none">
+								<path d="M7 8h15a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3h-4l-5 4v-4H7a3 3 0 0 1-3-3v-6a3 3 0 0 1 3-3z" fill="#70B5E3" stroke="#17130F" stroke-width="1.8" stroke-linejoin="round"/>
+								<path d="M14 16h13a3 3 0 0 1 3 3v5a3 3 0 0 1-3 3h-2l-4 3v-3h-7a3 3 0 0 1-3-3v-5a3 3 0 0 1 3-3z" fill="#48CFAD" stroke="#17130F" stroke-width="1.8" stroke-linejoin="round"/>
+								<line x1="8" y1="13" x2="16" y2="13" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round"/>
+								<line x1="17" y1="21" x2="25" y2="21" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round"/>
+							</svg>
 						</div>
 						<span class="pr-crisis__item-label">Diseño de mensajes estratégicos</span>
 					</div>
 					<div class="pr-crisis__item">
 						<div class="pr-crisis__icon-box">
-							<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.3-3c0 3-2.54 5.1-5.3 5.1S6.7 14 6.7 11H5c0 3.41 2.72 6.23 6 6.72V21h2v-3.28c3.28-.48 6-3.3 6-6.72h-1.7z"/></svg>
+							<svg viewBox="0 0 36 36" width="28" height="28" fill="none">
+								<rect x="13.5" y="5" width="9" height="15" rx="4.5" fill="#CCD1D9" stroke="#17130F" stroke-width="1.8"/>
+								<path d="M9 13.5v2a9 9 0 0 0 18 0v-2" stroke="#17130F" stroke-width="1.8" stroke-linecap="round"/>
+								<line x1="18" y1="24.5" x2="18" y2="30" stroke="#17130F" stroke-width="1.8"/>
+								<line x1="12" y1="30" x2="24" y2="30" stroke="#17130F" stroke-width="2" stroke-linecap="round"/>
+								<circle cx="18" cy="10" r="1.8" fill="#FC6E51"/>
+								<line x1="14.5" y1="14" x2="21.5" y2="14" stroke="#17130F" stroke-width="1.4"/>
+							</svg>
 						</div>
 						<span class="pr-crisis__item-label">Gestión de medios durante contingencias</span>
 					</div>
@@ -337,13 +438,26 @@ $pr_img_uri = $theme_uri . '/assets/images/pr';
 					</div>
 					<div class="pr-crisis__item">
 						<div class="pr-crisis__icon-box">
-							<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-10 14H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg>
+							<svg viewBox="0 0 36 36" width="28" height="28" fill="none">
+								<circle cx="18" cy="18" r="11" fill="#70B5E3" stroke="#17130F" stroke-width="1.8"/>
+								<ellipse cx="18" cy="18" rx="5" ry="11" fill="#E1F2FB" stroke="#17130F" stroke-width="1.5"/>
+								<line x1="7" y1="18" x2="29" y2="18" stroke="#17130F" stroke-width="1.5"/>
+								<line x1="9" y1="12" x2="27" y2="12" stroke="#17130F" stroke-width="1.4"/>
+								<line x1="9" y1="24" x2="27" y2="24" stroke="#17130F" stroke-width="1.4"/>
+								<path d="M4 14a16 16 0 0 1 28 8" stroke="#FC6E51" stroke-width="1.8" stroke-dasharray="2 3" stroke-linecap="round"/>
+								<circle cx="30" cy="20" r="2.2" fill="#FDBB42" stroke="#17130F" stroke-width="1.3"/>
+							</svg>
 						</div>
 						<span class="pr-crisis__item-label">Monitoreo de medios y redes sociales</span>
 					</div>
 					<div class="pr-crisis__item">
 						<div class="pr-crisis__icon-box">
-							<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+							<svg viewBox="0 0 36 36" width="28" height="28" fill="none">
+								<path d="M14 9h8v3h-8z" fill="#CCD1D9" stroke="#17130F" stroke-width="1.8" stroke-linejoin="round"/>
+								<rect x="5" y="12" width="26" height="18" rx="3" fill="#FDBB42" stroke="#17130F" stroke-width="1.8"/>
+								<path d="M5 19h26" stroke="#17130F" stroke-width="1.6"/>
+								<rect x="15.5" y="17" width="5" height="4.5" rx="1" fill="#FFFFFF" stroke="#17130F" stroke-width="1.4"/>
+							</svg>
 						</div>
 						<span class="pr-crisis__item-label">Comité de crisis y asesoría ejecutiva</span>
 					</div>
@@ -386,6 +500,14 @@ $pr_img_uri = $theme_uri . '/assets/images/pr';
 			<div class="pr-voceros__grid" data-stagger>
 				<div class="pr-voceros__card" data-reveal="up">
 					<div class="pr-voceros__card-top">
+						<div class="pr-voceros__card-icon">
+							<svg viewBox="0 0 36 36" width="34" height="34" fill="none">
+								<rect x="5" y="11" width="18" height="14" rx="2.5" fill="#EE894F" stroke="#17130F" stroke-width="1.8"/>
+								<polygon points="23,15 31,10 31,26 23,21" fill="#CCD1D9" stroke="#17130F" stroke-width="1.8" stroke-linejoin="round"/>
+								<circle cx="10" cy="18" r="3.5" fill="#FFE8D6" stroke="#17130F" stroke-width="1.5"/>
+								<circle cx="8" cy="8" r="2.2" fill="#FC6E51" stroke="#17130F" stroke-width="1.4"/>
+							</svg>
+						</div>
 						<span class="pr-voceros__card-num">01</span>
 					</div>
 					<h3 class="pr-voceros__card-title">Simulaciones de entrevistas</h3>
@@ -394,6 +516,15 @@ $pr_img_uri = $theme_uri . '/assets/images/pr';
 
 				<div class="pr-voceros__card" data-reveal="up">
 					<div class="pr-voceros__card-top">
+						<div class="pr-voceros__card-icon">
+							<svg viewBox="0 0 36 36" width="34" height="34" fill="none">
+								<circle cx="18" cy="18" r="13" fill="#E1F2FB" stroke="#17130F" stroke-width="1.8"/>
+								<circle cx="18" cy="18" r="8.5" fill="#70B5E3" stroke="#17130F" stroke-width="1.6"/>
+								<circle cx="18" cy="18" r="4" fill="#FC6E51" stroke="#17130F" stroke-width="1.6"/>
+								<line x1="28" y1="8" x2="19.5" y2="16.5" stroke="#17130F" stroke-width="2" stroke-linecap="round"/>
+								<polygon points="27,5 31,9 29,11 25,7" fill="#FDBB42" stroke="#17130F" stroke-width="1.4"/>
+							</svg>
+						</div>
 						<span class="pr-voceros__card-num">02</span>
 					</div>
 					<h3 class="pr-voceros__card-title">Manejo de preguntas difíciles</h3>
@@ -402,6 +533,14 @@ $pr_img_uri = $theme_uri . '/assets/images/pr';
 
 				<div class="pr-voceros__card" data-reveal="up">
 					<div class="pr-voceros__card-top">
+						<div class="pr-voceros__card-icon">
+							<svg viewBox="0 0 36 36" width="34" height="34" fill="none">
+								<circle cx="14" cy="16" r="8" fill="#FDBB42" stroke="#17130F" stroke-width="1.8"/>
+								<circle cx="14" cy="16" r="3.5" fill="#FFFFFF" stroke="#17130F" stroke-width="1.6"/>
+								<path d="M21 18l10 10-2.5 2.5-2.5-2.5-2 2-2.5-2.5 2-2z" fill="#EE894F" stroke="#17130F" stroke-width="1.6" stroke-linejoin="round"/>
+								<polygon points="27,6 28.5,10 32.5,10 29.5,12.5 30.5,16.5 27,14 23.5,16.5 24.5,12.5 21.5,10 25.5,10" fill="#FC6E51" stroke="#17130F" stroke-width="1.2" stroke-linejoin="round"/>
+							</svg>
+						</div>
 						<span class="pr-voceros__card-num">03</span>
 					</div>
 					<h3 class="pr-voceros__card-title">Desarrollo de mensajes clave</h3>
@@ -410,6 +549,15 @@ $pr_img_uri = $theme_uri . '/assets/images/pr';
 
 				<div class="pr-voceros__card" data-reveal="up">
 					<div class="pr-voceros__card-top">
+						<div class="pr-voceros__card-icon">
+							<svg viewBox="0 0 36 36" width="34" height="34" fill="none">
+								<path d="M8 19a10 10 0 0 1 20 0" stroke="#17130F" stroke-width="2.2" stroke-linecap="round"/>
+								<rect x="5" y="17" width="6" height="11" rx="3" fill="#FC6E51" stroke="#17130F" stroke-width="1.8"/>
+								<rect x="25" y="17" width="6" height="11" rx="3" fill="#70B5E3" stroke="#17130F" stroke-width="1.8"/>
+								<path d="M28 26c0 4-3.5 6-7 6" stroke="#17130F" stroke-width="1.8" stroke-linecap="round"/>
+								<circle cx="21" cy="32" r="2" fill="#FDBB42" stroke="#17130F" stroke-width="1.4"/>
+							</svg>
+						</div>
 						<span class="pr-voceros__card-num">04</span>
 					</div>
 					<h3 class="pr-voceros__card-title">Comunicación verbal y no verbal</h3>
@@ -418,6 +566,17 @@ $pr_img_uri = $theme_uri . '/assets/images/pr';
 
 				<div class="pr-voceros__card" data-reveal="up">
 					<div class="pr-voceros__card-top">
+						<div class="pr-voceros__card-icon">
+							<svg viewBox="0 0 36 36" width="34" height="34" fill="none">
+								<path d="M7 18c0-7 6-12 13-12s11 4 11 9c0 6-4 8-7 8-2 0-3 1-3 2.5 0 2 1.5 2.5 1.5 4.5 0 2-2 4-5.5 4C9 34 7 27 7 18z" fill="#FFE8D6" stroke="#17130F" stroke-width="1.8" stroke-linejoin="round"/>
+								<circle cx="13" cy="14" r="2.2" fill="#70B5E3"/>
+								<circle cx="19" cy="11" r="2.2" fill="#FC6E51"/>
+								<circle cx="25" cy="14" r="2.2" fill="#FDBB42"/>
+								<circle cx="16" cy="28" r="2.5" fill="#48CFAD"/>
+								<line x1="28" y1="22" x2="22" y2="28" stroke="#17130F" stroke-width="1.8" stroke-linecap="round"/>
+								<path d="M20 30l2-2 1 1-2 2z" fill="#17130F"/>
+							</svg>
+						</div>
 						<span class="pr-voceros__card-num">05</span>
 					</div>
 					<h3 class="pr-voceros__card-title">Storytelling corporativo</h3>
@@ -426,6 +585,17 @@ $pr_img_uri = $theme_uri . '/assets/images/pr';
 
 				<div class="pr-voceros__card" data-reveal="up">
 					<div class="pr-voceros__card-top">
+						<div class="pr-voceros__card-icon">
+							<svg viewBox="0 0 36 36" width="34" height="34" fill="none">
+								<circle cx="18" cy="18" r="13" fill="#FFFFFF" stroke="#17130F" stroke-width="1.8"/>
+								<circle cx="18" cy="18" r="6" fill="#E1F2FB" stroke="#17130F" stroke-width="1.8"/>
+								<path d="M18 5v7M18 24v7M5 18h7M24 18h7" stroke="#17130F" stroke-width="1.8"/>
+								<path d="M14 5.5l2 6.5h4l2-6.5" fill="#FC6E51" stroke="#17130F" stroke-width="1.4"/>
+								<path d="M14 30.5l2-6.5h4l2 6.5" fill="#FC6E51" stroke="#17130F" stroke-width="1.4"/>
+								<path d="M5.5 14l6.5 2v4l-6.5 2" fill="#FC6E51" stroke="#17130F" stroke-width="1.4"/>
+								<path d="M30.5 14l-6.5 2v4l6.5 2" fill="#FC6E51" stroke="#17130F" stroke-width="1.4"/>
+							</svg>
+						</div>
 						<span class="pr-voceros__card-num">06</span>
 					</div>
 					<h3 class="pr-voceros__card-title">Escenarios de crisis</h3>

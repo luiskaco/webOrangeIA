@@ -23,7 +23,18 @@
       "mcp__claude-in-chrome__read_page",
       "mcp__claude-in-chrome__find",
       "mcp__claude-in-chrome__browser_batch",
-      "mcp__claude-in-chrome__computer"
+      "mcp__claude-in-chrome__computer",
+      "PowerShell(& \"C:\\\\laragon\\\\bin\\\\mysql\\\\mysql-8.4.3-winx64\\\\bin\\\\mysql.exe\" -u root --skip-column-names -e \"SELECT option_name FROM orangeIA.wp_options WHERE option_name LIKE '%rank_math%' AND option_name LIKE '%sitemap%';\" 2>&1)",
+      "PowerShell(& \"C:\\\\laragon\\\\bin\\\\mysql\\\\mysql-8.4.3-winx64\\\\bin\\\\mysql.exe\" -u root --skip-column-names -e \"SELECT meta_value FROM orangeIA.wp_postmeta WHERE post_id=73 AND meta_key='rank_math_focus_keyword';\" 2>&1)",
+      "Bash(npx --version)",
+      "Bash(npx --yes lighthouse http://orangeia.test/ --only-categories=seo,accessibility --output=json --output-path=\"C:\\\\Users\\\\ORANGE~1\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--laragon-www-orangeIA\\\\0c2dc528-4053-4b67-a86c-11faae4e59dd\\\\scratchpad\\\\lh-home.json\" --chrome-flags=\"--headless\" --quiet)",
+      "Bash(node -e ' *)",
+      "Bash(curl -s http://orangeia.test/ -o /dev/null -w \"%{http_code}\\\\n\")",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(curl -s http://orangeia.test/blog/ -o /dev/null -w \"blog index: %{http_code}\\\\n\")",
+      "Bash(\"C:\\\\laragon\\\\bin\\\\mysql\\\\mysql-8.4.3-winx64\\\\bin\\\\mysql.exe\" -u root orangeIA --default-character-set=utf8mb4 -e \"SELECT post_content LIKE '%Google Analytics%' AS still_present FROM wp_posts WHERE ID=186;\")"
     ]
   }
 }
