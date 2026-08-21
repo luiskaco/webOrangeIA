@@ -1052,37 +1052,45 @@ document.addEventListener( 'DOMContentLoaded', () => {
 		const mobileRows = document.querySelectorAll( '.js-pr-node-row' );
 
 		const prServices = [
-			{ 
-				label: 'Estrategias integrales de RRPP', 
-				icon: 'M12 3a9 9 0 1 1-6.36 2.64L3 8 M3 3v5h5 M12 8v4l3 2' 
+			{
+				label: 'Estrategias integrales de RRPP',
+				icon: 'M12 3a9 9 0 1 1-6.36 2.64L3 8 M3 3v5h5 M12 8v4l3 2',
+				color: '#70B5E3'
 			},
-			{ 
-				label: 'Gestión con medios de comunicación', 
-				icon: 'M4 4h14a2 2 0 0 1 2 2v14H4V4zm0 4h16 M8 12h8 M8 16h5' 
+			{
+				label: 'Gestión con medios de comunicación',
+				icon: 'M4 4h14a2 2 0 0 1 2 2v14H4V4zm0 4h16 M8 12h8 M8 16h5',
+				color: '#EE894F'
 			},
-			{ 
-				label: 'Posicionamiento de líderes y voceros', 
-				icon: 'M4 19v-1a3 3 0 0 1 3-3 M4 9a2 2 0 1 1 0-4 2 2 0 0 1 0 4 M20 19v-1a3 3 0 0 0-3-3 M20 9a2 2 0 1 0 0-4 2 2 0 0 0 0 4 M12 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6z M7 21v-2a5 5 0 0 1 10 0v2 M12 2l.6 1.3 1.4.2-1 1 .2 1.5-1.2-.7-1.2.7.2-1.5-1-1 1.4-.2z' 
+			{
+				label: 'Posicionamiento de líderes y voceros',
+				icon: 'M4 19v-1a3 3 0 0 1 3-3 M4 9a2 2 0 1 1 0-4 2 2 0 0 1 0 4 M20 19v-1a3 3 0 0 0-3-3 M20 9a2 2 0 1 0 0-4 2 2 0 0 0 0 4 M12 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6z M7 21v-2a5 5 0 0 1 10 0v2 M12 2l.6 1.3 1.4.2-1 1 .2 1.5-1.2-.7-1.2.7.2-1.5-1-1 1.4-.2z',
+				color: '#10B981'
 			},
-			{ 
-				label: 'Desarrollo de contenidos corporativos', 
-				icon: 'M12 19l7-7 3 3-7 7-5 1 2-4z M18 5l3 3 M2 21h20 M6 13L3 16v3h3l3-3' 
+			{
+				label: 'Desarrollo de contenidos corporativos',
+				icon: 'M12 19l7-7 3 3-7 7-5 1 2-4z M18 5l3 3 M2 21h20 M6 13L3 16v3h3l3-3',
+				color: '#8B5CF6'
 			},
-			{ 
-				label: 'Comunicación ejecutiva y thought leadership', 
-				icon: 'M9 18h6 M10 22h4 M12 2a7 7 0 0 0-5 11.9c.7.7 1 1.6 1 2.6v.5h8v-.5c0-1 .3-1.9 1-2.6A7 7 0 0 0 12 2z M12 6v4 M10 8h4' 
+			{
+				label: 'Comunicación ejecutiva y thought leadership',
+				icon: 'M9 18h6 M10 22h4 M12 2a7 7 0 0 0-5 11.9c.7.7 1 1.6 1 2.6v.5h8v-.5c0-1 .3-1.9 1-2.6A7 7 0 0 0 12 2z M12 6v4 M10 8h4',
+				color: '#F59E0B'
 			},
-			{ 
-				label: 'Gestión de reputación corporativa', 
-				icon: 'M12 2l8 3.5v6c0 5.5-3.5 9.5-8 10.5-4.5-1-8-5-8-10.5v-6L12 2z M12 7.5l1.1 2.3 2.5.4-1.8 1.8.4 2.5-2.2-1.2-2.2 1.2.4-2.5-1.8-1.8 2.5-.4z' 
+			{
+				label: 'Gestión de reputación corporativa',
+				icon: 'M12 2l8 3.5v6c0 5.5-3.5 9.5-8 10.5-4.5-1-8-5-8-10.5v-6L12 2z M12 7.5l1.1 2.3 2.5.4-1.8 1.8.4 2.5-2.2-1.2-2.2 1.2.4-2.5-1.8-1.8 2.5-.4z',
+				color: '#EC4899'
 			},
-			{ 
-				label: 'Monitoreo y análisis de impacto mediático', 
-				icon: 'M3 3v18h18 M6 15l4-5 4 3 6-7 M18 6h3v3 M14 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6z' 
+			{
+				label: 'Monitoreo y análisis de impacto mediático',
+				icon: 'M3 3v18h18 M6 15l4-5 4 3 6-7 M18 6h3v3 M14 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6z',
+				color: '#14B8A6'
 			},
-			{ 
-				label: 'Comunicación de lanzamientos y anuncios corporativos', 
-				icon: 'M12 4a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z M6 12h12 M5 12l2 9h10l2-9 M9 8l-2-2 M15 8l2-2 M9 21h6 M9 12v-2a3 3 0 0 1 6 0v2' 
+			{
+				label: 'Comunicación de lanzamientos y anuncios corporativos',
+				icon: 'M12 4a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z M6 12h12 M5 12l2 9h10l2-9 M9 8l-2-2 M15 8l2-2 M9 21h6 M9 12v-2a3 3 0 0 1 6 0v2',
+				color: '#EF4444'
 			}
 		];
 
@@ -1187,6 +1195,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
 				g.setAttribute( 'role', 'button' );
 				g.setAttribute( 'aria-label', service.label );
 				g.setAttribute( 'transform', `translate(${x}, ${y})` );
+				g.style.setProperty( '--node-color', service.color );
 
 				// Invisible interactive hit area
 				const hitArea = document.createElementNS( 'http://www.w3.org/2000/svg', 'circle' );

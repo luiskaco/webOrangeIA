@@ -519,17 +519,17 @@
 
 .pr-services__node-icon {
 	fill: none;
-	stroke: #17130F;
+	stroke: var(--node-color, #17130F);
 	stroke-width: 2.2;
 	stroke-linecap: round;
 	stroke-linejoin: round;
-	transition: stroke 0.25s ease, filter 0.25s ease;
+	transition: filter 0.25s ease;
 }
 
 .pr-services__node-group:hover .pr-services__node-badge,
 .pr-services__node-group.is-active .pr-services__node-badge {
 	transform: scale(1.3);
-	filter: drop-shadow(0 6px 16px rgba(41, 171, 226, 0.35));
+	filter: drop-shadow(0 6px 16px var(--node-color, rgba(41, 171, 226, 0.35)));
 }
 
 .pr-services__node-group:hover .pr-services__node-icon-wrap,
@@ -539,7 +539,7 @@
 
 .pr-services__node-group:hover .pr-services__node-icon,
 .pr-services__node-group.is-active .pr-services__node-icon {
-	stroke: #29ABE2;
+	filter: drop-shadow(0 2px 6px var(--node-color, rgba(41, 171, 226, 0.45)));
 }
 
 .pr-services__node-group.is-dimmed {
