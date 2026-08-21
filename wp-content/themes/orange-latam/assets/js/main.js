@@ -1195,6 +1195,13 @@ document.addEventListener( 'DOMContentLoaded', () => {
 				hitArea.setAttribute( 'r', '28' );
 				hitArea.setAttribute( 'class', 'pr-services__node-hit' );
 
+				// Círculo insignia blanco con sombra, detrás del ícono
+				const badge = document.createElementNS( 'http://www.w3.org/2000/svg', 'circle' );
+				badge.setAttribute( 'cx', '0' );
+				badge.setAttribute( 'cy', '0' );
+				badge.setAttribute( 'r', '26' );
+				badge.setAttribute( 'class', 'pr-services__node-badge' );
+
 				// Free-floating SVG Icon
 				const iconGroup = document.createElementNS( 'http://www.w3.org/2000/svg', 'g' );
 				iconGroup.setAttribute( 'class', 'pr-services__node-icon-wrap' );
@@ -1206,6 +1213,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
 
 				iconGroup.appendChild( iconPath );
 				g.appendChild( hitArea );
+				g.appendChild( badge );
 				g.appendChild( iconGroup );
 				svgNodes.appendChild( g );
 				nodeElements.push( g );
