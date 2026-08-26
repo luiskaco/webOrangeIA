@@ -87,7 +87,7 @@ $pr_img_uri = $theme_uri . '/assets/images/pr';
 		<div class="pr-hero__container">
 			<div class="pr-hero__content" data-reveal="left">
 
-				<h1 class="pr-hero__title">Agencia de Relaciones Públicas y Gestión de la Reputación</h1>
+				<h1 class="pr-hero__title">Gestión de Reputación y Relaciones Públicas en Perú</h1>
 
 				<p class="pr-hero__desc">
 					Construimos y protegemos la reputación de tu marca, empresa u organización, con estrategias efectivas de posicionamiento, manejo de crisis y entrenamiento de voceros, con un impacto robusto en los negocios.
