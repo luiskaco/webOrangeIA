@@ -51,9 +51,9 @@ get_header();
 					<source src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/videos/orange-latam-lideres-reputacion-comunicacion-pr.mp4" type="video/mp4">
 				</video>
 				<div class="hero__content">
-					<h1 style="font-family: var(--font-sans); font-size: clamp(32px, 5vw, 64px); font-weight: 900; margin-bottom: 12px; color: var(--color-bg-light);">
+					<p style="font-family: var(--font-sans); font-size: clamp(32px, 5vw, 64px); font-weight: 900; margin-bottom: 12px; color: var(--color-bg-light);">
 						Líderes en Reputación
-					</h1>
+					</p>
 					<p style="font-size: clamp(14px, 2vw, 18px); color: rgba(252, 245, 233, 0.7); max-width: 600px; margin: 0 auto;">
 						Premiados en los principales escenarios del mundo por nuestra gestión de comunicación y relaciones públicas.
 					</p>
@@ -138,7 +138,7 @@ get_header();
 	     ========================================== -->
 	<section id="nosotros" class="about">
 		<div class="about__container">
-			<div class="about__title" data-reveal="up">Nosotros</div>
+			<h2 class="about__title" data-reveal="up">Nosotros</h2>
 			<p class="about__desc" data-reveal="up">
 				Somos una empresa experta en gestión de la reputación, relaciones públicas, manejo de crisis y marketing de influencers. Contamos con un equipo altamente calificado para la creación y ejecución de planes que aportan un alto valor a las marcas, a los negocios y a la sociedad. Somos una agencia especializada en ofrecer soluciones integrales para marcas de renombre en Perú y a nivel internacional. Por quinto año consecutivo, el Top Fice Iberoamérica nos considera como la Mejor Agencia de Comunicación y relaciones públicas del Perú y nos ubica en el TOP 5 de las mejores compañías de comunicación en el país.
 			</p>
@@ -153,13 +153,13 @@ get_header();
 
 				<div class="about__info" data-reveal="right">
 					<div class="about__section">
-						<div class="about__section-title">Misión</div>
+						<h3 class="about__section-title">Misión</h3>
 						<p class="about__section-text">
 							Somos el partner estratégico que ayuda a las empresas a <strong>lograr el mayor crecimiento</strong> mediante planes de comunicación creativos e innovadores, que aportan alto valor a todo tipo de negocios, organizaciones e instituciones, privadas y públicas.
 						</p>
 					</div>
 					<div class="about__section">
-						<div class="about__section-title">Visión</div>
+						<h3 class="about__section-title">Visión</h3>
 						<p class="about__section-text">
 							Convertirnos en la agencia líder mundial en transformación de la comunicación, <strong>reconocida por su gran creatividad y excelencia</strong> para lograr que cada una de sus intervenciones aporte significativamente a los negocios de sus clientes y a un cambio positivo de la sociedad.
 						</p>
@@ -185,7 +185,7 @@ get_header();
 				<div class="services-banner__label">Servicios</div>
 				<div class="services-banner__flex">
 					<h2 class="services-banner__title">
-						COMUNICACIÓN<br>ESTRATÉGICA
+						<span class="services-banner__title-line">Comunicación</span> Estratégica
 					</h2>
 					<div class="services-banner__switcher">
 						<button class="services-banner__btn services-banner__btn--corp services-banner__btn--active">
@@ -235,7 +235,7 @@ get_header();
 						$active_class = $svc['id'] === 1 ? 'services-corp__row--active' : '';
 						echo '<div class="services-corp__row ' . esc_attr( $active_class ) . '" data-id="' . esc_attr( $svc['id'] ) . '" data-num="' . esc_attr( $svc['num'] ) . '" data-name="' . esc_attr( $svc['name'] ) . '" data-desc="' . esc_attr( $svc['desc'] ) . '" data-link="' . esc_attr( isset( $svc['link'] ) ? $svc['link'] : '' ) . '" data-img="' . esc_url( $svc['img'] ) . '">';
 						echo '<span class="services-corp__row-num">' . esc_html( $svc['num'] ) . '</span>';
-						echo '<span class="services-corp__row-name">' . wp_kses_post( $svc['name'] ) . '</span>';
+						echo '<h3 class="services-corp__row-name">' . wp_kses_post( $svc['name'] ) . '</h3>';
 						echo '<span class="services-corp__row-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7,7 17,7 17,17"></polyline></svg></span>';
 						echo '</div>';
 					}
@@ -246,7 +246,7 @@ get_header();
 					<div class="services-corp__detail-watermark">01</div>
 					<div class="services-corp__detail-container">
 						<div class="services-corp__detail-label">01 - SERVICIO</div>
-						<h3 class="services-corp__detail-title">PR Y GESTIÓN DE LA REPUTACIÓN</h3>
+						<h3 class="services-corp__detail-title">PR y Gestión de la reputación</h3>
 						<p class="services-corp__detail-desc">
 							Planificar y ejecutar estrategias de Relaciones Públicas (PR) y gestión de la reputación permite a marcas y empresas influir de manera poderosa en la percepción de distintos públicos. En Orange Latam nos especializamos en la creación de planes que permiten construir una reputación sólida a empresas, productos y/o servicios, a partir de una interacción asertiva con públicos diversos, a todo nivel.
 						</p>
@@ -320,7 +320,7 @@ get_header();
 			<div class="sensibles-grid-section__header">
 				<div class="sensibles-grid-section__header-left">
 					<h2 class="sensibles-grid-section__title">
-						ASUNTOS<br>SENSIBLES
+						<span class="sensibles-grid-section__title-line">Asuntos</span> Sensibles
 					</h2>
 				</div>
 				<div class="sensibles-grid-section__header-right">
@@ -362,10 +362,10 @@ get_header();
 	     ========================================== -->
 	<section id="premios" class="home-awards">
 		<div class="home-awards__container">
-			<h2 class="home-awards__title" data-reveal="up">
-				MEJOR AGENCIA DE RELACIONES PÚBLICAS<br>
-				<span class="home-awards__title-accent">Y GESTIÓN DE LA REPUTACIÓN</span>
-			</h2>
+			<h1 class="home-awards__title" data-reveal="up">
+				Mejor Agencia de Relaciones Públicas<br>
+				<span class="home-awards__title-accent">y Gestión de la Reputación</span>
+			</h1>
 
 			<div class="home-awards__carousel" data-reveal="up">
 				<div class="home-awards__track">
@@ -409,7 +409,7 @@ get_header();
 	<section id="sectores" class="sectors">
 		<div class="sectors__container">
 			<h2 class="sectors__title" data-reveal="up">
-				<span class="sectors__title-accent">SECTORES</span> QUE ATENDEMOS
+				<span class="sectors__title-accent">Sectores</span> que atendemos
 			</h2>
 			<p class="sectors__subtitle" data-reveal="up">
 				Tenemos amplia experiencia atendiendo requerimientos de comunicación para todos los sectores de la actividad económica.
@@ -440,7 +440,7 @@ get_header();
 				<!-- LADO IZQUIERDO: Encabezado, Descripción, Botón Pill y Controles Minimalistas -->
 				<div class="experts__intro">
 					<h2 class="experts__title">
-						VOZ DE <span class="experts__title-accent">EXPERTOS</span>
+						Voz de <span class="experts__title-accent">Expertos</span>
 					</h2>
 					<p class="experts__subtitle">
 						Conoce la opinión de nuestros líderes sobre los principales temas que están dando que hablar en la sociedad y en la industria.
@@ -542,7 +542,7 @@ get_header();
 	     ========================================== -->
 	<section class="faq" id="preguntas-frecuentes">
 		<div class="faq__container">
-			<h2 class="faq__title" data-reveal="up">PREGUNTAS FRECUENTES</h2>
+			<h2 class="faq__title" data-reveal="up">Preguntas frecuentes</h2>
 			<div class="faq__accordion" data-reveal="up">
 				<div class="faq__item">
 					<button class="faq__trigger" aria-expanded="false">

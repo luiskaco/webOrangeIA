@@ -386,6 +386,11 @@
 	line-height: 1.02;
 	color: var(--color-text-dark);
 	letter-spacing: -0.01em;
+	text-transform: uppercase;
+}
+
+.services-banner__title-line {
+	display: block;
 }
 
 .services-banner__switcher {
@@ -534,6 +539,7 @@
 	color: var(--color-bg-light);
 	letter-spacing: -0.01em;
 	margin-bottom: 20px;
+	text-transform: uppercase;
 }
 
 .u-desktop-br {
@@ -642,6 +648,11 @@
 	color: #14120F;
 	margin: 0;
 	letter-spacing: -0.01em;
+	text-transform: uppercase;
+}
+
+.sensibles-grid-section__title-line {
+	display: block;
 }
 
 .sensibles-grid-section__header-right {
@@ -996,6 +1007,7 @@
 	line-height: 1.05;
 	margin-bottom: 20px;
 	letter-spacing: -0.01em;
+	text-transform: uppercase;
 }
 
 .sectors__title-accent {
@@ -1389,6 +1401,7 @@
 	color: var(--color-bg-light);
 	margin-bottom: 48px;
 	letter-spacing: -0.01em;
+	text-transform: uppercase;
 }
 
 .faq__accordion {
