@@ -311,7 +311,7 @@ $theme_uri = get_template_directory_uri();
 					<button type="button" class="ap-stake-row open-contact-modal" data-service="Asuntos Públicos — Autoridades Reguladoras">
 						<span class="ap-stake-row__num">01</span>
 						<span class="ap-stake-row__info">
-							<span class="ap-stake-row__title">Autoridades Reguladoras</span>
+							<h3 class="ap-stake-row__title">Autoridades Reguladoras</h3>
 							<span class="ap-stake-row__desc">Ministerios y organismos reguladores del Estado.</span>
 						</span>
 						<span class="ap-stake-row__arrow">
@@ -323,7 +323,7 @@ $theme_uri = get_template_directory_uri();
 					<button type="button" class="ap-stake-row open-contact-modal" data-service="Asuntos Públicos — Comunidades Locales">
 						<span class="ap-stake-row__num">02</span>
 						<span class="ap-stake-row__info">
-							<span class="ap-stake-row__title">Comunidades Locales</span>
+							<h3 class="ap-stake-row__title">Comunidades Locales</h3>
 							<span class="ap-stake-row__desc">Licencia social y entorno operativo directo.</span>
 						</span>
 						<span class="ap-stake-row__arrow">
@@ -335,7 +335,7 @@ $theme_uri = get_template_directory_uri();
 					<button type="button" class="ap-stake-row open-contact-modal" data-service="Asuntos Públicos — Organizaciones Sociales">
 						<span class="ap-stake-row__num">03</span>
 						<span class="ap-stake-row__info">
-							<span class="ap-stake-row__title">Organizaciones Sociales</span>
+							<h3 class="ap-stake-row__title">Organizaciones Sociales</h3>
 							<span class="ap-stake-row__desc">ONGs y colectivos ciudadanos organizados.</span>
 						</span>
 						<span class="ap-stake-row__arrow">
@@ -347,7 +347,7 @@ $theme_uri = get_template_directory_uri();
 					<button type="button" class="ap-stake-row open-contact-modal" data-service="Asuntos Públicos — Gremios & Cámaras">
 						<span class="ap-stake-row__num">04</span>
 						<span class="ap-stake-row__info">
-							<span class="ap-stake-row__title">Gremios & Cámaras</span>
+							<h3 class="ap-stake-row__title">Gremios & Cámaras</h3>
 							<span class="ap-stake-row__desc">Consenso sectorial y cámaras empresariales.</span>
 						</span>
 						<span class="ap-stake-row__arrow">
@@ -359,7 +359,7 @@ $theme_uri = get_template_directory_uri();
 					<button type="button" class="ap-stake-row open-contact-modal" data-service="Asuntos Públicos — Líderes de Opinión">
 						<span class="ap-stake-row__num">05</span>
 						<span class="ap-stake-row__info">
-							<span class="ap-stake-row__title">Líderes de Opinión</span>
+							<h3 class="ap-stake-row__title">Líderes de Opinión</h3>
 							<span class="ap-stake-row__desc">Voceros y analistas del debate público.</span>
 						</span>
 						<span class="ap-stake-row__arrow">
@@ -371,7 +371,7 @@ $theme_uri = get_template_directory_uri();
 					<button type="button" class="ap-stake-row open-contact-modal" data-service="Asuntos Públicos — Medios de Comunicación">
 						<span class="ap-stake-row__num">06</span>
 						<span class="ap-stake-row__info">
-							<span class="ap-stake-row__title">Medios de Comunicación</span>
+							<h3 class="ap-stake-row__title">Medios de Comunicación</h3>
 							<span class="ap-stake-row__desc">Prensa nacional y portales regionales.</span>
 						</span>
 						<span class="ap-stake-row__arrow">

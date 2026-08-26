@@ -1921,6 +1921,7 @@
 }
 
 .home-awards__title-accent {
+	display: block;
 	color: #38b6ff; /* Matches the blue color in the provided image */
 }
 

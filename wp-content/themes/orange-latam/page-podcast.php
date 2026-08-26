@@ -101,7 +101,7 @@ $podcast_img_uri = $theme_uri . '/assets/images/podcast';
 				<div class="podcast-features__img-box">
 					<img class="podcast-features__img" src="<?php echo esc_url( $podcast_img_uri . '/DSC00737-1-1536x1307.webp' ); ?>" alt="Grabación en audio y video">
 				</div>
-				<h3 class="podcast-features__title">GRABACIÓN EN<br>AUDIO Y VIDEO</h3>
+				<h2 class="podcast-features__title">GRABACIÓN EN AUDIO Y VIDEO</h2>
 			</div>
 
 			<!-- Card 2 -->
@@ -109,7 +109,7 @@ $podcast_img_uri = $theme_uri . '/assets/images/podcast';
 				<div class="podcast-features__img-box">
 					<img class="podcast-features__img" src="<?php echo esc_url( $podcast_img_uri . '/DETRAS-DE-ESCENA.webp' ); ?>" alt="Asesoría durante la sesión">
 				</div>
-				<h3 class="podcast-features__title">ASESORÍA DURANTE<br>LA SESIÓN</h3>
+				<h2 class="podcast-features__title">ASESORÍA DURANTE LA SESIÓN</h2>
 			</div>
 
 			<!-- Card 3 -->
@@ -117,7 +117,7 @@ $podcast_img_uri = $theme_uri . '/assets/images/podcast';
 				<div class="podcast-features__img-box">
 					<img class="podcast-features__img" src="<?php echo esc_url( $podcast_img_uri . '/DSC00811-1-1536x1307.webp' ); ?>" alt="Edición Spotify, YouTube y Reels">
 				</div>
-				<h3 class="podcast-features__title">EDICIÓN SPOTIFY,<br>YOUTUBE Y REELS</h3>
+				<h2 class="podcast-features__title">EDICIÓN SPOTIFY, YOUTUBE Y REELS</h2>
 			</div>
 
 			<!-- Card 4 -->
@@ -125,7 +125,7 @@ $podcast_img_uri = $theme_uri . '/assets/images/podcast';
 				<div class="podcast-features__img-box">
 					<img class="podcast-features__img" src="<?php echo esc_url( $podcast_img_uri . '/Espacio-Moderno-y-comodo-en-Orange-Latam-Podcast2.webp' ); ?>" alt="Espacios modernos y cómodos">
 				</div>
-				<h3 class="podcast-features__title">ESPACIOS MODERNOS<br>Y CÓMODOS</h3>
+				<h2 class="podcast-features__title">ESPACIOS MODERNOS Y CÓMODOS</h2>
 			</div>
 		</div>
 	</section>
@@ -163,7 +163,7 @@ $podcast_img_uri = $theme_uri . '/assets/images/podcast';
 
 					<div class="podcast-included__info-col">
 						<div class="podcast-card">
-							<div class="podcast-card__header">CALIDAD DE ESTUDIO CON ENTREGABLES</div>
+							<h3 class="podcast-card__header">CALIDAD DE ESTUDIO CON ENTREGABLES</h3>
 							<div class="podcast-card__body">
 								<p class="podcast-card__text">
 									Armamos el plan a la medida de tu proyecto, tanto si requieres solo el espacio o la producción completa. Nos adaptamos a diferentes formatos de grabación como entrevistas, conversatorios, mesas de debate, programas de negocios, estilo de vida y tecnología.
@@ -190,7 +190,7 @@ $podcast_img_uri = $theme_uri . '/assets/images/podcast';
 
 					<div class="podcast-included__info-col">
 						<div class="podcast-card">
-							<div class="podcast-card__header">TU AUDIO, LISTO PARA BRILLAR</div>
+							<h3 class="podcast-card__header">TU AUDIO, LISTO PARA BRILLAR</h3>
 							<div class="podcast-card__body">
 								<p class="podcast-card__text">
 									Nuestro servicio de edición profesional de podcast incluye limpieza de ruido, ecualización, mezcla y masterización final. Nos aseguramos de que cada voz se escuche clara y balanceada, entregándote un archivo listo para publicar

@@ -151,7 +151,7 @@ $theme_uri = get_template_directory_uri();
 	     ========================================== -->
 	<section class="pd-web" id="web-ux">
 		<div class="pd-section-header" data-pd-reveal>
-			<h2 class="pd-section-title">Diseño Web y Landings<br>UX Criteria</h2>
+			<h2 class="pd-section-title">Diseño Web y Landings UX Criteria</h2>
 			<p class="pd-section-desc">
 				Como <strong>agencia de diseño web para empresas</strong>, sabemos que un buen sitio debe responder a las necesidades de sus usuarios y cumplir los objetivos de la organización. Diseñamos experiencias donde la estética está respaldada por estrategia.
 			</p>
@@ -339,7 +339,7 @@ $theme_uri = get_template_directory_uri();
 
 		<!-- Marquee infinito de tecnologías (CSS puro, pausa al hover) -->
 		<div class="pd-tech-ticker" data-pd-reveal>
-			<div class="pd-tech-ticker__title">Ecosistema Tecnológico & Plataformas</div>
+			<h3 class="pd-tech-ticker__title">Ecosistema Tecnológico & Plataformas</h3>
 			<div class="pd-tech-ticker__viewport">
 				<div class="pd-tech-ticker__track">
 					<div class="pd-tech-ticker__list">

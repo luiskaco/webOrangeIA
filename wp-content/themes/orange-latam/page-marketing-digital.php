@@ -412,7 +412,7 @@ get_header();
 			<!-- Marcas con las que hemos trabajado -->
 			<div class="dig-brands" data-reveal="fade">
 				<h3 class="dig-brands__title">
-					MARCAS CON LAS QUE <br>
+					<span class="dig-brands__title-line">MARCAS CON LAS QUE</span>
 					<span class="dig-brands__title--blue">HEMOS TRABAJADO</span>
 				</h3>
 				

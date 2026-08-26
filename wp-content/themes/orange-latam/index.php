@@ -51,9 +51,9 @@ get_header();
 					<source src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/videos/orange-latam-lideres-reputacion-comunicacion-pr.mp4" type="video/mp4">
 				</video>
 				<div class="hero__content">
-					<p style="font-family: var(--font-sans); font-size: clamp(32px, 5vw, 64px); font-weight: 900; margin-bottom: 12px; color: var(--color-bg-light);">
-						Líderes en Reputación
-					</p>
+					<h1 style="font-family: var(--font-sans); font-size: clamp(32px, 5vw, 64px); font-weight: 900; margin-bottom: 12px; color: var(--color-bg-light);">
+						Mejor Agencia de Relaciones Públicas y Gestión de la Reputación
+					</h1>
 					<p style="font-size: clamp(14px, 2vw, 18px); color: rgba(252, 245, 233, 0.7); max-width: 600px; margin: 0 auto;">
 						Premiados en los principales escenarios del mundo por nuestra gestión de comunicación y relaciones públicas.
 					</p>
@@ -362,10 +362,10 @@ get_header();
 	     ========================================== -->
 	<section id="premios" class="home-awards">
 		<div class="home-awards__container">
-			<h1 class="home-awards__title" data-reveal="up">
-				Mejor Agencia de Relaciones Públicas<br>
+			<h2 class="home-awards__title" data-reveal="up">
+				Mejor Agencia de Relaciones Públicas
 				<span class="home-awards__title-accent">y Gestión de la Reputación</span>
-			</h1>
+			</h2>
 
 			<div class="home-awards__carousel" data-reveal="up">
 				<div class="home-awards__track">

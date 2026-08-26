@@ -71,7 +71,7 @@ $theme_uri = get_template_directory_uri();
 						<span class="bc-hero__card-tag">Estrategia e Identidad</span>
 						<span class="bc-hero__card-status">Plataforma Activa</span>
 					</div>
-					<h3 class="bc-hero__card-heading">Plataforma de Marca Orange™</h3>
+					<p class="bc-hero__card-heading">Plataforma de Marca Orange™</p>
 					<p class="bc-hero__card-subtext">Estrategia, creatividad y dirección de arte para desarrollar marcas con propósito, personalidad y diferenciación real.</p>
 					
 					<div class="bc-hero__metrics">

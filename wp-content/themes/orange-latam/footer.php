@@ -21,7 +21,7 @@ if ( is_home() || is_singular( 'post' ) || is_page( 'marketing-de-influencers' )
 		<div class="infl-prefooter__container">
 			<div class="infl-prefooter__col infl-prefooter__col--slogan" data-reveal="fade">
 				<h2 class="infl-prefooter__slogan">
-					<span class="infl-prefooter__slogan-white">No hacemos ruido</span><br>
+					<span class="infl-prefooter__slogan-white">No hacemos ruido</span>
 					<span class="infl-prefooter__slogan-blue">Hacemos conversiones</span>
 				</h2>
 			</div>

@@ -383,6 +383,7 @@ input, textarea, button {
 }
 
 .infl-prefooter__slogan-white {
+	display: block;
 	color: #ffffff;
 }
 

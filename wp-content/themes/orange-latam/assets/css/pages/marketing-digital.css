@@ -1151,6 +1151,10 @@
 	margin-bottom: 50px;
 }
 
+.dig-brands__title-line {
+	display: block;
+}
+
 .dig-brands__title--blue {
 	color: #2eb0e4;
 }

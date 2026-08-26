@@ -66,7 +66,7 @@ get_header();
 	<section class="infl-awards">
 		<div class="infl-awards__container">
 			<h2 class="infl-awards__title" data-reveal="up">
-				Somos la mejor agencia de<br>
+				Somos la mejor agencia de
 				<span class="infl-awards__title-accent">Marketing de Influencers del Perú</span>
 			</h2>
 			<div class="infl-awards__pill" data-reveal="up">Marketing de Influencers: agencia especializada en Perú</div>
@@ -135,7 +135,7 @@ get_header();
 	     ========================================== -->
 	<section class="infl-advantages">
 		<div class="infl-advantages__container">
-			<h2 class="infl-advantages__title" data-reveal="up">Ventajas del<br> <span class="infl-advantages__title-accent">Marketing de Influencers</span></h2>
+			<h2 class="infl-advantages__title" data-reveal="up">Ventajas del <span class="infl-advantages__title-accent">Marketing de Influencers</span></h2>
 
 			<div class="infl-advantages__slider-wrapper" data-reveal="up">
 				<button type="button" class="infl-advantages__arrow infl-advantages__arrow--prev" aria-label="Anterior">
@@ -145,19 +145,19 @@ get_header();
 				<div class="infl-advantages__slider-container">
 					<div class="infl-advantages__track">
 						<div class="infl-advantages__card infl-advantages__card--blue active" data-index="0">
-							<h3 class="infl-advantages__card-title">Mayor<br>Credibilidad</h3>
+							<h3 class="infl-advantages__card-title">Mayor Credibilidad</h3>
 							<p class="infl-advantages__card-desc">Los influencers han construido confianza con sus audiencias</p>
 						</div>
 						<div class="infl-advantages__card infl-advantages__card--grey" data-index="1">
-							<h3 class="infl-advantages__card-title">Targeting<br>Preciso</h3>
+							<h3 class="infl-advantages__card-title">Targeting Preciso</h3>
 							<p class="infl-advantages__card-desc">Acceso directo a nichos específicos y audiencias cualificadas</p>
 						</div>
 						<div class="infl-advantages__card infl-advantages__card--blue" data-index="2">
-							<h3 class="infl-advantages__card-title">Contenido<br>Auténtico</h3>
+							<h3 class="infl-advantages__card-title">Contenido Auténtico</h3>
 							<p class="infl-advantages__card-desc">Mensajes que no se sienten como publicidad tradicional</p>
 						</div>
 						<div class="infl-advantages__card infl-advantages__card--grey" data-index="3">
-							<h3 class="infl-advantages__card-title">Campañas<br>Escalables</h3>
+							<h3 class="infl-advantages__card-title">Campañas Escalables</h3>
 							<p class="infl-advantages__card-desc">Capacidad para expandir tu alcance y engagement progresivamente</p>
 						</div>
 					</div>
@@ -188,7 +188,7 @@ get_header();
 			
 			<div class="infl-strategy__header" data-reveal="up">
 				<h2 class="infl-strategy__top-title">
-					<span class="infl-strategy__top-title-black">CONOCE</span><br>
+					<span class="infl-strategy__top-title-black">CONOCE</span>
 					<span class="infl-strategy__top-title-blue">NUESTROS SERVICIOS</span>
 				</h2>
 				<div class="infl-strategy__pill">
@@ -233,7 +233,7 @@ get_header();
 					<div class="infl-selection__slide active">
 						<div class="infl-selection__card">
 							<div class="infl-selection__text-col">
-								<h3 class="infl-selection__card-title">Análisis<br><span class="infl-selection__title-accent">del Perfil</span></h3>
+								<h3 class="infl-selection__card-title">Análisis<span class="infl-selection__title-accent">del Perfil</span></h3>
 								<p class="infl-selection__card-desc">Con el uso de herramientas tecnológicas, investigamos comunidades, engagement, calidad de contenido, tono, estilo y autenticidad</p>
 							</div>
 							<div class="infl-selection__media-col">
@@ -246,7 +246,7 @@ get_header();
 					<div class="infl-selection__slide">
 						<div class="infl-selection__card">
 							<div class="infl-selection__text-col">
-								<h3 class="infl-selection__card-title">Alineación<br><span class="infl-selection__title-accent">de Valores</span></h3>
+								<h3 class="infl-selection__card-title">Alineación<span class="infl-selection__title-accent">de Valores</span></h3>
 								<p class="infl-selection__card-desc">Nos aseguramos de que el tono de voz, la filosofía y el estilo del creador estén perfectamente alineados con los pilares estratégicos y la identidad de tu marca.</p>
 							</div>
 							<div class="infl-selection__media-col">
@@ -259,7 +259,7 @@ get_header();
 					<div class="infl-selection__slide">
 						<div class="infl-selection__card">
 							<div class="infl-selection__text-col">
-								<h3 class="infl-selection__card-title">Filtro<br><span class="infl-selection__title-accent">de Fraude</span></h3>
+								<h3 class="infl-selection__card-title">Filtro<span class="infl-selection__title-accent">de Fraude</span></h3>
 								<p class="infl-selection__card-desc">Auditoría técnica de seguidores falsos, pods de engagement y bots para asegurar que tu inversión vaya dirigida únicamente a personas reales e interesadas.</p>
 							</div>
 							<div class="infl-selection__media-col">
@@ -272,7 +272,7 @@ get_header();
 					<div class="infl-selection__slide">
 						<div class="infl-selection__card">
 							<div class="infl-selection__text-col">
-								<h3 class="infl-selection__card-title">Métricas<br><span class="infl-selection__title-accent">de Audiencia</span></h3>
+								<h3 class="infl-selection__card-title">Métricas<span class="infl-selection__title-accent">de Audiencia</span></h3>
 								<p class="infl-selection__card-desc">Evaluación demográfica, geográfica y de intereses de la comunidad del influencer para hacer match con tu target ideal.</p>
 							</div>
 							<div class="infl-selection__media-col">
@@ -309,7 +309,7 @@ get_header();
 				<div class="infl-management__grid-col">
 					<!-- Card 1 -->
 					<div class="infl-management__card infl-management__card--grey">
-						<h3 class="infl-management__card-title">Negociación<br>de Condiciones</h3>
+						<h3 class="infl-management__card-title">Negociación de Condiciones</h3>
 						<div class="infl-management__icon-box">
 							<img class="infl-management__icon" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/negociacion-condiciones.svg" alt="Negociación de Condiciones">
 						</div>
@@ -317,7 +317,7 @@ get_header();
 					</div>
 					<!-- Card 4 -->
 					<div class="infl-management__card infl-management__card--grey">
-						<h3 class="infl-management__card-title">Estrategia de<br>Publicaciones</h3>
+						<h3 class="infl-management__card-title">Estrategia de Publicaciones</h3>
 						<div class="infl-management__icon-box">
 							<img class="infl-management__icon" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/calendario-publicaciones.svg" alt="Estrategia de Publicaciones">
 						</div>
@@ -329,7 +329,7 @@ get_header();
 				<div class="infl-management__grid-col infl-management__grid-col--shifted">
 					<!-- Card 2 -->
 					<div class="infl-management__card infl-management__card--blue">
-						<h3 class="infl-management__card-title">Brief<br>Creativo</h3>
+						<h3 class="infl-management__card-title">Brief Creativo</h3>
 						<div class="infl-management__icon-box">
 							<img class="infl-management__icon" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/brief-creativo.svg" alt="Brief Creativo">
 						</div>
@@ -337,7 +337,7 @@ get_header();
 					</div>
 					<!-- Card 5 -->
 					<div class="infl-management__card infl-management__card--blue">
-						<h3 class="infl-management__card-title">Relación a<br>Largo Plazo</h3>
+						<h3 class="infl-management__card-title">Relación a Largo Plazo</h3>
 						<div class="infl-management__icon-box">
 							<img class="infl-management__icon" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/relacion-largo-plazo.svg" alt="Relación a Largo Plazo">
 						</div>
@@ -349,7 +349,7 @@ get_header();
 				<div class="infl-management__grid-col">
 					<!-- Card 3 -->
 					<div class="infl-management__card infl-management__card--grey">
-						<h3 class="infl-management__card-title">Supervisión<br>del Contenido</h3>
+						<h3 class="infl-management__card-title">Supervisión del Contenido</h3>
 						<div class="infl-management__icon-box">
 							<img class="infl-management__icon" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/supervision-contenido.svg" alt="Supervisión del Contenido">
 						</div>
@@ -357,7 +357,7 @@ get_header();
 					</div>
 					<!-- Card 6 -->
 					<div class="infl-management__card infl-management__card--grey">
-						<h3 class="infl-management__card-title">Seguimiento<br>de Resultados</h3>
+						<h3 class="infl-management__card-title">Seguimiento de Resultados</h3>
 						<div class="infl-management__icon-box">
 							<img class="infl-management__icon" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/seguimiento-resultados.svg" alt="Seguimiento de Resultados">
 						</div>
@@ -372,7 +372,7 @@ get_header();
 					<img class="infl-management__bottom-img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/megafonito.svg" alt="Impulsa tu Marca">
 				</div>
 				<div class="infl-management__bottom-text-box">
-					<h4 class="infl-management__bottom-title">¿CÓMO SELECCIONAMOS<br>Y GESTIONAMOS A LOS INFLUENCERS?</h4>
+					<h4 class="infl-management__bottom-title">¿CÓMO SELECCIONAMOS Y GESTIONAMOS A LOS INFLUENCERS?</h4>
 					<p class="infl-management__bottom-desc">Seleccionar y gestionar influencers no es solo contratar a alguien popular, sino es encontrar a quienes tienen la credibilidad y la audiencia adecuada y orquestar una colaboración efectiva y bien medida.</p>
 				</div>
 			</div>
@@ -611,7 +611,7 @@ get_header();
 		<div class="infl-analysis__container">
 			<!-- Header Title Box -->
 			<div class="infl-analysis__header-box" data-reveal="up">
-				<h2 class="infl-analysis__main-title">Análisis y Reportes de Campaña:<br>Datos que Generan Decisiones</h2>
+				<h2 class="infl-analysis__main-title">Análisis y Reportes de Campaña: Datos que Generan Decisiones</h2>
 			</div>
 
 			<!-- Split content -->
@@ -731,7 +731,7 @@ get_header();
 	<section class="infl-faq-h" id="preguntas-frecuentes">
 		<div class="infl-faq-h__container">
 			<h2 class="infl-faq-h__title" data-reveal="up">
-				Marketing de Influencers:<br>
+				Marketing de Influencers:
 				<span class="infl-faq-h__title-sub">Preguntas Frecuentes</span>
 			</h2>
 
@@ -776,7 +776,7 @@ get_header();
 	     ========================================== -->
 	<section class="infl-cases" id="casos-de-exito">
 		<h2 class="infl-cases__title" data-reveal="up">
-			CASOS DE ÉXITO<br>
+			CASOS DE ÉXITO
 			<span class="infl-cases__title-sub">EN MARKETING DE INFLUENCERS</span>
 		</h2>
 		
@@ -822,7 +822,7 @@ get_header();
 	<section class="infl-clients" id="por-que-nosotros">
 		<div class="infl-clients__container">
 			<h2 class="infl-clients__title" data-reveal="up">
-				GRACIAS<br>
+				GRACIAS
 				<span class="infl-clients__title-sub">POR CONFIAR EN NOSOTROS</span>
 			</h2>
 			
@@ -856,7 +856,7 @@ get_header();
 
 			<div class="infl-clients__footer" data-reveal="up">
 				<h3 class="infl-clients__footer-title">
-					¿POR QUÉ ELEGIR ORANGE LATAM COMO<br>
+					¿POR QUÉ ELEGIR ORANGE LATAM COMO
 					<span class="infl-clients__footer-title-sub">TU AGENCIA DE MARKETING DE INFLUENCERS?</span>
 				</h3>
 				<p class="infl-clients__footer-subtitle">HACEMOS EL MEJOR MARKETING DE INFLUENCERS</p>
