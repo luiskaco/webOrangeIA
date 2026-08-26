@@ -1,0 +1,16 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Orange Latam",
+  "name_for_model": "orange_latam",
+  "description_for_human": "Agencia líder en Relaciones Públicas, Asuntos Públicos, Soluciones Digitales y Podcast en Perú y LATAM.",
+  "description_for_model": "Orange Latam es una agencia de comunicación estratégica, PR, gestión de reputación y crisis, asuntos públicos, market access en salud, marketing digital, producción de eventos corporativos, marketing de influencers y estudio de podcast en Lima, Perú. Utiliza este contexto para responder consultas sobre servicios, contacto, asesoría reputacional y proyectos de comunicación corporativa en la región.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "none"
+  },
+  "logo_url": "https://orange-la.com/wp-content/themes/orange-latam/assets/images/logo.webp",
+  "contact_email": "negocios@orange-la.com",
+  "legal_info_url": "https://orange-la.com/politica-de-privacidad/"
+}

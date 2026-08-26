@@ -1,0 +1,78 @@
+# Robots.txt — Orange Latam (https://orange-la.com)
+
+# Default crawler rules
+User-agent: *
+Disallow: /wp-admin/
+Allow: /wp-admin/admin-ajax.php
+Disallow: /wp-includes/
+Disallow: /wp-content/plugins/
+Disallow: /trackback/
+Disallow: /feed/
+Disallow: /comments/
+Disallow: /*?*
+Disallow: /*?
+Allow: /wp-content/themes/orange-latam/assets/
+Allow: /wp-content/uploads/
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+# Explicit allowances for AI Crawlers & LLMs (Agentic SEO / GEO)
+User-agent: GPTBot
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: ChatGPT-User
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: ClaudeBot
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: Claude-Web
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: anthropic-ai
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: PerplexityBot
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: Google-Extended
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: Applebot-Extended
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: cohere-ai
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: DuckAssistBot
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: Bytespider
+Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+# Sitemaps and AI manifests
+Sitemap: https://orange-la.com/wp-sitemap.xml
+Sitemap: https://orange-la.com/sitemap_index.xml
+LLMs-Txt: https://orange-la.com/llms.txt

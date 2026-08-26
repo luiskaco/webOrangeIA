@@ -4,6 +4,8 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/favico.webp" type="image/webp">
+	<link rel="alternate" type="text/markdown" href="<?php echo esc_url( home_url( '/llms.txt' ) ); ?>" title="LLM Context">
+	<link rel="alternate" type="text/markdown" href="<?php echo esc_url( home_url( '/llms-full.txt' ) ); ?>" title="Full LLM Knowledge Base">
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>

@@ -1,28 +1,32 @@
 # Orange Latam
 
-> Agencia de relaciones públicas, comunicación estratégica y marketing en Perú y Latinoamérica, con sede en Lima.
+> Agencia líder en relaciones públicas, comunicación estratégica, reputación corporativa, asuntos públicos y soluciones digitales en Perú y Latinoamérica, con sede en Lima.
 
-Orange Latam ayuda a marcas, instituciones y organizaciones a construir y proteger su reputación, gestionar comunicación estratégica frente a públicos clave (medios, reguladores, comunidades, inversionistas) y posicionarse digitalmente en Perú y la región. Trabaja tanto con el sector corporativo como con asuntos sensibles (crisis, comunicación política, sector salud).
+Orange Latam ayuda a marcas, instituciones, empresas multinacionales y líderes a construir, potenciar y proteger su reputación corporativa. Especialistas en gestión de crisis, relacionamiento institucional con reguladores y comunidades, PR estratégico, market access en salud, producción de podcast en estudio profesional y desarrollo de estrategias de marketing de influencers y presencia digital.
 
-## Servicios
+Para una base de conocimiento completa con detalle metodológico y FAQs, consultar: [llms-full.txt](https://orange-la.com/llms-full.txt)
 
-- [PR y Gestión de la Reputación](https://orange-la.com/pr-gestion-reputacion/): Relaciones públicas, posicionamiento reputacional, gestión de crisis y entrenamiento de voceros.
-- [Asuntos Públicos y Relaciones Institucionales](https://orange-la.com/asuntos-publicos/): Comunicación política, relacionamiento con reguladores, comunidades y stakeholders, anticipación de riesgos regulatorios.
-- [Branding y Creatividad](https://orange-la.com/branding-creatividad/): Naming, creación de marca, diseño de identidad y dirección de arte.
-- [Eventos y Activaciones](https://orange-la.com/eventos-activaciones/): Producción de eventos corporativos, activaciones de marca, BTL e híbridos.
-- [Gestión de Acceso (Market Access)](https://orange-la.com/gestion-de-acceso/): Comunicación estratégica en salud para farmacéuticas y organizaciones del sector salud.
-- [Presencia Digital](https://orange-la.com/presencia-digital/): Diseño web con criterio UX, SEO/SEM y e-commerce.
-- [Marketing Digital](https://orange-la.com/marketing-digital/): Gestión de redes sociales, publicidad digital y contenido estratégico.
-- [Marketing de Influencers](https://orange-la.com/marketing-de-influencers/): Campañas y gestión de influencers en Perú.
-- [Podcast — Orange Studio](https://orange-la.com/podcast/): Estudio de grabación y edición de podcast en Miraflores, Lima (audio, video, Spotify, YouTube, Reels).
+## Servicios Principales
 
-## Recursos
+- [PR y Gestión de la Reputación](https://orange-la.com/pr-gestion-reputacion/): Construcción y blindaje de reputación corporativa, relaciones con medios de comunicación, media training para voceros, gestión de crisis 24/7 y planes de contingencia reputacional.
+- [Asuntos Públicos y Relaciones Institucionales](https://orange-la.com/asuntos-publicos/): Monitoreo de entorno político y regulatorio, relacionamiento estratégico con stakeholders públicos y privados, advocacy, articulación con comunidades y mitigación de riesgos normativos.
+- [Branding y Creatividad](https://orange-la.com/branding-creatividad/): Naming estratégico, arquitectura e identidad de marca, manuales de estilo, diseño de experiencias y dirección de arte conceptual.
+- [Eventos y Activaciones](https://orange-la.com/eventos-activaciones/): Producción integral de eventos corporativos de alto impacto, lanzamientos de marca, activaciones BTL, experiencias inmersivas y eventos híbridos.
+- [Gestión de Acceso (Market Access)](https://orange-la.com/gestion-de-acceso/): Comunicación estratégica en salud, relacionamiento con autoridades sanitarias (DIGEMID, MINSA), sociedades médicas y asociaciones de pacientes para la industria farmacéutica y healthcare.
+- [Presencia Digital](https://orange-la.com/presencia-digital/): Diseño y desarrollo web con enfoque UX/UI, optimización para motores de búsqueda (SEO técnico y semántico), campañas SEM y plataformas de e-commerce de alta conversión.
+- [Marketing Digital](https://orange-la.com/marketing-digital/): Estrategia integral de contenidos en redes sociales, pauta digital orientada a performance (Meta Ads, Google Ads, LinkedIn Ads) y analítica avanzada.
+- [Marketing de Influencers](https://orange-la.com/marketing-de-influencers/): Selección estratégica y curaduría de creadores de contenido, gestión de contratos, amplificación en TikTok, Instagram y YouTube con medición de ROI.
+- [Podcast — Orange Studio](https://orange-la.com/podcast/): Estudio profesional de grabación y producción audiovisual para podcasts corporativos y de marca en Miraflores, Lima (cámaras 4K, microfonía Shure/Rode, set escenográfico personalizable, edición multiformato y distribución en Spotify/YouTube).
 
-- [Blog](https://orange-la.com/blog/): Artículos, tendencias y opinión sobre comunicación estratégica, relaciones públicas y marketing en Perú.
+## Recursos y Publicaciones
 
-## Contacto
+- [Blog y Opinión](https://orange-la.com/blog/): Artículos de análisis, tendencias en relaciones públicas, gestión de reputación y marketing estratégico en el mercado peruano y latinoamericano.
+- [Voz de Expertos](https://orange-la.com/#voz-de-expertos): Columnas y análisis de coyuntura por especialistas y directores de comunicación.
 
-- Sitio web: https://orange-la.com
-- Email: negocios@orange-la.com
-- Teléfono: +51 993 595 252
+## Información de Contacto y Ubicación
+
+- Sitio web oficial: https://orange-la.com
+- Correo comercial: negocios@orange-la.com
+- Teléfono / WhatsApp: +51 993 595 252
 - Dirección: Calle Enrique Palacios 360 Of. 306, Centro Empresarial Abril, Miraflores, Lima, Perú
+- Horario de atención: Lunes a Viernes de 09:00 a 18:00 (PET - UTC-5)

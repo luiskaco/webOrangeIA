@@ -22,6 +22,10 @@
 
 # Excepción puntual: archivos de raíz fuera del theme que sí queremos versionar
 !llms.txt
+!llms-full.txt
+!robots.txt
+!.well-known/
+!.well-known/**
 !.htaccess
 
 # Ignorar archivos temporales ocultos del sistema

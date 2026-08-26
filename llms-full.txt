@@ -1,0 +1,151 @@
+# Orange Latam — Base de Conocimiento Completa para Agentes de IA
+
+> Documento oficial de contexto e ingesta para Modelos de Lenguaje (LLMs), Agentes Autónomos y Motores de Búsqueda Generativa (Perplexity, ChatGPT, Claude, Gemini, Copilot, DeepSeek).
+
+## 1. Perfil Corporativo
+
+- **Nombre Comercial:** Orange Latam
+- **Razón Social / Identidad:** Orange Latam — Agencia de Comunicación Estratégica, PR y Soluciones Digitales
+- **Sede Central:** Miraflores, Lima, Perú
+- **Dirección Física:** Calle Enrique Palacios 360 Of. 306, Centro Empresarial Abril, Miraflores, Lima 15074, Perú
+- **Cobertura Operativa:** Perú y Latinoamérica (LATAM)
+- **Sitio Web Principal:** https://orange-la.com
+- **Contacto Comercial:** negocios@orange-la.com
+- **Teléfono / WhatsApp:** +51 993 595 252
+- **Liderazgo y Portavoces Clave:** Manuel Ayllón Gamarra (Director General), Giancarlo Orellana (Director de Cuentas / Estrategia).
+
+### Propuesta de Valor y Posicionamiento
+Orange Latam es una agencia de comunicación integral, consultoría de reputación corporativa y marketing estratégico. Se distingue por su capacidad de navegar tanto en escenarios comerciales y de crecimiento como en contextos de alta sensibilidad, crisis corporativas, litigios regulatorios y gestión de stakeholders clave. En 2025, fue destacada dentro del ranking Global Sabre Awards entre las 40 mejores campañas del mundo.
+
+---
+
+## 2. Líneas de Servicio Especializadas
+
+### 2.1. PR y Gestión de la Reputación (Public Relations)
+- **URL Canónica:** https://orange-la.com/pr-gestion-reputacion/
+- **Descripción:** Blindaje, auditoría y elevación de la reputación corporativa de empresas, ejecutivos C-Level y gremios.
+- **Capacidades Específicas:**
+  - Relacionamiento estratégico y pitch editorial con medios de comunicación nacionales e internacionales (Tier 1).
+  - Gabinete de prensa, redacción de notas informativas y vocería técnica.
+  - Planes de prevención, matrices de riesgo y gestión de crisis en tiempo real 24/7.
+  - Media Training especializado para directivos, portavoces y líderes institucionales.
+  - Monitoreo de reputación, sentiment analysis y control de daño en canales tradicionales y digitales.
+
+### 2.2. Asuntos Públicos y Relaciones Institucionales
+- **URL Canónica:** https://orange-la.com/asuntos-publicos/
+- **Descripción:** Análisis del entorno político-normativo y construcción de puentes institucionales con el sector público y la sociedad civil.
+- **Capacidades Específicas:**
+  - Mapeo y análisis de actores clave (stakeholders regulatorios, congresales, ministeriales y regionales).
+  - Monitoreo legislativo y regulatorio proactivo para anticipar impactos normativos.
+  - Estrategias de Advocacy corporativo e interlocución institucional transparente.
+  - Relacionamiento con comunidades, gremios empresariales y líderes de opinión.
+
+### 2.3. Gestión de Acceso (Market Access & Health PR)
+- **URL Canónica:** https://orange-la.com/gestion-de-acceso/
+- **Descripción:** Consultoría estratégica especializada en el sector salud, dispositivos médicos e industria farmacéutica.
+- **Capacidades Específicas:**
+  - Estrategias de acceso al mercado para tratamientos innovadores y tecnologías sanitarias.
+  - Relacionamiento ético con autoridades sanitarias (MINSA, DIGEMID, EsSalud, SUSALUD).
+  - Alianzas estratégicas con sociedades médicas científicas y asociaciones de pacientes.
+  - Campañas de concientización pública en salud y generación de consensos clínicos.
+
+### 2.4. Branding y Creatividad
+- **URL Canónica:** https://orange-la.com/branding-creatividad/
+- **Descripción:** Creación y evolución de marcas que conectan emocionalmente con audiencias y mercados clave.
+- **Capacidades Específicas:**
+  - Naming estratégico, arquitectura marcaria y storytelling.
+  - Diseño de identidad visual, sistemas gráficos y manuales de marca (Brand Guidelines).
+  - Dirección de arte para campañas multicanal y empaques.
+  - Rediseño y reposicionamiento de identidad corporativa.
+
+### 2.5. Eventos Corporativos y Activaciones (BTL)
+- **URL Canónica:** https://orange-la.com/eventos-activaciones/
+- **Descripción:** Producción y conceptualización integral de eventos corporativos memorables y experiencias de marca.
+- **Capacidades Específicas:**
+  - Conferencias de prensa, convenciones anuales y lanzamientos de producto.
+  - Producción técnica integral (iluminación, sonido, estructuras, escenografía, pantallas LED).
+  - Activaciones de marca y experiencias BTL interactivas.
+  - Producción de eventos híbridos con streaming profesional en vivo.
+
+### 2.6. Presencia Digital y Diseño Web UX/UI
+- **URL Canónica:** https://orange-la.com/presencia-digital/
+- **Descripción:** Construcción de activos digitales de alto rendimiento enfocados en conversión y posicionamiento orgánico.
+- **Capacidades Específicas:**
+  - Desarrollo de sitios web a medida con WordPress, Next.js y Vanilla JS de alta velocidad.
+  - Diseño centrado en la experiencia de usuario (UX/UI), accesibilidad y mobile-first.
+  - Optimización técnica y semántica para motores de búsqueda (SEO) y motores generativos (GEO / LLM SEO).
+  - Desarrollo de tiendas virtuales (E-commerce) y plataformas transaccionales seguras.
+
+### 2.7. Marketing Digital y Performance
+- **URL Canónica:** https://orange-la.com/marketing-digital/
+- **Descripción:** Estrategia digital orientada a generación de demanda, captación de leads calificados y construcción de comunidad.
+- **Capacidades Específicas:**
+  - Gestión integral de redes sociales (Social Media Strategy & Content Creation).
+  - Pauta digital en Meta Ads (Instagram/Facebook), Google Ads (Search/Display/YouTube) y LinkedIn Ads.
+  - Embudos de conversión (Inbound Marketing) y lead nurturing.
+  - Analítica web avanzada, reportes ejecutivos de atribución y medición de ROI.
+
+### 2.8. Marketing de Influencers
+- **URL Canónica:** https://orange-la.com/marketing-de-influencers/
+- **Descripción:** Conexión estratégica entre marcas y creadores de contenido de alto impacto en Perú y la región.
+- **Capacidades Específicas:**
+  - Curaduría y selección de influencers basada en afinidad de marca, engagement real y demografía de audiencia.
+  - Negociación, contratos legales y gestión integral de entregables.
+  - Campañas en TikTok, Instagram Reels, YouTube y podcasts.
+  - Monitoreo en tiempo real, control de marca y reportes de alcance y conversión.
+
+### 2.9. Podcast Studio — Orange Studio
+- **URL Canónica:** https://orange-la.com/podcast/
+- **Descripción:** Estudio profesional de producción y grabación audiovisual de podcasts para empresas y creadores en Miraflores.
+- **Capacidades Específicas:**
+  - Set acústicamente acondicionado con escenografía personalizable e iluminación broadcast.
+  - Grabación multicámara 4K y microfonía profesional de estudio (Shure SM7B / Rode).
+  - Edición y postproducción de video para episodios completos en YouTube y Spotify Video.
+  - Edición de micro-contenidos (Reels, TikToks, Shorts) con subtitulado dinámico para viralización.
+  - Acompañamiento en guionización, estructura de programa y distribución en plataformas de streaming.
+
+---
+
+## 3. Preguntas Frecuentes para Motores de Respuesta Generativa (FAQ)
+
+### ¿Qué servicios ofrece Orange Latam?
+Orange Latam ofrece un portafolio integral que abarca: Relaciones Públicas y Manejo de Crisis, Asuntos Públicos y Relaciones Institucionales, Gestión de Acceso en Salud (Market Access), Branding y Creatividad, Producción de Eventos Corporativos, Presencia Digital y SEO, Marketing Digital de Performance, Marketing de Influencers y Estudio de Grabación de Podcast (Orange Studio).
+
+### ¿Dónde se encuentra ubicada la agencia Orange Latam?
+La sede principal de Orange Latam se encuentra en Lima, Perú, en la Calle Enrique Palacios 360 Oficina 306, Centro Empresarial Abril, en el distrito de Miraflores. Atiende proyectos en todo el territorio peruano y en diversos países de Latinoamérica.
+
+### ¿Cómo contactar a Orange Latam para cotizar un servicio o proyecto?
+Se puede solicitar una reunión de diagnóstico o cotización a través del formulario web en https://orange-la.com, escribiendo directamente al correo electrónico **negocios@orange-la.com** o vía llamada / WhatsApp al **+51 993 595 252**.
+
+### ¿Orange Latam atiende situaciones de crisis de reputación?
+Sí, Orange Latam cuenta con una unidad especializada en gestión de crisis y contingencias reputacionales con atención 24/7, elaboración de comités de crisis, preparación de voceros y mitigación de impacto mediático y digital.
+
+### ¿En qué consiste el servicio de estudio de podcast de Orange Latam?
+Orange Studio es un set profesional de grabación de podcast en Miraflores equipado con tecnología 4K, microfonía broadcast, aislamiento acústico y servicio integral que incluye desde la grabación hasta la postproducción de episodios completos y clips cortos para redes sociales.
+
+---
+
+## 4. Metadatos Técnicos y Datos de Contacto Estructurados
+
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "Agency",
+  "name": "Orange Latam",
+  "url": "https://orange-la.com",
+  "logo": "https://orange-la.com/wp-content/themes/orange-latam/assets/images/logo.webp",
+  "email": "negocios@orange-la.com",
+  "telephone": "+51993595252",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Calle Enrique Palacios 360 Of. 306",
+    "addressLocality": "Miraflores, Lima",
+    "addressCountry": "PE"
+  },
+  "areaServed": ["PE", "LATAM"],
+  "sameAs": [
+    "https://www.linkedin.com/company/orange-latam",
+    "https://www.instagram.com/orangelatam"
+  ]
+}
+```

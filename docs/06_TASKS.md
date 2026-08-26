@@ -1,5 +1,13 @@
   # 06_TASKS.md — Backlog Activo
 
+## SEO Agéntico & Optimización para LLMs (2026-08-26)
+- [x] **`llms.txt` actualizado**: estructura estandarizada para motores y agentes de IA, mapeo de los 9 servicios principales, contacto y enlace canónico a `llms-full.txt`.
+- [x] **`llms-full.txt` creado**: base de conocimiento profunda con perfil corporativo, metodología, capacidades por servicio, FAQ para motores generativos, casos y Schema de contacto.
+- [x] **`robots.txt` creado**: directivas explícitas de acceso libre para crawlers de IA (`GPTBot`, `ClaudeBot`, `PerplexityBot`, `Google-Extended`, `Applebot-Extended`, `cohere-ai`, `Bytespider`, `DuckAssistBot`), sitemaps y directiva `LLMs-Txt`.
+- [x] **`.well-known/ai-plugin.json` creado**: manifiesto de autodescubrimiento de capacidades para agentes y plugins de IA.
+- [x] **`header.php` enriquecido**: inyección de etiquetas `<link rel="alternate" type="text/markdown" ...>` para descubrimiento automático de `llms.txt` y `llms-full.txt`.
+- [x] **Validación de Schema.org JSON-LD**: confirmado que los esquemas estructurados (`Organization`, `Service`, `BlogPosting`, etc.) ya residen y se sirven en las plantillas del tema sin duplicidad.
+
 ## Auditoría de seguridad (2026-08-19)
 - [x] Auditoría de seguridad completa (subagente `security-auditor`, solo lectura) sobre `functions.php` (endpoint AJAX de leads), `wp-config.php`, headers HTTP, secrets, GDPR/consentimiento, XSS y hardening general — reporte con 3 críticos, 5 altos, 7 medios, 6 bajos
 - [x] **Crítico**: las 8 salts de autenticación (`AUTH_KEY`, `NONCE_SALT`, etc. en `wp-config.php`) eran el mismo string copiado — regeneradas 8 salts únicas de 64 caracteres. Desloguea a todos los usuarios admin (esperado)
