@@ -12,32 +12,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 get_header();
 ?>
 
-<!-- SEO Structured Data (JSON-LD Organization Schema) -->
-<script type="application/ld+json">
-{
-	"@context": "https://schema.org",
-	"@type": "Organization",
-	"name": "Orange Latam",
-	"alternateName": "Orange LATAM Agencia de PR y Comunicación",
-	"url": "<?php echo esc_url( home_url( '/' ) ); ?>",
-	"logo": "<?php echo esc_url( get_template_directory_uri() . '/assets/images/logo.webp' ); ?>",
-	"description": "Agencia líder en relaciones públicas, reputación corporativa, marketing de influencers y soluciones digitales en Perú y Latinoamérica.",
-	"address": {
-		"@type": "PostalAddress",
-		"streetAddress": "Calle Enrique Palacios 360 Of. 306, Miraflores",
-		"addressLocality": "Lima",
-		"addressCountry": "PE"
-	},
-	"contactPoint": {
-		"@type": "ContactPoint",
-		"telephone": "+51-993-595-232",
-		"contactType": "customer service",
-		"email": "negocios@orange-la.com",
-		"areaServed": ["PE", "LATAM"]
-	}
-}
-</script>
-
 <main>
 	<!-- ==========================================
 	     1. HERO SLIDER SECTION

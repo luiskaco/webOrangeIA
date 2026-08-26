@@ -336,19 +336,38 @@ document.addEventListener( 'DOMContentLoaded', () => {
 
 		if ( ! burger || ! nav ) return;
 
+		const updateNavState = ( isOpen ) => {
+			burger.setAttribute( 'aria-expanded', isOpen ? 'true' : 'false' );
+			if ( window.innerWidth <= 768 ) {
+				if ( isOpen ) {
+					nav.removeAttribute( 'inert' );
+					nav.removeAttribute( 'aria-hidden' );
+				} else {
+					nav.setAttribute( 'inert', '' );
+					nav.removeAttribute( 'aria-hidden' );
+				}
+			} else {
+				nav.removeAttribute( 'inert' );
+				nav.removeAttribute( 'aria-hidden' );
+			}
+		};
+
 		const closeNav = () => {
-			burger.setAttribute( 'aria-expanded', 'false' );
+			updateNavState( false );
 			nav.classList.remove( 'header__nav--open' );
 			if ( overlay ) overlay.classList.remove( 'header__overlay--visible' );
 			document.body.classList.remove( 'header-nav-open' );
 		};
 
 		const openNav = () => {
-			burger.setAttribute( 'aria-expanded', 'true' );
+			updateNavState( true );
 			nav.classList.add( 'header__nav--open' );
 			if ( overlay ) overlay.classList.add( 'header__overlay--visible' );
 			document.body.classList.add( 'header-nav-open' );
 		};
+
+		// Estado inicial
+		updateNavState( false );
 
 		burger.addEventListener( 'click', () => {
 			const isOpen = burger.getAttribute( 'aria-expanded' ) === 'true';
@@ -368,7 +387,13 @@ document.addEventListener( 'DOMContentLoaded', () => {
 		} );
 
 		window.addEventListener( 'resize', () => {
-			if ( window.innerWidth > 768 ) closeNav();
+			if ( window.innerWidth > 768 ) {
+				closeNav();
+				nav.removeAttribute( 'inert' );
+				nav.removeAttribute( 'aria-hidden' );
+			} else {
+				updateNavState( burger.getAttribute( 'aria-expanded' ) === 'true' );
+			}
 		} );
 	};
 
@@ -727,6 +752,12 @@ document.addEventListener( 'DOMContentLoaded', () => {
 			return embedUrl;
 		};
 
+		const closeModal = () => {
+			modal.classList.remove( 'is-active' );
+			modal.setAttribute( 'aria-hidden', 'true' );
+			iframe.src = '';
+		};
+
 		triggers.forEach( ( trigger ) => {
 			trigger.addEventListener( 'click', ( e ) => {
 				e.preventDefault();
@@ -734,22 +765,19 @@ document.addEventListener( 'DOMContentLoaded', () => {
 				if ( videoUrl ) {
 					iframe.src = getEmbedUrl( videoUrl );
 					modal.classList.add( 'is-active' );
+					modal.setAttribute( 'aria-hidden', 'false' );
 				}
 			} );
 		} );
 
 		closeBtns.forEach( ( btn ) => {
-			btn.addEventListener( 'click', () => {
-				modal.classList.remove( 'is-active' );
-				iframe.src = '';
-			} );
+			btn.addEventListener( 'click', closeModal );
 		} );
 
 		// Cierra el modal con la tecla ESC
 		document.addEventListener( 'keydown', ( e ) => {
 			if ( e.key === 'Escape' && modal.classList.contains( 'is-active' ) ) {
-				modal.classList.remove( 'is-active' );
-				iframe.src = '';
+				closeModal();
 			}
 		} );
 	};

@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 // ==========================================
 // 1. CONSTANTS
 // ==========================================
-define( 'ORANGE_THEME_VERSION', '1.0.8' );
+define( 'ORANGE_THEME_VERSION', '1.1.1' );
 define( 'ORANGE_THEME_DIR', get_template_directory() );
 define( 'ORANGE_THEME_URI', get_template_directory_uri() );
 
@@ -109,13 +109,13 @@ function orange_latam_security_headers() {
 	}
 
 	$csp = "default-src 'self'; "
-		. "script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; "
+		. "script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://www.googletagmanager.com https://www.google-analytics.com; "
 		. "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; "
 		. "font-src 'self' https://fonts.gstatic.com data:; "
 		. "img-src 'self' data: https:; "
 		. "media-src 'self'; "
 		. "frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com; "
-		. "connect-src 'self'; "
+		. "connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://analytics.google.com https://www.googletagmanager.com https://region1.google-analytics.com; "
 		. "worker-src 'self' blob:; "
 		. "object-src 'none'; "
 		. "base-uri 'self'; "
@@ -470,6 +470,7 @@ function orange_send_service_contact_handler() {
 // ==========================================
 require_once ORANGE_THEME_DIR . '/inc/class-theme-setup.php';
 require_once ORANGE_THEME_DIR . '/inc/class-leads-manager.php';
+require_once ORANGE_THEME_DIR . '/inc/seo.php';
 
 // ==========================================
 // TEMPORAL — DEMO INTERNA DE SEO (desactivado)

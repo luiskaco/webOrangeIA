@@ -64,7 +64,7 @@ if ( is_home() || is_singular( 'post' ) || is_page( 'marketing-de-influencers' )
 <?php endif; ?>
 
 <!-- GLOBAL SERVICE CONTACT MODAL -->
-<div id="global-contact-modal" class="g-modal" aria-hidden="true" role="dialog" aria-labelledby="g-modal-title">
+<div id="global-contact-modal" class="g-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="g-modal-title">
 	<div class="g-modal__overlay" tabindex="-1" data-close-modal></div>
 	<div class="g-modal__dialog">
 		<button type="button" class="g-modal__close" aria-label="Cerrar modal" data-close-modal>&times;</button>

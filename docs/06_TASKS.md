@@ -1,12 +1,19 @@
   # 06_TASKS.md — Backlog Activo
 
-## SEO Agéntico & Optimización para LLMs (2026-08-26)
-- [x] **`llms.txt` actualizado**: estructura estandarizada para motores y agentes de IA, mapeo de los 9 servicios principales, contacto y enlace canónico a `llms-full.txt`.
-- [x] **`llms-full.txt` creado**: base de conocimiento profunda con perfil corporativo, metodología, capacidades por servicio, FAQ para motores generativos, casos y Schema de contacto.
-- [x] **`robots.txt` creado**: directivas explícitas de acceso libre para crawlers de IA (`GPTBot`, `ClaudeBot`, `PerplexityBot`, `Google-Extended`, `Applebot-Extended`, `cohere-ai`, `Bytespider`, `DuckAssistBot`), sitemaps y directiva `LLMs-Txt`.
-- [x] **`.well-known/ai-plugin.json` creado**: manifiesto de autodescubrimiento de capacidades para agentes y plugins de IA.
-- [x] **`header.php` enriquecido**: inyección de etiquetas `<link rel="alternate" type="text/markdown" ...>` para descubrimiento automático de `llms.txt` y `llms-full.txt`.
-- [x] **Validación de Schema.org JSON-LD**: confirmado que los esquemas estructurados (`Organization`, `Service`, `BlogPosting`, etc.) ya residen y se sirven en las plantillas del tema sin duplicidad.
+## SEO Agéntico, GEO y Accesibilidad del Árbol de Agentes (2026-08-26)
+- [x] **Accesibilidad en Formularios**: correspondencia estricta de `<label for="...">` con `id="..."` en todos los inputs de `footer.php`, `index.php` y `page-podcast.php`.
+- [x] **Filtro Contact Form 7 (`wpcf7_form_elements`)**: inyección automática de atributos `id` y `aria-label` descriptivos a todos los `<input>`, `<textarea>` y `<select>` en `inc/seo.php`.
+- [x] **Árbol de Accesibilidad (Accessibility Tree)**:
+  - Sincronización dinámica de `aria-expanded` en `.header__burger` y `aria-hidden` en `#header-nav` (`header.php` y `main.js`).
+  - Atributos `role="dialog"`, `aria-modal="true"`, `aria-label` y `title` en iframes en modales (`page-marketing-de-influencers.php`, `page-podcast.php`, `page-presencia-digital.php` y `footer.php`).
+- [x] **Archivos Estándar de Entrada**:
+  - `llms.txt`, `llms-full.txt` y `robots.txt` actualizados y con directiva `LLMs-Txt: https://orange-la.com/llms.txt`.
+  - `.well-known/ai-plugin.json` configurado.
+  - `.well-known/security.txt` creado bajo estándar RFC 9116.
+  - Inyección en `<head>` de `<link rel="alternate" type="text/markdown">` hacia `llms.txt` y `llms-full.txt`.
+- [x] **Schema JSON-LD Enriquecido (SEO / GEO)**:
+  - Módulo `inc/seo.php` conectado a `functions.php` que genera Schema `@graph` con `Organization` / `LocalBusiness` (coordenadas `geo`, `hasMap`, `priceRange`, `openingHoursSpecification`, `sameAs`), catálogo completo de 9 servicios `hasOfferCatalog` y bloque `FAQPage` para IA generativa.
+  - Eliminado bloque estático redundante de `index.php`.
 
 ## Auditoría de seguridad (2026-08-19)
 - [x] Auditoría de seguridad completa (subagente `security-auditor`, solo lectura) sobre `functions.php` (endpoint AJAX de leads), `wp-config.php`, headers HTTP, secrets, GDPR/consentimiento, XSS y hardening general — reporte con 3 críticos, 5 altos, 7 medios, 6 bajos

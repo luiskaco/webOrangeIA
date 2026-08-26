@@ -398,14 +398,14 @@ $podcast_img_uri = $theme_uri . '/assets/images/podcast';
 	<!-- ==========================================
 	     8. PODCAST SCENARIO MODAL
 	     ========================================== -->
-	<div class="podcast-modal js-podcast-modal" aria-hidden="true" role="dialog">
+	<div class="podcast-modal js-podcast-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="podcast-modal-title">
 		<div class="podcast-modal__overlay js-podcast-modal-close"></div>
 		<div class="podcast-modal__card">
 			<button class="podcast-modal__close js-podcast-modal-close" aria-label="Cerrar modal">&times;</button>
 			<div class="podcast-modal__bg js-podcast-modal-bg"></div>
 			<div class="podcast-modal__vignette"></div>
 			<div class="podcast-modal__content">
-				<h3 class="podcast-modal__title js-podcast-modal-title"></h3>
+				<h3 class="podcast-modal__title js-podcast-modal-title" id="podcast-modal-title"></h3>
 				<p class="podcast-modal__desc js-podcast-modal-desc"></p>
 			</div>
 		</div>

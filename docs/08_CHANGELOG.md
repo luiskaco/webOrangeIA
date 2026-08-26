@@ -1,5 +1,26 @@
 # 08_CHANGELOG.md — Historial de Versiones
 
+## [1.1.1] - 2026-08-26
+### Corregido (Accesibilidad WCAG / Lighthouse)
+- **Fix `aria-hidden-focus` en Menú Móvil**:
+  - Aplicado `visibility: hidden` en el estado cerrado del menú móvil en `base.css` (`visibility: visible` al abrir) y atributo `inert` en `main.js`.
+  - Eliminado `aria-hidden="true"` redundante del contenedor `#header-nav` que contenía enlaces interactivos focusables, cumpliendo con la regla WCAG 4.1.2 y la auditoría de Lighthouse Agentic Browsing.
+
+## [1.1.0] - 2026-08-26
+### Añadido y Optimizado (Accesibilidad del Árbol de Agentes & GEO)
+- **Accesibilidad en Formularios y CF7**:
+  - Asociación estricta de `<label for="...">` con `id="..."` en todos los campos de formularios (`footer.php`, `index.php`, `page-podcast.php`).
+  - Creación del filtro `orange_latam_cf7_accessibility_filter` sobre `wpcf7_form_elements` en `inc/seo.php` para inyectar automáticamente identificadores `id` y descripciones `aria-label` en campos de Contact Form 7.
+- **Árbol de Accesibilidad (Accessibility Tree)**:
+  - Sincronización dinámica de `aria-expanded` y `aria-hidden` en el menú hamburguesa móvil (`main.js` y `header.php`).
+  - Incorporación de `role="dialog"`, `aria-modal="true"`, `aria-labelledby`/`aria-label` y `title` en iframes en todos los modales de la web (`page-marketing-de-influencers.php`, `page-podcast.php`, `page-presencia-digital.php` y `footer.php`).
+- **Schema JSON-LD Enriquecido (SEO / GEO)**:
+  - Módulo `inc/seo.php` conectado en `functions.php` con Schema `@graph` unificado: `Organization` & `LocalBusiness` (coordenadas `geo`, `hasMap`, `priceRange`, `openingHoursSpecification`, `sameAs`), catálogo completo de los 9 servicios (`hasOfferCatalog`) y bloque `FAQPage` para motores de búsqueda generativa.
+  - Eliminado bloque estático redundante en `index.php`.
+- **Archivos Estándar de Entrada**:
+  - Creado `.well-known/security.txt` bajo el estándar RFC 9116.
+  - Consistencia de `llms.txt`, `llms-full.txt`, `.well-known/ai-plugin.json` y `robots.txt`.
+
 ## [1.0.8] - 2026-08-26
 ### Añadido y Optimizado (SEO Agéntico & GEO)
 - **Archivos para motores y agentes de IA (`llms.txt`, `llms-full.txt`, `.well-known/ai-plugin.json`)**:

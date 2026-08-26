@@ -926,12 +926,12 @@ get_header();
 	<!-- ==========================================
 	     VIDEO MODAL (CASOS DE ÉXITO)
 	     ========================================== -->
-	<div class="video-modal js-video-modal">
+	<div class="video-modal js-video-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Reproductor de video de caso de éxito">
 		<div class="video-modal__overlay js-video-modal-close"></div>
 		<div class="video-modal__content">
-			<button class="video-modal__close js-video-modal-close" aria-label="Cerrar">&times;</button>
+			<button class="video-modal__close js-video-modal-close" aria-label="Cerrar modal">&times;</button>
 			<div class="video-modal__iframe-wrapper">
-				<iframe class="video-modal__iframe js-video-modal-iframe" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<iframe class="video-modal__iframe js-video-modal-iframe" src="" title="Video de caso de éxito de marketing de influencers" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
 		</div>
 	</div>

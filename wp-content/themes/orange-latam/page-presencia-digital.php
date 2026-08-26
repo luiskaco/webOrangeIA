@@ -441,7 +441,7 @@ $theme_uri = get_template_directory_uri();
 	<!-- ==========================================
 	     MODAL DE CASO DE PROYECTO (PROJECT DETAIL MODAL)
 	     ========================================== -->
-	<div id="pd-project-modal" class="pd-modal" aria-hidden="true" role="dialog" aria-labelledby="pd-modal-title">
+	<div id="pd-project-modal" class="pd-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="pd-modal-title">
 		<div class="pd-modal__overlay" tabindex="-1" data-pd-modal-close></div>
 		<div class="pd-modal__dialog">
 			<button type="button" class="pd-modal__close" aria-label="Cerrar modal" data-pd-modal-close>&times;</button>

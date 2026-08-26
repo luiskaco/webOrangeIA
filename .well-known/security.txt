@@ -1,0 +1,10 @@
+# Security Policy & Vulnerability Disclosure — Orange Latam (RFC 9116)
+Contact: mailto:seguridad@orange-la.com
+Contact: mailto:negocios@orange-la.com
+Contact: https://orange-la.com/#contacto
+Expires: 2027-12-31T23:59:59.000Z
+Preferred-Languages: es, en
+Canonical: https://orange-la.com/.well-known/security.txt
+Policy: https://orange-la.com/politica-de-privacidad/
+Acknowledgments: https://orange-la.com/
+Hiring: https://orange-la.com/
