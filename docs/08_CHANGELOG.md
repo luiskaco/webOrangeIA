@@ -1,5 +1,9 @@
 # 08_CHANGELOG.md — Historial de Versiones
 
+## [Unreleased]
+### Corregido
+- **Jerarquía de encabezados del Home** (`index.php`, `assets/css/pages/home.css`): un solo H1 en toda la página — "Líderes en Reputación" (sin keyword, slide del hero) pasa a texto visual sin etiqueta de encabezado; se promueve a H1 "Mejor Agencia de Relaciones Públicas y Gestión de la Reputación" (ya existía como H2 en Premios). Verificado contra Rank Math antes de implementar: sin canibalización real con la keyword primaria de `/pr-gestion-reputacion/`. `.about__title`/`.about__section-title` pasan de `<div>` a `<h2>`/`<h3>`. Quitado el `<br>` forzado en `.services-banner__title` y `.sensibles-grid-section__title` (se leían pegados tipo "COMUNICACIÓNESTRATÉGICA") — el salto de línea ahora es un `<span>` con `display:block`. Los 13 servicios del acordeón de Servicios ahora tienen su propio `<h3>` real en el listado (antes solo `<span>`, único H3 real era el panel de detalle dinámico). Sacado el ALL CAPS escrito a mano del HTML en 6 títulos — ahora es 100% `text-transform: uppercase` en CSS, texto real en formato normal.
+
 ## [1.0.5] - 2026-08-21
 ### Añadido y Optimizado
 - **Nuevas imágenes de Branding (`assets/images/branding/`)**:
