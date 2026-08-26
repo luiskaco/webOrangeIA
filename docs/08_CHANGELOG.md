@@ -1,5 +1,17 @@
 # 08_CHANGELOG.md — Historial de Versiones
 
+## [1.0.8] - 2026-08-26
+### Añadido y Optimizado (SEO Agéntico & GEO)
+- **Archivos para motores y agentes de IA (`llms.txt`, `llms-full.txt`, `.well-known/ai-plugin.json`)**:
+  - `llms.txt` actualizado según especificación estándar con los 9 servicios y rutas canónicas.
+  - `llms-full.txt` creado con base de conocimiento exhaustiva, perfil de liderazgo, capacidades y FAQs estructuradas para LLMs.
+  - `.well-known/ai-plugin.json` creado como manifiesto de capacidades para agentes y plugins.
+- **Rastreadores de IA en `robots.txt`**:
+  - Reglas explícitas para permitir el rastreo libre de `GPTBot`, `ClaudeBot`, `PerplexityBot`, `Google-Extended`, `Applebot-Extended`, `cohere-ai`, `Bytespider`, `DuckAssistBot`.
+- **Auto-descubrimiento en `header.php`**:
+  - Inyección de tags `<link rel="alternate" type="text/markdown" ...>` en el `<head>` apuntando a `llms.txt` y `llms-full.txt`.
+- **Bumping de versión del tema a `1.0.8`** en `functions.php` y `style.css`.
+
 ## [Unreleased]
 ### Corregido
 - **Jerarquía de encabezados del Home** (`index.php`, `assets/css/pages/home.css`): un solo H1 en toda la página — "Líderes en Reputación" (sin keyword, slide del hero) pasa a texto visual sin etiqueta de encabezado; se promueve a H1 "Mejor Agencia de Relaciones Públicas y Gestión de la Reputación" (ya existía como H2 en Premios). Verificado contra Rank Math antes de implementar: sin canibalización real con la keyword primaria de `/pr-gestion-reputacion/`. `.about__title`/`.about__section-title` pasan de `<div>` a `<h2>`/`<h3>`. Quitado el `<br>` forzado en `.services-banner__title` y `.sensibles-grid-section__title` (se leían pegados tipo "COMUNICACIÓNESTRATÉGICA") — el salto de línea ahora es un `<span>` con `display:block`. Los 13 servicios del acordeón de Servicios ahora tienen su propio `<h3>` real en el listado (antes solo `<span>`, único H3 real era el panel de detalle dinámico). Sacado el ALL CAPS escrito a mano del HTML en 6 títulos — ahora es 100% `text-transform: uppercase` en CSS, texto real en formato normal.
