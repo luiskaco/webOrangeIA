@@ -44,8 +44,8 @@ get_header();
 	<div class="blog-index__container" style="max-width: 1320px; margin: 0 auto;">
 		<header class="blog-index__header" style="margin-bottom: 64px;" data-reveal="up">
 			<span style="font-size: 11px; font-weight: 700; color: var(--color-orange); letter-spacing: 0.1em; text-transform: uppercase; display: block; margin-bottom: 12px;">Novedades y Opinión</span>
-			<h1 style="font-family: var(--font-display); font-weight: 900; font-size: clamp(38px, 5vw, 64px); line-height: 1.05; letter-spacing: -0.01em; margin: 0; color: var(--color-bg-light);">
-				BLOG & NOTICIAS
+			<h1 style="font-family: var(--font-display); font-weight: 900; font-size: clamp(38px, 5vw, 64px); line-height: 1.05; letter-spacing: -0.01em; margin: 0; color: var(--color-bg-light); text-transform: uppercase;">
+				Blog de Comunicación y Relaciones Públicas
 			</h1>
 		</header>
 

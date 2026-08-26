@@ -116,7 +116,7 @@ $theme_uri = get_template_directory_uri();
 				<!-- Parte Superior: Editorial Estratégico -->
 				<div class="ap-influence-editorial">
 					<span class="ap-section-tag ap-section-tag--cyan">RED ESTRATÉGICA Y MAPAS DE PODER</span>
-					<h3 class="ap-influence-editorial__title">Red de Relaciones e Influencia</h3>
+					<h2 class="ap-influence-editorial__title">Red de Relaciones e Influencia</h2>
 					<p class="ap-influence-editorial__lead">
 						Conectamos los nodos de decisión clave en Perú y en otros países mediante mapas de poder y <strong>relacionamiento con stakeholders</strong> de alto nivel.
 					</p>
@@ -142,28 +142,28 @@ $theme_uri = get_template_directory_uri();
 					<!-- Card 1 (Celeste) -->
 					<div class="ap-mosaic-card ap-mosaic-card--cyan">
 						<span class="ap-mosaic-card__tag">Regulación & Licencias</span>
-						<h4 class="ap-mosaic-card__title">Reguladores & Ministerios</h4>
+						<h3 class="ap-mosaic-card__title">Reguladores & Ministerios</h3>
 						<p class="ap-mosaic-card__desc">Anticipación normativa y prevención de riesgos regulatorios.</p>
 					</div>
 
 					<!-- Card 2 (Blanca) -->
 					<div class="ap-mosaic-card ap-mosaic-card--white">
 						<span class="ap-mosaic-card__tag">Opinión Pública</span>
-						<h4 class="ap-mosaic-card__title">Medios & Líderes</h4>
+						<h3 class="ap-mosaic-card__title">Medios & Líderes</h3>
 						<p class="ap-mosaic-card__desc">Posicionamiento y comunicación gubernamental transparente.</p>
 					</div>
 
 					<!-- Card 3 (Blanca) -->
 					<div class="ap-mosaic-card ap-mosaic-card--white">
 						<span class="ap-mosaic-card__tag">Licencia Social</span>
-						<h4 class="ap-mosaic-card__title">Comunidades Locales</h4>
+						<h3 class="ap-mosaic-card__title">Comunidades Locales</h3>
 						<p class="ap-mosaic-card__desc">Diálogo responsable y gestión de relaciones con comunidades.</p>
 					</div>
 
 					<!-- Card 4 (Celeste) -->
 					<div class="ap-mosaic-card ap-mosaic-card--cyan">
 						<span class="ap-mosaic-card__tag">Alianzas Sectoriales</span>
-						<h4 class="ap-mosaic-card__title">Gremios & Cámaras</h4>
+						<h3 class="ap-mosaic-card__title">Gremios & Cámaras</h3>
 						<p class="ap-mosaic-card__desc">Consenso institucional y articulación con el sector privado.</p>
 					</div>
 				</div>
@@ -248,7 +248,7 @@ $theme_uri = get_template_directory_uri();
 						<div class="ap-pillar-item">
 							<div class="ap-pillar-item__badge">A</div>
 							<div>
-								<h4 class="ap-pillar-item__title">Análisis de Entorno</h4>
+								<h3 class="ap-pillar-item__title">Análisis de Entorno</h3>
 								<p class="ap-pillar-item__desc">Evaluamos el escenario político y los intereses de cada actor clave.</p>
 							</div>
 						</div>
@@ -256,7 +256,7 @@ $theme_uri = get_template_directory_uri();
 						<div class="ap-pillar-item">
 							<div class="ap-pillar-item__badge">B</div>
 							<div>
-								<h4 class="ap-pillar-item__title">Gestión de Percepciones</h4>
+								<h3 class="ap-pillar-item__title">Gestión de Percepciones</h3>
 								<p class="ap-pillar-item__desc">Posicionamiento estratégico respaldado por narrativas legítimas.</p>
 							</div>
 						</div>

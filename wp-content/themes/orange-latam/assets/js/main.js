@@ -1325,46 +1325,6 @@ document.addEventListener( 'DOMContentLoaded', () => {
 		} );
 	};
 
-	const initAsuntosStakeholderNetwork = () => {
-		const container = document.getElementById( 'js-asuntos-network-container' );
-		if ( ! container ) return;
-
-		const nodes = container.querySelectorAll( '.js-ap-node' );
-		const lines = container.querySelectorAll( '.ap-network__line' );
-		const tooltip = document.getElementById( 'js-ap-tooltip' );
-		const tooltipText = document.getElementById( 'js-ap-tooltip-text' );
-
-		nodes.forEach( ( node, index ) => {
-			node.addEventListener( 'mouseenter', () => {
-				nodes.forEach( ( n ) => n.classList.remove( 'is-active' ) );
-				lines.forEach( ( l ) => l.classList.remove( 'is-active' ) );
-
-				node.classList.add( 'is-active' );
-				if ( lines[ index ] ) {
-					lines[ index ].classList.add( 'is-active' );
-				}
-
-				const label = node.getAttribute( 'data-node-label' );
-				if ( tooltipText && label ) {
-					tooltipText.textContent = label;
-				}
-				if ( tooltip ) {
-					tooltip.classList.add( 'is-visible' );
-				}
-			} );
-
-			node.addEventListener( 'mouseleave', () => {
-				node.classList.remove( 'is-active' );
-				if ( lines[ index ] ) {
-					lines[ index ].classList.remove( 'is-active' );
-				}
-				if ( tooltip ) {
-					tooltip.classList.remove( 'is-visible' );
-				}
-			} );
-		} );
-	};
-
 	/* --------------------------------------------------------------------------
 	   22. PR WHY AWARDS MINI CAROUSEL
 	   -------------------------------------------------------------------------- */
@@ -1531,7 +1491,6 @@ document.addEventListener( 'DOMContentLoaded', () => {
 	initPrNodeDiagram();
 	initPrAwardsCarousel();
 	initPrFaqAccordion();
-	initAsuntosStakeholderNetwork();
 	initGlobalContactModal();
 } );
 
