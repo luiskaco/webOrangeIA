@@ -1,5 +1,14 @@
 # 08_CHANGELOG.md — Historial de Versiones
 
+## [1.1.3] - 2026-08-29
+### Corregido (Responsive & Viewport Containment)
+- **Fix de Desbordamiento Lateral en Presencia Digital (`presencia-digital.css`)**:
+  - Implementación de `minmax(0, 1fr)` y `min-width: 0` en `.pd-hero__container`, `.pd-hero__content`, `.pd-hero__visual`, `.pd-hero__metrics-grid` y `.pd-hero__metric-box` para erradicar el desbordamiento de CSS Grid en 320px–360px.
+  - Escala tipográfica adaptada en mobile (`clamp(18.5px, 6.2vw, 22px)` para `< 360px` y `clamp(21px, 6.5vw, 27px)` para `< 480px`) con `overflow-wrap: break-word`.
+- **Optimización Responsive en Branding (`branding-creatividad.css`)**:
+  - Contención de viewport (`overflow-x: clip`, `min-width: 0`), márgenes y tarjeta Showcase adaptativa (`16px 14px` en 480px y `14px 10px` en 360px).
+- **Bumping de versión del tema a `1.1.3`** en `functions.php` y `style.css`.
+
 ## [1.1.2] - 2026-08-29
 ### Añadido y Optimizado (Responsive & Acordeón Mobile)
 - **Acordeón Interactivo de Servicios en Mobile (`< 992px`)**:
