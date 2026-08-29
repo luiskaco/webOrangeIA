@@ -1,4 +1,9 @@
-  # 06_TASKS.md — Backlog Activo
+# 06_TASKS.md — Backlog Activo
+
+## Optimización Responsive y Corrección de Overflow en Presencia Digital y Branding (2026-08-29)
+- [x] **Fix de Desbordamiento Lateral en Presencia Digital (320px–360px)**: resuelto desbordamiento por `min-width: auto` en CSS Grid implementando `minmax(0, 1fr)` y `min-width: 0` en `.pd-hero__container`, `.pd-hero__content`, `.pd-hero__visual`, `.pd-hero__metrics-grid` y `.pd-hero__metric-box`.
+- [x] **Tipografía y Contención Adaptativa en Presencia Digital**: ajuste de `clamp()` en `.pd-hero__title` (a `18.5px–27px` en mobile), `overflow-wrap: break-word`, paddings compactos y 1 columna en portafolio `< 480px`.
+- [x] **Optimización de Hero y Tarjeta en Branding**: escala reducida en `.bc-hero__title`, padding de `.bc-hero__card-main` adaptativo a `18px 14px` en móviles compactos.
 
 ## Acordeón Interactivo de Servicios en Mobile (2026-08-29) — Rama: `feat/servicios-accordion-mobile`
 - [x] **Estructura HTML en `index.php`**: encapsular cada servicio en un contenedor `.services-corp__item` con cabecera y panel colapsable `.services-corp__accordion-body`.

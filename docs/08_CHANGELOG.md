@@ -6,7 +6,7 @@
   - Implementación de acordeón colapsable por ítem de servicio (`index.php`, `home.css`, `main.js`), preservando el layout de 2 columnas con panel lateral en desktop.
 - **Optimización Responsive y Contención de Viewport**:
   - Contención global de viewport (`overflow-x: clip`, `max-width: 100%`) y ajuste de `[data-reveal]` a desplazamiento vertical en mobile para prevenir desbordamientos laterales.
-  - Corrección de contención en `.services-corp__detail`, máscaras en `.home-awards`, y adaptación para dispositivos compactos (320px–360px).
+  - Corrección de desbordamiento en CSS Grid (`min-width: 0`, `minmax(0, 1fr)`) y ajuste de `clamp()` en **Presencia Digital** (`presencia-digital.css`) y **Branding** (`branding-creatividad.css`) para dispositivos compactos (320px–360px).
 - **Bumping de versión del tema a `1.1.2`** en `functions.php` y `style.css`.
 
 ## [1.1.1] - 2026-08-26

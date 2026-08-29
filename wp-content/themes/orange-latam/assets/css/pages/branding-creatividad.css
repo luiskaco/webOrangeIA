@@ -198,11 +198,13 @@ body[class*="branding-creatividad"] .header .header__burger-line {
 
 .bc-hero__title {
 	font-family: var(--font-display);
-	font-size: clamp(2.5rem, 5vw, 4.25rem);
+	font-size: clamp(1.85rem, 5vw, 4.25rem);
 	font-weight: 800;
 	line-height: 1.08;
 	margin-bottom: 20px;
 	color: #FFFFFF;
+	overflow-wrap: break-word;
+	word-break: normal;
 }
 
 .bc-hero__title-accent {
@@ -416,9 +418,62 @@ body[class*="branding-creatividad"] .header .header__burger-line {
 }
 
 @media (max-width: 768px) {
+	.bc-hero {
+		padding: 120px 0 60px;
+	}
+
+	.bc-hero__container {
+		gap: 36px;
+	}
+
+	.bc-hero__card-main {
+		padding: 24px 18px;
+		border-radius: 20px;
+	}
+
+	.bc-hero__card-heading {
+		font-size: 1.35rem;
+	}
+
+	.bc-hero__metrics {
+		padding: 14px 12px;
+		gap: 10px;
+		margin-bottom: 20px;
+	}
+
+	.bc-hero__metric-value {
+		font-size: 1.4rem;
+	}
+
 	.bc-hero__float-badge {
 		position: static;
-		margin-top: 16px;
+		margin-top: 12px;
+		width: 100%;
+		box-sizing: border-box;
+	}
+}
+
+@media (max-width: 480px) {
+	.bc-hero {
+		padding: 105px 0 40px;
+	}
+
+	.bc-hero__title {
+		font-size: clamp(1.6rem, 7vw, 2.1rem);
+		margin-bottom: 14px;
+	}
+
+	.bc-hero__lead {
+		font-size: 0.95rem;
+		line-height: 1.5;
+	}
+
+	.bc-hero__card-main {
+		padding: 18px 14px;
+	}
+
+	.bc-hero__footer-note {
+		font-size: 11px;
 	}
 }
 
