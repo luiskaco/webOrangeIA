@@ -10,7 +10,8 @@
 .bc-page {
 	background: #FAFAFA;
 	color: #14120F;
-	overflow-x: hidden;
+	overflow-x: clip;
+	max-width: 100%;
 	width: 100%;
 }
 
@@ -138,7 +139,9 @@ body[class*="branding-creatividad"] .header .header__burger-line {
 	color: #FFFFFF;
 	padding: 120px 0 80px;
 	position: relative;
-	overflow: hidden;
+	overflow-x: clip;
+	max-width: 100%;
+	width: 100%;
 }
 
 .bc-hero::before {
@@ -156,12 +159,19 @@ body[class*="branding-creatividad"] .header .header__burger-line {
 .bc-hero__container {
 	width: 100%;
 	max-width: 1240px;
+	min-width: 0;
 	margin: 0 auto;
 	padding: 0 24px;
 	display: grid;
 	grid-template-columns: 1fr;
-	gap: 60px;
+	gap: 48px;
 	align-items: center;
+}
+
+.bc-hero__content,
+.bc-hero__visual {
+	min-width: 0;
+	max-width: 100%;
 }
 
 @media (min-width: 992px) {
@@ -198,11 +208,13 @@ body[class*="branding-creatividad"] .header .header__burger-line {
 
 .bc-hero__title {
 	font-family: var(--font-display);
-	font-size: clamp(2.5rem, 5vw, 4.25rem);
+	font-size: clamp(1.85rem, 5vw, 4.25rem);
 	font-weight: 800;
 	line-height: 1.08;
 	margin-bottom: 20px;
 	color: #FFFFFF;
+	overflow-wrap: break-word;
+	word-break: normal;
 }
 
 .bc-hero__title-accent {
@@ -241,10 +253,12 @@ body[class*="branding-creatividad"] .header .header__burger-line {
 	background: rgba(255, 255, 255, 0.95);
 	backdrop-filter: blur(16px);
 	border-radius: 28px;
-	padding: 36px;
+	padding: 32px;
 	color: #0B1919;
 	box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35);
 	border: 1px solid rgba(255, 255, 255, 0.3);
+	min-width: 0;
+	max-width: 100%;
 }
 
 .bc-hero__card-header {
@@ -288,28 +302,34 @@ body[class*="branding-creatividad"] .header .header__burger-line {
 	font-weight: 800;
 	margin-bottom: 10px;
 	color: #062828;
+	overflow-wrap: break-word;
+	word-break: normal;
 }
 
 .bc-hero__card-subtext {
 	font-size: 0.92rem;
 	color: #4A5858;
 	line-height: 1.5;
-	margin-bottom: 28px;
+	margin-bottom: 24px;
+	overflow-wrap: break-word;
 }
 
 .bc-hero__metrics {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
 	gap: 16px;
 	background: #F2F8F8;
 	border-radius: 16px;
 	padding: 20px;
-	margin-bottom: 28px;
+	margin-bottom: 24px;
+	min-width: 0;
+	width: 100%;
 }
 
 .bc-hero__metric-item {
 	display: flex;
 	flex-direction: column;
+	min-width: 0;
 }
 
 .bc-hero__metric-value {
@@ -317,12 +337,16 @@ body[class*="branding-creatividad"] .header .header__burger-line {
 	font-weight: 800;
 	color: #083D3D;
 	line-height: 1.1;
+	overflow-wrap: break-word;
+	word-break: normal;
 }
 
 .bc-hero__metric-label {
 	font-size: 12px;
 	color: #647474;
 	font-weight: 600;
+	overflow-wrap: break-word;
+	word-break: normal;
 }
 
 .bc-hero__card-footer {
@@ -416,9 +440,196 @@ body[class*="branding-creatividad"] .header .header__burger-line {
 }
 
 @media (max-width: 768px) {
+	.bc-hero {
+		padding: 105px 0 50px;
+	}
+
+	.bc-hero__container {
+		padding: 0 18px;
+		gap: 24px;
+	}
+
+	.bc-hero__title {
+		font-size: clamp(1.6rem, 6vw, 2.3rem);
+		margin-bottom: 12px;
+	}
+
+	.bc-hero__lead {
+		font-size: clamp(0.92rem, 3.5vw, 1.05rem);
+		line-height: 1.5;
+		margin-bottom: 12px;
+	}
+
+	.bc-hero__card-main {
+		padding: 20px 16px;
+		border-radius: 20px;
+	}
+
+	.bc-hero__card-header {
+		margin-bottom: 10px;
+	}
+
+	.bc-hero__card-heading {
+		font-size: 1.25rem;
+		margin-bottom: 6px;
+	}
+
+	.bc-hero__card-subtext {
+		font-size: 0.86rem;
+		line-height: 1.45;
+		margin-bottom: 16px;
+	}
+
+	.bc-hero__metrics {
+		padding: 12px 10px;
+		gap: 8px;
+		margin-bottom: 16px;
+		border-radius: 12px;
+	}
+
+	.bc-hero__metric-value {
+		font-size: 1.35rem;
+	}
+
+	.bc-hero__metric-label {
+		font-size: 11px;
+	}
+
+	.bc-hero__card-footer {
+		padding-top: 12px;
+	}
+
+	.bc-hero__avatar {
+		width: 28px;
+		height: 28px;
+		font-size: 11px;
+	}
+
+	.bc-hero__footer-note {
+		font-size: 11px;
+	}
+
 	.bc-hero__float-badge {
 		position: static;
-		margin-top: 16px;
+		margin-top: 12px;
+		width: 100%;
+		box-sizing: border-box;
+	}
+}
+
+@media (max-width: 480px) {
+	.bc-hero {
+		padding: 95px 0 35px;
+	}
+
+	.bc-hero__container {
+		padding: 0 14px;
+		gap: 20px;
+	}
+
+	.bc-hero__title {
+		font-size: clamp(1.4rem, 6.2vw, 1.85rem);
+		margin-bottom: 10px;
+	}
+
+	.bc-hero__lead {
+		font-size: 0.88rem;
+		line-height: 1.45;
+		margin-bottom: 8px;
+	}
+
+	.bc-hero__card-main {
+		padding: 16px 14px;
+		border-radius: 16px;
+	}
+
+	.bc-hero__card-heading {
+		font-size: 1.15rem;
+	}
+
+	.bc-hero__card-subtext {
+		font-size: 0.82rem;
+		margin-bottom: 12px;
+	}
+
+	.bc-hero__metrics {
+		padding: 10px 8px;
+		gap: 6px;
+		margin-bottom: 12px;
+	}
+
+	.bc-hero__metric-value {
+		font-size: 1.2rem;
+	}
+
+	.bc-hero__metric-label {
+		font-size: 10.5px;
+	}
+
+	.bc-hero__footer-note {
+		font-size: 10.5px;
+	}
+}
+
+@media (max-width: 360px) {
+	.bc-hero {
+		padding: 85px 0 25px;
+	}
+
+	.bc-hero__container {
+		padding: 0 10px;
+		gap: 16px;
+	}
+
+	.bc-hero__title {
+		font-size: clamp(1.25rem, 5.8vw, 1.45rem);
+		line-height: 1.14;
+	}
+
+	.bc-hero__lead {
+		font-size: 0.82rem;
+		line-height: 1.4;
+	}
+
+	.bc-hero__card-main {
+		padding: 14px 10px;
+	}
+
+	.bc-hero__card-heading {
+		font-size: 1.05rem;
+	}
+
+	.bc-hero__card-tag {
+		font-size: 9.5px;
+		padding: 3px 8px;
+	}
+
+	.bc-hero__card-status {
+		font-size: 10.5px;
+	}
+
+	.bc-hero__metrics {
+		padding: 8px 6px;
+		gap: 4px;
+	}
+
+	.bc-hero__metric-value {
+		font-size: 1.05rem;
+	}
+
+	.bc-hero__metric-label {
+		font-size: 9.5px;
+	}
+
+	.bc-hero__avatar {
+		width: 24px;
+		height: 24px;
+		font-size: 9.5px;
+		margin-right: -4px;
+	}
+
+	.bc-hero__footer-note {
+		font-size: 9.5px;
 	}
 }
 
