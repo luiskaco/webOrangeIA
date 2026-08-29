@@ -171,14 +171,42 @@ document.addEventListener( 'DOMContentLoaded', () => {
 
 			rows.forEach( ( row ) => {
 				row.addEventListener( 'click', ( e ) => {
+					const isMobile = window.innerWidth <= 991;
+					const parentItem = row.closest( '.services-corp__item' );
 					const link = row.getAttribute( 'data-link' );
 					const isArrowClick = e.target.classList.contains( 'services-corp__row-arrow' ) || e.target.closest( '.services-corp__row-arrow' );
 					const isActive = row.classList.contains( activeClass );
 
+					if ( isMobile && parentItem ) {
+						const isItemActive = parentItem.classList.contains( 'services-corp__item--active' );
+
+						// Si el usuario hace clic en un item ya abierto: toggle (cerrar)
+						if ( isItemActive ) {
+							parentItem.classList.remove( 'services-corp__item--active' );
+							row.classList.remove( activeClass );
+							return;
+						}
+
+						// Cerrar los demás items
+						document.querySelectorAll( '.services-corp__item' ).forEach( ( it ) => {
+							it.classList.remove( 'services-corp__item--active' );
+						} );
+						rows.forEach( ( r ) => r.classList.remove( activeClass ) );
+
+						// Abrir el item seleccionado
+						parentItem.classList.add( 'services-corp__item--active' );
+						row.classList.add( activeClass );
+						return;
+					}
+
+					// Desktop Flow (>= 992px)
 					if ( link && ( isArrowClick || isActive ) ) {
 						window.location.href = link;
 						return;
 					}
+
+					document.querySelectorAll( '.services-corp__item' ).forEach( ( it ) => it.classList.remove( 'services-corp__item--active' ) );
+					if ( parentItem ) parentItem.classList.add( 'services-corp__item--active' );
 
 					rows.forEach( ( r ) => r.classList.remove( activeClass ) );
 					row.classList.add( activeClass );
@@ -224,7 +252,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
 		};
 
 		setupServiceRows(
-			'.services-corp__list > .services-corp__row:not(.services-sens__row)',
+			'.services-corp__list .services-corp__row:not(.services-sens__row)',
 			'services-corp__row--active',
 			'.services-corp > .services-corp__grid .services-corp__detail-watermark',
 			'.services-corp > .services-corp__grid .services-corp__detail-label',

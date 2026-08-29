@@ -1,5 +1,16 @@
   # 06_TASKS.md — Backlog Activo
 
+## Acordeón Interactivo de Servicios en Mobile (2026-08-29) — Rama: `feat/servicios-accordion-mobile`
+- [x] **Estructura HTML en `index.php`**: encapsular cada servicio en un contenedor `.services-corp__item` con cabecera y panel colapsable `.services-corp__accordion-body`.
+- [x] **Estilos CSS en `home.css`**: implementar animación de acordeón para `< 992px`, rotación de flechas y preservación de 2 columnas en desktop (`>= 992px`).
+- [x] **Lógica JS en `main.js`**: coordinar apertura/cierre interactivo en mobile y sincronización con el panel lateral en desktop.
+
+## Optimización Responsive Móvil y Corrección de Overflow Lateral (2026-08-29)
+- [x] **Contención Global de Viewport**: configuración estricta de `max-width: 100%`, `overflow-x: hidden` y `overflow-x: clip` en `html`, `body` y `main` para evitar scroll horizontal en navegadores móviles.
+- [x] **Scroll Reveal en Mobile**: adaptación de `[data-reveal="left"]` y `[data-reveal="right"]` a `translateY(16px)` en viewports `<= 768px` para eliminar el desplazamiento lateral fuera de pantalla previo a la animación.
+- [x] **Servicios Corporativos en Mobile**: corrección de posicionamiento `relative` y `overflow: hidden` en `.services-corp__detail` para contener el watermark de servicio sin desbordamiento.
+- [x] **Ajustes de Carruseles y Grillas en Mobile (360px+)**: optimización de máscara en `.home-awards`, `min-width: 0` en `.experts__gallery`, padding y tipografía en `.stats` 2x2.
+
 ## SEO Agéntico, GEO y Accesibilidad del Árbol de Agentes (2026-08-26)
 - [x] **Accesibilidad en Formularios**: correspondencia estricta de `<label for="...">` con `id="..."` en todos los inputs de `footer.php`, `index.php` y `page-podcast.php`.
 - [x] **Filtro Contact Form 7 (`wpcf7_form_elements`)**: inyección automática de atributos `id` y `aria-label` descriptivos a todos los `<input>`, `<textarea>` y `<select>` en `inc/seo.php`.

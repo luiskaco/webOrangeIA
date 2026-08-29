@@ -206,11 +206,28 @@ get_header();
 					}
 
 					foreach ( $corp_services as $svc ) {
-						$active_class = $svc['id'] === 1 ? 'services-corp__row--active' : '';
-						echo '<div class="services-corp__row ' . esc_attr( $active_class ) . '" data-id="' . esc_attr( $svc['id'] ) . '" data-num="' . esc_attr( $svc['num'] ) . '" data-name="' . esc_attr( $svc['name'] ) . '" data-desc="' . esc_attr( $svc['desc'] ) . '" data-link="' . esc_attr( isset( $svc['link'] ) ? $svc['link'] : '' ) . '" data-img="' . esc_url( $svc['img'] ) . '">';
+						$is_active    = $svc['id'] === 1;
+						$active_class = $is_active ? 'services-corp__item--active' : '';
+						$row_active   = $is_active ? 'services-corp__row--active' : '';
+						$target_url   = ! empty( $svc['link'] ) ? $svc['link'] : home_url( '/pr-gestion-reputacion/' );
+
+						echo '<div class="services-corp__item ' . esc_attr( $active_class ) . '" data-id="' . esc_attr( $svc['id'] ) . '">';
+						echo '<div class="services-corp__row ' . esc_attr( $row_active ) . '" data-id="' . esc_attr( $svc['id'] ) . '" data-num="' . esc_attr( $svc['num'] ) . '" data-name="' . esc_attr( $svc['name'] ) . '" data-desc="' . esc_attr( $svc['desc'] ) . '" data-link="' . esc_attr( isset( $svc['link'] ) ? $svc['link'] : '' ) . '" data-img="' . esc_url( $svc['img'] ) . '">';
 						echo '<span class="services-corp__row-num">' . esc_html( $svc['num'] ) . '</span>';
 						echo '<h3 class="services-corp__row-name">' . wp_kses_post( $svc['name'] ) . '</h3>';
 						echo '<span class="services-corp__row-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7,7 17,7 17,17"></polyline></svg></span>';
+						echo '</div>';
+
+						echo '<div class="services-corp__accordion-body">';
+						echo '<div class="services-corp__accordion-inner">';
+						echo '<p class="services-corp__accordion-desc">' . esc_html( $svc['desc'] ) . '</p>';
+						echo '<a href="' . esc_url( $target_url ) . '" class="services-corp__accordion-link">Más información <span>→</span></a>';
+						echo '<div class="services-corp__accordion-img-box">';
+						echo '<img class="services-corp__accordion-img" src="' . esc_url( $svc['img'] ) . '" alt="' . esc_attr( $svc['name'] ) . '" loading="lazy">';
+						echo '</div>';
+						echo '</div>';
+						echo '</div>';
+
 						echo '</div>';
 					}
 					?>

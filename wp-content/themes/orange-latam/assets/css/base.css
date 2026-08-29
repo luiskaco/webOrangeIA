@@ -97,6 +97,8 @@
 
 html {
 	scroll-behavior: smooth;
+	max-width: 100%;
+	overflow-x: hidden;
 }
 
 body {
@@ -104,6 +106,13 @@ body {
 	color: var(--color-text-dark);
 	font-family: var(--font-sans);
 	line-height: 1.5;
+	max-width: 100%;
+	overflow-x: hidden;
+	position: relative;
+}
+
+main {
+	max-width: 100%;
 	overflow-x: hidden;
 }
 
@@ -144,6 +153,14 @@ input, textarea, button {
 
 [data-reveal="scale"] {
 	transform: scale(0.9) translateY(16px);
+}
+
+/* En mobile evitamos desplazamiento horizontal en el estado no revelado */
+@media (max-width: 768px) {
+	[data-reveal="left"],
+	[data-reveal="right"] {
+		transform: translateY(16px);
+	}
 }
 
 [data-reveal].revealed {
@@ -706,9 +723,9 @@ textarea,
 	border: none;
 	border-bottom: 1.5px solid #D8D2C6;
 	border-radius: 0;
-	padding: 12px 0;
+	padding: 10px 0;
 	font-family: var(--font-sans);
-	font-size: 15.5px;
+	font-size: 14px;
 	color: #17130F;
 	box-sizing: border-box;
 	transition: border-color 0.25s ease, box-shadow 0.25s ease;
