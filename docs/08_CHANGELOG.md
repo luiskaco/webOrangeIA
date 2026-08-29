@@ -1,5 +1,14 @@
 # 08_CHANGELOG.md — Historial de Versiones
 
+## [1.1.2] - 2026-08-29
+### Añadido y Optimizado (Responsive & Acordeón Mobile)
+- **Acordeón Interactivo de Servicios en Mobile (`< 992px`)**:
+  - Implementación de acordeón colapsable por ítem de servicio (`index.php`, `home.css`, `main.js`), preservando el layout de 2 columnas con panel lateral en desktop.
+- **Optimización Responsive y Contención de Viewport**:
+  - Contención global de viewport (`overflow-x: clip`, `max-width: 100%`) y ajuste de `[data-reveal]` a desplazamiento vertical en mobile para prevenir desbordamientos laterales.
+  - Corrección de contención en `.services-corp__detail`, máscaras en `.home-awards`, y adaptación para dispositivos compactos (320px–360px).
+- **Bumping de versión del tema a `1.1.2`** en `functions.php` y `style.css`.
+
 ## [1.1.1] - 2026-08-26
 ### Corregido (Accesibilidad WCAG / Lighthouse)
 - **Fix `aria-hidden-focus` en Menú Móvil**:
