@@ -2182,5 +2182,112 @@
 		gap: 16px;
 		margin-bottom: 16px;
 	}
+}
 
+@media (max-width: 360px) {
+	.header {
+		padding: 12px 14px;
+	}
+
+	.stats {
+		padding: 16px 8px;
+	}
+
+	.stats__container {
+		grid-template-columns: repeat(2, 1fr) !important;
+		gap: 8px 6px;
+	}
+
+	.stats__item {
+		padding: 8px 4px;
+		gap: 4px;
+	}
+
+	.stats__value {
+		font-size: 13.5px;
+	}
+
+	.stats__label {
+		font-size: 8.5px;
+		line-height: 1.1;
+	}
+
+	.about {
+		padding: 40px 14px;
+	}
+
+	.about__cities {
+		gap: 6px 10px;
+	}
+
+	.about__city {
+		font-size: 10.5px;
+	}
+
+	.services-banner__switcher {
+		gap: 6px;
+	}
+
+	.services-banner__btn {
+		padding: 8px 12px;
+		font-size: 11px;
+	}
+
+	.services-corp__row {
+		padding: 14px 14px;
+		gap: 12px;
+	}
+
+	.services-corp__row-num {
+		font-size: 13px;
+		min-width: 18px;
+	}
+
+	.services-corp__row-name {
+		font-size: 13px;
+	}
+
+	.services-corp__accordion-inner {
+		padding: 4px 14px 20px;
+		gap: 12px;
+	}
+
+	.services-corp__accordion-desc {
+		font-size: 12.5px;
+	}
+
+	.services-corp__accordion-img {
+		height: 170px;
+	}
+
+	.experts {
+		padding: 40px 14px;
+	}
+
+	.experts__intro-actions {
+		width: 100%;
+		justify-content: space-between;
+	}
+
+	.contact {
+		padding: 40px 14px;
+	}
+
+	.contact__form-body {
+		padding: 20px 14px !important;
+	}
+
+	.contact__form-card .contact__form-label {
+		font-size: 10.5px !important;
+	}
+
+	.contact__form-card .contact__form-input,
+	.contact__form-card .contact__form-textarea {
+		font-size: 12.5px !important;
+	}
+
+	.contact__form-card button[type="submit"].contact__form-submit {
+		font-size: 12.5px !important;
+		padding: 12px 16px !important;
+	}
 }
