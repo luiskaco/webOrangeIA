@@ -1283,5 +1283,9 @@ button[type="submit"].g-modal__btn-submit:hover,
 		grid-template-columns: 1fr !important;
 		gap: 28px !important;
 	}
+
+	.post-detail {
+		padding: 90px 20px 64px !important;
+	}
 }
 
