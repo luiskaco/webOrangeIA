@@ -1274,5 +1274,14 @@ button[type="submit"].g-modal__btn-submit:hover,
 		width: 42px;
 		height: 42px;
 	}
+
+	.blog-index {
+		padding: 90px 20px 64px !important;
+	}
+
+	.blog-index__grid {
+		grid-template-columns: 1fr !important;
+		gap: 28px !important;
+	}
 }
 
