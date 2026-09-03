@@ -124,7 +124,7 @@ get_header();
 			<div class="infl-stat-block__media" data-reveal="scale">
 				<img class="infl-stat-block__img" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/marketing-de-influencers-contenido.webp" alt="Creación de contenido con influencer">
 				<div class="infl-stat-block__bubble">
-					El <strong>marketing de influencers</strong> se ha convertido en la estrategia de marketing digital más efectiva de 2025. Como agencia especializada en influencer marketing en Perú, transformamos la conexión entre marcas e influencers en resultados medibles, campañas exitosas y retorno de inversión comprobado.
+					El <strong>marketing de influencers</strong> se consolidó como la estrategia de marketing digital con mejor retorno en 2025. Como agencia de marketing de influencers en Perú, conectamos marcas con los creadores de contenido correctos para cada audiencia y convertimos esa alianza en resultados medibles: campañas exitosas, comunidades más comprometidas y retorno de inversión comprobado.
 				</div>
 			</div>
 		</div>
