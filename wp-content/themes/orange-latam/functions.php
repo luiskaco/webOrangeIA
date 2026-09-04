@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 // ==========================================
 // 1. CONSTANTS
 // ==========================================
-define( 'ORANGE_THEME_VERSION', '1.1.7' );
+define( 'ORANGE_THEME_VERSION', '1.1.8' );
 define( 'ORANGE_THEME_DIR', get_template_directory() );
 define( 'ORANGE_THEME_URI', get_template_directory_uri() );
 
@@ -470,6 +470,7 @@ function orange_send_service_contact_handler() {
 // ==========================================
 require_once ORANGE_THEME_DIR . '/inc/class-theme-setup.php';
 require_once ORANGE_THEME_DIR . '/inc/class-leads-manager.php';
+require_once ORANGE_THEME_DIR . '/inc/class-tarot-form.php';
 require_once ORANGE_THEME_DIR . '/inc/seo.php';
 
 // ==========================================

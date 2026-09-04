@@ -1,5 +1,12 @@
 # 06_TASKS.md — Backlog Activo
 
+## Migración formulario Lectura de Tarot (/laferia/tarot/) (2026-09-04)
+- [x] **Migración desde Empoderadas y Emprendedoras**: por pedido del cliente, el formulario ahora sirve bajo `orange-la.com/laferia/tarot/` en vez del dominio original — se evaluó iframe/reverse-proxy pero se optó por migración completa (menos fricción, sin exponer `X-Frame-Options`).
+- [x] **`inc/class-tarot-form.php`**: auto-creación de páginas `laferia`/`tarot`, handler AJAX (nonce + honeypot), integración Google Sheets (mismo service account y Sheet ya usados en el sitio original).
+- [x] **`page-tarot.php`**: página standalone con el mismo diseño "La Feria" (no reutiliza header/footer de Orange Latam para no mezclar branding).
+- [x] **Reutilización de `Orange_Leads_Manager::save_lead()`**: sin tabla/CPT nuevo — el lead aparece directo en el dashboard "Leads Web" existente con `service_origin = "Lectura de Tarot - La Feria"`.
+- [x] Probado localmente end-to-end (envío → Leads Web → Google Sheets sincronizado).
+
 ## Optimización Responsive y Corrección de Overflow en Presencia Digital y Branding (2026-08-29)
 - [x] **Fix de Desbordamiento Lateral en Presencia Digital (320px–360px)**: resuelto desbordamiento por `min-width: auto` en CSS Grid implementando `minmax(0, 1fr)` y `min-width: 0` en `.pd-hero__container`, `.pd-hero__content`, `.pd-hero__visual`, `.pd-hero__metrics-grid` y `.pd-hero__metric-box`.
 - [x] **Tipografía y Contención Adaptativa en Presencia Digital**: ajuste de `clamp()` en `.pd-hero__title` (a `18.5px–27px` en mobile), `overflow-wrap: break-word`, paddings compactos y 1 columna en portafolio `< 480px`.

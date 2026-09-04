@@ -1,5 +1,13 @@
 # 08_CHANGELOG.md — Historial de Versiones
 
+## [1.1.8] - 2026-09-04
+### Añadido
+- Formulario "Lectura de Tarot" migrado desde el sitio de Empoderadas y Emprendedoras — página autoactivable `/laferia/tarot/` (`page-tarot.php`, standalone, sin depender del header/footer del tema) en `inc/class-tarot-form.php`.
+- El respaldo de cada envío usa `Orange_Leads_Manager::save_lead()` ya existente (aparece en el dashboard "Leads Web" con `service_origin = "Lectura de Tarot - La Feria"`), sin tabla ni CPT nuevo.
+- Sincronización en vivo con la misma Google Sheet del formulario original, vía cuenta de servicio (JWT + REST API v4, sin librerías externas); el estado de sincronización queda visible en el campo "Detalles adicionales" de cada lead.
+- Auto-creación de las páginas `laferia` (contenedor, redirige a Inicio) y `laferia/tarot` en un hook de `init` propio, para que la URL exista sin pasos manuales.
+- Bumping de versión del tema a `1.1.8` en `functions.php` y `style.css`.
+
 ## [1.1.3] - 2026-08-29
 ### Corregido (Responsive & Viewport Containment)
 - **Fix de Desbordamiento Lateral en Presencia Digital (`presencia-digital.css`)**:
