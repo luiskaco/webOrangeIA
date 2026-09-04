@@ -1,5 +1,9 @@
 # 08_CHANGELOG.md — Historial de Versiones
 
+## [1.1.9] - 2026-09-04
+### Cambiado
+- Bump de versión para deploy a hosting — incluye la migración del formulario Lectura de Tarot y la corrección que separó `registro_tarot` en su propio CPT (ver detalle en `1.1.8`).
+
 ## [1.1.8] - 2026-09-04
 ### Añadido
 - Formulario "Lectura de Tarot" migrado desde el sitio de Empoderadas y Emprendedoras — página autoactivable `/laferia/tarot/` (`page-tarot.php`, standalone, sin depender del header/footer del tema) en `inc/class-tarot-form.php`.

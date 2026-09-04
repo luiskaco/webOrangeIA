@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 // ==========================================
 // 1. CONSTANTS
 // ==========================================
-define( 'ORANGE_THEME_VERSION', '1.1.8' );
+define( 'ORANGE_THEME_VERSION', '1.1.9' );
 define( 'ORANGE_THEME_DIR', get_template_directory() );
 define( 'ORANGE_THEME_URI', get_template_directory_uri() );
 
