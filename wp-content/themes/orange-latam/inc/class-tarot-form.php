@@ -4,9 +4,10 @@
  * Empoderadas y Emprendedoras para servirse bajo este dominio.
  *
  * - Auto-crea las páginas laferia (contenedor) y laferia/tarot (formulario).
- * - El respaldo de cada envío usa Orange_Leads_Manager::save_lead() ya
- *   existente en este tema, en vez de una tabla/CPT propia — así el registro
- *   aparece directo en el dashboard "Leads Web" del admin.
+ * - CPT propio `registro_tarot` con su propio menú en el admin — deliberadamente
+ *   separado de Orange_Leads_Manager: los registros de La Feria (un evento
+ *   puntual) no son leads comerciales de Orange Latam, son datos de otro
+ *   negocio y no deben mezclarse en el mismo dashboard.
  * - Sincroniza además con Google Sheets (Drive) vía cuenta de servicio
  *   (JWT + REST API v4, sin librerías externas).
  *
@@ -19,14 +20,56 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 class Orange_Tarot_Form {
 
+	const POST_TYPE = 'registro_tarot';
+
 	/**
 	 * Initialize class hooks.
 	 */
 	public static function init() {
+		add_action( 'init', array( __CLASS__, 'register_cpt' ) );
 		add_action( 'init', array( __CLASS__, 'setup_pages' ) );
+		add_action( 'template_redirect', array( __CLASS__, 'redirect_laferia_parent' ) );
+
 		add_action( 'wp_ajax_guardar_registro_tarot', array( __CLASS__, 'handle_submission' ) );
 		add_action( 'wp_ajax_nopriv_guardar_registro_tarot', array( __CLASS__, 'handle_submission' ) );
-		add_action( 'template_redirect', array( __CLASS__, 'redirect_laferia_parent' ) );
+
+		add_filter( 'manage_' . self::POST_TYPE . '_posts_columns', array( __CLASS__, 'admin_columns' ) );
+		add_action( 'manage_' . self::POST_TYPE . '_posts_custom_column', array( __CLASS__, 'render_admin_column' ), 10, 2 );
+		add_action( 'add_meta_boxes', array( __CLASS__, 'add_meta_box' ) );
+
+		add_filter( 'bulk_actions-edit-' . self::POST_TYPE, array( __CLASS__, 'register_bulk_action' ) );
+		add_filter( 'handle_bulk_actions-edit-' . self::POST_TYPE, array( __CLASS__, 'handle_retry_bulk_action' ), 10, 3 );
+		add_action( 'admin_notices', array( __CLASS__, 'retry_admin_notice' ) );
+
+		add_action( 'manage_posts_extra_tablenav', array( __CLASS__, 'render_export_button' ) );
+		add_action( 'wp_ajax_export_tarot_csv', array( __CLASS__, 'export_csv' ) );
+	}
+
+	/**
+	 * CPT de respaldo, separado de los leads comerciales de Orange Latam.
+	 */
+	public static function register_cpt() {
+		register_post_type( self::POST_TYPE, array(
+			'labels' => array(
+				'name'               => 'Registros Tarot',
+				'singular_name'      => 'Registro Tarot',
+				'menu_name'          => 'Registros Tarot (La Feria)',
+				'all_items'          => 'Todos los Registros',
+				'view_item'          => 'Ver Registro',
+				'search_items'       => 'Buscar Registros',
+				'not_found'          => 'No se encontraron registros',
+			),
+			'public'          => false,
+			'show_ui'         => true,
+			'show_in_menu'    => true,
+			'query_var'       => false,
+			'capability_type' => 'post',
+			'has_archive'     => false,
+			'hierarchical'    => false,
+			'menu_position'   => 58,
+			'menu_icon'       => 'dashicons-star-filled',
+			'supports'        => array( 'title' ),
+		) );
 	}
 
 	/**
@@ -83,7 +126,7 @@ class Orange_Tarot_Form {
 	}
 
 	/**
-	 * Handler AJAX del formulario: valida, guarda en Leads Manager y
+	 * Handler AJAX del formulario: valida, guarda en el CPT propio y
 	 * sincroniza con Google Sheets.
 	 */
 	public static function handle_submission() {
@@ -106,6 +149,19 @@ class Orange_Tarot_Form {
 			wp_send_json_error( array( 'message' => 'El correo ingresado no es válido.' ) );
 		}
 
+		$post_id = wp_insert_post( array(
+			'post_title'  => $nombre,
+			'post_type'   => self::POST_TYPE,
+			'post_status' => 'publish',
+		) );
+
+		if ( ! $post_id || is_wp_error( $post_id ) ) {
+			wp_send_json_error( array( 'message' => 'Error al procesar el formulario.' ) );
+		}
+
+		update_post_meta( $post_id, '_tarot_celular', $celular );
+		update_post_meta( $post_id, '_tarot_correo', $correo );
+
 		$sync_result = self::google_sheets_append_row( array(
 			$nombre,
 			$celular,
@@ -113,24 +169,153 @@ class Orange_Tarot_Form {
 			current_time( 'Y-m-d H:i:s' ),
 		) );
 
-		$sheets_status = is_wp_error( $sync_result )
-			? 'Pendiente — ' . $sync_result->get_error_message()
-			: 'Sincronizado';
-
 		if ( is_wp_error( $sync_result ) ) {
+			update_post_meta( $post_id, '_tarot_synced_sheets', 0 );
+			update_post_meta( $post_id, '_tarot_sheets_error', $sync_result->get_error_message() );
 			error_log( 'Tarot -> Google Sheets: ' . $sync_result->get_error_message() );
+		} else {
+			update_post_meta( $post_id, '_tarot_synced_sheets', 1 );
+			delete_post_meta( $post_id, '_tarot_sheets_error' );
 		}
 
-		Orange_Leads_Manager::save_lead( array(
-			'name'           => $nombre,
-			'email'          => $correo,
-			'phone'          => $celular,
-			'service_origin' => 'Lectura de Tarot - La Feria',
-			'page_url'       => home_url( '/laferia/tarot/' ),
-			'extra_data'     => array( 'google_sheets' => $sheets_status ),
+		wp_send_json_success( array( 'message' => '¡Listo! Tu registro para la lectura de tarot fue confirmado.' ) );
+	}
+
+	/**
+	 * Columnas del listado de admin.
+	 */
+	public static function admin_columns( $columns ) {
+		$columns['tarot_celular'] = 'Celular';
+		$columns['tarot_correo']  = 'Correo';
+		$columns['tarot_sheets']  = 'Google Sheets';
+		return $columns;
+	}
+
+	public static function render_admin_column( $column, $post_id ) {
+		if ( 'tarot_celular' === $column ) {
+			echo esc_html( get_post_meta( $post_id, '_tarot_celular', true ) );
+		}
+		if ( 'tarot_correo' === $column ) {
+			echo esc_html( get_post_meta( $post_id, '_tarot_correo', true ) );
+		}
+		if ( 'tarot_sheets' === $column ) {
+			$synced = get_post_meta( $post_id, '_tarot_synced_sheets', true );
+			if ( $synced ) {
+				echo '<span style="color:#2a8f4a; font-weight:600;">&#10003; Sincronizado</span>';
+			} else {
+				$error = get_post_meta( $post_id, '_tarot_sheets_error', true );
+				echo '<span style="color:#c0392b; font-weight:600;" title="' . esc_attr( $error ) . '">&#10007; Pendiente</span>';
+			}
+		}
+	}
+
+	/**
+	 * Meta box con el detalle del registro.
+	 */
+	public static function add_meta_box() {
+		add_meta_box( 'detalles_registro_tarot', 'Detalles del Registro', array( __CLASS__, 'render_meta_box' ), self::POST_TYPE, 'normal', 'high' );
+	}
+
+	public static function render_meta_box( $post ) {
+		$cel    = get_post_meta( $post->ID, '_tarot_celular', true );
+		$cor    = get_post_meta( $post->ID, '_tarot_correo', true );
+		$synced = get_post_meta( $post->ID, '_tarot_synced_sheets', true );
+		$error  = get_post_meta( $post->ID, '_tarot_sheets_error', true );
+		?>
+		<table class="form-table">
+			<tr><th>Celular:</th><td><?php echo esc_html( $cel ); ?></td></tr>
+			<tr><th>Correo:</th><td><?php echo esc_html( $cor ); ?></td></tr>
+			<tr><th>Google Sheets:</th><td><?php echo $synced ? '&#10003; Sincronizado' : '&#10007; Pendiente' . ( $error ? ' — ' . esc_html( $error ) : '' ); ?></td></tr>
+		</table>
+		<?php
+	}
+
+	/**
+	 * Bulk action: reintentar sincronización con Sheets para registros pendientes.
+	 */
+	public static function register_bulk_action( $actions ) {
+		$actions['tarot_retry_sheets'] = 'Reintentar sincronización con Sheets';
+		return $actions;
+	}
+
+	public static function handle_retry_bulk_action( $redirect_to, $action, $post_ids ) {
+		if ( 'tarot_retry_sheets' !== $action ) {
+			return $redirect_to;
+		}
+
+		$retried = 0;
+		foreach ( $post_ids as $post_id ) {
+			$post   = get_post( $post_id );
+			$result = self::google_sheets_append_row( array(
+				$post->post_title,
+				get_post_meta( $post_id, '_tarot_celular', true ),
+				get_post_meta( $post_id, '_tarot_correo', true ),
+				get_the_date( 'Y-m-d H:i:s', $post_id ),
+			) );
+
+			if ( is_wp_error( $result ) ) {
+				update_post_meta( $post_id, '_tarot_sheets_error', $result->get_error_message() );
+			} else {
+				update_post_meta( $post_id, '_tarot_synced_sheets', 1 );
+				delete_post_meta( $post_id, '_tarot_sheets_error' );
+				$retried++;
+			}
+		}
+
+		return add_query_arg( 'tarot_retried', $retried, $redirect_to );
+	}
+
+	public static function retry_admin_notice() {
+		if ( isset( $_GET['tarot_retried'] ) ) {
+			printf( '<div class="notice notice-success is-dismissible"><p>%d registro(s) sincronizado(s) con Google Sheets.</p></div>', (int) $_GET['tarot_retried'] );
+		}
+	}
+
+	/**
+	 * Botón de exportación CSV en el listado de admin.
+	 */
+	public static function render_export_button( $which ) {
+		global $typenow;
+		if ( self::POST_TYPE === $typenow ) {
+			$export_url = add_query_arg( array( 'action' => 'export_tarot_csv', 'noheader' => 'true' ), admin_url( 'admin-ajax.php' ) );
+			echo '<a href="' . esc_url( $export_url ) . '" class="button button-primary" style="margin-left: 5px; margin-top: 1px;">Descargar CSV</a>';
+		}
+	}
+
+	public static function export_csv() {
+		if ( ! current_user_can( 'manage_options' ) ) {
+			wp_die( 'Permiso denegado' );
+		}
+
+		header( 'Content-Type: text/csv; charset=utf-8' );
+		header( 'Content-Disposition: attachment; filename=registros-tarot-' . date( 'Y-m-d' ) . '.csv' );
+
+		$output = fopen( 'php://output', 'w' );
+		fprintf( $output, chr( 0xEF ) . chr( 0xBB ) . chr( 0xBF ) );
+
+		fputcsv( $output, array( 'Nombre y Apellidos', 'Celular', 'Correo electrónico', 'Fecha' ) );
+
+		$query = new WP_Query( array(
+			'post_type'      => self::POST_TYPE,
+			'posts_per_page' => -1,
+			'post_status'    => 'publish',
 		) );
 
-		wp_send_json_success( array( 'message' => '¡Listo! Tu registro para la lectura de tarot fue confirmado.' ) );
+		if ( $query->have_posts() ) {
+			while ( $query->have_posts() ) {
+				$query->the_post();
+				$post_id = get_the_ID();
+				fputcsv( $output, array(
+					get_the_title(),
+					get_post_meta( $post_id, '_tarot_celular', true ),
+					get_post_meta( $post_id, '_tarot_correo', true ),
+					get_the_date( 'Y-m-d H:i:s' ),
+				) );
+			}
+			wp_reset_postdata();
+		}
+		fclose( $output );
+		exit;
 	}
 
 	/**

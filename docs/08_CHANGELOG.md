@@ -3,10 +3,13 @@
 ## [1.1.8] - 2026-09-04
 ### Añadido
 - Formulario "Lectura de Tarot" migrado desde el sitio de Empoderadas y Emprendedoras — página autoactivable `/laferia/tarot/` (`page-tarot.php`, standalone, sin depender del header/footer del tema) en `inc/class-tarot-form.php`.
-- El respaldo de cada envío usa `Orange_Leads_Manager::save_lead()` ya existente (aparece en el dashboard "Leads Web" con `service_origin = "Lectura de Tarot - La Feria"`), sin tabla ni CPT nuevo.
-- Sincronización en vivo con la misma Google Sheet del formulario original, vía cuenta de servicio (JWT + REST API v4, sin librerías externas); el estado de sincronización queda visible en el campo "Detalles adicionales" de cada lead.
+- CPT propio `registro_tarot` con su propio menú, listado, meta box, bulk action de reintento y export CSV — deliberadamente separado de `Orange_Leads_Manager`: los registros de La Feria (evento puntual) no son leads comerciales de Orange Latam y no deben mezclarse en el mismo dashboard.
+- Sincronización en vivo con la misma Google Sheet del formulario original, vía cuenta de servicio (JWT + REST API v4, sin librerías externas).
 - Auto-creación de las páginas `laferia` (contenedor, redirige a Inicio) y `laferia/tarot` en un hook de `init` propio, para que la URL exista sin pasos manuales.
 - Bumping de versión del tema a `1.1.8` en `functions.php` y `style.css`.
+
+### Corregido
+- Revertido el uso inicial de `Orange_Leads_Manager::save_lead()` para el respaldo del tarot — por pedido explícito del cliente, se separó en su propio CPT al no ser el mismo tipo de dato que los leads comerciales.
 
 ## [1.1.3] - 2026-08-29
 ### Corregido (Responsive & Viewport Containment)
