@@ -1,4 +1,4 @@
-# Ignorar todo por defecto
+﻿# Ignorar todo por defecto
 *
 
 # Permitir carpetas necesarias
@@ -26,6 +26,8 @@
 !robots.txt
 !.well-known/
 !.well-known/**
+!okf/
+!okf/**
 !.htaccess
 
 # Ignorar archivos temporales ocultos del sistema
