@@ -113,6 +113,8 @@ if ( is_home() || is_singular( 'post' ) || is_page( 'marketing-de-influencers' )
 				<textarea id="contact_message" name="contact_message" rows="4" placeholder="Describe brevemente tus objetivos, tiempos o necesidades del proyecto..." required></textarea>
 			</div>
 
+			<div class="cf-turnstile" data-sitekey="<?php echo esc_attr( ORANGE_TURNSTILE_SITE_KEY ); ?>" data-theme="dark" style="margin-bottom: 14px;"></div>
+
 			<div class="g-modal__response" id="g-modal-response"></div>
 
 			<div class="g-modal__actions">

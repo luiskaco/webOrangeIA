@@ -1646,6 +1646,9 @@ const initGlobalContactModal = () => {
 			} )
 				.then( ( res ) => res.json() )
 				.then( ( data ) => {
+					if ( typeof window.turnstile !== 'undefined' && typeof window.turnstile.reset === 'function' ) {
+						try { window.turnstile.reset(); } catch ( err ) {}
+					}
 					if ( submitBtnEl ) {
 						submitBtnEl.disabled = false;
 						submitBtnEl.classList.remove( 'is-loading' );
@@ -1674,6 +1677,9 @@ const initGlobalContactModal = () => {
 					}
 				} )
 				.catch( () => {
+					if ( typeof window.turnstile !== 'undefined' && typeof window.turnstile.reset === 'function' ) {
+						try { window.turnstile.reset(); } catch ( err ) {}
+					}
 					if ( submitBtnEl ) {
 						submitBtnEl.disabled = false;
 						submitBtnEl.classList.remove( 'is-loading' );

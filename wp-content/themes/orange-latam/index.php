@@ -661,6 +661,7 @@ get_header();
 						<label for="contact-message" class="contact__form-label">¿En qué podemos ayudarte? *</label>
 						<textarea id="contact-message" name="contact_message" rows="4" class="contact__form-textarea" placeholder="Describe brevemente tus objetivos, tiempos o necesidades del proyecto..." required></textarea>
 					</div>
+					<div class="cf-turnstile" data-sitekey="<?php echo esc_attr( ORANGE_TURNSTILE_SITE_KEY ); ?>" data-theme="dark" style="margin-bottom: 14px;"></div>
 					<div class="contact__form-response" id="home-contact-response" style="display:none;margin-bottom:14px;font-size:13.5px;font-weight:600;padding:10px 14px;border-radius:4px;"></div>
 					<button type="submit" class="contact__form-submit" id="home-contact-submit">Enviar mensaje</button>
 				</form>

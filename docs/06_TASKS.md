@@ -1,5 +1,11 @@
 # 06_TASKS.md — Backlog Activo
 
+## Integración de Cloudflare Turnstile en Formularios (2026-09-09)
+- [x] **Configuración de claves y constantes**: Site Key y Secret Key declaradas en `functions.php`.
+- [x] **Seguridad CSP**: dominios `https://challenges.cloudflare.com` autorizados en `script-src`, `frame-src` y `connect-src`.
+- [x] **Validación Backend**: helper `orange_verify_turnstile()` conectado a la API de validación (`siteverify`) en el handler AJAX `orange_send_service_contact_handler`.
+- [x] **Frontend Widgets**: contenedores `.cf-turnstile` insertados en el modal global (`footer.php`), formulario del Home (`index.php`) y reserva de podcast (`page-podcast.php`), con auto-reset en `main.js`.
+
 ## Actualización de Títulos SEO en Rank Math (2026-09-09) — Rama: `feat/actualizar-titles-rankmath`
 - [x] Actualizados los `rank_math_title` en BD para las 10 páginas de servicios y legales bajo la nomenclatura `Orange Latam: [Servicio]`.
 

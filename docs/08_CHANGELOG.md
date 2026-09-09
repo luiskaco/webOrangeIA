@@ -1,8 +1,10 @@
 # 08_CHANGELOG.md — Historial de Versiones
 
 ## [1.2.1] - 2026-09-09
+### Añadido
+- **Seguridad Antispam Cloudflare Turnstile:** Integración del CAPTCHA inteligente e invisible de Cloudflare en formularios públicos (modal global, Home y Podcast) con validación server-side contra la API `siteverify` de Cloudflare y actualización de directivas CSP.
 ### Cambiado
-- **Actualización de Títulos SEO (Rank Math):** Estandarización de `rank_math_title` en BD bajo la nomenclatura de marca `Orange Latam: [Servicio]` en las 10 páginas de servicios y legales.
+- **Actualización de Títulos SEO y Keywords (Rank Math):** Estandarización de `rank_math_title` y ampliación de `rank_math_focus_keyword` (filtro nativo ampliado a 10) en BD bajo la nomenclatura de marca `Orange Latam: [Servicio]` en las páginas de servicios y legales.
 - **Copy Hero Gestión de Acceso:** Actualización de la descripción en `page-gestion-de-acceso.php` e inclusión de espaciado entre párrafos en `gestion-de-acceso.css`.
 
 ## [1.2.0] - 2026-09-08

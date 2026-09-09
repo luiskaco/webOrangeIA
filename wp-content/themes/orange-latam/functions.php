@@ -12,9 +12,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 // ==========================================
 // 1. CONSTANTS
 // ==========================================
-define( 'ORANGE_THEME_VERSION', '1.2.0' );
+define( 'ORANGE_THEME_VERSION', '1.2.1' );
 define( 'ORANGE_THEME_DIR', get_template_directory() );
 define( 'ORANGE_THEME_URI', get_template_directory_uri() );
+define( 'ORANGE_TURNSTILE_SITE_KEY', '0x4AAAAAAEuIOX2RmucdM-di' );
+define( 'ORANGE_TURNSTILE_SECRET_KEY', '0x4AAAAAAEuIORMU9ByzuRCBRGssFOQnkbw' );
 
 // ==========================================
 // 2. THEME SUPPORT & SETUP
@@ -109,13 +111,13 @@ function orange_latam_security_headers() {
 	}
 
 	$csp = "default-src 'self'; "
-		. "script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://www.googletagmanager.com https://www.google-analytics.com; "
+		. "script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://www.googletagmanager.com https://www.google-analytics.com https://challenges.cloudflare.com; "
 		. "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; "
 		. "font-src 'self' https://fonts.gstatic.com data:; "
 		. "img-src 'self' data: https:; "
 		. "media-src 'self'; "
-		. "frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com; "
-		. "connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://analytics.google.com https://www.googletagmanager.com https://region1.google-analytics.com; "
+		. "frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com https://challenges.cloudflare.com; "
+		. "connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://analytics.google.com https://www.googletagmanager.com https://region1.google-analytics.com https://challenges.cloudflare.com; "
 		. "worker-src 'self' blob:; "
 		. "object-src 'none'; "
 		. "base-uri 'self'; "
@@ -187,9 +189,12 @@ function orange_latam_enqueue_assets() {
 		orange_latam_enqueue_versioned_style( 'orange-latam-custom-style', '/assets/css/style.css', array( 'orange-latam-base-style' ) );
 	}
 
+	// Enqueue Cloudflare Turnstile API
+	wp_enqueue_script( 'cloudflare-turnstile', 'https://challenges.cloudflare.com/turnstile/v0/api.js', array(), null, array( 'strategy' => 'defer', 'in_footer' => true ) );
+
 	// Enqueue Vanilla JS (cache-busted with file modification time)
 	$main_js_path = ORANGE_THEME_DIR . '/assets/js/main.js';
-	wp_enqueue_script( 'orange-latam-main-js', ORANGE_THEME_URI . '/assets/js/main.js', array(), file_exists( $main_js_path ) ? filemtime( $main_js_path ) : ORANGE_THEME_VERSION, true );
+	wp_enqueue_script( 'orange-latam-main-js', ORANGE_THEME_URI . '/assets/js/main.js', array( 'cloudflare-turnstile' ), file_exists( $main_js_path ) ? filemtime( $main_js_path ) : ORANGE_THEME_VERSION, true );
 
 	// GSAP + ScrollTrigger + script de página — home y páginas de servicio dedicadas
 	$is_front = is_front_page();
@@ -294,6 +299,31 @@ function orange_latam_get_expert_posts( $count = 6 ) {
 add_action( 'wp_ajax_send_service_contact', 'orange_send_service_contact_handler' );
 add_action( 'wp_ajax_nopriv_send_service_contact', 'orange_send_service_contact_handler' );
 
+/**
+ * Verifica el token de Cloudflare Turnstile con la API de Cloudflare
+ */
+function orange_verify_turnstile( $token, $remote_ip = '' ) {
+	if ( empty( $token ) ) {
+		return false;
+	}
+
+	$response = wp_remote_post( 'https://challenges.cloudflare.com/turnstile/v0/siteverify', array(
+		'timeout' => 10,
+		'body'    => array(
+			'secret'   => ORANGE_TURNSTILE_SECRET_KEY,
+			'response' => $token,
+			'remoteip' => $remote_ip,
+		),
+	) );
+
+	if ( is_wp_error( $response ) ) {
+		return false;
+	}
+
+	$body = json_decode( wp_remote_retrieve_body( $response ), true );
+	return ! empty( $body['success'] );
+}
+
 function orange_send_service_contact_handler() {
 	// Verify Nonce
 	if ( ! isset( $_POST['contact_security'] ) || ! wp_verify_nonce( wp_unslash( $_POST['contact_security'] ), 'orange_contact_nonce' ) ) {
@@ -322,6 +352,12 @@ function orange_send_service_contact_handler() {
 			wp_send_json_error( array( 'message' => 'Has enviado demasiadas solicitudes. Por favor intenta de nuevo en un rato, o escríbenos directo a negocios@orange-la.com' ) );
 		}
 		set_transient( $rate_key, $rate_count + 1, HOUR_IN_SECONDS );
+	}
+
+	// Cloudflare Turnstile Verification
+	$turnstile_token = isset( $_POST['cf-turnstile-response'] ) ? sanitize_text_field( wp_unslash( $_POST['cf-turnstile-response'] ) ) : '';
+	if ( ! orange_verify_turnstile( $turnstile_token, $client_ip ) ) {
+		wp_send_json_error( array( 'message' => 'Verificación de seguridad de Cloudflare fallida. Por favor intenta de nuevo.' ) );
 	}
 
 	$name           = isset( $_POST['contact_name'] ) ? sanitize_text_field( $_POST['contact_name'] ) : ( isset( $_POST['name'] ) ? sanitize_text_field( $_POST['name'] . ( ! empty( $_POST['lastname'] ) ? ' ' . $_POST['lastname'] : '' ) ) : '' );

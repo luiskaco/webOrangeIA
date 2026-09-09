@@ -385,6 +385,8 @@ $podcast_img_uri = $theme_uri . '/assets/images/podcast';
 						<textarea id="pod-message" name="contact_message" rows="4" class="podcast-form__textarea" placeholder="Cuéntanos detalles de tu proyecto o requerimientos especiales..." required></textarea>
 					</div>
 
+					<div class="cf-turnstile" data-sitekey="<?php echo esc_attr( ORANGE_TURNSTILE_SITE_KEY ); ?>" data-theme="dark" style="margin-bottom: 14px;"></div>
+
 					<div class="podcast-form__response" id="podcast-form-response" style="display:none;margin-bottom:14px;font-size:13.5px;font-weight:600;padding:10px 14px;border-radius:4px;"></div>
 
 					<div class="podcast-form__submit-row">
