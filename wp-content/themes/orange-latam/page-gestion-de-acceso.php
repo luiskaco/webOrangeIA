@@ -16,8 +16,8 @@ $theme_uri = get_template_directory_uri();
 {
 	"@context": "https://schema.org",
 	"@type": "ProfessionalService",
-	"name": "Gestión de Acceso (Market Access) - Orange Latam",
-	"description": "Ayudamos a que la sociedad acceda a avances médicos y tratamientos de forma ética y oportuna. Comunicación estratégica para el sector salud y farma.",
+	"name": "Políticas Públicas y Acceso para la Salud (Market Access) - Orange Latam",
+	"description": "Estrategias de comunicación, incidencia y asuntos públicos para transformar políticas y mejorar el acceso oportuno, equitativo y sostenible a la salud.",
 	"provider": {
 		"@type": "Organization",
 		"name": "Orange Latam",
@@ -25,11 +25,13 @@ $theme_uri = get_template_directory_uri();
 	},
 	"areaServed": ["PE", "LATAM"],
 	"serviceType": [
+		"Políticas Públicas de Salud",
+		"Gestión de Acceso a la Salud",
 		"Market Access Salud",
 		"Comunicación en Salud",
 		"Comunicación Farmacéutica",
-		"Acceso a Medicamentos",
-		"Relacionamiento con Stakeholders de Salud"
+		"Acceso a Medicamentos y Tratamientos",
+		"Relacionamiento con Stakeholders Sanitarios"
 	],
 	"url": "<?php echo esc_url( home_url( '/gestion-de-acceso/' ) ); ?>"
 }

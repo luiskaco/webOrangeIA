@@ -1,5 +1,10 @@
 # 06_TASKS.md — Backlog Activo
 
+## Sincronización de SEO Agéntico / GEO y Bump a v1.2.2 (2026-09-09)
+- [x] **Sincronización `llms.txt` y paquete `okf/`**: actualizados títulos y capacidades modulares (Gestión de Acceso, Podcast/Streaming, Asuntos Públicos, Branding, Presencia Digital).
+- [x] **Marcado Schema JSON-LD `@graph`**: catálogo `hasOfferCatalog` en `inc/seo.php` y esquema local en `page-gestion-de-acceso.php` sincronizados.
+- [x] **Bumping de Versión**: elevado a `1.2.2` en `style.css` y `functions.php`.
+
 ## Integración de Cloudflare Turnstile en Formularios (2026-09-09)
 - [x] **Configuración de claves y constantes**: Site Key y Secret Key declaradas en `functions.php`.
 - [x] **Seguridad CSP**: dominios `https://challenges.cloudflare.com` autorizados en `script-src`, `frame-src` y `connect-src`.
