@@ -420,3 +420,9 @@ function orange_latam_google_tag() {
 }
 add_action( 'wp_head', 'orange_latam_google_tag', 2 );
 
+/**
+ * 4. Rank Math: Ampliar límite de Focus Keywords en el panel de administración
+ */
+add_filter( 'rank_math/focus_keyword/max_keywords', function() {
+	return 10;
+} );
