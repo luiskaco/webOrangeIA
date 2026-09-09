@@ -1,4 +1,9 @@
-﻿# 08_CHANGELOG.md — Historial de Versiones
+# 08_CHANGELOG.md — Historial de Versiones
+
+## [1.2.1] - 2026-09-09
+### Cambiado
+- **Actualización de Títulos SEO (Rank Math):** Estandarización de `rank_math_title` en BD bajo la nomenclatura de marca `Orange Latam: [Servicio]` en las 10 páginas de servicios y legales.
+- **Copy Hero Gestión de Acceso:** Actualización de la descripción en `page-gestion-de-acceso.php` e inclusión de espaciado entre párrafos en `gestion-de-acceso.css`.
 
 ## [1.2.0] - 2026-09-08
 ### Añadido

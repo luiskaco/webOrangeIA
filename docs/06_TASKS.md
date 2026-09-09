@@ -1,5 +1,8 @@
 # 06_TASKS.md — Backlog Activo
 
+## Actualización de Títulos SEO en Rank Math (2026-09-09) — Rama: `feat/actualizar-titles-rankmath`
+- [x] Actualizados los `rank_math_title` en BD para las 10 páginas de servicios y legales bajo la nomenclatura `Orange Latam: [Servicio]`.
+
 ## Migración formulario Lectura de Tarot (/laferia/tarot/) (2026-09-04)
 - [x] **Migración desde Empoderadas y Emprendedoras**: por pedido del cliente, el formulario ahora sirve bajo `orange-la.com/laferia/tarot/` en vez del dominio original — se evaluó iframe/reverse-proxy pero se optó por migración completa (menos fricción, sin exponer `X-Frame-Options`).
 - [x] **`inc/class-tarot-form.php`**: auto-creación de páginas `laferia`/`tarot`, handler AJAX (nonce + honeypot), integración Google Sheets (mismo service account y Sheet ya usados en el sitio original).

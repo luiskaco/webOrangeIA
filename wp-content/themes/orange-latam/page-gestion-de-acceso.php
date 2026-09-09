@@ -49,7 +49,11 @@ $theme_uri = get_template_directory_uri();
 				</h1>
 
 				<p class="ga-hero__desc">
-					Ayudamos a que la sociedad acceda a avances médicos y tratamientos de forma ética y oportuna, con estrategias de comunicación farmacéutica y relacionamiento institucional para el sector salud y farma en Perú y Latinoamérica.
+					Impulsamos cambios que mejoran el acceso a la salud a través de políticas públicas.
+				</p>
+
+				<p class="ga-hero__desc">
+					Trabajamos junto a organizaciones, instituciones, pacientes, especialistas y otros actores clave para visibilizar problemas, poner temas en la agenda pública, movilizar conversaciones y promover decisiones que generen impacto real en la vida de las personas.
 				</p>
 			</div>
 

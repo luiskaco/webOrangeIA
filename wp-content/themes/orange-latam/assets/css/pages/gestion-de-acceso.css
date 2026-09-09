@@ -151,6 +151,10 @@ body[class*="gestion-de-acceso"] .header .header__burger-line {
 	margin: 0;
 }
 
+.ga-hero__desc + .ga-hero__desc {
+	margin-top: 16px;
+}
+
 .ga-hero__actions {
 	display: flex;
 	gap: 16px;
