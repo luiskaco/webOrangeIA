@@ -1,5 +1,15 @@
 # 06_TASKS.md — Backlog Activo
 
+## Estado de traspaso
+
+> Lo primero que lee quien retome el proyecto — persona u otra IA. Se reescribe al cerrar cada sesión (`/session-close`).
+
+- **Última actualización:** 2026-10-21 (generado al migrar el proyecto a la estructura nueva del kit; revisar).
+- **Dónde quedó:** último trabajo en el repo: `598af9e` (2026-09-09) — feat(theme): bump version to 1.2.2 with Turnstile protection and Agentic SEO metadata sync.
+- **Próximo paso concreto:** _por definir_ — completar en el próximo cierre de sesión.
+- **Bloqueos:** ninguno registrado.
+- **No tocar:** ninguno registrado.
+
 ## Sincronización de SEO Agéntico / GEO y Bump a v1.2.2 (2026-09-09)
 - [x] **Sincronización `llms.txt` y paquete `okf/`**: actualizados títulos y capacidades modulares (Gestión de Acceso, Podcast/Streaming, Asuntos Públicos, Branding, Presencia Digital).
 - [x] **Marcado Schema JSON-LD `@graph`**: catálogo `hasOfferCatalog` en `inc/seo.php` y esquema local en `page-gestion-de-acceso.php` sincronizados.
